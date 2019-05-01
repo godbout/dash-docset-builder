@@ -2,6 +2,7 @@
 
 namespace App\Commands;
 
+use Illuminate\Support\Facades\Config;
 use Illuminate\Support\Facades\File;
 use Illuminate\Support\Facades\Storage;
 use LaravelZero\Framework\Commands\Command;
@@ -68,6 +69,8 @@ class PackageCommand extends Command
         $this->copyDocFiles($doc);
 
         $this->createInfoPlist($doc);
+
+        $this->createSQLiteIndex($doc);
     }
 
     protected function createDocsetFile($doc)
@@ -103,5 +106,20 @@ class PackageCommand extends Command
 EOT;
 
         Storage::put("{$doc['code']}/{$doc['code']}.docset/Contents/Info.plist", $infoPlist);
+    }
+
+    protected function createSQLiteIndex($doc)
+    {
+        Config::set(
+            'database.connections.sqlite.database',
+            "storage/{$doc['code']}/{$doc['code']}.docset/Contents/Resources/docSet.dsidx"
+        );
+
+        Storage::put(
+            "{$doc['code']}/{$doc['code']}.docset/Contents/Resources/docSet.dsidx",
+            null
+        );
+
+        $this->callSilent('migrate');
     }
 }

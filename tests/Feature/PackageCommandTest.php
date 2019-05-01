@@ -71,4 +71,14 @@ class PackageCommandTest extends TestCase
             'storage/tailwindcss/tailwindcss.docset/Contents/Info.plist'
         );
     }
+
+    /** @test */
+    public function it_creates_the_sqlite_index()
+    {
+        $this->artisan('package tailwindcss');
+
+        $this->assertFileExists(
+            'storage/tailwindcss/tailwindcss.docset/Contents/Resources/docSet.dsidx'
+        );
+    }
 }
