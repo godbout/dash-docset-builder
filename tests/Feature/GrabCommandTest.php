@@ -8,13 +8,6 @@ use Symfony\Component\Console\Exception\RuntimeException;
 
 class GrabCommandTest extends TestCase
 {
-    public function setUp(): void
-    {
-        parent::setUp();
-
-        Storage::deleteDirectory('tailwindcss');
-    }
-
     /** @test */
     public function the_command_requires_a_docset_name_as_argument()
     {
@@ -40,6 +33,11 @@ class GrabCommandTest extends TestCase
     {
         $this->artisan('grab tailwindcss');
 
+        /**
+         * We do not delete the doc folder before running the test
+         * because it would redownload the whole site which is a
+         * bit dumb. The test is here mainly for beauty.
+         */
         $this->assertDirectoryExists('storage/tailwindcss');
     }
 }

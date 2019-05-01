@@ -59,6 +59,7 @@ class GrabCommand extends Command
     {
         shell_exec(
             "wget \
+            --mirror \
             --page-requisites \
             --adjust-extension \
             --convert-links \
