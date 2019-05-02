@@ -8,37 +8,16 @@ use Illuminate\Support\Facades\File;
 use Illuminate\Support\Facades\Storage;
 use LaravelZero\Framework\Commands\Command;
 use Symfony\Component\DomCrawler\Crawler;
+use Wa72\HtmlPageDom\HtmlPage;
+use Wa72\HtmlPageDom\HtmlPageCrawler;
 
-class PackageCommand extends Command
+class PackageCommand extends BaseCommand
 {
-    const DOCS = [
-        'tailwindcss' => [
-            'code' => 'tailwindcss',
-            'name' => 'Tailwind CSS',
-            'url' => 'next.tailwindcss.com',
-            'playground' => 'https://codepen.io/drehimself/pen/vpeVMx'
-        ]
-    ];
-
-    /**
-     * The signature of the command.
-     *
-     * @var string
-     */
     protected $signature = 'package {docs}';
 
-    /**
-     * The description of the command.
-     *
-     * @var string
-     */
     protected $description = 'Package the docs specified as argument as a Dash docset file.';
 
-    /**
-     * Execute the console command.
-     *
-     * @return mixed
-     */
+
     public function handle()
     {
         $doc = $this->argument('docs');
@@ -60,24 +39,49 @@ class PackageCommand extends Command
         });
     }
 
-    protected function isValid($doc)
-    {
-        return array_key_exists($doc, self::DOCS);
-    }
-
     protected function package($doc)
     {
-        $this->removePreviousDocsetFile($doc);
+        $this->task('Remove previous .docset', function () use ($doc) {
+            $this->removePreviousDocsetFile($doc);
 
-        $this->createDocsetFile($doc);
+            return true;
+        });
 
-        $this->copyDocFiles($doc);
+        $this->task('Create .docset', function () use ($doc) {
+            $this->createDocsetFile($doc);
 
-        $this->createInfoPlist($doc);
+            return true;
+        });
 
-        $this->createAndPopulateSQLiteIndex($doc);
+        $this->task('Copy doc files', function () use ($doc) {
+            $this->copyDocFiles($doc);
 
-        $this->copyIcon($doc);
+            return true;
+        });
+
+        $this->task('Create Info.plist', function () use ($doc) {
+            $this->createInfoPlist($doc);
+
+            return true;
+        });
+
+        $this->task('Populate SQLiteIndex', function () use ($doc) {
+            $this->createAndPopulateSQLiteIndex($doc);
+
+            return true;
+        });
+
+        $this->task('Clean doc files', function () use ($doc) {
+            $this->cleanDocFiles($doc);
+
+            return true;
+        });
+
+        $this->task('Copy icons', function () use ($doc) {
+            $this->copyIcon($doc);
+
+            return true;
+        });
     }
 
     protected function removePreviousDocsetFile($doc)
@@ -181,6 +185,56 @@ EOT;
                 'path' => $node->attr('href')
             ]);
         });
+    }
+
+    protected function cleanDocFiles($doc)
+    {
+        $files = Storage::Allfiles(
+            "{$doc['code']}/{$doc['code']}.docset/Contents/Resources/Documents/"
+        );
+
+        foreach ($files as $file) {
+            if (substr($file, -5) === '.html') {
+                $page = HtmlPageCrawler::create(Storage::get($file));
+
+                $this->removeNavbar($page, $doc);
+                $this->removeLeftSidebar($page, $doc);
+                $this->removeRightSidebar($page, $doc);
+                $this->removeJavaScript($page, $doc);
+                $this->updateCss($page, $doc);
+
+                Storage::put($file, $page->saveHTML());
+            }
+        }
+    }
+
+    protected function removeNavbar($page, $doc)
+    {
+        $page->filter('body > div:first-child')->remove();
+    }
+
+    protected function removeLeftSidebar($page, $doc)
+    {
+        $page->filter('#sidebar')->remove();
+    }
+
+    protected function removeRightSidebar($page, $doc)
+    {
+        $page->filter('.hidden')->remove();
+    }
+
+    protected function removeJavaScript($page, $doc)
+    {
+        $page->filter('script')->remove();
+    }
+
+    protected function updateCss($page, $doc)
+    {
+        $page->filter('#app > #content')
+            ->removeClass('pt-24')
+            ->removeClass('pb-16')
+            ->removeClass('lg:pt-28')
+            ->addClass('pt-12');
     }
 
     protected function copyIcon($doc)

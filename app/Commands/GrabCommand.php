@@ -4,12 +4,8 @@ namespace App\Commands;
 
 use LaravelZero\Framework\Commands\Command;
 
-class GrabCommand extends Command
+class GrabCommand extends BaseCommand
 {
-    const DOCS = [
-        'tailwindcss' => 'https://next.tailwindcss.com'
-    ];
-
     /**
      * The signature of the command.
      *
@@ -43,16 +39,11 @@ class GrabCommand extends Command
             return true;
         });
 
-        $this->download($doc);
+        $this->download(self::DOCS[$doc]);
 
         $this->task('Download finished', function () {
             return true;
         });
-    }
-
-    protected function isValid($doc)
-    {
-        return array_key_exists($doc, self::DOCS);
     }
 
     protected function download($doc)
@@ -65,8 +56,8 @@ class GrabCommand extends Command
             --convert-links \
             --quiet \
             --show-progress \
-            --directory-prefix=storage/$doc \
-            " . self::DOCS[$doc]
+            --directory-prefix=storage/{$doc['code']} \
+            {$doc['url']}"
         );
     }
 }

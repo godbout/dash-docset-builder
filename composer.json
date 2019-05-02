@@ -20,7 +20,8 @@
         "illuminate/database": "5.8.*",
         "laravel-zero/framework": "5.8.*",
         "symfony/css-selector": "^4.2",
-        "symfony/dom-crawler": "^4.2"
+        "symfony/dom-crawler": "^4.2",
+        "wa72/htmlpagedom": "^1.3"
     },
     "require-dev": {
         "codedungeon/phpunit-result-printer": "^0.26.2",
