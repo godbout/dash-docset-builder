@@ -2,10 +2,11 @@
 
 namespace Tests\Feature;
 
-use Tests\TestCase;
 use App\Commands\PackageCommand;
+use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Storage;
 use Symfony\Component\Console\Exception\RuntimeException;
+use Tests\TestCase;
 
 class PackageCommandTest extends TestCase
 {
@@ -79,6 +80,26 @@ class PackageCommandTest extends TestCase
 
         $this->assertFileExists(
             'storage/tailwindcss/tailwindcss.docset/Contents/Resources/docSet.dsidx'
+        );
+    }
+
+    /** @test */
+    public function it_fills_up_the_sqlite_index()
+    {
+        $this->artisan('package tailwindcss');
+
+        $indexes = DB::table('searchIndex')->get();
+
+        $this->assertNotEmpty($indexes);
+    }
+
+    /** @test */
+    public function it_generates_an_icon_for_the_docset()
+    {
+        $this->artisan('package tailwindcss');
+
+        $this->assertFileExists(
+            'storage/tailwindcss/tailwindcss.docset/icon.png'
         );
     }
 }
