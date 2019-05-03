@@ -114,8 +114,6 @@ class PackageCommand extends BaseCommand
     <string>{$doc['url']}</string>
     <key>DashDocSetPlayURL</key>
     <string>{$doc['playground']}</string>
-    <key>isJavaScriptEnabled</key>
-    <true/>
     <key>isDashDocset</key>
     <true/>
     <key>DashDocSetFamily</key>
