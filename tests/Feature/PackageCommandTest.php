@@ -153,6 +153,17 @@ class PackageCommandTest extends TestCase
     }
 
     /** @test */
+    public function it_inserts_dash_anchors_in_the_doc_files()
+    {
+        $this->artisan('package tailwindcss');
+
+        $this->assertStringContainsString(
+            'name="//apple_ref/',
+            Storage::get('tailwindcss/tailwindcss.docset/Contents/Resources/Documents/index.html')
+        );
+    }
+
+    /** @test */
     public function it_generates_an_icon_for_the_docset()
     {
         $this->artisan('package tailwindcss');

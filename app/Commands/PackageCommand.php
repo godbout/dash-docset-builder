@@ -118,6 +118,8 @@ class PackageCommand extends BaseCommand
     <true/>
     <key>isDashDocset</key>
     <true/>
+    <key>DashDocSetFamily</key>
+    <string>dashtoc</string>
 </dict>
 </plist>
 EOT;
@@ -195,6 +197,7 @@ EOT;
                 $this->removeRightSidebar($crawler);
                 $this->removeJavaScript($crawler);
                 $this->updateCSS($crawler);
+                $this->insertDashTableOfContents($crawler);
 
                 Storage::put($file, $crawler->saveHTML());
             }
@@ -228,6 +231,20 @@ EOT;
         $this->updateHeader($crawler);
 
         $this->updateContainerWidth($crawler);
+
+        $this->updateBottomPadding($crawler);
+    }
+
+    protected function insertDashTableOfContents(HtmlPageCrawler $crawler)
+    {
+        $crawler->filter('h1')
+            ->after('<a name="//apple_ref/cpp/Section/Top" class="dashAnchor absolute -mt-24"></a>');
+
+        $crawler->filter('h2')->each(function (HtmlPageCrawler $node) {
+            $node->after(
+                '<p><a name="//apple_ref/cpp/Section/' . $node->text() . '" class="dashAnchor absolute -mt-16"></a></p>'
+            );
+        });
     }
 
     protected function updateTopPadding(HtmlPageCrawler $crawler)
@@ -272,6 +289,12 @@ EOT;
             ->removeClass('xl:w-3/4')
             ->removeClass('xl:px-12')
             ->removeClass('xl:mx-0');
+    }
+
+    protected function updateBottomPadding(HtmlPageCrawler $crawler)
+    {
+        $crawler->filter('body')
+            ->addClass('pb-8');
     }
 
     protected function copyIcon($doc)
