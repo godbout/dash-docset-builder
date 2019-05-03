@@ -7,6 +7,7 @@ use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Storage;
 use Symfony\Component\Console\Exception\RuntimeException;
 use Tests\TestCase;
+use Wa72\HtmlPageDom\HtmlPageCrawler;
 
 class PackageCommandTest extends TestCase
 {
@@ -91,6 +92,64 @@ class PackageCommandTest extends TestCase
         $indexes = DB::table('searchIndex')->get();
 
         $this->assertNotEmpty($indexes);
+    }
+
+    /** @test */
+    public function it_removes_the_navbar_from_the_dash_docset_files()
+    {
+        $this->artisan('package tailwindcss');
+
+        $this->assertStringNotContainsString(
+            'id="sidebar-open"',
+            Storage::get('tailwindcss/tailwindcss.docset/Contents/Resources/Documents/index.html')
+        );
+    }
+
+    /** @test */
+    public function it_removes_the_left_sidebar_from_the_dash_docset_files()
+    {
+        $this->artisan('package tailwindcss');
+
+        $this->assertStringNotContainsString(
+            'id="sidebar"',
+            Storage::get('tailwindcss/tailwindcss.docset/Contents/Resources/Documents/index.html')
+        );
+    }
+
+    /** @test */
+    public function it_removes_the_right_sidebar_from_the_dash_docset_files()
+    {
+        $this->artisan('package tailwindcss');
+
+        $this->assertStringNotContainsString(
+            'hidden xl:text-sm',
+            Storage::get('tailwindcss/tailwindcss.docset/Contents/Resources/Documents/index.html')
+        );
+    }
+
+    /** @test */
+    public function it_update_the_CSS_from_the_dash_docset_files()
+    {
+        $this->artisan('package tailwindcss');
+
+        $crawler = HtmlPageCrawler::create(
+            Storage::get('tailwindcss/tailwindcss.docset/Contents/Resources/Documents/index.html')
+        );
+
+        $this->assertTrue(
+            $crawler->filter('#app > #content')->hasClass('pt-2')
+        );
+    }
+
+    /** @test */
+    public function it_removes_javascript_from_the_dash_docset_files()
+    {
+        $this->artisan('package tailwindcss');
+
+        $this->assertStringNotContainsString(
+            '<script>',
+            Storage::get('tailwindcss/tailwindcss.docset/Contents/Resources/Documents/index.html')
+        );
     }
 
     /** @test */

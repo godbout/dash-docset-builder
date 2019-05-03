@@ -2,14 +2,11 @@
 
 namespace App\Commands;
 
-use Illuminate\Support\Facades\Config;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\File;
-use Illuminate\Support\Facades\Storage;
-use LaravelZero\Framework\Commands\Command;
-use Symfony\Component\DomCrawler\Crawler;
-use Wa72\HtmlPageDom\HtmlPage;
 use Wa72\HtmlPageDom\HtmlPageCrawler;
+use Illuminate\Support\Facades\Config;
+use Illuminate\Support\Facades\Storage;
 
 class PackageCommand extends BaseCommand
 {
@@ -28,56 +25,52 @@ class PackageCommand extends BaseCommand
             return 1;
         }
 
-        $this->task('Package creation started', function () {
-            return true;
-        });
+        $this->info('Package creation started');
 
         $this->package(self::DOCS[$doc]);
 
-        $this->task('Package creation finished', function () {
-            return true;
-        });
+        $this->info('Package creation finished');
     }
 
     protected function package($doc)
     {
-        $this->task('Remove previous .docset', function () use ($doc) {
+        $this->task(' - Remove previous .docset', function () use ($doc) {
             $this->removePreviousDocsetFile($doc);
 
             return true;
         });
 
-        $this->task('Create .docset', function () use ($doc) {
+        $this->task(' - Create new .docset', function () use ($doc) {
             $this->createDocsetFile($doc);
 
             return true;
         });
 
-        $this->task('Copy doc files', function () use ($doc) {
+        $this->task(' - Copy original doc files', function () use ($doc) {
             $this->copyDocFiles($doc);
 
             return true;
         });
 
-        $this->task('Create Info.plist', function () use ($doc) {
+        $this->task(' - Create Info.plist', function () use ($doc) {
             $this->createInfoPlist($doc);
 
             return true;
         });
 
-        $this->task('Populate SQLiteIndex', function () use ($doc) {
+        $this->task(' - Populate SQLiteIndex', function () use ($doc) {
             $this->createAndPopulateSQLiteIndex($doc);
 
             return true;
         });
 
-        $this->task('Clean doc files', function () use ($doc) {
+        $this->task(' - Format doc files for Dash', function () use ($doc) {
             $this->cleanDocFiles($doc);
 
             return true;
         });
 
-        $this->task('Copy icons', function () use ($doc) {
+        $this->task(' - Copy icons', function () use ($doc) {
             $this->copyIcon($doc);
 
             return true;
@@ -156,7 +149,7 @@ EOT;
 
     protected function populateSQLiteIndex($doc)
     {
-        $crawler = new Crawler(
+        $crawler = HtmlPageCrawler::create(
             Storage::get("{$doc['code']}/{$doc['code']}.docset/Contents/Resources/Documents/index.html")
         );
 
@@ -165,20 +158,20 @@ EOT;
         $this->populateSQLiteIndexWithSections($crawler);
     }
 
-    protected function populateSQLiteIndexWithGuides(Crawler $crawler)
+    protected function populateSQLiteIndexWithGuides(HtmlPageCrawler $crawler)
     {
-        $crawler->filter('#nav h5')->each(function (Crawler $node, $i) {
+        $crawler->filter('#nav h5')->each(function (HtmlPageCrawler $node) {
             DB::table('searchIndex')->insert([
                 'name' => $node->text(),
                 'type' => 'Guide',
-                'path' => $node->siblings()->filter('a')->eq(0)->attr('href')
+                'path' => $node->siblings()->filter('a')->attr('href')
             ]);
         });
     }
 
-    protected function populateSQLiteIndexWithSections(Crawler $crawler)
+    protected function populateSQLiteIndexWithSections(HtmlPageCrawler $crawler)
     {
-        $crawler->filter('#nav li a')->each(function (Crawler $node, $i) {
+        $crawler->filter('#nav li a')->each(function (HtmlPageCrawler $node) {
             DB::table('searchIndex')->insert([
                 'name' => $node->children('.relative')->text(),
                 'type' => 'Section',
@@ -195,46 +188,90 @@ EOT;
 
         foreach ($files as $file) {
             if (substr($file, -5) === '.html') {
-                $page = HtmlPageCrawler::create(Storage::get($file));
+                $crawler = HtmlPageCrawler::create(Storage::get($file));
 
-                $this->removeNavbar($page, $doc);
-                $this->removeLeftSidebar($page, $doc);
-                $this->removeRightSidebar($page, $doc);
-                $this->removeJavaScript($page, $doc);
-                $this->updateCss($page, $doc);
+                $this->removeNavbar($crawler);
+                $this->removeLeftSidebar($crawler);
+                $this->removeRightSidebar($crawler);
+                $this->removeJavaScript($crawler);
+                $this->updateCSS($crawler);
 
-                Storage::put($file, $page->saveHTML());
+                Storage::put($file, $crawler->saveHTML());
             }
         }
     }
 
-    protected function removeNavbar($page, $doc)
+    protected function removeNavbar(HtmlPageCrawler $crawler)
     {
-        $page->filter('body > div:first-child')->remove();
+        $crawler->filter('body > div:first-child')->remove();
     }
 
-    protected function removeLeftSidebar($page, $doc)
+    protected function removeLeftSidebar(HtmlPageCrawler $crawler)
     {
-        $page->filter('#sidebar')->remove();
+        $crawler->filter('#sidebar')->remove();
     }
 
-    protected function removeRightSidebar($page, $doc)
+    protected function removeRightSidebar(HtmlPageCrawler $crawler)
     {
-        $page->filter('.hidden')->remove();
+        $crawler->filter('#content > div.flex > div.hidden')->remove();
     }
 
-    protected function removeJavaScript($page, $doc)
+    protected function removeJavaScript(HtmlPageCrawler $crawler)
     {
-        $page->filter('script')->remove();
+        $crawler->filter('script')->remove();
     }
 
-    protected function updateCss($page, $doc)
+    protected function updateCSS(HtmlPageCrawler $crawler)
     {
-        $page->filter('#app > #content')
+        $this->updateTopPadding($crawler);
+
+        $this->updateHeader($crawler);
+
+        $this->updateContainerWidth($crawler);
+    }
+
+    protected function updateTopPadding(HtmlPageCrawler $crawler)
+    {
+        $crawler->filter('#app > #content')
             ->removeClass('pt-24')
             ->removeClass('pb-16')
             ->removeClass('lg:pt-28')
-            ->addClass('pt-12');
+            ->addClass('pt-2');
+    }
+
+    protected function updateHeader(HtmlPageCrawler $crawler)
+    {
+        $crawler->filter('#content > div.markdown')
+            ->removeClass('lg:ml-0')
+            ->removeClass('lg:mr-auto')
+            ->removeClass('xl:mx-0')
+            ->removeClass('xl:p-12')
+            ->removeClass('xl:w-3/4')
+            ->removeClass('max-w-3xl')
+            ->removeClass('xl:px-12')
+            ->addClass('pt-2');
+    }
+
+    protected function updateContainerWidth(HtmlPageCrawler $crawler)
+    {
+        $crawler->filter('body > div:first-child')
+            ->removeClass('max-w-screen-xl');
+
+        $crawler->filter('#content-wrapper')
+            ->removeClass('lg:static')
+            ->removeClass('lg:max-h-full')
+            ->removeClass('lg:overflow-visible')
+            ->removeClass('lg:w-3/4')
+            ->removeClass('xl:w-4/5');
+
+        $crawler->filter('#content > div.flex > div.markdown')
+            ->removeClass('xl:p-12')
+            ->removeClass('max-w-3xl')
+            ->removeClass('lg:ml-0')
+            ->removeClass('lg:mr-auto')
+            ->removeClass('xl:w-3/4')
+            ->removeClass('xl:px-12')
+            ->removeClass('xl:mx-0');
     }
 
     protected function copyIcon($doc)
