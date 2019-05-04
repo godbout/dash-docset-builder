@@ -6,6 +6,7 @@ use Tests\TestCase;
 use Wa72\HtmlPageDom\HtmlPageCrawler;
 use Illuminate\Support\Facades\Storage;
 
+/** @group tailwindcss */
 class TailwindCSSTest extends TestCase
 {
     /** @test */

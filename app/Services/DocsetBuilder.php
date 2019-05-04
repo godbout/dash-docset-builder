@@ -12,19 +12,34 @@ use LaravelZero\Framework\Commands\Command;
 
 class DocsetBuilder
 {
+    public function build(Docset $docset, Command $command)
+    {
+        $this->grab($docset, $command);
+        $this->package($docset, $command);
+
+        return;
+    }
+
     public function grab(Docset $docset, Command $command)
     {
-        $command->task('  - Downloading online doc', function () use ($docset) {
-            return shell_exec(
-                "wget \
-                --mirror \
-                --page-requisites \
-                --adjust-extension \
-                --convert-links \
-                --quiet \
-                --show-progress \
-                --directory-prefix=storage/{$docset->code()} \
-                {$docset->url()}"
+        $command->task('  - Downloading online doc', function () use ($docset, $command) {
+            $command->line(PHP_EOL);
+
+            return passthru(
+                "httrack 'https://{$docset->url()}' \
+                --path 'storage/{$docset->code()}' \
+                --connection-per-second=50 \
+                --sockets=80 \
+                --keep-alive \
+                --display \
+                --verbose \
+                --advanced-progressinfo \
+                --disable-security-limits \
+                -s0 \
+                -o0 \
+                -F 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/70.0.3538.77 Safari/537.36' \
+                --max-rate=0 \
+                --depth=5"
             );
         });
     }
