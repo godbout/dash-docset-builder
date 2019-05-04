@@ -1,18 +1,17 @@
 <?php
 
-namespace Tests\Feature;
+namespace Tests\Feature\Commands;
 
 use Tests\TestCase;
-use Illuminate\Support\Facades\Storage;
 use Symfony\Component\Console\Exception\RuntimeException;
 
-class GrabCommandTest extends TestCase
+class GrabTest extends TestCase
 {
     /** @test */
     public function the_command_requires_a_docset_name_as_argument()
     {
         $this->expectException(RuntimeException::class);
-        $this->expectExceptionMessage('Not enough arguments (missing: "docs").');
+        $this->expectExceptionMessage('Not enough arguments (missing:');
 
         $this->artisan('grab');
     }
@@ -24,20 +23,13 @@ class GrabCommandTest extends TestCase
             ->assertExitCode(0);
 
         $this->artisan('grab nottailwindcss')
-            ->expectsOutput('Only the tailwindcss doc is currently available.')
+            ->expectsOutput('The doc requested does not seem to be supported.')
             ->assertExitCode(1);
     }
 
     /** @test */
     public function the_command_downloads_the_docs_in_storage()
     {
-        $this->artisan('grab tailwindcss');
-
-        /**
-         * We do not delete the doc folder before running the test
-         * because it would redownload the whole site which is a
-         * bit dumb. The test is here mainly for beauty.
-         */
         $this->assertDirectoryExists('storage/tailwindcss');
     }
 }
