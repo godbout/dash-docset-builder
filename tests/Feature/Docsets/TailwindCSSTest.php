@@ -3,10 +3,8 @@
 namespace Tests\Feature\Docsets;
 
 use Tests\TestCase;
-use Illuminate\Support\Facades\DB;
 use Wa72\HtmlPageDom\HtmlPageCrawler;
 use Illuminate\Support\Facades\Storage;
-use Symfony\Component\Console\Exception\RuntimeException;
 
 class TailwindCSSTest extends TestCase
 {

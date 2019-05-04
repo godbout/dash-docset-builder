@@ -1,5 +1,10 @@
 <?php
 
+$finder = PhpCsFixer\Finder::create()
+    ->in(['app', 'tests'])
+    ->notPath('CreatesApplication.php')
+;
+
 return PhpCsFixer\Config::create()
     ->setRules([
         '@PSR2' => true,
@@ -18,4 +23,6 @@ return PhpCsFixer\Config::create()
         'phpdoc_order' => true,
         'single_blank_line_before_namespace' => true,
         'whitespace_after_comma_in_array' => true,
-    ]);
+    ])
+    ->setFinder($finder)
+;
