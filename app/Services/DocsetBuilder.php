@@ -32,7 +32,7 @@ class DocsetBuilder
                 --sockets=80 \
                 --keep-alive \
                 --display \
-                --verbose \
+                --quiet \
                 --advanced-progressinfo \
                 --disable-security-limits \
                 -s0 \

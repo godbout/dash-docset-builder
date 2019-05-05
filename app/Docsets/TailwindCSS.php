@@ -61,7 +61,7 @@ class TailwindCSS implements Docset
     {
         $entries = collect();
 
-        $crawler->filter('#nav h5')->each(function (HtmlPageCrawler $node) use ($entries) {
+        $crawler->filter('#navWrapper h5')->each(function (HtmlPageCrawler $node) use ($entries) {
             $entries->push([
                 'name' => $node->text(),
                 'type' => 'Guide',
@@ -76,7 +76,7 @@ class TailwindCSS implements Docset
     {
         $entries = collect();
 
-        $crawler->filter('#nav li a')->each(function (HtmlPageCrawler $node) use ($entries) {
+        $crawler->filter('#navWrapper li a')->each(function (HtmlPageCrawler $node) use ($entries) {
             $entries->push([
                 'name' => $node->children('.relative')->text(),
                 'type' => 'Section',
@@ -91,7 +91,7 @@ class TailwindCSS implements Docset
     {
         $crawler = HtmlPageCrawler::create($html);
 
-        $this->removeNavbar($crawler);
+        $this->removeNavbarAndHeader($crawler);
         $this->removeLeftSidebar($crawler);
         $this->removeRightSidebar($crawler);
         $this->removeJavaScript($crawler);
@@ -101,7 +101,7 @@ class TailwindCSS implements Docset
         return $crawler->saveHTML();
     }
 
-    protected function removeNavbar(HtmlPageCrawler $crawler)
+    protected function removeNavbarAndHeader(HtmlPageCrawler $crawler)
     {
         $crawler->filter('body > div:first-child')->remove();
     }
@@ -113,7 +113,7 @@ class TailwindCSS implements Docset
 
     protected function removeRightSidebar(HtmlPageCrawler $crawler)
     {
-        $crawler->filter('#content > div.flex > div.hidden')->remove();
+        $crawler->filter('#app div.flex > div.hidden')->remove();
     }
 
     protected function removeJavaScript(HtmlPageCrawler $crawler)
@@ -143,24 +143,26 @@ class TailwindCSS implements Docset
 
     protected function updateTopPadding(HtmlPageCrawler $crawler)
     {
-        $crawler->filter('#app > #content')
+        $crawler->filter('#app > div')
+            ->removeClass('pt-12')
             ->removeClass('pt-24')
             ->removeClass('pb-16')
             ->removeClass('lg:pt-28')
-            ->addClass('pt-2');
+            ->removeClass('lg:pt-12')
+        ;
     }
 
     protected function updateHeader(HtmlPageCrawler $crawler)
     {
-        $crawler->filter('#content > div.markdown')
+        $crawler->filter('#app > div > div.markdown')
             ->removeClass('lg:ml-0')
             ->removeClass('lg:mr-auto')
             ->removeClass('xl:mx-0')
-            ->removeClass('xl:p-12')
             ->removeClass('xl:w-3/4')
             ->removeClass('max-w-3xl')
             ->removeClass('xl:px-12')
-            ->addClass('pt-2');
+            ->addClass('pt-4')
+        ;
     }
 
     protected function updateContainerWidth(HtmlPageCrawler $crawler)
@@ -175,7 +177,7 @@ class TailwindCSS implements Docset
             ->removeClass('lg:w-3/4')
             ->removeClass('xl:w-4/5');
 
-        $crawler->filter('#content > div.flex > div.markdown')
+        $crawler->filter('#app > div > div.flex > div.markdown')
             ->removeClass('xl:p-12')
             ->removeClass('max-w-3xl')
             ->removeClass('lg:ml-0')

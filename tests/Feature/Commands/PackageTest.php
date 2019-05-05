@@ -68,15 +68,15 @@ class PackageTest extends TestCase
     /** @test */
     public function it_formats_the_doc_especially_for_dash()
     {
-        $navBar = 'class="nav-item';
+        $navbar = 'class="nav-item';
 
         $this->assertStringContainsString(
-            $navBar,
+            $navbar,
             Storage::get('dummy/docs/sleeplessmind.info/index.html')
         );
 
         $this->assertStringNotContainsString(
-            $navBar,
+            $navbar,
             Storage::get('dummy/dummy.docset/Contents/Resources/Documents/index.html')
         );
     }
