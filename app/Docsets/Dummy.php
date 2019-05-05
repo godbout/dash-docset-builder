@@ -65,6 +65,15 @@ class Dummy implements Docset
 
     public function format(string $html): string
     {
-        return $html;
+        $crawler = HtmlPageCrawler::create($html);
+
+        $this->removeNavbar($crawler);
+
+        return $crawler->saveHTML();
+    }
+
+    protected function removeNavbar(HtmlPageCrawler $crawler)
+    {
+        $crawler->filter('.nav-item')->remove();
     }
 }
