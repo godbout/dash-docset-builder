@@ -8,11 +8,12 @@ use LaravelZero\Framework\Commands\Command;
 
 abstract class BaseCommand extends Command
 {
-    public function fire($action, $doc)
+    public function handle()
     {
-        $docset = "App\\Docsets\\$doc";
+        $docset = $this->requestedDocset();
+        $action = $this->requestedAction();
 
-        if (class_exists($docset)) {
+        if ($this->isSupported($docset)) {
             $this->info(Str::ucfirst("$action started"));
             (new DocsetBuilder)->$action(new $docset, $this);
             $this->info(Str::ucfirst("$action finished"));
@@ -23,5 +24,20 @@ abstract class BaseCommand extends Command
         $this->warn('The doc requested does not seem to be supported.');
 
         return 1;
+    }
+
+    protected function requestedDocset()
+    {
+        return "App\\Docsets\\{$this->argument('doc')}";
+    }
+
+    protected function requestedAction()
+    {
+        return $this->getName();
+    }
+
+    protected function isSupported()
+    {
+        return class_exists("App\\Docsets\\{$this->argument('doc')}");
     }
 }
