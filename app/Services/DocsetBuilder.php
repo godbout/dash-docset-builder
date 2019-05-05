@@ -16,8 +16,6 @@ class DocsetBuilder
     {
         $this->grab($docset, $command);
         $this->package($docset, $command);
-
-        return;
     }
 
     public function grab(Docset $docset, Command $command)
