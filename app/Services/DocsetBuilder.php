@@ -12,20 +12,29 @@ use LaravelZero\Framework\Commands\Command;
 
 class DocsetBuilder
 {
-    public function build(Docset $docset, Command $command)
+    protected $docset;
+    protected $command;
+
+    public function __construct(Docset $docset, Command $command)
     {
-        $this->grab($docset, $command);
-        $this->package($docset, $command);
+        $this->docset = $docset;
+        $this->command = $command;
     }
 
-    public function grab(Docset $docset, Command $command)
+    public function build()
     {
-        $command->task('  - Downloading online doc', function () use ($docset, $command) {
-            $command->line(PHP_EOL);
+        $this->grab();
+        $this->package();
+    }
+
+    public function grab()
+    {
+        $this->command->task('  - Downloading online doc', function () {
+            $this->command->line(PHP_EOL);
 
             return passthru(
-                "httrack 'https://{$docset->url()}' \
-                --path 'storage/{$docset->code()}/docs' \
+                "httrack 'https://{$this->docset->url()}' \
+                --path 'storage/{$this->docset->code()}/docs' \
                 --connection-per-second=50 \
                 --sockets=80 \
                 --keep-alive \
@@ -42,60 +51,60 @@ class DocsetBuilder
         });
     }
 
-    public function package(Docset $docset, Command $command)
+    public function package()
     {
-        $command->task('  - Remove previous .docset', function () use ($docset) {
-            return $this->removePreviousDocsetFile($docset);
+        $this->command->task('  - Remove previous .docset', function () {
+            return $this->removePreviousDocsetFile($this->docset);
         });
 
-        $command->task('  - Create new .docset', function () use ($docset) {
-            return $this->createDocsetFile($docset);
+        $this->command->task('  - Create new .docset', function () {
+            return $this->createDocsetFile($this->docset);
         });
 
-        $command->task('  - Copy original doc files', function () use ($docset) {
-            $this->copyDocFiles($docset);
+        $this->command->task('  - Copy original doc files', function () {
+            $this->copyDocFiles($this->docset);
         });
 
-        $command->task('  - Create Info.plist', function () use ($docset) {
-            $this->createInfoPlist($docset);
+        $this->command->task('  - Create Info.plist', function () {
+            $this->createInfoPlist($this->docset);
         });
 
-        $command->task('  - Populate SQLiteIndex', function () use ($docset) {
-            $this->createAndPopulateSQLiteIndex($docset);
+        $this->command->task('  - Populate SQLiteIndex', function () {
+            $this->createAndPopulateSQLiteIndex($this->docset);
         });
 
-        $command->task('  - Format doc files for Dash', function () use ($docset) {
-            $this->formatDocFiles($docset);
+        $this->command->task('  - Format doc files for Dash', function () {
+            $this->formatDocFiles($this->docset);
         });
 
-        $command->task('  - Copy icons', function () use ($docset) {
-            $this->copyIcons($docset);
+        $this->command->task('  - Copy icons', function () {
+            $this->copyIcons($this->docset);
         });
     }
 
-    protected function removePreviousDocsetFile(Docset $docset)
+    protected function removePreviousDocsetFile()
     {
         Storage::deleteDirectory(
-            $this->docsetFile($docset)
+            $this->docsetFile($this->docset)
         );
     }
 
-    protected function createDocsetFile(Docset $docset)
+    protected function createDocsetFile()
     {
         Storage::makeDirectory(
-            $this->docsetInnerDirectory($docset)
+            $this->docsetInnerDirectory($this->docset)
         );
     }
 
-    protected function copyDocFiles(Docset $docset)
+    protected function copyDocFiles()
     {
         File::copyDirectory(
-            "storage/{$this->docsetDownloadedDirectory($docset)}",
-            "storage/{$this->docsetInnerDirectory($docset)}"
+            "storage/{$this->docsetDownloadedDirectory($this->docset)}",
+            "storage/{$this->docsetInnerDirectory($this->docset)}"
         );
     }
 
-    protected function createInfoPlist(Docset $docset)
+    protected function createInfoPlist()
     {
         $infoPlist = <<<EOT
 <?xml version="1.0" encoding="UTF-8"?>
@@ -103,17 +112,17 @@ class DocsetBuilder
 <plist version="1.0">
 <dict>
     <key>CFBundleIdentifier</key>
-    <string>{$docset->code()}</string>
+    <string>{$this->docset->code()}</string>
     <key>CFBundleName</key>
-    <string>{$docset->name()}</string>
+    <string>{$this->docset->name()}</string>
     <key>DocSetPlatformFamily</key>
-    <string>{$docset->code()}</string>
+    <string>{$this->docset->code()}</string>
     <key>dashIndexFilePath</key>
     <string>index.html</string>
     <key>DashDocSetFallbackURL</key>
-    <string>{$docset->url()}</string>
+    <string>{$this->docset->url()}</string>
     <key>DashDocSetPlayURL</key>
-    <string>{$docset->playground()}</string>
+    <string>{$this->docset->playground()}</string>
     <key>isJavaScriptEnabled</key>
     <true/>
     <key>isDashDocset</key>
@@ -125,40 +134,40 @@ class DocsetBuilder
 EOT;
 
         Storage::put(
-            $this->docsetInfoPlistFile($docset),
+            $this->docsetInfoPlistFile($this->docset),
             $infoPlist
         );
     }
 
-    protected function createAndPopulateSQLiteIndex(Docset $docset)
+    protected function createAndPopulateSQLiteIndex()
     {
         Config::set(
             'database.connections.sqlite.database',
-            "storage/{$this->docsetDatabaseFile($docset)}"
+            "storage/{$this->docsetDatabaseFile($this->docset)}"
         );
 
-        $this->createSQLiteIndex($docset);
+        $this->createSQLiteIndex($this->docset);
 
-        $this->populateSQLiteIndex($docset);
+        $this->populateSQLiteIndex($this->docset);
     }
 
-    protected function createSQLiteIndex(Docset $docset)
+    protected function createSQLiteIndex()
     {
         Storage::put(
-            $this->docsetDatabaseFile($docset),
+            $this->docsetDatabaseFile($this->docset),
             null
         );
 
         Artisan::call('migrate');
     }
 
-    protected function populateSQLiteIndex(Docset $docset)
+    protected function populateSQLiteIndex()
     {
         $html = Storage::get(
-            "{$this->docsetInnerDirectory($docset)}/index.html"
+            "{$this->docsetInnerDirectory($this->docset)}/index.html"
         );
 
-        foreach ($docset->entries($html) as $entry) {
+        foreach ($this->docset->entries($html) as $entry) {
             DB::table('searchIndex')->insert([
                 'name' => $entry['name'],
                 'type' => $entry['type'],
@@ -167,57 +176,57 @@ EOT;
         }
     }
 
-    protected function formatDocFiles(Docset $docset)
+    protected function formatDocFiles()
     {
         $files = Storage::Allfiles(
-            $this->docsetInnerDirectory($docset)
+            $this->docsetInnerDirectory($this->docset)
         );
 
         foreach ($files as $file) {
             if (substr($file, -5) === '.html') {
                 Storage::put(
                     $file,
-                    $docset->format(Storage::get($file))
+                    $this->docset->format(Storage::get($file))
                 );
             }
         }
     }
 
-    protected function copyIcons($docset)
+    protected function copyIcons()
     {
         Storage::copy(
-            "{$this->docsetDownloadedDirectory($docset)}/{$docset->icon16()}",
-            "{$this->docsetFile($docset)}/icon.png"
+            "{$this->docsetDownloadedDirectory($this->docset)}/{$this->docset->icon16()}",
+            "{$this->docsetFile($this->docset)}/icon.png"
         );
 
         Storage::copy(
-            "{$this->docsetDownloadedDirectory($docset)}/{$docset->icon32()}",
-            "{$this->docsetFile($docset)}/icon@2x.png"
+            "{$this->docsetDownloadedDirectory($this->docset)}/{$this->docset->icon32()}",
+            "{$this->docsetFile($this->docset)}/icon@2x.png"
         );
     }
 
-    protected function docsetFile(Docset $docset)
+    protected function docsetFile()
     {
-        return "{$docset->code()}/{$docset->code()}.docset";
+        return "{$this->docset->code()}/{$this->docset->code()}.docset";
     }
 
-    protected function docsetInnerDirectory(Docset $docset)
+    protected function docsetInnerDirectory()
     {
-        return "{$docset->code()}/{$docset->code()}.docset/Contents/Resources/Documents";
+        return "{$this->docset->code()}/{$this->docset->code()}.docset/Contents/Resources/Documents";
     }
 
-    protected function docsetDownloadedDirectory(Docset $docset)
+    protected function docsetDownloadedDirectory()
     {
-        return "{$docset->code()}/docs/{$docset->url()}";
+        return "{$this->docset->code()}/docs/{$this->docset->url()}";
     }
 
-    protected function docsetInfoPlistFile(Docset $docset)
+    protected function docsetInfoPlistFile()
     {
-        return "{$this->docsetFile($docset)}/Contents/Info.plist";
+        return "{$this->docsetFile($this->docset)}/Contents/Info.plist";
     }
 
-    protected function docsetDatabaseFile(Docset $docset)
+    protected function docsetDatabaseFile()
     {
-        return "{$this->docsetFile($docset)}/Contents/Resources/docSet.dsidx";
+        return "{$this->docsetFile($this->docset)}/Contents/Resources/docSet.dsidx";
     }
 }
