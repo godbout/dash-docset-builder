@@ -37,7 +37,7 @@ return [
             'driver' => 'sqlite',
             'database' => env(
                 'DB_DATABASE',
-                storage_path('tailwindcss/tailwindcss.docset/Contents/Resources/docSet.dsidx')
+                storage_path('database.sqlite')
             ),
             'prefix' => '',
         ],
