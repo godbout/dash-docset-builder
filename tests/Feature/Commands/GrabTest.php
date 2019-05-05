@@ -17,12 +17,9 @@ class GrabTest extends TestCase
     }
 
     /** @test */
-    public function currently_the_command_only_allows_tailwindcss_as_argument()
+    public function the_command_returns_an_info_message_if_the_docset_is_not_supported()
     {
-        $this->artisan('grab tailwindcss')
-            ->assertExitCode(0);
-
-        $this->artisan('grab nottailwindcss')
+        $this->artisan('grab unsupported')
             ->expectsOutput('The doc requested does not seem to be supported.')
             ->assertExitCode(1);
     }
@@ -30,6 +27,6 @@ class GrabTest extends TestCase
     /** @test */
     public function the_command_downloads_the_docs_in_storage()
     {
-        $this->assertDirectoryExists('storage/tailwindcss');
+        $this->assertDirectoryExists('storage/dummy');
     }
 }
