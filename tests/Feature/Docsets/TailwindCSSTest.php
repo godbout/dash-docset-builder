@@ -2,11 +2,11 @@
 
 namespace Tests\Feature\Docsets;
 
+use Tests\TestCase;
 use App\Docsets\TailwindCSS;
+use Wa72\HtmlPageDom\HtmlPageCrawler;
 use Illuminate\Support\Facades\Artisan;
 use Illuminate\Support\Facades\Storage;
-use Tests\TestCase;
-use Wa72\HtmlPageDom\HtmlPageCrawler;
 
 class TailwindCSSTest extends TestCase
 {
