@@ -27,7 +27,7 @@ class DocsetBuilder
 
             return passthru(
                 "httrack 'https://{$docset->url()}' \
-                --path 'storage/{$docset->code()}' \
+                --path 'storage/{$docset->code()}/docs' \
                 --connection-per-second=50 \
                 --sockets=80 \
                 --keep-alive \
@@ -210,7 +210,7 @@ EOT;
 
     protected function docsetDownloadedDirectory(Docset $docset)
     {
-        return "{$docset->code()}/{$docset->url()}";
+        return "{$docset->code()}/docs/{$docset->url()}";
     }
 
     protected function docsetInfoPlistFile(Docset $docset)
