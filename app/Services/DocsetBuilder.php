@@ -9,16 +9,17 @@ use Illuminate\Support\Facades\Config;
 use Illuminate\Support\Facades\Artisan;
 use Illuminate\Support\Facades\Storage;
 use LaravelZero\Framework\Commands\Command;
+use Illuminate\Console\Command as LaravelCommand;
 
 class DocsetBuilder
 {
     protected $docset;
     protected $command;
 
-    public function __construct(Docset $docset, Command $command)
+    public function __construct(Docset $docset, Command $command = null)
     {
         $this->docset = $docset;
-        $this->command = $command;
+        $this->command = $command ?? new LaravelCommand();
     }
 
     public function build()
@@ -205,27 +206,27 @@ EOT;
         );
     }
 
-    protected function docsetFile()
+    public function docsetFile()
     {
         return "{$this->docset->code()}/{$this->docset->code()}.docset";
     }
 
-    protected function docsetInnerDirectory()
+    public function docsetInnerDirectory()
     {
         return "{$this->docset->code()}/{$this->docset->code()}.docset/Contents/Resources/Documents";
     }
 
-    protected function docsetDownloadedDirectory()
+    public function docsetDownloadedDirectory()
     {
         return "{$this->docset->code()}/docs/{$this->docset->url()}";
     }
 
-    protected function docsetInfoPlistFile()
+    public function docsetInfoPlistFile()
     {
         return "{$this->docsetFile($this->docset)}/Contents/Info.plist";
     }
 
-    protected function docsetDatabaseFile()
+    public function docsetDatabaseFile()
     {
         return "{$this->docsetFile($this->docset)}/Contents/Resources/docSet.dsidx";
     }

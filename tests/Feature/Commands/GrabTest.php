@@ -3,6 +3,7 @@
 namespace Tests\Feature\Commands;
 
 use Tests\TestCase;
+use Illuminate\Support\Facades\Storage;
 use Symfony\Component\Console\Exception\RuntimeException;
 
 class GrabTest extends TestCase
@@ -27,6 +28,6 @@ class GrabTest extends TestCase
     /** @test */
     public function the_command_downloads_the_docs_in_storage()
     {
-        $this->assertDirectoryExists('storage/dummy');
+        $this->assertTrue(Storage::exists('dummy'));
     }
 }
