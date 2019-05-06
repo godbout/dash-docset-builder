@@ -28,7 +28,9 @@ abstract class BaseCommand extends Command
 
     protected function requestedDocset()
     {
-        return "App\\Docsets\\{$this->argument('doc')}";
+        $classBasename = Str::camel($this->argument('doc'));
+
+        return "App\\Docsets\\$classBasename";
     }
 
     protected function requestedAction()
@@ -38,6 +40,6 @@ abstract class BaseCommand extends Command
 
     protected function isSupported()
     {
-        return class_exists("App\\Docsets\\{$this->argument('doc')}");
+        return class_exists($this->requestedDocset());
     }
 }

@@ -2,11 +2,10 @@
 
 namespace App\Docsets;
 
-use App\Contracts\Docset;
 use Illuminate\Support\Collection;
 use Wa72\HtmlPageDom\HtmlPageCrawler;
 
-class TailwindCSS implements Docset
+class TailwindCSS extends BaseDocset
 {
     const CODE = 'tailwindcss';
     const NAME = 'Tailwind CSS';
@@ -14,37 +13,6 @@ class TailwindCSS implements Docset
     const PLAYGROUND = 'https://codepen.io/drehimself/pen/vpeVMx';
     const ICON_16 = 'favicon-16x16.png';
     const ICON_32 = 'favicon-32x32.png';
-
-
-    public function code(): string
-    {
-        return self::CODE;
-    }
-
-    public function name(): string
-    {
-        return self::NAME;
-    }
-
-    public function url(): string
-    {
-        return self::URL;
-    }
-
-    public function playground(): string
-    {
-        return self::PLAYGROUND;
-    }
-
-    public function icon16(): string
-    {
-        return self::ICON_16;
-    }
-
-    public function icon32(): string
-    {
-        return self::ICON_32;
-    }
 
     public function entries(string $html): Collection
     {

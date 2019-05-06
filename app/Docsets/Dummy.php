@@ -2,11 +2,10 @@
 
 namespace App\Docsets;
 
-use App\Contracts\Docset;
 use Illuminate\Support\Collection;
 use Wa72\HtmlPageDom\HtmlPageCrawler;
 
-class Dummy implements Docset
+class Dummy extends BaseDocset
 {
     const CODE = 'dummy';
     const NAME = 'Dummy';
@@ -14,37 +13,6 @@ class Dummy implements Docset
     const PLAYGROUND = '';
     const ICON_16 = 'assets/favicons/favicon-16x16.png';
     const ICON_32 = 'assets/favicons/favicon-32x32.png';
-
-
-    public function code(): string
-    {
-        return self::CODE;
-    }
-
-    public function name(): string
-    {
-        return self::NAME;
-    }
-
-    public function url(): string
-    {
-        return self::URL;
-    }
-
-    public function playground(): string
-    {
-        return self::PLAYGROUND;
-    }
-
-    public function icon16(): string
-    {
-        return self::ICON_16;
-    }
-
-    public function icon32(): string
-    {
-        return self::ICON_32;
-    }
 
     public function entries(string $html): Collection
     {
