@@ -190,15 +190,19 @@ EOT;
 
     protected function copyIcons()
     {
-        Storage::copy(
-            "{$this->docsetDownloadedDirectory($this->docset)}/{$this->docset->icon16()}",
-            "{$this->docsetFile($this->docset)}/icon.png"
-        );
+        if ($this->docset->icon16()) {
+            Storage::copy(
+                "{$this->docsetDownloadedDirectory($this->docset)}/{$this->docset->icon16()}",
+                "{$this->docsetFile($this->docset)}/icon.png"
+            );
+        }
 
-        Storage::copy(
-            "{$this->docsetDownloadedDirectory($this->docset)}/{$this->docset->icon32()}",
-            "{$this->docsetFile($this->docset)}/icon@2x.png"
-        );
+        if ($this->docset->icon32()) {
+            Storage::copy(
+                "{$this->docsetDownloadedDirectory($this->docset)}/{$this->docset->icon32()}",
+                "{$this->docsetFile($this->docset)}/icon@2x.png"
+            );
+        }
     }
 
     public function docsetFile()
