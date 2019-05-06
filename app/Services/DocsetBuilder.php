@@ -114,7 +114,7 @@ class DocsetBuilder
     <key>DocSetPlatformFamily</key>
     <string>{$this->docset->code()}</string>
     <key>dashIndexFilePath</key>
-    <string>index.html</string>
+    <string>{$this->docset->index()}</string>
     <key>DashDocSetFallbackURL</key>
     <string>{$this->docset->url()}</string>
     <key>DashDocSetPlayURL</key>
@@ -160,7 +160,7 @@ EOT;
     protected function populateSQLiteIndex()
     {
         $html = Storage::get(
-            "{$this->docsetInnerDirectory($this->docset)}/index.html"
+            $this->docsetIndex($this->docset)
         );
 
         foreach ($this->docset->entries($html) as $entry) {
@@ -209,6 +209,11 @@ EOT;
     public function docsetInnerDirectory()
     {
         return "{$this->docset->code()}/{$this->docset->code()}.docset/Contents/Resources/Documents";
+    }
+
+    public function docsetIndex()
+    {
+        return "{$this->docsetInnerDirectory()}/{$this->docset->index()}";
     }
 
     public function docsetDownloadedDirectory()

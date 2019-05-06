@@ -10,6 +10,7 @@ class TailwindCSS extends BaseDocset
     const CODE = 'tailwindcss';
     const NAME = 'Tailwind CSS';
     const URL = 'next.tailwindcss.com';
+    const INDEX = 'index.html';
     const PLAYGROUND = 'https://codepen.io/drehimself/pen/vpeVMx';
     const ICON_16 = 'favicon-16x16.png';
     const ICON_32 = 'favicon-32x32.png';
