@@ -26,13 +26,12 @@ class DocsetBuilder
     {
         $this->grab();
         $this->package();
+        $this->archive();
     }
 
     public function grab()
     {
         $this->command->task('  - Downloading online doc', function () {
-            $this->command->line('');
-
             return passthru(
                 "wget \
                 --mirror \
@@ -75,6 +74,21 @@ class DocsetBuilder
 
         $this->command->task('  - Copy icons', function () {
             $this->copyIcons($this->docset);
+        });
+    }
+
+    public function archive()
+    {
+        $this->command->task('  - Archiving package', function () {
+            $archiveFile = "{$this->docset->code()}/{$this->docset->code()}.tgz";
+
+            return system(
+                "tar \
+                --exclude='.DS_Store' \
+                -czf \
+                storage/$archiveFile \
+                storage/{$this->docsetFile()}"
+            );
         });
     }
 
