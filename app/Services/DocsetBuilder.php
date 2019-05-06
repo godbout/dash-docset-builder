@@ -31,23 +31,18 @@ class DocsetBuilder
     public function grab()
     {
         $this->command->task('  - Downloading online doc', function () {
-            $this->command->line(PHP_EOL);
+            $this->command->line('');
 
             return passthru(
-                "httrack 'https://{$this->docset->url()}' \
-                --path 'storage/{$this->docset->code()}/docs' \
-                --connection-per-second=50 \
-                --sockets=80 \
-                --keep-alive \
-                --display \
+                "wget \
+                --mirror \
+                --page-requisites \
+                --adjust-extension \
+                --convert-links \
                 --quiet \
-                --advanced-progressinfo \
-                --disable-security-limits \
-                -s0 \
-                -o0 \
-                -F 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/70.0.3538.77 Safari/537.36' \
-                --max-rate=0 \
-                --depth=5"
+                --show-progress \
+                --directory-prefix=storage/{$this->docset->code()}/docs \
+                {$this->docset->url()}"
             );
         });
     }
