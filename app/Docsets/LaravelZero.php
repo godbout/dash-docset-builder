@@ -12,8 +12,8 @@ class LaravelZero extends BaseDocset
     const URL = 'laravel-zero.com';
     const INDEX = 'docs/introduction.html';
     const PLAYGROUND = '';
-    const ICON_16 = 'favicon.ico';
-    const ICON_32 = 'favicon.ico';
+    const ICON_16 = '../icon.png';
+    const ICON_32 = '../icon@2x.png';
 
     public function entries(string $html): Collection
     {
