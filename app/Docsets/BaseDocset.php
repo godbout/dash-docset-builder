@@ -15,37 +15,37 @@ abstract class BaseDocset implements Docset
     const ICON_16 = self::ICON_16;
     const ICON_32 = self::ICON_32;
 
-    public function code(): string
+    final public function code(): string
     {
         return static::CODE;
     }
 
-    public function name(): string
+    final public function name(): string
     {
         return static::NAME;
     }
 
-    public function url(): string
+    final public function url(): string
     {
         return static::URL;
     }
 
-    public function index(): string
+    final public function index(): string
     {
         return static::INDEX;
     }
 
-    public function playground(): string
+    final public function playground(): string
     {
         return static::PLAYGROUND;
     }
 
-    public function icon16(): string
+    final public function icon16(): string
     {
         return static::ICON_16;
     }
 
-    public function icon32(): string
+    final public function icon32(): string
     {
         return static::ICON_32;
     }
