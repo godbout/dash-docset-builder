@@ -12,6 +12,8 @@ interface Docset
 
     public function url(): string;
 
+    public function index(): string;
+
     public function playground(): string;
 
     public function icon16(): string;
