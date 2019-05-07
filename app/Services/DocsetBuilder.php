@@ -31,7 +31,7 @@ class DocsetBuilder
 
     public function grab()
     {
-        $this->command->task('  - Downloading online doc', function () {
+        $this->command->task('  - Downloading doc', function () {
             return passthru(
                 "wget \
                 --mirror \
@@ -39,7 +39,6 @@ class DocsetBuilder
                 --adjust-extension \
                 --convert-links \
                 --quiet \
-                --show-progress \
                 --directory-prefix=storage/{$this->docset->code()}/docs \
                 {$this->docset->url()}"
             );
