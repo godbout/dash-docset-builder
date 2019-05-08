@@ -47,7 +47,7 @@
         "post-create-project-cmd": [
             "@php application app:rename"
         ],
-        "test": "phpunit --group=default,tailwindcss --color=always",
+        "test": "phpunit --group=default,tailwindcss,laravel-zero --color=always",
         "format": "php-cs-fixer fix -vvv --config=.php_cs.dist --ansi"
     },
     "minimum-stability": "dev",
