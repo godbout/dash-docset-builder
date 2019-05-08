@@ -26,8 +26,5 @@
         <include>
             <group>default</group>
         </include>
-        <exclude>
-            <group>tailwindcss</group>
-        </exclude>
     </groups>
 </phpunit>
