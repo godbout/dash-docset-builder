@@ -16,7 +16,8 @@ class TailwindCSSTest extends TestCase
     {
         parent::setUp();
 
-        $this->builder = new DocsetBuilder(new TailwindCSS);
+        $this->tailwindCSS = new TailwindCSS;
+        $this->builder = new DocsetBuilder($this->tailwindCSS);
 
         if (! Storage::exists($this->builder->docsetDownloadedDirectory())) {
             fwrite(STDOUT, PHP_EOL . PHP_EOL . "\e[1;33mGrabbing tailwindcss..." . PHP_EOL);
@@ -32,11 +33,11 @@ class TailwindCSSTest extends TestCase
     /** @test */
     public function it_generates_a_table_of_contents()
     {
-        $tailwind = new TailwindCSS;
-
-        $toc = $tailwind->entries(
+        $toc = $this->tailwindCSS->entries(
             HtmlPageCrawler::create(
-                Storage::get($this->builder->docsetDownloadedDirectory() . '/index.html')
+                Storage::get(
+                    $this->docsetDownloadedIndex()
+                )
             )
         );
 
@@ -55,7 +56,7 @@ class TailwindCSSTest extends TestCase
 
         $this->assertStringNotContainsString(
             $navbar,
-            Storage::get($this->builder->docsetInnerDirectory() . '/index.html')
+            Storage::get($this->builder->docsetIndex())
         );
     }
 
@@ -71,7 +72,7 @@ class TailwindCSSTest extends TestCase
 
         $this->assertStringNotContainsString(
             $leftSidebar,
-            Storage::get($this->builder->docsetInnerDirectory() . '/index.html')
+            Storage::get($this->builder->docsetIndex())
         );
     }
 
@@ -87,7 +88,7 @@ class TailwindCSSTest extends TestCase
 
         $this->assertStringNotContainsString(
             $rightSidebar,
-            Storage::get($this->builder->docsetInnerDirectory() . '/index.html')
+            Storage::get($this->builder->docsetIndex())
         );
     }
 
@@ -104,7 +105,7 @@ class TailwindCSSTest extends TestCase
 
 
         $crawler = HtmlPageCrawler::create(
-            Storage::get($this->builder->docsetInnerDirectory() . '/index.html')
+            Storage::get($this->builder->docsetIndex())
         );
 
         $this->assertFalse(
@@ -122,7 +123,7 @@ class TailwindCSSTest extends TestCase
 
         $this->assertStringNotContainsString(
             '<script>',
-            Storage::get($this->builder->docsetInnerDirectory() . '/index.html')
+            Storage::get($this->builder->docsetIndex())
         );
     }
 
@@ -131,7 +132,12 @@ class TailwindCSSTest extends TestCase
     {
         $this->assertStringContainsString(
             'name="//apple_ref/',
-            Storage::get($this->builder->docsetInnerDirectory() . '/index.html')
+            Storage::get($this->builder->docsetIndex())
         );
+    }
+
+    protected function docsetDownloadedIndex()
+    {
+        return $this->builder->docsetDownloadedDirectory() . '/' . TailwindCSS::INDEX;
     }
 }
