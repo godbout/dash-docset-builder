@@ -9,7 +9,7 @@ use Wa72\HtmlPageDom\HtmlPageCrawler;
 use Illuminate\Support\Facades\Artisan;
 use Illuminate\Support\Facades\Storage;
 
-/*** @group laravel-zero */
+/** @group laravel-zero */
 class LaravelZerlTest extends TestCase
 {
     public function setUp(): void
