@@ -88,7 +88,7 @@ class DocsetBuilder
 
     protected function sitemapExists()
     {
-        return file_get_contents("https://{$this->docset->url()}/sitemap.xml");
+        return @file_get_contents("https://{$this->docset->url()}/sitemap.xml");
     }
 
     protected function grabFromSitemap()
@@ -97,6 +97,7 @@ class DocsetBuilder
             "wget {$this->docset->url()}/sitemap.xml --quiet --output-document - | \
             egrep --only-matching '{$this->docset->url()}[^<]+' | \
             wget --input-file - \
+            --mirror \
             --page-requisites \
             --adjust-extension \
             --convert-links \
