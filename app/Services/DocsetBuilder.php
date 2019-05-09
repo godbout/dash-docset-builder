@@ -32,16 +32,11 @@ class DocsetBuilder
     public function grab()
     {
         $this->command->task('  - Downloading doc', function () {
-            return passthru(
-                "wget \
-                --mirror \
-                --page-requisites \
-                --adjust-extension \
-                --convert-links \
-                --quiet \
-                --directory-prefix=storage/{$this->docset->code()}/docs \
-                {$this->docset->url()}"
-            );
+            if ($this->sitemapExists()) {
+                return $this->grabFromSitemap();
+            }
+
+            return $this->grabFromIndex();
         });
     }
 
@@ -89,6 +84,38 @@ class DocsetBuilder
                 storage/{$this->docsetFile()}"
             );
         });
+    }
+
+    protected function sitemapExists()
+    {
+        return file_get_contents("https://{$this->docset->url()}/sitemap.xml");
+    }
+
+    protected function grabFromSitemap()
+    {
+        return passthru(
+            "wget {$this->docset->url()}/sitemap.xml --quiet --output-document - | \
+            egrep --only-matching '{$this->docset->url()}[^<]+' | \
+            wget --input-file - \
+            --page-requisites \
+            --adjust-extension \
+            --convert-links \
+            --quiet \
+            --directory-prefix=storage/{$this->docset->code()}/docs"
+        );
+    }
+
+    protected function grabFromIndex()
+    {
+        return passthru(
+            "wget {$this->docset->url()} \
+            --mirror \
+            --page-requisites \
+            --adjust-extension \
+            --convert-links \
+            --quiet \
+            --directory-prefix=storage/{$this->docset->code()}/docs"
+        );
     }
 
     protected function removePreviousDocsetFile()
