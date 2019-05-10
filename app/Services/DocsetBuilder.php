@@ -200,33 +200,51 @@ EOT;
 
     protected function populateSQLiteIndex()
     {
-        $html = Storage::get(
-            $this->docsetIndex($this->docset)
-        );
+        $entries = $this->docsetEntries();
 
-        foreach ($this->docset->entries($html) as $entry) {
+        $entries->each(function ($entry) {
             DB::table('searchIndex')->insert([
                 'name' => $entry['name'],
                 'type' => $entry['type'],
                 'path' => $entry['path']
             ]);
-        }
+        });
+    }
+
+    protected function docsetEntries()
+    {
+        $files = $this->docsetHtmlFiles();
+
+        $entries = collect();
+
+        $files->each(function ($file) use (&$entries) {
+            $entries = $entries
+                ->merge($this->docset->entries($file))
+                ->unique('name');
+        });
+
+        return $entries;
     }
 
     protected function formatDocFiles()
     {
-        $files = Storage::Allfiles(
+        $files = $this->docsetHtmlFiles();
+
+        $files->each(function ($file) {
+            $formattedContent = $this->docset->format(Storage::get($file));
+            Storage::put($file, $formattedContent);
+        });
+    }
+
+    protected function docsetHtmlFiles()
+    {
+        $files =  Storage::allFiles(
             $this->docsetInnerDirectory($this->docset)
         );
 
-        foreach ($files as $file) {
-            if (substr($file, -5) === '.html') {
-                Storage::put(
-                    $file,
-                    $this->docset->format(Storage::get($file))
-                );
-            }
-        }
+        return collect($files)->reject(function ($file) {
+            return substr($file, -5) !== '.html';
+        });
     }
 
     protected function copyIcons()
