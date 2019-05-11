@@ -3,6 +3,7 @@
 namespace App\Docsets;
 
 use Illuminate\Support\Collection;
+use Illuminate\Support\Facades\Storage;
 use Wa72\HtmlPageDom\HtmlPageCrawler;
 
 class Dummy extends BaseDocset
@@ -15,11 +16,11 @@ class Dummy extends BaseDocset
     const ICON_16 = 'assets/favicons/favicon-16x16.png';
     const ICON_32 = 'assets/favicons/favicon-32x32.png';
 
-    public function entries(string $html): Collection
+    public function entries(string $file): Collection
     {
         $entries = collect();
 
-        $crawler = HtmlPageCrawler::create($html);
+        $crawler = HtmlPageCrawler::create(Storage::get($file));
 
         $crawler->filter('a.nav-item')->each(function (HtmlPageCrawler $node) use ($entries) {
             $entries->push([
