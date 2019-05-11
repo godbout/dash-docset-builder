@@ -14,6 +14,8 @@ abstract class BaseDocset implements Docset
     const PLAYGROUND = self::PLAYGROUND;
     const ICON_16 = self::ICON_16;
     const ICON_32 = self::ICON_32;
+    const EXTERNAL_DOMAINS = self::EXTERNAL_DOMAINS;
+
 
     final public function code(): string
     {
@@ -48,6 +50,14 @@ abstract class BaseDocset implements Docset
     final public function icon32(): string
     {
         return static::ICON_32;
+    }
+
+    final public function externalDomains(): string
+    {
+        return implode(
+            ',',
+            array_merge((array) static::URL, (array) static::EXTERNAL_DOMAINS)
+        );
     }
 
     abstract public function entries(string $html): Collection;

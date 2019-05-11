@@ -16,6 +16,7 @@ class DocsetBuilder
     protected $docset;
     protected $command;
 
+
     public function __construct(Docset $docset, Command $command = null)
     {
         $this->docset = $docset;
@@ -93,30 +94,38 @@ class DocsetBuilder
 
     protected function grabFromSitemap()
     {
-        return passthru(
+        system(
             "wget {$this->docset->url()}/sitemap.xml --quiet --output-document - | \
             egrep --only-matching '{$this->docset->url()}[^<]+' | \
-            wget --input-file - \
-            --mirror \
-            --page-requisites \
-            --adjust-extension \
-            --convert-links \
-            --quiet \
-            --directory-prefix=storage/{$this->docset->code()}/docs"
+            wget --input-file - {$this->wgetOptions()}",
+            $result
         );
+
+        return $result == 0;
     }
 
     protected function grabFromIndex()
     {
-        return passthru(
-            "wget {$this->docset->url()} \
-            --mirror \
+        system(
+            "wget {$this->docset->url()} {$this->wgetOptions()}",
+            $result
+        );
+
+        return $result == 0;
+    }
+
+    protected function wgetOptions()
+    {
+        return "--mirror \
             --page-requisites \
             --adjust-extension \
             --convert-links \
+            --no-directories \
+            --span-hosts \
+            --domains={$this->docset->externalDomains()} \
+            --level=1 \
             --quiet \
-            --directory-prefix=storage/{$this->docset->code()}/docs"
-        );
+            --directory-prefix=storage/{$this->docset->code()}/docs/{$this->docset->url()}";
     }
 
     protected function removePreviousDocsetFile()

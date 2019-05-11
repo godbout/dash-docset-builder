@@ -20,6 +20,8 @@ interface Docset
 
     public function icon32(): string;
 
+    public function externalDomains(): string;
+
     public function entries(string $html): Collection;
 
     public function format(string $html): string;
