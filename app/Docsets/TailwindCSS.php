@@ -3,6 +3,7 @@
 namespace App\Docsets;
 
 use Illuminate\Support\Collection;
+use Illuminate\Support\Facades\Storage;
 use Wa72\HtmlPageDom\HtmlPageCrawler;
 
 class TailwindCSS extends BaseDocset
@@ -11,13 +12,14 @@ class TailwindCSS extends BaseDocset
     const NAME = 'Tailwind CSS';
     const URL = 'next.tailwindcss.com';
     const INDEX = 'index.html';
-    const PLAYGROUND = 'https://codepen.io/drehimself/pen/vpeVMx';
+    const PLAYGROUND = '';
     const ICON_16 = 'favicon-16x16.png';
     const ICON_32 = 'favicon-32x32.png';
+    const EXTERNAL_DOMAINS = [];
 
-    public function entries(string $html): Collection
+    public function entries(string $file): Collection
     {
-        $crawler = HtmlPageCrawler::create($html);
+        $crawler = HtmlPageCrawler::create(Storage::get($file));
 
         $entries = collect();
         $entries = $entries->merge($this->guideEntries($crawler));
@@ -63,7 +65,6 @@ class TailwindCSS extends BaseDocset
         $this->removeNavbarAndHeader($crawler);
         $this->removeLeftSidebar($crawler);
         $this->removeRightSidebar($crawler);
-        $this->removeJavaScript($crawler);
         $this->updateCSS($crawler);
         $this->insertDashTableOfContents($crawler);
 
@@ -83,11 +84,6 @@ class TailwindCSS extends BaseDocset
     protected function removeRightSidebar(HtmlPageCrawler $crawler)
     {
         $crawler->filter('#app div.flex > div.hidden')->remove();
-    }
-
-    protected function removeJavaScript(HtmlPageCrawler $crawler)
-    {
-        $crawler->filter('script')->remove();
     }
 
     protected function updateCSS(HtmlPageCrawler $crawler)

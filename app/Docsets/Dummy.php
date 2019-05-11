@@ -13,8 +13,9 @@ class Dummy extends BaseDocset
     const URL = 'sleeplessmind.info';
     const INDEX = 'index.html';
     const PLAYGROUND = '';
-    const ICON_16 = 'assets/favicons/favicon-16x16.png';
-    const ICON_32 = 'assets/favicons/favicon-32x32.png';
+    const ICON_16 = 'favicon-16x16.png';
+    const ICON_32 = 'favicon-32x32.png';
+    const EXTERNAL_DOMAINS = [];
 
     public function entries(string $file): Collection
     {

@@ -11,10 +11,14 @@ class LaravelZero extends BaseDocset
     const CODE = 'laravel-zero';
     const NAME = 'Laravel Zero';
     const URL = 'laravel-zero.com';
-    const INDEX = 'docs/introduction.html';
+    const INDEX = 'introduction.html';
     const PLAYGROUND = '';
     const ICON_16 = '../icon.png';
     const ICON_32 = '../icon@2x.png';
+    const EXTERNAL_DOMAINS = [
+        'github.com',
+        'raw.githubusercontent.com'
+    ];
 
     public function entries(string $file): Collection
     {
@@ -35,7 +39,7 @@ class LaravelZero extends BaseDocset
             $entries->push([
                 'name' => trim($node->text()),
                 'type' => 'Guide',
-                'path' => "docs/{$node->attr('href')}"
+                'path' => $node->attr('href')
             ]);
         });
 
@@ -50,7 +54,7 @@ class LaravelZero extends BaseDocset
             $entries->push([
                 'name' => trim($node->text()),
                 'type' => 'Section',
-                'path' => "docs/{$node->attr('href')}"
+                'path' => $node->attr('href')
             ]);
         });
 
