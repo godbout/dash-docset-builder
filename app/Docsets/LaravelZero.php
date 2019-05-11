@@ -3,6 +3,7 @@
 namespace App\Docsets;
 
 use Illuminate\Support\Collection;
+use Illuminate\Support\Facades\Storage;
 use Wa72\HtmlPageDom\HtmlPageCrawler;
 
 class LaravelZero extends BaseDocset
@@ -15,9 +16,9 @@ class LaravelZero extends BaseDocset
     const ICON_16 = '../icon.png';
     const ICON_32 = '../icon@2x.png';
 
-    public function entries(string $html): Collection
+    public function entries(string $file): Collection
     {
-        $crawler = HtmlPageCrawler::create($html);
+        $crawler = HtmlPageCrawler::create(Storage::get($file));
 
         $entries = collect();
         $entries = $entries->merge($this->guideEntries($crawler));
