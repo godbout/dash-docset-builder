@@ -4,6 +4,7 @@ namespace App\Docsets;
 
 use Illuminate\Support\Collection;
 use Illuminate\Support\Facades\Storage;
+use Illuminate\Support\Str;
 use Wa72\HtmlPageDom\HtmlPageCrawler;
 
 class LaravelZero extends BaseDocset
@@ -26,7 +27,7 @@ class LaravelZero extends BaseDocset
 
         $entries = collect();
         $entries = $entries->merge($this->guideEntries($crawler));
-        $entries = $entries->merge($this->sectionEntries($crawler));
+        $entries = $entries->merge($this->sectionEntries($crawler, $file));
 
         return $entries;
     }
@@ -53,16 +54,22 @@ class LaravelZero extends BaseDocset
         return ! in_array($name, ['Usage', 'Add-ons']);
     }
 
-    protected function sectionEntries(HtmlPageCrawler $crawler)
+    protected function sectionEntries(HtmlPageCrawler $crawler, string $file)
     {
         $entries = collect();
 
-        $crawler->filter('.lvl1')->each(function (HtmlPageCrawler $node) use ($entries) {
-            $entries->push([
-                'name' => trim($node->text()),
-                'type' => 'Section',
-                'path' => $node->attr('href')
-            ]);
+        $h1 = $crawler->filter('h1')->last();
+
+        $crawler->filter('h2, h3, h4')->each(function (HtmlPageCrawler $node) use ($entries, $file, $h1) {
+            $fileBasename = basename($file);
+
+            if (! in_array($fileBasename, ['index.html', '404.html'])) {
+                $entries->push([
+                    'name' => trim($node->text() . ' - ' . $h1->text()),
+                    'type' => 'Section',
+                    'path' => basename($file) . '#' . Str::slug($node->text())
+                ]);
+            }
         });
 
         return $entries;
@@ -75,6 +82,7 @@ class LaravelZero extends BaseDocset
         $this->removeHeader($crawler);
         $this->removeLeftSidebar($crawler);
         $this->removeFooter($crawler);
+        $this->updateTopPadding($crawler);
         $this->updateContainerWidth($crawler);
         $this->updateBottomPadding($crawler);
         $this->insertDashTableOfContents($crawler);
@@ -95,6 +103,13 @@ class LaravelZero extends BaseDocset
     protected function removeFooter(HtmlPageCrawler $crawler)
     {
         $crawler->filter('body > footer')->remove();
+    }
+
+    protected function updateTopPadding(HtmlPageCrawler $crawler)
+    {
+        $crawler->filter('h1')
+            ->css('margin-top', '1rem')
+        ;
     }
 
     protected function updateContainerWidth(HtmlPageCrawler $crawler)
@@ -121,11 +136,11 @@ class LaravelZero extends BaseDocset
     protected function insertDashTableOfContents(HtmlPageCrawler $crawler)
     {
         $crawler->filter('h1')
-            ->after('<p><a name="//apple_ref/cpp/Section/Top" class="dashAnchor absolute" style="margin-top: -96px"></a></p>');
+            ->before('<a name="//apple_ref/cpp/Section/Top" class="dashAnchor"></a>');
 
-        $crawler->filter('h2')->each(function (HtmlPageCrawler $node) {
-            $node->after(
-                '<p><a name="//apple_ref/cpp/Section/' . $node->text() . '" class="dashAnchor absolute" style="margin-top: -84px"></a></p>'
+        $crawler->filter('h2, h3, h4')->each(function (HtmlPageCrawler $node) {
+            $node->before(
+                '<a id="' . Str::slug($node->text()) . '" name="//apple_ref/cpp/Section/' . rawurlencode($node->text()) . '" class="dashAnchor"></a>'
             );
         });
     }
