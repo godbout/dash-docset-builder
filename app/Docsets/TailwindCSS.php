@@ -12,7 +12,7 @@ class TailwindCSS extends BaseDocset
     const NAME = 'Tailwind CSS';
     const URL = 'next.tailwindcss.com';
     const INDEX = 'index.html';
-    const PLAYGROUND = 'https://github.com/tailwindcss/playground';
+    const PLAYGROUND = 'https://codesandbox.io/s/github/lbogdan/tailwindcss-playground';
     const ICON_16 = 'favicon-16x16.png';
     const ICON_32 = 'favicon-32x32.png';
     const EXTERNAL_DOMAINS = [];
