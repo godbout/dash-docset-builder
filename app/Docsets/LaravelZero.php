@@ -35,15 +35,22 @@ class LaravelZero extends BaseDocset
     {
         $entries = collect();
 
-        $crawler->filter('.lvl0')->each(function (HtmlPageCrawler $node) use ($entries) {
-            $entries->push([
-                'name' => trim($node->text()),
-                'type' => 'Guide',
-                'path' => $node->attr('href')
-            ]);
+        $crawler->filter('.lvl0, .lvl1')->each(function (HtmlPageCrawler $node) use ($entries) {
+            if ($this->isRealPage(trim($node->text()))) {
+                $entries->push([
+                    'name' => trim($node->text()),
+                    'type' => 'Guide',
+                    'path' => $node->attr('href')
+                ]);
+            }
         });
 
         return $entries;
+    }
+
+    protected function isRealPage($name)
+    {
+        return ! in_array($name, ['Usage', 'Add-ons']);
     }
 
     protected function sectionEntries(HtmlPageCrawler $crawler)
