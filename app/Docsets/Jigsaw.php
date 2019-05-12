@@ -4,6 +4,7 @@ namespace App\Docsets;
 
 use Illuminate\Support\Collection;
 use Illuminate\Support\Facades\Storage;
+use Illuminate\Support\Str;
 use Wa72\HtmlPageDom\HtmlPageCrawler;
 
 class Jigsaw extends BaseDocset
@@ -11,10 +12,12 @@ class Jigsaw extends BaseDocset
     const CODE = 'jigsaw';
     const NAME = 'Jigsaw';
     const URL = 'jigsaw.tighten.co';
-    const INDEX = 'docs/installation.html';
+    const INDEX = 'installation.html';
     const PLAYGROUND = '';
-    const ICON_16 = 'favicons/favicon-16x16.png';
-    const ICON_32 = 'favicons/favicon-32x32.png';
+    const ICON_16 = 'favicon-16x16.png';
+    const ICON_32 = 'favicon-32x32.png';
+    const EXTERNAL_DOMAINS = [];
+
 
     public function entries(string $file): Collection
     {
@@ -22,7 +25,7 @@ class Jigsaw extends BaseDocset
 
         $entries = collect();
         $entries = $entries->merge($this->guideEntries($crawler, $file));
-        // $entries = $entries->merge($this->sectionEntries($crawler));
+        $entries = $entries->merge($this->sectionEntries($crawler, $file));
 
         return $entries;
     }
@@ -38,7 +41,7 @@ class Jigsaw extends BaseDocset
                 $entries->push([
                     'name' => trim($node->text()),
                     'type' => 'Guide',
-                    'path' => 'docs/' . $fileBasename
+                    'path' => $fileBasename
                 ]);
             }
         });
@@ -46,20 +49,26 @@ class Jigsaw extends BaseDocset
         return $entries;
     }
 
-    // protected function sectionEntries(HtmlPageCrawler $crawler)
-    // {
-    //     $entries = collect();
+    protected function sectionEntries(HtmlPageCrawler $crawler, string $file)
+    {
+        $entries = collect();
 
-    //     $crawler->filter('.lvl1')->each(function (HtmlPageCrawler $node) use ($entries) {
-    //         $entries->push([
-    //             'name' => trim($node->text()),
-    //             'type' => 'Section',
-    //             'path' => "docs/{$node->attr('href')}"
-    //         ]);
-    //     });
+        $h2 = $crawler->filter('h2')->first();
 
-    //     return $entries;
-    // }
+        $crawler->filter('h3')->each(function (HtmlPageCrawler $node) use ($entries, $file, $h2) {
+            $fileBasename = basename($file);
+
+            if ($fileBasename !== 'index.html') {
+                $entries->push([
+                    'name' => trim($node->text() . ' - ' . $h2->text()),
+                    'type' => 'Section',
+                    'path' => basename($file) . '#' . Str::slug($node->text())
+                ]);
+            }
+        });
+
+        return $entries;
+    }
 
     public function format(string $html): string
     {
@@ -70,6 +79,7 @@ class Jigsaw extends BaseDocset
         $this->updateTopPadding($crawler);
         $this->updateContainer($crawler);
         $this->updateTextSize($crawler);
+        $this->updateH4Padding($crawler);
         $this->removeJavaScript($crawler);
         $this->insertDashTableOfContents($crawler);
 
@@ -130,6 +140,13 @@ class Jigsaw extends BaseDocset
         ;
     }
 
+    protected function updateH4Padding(HtmlPageCrawler $crawler)
+    {
+        $crawler->filter('h4')
+            ->css('margin-top', '2.5rem')
+        ;
+    }
+
     protected function updateBottomPadding(HtmlPageCrawler $crawler)
     {
         $crawler->filter('section > div > div')
@@ -149,7 +166,7 @@ class Jigsaw extends BaseDocset
 
         $crawler->filter('h3')->each(function (HtmlPageCrawler $node) {
             $node->before(
-                '<a name="//apple_ref/cpp/Section/' . $node->text() . '" class="dashAnchor"></a>'
+                '<a id="' . Str::slug($node->text()) . '" name="//apple_ref/cpp/Section/' . rawurlencode($node->text()) . '" class="dashAnchor"></a>'
             );
         });
     }
