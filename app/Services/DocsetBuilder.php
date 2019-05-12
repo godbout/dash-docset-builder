@@ -247,7 +247,7 @@ EOT;
 
     protected function docsetHtmlFiles()
     {
-        $files =  Storage::allFiles(
+        $files = Storage::allFiles(
             $this->docsetInnerDirectory($this->docset)
         );
 
