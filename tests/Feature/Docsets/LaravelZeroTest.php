@@ -9,22 +9,22 @@ use Wa72\HtmlPageDom\HtmlPageCrawler;
 use Illuminate\Support\Facades\Artisan;
 use Illuminate\Support\Facades\Storage;
 
-/** @group laravel-zero */
+/*** @group laravel-zero */
 class LaravelZeroTest extends TestCase
 {
     public function setUp(): void
     {
         parent::setUp();
 
-        $this->laravelZero = new LaravelZero;
-        $this->builder = new DocsetBuilder($this->laravelZero);
+        $this->docset = new LaravelZero;
+        $this->builder = new DocsetBuilder($this->docset);
 
-        if (! Storage::exists($this->builder->docsetDownloadedDirectory())) {
+        if (! Storage::exists($this->docset->downloadedDirectory())) {
             fwrite(STDOUT, PHP_EOL . PHP_EOL . "\e[1;33mGrabbing laravel-zero..." . PHP_EOL);
             Artisan::call('grab laravel-zero');
         }
 
-        if (! Storage::exists($this->builder->docsetFile())) {
+        if (! Storage::exists($this->docset->file())) {
             fwrite(STDOUT, PHP_EOL . PHP_EOL . "\e[1;33mPackaging laravel-zero..." . PHP_EOL);
             Artisan::call('package laravel-zero');
         }
@@ -33,10 +33,8 @@ class LaravelZeroTest extends TestCase
     /** @test */
     public function it_generates_a_table_of_contents()
     {
-        $toc = $this->laravelZero->entries(
-            HtmlPageCrawler::create(
-                Storage::get($this->docsetDownloadedIndex())
-            )
+        $toc = $this->docset->entries(
+            $this->docset->innerDirectory() . '/logging.html'
         );
 
         $this->assertNotEmpty($toc);
@@ -49,12 +47,12 @@ class LaravelZeroTest extends TestCase
 
         $this->assertStringContainsString(
             $header,
-            Storage::get($this->docsetDownloadedIndex())
+            Storage::get($this->docset->downloadedIndex())
         );
 
         $this->assertStringNotContainsString(
             $header,
-            Storage::get($this->builder->docsetIndex())
+            Storage::get($this->docset->innerIndex())
         );
     }
 
@@ -65,12 +63,12 @@ class LaravelZeroTest extends TestCase
 
         $this->assertStringContainsString(
             $leftSidebar,
-            Storage::get($this->docsetDownloadedIndex())
+            Storage::get($this->docset->downloadedIndex())
         );
 
         $this->assertStringNotContainsString(
             $leftSidebar,
-            Storage::get($this->builder->docsetIndex())
+            Storage::get($this->docset->innerIndex())
         );
     }
 
@@ -81,12 +79,12 @@ class LaravelZeroTest extends TestCase
 
         $this->assertStringContainsString(
             $footer,
-            Storage::get($this->docsetDownloadedIndex())
+            Storage::get($this->docset->downloadedIndex())
         );
 
         $this->assertStringNotContainsString(
             $footer,
-            Storage::get($this->builder->docsetIndex())
+            Storage::get($this->docset->innerIndex())
         );
     }
 
@@ -94,7 +92,7 @@ class LaravelZeroTest extends TestCase
     public function the_container_width_gets_updated_in_the_dash_docset_files()
     {
         $crawler = HtmlPageCrawler::create(
-            Storage::get($this->docsetDownloadedIndex())
+            Storage::get($this->docset->downloadedIndex())
         );
 
         $this->assertTrue(
@@ -103,7 +101,7 @@ class LaravelZeroTest extends TestCase
 
 
         $crawler = HtmlPageCrawler::create(
-            $this->builder->docsetIndex()
+            $this->docset->innerIndex()
         );
 
         $this->assertFalse(
@@ -115,7 +113,7 @@ class LaravelZeroTest extends TestCase
     public function the_bottom_padding_gets_updated_in_the_dash_docset_files()
     {
         $crawler = HtmlPageCrawler::create(
-            Storage::get($this->docsetDownloadedIndex())
+            Storage::get($this->docset->downloadedIndex())
         );
 
         $this->assertTrue(
@@ -124,7 +122,7 @@ class LaravelZeroTest extends TestCase
 
 
         $crawler = HtmlPageCrawler::create(
-            $this->builder->docsetIndex()
+            $this->docset->innerIndex()
         );
 
         $this->assertFalse(
@@ -135,16 +133,14 @@ class LaravelZeroTest extends TestCase
     /** @test */
     public function the_JavaScript_tags_get_removed_from_the_dash_docset_files()
     {
-        $this->markTestIncomplete('Need to check if docset works without js');
-
         $this->assertStringContainsString(
             '<script>',
-            Storage::get($this->docsetDownloadedIndex())
+            Storage::get($this->docset->downloadedIndex())
         );
 
         $this->assertStringNotContainsString(
             '<script>',
-            Storage::get($this->builder->docsetIndex())
+            $this->docset->innerIndex()
         );
     }
 
@@ -153,12 +149,7 @@ class LaravelZeroTest extends TestCase
     {
         $this->assertStringContainsString(
             'name="//apple_ref/',
-            Storage::get($this->builder->docsetIndex())
+            Storage::get($this->docset->innerIndex())
         );
-    }
-
-    protected function docsetDownloadedIndex()
-    {
-        return $this->builder->docsetDownloadedDirectory() . '/' . LaravelZero::INDEX;
     }
 }

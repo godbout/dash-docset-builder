@@ -3,8 +3,8 @@
 namespace App\Docsets;
 
 use Illuminate\Support\Collection;
-use Illuminate\Support\Facades\Storage;
 use Wa72\HtmlPageDom\HtmlPageCrawler;
+use Illuminate\Support\Facades\Storage;
 
 class Dummy extends BaseDocset
 {
@@ -16,6 +16,7 @@ class Dummy extends BaseDocset
     const ICON_16 = 'favicon-16x16.png';
     const ICON_32 = 'favicon-32x32.png';
     const EXTERNAL_DOMAINS = [];
+
 
     public function entries(string $file): Collection
     {
