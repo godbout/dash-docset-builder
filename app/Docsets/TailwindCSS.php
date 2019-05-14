@@ -3,15 +3,16 @@
 namespace App\Docsets;
 
 use Illuminate\Support\Collection;
-use Wa72\HtmlPageDom\HtmlPageCrawler;
 use Illuminate\Support\Facades\Storage;
+use Illuminate\Support\Str;
+use Wa72\HtmlPageDom\HtmlPageCrawler;
 
 class TailwindCSS extends BaseDocset
 {
     const CODE = 'tailwindcss';
     const NAME = 'Tailwind CSS';
-    const URL = 'next.tailwindcss.com';
-    const INDEX = 'index.html';
+    const URL = 'tailwindcss.com';
+    const INDEX = 'installation.html';
     const PLAYGROUND = 'https://codesandbox.io/s/github/lbogdan/tailwindcss-playground';
     const ICON_16 = 'favicon-16x16.png';
     const ICON_32 = 'favicon-32x32.png';
@@ -23,7 +24,7 @@ class TailwindCSS extends BaseDocset
 
         $entries = collect();
         $entries = $entries->merge($this->guideEntries($crawler));
-        $entries = $entries->merge($this->sectionEntries($crawler));
+        $entries = $entries->merge($this->sectionEntries($crawler, $file));
 
         return $entries;
     }
@@ -32,26 +33,30 @@ class TailwindCSS extends BaseDocset
     {
         $entries = collect();
 
-        $crawler->filter('#navWrapper h5')->each(function (HtmlPageCrawler $node) use ($entries) {
+        $crawler->filter('#navWrapper li a')->each(function (HtmlPageCrawler $node) use ($entries) {
             $entries->push([
-                'name' => $node->text(),
+                'name' => trim($node->text()),
                 'type' => 'Guide',
-                'path' => $node->siblings()->filter('a')->attr('href')
+                'path' => $node->attr('href')
             ]);
         });
 
         return $entries;
     }
 
-    protected function sectionEntries(HtmlPageCrawler $crawler)
+    protected function sectionEntries(HtmlPageCrawler $crawler, string $file)
     {
         $entries = collect();
 
-        $crawler->filter('#navWrapper li a')->each(function (HtmlPageCrawler $node) use ($entries) {
+        $parent = $crawler->filter('h1')->first()->text();
+
+        $crawler->filter('h2')->each(function (HtmlPageCrawler $node) use ($entries, $file, $parent) {
+            $fileBasename = basename($file);
+
             $entries->push([
-                'name' => $node->children('.relative')->text(),
+                'name' => $this->cleanAnchorText($node->text()) . ' - ' . $parent,
                 'type' => 'Section',
-                'path' => $node->attr('href')
+                'path' => $fileBasename . '#' . Str::slug($node->text())
             ]);
         });
 
@@ -94,18 +99,6 @@ class TailwindCSS extends BaseDocset
         $this->updateBottomPadding($crawler);
     }
 
-    protected function insertDashTableOfContents(HtmlPageCrawler $crawler)
-    {
-        $crawler->filter('h1')
-            ->after('<a name="//apple_ref/cpp/Section/Top" class="dashAnchor absolute -mt-24"></a>');
-
-        $crawler->filter('h2')->each(function (HtmlPageCrawler $node) {
-            $node->after(
-                '<p><a name="//apple_ref/cpp/Section/' . $node->text() . '" class="dashAnchor absolute -mt-16"></a></p>'
-            );
-        });
-    }
-
     protected function updateTopPadding(HtmlPageCrawler $crawler)
     {
         $crawler->filter('#app > div')
@@ -126,7 +119,6 @@ class TailwindCSS extends BaseDocset
             ->removeClass('xl:w-3/4')
             ->removeClass('max-w-3xl')
             ->removeClass('xl:px-12')
-            ->addClass('pt-4')
         ;
     }
 
@@ -156,5 +148,22 @@ class TailwindCSS extends BaseDocset
     {
         $crawler->filter('body')
             ->addClass('pb-8');
+    }
+
+    protected function insertDashTableOfContents(HtmlPageCrawler $crawler)
+    {
+        $crawler->filter('h1')
+            ->before('<a name="//apple_ref/cpp/Section/Top" class="dashAnchor"></a>');
+
+        $crawler->filter('h2, h3')->each(function (HtmlPageCrawler $node) {
+            $node->prepend(
+                '<a id="' . Str::slug($node->text()) . '" name="//apple_ref/cpp/Section/' . $this->cleanAnchorText($node->text()) . '" class="dashAnchor"></a>'
+            );
+        });
+    }
+
+    protected function cleanAnchorText($anchorText)
+    {
+        return trim(preg_replace('/\s+/', ' ', $anchorText));
     }
 }

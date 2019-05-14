@@ -9,7 +9,7 @@ use Wa72\HtmlPageDom\HtmlPageCrawler;
 use Illuminate\Support\Facades\Artisan;
 use Illuminate\Support\Facades\Storage;
 
-/** @group tailwindcss */
+/*** @group tailwindcss */
 class TailwindCSSTest extends TestCase
 {
     public function setUp(): void

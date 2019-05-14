@@ -62,7 +62,7 @@ class Jigsaw extends BaseDocset
                 $entries->push([
                     'name' => trim($node->text() . ' - ' . $parent),
                     'type' => 'Section',
-                    'path' => basename($file) . '#' . Str::slug($node->text())
+                    'path' => $fileBasename . '#' . Str::slug($node->text())
                 ]);
             }
         });
