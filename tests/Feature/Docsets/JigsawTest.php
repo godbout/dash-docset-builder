@@ -2,31 +2,31 @@
 
 namespace Tests\Feature\Docsets;
 
-use Tests\TestCase;
-use App\Docsets\LaravelZero;
+use App\Docsets\Jigsaw;
 use App\Services\DocsetBuilder;
-use Wa72\HtmlPageDom\HtmlPageCrawler;
 use Illuminate\Support\Facades\Artisan;
 use Illuminate\Support\Facades\Storage;
+use Tests\TestCase;
+use Wa72\HtmlPageDom\HtmlPageCrawler;
 
-/** @group laravel-zero */
-class LaravelZeroTest extends TestCase
+/*** @group jigsaw */
+class JigsawTest extends TestCase
 {
     public function setUp(): void
     {
         parent::setUp();
 
-        $this->docset = new LaravelZero;
+        $this->docset = new Jigsaw;
         $this->builder = new DocsetBuilder($this->docset);
 
         if (! Storage::exists($this->docset->downloadedDirectory())) {
-            fwrite(STDOUT, PHP_EOL . PHP_EOL . "\e[1;33mGrabbing laravel-zero..." . PHP_EOL);
-            Artisan::call('grab laravel-zero');
+            fwrite(STDOUT, PHP_EOL . PHP_EOL . "\e[1;33mGrabbing jigsaw..." . PHP_EOL);
+            Artisan::call('grab jigsaw');
         }
 
         if (! Storage::exists($this->docset->file())) {
-            fwrite(STDOUT, PHP_EOL . PHP_EOL . "\e[1;33mPackaging laravel-zero..." . PHP_EOL);
-            Artisan::call('package laravel-zero');
+            fwrite(STDOUT, PHP_EOL . PHP_EOL . "\e[1;33mPackaging jigsaw..." . PHP_EOL);
+            Artisan::call('package jigsaw');
         }
     }
 
@@ -34,7 +34,7 @@ class LaravelZeroTest extends TestCase
     public function it_generates_a_table_of_contents()
     {
         $toc = $this->docset->entries(
-            $this->docset->innerDirectory() . '/logging.html'
+            $this->docset->innerIndex()
         );
 
         $this->assertNotEmpty($toc);
@@ -57,22 +57,6 @@ class LaravelZeroTest extends TestCase
     }
 
     /** @test */
-    public function the_left_sidebar_gets_removed_from_the_dash_docset_files()
-    {
-        $leftSidebar = 'id="js-nav-menu"';
-
-        $this->assertStringContainsString(
-            $leftSidebar,
-            Storage::get($this->docset->downloadedIndex())
-        );
-
-        $this->assertStringNotContainsString(
-            $leftSidebar,
-            Storage::get($this->docset->innerIndex())
-        );
-    }
-
-    /** @test */
     public function the_footer_gets_removed_from_the_dash_docset_files()
     {
         $footer = '<footer';
@@ -89,14 +73,14 @@ class LaravelZeroTest extends TestCase
     }
 
     /** @test */
-    public function the_container_width_gets_updated_in_the_dash_docset_files()
+    public function the_top_padding_gets_updated_in_the_dash_docset_files()
     {
         $crawler = HtmlPageCrawler::create(
             Storage::get($this->docset->downloadedIndex())
         );
 
         $this->assertTrue(
-            $crawler->filter('section.container > div > div')->hasClass('lg:w-3/5')
+            $crawler->filter('#vue-app > div > div > div')->hasClass('pt-4')
         );
 
 
@@ -105,19 +89,19 @@ class LaravelZeroTest extends TestCase
         );
 
         $this->assertFalse(
-            $crawler->filter('section.container > div > div')->hasClass('lg:w-3/5')
+            $crawler->filter('#vue-app > div > div > div')->hasClass('pb-16')
         );
     }
 
     /** @test */
-    public function the_bottom_padding_gets_updated_in_the_dash_docset_files()
+    public function the_container_gets_updated_in_the_dash_docset_files()
     {
         $crawler = HtmlPageCrawler::create(
             Storage::get($this->docset->downloadedIndex())
         );
 
         $this->assertTrue(
-            $crawler->filter('section > div > div')->hasClass('pb-16')
+            $crawler->filter('div.markdown')->hasClass('lg:max-w-md')
         );
 
 
@@ -126,7 +110,47 @@ class LaravelZeroTest extends TestCase
         );
 
         $this->assertFalse(
-            $crawler->filter('section > div > div')->hasClass('pb-16')
+            $crawler->filter('div.markdown')->hasClass('lg:max-w-md')
+        );
+    }
+
+    /** @test */
+    public function the_text_size_gets_updated_in_the_dash_docset_files()
+    {
+        $crawler = HtmlPageCrawler::create(
+            Storage::get($this->docset->downloadedIndex())
+        );
+
+        $this->assertFalse(
+            $crawler->filter('h2')->hasClass('text-3xl')
+        );
+
+        $crawler = HtmlPageCrawler::create(
+            Storage::get($this->docset->innerIndex())
+        );
+
+        $this->assertTrue(
+            $crawler->filter('h2')->hasClass('text-3xl')
+        );
+    }
+
+    /** @test */
+    public function the_h4_padding_gets_updated_in_the_dash_docset_files()
+    {
+        $crawler = HtmlPageCrawler::create(
+            Storage::get($this->docset->downloadedDirectory() . '/collections-pagination.html')
+        );
+
+        $this->assertFalse(
+            $crawler->filter('h4')->css('margin-top') === '2.5rem'
+        );
+
+        $crawler = HtmlPageCrawler::create(
+            Storage::get($this->docset->innerDirectory() . '/collections-pagination.html')
+        );
+
+        $this->assertTrue(
+            $crawler->filter('h4')->css('margin-top') === '2.5rem'
         );
     }
 
@@ -134,12 +158,12 @@ class LaravelZeroTest extends TestCase
     public function the_JavaScript_tags_get_removed_from_the_dash_docset_files()
     {
         $this->assertStringContainsString(
-            '<script>',
+            '<script',
             Storage::get($this->docset->downloadedIndex())
         );
 
         $this->assertStringNotContainsString(
-            '<script>',
+            '<script',
             $this->docset->innerIndex()
         );
     }

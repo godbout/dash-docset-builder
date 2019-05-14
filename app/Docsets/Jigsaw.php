@@ -147,13 +147,6 @@ class Jigsaw extends BaseDocset
         ;
     }
 
-    protected function updateBottomPadding(HtmlPageCrawler $crawler)
-    {
-        $crawler->filter('section > div > div')
-            ->removeClass('pb-16')
-        ;
-    }
-
     protected function removeJavaScript(HtmlPageCrawler $crawler)
     {
         $crawler->filter('script')->remove();
