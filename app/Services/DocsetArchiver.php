@@ -16,14 +16,18 @@ class DocsetArchiver
 
     public function archive()
     {
-        $archiveFile = "{$this->docset->code()}/{$this->docset->code()}.tgz";
+        $archiveDirectory = "storage/{$this->docset->code()}";
 
-        return system(
+        system(
             "tar \
             --exclude='.DS_Store' \
             -czf \
-            storage/$archiveFile \
-            storage/{$this->docset->file()}"
+            $archiveDirectory/{$this->docset->code()}.tgz \
+            -C $archiveDirectory \
+            {$this->docset->code()}.docset",
+            $result
         );
+
+        return $result == 0;
     }
 }
