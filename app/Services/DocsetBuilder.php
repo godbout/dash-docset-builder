@@ -69,30 +69,30 @@ class DocsetBuilder
         });
 
         $this->command->task('  - Copy original doc files', function () {
-            $this->packager->copyDocFiles();
+            return $this->packager->copyDocFiles();
         });
 
         $this->command->task('  - Create Info.plist', function () {
-            $this->packager->createInfoPlist();
+            return $this->packager->createInfoPlist();
         });
 
         $this->command->task('  - Populate SQLiteIndex', function () {
-            $this->packager->createAndPopulateSQLiteIndex();
+            return $this->packager->createAndPopulateSQLiteIndex();
         });
 
         $this->command->task('  - Format doc files for Dash', function () {
-            $this->packager->formatDocFiles();
+            return $this->packager->formatDocFiles();
         });
 
         $this->command->task('  - Copy icons', function () {
-            $this->packager->copyIcons();
+            return $this->packager->copyIcons();
         });
     }
 
     public function archive()
     {
         $this->command->task('  - Archiving package', function () {
-            $this->archiver->archive();
+            return $this->archiver->archive();
         });
     }
 }
