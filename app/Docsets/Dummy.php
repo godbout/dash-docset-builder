@@ -17,6 +17,7 @@ class Dummy extends BaseDocset
     const ICON_32 = 'favicon-32x32.png';
     const EXTERNAL_DOMAINS = [];
 
+
     public function entries(string $file): Collection
     {
         $entries = collect();

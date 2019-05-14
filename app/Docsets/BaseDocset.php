@@ -4,6 +4,7 @@ namespace App\Docsets;
 
 use App\Contracts\Docset;
 use Illuminate\Support\Collection;
+use Illuminate\Support\Facades\Storage;
 
 abstract class BaseDocset implements Docset
 {
@@ -58,6 +59,52 @@ abstract class BaseDocset implements Docset
             ',',
             array_merge((array) static::URL, (array) static::EXTERNAL_DOMAINS)
         );
+    }
+
+    final public function file(): string
+    {
+        return static::CODE . '/' . static::CODE . '.docset';
+    }
+
+    final public function innerDirectory(): string
+    {
+        return self::file() . '/Contents/Resources/Documents';
+    }
+
+    final public function innerIndex(): string
+    {
+        return self::innerDirectory() . '/' . static::INDEX;
+    }
+
+    final public function downloadedDirectory(): string
+    {
+        return static::CODE . '/docs/' . static::URL;
+    }
+
+    final public function downloadedIndex(): string
+    {
+        return self::downloadedDirectory() . '/' . static::INDEX;
+    }
+
+    final public function infoPlistFile(): string
+    {
+        return self::file() . '/Contents/Info.plist';
+    }
+
+    final public function databaseFile(): string
+    {
+        return self::file() . '/Contents/Resources/docSet.dsidx';
+    }
+
+    final public function htmlFiles(): Collection
+    {
+        $files = Storage::allFiles(
+            self::innerDirectory()
+        );
+
+        return collect($files)->reject(function ($file) {
+            return substr($file, -5) !== '.html';
+        });
     }
 
     abstract public function entries(string $html): Collection;

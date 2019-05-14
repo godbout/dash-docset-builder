@@ -3,23 +3,28 @@
 namespace App\Services;
 
 use App\Contracts\Docset;
-use Illuminate\Support\Facades\DB;
-use Illuminate\Support\Facades\File;
-use Illuminate\Support\Facades\Config;
-use Illuminate\Support\Facades\Artisan;
-use Illuminate\Support\Facades\Storage;
 use LaravelZero\Framework\Commands\Command;
 use Illuminate\Console\Command as LaravelCommand;
 
 class DocsetBuilder
 {
     protected $docset;
+
+    protected $grabber;
+    protected $packager;
+    protected $archiver;
+
     protected $command;
 
 
     public function __construct(Docset $docset, Command $command = null)
     {
         $this->docset = $docset;
+
+        $this->grabber = new DocsetGrabber($this->docset);
+        $this->packager = new DocsetPackager($this->docset);
+        $this->archiver = new DocsetArchiver($this->docset);
+
         $this->command = $command ?? new LaravelCommand();
     }
 
@@ -32,274 +37,62 @@ class DocsetBuilder
 
     public function grab()
     {
-        $this->command->task('  - Downloading doc', function () {
-            if ($this->sitemapExists()) {
-                return $this->grabFromSitemap();
-            }
+        if ($this->grabber->sitemapExists()) {
+            return $this->grabFromSitemap();
+        }
 
-            return $this->grabFromIndex();
+        return $this->grabFromIndex();
+    }
+
+    protected function grabFromSitemap()
+    {
+        return $this->command->task('  - Downloading doc from sitemap', function () {
+            return $this->grabber->grabFromSitemap();
+        });
+    }
+
+    protected function grabFromIndex()
+    {
+        return $this->command->task('  - Downloading doc from index', function () {
+            return $this->grabber->grabFromIndex();
         });
     }
 
     public function package()
     {
         $this->command->task('  - Remove previous .docset', function () {
-            return $this->removePreviousDocsetFile($this->docset);
+            return $this->packager->removePreviousDocsetFile();
         });
 
         $this->command->task('  - Create new .docset', function () {
-            return $this->createDocsetFile($this->docset);
+            return $this->packager->createDocsetFile();
         });
 
         $this->command->task('  - Copy original doc files', function () {
-            $this->copyDocFiles($this->docset);
+            $this->packager->copyDocFiles();
         });
 
         $this->command->task('  - Create Info.plist', function () {
-            $this->createInfoPlist($this->docset);
+            $this->packager->createInfoPlist();
         });
 
         $this->command->task('  - Populate SQLiteIndex', function () {
-            $this->createAndPopulateSQLiteIndex($this->docset);
+            $this->packager->createAndPopulateSQLiteIndex();
         });
 
         $this->command->task('  - Format doc files for Dash', function () {
-            $this->formatDocFiles($this->docset);
+            $this->packager->formatDocFiles();
         });
 
         $this->command->task('  - Copy icons', function () {
-            $this->copyIcons($this->docset);
+            $this->packager->copyIcons();
         });
     }
 
     public function archive()
     {
         $this->command->task('  - Archiving package', function () {
-            $archiveFile = "{$this->docset->code()}/{$this->docset->code()}.tgz";
-
-            return system(
-                "tar \
-                --exclude='.DS_Store' \
-                -czf \
-                storage/$archiveFile \
-                storage/{$this->docsetFile()}"
-            );
+            $this->archiver->archive();
         });
-    }
-
-    protected function sitemapExists()
-    {
-        return @file_get_contents("https://{$this->docset->url()}/sitemap.xml");
-    }
-
-    protected function grabFromSitemap()
-    {
-        system(
-            "wget {$this->docset->url()}/sitemap.xml --quiet --output-document - | \
-            egrep --only-matching '{$this->docset->url()}[^<]+' | \
-            wget --input-file - {$this->wgetOptions()}",
-            $result
-        );
-
-        return $result == 0;
-    }
-
-    protected function grabFromIndex()
-    {
-        system(
-            "wget {$this->docset->url()} {$this->wgetOptions()}",
-            $result
-        );
-
-        return $result == 0;
-    }
-
-    protected function wgetOptions()
-    {
-        return "--mirror \
-            --page-requisites \
-            --adjust-extension \
-            --convert-links \
-            --no-directories \
-            --span-hosts \
-            --domains={$this->docset->externalDomains()} \
-            --level=1 \
-            --quiet \
-            --directory-prefix=storage/{$this->docset->code()}/docs/{$this->docset->url()}";
-    }
-
-    protected function removePreviousDocsetFile()
-    {
-        Storage::deleteDirectory(
-            $this->docsetFile($this->docset)
-        );
-    }
-
-    protected function createDocsetFile()
-    {
-        Storage::makeDirectory(
-            $this->docsetInnerDirectory($this->docset)
-        );
-    }
-
-    protected function copyDocFiles()
-    {
-        File::copyDirectory(
-            "storage/{$this->docsetDownloadedDirectory($this->docset)}",
-            "storage/{$this->docsetInnerDirectory($this->docset)}"
-        );
-    }
-
-    protected function createInfoPlist()
-    {
-        $infoPlist = <<<EOT
-<?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
-<plist version="1.0">
-<dict>
-    <key>CFBundleIdentifier</key>
-    <string>{$this->docset->code()}</string>
-    <key>CFBundleName</key>
-    <string>{$this->docset->name()}</string>
-    <key>DocSetPlatformFamily</key>
-    <string>{$this->docset->code()}</string>
-    <key>dashIndexFilePath</key>
-    <string>{$this->docset->index()}</string>
-    <key>DashDocSetFallbackURL</key>
-    <string>{$this->docset->url()}</string>
-    <key>DashDocSetPlayURL</key>
-    <string>{$this->docset->playground()}</string>
-    <key>isJavaScriptEnabled</key>
-    <true/>
-    <key>isDashDocset</key>
-    <true/>
-    <key>DashDocSetFamily</key>
-    <string>dashtoc</string>
-</dict>
-</plist>
-EOT;
-
-        Storage::put(
-            $this->docsetInfoPlistFile($this->docset),
-            $infoPlist
-        );
-    }
-
-    protected function createAndPopulateSQLiteIndex()
-    {
-        Config::set(
-            'database.connections.sqlite.database',
-            "storage/{$this->docsetDatabaseFile($this->docset)}"
-        );
-
-        $this->createSQLiteIndex($this->docset);
-
-        $this->populateSQLiteIndex($this->docset);
-    }
-
-    protected function createSQLiteIndex()
-    {
-        Storage::put(
-            $this->docsetDatabaseFile($this->docset),
-            null
-        );
-
-        Artisan::call('migrate');
-    }
-
-    protected function populateSQLiteIndex()
-    {
-        $entries = $this->docsetEntries();
-
-        $entries->each(function ($entry) {
-            DB::table('searchIndex')->insert([
-                'name' => $entry['name'],
-                'type' => $entry['type'],
-                'path' => $entry['path']
-            ]);
-        });
-    }
-
-    protected function docsetEntries()
-    {
-        $files = $this->docsetHtmlFiles();
-
-        $entries = collect();
-
-        $files->each(function ($file) use (&$entries) {
-            $entries = $entries
-                ->merge($this->docset->entries($file))
-                ->unique('name');
-        });
-
-        return $entries;
-    }
-
-    protected function formatDocFiles()
-    {
-        $files = $this->docsetHtmlFiles();
-
-        $files->each(function ($file) {
-            $formattedContent = $this->docset->format(Storage::get($file));
-            Storage::put($file, $formattedContent);
-        });
-    }
-
-    protected function docsetHtmlFiles()
-    {
-        $files = Storage::allFiles(
-            $this->docsetInnerDirectory($this->docset)
-        );
-
-        return collect($files)->reject(function ($file) {
-            return substr($file, -5) !== '.html';
-        });
-    }
-
-    protected function copyIcons()
-    {
-        if ($this->docset->icon16()) {
-            Storage::copy(
-                "{$this->docsetDownloadedDirectory($this->docset)}/{$this->docset->icon16()}",
-                "{$this->docsetFile($this->docset)}/icon.png"
-            );
-        }
-
-        if ($this->docset->icon32()) {
-            Storage::copy(
-                "{$this->docsetDownloadedDirectory($this->docset)}/{$this->docset->icon32()}",
-                "{$this->docsetFile($this->docset)}/icon@2x.png"
-            );
-        }
-    }
-
-    public function docsetFile()
-    {
-        return "{$this->docset->code()}/{$this->docset->code()}.docset";
-    }
-
-    public function docsetInnerDirectory()
-    {
-        return "{$this->docset->code()}/{$this->docset->code()}.docset/Contents/Resources/Documents";
-    }
-
-    public function docsetIndex()
-    {
-        return "{$this->docsetInnerDirectory()}/{$this->docset->index()}";
-    }
-
-    public function docsetDownloadedDirectory()
-    {
-        return "{$this->docset->code()}/docs/{$this->docset->url()}";
-    }
-
-    public function docsetInfoPlistFile()
-    {
-        return "{$this->docsetFile($this->docset)}/Contents/Info.plist";
-    }
-
-    public function docsetDatabaseFile()
-    {
-        return "{$this->docsetFile($this->docset)}/Contents/Resources/docSet.dsidx";
     }
 }

@@ -22,6 +22,22 @@ interface Docset
 
     public function externalDomains(): string;
 
+    public function file(): string;
+
+    public function innerDirectory(): string;
+
+    public function innerIndex(): string;
+
+    public function downloadedDirectory(): string;
+
+    public function downloadedIndex(): string;
+
+    public function infoPlistFile(): string;
+
+    public function databaseFile(): string;
+
+    public function htmlFiles(): Collection;
+
     public function entries(string $html): Collection;
 
     public function format(string $html): string;
