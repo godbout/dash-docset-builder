@@ -9,14 +9,14 @@ use Illuminate\Support\Facades\Storage;
 
 class Jigsaw extends BaseDocset
 {
-    const CODE = 'jigsaw';
-    const NAME = 'Jigsaw';
-    const URL = 'jigsaw.tighten.co';
-    const INDEX = 'installation.html';
-    const PLAYGROUND = '';
-    const ICON_16 = 'favicon-16x16.png';
-    const ICON_32 = 'favicon-32x32.png';
-    const EXTERNAL_DOMAINS = [];
+    public const CODE = 'jigsaw';
+    public const NAME = 'Jigsaw';
+    public const URL = 'jigsaw.tighten.co';
+    public const INDEX = 'installation.html';
+    public const PLAYGROUND = '';
+    public const ICON_16 = 'favicon-16x16.png';
+    public const ICON_32 = 'favicon-32x32.png';
+    public const EXTERNAL_DOMAINS = [];
 
 
     public function entries(string $file): Collection
@@ -34,7 +34,7 @@ class Jigsaw extends BaseDocset
     {
         $entries = collect();
 
-        $crawler->filter('h2')->each(function (HtmlPageCrawler $node) use ($entries, $file) {
+        $crawler->filter('h2')->each(static function (HtmlPageCrawler $node) use ($entries, $file) {
             $fileBasename = basename($file);
 
             if ($fileBasename !== 'index.html') {
@@ -55,7 +55,7 @@ class Jigsaw extends BaseDocset
 
         $parent = $crawler->filter('h4')->first()->text() ?: $crawler->filter('h2')->first()->text();
 
-        $crawler->filter('h3')->each(function (HtmlPageCrawler $node) use ($entries, $file, $parent) {
+        $crawler->filter('h3')->each(static function (HtmlPageCrawler $node) use ($entries, $file, $parent) {
             $fileBasename = basename($file);
 
             if ($fileBasename !== 'index.html') {
@@ -157,7 +157,7 @@ class Jigsaw extends BaseDocset
         $crawler->filter('h2')
             ->before('<a name="//apple_ref/cpp/Section/Top" class="dashAnchor"></a>');
 
-        $crawler->filter('h3')->each(function (HtmlPageCrawler $node) {
+        $crawler->filter('h3')->each(static function (HtmlPageCrawler $node) {
             $node->before(
                 '<a id="' . Str::slug($node->text()) . '" name="//apple_ref/cpp/Section/' . rawurlencode($node->text()) . '" class="dashAnchor"></a>'
             );

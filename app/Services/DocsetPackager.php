@@ -9,7 +9,7 @@ use Illuminate\Support\Facades\Config;
 use Illuminate\Support\Facades\Artisan;
 use Illuminate\Support\Facades\Storage;
 
-class DocsetPackager
+final class DocsetPackager
 {
     protected $docset;
 
@@ -102,12 +102,12 @@ class DocsetPackager
     {
         $entries = $this->docsetEntries();
 
-        $entries->each(function ($entry) {
+        $entries->each(static function ($entry) {
             DB::table('searchIndex')->insert([
-                    'name' => $entry['name'],
-                    'type' => $entry['type'],
-                    'path' => $entry['path']
-                ]);
+                'name' => $entry['name'],
+                'type' => $entry['type'],
+                'path' => $entry['path'],
+            ]);
         });
     }
 

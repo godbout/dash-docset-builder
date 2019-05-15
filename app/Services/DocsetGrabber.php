@@ -4,7 +4,7 @@ namespace App\Services;
 
 use App\Contracts\Docset;
 
-class DocsetGrabber
+final class DocsetGrabber
 {
     public $docset;
 
@@ -28,7 +28,7 @@ class DocsetGrabber
             $result
         );
 
-        return $result == 0;
+        return $result === 0;
     }
 
     public function grabFromIndex()
@@ -38,7 +38,7 @@ class DocsetGrabber
             $result
         );
 
-        return $result == 0;
+        return $result === 0;
     }
 
     protected function wgetOptions()

@@ -17,7 +17,7 @@ class DocsetBuilder
     protected $command;
 
 
-    public function __construct(Docset $docset, Command $command = null)
+    public function __construct(Docset $docset, ?Command $command = null)
     {
         $this->docset = $docset;
 

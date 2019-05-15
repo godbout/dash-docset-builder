@@ -9,14 +9,14 @@ use Illuminate\Support\Facades\Storage;
 
 class LaravelZero extends BaseDocset
 {
-    const CODE = 'laravel-zero';
-    const NAME = 'Laravel Zero';
-    const URL = 'laravel-zero.com';
-    const INDEX = 'introduction.html';
-    const PLAYGROUND = '';
-    const ICON_16 = '../icon.png';
-    const ICON_32 = '../icon@2x.png';
-    const EXTERNAL_DOMAINS = [
+    public const CODE = 'laravel-zero';
+    public const NAME = 'Laravel Zero';
+    public const URL = 'laravel-zero.com';
+    public const INDEX = 'introduction.html';
+    public const PLAYGROUND = '';
+    public const ICON_16 = '../icon.png';
+    public const ICON_32 = '../icon@2x.png';
+    public const EXTERNAL_DOMAINS = [
         'github.com',
         'raw.githubusercontent.com'
     ];
@@ -60,7 +60,7 @@ class LaravelZero extends BaseDocset
 
         $h1 = $crawler->filter('h1')->last();
 
-        $crawler->filter('h2, h3, h4')->each(function (HtmlPageCrawler $node) use ($entries, $file, $h1) {
+        $crawler->filter('h2, h3, h4')->each(static function (HtmlPageCrawler $node) use ($entries, $file, $h1) {
             $fileBasename = basename($file);
 
             if (! in_array($fileBasename, ['index.html', '404.html'])) {
@@ -138,7 +138,7 @@ class LaravelZero extends BaseDocset
         $crawler->filter('h1')
             ->before('<a name="//apple_ref/cpp/Section/Top" class="dashAnchor"></a>');
 
-        $crawler->filter('h2, h3, h4')->each(function (HtmlPageCrawler $node) {
+        $crawler->filter('h2, h3, h4')->each(static function (HtmlPageCrawler $node) {
             $node->before(
                 '<a id="' . Str::slug($node->text()) . '" name="//apple_ref/cpp/Section/' . rawurlencode($node->text()) . '" class="dashAnchor"></a>'
             );

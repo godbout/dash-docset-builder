@@ -9,14 +9,14 @@ use Illuminate\Support\Facades\Storage;
 
 class TailwindCSS extends BaseDocset
 {
-    const CODE = 'tailwindcss';
-    const NAME = 'Tailwind CSS';
-    const URL = 'tailwindcss.com';
-    const INDEX = 'installation.html';
-    const PLAYGROUND = 'https://codesandbox.io/s/github/lbogdan/tailwindcss-playground';
-    const ICON_16 = 'favicon-16x16.png';
-    const ICON_32 = 'favicon-32x32.png';
-    const EXTERNAL_DOMAINS = [];
+    public const CODE = 'tailwindcss';
+    public const NAME = 'Tailwind CSS';
+    public const URL = 'tailwindcss.com';
+    public const INDEX = 'installation.html';
+    public const PLAYGROUND = 'https://codesandbox.io/s/github/lbogdan/tailwindcss-playground';
+    public const ICON_16 = 'favicon-16x16.png';
+    public const ICON_32 = 'favicon-32x32.png';
+    public const EXTERNAL_DOMAINS = [];
 
     public function entries(string $file): Collection
     {
@@ -33,11 +33,11 @@ class TailwindCSS extends BaseDocset
     {
         $entries = collect();
 
-        $crawler->filter('#navWrapper li a')->each(function (HtmlPageCrawler $node) use ($entries) {
+        $crawler->filter('#navWrapper li a')->each(static function (HtmlPageCrawler $node) use ($entries) {
             $entries->push([
                 'name' => trim($node->text()),
                 'type' => 'Guide',
-                'path' => $node->attr('href')
+                'path' => $node->attr('href'),
             ]);
         });
 
@@ -56,7 +56,7 @@ class TailwindCSS extends BaseDocset
             $entries->push([
                 'name' => $this->cleanAnchorText($node->text()) . ' - ' . $parent,
                 'type' => 'Section',
-                'path' => $fileBasename . '#' . Str::slug($node->text())
+                'path' => $fileBasename . '#' . Str::slug($node->text()),
             ]);
         });
 

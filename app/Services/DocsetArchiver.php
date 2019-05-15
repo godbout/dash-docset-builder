@@ -4,7 +4,7 @@ namespace App\Services;
 
 use App\Contracts\Docset;
 
-class DocsetArchiver
+final class DocsetArchiver
 {
     public $docset;
 
@@ -28,6 +28,6 @@ class DocsetArchiver
             $result
         );
 
-        return $result == 0;
+        return $result === 0;
     }
 }

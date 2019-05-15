@@ -8,14 +8,14 @@ use Illuminate\Support\Facades\Storage;
 
 abstract class BaseDocset implements Docset
 {
-    const CODE = self::CODE;
-    const NAME = self::NAME;
-    const URL = self::URL;
-    const INDEX = self::INDEX;
-    const PLAYGROUND = self::PLAYGROUND;
-    const ICON_16 = self::ICON_16;
-    const ICON_32 = self::ICON_32;
-    const EXTERNAL_DOMAINS = self::EXTERNAL_DOMAINS;
+    public const CODE = self::CODE;
+    public const NAME = self::NAME;
+    public const URL = self::URL;
+    public const INDEX = self::INDEX;
+    public const PLAYGROUND = self::PLAYGROUND;
+    public const ICON_16 = self::ICON_16;
+    public const ICON_32 = self::ICON_32;
+    public const EXTERNAL_DOMAINS = self::EXTERNAL_DOMAINS;
 
 
     final public function code(): string
@@ -102,7 +102,7 @@ abstract class BaseDocset implements Docset
             self::innerDirectory()
         );
 
-        return collect($files)->reject(function ($file) {
+        return collect($files)->reject(static function ($file) {
             return substr($file, -5) !== '.html';
         });
     }

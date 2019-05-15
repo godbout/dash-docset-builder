@@ -8,14 +8,14 @@ use Illuminate\Support\Facades\Storage;
 
 class Dummy extends BaseDocset
 {
-    const CODE = 'dummy';
-    const NAME = 'Dummy';
-    const URL = 'sleeplessmind.info';
-    const INDEX = 'index.html';
-    const PLAYGROUND = '';
-    const ICON_16 = 'favicon-16x16.png';
-    const ICON_32 = 'favicon-32x32.png';
-    const EXTERNAL_DOMAINS = [];
+    public const CODE = 'dummy';
+    public const NAME = 'Dummy';
+    public const URL = 'sleeplessmind.info';
+    public const INDEX = 'index.html';
+    public const PLAYGROUND = '';
+    public const ICON_16 = 'favicon-16x16.png';
+    public const ICON_32 = 'favicon-32x32.png';
+    public const EXTERNAL_DOMAINS = [];
 
 
     public function entries(string $file): Collection
@@ -24,7 +24,7 @@ class Dummy extends BaseDocset
 
         $crawler = HtmlPageCrawler::create(Storage::get($file));
 
-        $crawler->filter('a.nav-item')->each(function (HtmlPageCrawler $node) use ($entries) {
+        $crawler->filter('a.nav-item')->each(static function (HtmlPageCrawler $node) use ($entries) {
             $entries->push([
                 'name' => $node->text(),
                 'type' => 'Guide',
