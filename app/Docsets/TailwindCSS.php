@@ -157,7 +157,7 @@ class TailwindCSS extends BaseDocset
 
         $crawler->filter('h2, h3')->each(function (HtmlPageCrawler $node) {
             $node->prepend(
-                '<a id="' . Str::slug($node->text()) . '" name="//apple_ref/cpp/Section/' . $this->cleanAnchorText($node->text()) . '" class="dashAnchor"></a>'
+                '<a id="' . Str::slug($node->text()) . '" name="//apple_ref/cpp/Section/' . rawurlencode($this->cleanAnchorText($node->text())) . '" class="dashAnchor"></a>'
             );
         });
     }
