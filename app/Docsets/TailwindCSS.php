@@ -3,6 +3,7 @@
 namespace App\Docsets;
 
 use Illuminate\Support\Str;
+use Wa72\HtmlPageDom\HtmlPage;
 use Illuminate\Support\Collection;
 use Wa72\HtmlPageDom\HtmlPageCrawler;
 use Illuminate\Support\Facades\Storage;
@@ -16,30 +17,96 @@ class TailwindCSS extends BaseDocset
     public const PLAYGROUND = 'https://codesandbox.io/s/github/lbogdan/tailwindcss-playground';
     public const ICON_16 = 'favicon-16x16.png';
     public const ICON_32 = 'favicon-32x32.png';
-    public const EXTERNAL_DOMAINS = [];
+    public const EXTERNAL_DOMAINS = [
+        'refactoring-ui.nyc3.cdn.digitaloceanspaces.com'
+    ];
 
     public function entries(string $file): Collection
     {
         $crawler = HtmlPageCrawler::create(Storage::get($file));
 
         $entries = collect();
-        $entries = $entries->merge($this->guideEntries($crawler));
+
+        $entries = $entries->merge($this->sampleEntries($crawler, $file));
+        $entries = $entries->merge($this->resourceEntries($crawler, $file));
+        $entries = $entries->merge($this->guideEntries($crawler, $file));
         $entries = $entries->merge($this->sectionEntries($crawler, $file));
 
         return $entries;
     }
 
-    protected function guideEntries(HtmlPageCrawler $crawler)
+    protected function sampleEntries(HtmlPageCrawler $crawler, string $file)
     {
         $entries = collect();
 
-        $crawler->filter('#navWrapper li a')->each(static function (HtmlPageCrawler $node) use ($entries) {
+        if (in_array(basename($file), [
+            'alerts.html',
+            'buttons.html',
+            'cards.html',
+            'forms.html',
+            'grids.html',
+            'navigation.html'
+        ])) {
+            $parent = $crawler->filter('h1')->first();
+
             $entries->push([
-                'name' => trim($node->text()),
-                'type' => 'Guide',
-                'path' => $node->attr('href'),
+                'name' => $this->cleanAnchorText($parent->text()),
+                'type' => 'Sample',
+                'path' => basename($file) . '#' . Str::slug($parent->text()),
             ]);
-        });
+
+            $crawler->filter('h2')->each(function (HtmlPageCrawler $node) use ($entries, $file, $parent) {
+                $entries->push([
+                    'name' => $this->cleanAnchorText($node->text()) . ' - ' . $parent->text(),
+                    'type' => 'Sample',
+                    'path' => basename($file) . '#' . Str::slug($node->text()),
+                ]);
+            });
+
+            return $entries;
+        }
+    }
+
+    protected function resourceEntries(HtmlPageCrawler $crawler, string $file)
+    {
+        $entries = collect();
+
+        if (basename($file) === 'resources.html') {
+            $parent = $crawler->filter('h1')->first();
+
+            $entries->push([
+                'name' => $this->cleanAnchorText($parent->text()),
+                'type' => 'Resource',
+                'path' => basename($file) . '#' . Str::slug($parent->text()),
+            ]);
+
+            $crawler->filter('h2')->each(function (HtmlPageCrawler $node) use ($entries, $file, $parent) {
+                $entries->push([
+                    'name' => $this->cleanAnchorText($node->text()) . ' - ' . $parent->text(),
+                    'type' => 'Resource',
+                    'path' => basename($file) . '#' . Str::slug($node->text()),
+                ]);
+            });
+
+            return $entries;
+        }
+    }
+
+    protected function guideEntries(HtmlPageCrawler $crawler, string $file)
+    {
+        $pageTitle = (new HtmlPage(Storage::get($file)))->getTitle();
+
+        $entries = collect();
+
+        if ($pageTitle === 'Installation - Tailwind CSS') {
+            $crawler->filter('#navWrapper li a')->each(static function (HtmlPageCrawler $node) use ($entries) {
+                $entries->push([
+                    'name' => trim($node->text()),
+                    'type' => 'Guide',
+                    'path' => $node->attr('href'),
+                ]);
+            });
+        }
 
         return $entries;
     }
@@ -48,15 +115,13 @@ class TailwindCSS extends BaseDocset
     {
         $entries = collect();
 
-        $parent = $crawler->filter('h1')->first()->text();
+        $parent = $crawler->filter('h1')->first();
 
         $crawler->filter('h2')->each(function (HtmlPageCrawler $node) use ($entries, $file, $parent) {
-            $fileBasename = basename($file);
-
             $entries->push([
-                'name' => $this->cleanAnchorText($node->text()) . ' - ' . $parent,
+                'name' => $this->cleanAnchorText($node->text()) . ' - ' . $parent->text(),
                 'type' => 'Section',
-                'path' => $fileBasename . '#' . Str::slug($node->text()),
+                'path' => basename($file) . '#' . Str::slug($node->text()),
             ]);
         });
 
