@@ -14,8 +14,8 @@ class Jigsaw extends BaseDocset
     public const URL = 'jigsaw.tighten.co';
     public const INDEX = 'installation.html';
     public const PLAYGROUND = '';
-    public const ICON_16 = 'favicon-16x16.png';
-    public const ICON_32 = 'favicon-32x32.png';
+    public const ICON_16 = '../icon.png';
+    public const ICON_32 = '../icon@2x.png';
     public const EXTERNAL_DOMAINS = [];
 
 
