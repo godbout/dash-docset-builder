@@ -4,5 +4,6 @@
 /.vagrant
 
 .DS_Store
-storage
+storage/*
+!storage/.gitkeep
 /database/database.sqlite
