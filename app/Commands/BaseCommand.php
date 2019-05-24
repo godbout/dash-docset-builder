@@ -28,7 +28,7 @@ abstract class BaseCommand extends Command
 
     protected function requestedDocset()
     {
-        $classBasename = Str::camel($this->argument('doc'));
+        $classBasename = Str::studly($this->argument('doc'));
 
         return "App\\Docsets\\$classBasename";
     }
