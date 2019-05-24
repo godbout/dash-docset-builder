@@ -13,7 +13,7 @@ abstract class BaseCommand extends Command
         $docset = $this->requestedDocset();
         $action = $this->requestedAction();
 
-        if ($this->isSupported($docset)) {
+        if ($this->isSupported()) {
             $this->info(Str::ucfirst("$action started"));
             (new DocsetBuilder(new $docset(), $this))->$action();
             $this->info(Str::ucfirst("$action finished"));
