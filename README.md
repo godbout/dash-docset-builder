@@ -1,10 +1,20 @@
+<h1 align="center">DASH DOCSET BUILDER</h1>
+
+<p align="center">
+    <a href="https://travis-ci.org/godbout/dash-docset-builder"><img src="https://img.shields.io/travis/godbout/dash-docset-builder/master.svg?style=flat-square" alt="Build Status"></a>
+    <a href="https://scrutinizer-ci.com/g/godbout/dash-docset-builder"><img src="https://img.shields.io/scrutinizer/g/godbout/dash-docset-builder.svg?style=flat-square" alt="Quality Score"></a>
+    <a href="https://scrutinizer-ci.com/g/godbout/dash-docset-builder"><img src="https://scrutinizer-ci.com/g/godbout/dash-docset-builder/badges/coverage.png?b=master" alt="Code Coverage"></a>
+</p>
+
+<p align="center">
+    Made that builder for myself and was not planning to release it but if you want to create a docset without bothering and you play with PHP, you might find it useful.
+</p>
+
+___
+
 # DASH IS LOVE
 
 When coding with Sublime + Chrome in Split View, [Dash](http://kapeli.com/) is the savior ❤️
-
-# DASH DOCSET BUILDER
-
-I made that builder for myself and was not planning to release it, but if you want to create a docset without bothering and you play with PHP, you might find it useful.
 
 # CREATE YOUR OWN DOCSET
 
@@ -81,3 +91,12 @@ This will download the doc, package it into a .docset file, and create an archiv
 ## ENJOY
 
 You can then add your docset into Dash for personal use, or [contribute it](https://github.com/Kapeli/Dash-User-Contributions).
+
+# DOCSETS INCLUDED
+
+Currently the following docsets are included with the builder:
+
+* [Laravel-Zero](https://laravel-zero.com)
+* [Jigsaw by Tighten](https://jigsaw.tighten.co)
+* [Tailwind CSS](http://tailwindcss.com)
+
