@@ -44,31 +44,31 @@ final class DocsetPackager
     public function createInfoPlist()
     {
         $infoPlist = <<<EOT
-            <?xml version="1.0" encoding="UTF-8"?>
-            <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
-            <plist version="1.0">
-            <dict>
-                <key>CFBundleIdentifier</key>
-                <string>{$this->docset->code()}</string>
-                <key>CFBundleName</key>
-                <string>{$this->docset->name()}</string>
-                <key>DocSetPlatformFamily</key>
-                <string>{$this->docset->code()}</string>
-                <key>dashIndexFilePath</key>
-                <string>{$this->docset->index()}</string>
-                <key>DashDocSetFallbackURL</key>
-                <string>{$this->docset->url()}</string>
-                <key>DashDocSetPlayURL</key>
-                <string>{$this->docset->playground()}</string>
-                <key>isJavaScriptEnabled</key>
-                <true/>
-                <key>isDashDocset</key>
-                <true/>
-                <key>DashDocSetFamily</key>
-                <string>dashtoc</string>
-            </dict>
-            </plist>
-            EOT;
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+    <key>CFBundleIdentifier</key>
+    <string>{$this->docset->code()}</string>
+    <key>CFBundleName</key>
+    <string>{$this->docset->name()}</string>
+    <key>DocSetPlatformFamily</key>
+    <string>{$this->docset->code()}</string>
+    <key>dashIndexFilePath</key>
+    <string>{$this->docset->index()}</string>
+    <key>DashDocSetFallbackURL</key>
+    <string>{$this->docset->url()}</string>
+    <key>DashDocSetPlayURL</key>
+    <string>{$this->docset->playground()}</string>
+    <key>isJavaScriptEnabled</key>
+    <true/>
+    <key>isDashDocset</key>
+    <true/>
+    <key>DashDocSetFamily</key>
+    <string>dashtoc</string>
+</dict>
+</plist>
+EOT;
 
         Storage::put(
             $this->docset->infoPlistFile(),
