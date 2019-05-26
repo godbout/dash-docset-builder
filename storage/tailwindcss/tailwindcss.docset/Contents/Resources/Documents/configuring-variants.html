@@ -1,0 +1,395 @@
+<!DOCTYPE html>
+<html lang="en" class="bg-white antialiased">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+  <link rel="manifest" href="manifest.json">
+  <link rel="mask-icon" href="safari-pinned-tab.svg" color="#00b4b6">
+  <title>Configuring Variants - Tailwind CSS</title>
+  <meta name="theme-color" content="#ffffff">
+  <meta name="twitter:card" content="summary">
+<meta name="twitter:site" content="@tailwindcss">
+<meta name="twitter:title" content="Configuring Variants - Tailwind CSS">
+<meta name="twitter:description" content="Configuring which utility variants are enabled in your project.">
+<meta name="twitter:image" content="https://tailwindcss.com/img/tailwind-twitter-square.png">
+<meta name="twitter:creator" content="@tailwindcss">
+<meta property="og:url" content="https://tailwindcss.com/">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Configuring Variants - Tailwind CSS">
+<meta property="og:description" content="Configuring which utility variants are enabled in your project.">
+<meta property="og:image" content="https://tailwindcss.com/img/twitter-large-card.png">
+  <link rel="stylesheet" href="main.css%3Fid=f43316eaa338cb39cc2b.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/docsearch.js/2/docsearch.min.css">
+</head>
+<body data-sidebar-visible="true" class="text-gray-900 leading-normal pb-8">
+
+
+
+
+
+
+
+
+<div class="w-full mx-auto px-6">
+  <div class="lg:flex -mx-6">
+
+    
+    
+    
+
+    
+    <div id="content-wrapper" class="min-h-screen w-full">
+
+      
+      <div id="content">
+
+        
+        <div id="app" class="flex" v-cloak>
+
+          
+          <div class="w-full">
+            <div class="markdown mb-6 px-6 mx-auto">
+                              <a name="//apple_ref/cpp/Section/Top" class="dashAnchor"></a><h1>Configuring Variants</h1>
+              
+                              <div class="mt-0 mb-4 text-gray-600">
+                  Configuring which utility variants are enabled in your project.
+                </div>
+                                          <hr class="my-8 border-b-2 border-gray-200">
+                          </div>
+            <div class="flex">
+              <div class="markdown px-6 w-full mx-auto">
+                <h2 style="font-size: 0" class="invisible m-0 -mb-6"><a id="overview" name="//apple_ref/cpp/Section/Overview" class="dashAnchor"></a>Overview</h2>
+<p>The <code>variants</code> section of your <code>tailwind.config.js</code> file is where you control which core utility plugins should have <a href="responsive-design.html">responsive variants</a> and <a href="pseudo-class-variants.html">pseudo-class variants</a> generated.</p>
+<pre><code class="language-js">// tailwind.config.js
+module.exports = {
+  variants: {
+    appearance: ['responsive'],
+    // ...
+    borderColor: ['responsive', 'hover', 'focus'],
+    // ...
+    outline: ['responsive', 'focus'],
+    // ...
+    zIndex: ['responsive'],
+  },
+}</code></pre>
+<p>Each property is a core plugin name pointing to an array of variants to generate for that plugin.</p>
+<p>It's important to note that <strong>these values are not merged with the defaults</strong>, so if you'd like to enable another variant for a utility, you need to repeat the default variants for that utility as well.</p>
+<p class="flex items-start mt-8 mb-0">
+  <svg class="h-6 w-6 mr-2 flex-shrink-0" xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24"><circle cx="12" cy="12" r="10" fill="#fed7d7"></circle><path fill="#f56565" d="M13.41 12l2.83 2.83a1 1 0 0 1-1.41 1.41L12 13.41l-2.83 2.83a1 1 0 1 1-1.41-1.41L10.59 12 7.76 9.17a1 1 0 0 1 1.41-1.41L12 10.59l2.83-2.83a1 1 0 0 1 1.41 1.41L13.41 12z"></path></svg>
+  <strong class="text-base font-semibold text-gray-800">Don't list only the extra variants you want to enable</strong>
+</p>
+<pre><code class="language-js">// tailwind.config.js
+module.exports = {
+  variants: {
+    backgroundColor: ['active'],
+  },
+}</code></pre>
+<p class="flex items-start mt-8 mb-0">
+  <svg class="h-6 w-6 mr-2 flex-shrink-0" xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24"><circle class="text-green-200 fill-current" cx="12" cy="12" r="10"></circle><path class="text-green-600 fill-current" d="M10 14.59l6.3-6.3a1 1 0 0 1 1.4 1.42l-7 7a1 1 0 0 1-1.4 0l-3-3a1 1 0 0 1 1.4-1.42l2.3 2.3z"></path></svg>
+  <strong class="text-base font-semibold text-gray-800">Always provide the complete list of variants you want to enable</strong>
+</p>
+<pre><code class="language-js">// tailwind.config.js
+module.exports = {
+  variants: {
+    backgroundColor: ['responsive', 'hover', 'focus', 'active'],
+  },
+}</code></pre>
+<hr>
+<h2><a id="ordering-variants" name="//apple_ref/cpp/Section/Ordering%20variants" class="dashAnchor"></a>Ordering variants</h2>
+<p>It's important to note that <strong>variants are generated in the order you specify them</strong>, so variants at the end of the list will take precedence over variants at the beginning of the list.</p>
+<p>In this example, <code>focus</code> variants have the highest precedence for <code>backgroundColor</code> utilities, but <code>hover</code> variants have the highest precedence for <code>borderColor</code> utilities:</p>
+<pre><code class="language-js">// tailwind.config.js
+module.exports = {
+  variants: {
+    backgroundColor: ['hover', 'focus'],
+    borderColor: ['focus', 'hover'],
+  },
+}</code></pre>
+<pre><code class="language-css">/* Generated CSS */
+
+.bg-black { background-color: #000 }
+.bg-white { background-color: #fff }
+/* ... */
+
+.hover\:bg-black:hover { background-color: #000 }
+.hover\:bg-white:hover { background-color: #fff }
+/* ... */
+
+.focus\:bg-black:focus { background-color: #000 }
+.focus\:bg-white:focus { background-color: #fff }
+/* ... */
+
+.border-black { border-color: #000 }
+.border-white { border-color: #fff }
+/* ... */
+
+.focus\:border-black:focus { border-color: #000 }
+.focus\:border-white:focus { border-color: #fff }
+/* ... */
+
+.hover\:border-black:hover { border-color: #000 }
+.hover\:border-white:hover { border-color: #fff }
+/* ... */</code></pre>
+<p>This means that given the following HTML:</p>
+<pre><code class="language-html">&lt;input class="focus:bg-white hover:bg-black focus:border-white hover:border-black"&gt;</code></pre>
+<p>...if the input was hovered <em>and</em> focused at the same time, the background would be white but the border would be black.</p>
+<p>Generally, we recommend the following order for the built-in variants, although you are free to use whatever order makes the most sense for your own project:</p>
+<pre><code class="language-js">['responsive', 'group-hover', 'focus-within', 'hover', 'focus', 'active']</code></pre>
+<h3><a id="the-responsive-variant" name="//apple_ref/cpp/Section/The%20responsive%20variant" class="dashAnchor"></a>The responsive variant</h3>
+<p>The <code>responsive</code> variant is the only variant that is <em>not</em> impacted by the order you list in your variants configuration.</p>
+<p>This is because the <code>responsive</code> variant automatically <em>stacks</em> with pseudo-class variants, meaning that if you specify both <code>responsive</code> and <code>hover</code> variants for a utility, Tailwind will generate <em>responsive hover</em> variants as well:</p>
+<pre><code class="language-js">// tailwind.config.js
+module.exports = {
+  variants: {
+    backgroundColor: ['responsive', 'hover'],
+    borderColor: ['responsive', 'focus'],
+  },
+}</code></pre>
+<pre><code class="language-css">/* Generated CSS */
+
+.bg-black { background-color: #000 }
+/* ... */
+.hover\:bg-black:hover { background-color: #000 }
+/* ... */
+
+.border-black { border-color: #000 }
+/* ... */
+.focus\:border-black:focus { border-color: #000 }
+/* ... */
+
+
+@media (min-width: 640px) {
+  .sm\:bg-black { background-color: #000 }
+  /* ... */
+  .sm\:hover\:bg-black:hover { background-color: #000 }
+  /* ... */
+
+  .sm\:border-black { border-color: #000 }
+  /* ... */
+  .sm\:focus\:border-black:focus { border-color: #000 }
+  /* ... */
+}
+
+@media (min-width: 768px) {
+  .md\:bg-black { background-color: #000 }
+  /* ... */
+  .md\:hover\:bg-black:hover { background-color: #000 }
+  /* ... */
+
+  .md\:border-black { border-color: #000 }
+  /* ... */
+  .md\:focus\:border-black:focus { border-color: #000 }
+  /* ... */
+}
+
+@media (min-width: 1024px) {
+  .lg\:bg-black { background-color: #000 }
+  /* ... */
+  .lg\:hover\:bg-black:hover { background-color: #000 }
+  /* ... */
+
+  .lg\:border-black { border-color: #000 }
+  /* ... */
+  .lg\:focus\:border-black:focus { border-color: #000 }
+  /* ... */
+}
+
+@media (min-width: 1280px) {
+  .xl\:bg-black { background-color: #000 }
+  /* ... */
+  .xl\:hover\:bg-black:hover { background-color: #000 }
+  /* ... */
+
+  .xl\:border-black { border-color: #000 }
+  /* ... */
+  .xl\:focus\:border-black:focus { border-color: #000 }
+  /* ... */
+}</code></pre>
+<p><strong>Responsive variants are grouped together and inserted at the end of your stylesheet</strong> by default to avoid specificity issues. If you'd like to customize this behavior for whatever reason, you can use the <a href="functions-and-directives.html#tailwind">@tailwind screens</a> directive to specify where responsive variants should be inserted.</p>
+<h3><a id="the-default-variant" name="//apple_ref/cpp/Section/The%20default%20variant" class="dashAnchor"></a>The default variant</h3>
+<p>You can use the special <code>default</code> variant to control where the normal, non-prefixed versions of a utility are generated relative to the other variants.</p>
+<pre><code class="language-js">// tailwind.config.js
+module.exports = {
+  variants: {
+    backgroundColor: ['hover', 'default', 'focus'],
+  },
+}</code></pre>
+<pre><code class="language-css">/* Generated CSS */
+
+.hover\:bg-black:hover { background-color: #000 }
+.hover\:bg-white:hover { background-color: #fff }
+/* ... */
+
+.bg-black { background-color: #000 }
+.bg-white { background-color: #fff }
+/* ... */
+
+.focus\:bg-black:focus { background-color: #000 }
+.focus\:bg-white:focus { background-color: #fff }
+/* ... */</code></pre>
+<p>This is an advanced feature and only really useful if you have a custom variant (like <code>children</code> in the example below) that should have a lower precedence than the normal version of a utility.</p>
+<pre><code class="language-js">// tailwind.config.js
+module.exports = {
+  variants: {
+    backgroundColor: ['children', 'default', 'hover', 'focus'],
+  },
+}</code></pre>
+<pre><code class="language-css">/* Generated CSS */
+
+.children\:bg-black &gt; * { background-color: #000; }
+.children\:bg-black &gt; * { background-color: #000; }
+
+.bg-black { background-color: #000 }
+.bg-white { background-color: #fff }
+/* ... */
+
+.hover\:bg-black:hover { background-color: #000 }
+.hover\:bg-white:hover { background-color: #fff }
+/* ... */
+
+.focus\:bg-black:focus { background-color: #000 }
+.focus\:bg-white:focus { background-color: #fff }
+/* ... */</code></pre>
+<p>Learn more about creating custom variants in the <a href="plugins.html#adding-variants">variant plugin documentation</a>.</p>
+<hr>
+<h2><a id="using-custom-variants" name="//apple_ref/cpp/Section/Using%20custom%20variants" class="dashAnchor"></a>Using custom variants</h2>
+<p>If you've written or installed a <a href="plugins.html">plugin</a> that adds a new variant, you can enable that variant by including it in your variants configuration just like if it were a built-in variant.</p>
+<p>For example, the <a href="https://github.com/benface/tailwindcss-interaction-variants">tailwindcss-interaction-variants plugin</a> adds a <code>visited</code> variant (among others):</p>
+<pre><code class="language-js">// tailwind.config.js
+{
+  variants: {
+    backgroundColor: ['responsive', 'hover', 'focus', 'visited'],
+  },
+  plugins: [
+    require('tailwindcss-interaction-variants')(),
+  ],
+}</code></pre>
+<p>Learn more about creating custom variants in the <a href="plugins.html#adding-variants">variant plugin documentation</a>.</p>
+<hr>
+<h2><a id="default-variants-reference" name="//apple_ref/cpp/Section/Default%20variants%20reference" class="dashAnchor"></a>Default variants reference</h2>
+<p>Here is a complete reference of Tailwind's default variants configuration, which can be useful when you'd like to add a new variant while preserving the defaults.</p>
+<pre><code class="language-js">// Default configuration
+module.exports = {
+  // ...
+  variants: {
+    alignContent: ['responsive'],
+    alignItems: ['responsive'],
+    alignSelf: ['responsive'],
+    appearance: ['responsive'],
+    backgroundAttachment: ['responsive'],
+    backgroundColor: ['responsive', 'hover', 'focus'],
+    backgroundPosition: ['responsive'],
+    backgroundRepeat: ['responsive'],
+    backgroundSize: ['responsive'],
+    borderCollapse: ['responsive'],
+    borderColor: ['responsive', 'hover', 'focus'],
+    borderRadius: ['responsive'],
+    borderStyle: ['responsive'],
+    borderWidth: ['responsive'],
+    boxShadow: ['responsive', 'hover', 'focus'],
+    cursor: ['responsive'],
+    display: ['responsive'],
+    fill: ['responsive'],
+    flex: ['responsive'],
+    flexDirection: ['responsive'],
+    flexGrow: ['responsive'],
+    flexShrink: ['responsive'],
+    flexWrap: ['responsive'],
+    float: ['responsive'],
+    fontFamily: ['responsive'],
+    fontSize: ['responsive'],
+    fontSmoothing: ['responsive'],
+    fontStyle: ['responsive'],
+    fontWeight: ['responsive', 'hover', 'focus'],
+    height: ['responsive'],
+    inset: ['responsive'],
+    justifyContent: ['responsive'],
+    letterSpacing: ['responsive'],
+    lineHeight: ['responsive'],
+    listStylePosition: ['responsive'],
+    listStyleType: ['responsive'],
+    margin: ['responsive'],
+    maxHeight: ['responsive'],
+    maxWidth: ['responsive'],
+    minHeight: ['responsive'],
+    minWidth: ['responsive'],
+    objectFit: ['responsive'],
+    objectPosition: ['responsive'],
+    opacity: ['responsive'],
+    order: ['responsive'],
+    outline: ['responsive', 'focus'],
+    overflow: ['responsive'],
+    padding: ['responsive'],
+    pointerEvents: ['responsive'],
+    position: ['responsive'],
+    resize: ['responsive'],
+    stroke: ['responsive'],
+    tableLayout: ['responsive'],
+    textAlign: ['responsive'],
+    textColor: ['responsive', 'hover', 'focus'],
+    textDecoration: ['responsive', 'hover', 'focus'],
+    textTransform: ['responsive'],
+    userSelect: ['responsive'],
+    verticalAlign: ['responsive'],
+    visibility: ['responsive'],
+    whitespace: ['responsive'],
+    width: ['responsive'],
+    wordBreak: ['responsive'],
+    zIndex: ['responsive'],
+  }
+}</code></pre>              </div>
+
+              
+              
+              
+
+            </div>
+          </div>
+          
+
+
+        </div>
+        
+
+        <script src="app.js%3Fid=4e0678930121543c0338"></script>
+
+        <!-- Algolia DocSearch  -->
+        <script type="text/javascript" src="https://cdn.jsdelivr.net/docsearch.js/2/docsearch.min.js"></script>
+        <script type="text/javascript">
+          docsearch({
+            apiKey: '3df93446658cd9c4e314d4c02a052188',
+            indexName: 'tailwindcss',
+            inputSelector: '#docsearch',
+            algoliaOptions: { 'facetFilters': ["version:v1"] },
+          });
+        </script>
+      </div>
+      
+
+
+    </div>
+    
+
+  </div>
+</div>
+
+
+  <!-- Google Analytics  -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-109068504-1"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'UA-109068504-1');
+  </script>
+
+<script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+<script src="nav.js%3Fid=b3eb7d558e0420f9b29c" defer></script>
+
+</body>
+</html>

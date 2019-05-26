@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <meta name="description" content="Building a navigation menu for your site">
+
+        <meta property="og:site_name" content="Laravel Zero">
+        <meta property="og:title" content="Navigation | Laravel Zero">
+        <meta property="og:description" content="Building a navigation menu for your site">
+        <meta property="og:url" content="https://laravel-zero.com/docs/navigation">
+        <meta property="og:image" content="/assets/img/logo.png">
+        <meta property="og:type" content="website">
+
+        <meta name="twitter:image:alt" content="Laravel Zero">
+        <meta name="twitter:card" content="summary_large_image">
+
+                    <meta name="generator" content="tighten_jigsaw_doc">
+        
+        <title>Laravel Zero | Navigation</title>
+
+        <link rel="home" href="index.html">
+        <link rel="icon" href="favicon.ico">
+
+        
+                    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-61404619-3"></script>
+            <script>
+                window.dataLayer = window.dataLayer || [];
+                function gtag(){dataLayer.push(arguments);}
+                gtag('js', new Date());
+                gtag('config', 'UA-61404619-3');
+            </script>
+        
+        <link href="https://fonts.googleapis.com/css?family=Nunito+Sans:300,300i,400,400i,700,700i,800,800i" rel="stylesheet">
+        <link rel="stylesheet" href="main.css%3Fid=54b89e2eb922f2893d01.css">
+
+                    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.css">
+            </head>
+
+    <body class="flex flex-col justify-between min-h-screen bg-grey-lightest text-grey-darkest leading-normal font-sans">
+        
+
+        <main role="main" class="w-full flex-auto">
+            <section class="mx-auto px-6 py-4">
+    <div class="flex flex-col lg:flex-row">
+        
+
+        <div class="w-full break-words" v-pre>
+            <a name="//apple_ref/cpp/Section/Top" class="dashAnchor"></a><h1 id="navigation" style="margin-top: 1rem;">Navigation</h1>
+<p>The navigation menu in the left-hand sidebar is defined using an array in <code>navigation.php</code>. Nested pages can be added by using the <code>children</code> associative array.</p>
+<pre><code class="language-php">&lt;?php
+// navigation.php
+
+return [
+    'Getting Started' =&gt; [
+        'url' =&gt; 'docs/getting-started',
+        'children' =&gt; [
+            'Customizing Your Site' =&gt; 'docs/customizing-your-site',
+            'Navigation' =&gt; 'docs/navigation',
+            'Algolia DocSearch' =&gt; 'docs/algolia-docsearch',
+            'Custom 404 Page' =&gt; 'docs/custom-404-page',
+        ],
+    ],
+    'Jigsaw Docs' =&gt; 'https://jigsaw.tighten.co/docs/installation',
+];
+
+// config.php
+'navigation' =&gt; require_once('navigation.php'),
+
+// blade files
+$page-&gt;navigation</code></pre>        </div>
+    </div>
+</section>
+        </main>
+
+        <script src="main.js%3Fid=ce06880262eb35d7b51f"></script>
+
+        <script>
+    const navMenu = {
+        toggle() {
+            const menu = document.getElementById('js-nav-menu');
+            menu.classList.toggle('hidden');
+            menu.classList.toggle('lg:block');
+            document.getElementById('js-nav-menu-hide').classList.toggle('hidden');
+            document.getElementById('js-nav-menu-show').classList.toggle('hidden');
+        },
+    }
+</script>
+            <script type="text/javascript">
+            docsearch({
+                apiKey: 'ac0bd380724d207df97763a999031e82',
+                indexName: 'laravel-zero',
+                inputSelector: '#docsearch-input',
+                debug: false // Set debug to true if you want to inspect the dropdown
+            });
+
+            const searchInput = {
+                toggle() {
+                    const menu = document.getElementById('js-search-input');
+                    menu.classList.toggle('hidden');
+                    menu.classList.toggle('md:block');
+                    document.getElementById('docsearch-input').focus();
+                },
+            }
+        </script>
+    
+        
+    </body>
+</html>
