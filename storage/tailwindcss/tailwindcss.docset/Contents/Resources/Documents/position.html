@@ -1,0 +1,392 @@
+<!DOCTYPE html>
+<html lang="en" class="bg-white antialiased">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+  <link rel="manifest" href="manifest.json">
+  <link rel="mask-icon" href="safari-pinned-tab.svg" color="#00b4b6">
+  <title>Position - Tailwind CSS</title>
+  <meta name="theme-color" content="#ffffff">
+  <meta name="twitter:card" content="summary">
+<meta name="twitter:site" content="@tailwindcss">
+<meta name="twitter:title" content="Position - Tailwind CSS">
+<meta name="twitter:description" content="Utilities for controlling how an element is positioned in the DOM.">
+<meta name="twitter:image" content="https://tailwindcss.com/img/tailwind-twitter-square.png">
+<meta name="twitter:creator" content="@tailwindcss">
+<meta property="og:url" content="https://tailwindcss.com/">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Position - Tailwind CSS">
+<meta property="og:description" content="Utilities for controlling how an element is positioned in the DOM.">
+<meta property="og:image" content="https://tailwindcss.com/img/twitter-large-card.png">
+  <link rel="stylesheet" href="main.css%3Fid=f43316eaa338cb39cc2b.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/docsearch.js/2/docsearch.min.css">
+</head>
+<body data-sidebar-visible="true" class="text-gray-900 leading-normal pb-8">
+
+
+
+
+
+
+
+
+<div class="w-full mx-auto px-6">
+  <div class="lg:flex -mx-6">
+
+    
+    
+    
+
+    
+    <div id="content-wrapper" class="min-h-screen w-full">
+
+      
+      <div id="content">
+
+        
+        <div id="app" class="flex" v-cloak>
+
+          
+          <div class="w-full">
+            <div class="markdown mb-6 px-6 mx-auto">
+                              <a name="//apple_ref/cpp/Section/Top" class="dashAnchor"></a><h1>Position</h1>
+              
+                              <div class="mt-0 mb-4 text-gray-600">
+                  Utilities for controlling how an element is positioned in the DOM.
+                </div>
+                                        </div>
+            <div class="flex">
+              <div class="markdown px-6 w-full mx-auto">
+                <h2 style="visibility: hidden; font-size: 0; margin: 0;"><a id="class-reference" name="//apple_ref/cpp/Section/Class%20reference" class="dashAnchor"></a>Class reference</h2>
+<div class="mt-0 border-t border-b border-gray-300 overflow-hidden relative">
+  <div class=" overflow-y-auto scrollbar-w-2 scrollbar-track-gray-lighter scrollbar-thumb-rounded scrollbar-thumb-gray scrolling-touch">
+    <table class="w-full text-left table-collapse">
+      <thead>
+        <tr>
+          <th class="text-sm font-semibold text-gray-700 p-2 bg-gray-100">Class</th>
+          <th class="text-sm font-semibold text-gray-700 p-2 bg-gray-100">Properties</th>
+        </tr>
+      </thead>
+      <tbody class="align-baseline">
+                <tr>
+          <td class="p-2 border-t border-gray-300 font-mono text-xs text-purple-700 whitespace-no-wrap">.static</td>
+          <td class="p-2 border-t border-gray-300 font-mono text-xs text-blue-700 whitespace-pre">position: static;</td>
+        </tr>
+                <tr>
+          <td class="p-2 border-t border-gray-200 font-mono text-xs text-purple-700 whitespace-no-wrap">.fixed</td>
+          <td class="p-2 border-t border-gray-200 font-mono text-xs text-blue-700 whitespace-pre">position: fixed;</td>
+        </tr>
+                <tr>
+          <td class="p-2 border-t border-gray-200 font-mono text-xs text-purple-700 whitespace-no-wrap">.absolute</td>
+          <td class="p-2 border-t border-gray-200 font-mono text-xs text-blue-700 whitespace-pre">position: absolute;</td>
+        </tr>
+                <tr>
+          <td class="p-2 border-t border-gray-200 font-mono text-xs text-purple-700 whitespace-no-wrap">.relative</td>
+          <td class="p-2 border-t border-gray-200 font-mono text-xs text-blue-700 whitespace-pre">position: relative;</td>
+        </tr>
+                <tr>
+          <td class="p-2 border-t border-gray-200 font-mono text-xs text-purple-700 whitespace-no-wrap">.sticky</td>
+          <td class="p-2 border-t border-gray-200 font-mono text-xs text-blue-700 whitespace-pre">position: sticky;</td>
+        </tr>
+              </tbody>
+    </table>
+  </div>
+</div>
+<h2><a id="static" name="//apple_ref/cpp/Section/Static" class="dashAnchor"></a>Static</h2>
+<p>Use <code>.static</code> to position an element according to the normal flow of the document.</p>
+<p>Any offsets will be ignored and the element will not act as a position reference for absolutely positioned children.</p>
+<div class="relative overflow-hidden mb-8">
+  <div v-pre class="bg-white rounded-t-lg overflow-hidden border-t border-l border-r border-gray-400 p-4 ">
+    <div class="relative bg-gray-400 p-4">
+  <div class="static h-32 bg-gray-600 p-4 text-gray-900">
+    <p>Static parent</p>
+    <div class="absolute bottom-0 left-0 bg-gray-800 p-4 text-gray-400">
+      <p>Absolute child</p>
+    </div>
+  </div>
+</div>
+  </div>
+  <div v-pre class="rounded-b-lg bg-gray-800">
+    <pre class="scrollbar-none m-0 p-0 language-html"><code class="inline-block p-4 scrolling-touch">&lt;div class="static bg-gray-600"&gt;
+  Static parent
+  &lt;div class="absolute bottom-0 left-0 bg-gray-800"&gt;
+    Absolute child
+  &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+  </div>
+</div>
+<h2><a id="relative" name="//apple_ref/cpp/Section/Relative" class="dashAnchor"></a>Relative</h2>
+<p>Use <code>.relative</code> to position an element according to the normal flow of the document.</p>
+<p>Offsets are calculated relative to the element's normal position and the element <em>will</em> act as a position reference for absolutely positioned children.</p>
+<div class="relative overflow-hidden mb-8">
+  <div v-pre class="bg-white rounded-t-lg overflow-hidden border-t border-l border-r border-gray-400 p-4 ">
+    <div class="relative bg-gray-400 p-4">
+  <div class="relative h-32 bg-gray-600 p-4 text-gray-900">
+    <p>Relative parent</p>
+    <div class="absolute bottom-0 left-0 bg-gray-800 p-4 text-gray-400">
+      <p>Absolute child</p>
+    </div>
+  </div>
+</div>
+  </div>
+  <div v-pre class="rounded-b-lg bg-gray-800">
+    <pre class="scrollbar-none m-0 p-0 language-html"><code class="inline-block p-4 scrolling-touch">&lt;div class="relative bg-gray-600"&gt;
+  Relative parent
+  &lt;div class="absolute bottom-0 left-0 bg-gray-800"&gt;
+    Absolute child
+  &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+  </div>
+</div>
+<h2><a id="absolute" name="//apple_ref/cpp/Section/Absolute" class="dashAnchor"></a>Absolute</h2>
+<p>Use <code>.absolute</code> to position an element <em>outside</em> of the normal flow of the document, causing neighboring elements to act as if the element doesn't exist.</p>
+<p>Offsets are calculated relative to the nearest parent that has a position other than <code>static</code>, and the element <em>will</em> act as a position reference for other absolutely positioned children.</p>
+<div class="relative overflow-hidden mb-8">
+  <div v-pre class="bg-white rounded-t-lg overflow-hidden border-t border-l border-r border-gray-400 p-4 ">
+    <p class="text-sm text-gray-600 mb-1">With static positioning</p>
+<div class="relative bg-gray-400 px-4 pt-2 pb-4 mb-6">
+  <p class="mb-2 text-gray-700">Relative parent</p>
+  <div class="static bg-gray-500 p-4 text-gray-700">
+    <p class="mb-2">Static parent</p>
+    <div class="static bottom-0 left-0 bg-gray-800 p-4 text-gray-400 inline-block">
+      <p>Static child</p>
+    </div>
+    <div class="bg-gray-400 p-4 text-gray-700 inline-block">
+      <p>Static sibling</p>
+    </div>
+  </div>
+</div>
+
+<p class="text-sm text-gray-600 mb-1">With absolute positioning</p>
+<div class="relative bg-gray-400 px-4 pt-2 pb-4">
+  <p class="mb-2 text-gray-700">Relative parent</p>
+  <div class="static bg-gray-500 p-4 text-gray-700">
+    <p class="mb-2">Static parent</p>
+    <div class="absolute top-0 right-0 bg-gray-800 p-4 text-gray-400 inline-block">
+      <p>Absolute child</p>
+    </div>
+    <div class="bg-gray-400 p-4  text-gray-700 inline-block">
+      <p>Static sibling</p>
+    </div>
+  </div>
+</div>
+  </div>
+  <div v-pre class="rounded-b-lg bg-gray-800">
+    <pre class="scrollbar-none m-0 p-0 language-html"><code class="inline-block p-4 scrolling-touch">&lt;div class="relative bg-gray-400"&gt;
+  Relative parent
+  &lt;div class="static bg-gray-600"&gt;
+    Static parent
+    &lt;div class="absolute top-0 right-0 bg-gray-800"&gt;
+      Absolute child
+    &lt;/div&gt;
+    &lt;div class="bg-gray-400 inline-block"&gt;
+      Static sibling
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+  </div>
+</div>
+<h2><a id="fixed" name="//apple_ref/cpp/Section/Fixed" class="dashAnchor"></a>Fixed</h2>
+<p>Use <code>.fixed</code> to position an element relative to the browser window.</p>
+<p>Offsets are calculated relative to the viewport and the element <em>will</em> act as a position reference for absolutely positioned children.</p>
+<div class="relative overflow-hidden mb-8">
+  <div v-pre class="bg-white rounded-t-lg overflow-hidden border-t border-l border-r border-gray-400 p-4 ">
+    <div class="rounded-b overflow-hidden max-w-md mx-auto mt-4 mb-4">
+  <div class="rounded-t border-t border-l border-r border-gray-400 bg-gray-200 flex px-4 py-3">
+    <div class="mr-6">
+      <span class="inline-block rounded-full bg-gray-500 h-3 w-3 mr-1"></span>
+      <span class="inline-block rounded-full bg-gray-500 h-3 w-3 mr-1"></span>
+      <span class="inline-block rounded-full bg-gray-500 h-3 w-3"></span>
+    </div>
+    <div class="flex-1 bg-white border border-gray-400 rounded mr-4"></div>
+  </div>
+  <div class="relative bg-gray-400 h-64">
+
+    <!-- Hey fellow nerd! Yes, we're using position absolute instead of position fixed in the demo; it's the best way we could come up with to demonstrate how position fixed works without totally jacking up the layout of the entire documentation site. Forgive us! &#128516; -->
+
+    <div class="absolute left-0 right-0 top-0 bg-gray-800 text-gray-400 z-10 px-4 py-3">
+      Fixed child
+      <div class="absolute top-0 bottom-0 right-0 px-4 py-3 bg-gray-500 text-gray-800">
+        Absolute child
+      </div>
+    </div>
+    <div class="absolute inset-0 overflow-auto pt-16 px-4 pb-4">
+      <p class="mb-4">Scroll me!</p>
+      <p class="mb-4">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed cursus ante dapibus diam. Sed nisi. Nulla quis sem at nibh elementum imperdiet. Duis sagittis ipsum. Praesent mauris. Fusce nec tellus sed augue semper porta. Mauris massa. Vestibulum lacinia arcu eget nulla. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Curabitur sodales ligula in libero. </p>
+      <p class="mb-4">Sed dignissim lacinia nunc. Curabitur tortor. Pellentesque nibh. Aenean quam. In scelerisque sem at dolor. Maecenas mattis. Sed convallis tristique sem. Proin ut ligula vel nunc egestas porttitor. Morbi lectus risus, iaculis vel, suscipit quis, luctus non, massa. Fusce ac turpis quis ligula lacinia aliquet. Mauris ipsum. Nulla metus metus, ullamcorper vel, tincidunt sed, euismod in, nibh. Quisque volutpat condimentum velit. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. </p>
+      <p class="mb-4">Nam nec ante. Sed lacinia, urna non tincidunt mattis, tortor neque adipiscing diam, a cursus ipsum ante quis turpis. Nulla facilisi. Ut fringilla. Suspendisse potenti. Nunc feugiat mi a tellus consequat imperdiet. Vestibulum sapien. Proin quam. Etiam ultrices. Suspendisse in justo eu magna luctus suscipit. Sed lectus. Integer euismod lacus luctus magna. </p>
+      <p class="mb-4">Quisque cursus, metus vitae pharetra auctor, sem massa mattis sem, at interdum magna augue eget diam. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Morbi lacinia molestie dui. Praesent blandit dolor. Sed non quam. In vel mi sit amet augue congue elementum. Morbi in ipsum sit amet pede facilisis laoreet. Donec lacus nunc, viverra nec, blandit vel, egestas et, augue. Vestibulum tincidunt malesuada tellus. Ut ultrices ultrices enim. Curabitur sit amet mauris. Morbi in dui quis est pulvinar ullamcorper. Nulla facilisi. </p>
+      <p class="mb-4">Integer lacinia sollicitudin massa. Cras metus. Sed aliquet risus a tortor. Integer id quam. Morbi mi. Quisque nisl felis, venenatis tristique, dignissim in, ultrices sit amet, augue. Proin sodales libero eget ante. Nulla quam. Aenean laoreet. Vestibulum nisi lectus, commodo ac, facilisis ac, ultricies eu, pede. Ut orci risus, accumsan porttitor, cursus quis, aliquet eget, justo. Sed pretium blandit orci. Ut eu diam at pede suscipit sodales. Aenean lectus elit, fermentum non, convallis id, sagittis at, neque. </p>
+      <p class="mb-4">Nullam mauris orci, aliquet et, iaculis et, viverra vitae, ligula. Nulla ut felis in purus aliquam imperdiet. Maecenas aliquet mollis lectus. Vivamus consectetuer risus et tortor. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed cursus ante dapibus diam. Sed nisi. Nulla quis sem at nibh elementum imperdiet. Duis sagittis ipsum. Praesent mauris. Fusce nec tellus sed augue semper porta. Mauris massa. </p>
+      <p class="mb-4">Vestibulum lacinia arcu eget nulla. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Curabitur sodales ligula in libero. Sed dignissim lacinia nunc. Curabitur tortor. Pellentesque nibh. Aenean quam. In scelerisque sem at dolor. Maecenas mattis. Sed convallis tristique sem. Proin ut ligula vel nunc egestas porttitor. Morbi lectus risus, iaculis vel, suscipit quis, luctus non, massa. Fusce ac turpis quis ligula lacinia aliquet. </p>
+      <p>Mauris ipsum. Nulla metus metus, ullamcorper vel, tincidunt sed, euismod in, nibh. Quisque volutpat condimentum velit. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Nam nec ante. Sed lacinia, urna non tincidunt mattis, tortor neque adipiscing diam, a cursus ipsum ante quis turpis. Nulla facilisi. Ut fringilla. Suspendisse potenti. Nunc feugiat mi a tellus consequat imperdiet. Vestibulum sapien. Proin quam. </p>
+    </div>
+  </div>
+</div>
+  </div>
+  <div v-pre class="rounded-b-lg bg-gray-800">
+    <pre class="scrollbar-none m-0 p-0 language-html"><code class="inline-block p-4 scrolling-touch">&lt;div class="bg-gray-400 pt-16"&gt;
+  &lt;div class="fixed bg-gray-600"&gt;
+    Fixed child
+    &lt;div class="absolute top-0 right-0 bg-gray-800"&gt;
+      Absolute child
+    &lt;/div&gt;
+  &lt;/div&gt;
+
+  Scroll me!
+
+  Lorem ipsum...
+&lt;/div&gt;</code></pre>
+  </div>
+</div>
+<h2><a id="sticky" name="//apple_ref/cpp/Section/Sticky" class="dashAnchor"></a>Sticky</h2>
+<div class="text-sm bg-blue-100 text-blue-700 font-semi-bold px-4 py-2 mb-4 rounded">
+  <div class="flex items-center">
+    <div class="mr-2">
+      <svg class="block text-blue-400 h-5 w-5" fill="currentColor" xmlns="http://www.w3.org/2000/svg" viewbox="0 0 20 20"><path fill-rule="evenodd" clip-rule="evenodd" d="M16.432 15C14.387 9.893 12 8.547 12 6V3h.5a.5.5 0 0 0 .5-.5v-1a.5.5 0 0 0-.5-.5h-5a.5.5 0 0 0-.5.5v1a.5.5 0 0 0 .5.5H8v3c0 2.547-2.387 3.893-4.432 9-.651 1.625-2.323 4 6.432 4s7.083-2.375 6.432-4zm-1.617 1.751c-.702.21-2.099.449-4.815.449s-4.113-.239-4.815-.449c-.249-.074-.346-.363-.258-.628.22-.67.635-1.828 1.411-3.121 1.896-3.159 3.863.497 5.5.497s1.188-1.561 1.824-.497a15.353 15.353 0 0 1 1.411 3.121c.088.265-.009.553-.258.628z"></path></svg>
+    </div>
+    <div>
+      <p class="font-semibold">Note that sticky positioning is not supported in IE11.</p>
+    </div>
+  </div>
+</div>
+<p>Use <code>.sticky</code> to position an element as <code>relative</code> until it crosses a specified threshold, then treat it as fixed until its parent is off screen.</p>
+<p>Offsets are calculated relative to the element's normal position and the element <em>will</em> act as a position reference for absolutely positioned children.</p>
+<div class="relative overflow-hidden mb-8">
+  <div v-pre class="bg-white rounded-t-lg overflow-hidden border-t border-l border-r border-gray-400 p-4 ">
+    <iframe class="h-64 w-full" src="index.html" frameborder="0"></iframe>
+  </div>
+  <div v-pre class="rounded-b-lg bg-gray-800">
+    <pre class="scrollbar-none m-0 p-0 language-html"><code class="inline-block p-4 scrolling-touch">&lt;div&gt;
+    &lt;div class="sticky top-0 ..."&gt;Sticky Heading 1&lt;/div&gt;
+    &lt;p class="py-4"&gt;Quisque cursus...&lt;/p&gt;
+&lt;/div&gt;
+&lt;div&gt;
+    &lt;div class="sticky top-0 ..."&gt;Sticky Heading 2&lt;/div&gt;
+    &lt;p class="py-4"&gt;Integer lacinia...&lt;/p&gt;
+&lt;/div&gt;
+&lt;div&gt;
+    &lt;div class="sticky top-0 ..."&gt;Sticky Heading 3&lt;/div&gt;
+    &lt;p class="py-4"&gt;Nullam mauris...&lt;/p&gt;
+&lt;/div&gt;
+&lt;!-- etc. --&gt;</code></pre>
+  </div>
+</div>
+<h2><a id="responsive" name="//apple_ref/cpp/Section/Responsive" class="dashAnchor"></a>Responsive</h2>
+<p>To change how an element is positioned only at a specific breakpoint, add a <code>{screen}:</code> prefix to any existing position utility. For example, adding the class <code>md:absolute</code> to an element would apply the <code>absolute</code> utility at medium screen sizes and above.</p>
+<p>For more information about Tailwind's responsive design features, check out the <a href="responsive-design.html">Responsive Design</a> documentation.</p>
+<div class="mt-8 v-cloak-hidden">
+  <responsive-code-sample code='&lt;div class="relative h-32 bg-gray-400 p-4"&gt;
+  &lt;div class="inset-x-0 bottom-0 none:relative sm:absolute md:fixed lg:absolute xl:relative"&gt;&lt;/div&gt;
+&lt;/div&gt;' slot-class="">
+    <div slot="none"><div class="relative h-32 bg-gray-400 p-4">
+  <div class="relative inset-x-0 bottom-0 bg-gray-800 p-4 text-gray-500">Responsive element</div>
+</div></div>
+    <div slot="sm"><div class="relative h-32 bg-gray-400 p-4">
+  <div class="absolute inset-x-0 bottom-0 bg-gray-800 p-4 text-gray-500">Responsive element</div>
+</div></div>
+    <div slot="md"><div class="relative h-32 bg-gray-400 p-4">
+  <div class="fixed inset-x-0 bottom-0 z-100 bg-gray-800 p-4 text-gray-500">Responsive element</div>
+</div></div>
+    <div slot="lg"><div class="relative h-32 bg-gray-400 p-4">
+  <div class="absolute inset-x-0 bottom-0 bg-gray-800 p-4 text-gray-500">Responsive element</div>
+</div></div>
+    <div slot="xl"><div class="relative h-32 bg-gray-400 p-4">
+  <div class="relative inset-x-0 bottom-0 bg-gray-800 p-4 text-gray-500">Responsive element</div>
+</div></div>
+  </responsive-code-sample>
+</div>
+<h2><a id="customizing" name="//apple_ref/cpp/Section/Customizing" class="dashAnchor"></a>Customizing</h2>
+<h3><a id="responsive-and-pseudo-class-variants" name="//apple_ref/cpp/Section/Responsive%20and%20pseudo-class%20variants" class="dashAnchor"></a>Responsive and pseudo-class variants</h3>
+<p>By default, only responsive variants are generated for position utilities.</p>
+<p>You can control which variants are generated for the position utilities by modifying the <code>position</code> property in the <code>variants</code> section of your <code>tailwind.config.js</code> file.</p>
+<p>For example, this config will also generate hover and focus variants:</p>
+<div class="rounded-lg mb-8 overflow-hidden">
+  <div class="bg-gray-800 p-4 font-mono text-sm overflow-x-scroll whitespace-no-wrap">
+    <div class="whitespace-pre text-gray-400">// tailwind.config.js</div>
+    <div class="whitespace-pre text-code-white">module.exports = {</div>
+    <div class="whitespace-pre text-code-white">
+<span class="text-code-yellow">  variants</span>: {</div>
+    <div>
+<div class="text-gray-400">&nbsp;&nbsp;&nbsp;&nbsp;// ...</div>
+<div class="text-gray-500">
+<span>-</span>&nbsp;&nbsp;&nbsp;position: ['responsive'],</div>
+<div class="text-code-green">
+<span>+</span>&nbsp;&nbsp;&nbsp;position: ['responsive', 'hover', 'focus'],</div>
+</div>
+    <div class="whitespace-pre text-code-white">  }</div>
+    <div class="whitespace-pre text-code-white">}</div>
+  </div>
+</div>
+<h3><a id="disabling" name="//apple_ref/cpp/Section/Disabling" class="dashAnchor"></a>Disabling</h3>
+<p>If you don't plan to use the position utilities in your project, you can disable them entirely by setting the <code>position</code> property to <code>false</code> in the <code>corePlugins</code> section of your config file:</p>
+<div class="rounded-lg mb-8 overflow-hidden">
+  <div class="bg-gray-800 p-4 font-mono text-sm overflow-x-scroll whitespace-no-wrap">
+    <div class="whitespace-pre text-gray-400">// tailwind.config.js</div>
+    <div class="whitespace-pre text-code-white">module.exports = {</div>
+    <div class="whitespace-pre text-code-white">
+<span class="text-code-yellow">  corePlugins</span>: {</div>
+    <div>
+<div class="text-gray-400">&nbsp;&nbsp;&nbsp;&nbsp;// ...</div>
+<div class="text-code-green">
+<span>+</span>&nbsp;&nbsp;&nbsp;position: false,</div>
+</div>
+    <div class="whitespace-pre text-code-white">  }</div>
+    <div class="whitespace-pre text-code-white">}</div>
+  </div>
+</div>              </div>
+
+              
+              
+              
+
+            </div>
+          </div>
+          
+
+
+        </div>
+        
+
+        <script src="app.js%3Fid=4e0678930121543c0338"></script>
+
+        <!-- Algolia DocSearch  -->
+        <script type="text/javascript" src="https://cdn.jsdelivr.net/docsearch.js/2/docsearch.min.js"></script>
+        <script type="text/javascript">
+          docsearch({
+            apiKey: '3df93446658cd9c4e314d4c02a052188',
+            indexName: 'tailwindcss',
+            inputSelector: '#docsearch',
+            algoliaOptions: { 'facetFilters': ["version:v1"] },
+          });
+        </script>
+      </div>
+      
+
+
+    </div>
+    
+
+  </div>
+</div>
+
+
+  <!-- Google Analytics  -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-109068504-1"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'UA-109068504-1');
+  </script>
+
+<script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+<script src="nav.js%3Fid=b3eb7d558e0420f9b29c" defer></script>
+
+</body>
+</html>

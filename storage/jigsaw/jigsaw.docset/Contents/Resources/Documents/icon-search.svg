@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="20px" height="20px" viewBox="0 0 20 20" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 51.3 (57544) - http://www.bohemiancoding.com/sketch -->
+    <title>Mask</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Desktop-HD-Copy-3" transform="translate(-387.000000, -28.000000)" fill="#6C88A9" fill-rule="nonzero">
+            <path d="M401.319857,40.9056439 L406.707107,46.2928932 C407.097631,46.6834175 407.097631,47.3165825 406.707107,47.7071068 C406.316582,48.0976311 405.683418,48.0976311 405.292893,47.7071068 L399.905644,42.3198574 C398.55096,43.3729184 396.848711,44 395,44 C390.581722,44 387,40.418278 387,36 C387,31.581722 390.581722,28 395,28 C399.418278,28 403,31.581722 403,36 C403,37.8487115 402.372918,39.5509601 401.319857,40.9056439 Z M395,42 C398.313708,42 401,39.3137085 401,36 C401,32.6862915 398.313708,30 395,30 C391.686292,30 389,32.6862915 389,36 C389,39.3137085 391.686292,42 395,42 Z" id="Mask"></path>
+        </g>
+    </g>
+</svg>

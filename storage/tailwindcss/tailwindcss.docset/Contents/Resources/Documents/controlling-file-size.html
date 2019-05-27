@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html lang="en" class="bg-white antialiased">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+  <link rel="manifest" href="manifest.json">
+  <link rel="mask-icon" href="safari-pinned-tab.svg" color="#00b4b6">
+  <title>Controlling File Size - Tailwind CSS</title>
+  <meta name="theme-color" content="#ffffff">
+  <meta name="twitter:card" content="summary">
+<meta name="twitter:site" content="@tailwindcss">
+<meta name="twitter:title" content="Controlling File Size - Tailwind CSS">
+<meta name="twitter:description" content="Strategies for keeping your generated CSS small and performant.">
+<meta name="twitter:image" content="https://tailwindcss.com/img/tailwind-twitter-square.png">
+<meta name="twitter:creator" content="@tailwindcss">
+<meta property="og:url" content="https://tailwindcss.com/">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Controlling File Size - Tailwind CSS">
+<meta property="og:description" content="Strategies for keeping your generated CSS small and performant.">
+<meta property="og:image" content="https://tailwindcss.com/img/twitter-large-card.png">
+  <link rel="stylesheet" href="main.css%3Fid=f43316eaa338cb39cc2b.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/docsearch.js/2/docsearch.min.css">
+</head>
+<body data-sidebar-visible="true" class="text-gray-900 leading-normal pb-8">
+
+
+
+
+
+
+
+
+<div class="w-full mx-auto px-6">
+  <div class="lg:flex -mx-6">
+
+    
+    
+    
+
+    
+    <div id="content-wrapper" class="min-h-screen w-full">
+
+      
+      <div id="content">
+
+        
+        <div id="app" class="flex" v-cloak>
+
+          
+          <div class="w-full">
+            <div class="markdown mb-6 px-6 mx-auto">
+                              <a name="//apple_ref/cpp/Section/Top" class="dashAnchor"></a><h1>Controlling File Size</h1>
+              
+                              <div class="mt-0 mb-4 text-gray-600">
+                  Strategies for keeping your generated CSS small and performant.
+                </div>
+                                          <hr class="my-8 border-b-2 border-gray-200">
+                          </div>
+            <div class="flex">
+              <div class="markdown px-6 w-full mx-auto">
+                <p>Using the default configuration, Tailwind CSS comes in at 58.1kb minified and gzipped.</p>
+<p>Here are a few other popular frameworks for comparison:</p>
+<table>
+<thead>
+<tr>
+<th>Framework</th>
+<th style="text-align: right;">Original Size</th>
+<th style="text-align: right;">Minified</th>
+<th style="text-align: right;">Gzip</th>
+<th style="text-align: right;">Brotli</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Tailwind</td>
+<td style="text-align: right;">477.6kb</td>
+<td style="text-align: right;">350.4kb</td>
+<td style="text-align: right;">58.8kb</td>
+<td style="text-align: right;">17.1kb</td>
+</tr>
+<tr>
+<td>Bootstrap</td>
+<td style="text-align: right;">187.8kb</td>
+<td style="text-align: right;">152.1kb</td>
+<td style="text-align: right;">22.7kb</td>
+<td style="text-align: right;">16.7kb</td>
+</tr>
+<tr>
+<td>Bulma</td>
+<td style="text-align: right;">205.6kb</td>
+<td style="text-align: right;">172.4kb</td>
+<td style="text-align: right;">23.0kb</td>
+<td style="text-align: right;">18.0kb</td>
+</tr>
+<tr>
+<td>Foundation</td>
+<td style="text-align: right;">154.1kb</td>
+<td style="text-align: right;">119.2kb</td>
+<td style="text-align: right;">15.9kb</td>
+<td style="text-align: right;">12.9kb</td>
+</tr>
+<tr>
+<td>Tachyons</td>
+<td style="text-align: right;">111.7kb</td>
+<td style="text-align: right;">71.8kb</td>
+<td style="text-align: right;">13.4kb</td>
+<td style="text-align: right;">7.5kb</td>
+</tr>
+<tr>
+<td>Semantic UI</td>
+<td style="text-align: right;">809.4kb</td>
+<td style="text-align: right;">613.8kb</td>
+<td style="text-align: right;">100.6kb</td>
+<td style="text-align: right;">77.8kb</td>
+</tr>
+<tr>
+<td>Materialize</td>
+<td style="text-align: right;">175.0kb</td>
+<td style="text-align: right;">138.5kb</td>
+<td style="text-align: right;">21.1kb</td>
+<td style="text-align: right;">17.1kb</td>
+</tr>
+</tbody>
+</table>
+<p>By comparison Tailwind definitely seems on the heavy side <em>(although if you use <a href="https://github.com/google/brotli">Brotli</a> instead of gzip it's still very reasonable)</em>, but there are a number of strategies you can use to reduce this file size dramatically.</p>
+<hr class="my-16">
+<h2><a id="removing-unused-css" name="//apple_ref/cpp/Section/Removing%20unused%20CSS" class="dashAnchor"></a>Removing unused CSS</h2>
+<p>Mozilla's <a href="https://send.firefox.com/">Firefox Send</a> is built with Tailwind, yet somehow their CSS is only 13.1kb minified, and only 4.7kb gzipped! How?</p>
+<p>They're using <a href="https://www.purgecss.com/">Purgecss</a>, a tool for removing CSS that you're not actually using in your project. Purgecss is particularly effective with Tailwind because Tailwind generates thousands of utility classes for you, most of which you probably won't actually use.</p>
+<p>For example, Tailwind generates margin utilities for every size in your spacing scale, for every side of an element you might want to apply margin to, at every breakpoint you are using in your project. This leads to hundreds of different combinations that are all important to have available, but not all likely to be needed.</p>
+<p>When using Purgecss with Tailwind, it's very hard to end up with more than 10kb of compressed CSS.</p>
+<h3><a id="setting-up-purgecss" name="//apple_ref/cpp/Section/Setting%20up%20Purgecss" class="dashAnchor"></a>Setting up Purgecss</h3>
+<p>In the future we may incorporate Purgecss directly into Tailwind, but for now the best way to use it in your project is as a PostCSS plugin.</p>
+<p>To get started with Purgecss, first install <code>@fullhuman/postcss-purgecss</code>:</p>
+<pre><code class="language-bash"># Using npm
+npm install @fullhuman/postcss-purgecss
+
+# Using yarn
+yarn add @fullhuman/postcss-purgecss</code></pre>
+<p>Next, add it as the last plugin in your <code>postcss.config.js</code> file:</p>
+<pre><code class="language-js">// postcss.config.js
+const purgecss = require('@fullhuman/postcss-purgecss')({
+
+  // Specify the paths to all of the template files in your project 
+  content: [
+    './src/**/*.html',
+    './src/**/*.vue',
+    './src/**/*.jsx',
+    // etc.
+  ],
+
+  // Include any special characters you're using in this regular expression
+  defaultExtractor: content =&gt; content.match(/[A-Za-z0-9-_:/]+/g) || []
+})
+
+module.exports = {
+  plugins: [
+    require('tailwindcss'),
+    require('autoprefixer'),
+    ...process.env.NODE_ENV === 'production'
+      ? [purgecss]
+      : []
+  ]
+}</code></pre>
+<p>Note that in this example, <strong>we're only enabling Purgecss in production</strong>. We recommend configuring Purgecss this way because it can be slow to run, and during development it's nice to have every class available so you don't need to wait for a rebuild every time you change some HTML.</p>
+<h3><a id="writing-purgeable-html" name="//apple_ref/cpp/Section/Writing%20purgeable%20HTML" class="dashAnchor"></a>Writing purgeable HTML</h3>
+<p>Purgecss uses "extractors" to determine what strings in your templates are classes. In the example above, we use a custom extractor that will find all of the classes Tailwind generates by default:</p>
+<pre><code class="language-js">const purgecss = require('@fullhuman/postcss-purgecss')({
+  // ...
+  defaultExtractor: content =&gt; content.match(/[A-Za-z0-9-_:/]+/g) || []
+})</code></pre>
+<p>The way it works is intentionally very "dumb". It doesn't try to parse your HTML and look for class attributes or dynamically execute your JavaScript &mdash; it simply looks for any strings in the entire file that match this regular expression:</p>
+<pre><code class="language-js">/[A-Za-z0-9-_:/]+/g</code></pre>
+<p>That means that <strong>it is important to avoid dynamically creating class strings in your templates with string concatenation</strong>, otherwise Purgecss won't know to preserve those classes.</p>
+<p class="flex items-start mt-8 mb-0">
+  <svg class="h-6 w-6 mr-2 flex-shrink-0" xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24"><circle cx="12" cy="12" r="10" fill="#fed7d7"></circle><path fill="#f56565" d="M13.41 12l2.83 2.83a1 1 0 0 1-1.41 1.41L12 13.41l-2.83 2.83a1 1 0 1 1-1.41-1.41L10.59 12 7.76 9.17a1 1 0 0 1 1.41-1.41L12 10.59l2.83-2.83a1 1 0 0 1 1.41 1.41L13.41 12z"></path></svg>
+  <strong class="text-base font-semibold text-gray-800">Don't use string concatenation to create class names</strong>
+</p>
+<pre class="language-html mt-4" v-pre><code>&lt;div :class="text-{{ error ? 'red' : 'green' }}-600"&gt;&lt;/div&gt;</code></pre>
+<p class="flex items-start mt-8 mb-0">
+  <svg class="h-6 w-6 mr-2 flex-shrink-0" xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24"><circle class="text-green-200 fill-current" cx="12" cy="12" r="10"></circle><path class="text-green-600 fill-current" d="M10 14.59l6.3-6.3a1 1 0 0 1 1.4 1.42l-7 7a1 1 0 0 1-1.4 0l-3-3a1 1 0 0 1 1.4-1.42l2.3 2.3z"></path></svg>
+  <strong class="text-base font-semibold text-gray-800">Do dynamically select a complete class name</strong>
+</p>
+<pre class="language-html mt-4" v-pre><code>&lt;div :class="{{ error ? 'text-red-600' : 'text-green-600' }}"&gt;&lt;/div&gt;</code></pre>
+<p>As long as a class name appears in your template <em>in its entirety</em>, Purgecss will not remove it.</p>
+<h3><a id="customizing-the-regular-expression" name="//apple_ref/cpp/Section/Customizing%20the%20regular%20expression" class="dashAnchor"></a>Customizing the regular expression</h3>
+<p>In the example above, we use a regular expression that matches all of the non-standard characters Tailwind uses by default, like <code>:</code> and <code>/</code>.</p>
+<p>If you are using any other special characters in your class names, make sure to update the regular expression to include those as well.</p>
+<p>For example, if you have customized Tailwind to create classes like <code>w-50%</code>, you'll want to add <code>%</code> to the regular expression:</p>
+<pre><code class="language-diff">- /[A-Za-z0-9-_:/]+/g
++ /[A-Za-z0-9-_:/%]+/g</code></pre>
+<hr class="my-16">
+<h2><a id="removing-unused-theme-values" name="//apple_ref/cpp/Section/Removing%20unused%20theme%20values" class="dashAnchor"></a>Removing unused theme values</h2>
+<p>If you can't use Purgecss for one reason or another, you can also reduce Tailwind's footprint by removing unused values from <a href="configuration.html">your configuration file</a>.</p>
+<p>The default theme provides a very generous set of colors, breakpoints, sizes, margins, etc. to make sure that when you pull Tailwind down to prototype something, create a CodePen demo, or just try out the workflow, the experience is as enjoyable and fluid as possible.</p>
+<p>We don't want you to have to go and write new CSS because we didn't provide enough padding helpers out of the box, or because you wanted to use an orange color scheme for your demo and we only gave you blue.</p>
+<p>This comes with a trade-off though: the default build is significantly heavier than it would be on a project with a purpose-built configuration file.</p>
+<p>Here are a few strategies you can use to keep your generated CSS small and performant.</p>
+<h3><a id="limiting-your-color-palette" name="//apple_ref/cpp/Section/Limiting%20your%20color%20palette" class="dashAnchor"></a>Limiting your color palette</h3>
+<p>The default theme includes a whopping <a href="colors.html">93 colors</a> used for backgrounds, borders, and text, all of which also have <code>hover:</code> and <code>focus</code> variants, as well as responsive variants at the five default screen sizes.</p>
+<p>This means that by default, there are 4185 classes generated from this color palette out of 8271 classes total in the entire default build.</p>
+<p>Very few projects actually need this many colors, and removing colors you don't need can have a huge impact on the overall file size.</p>
+<p>Here's how using a smaller color palette affects the final size:</p>
+<table>
+<thead>
+<tr>
+<th>Colors</th>
+<th style="text-align: right;">Original</th>
+<th style="text-align: right;">Minified</th>
+<th style="text-align: right;">Gzip</th>
+<th style="text-align: right;">Brotli</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>93 <em>(default)</em></td>
+<td style="text-align: right;">477.6kb</td>
+<td style="text-align: right;">350.4kb</td>
+<td style="text-align: right;">58.8kb</td>
+<td style="text-align: right;">17.1kb</td>
+</tr>
+<tr>
+<td>50</td>
+<td style="text-align: right;">361.3kb</td>
+<td style="text-align: right;">260.3kb</td>
+<td style="text-align: right;">45.7kb</td>
+<td style="text-align: right;">13.9kb</td>
+</tr>
+<tr>
+<td>25</td>
+<td style="text-align: right;">293.1kb</td>
+<td style="text-align: right;">207.2kb</td>
+<td style="text-align: right;">38.0kb</td>
+<td style="text-align: right;">12.2kb</td>
+</tr>
+</tbody>
+</table>
+<h3><a id="removing-unused-breakpoints" name="//apple_ref/cpp/Section/Removing%20unused%20breakpoints" class="dashAnchor"></a>Removing unused breakpoints</h3>
+<p>Since almost every Tailwind utility is copied for every screen size, using fewer screen sizes can have a huge impact on the overall file size as well.</p>
+<p>Here's how defining fewer screens affects the output:</p>
+<table>
+<thead>
+<tr>
+<th>Breakpoints</th>
+<th style="text-align: right;">Original</th>
+<th style="text-align: right;">Minified</th>
+<th style="text-align: right;">Gzip</th>
+<th style="text-align: right;">Brotli</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>4 <em>(default)</em></td>
+<td style="text-align: right;">477.6kb</td>
+<td style="text-align: right;">350.4kb</td>
+<td style="text-align: right;">58.8kb</td>
+<td style="text-align: right;">17.1kb</td>
+</tr>
+<tr>
+<td>3</td>
+<td style="text-align: right;">380.9kb</td>
+<td style="text-align: right;">279.7kb</td>
+<td style="text-align: right;">47.4kb</td>
+<td style="text-align: right;">16.3kb</td>
+</tr>
+<tr>
+<td>2</td>
+<td style="text-align: right;">284.2kb</td>
+<td style="text-align: right;">209.0kb</td>
+<td style="text-align: right;">36.0kb</td>
+<td style="text-align: right;">15.0kb</td>
+</tr>
+<tr>
+<td>1</td>
+<td style="text-align: right;">187.5kb</td>
+<td style="text-align: right;">138.3kb</td>
+<td style="text-align: right;">24.5kb</td>
+<td style="text-align: right;">13.7kb</td>
+</tr>
+</tbody>
+</table>
+<p>If you only need 3 screen sizes and 35 colors, you're down to 32.5kb after gzip <em>(11.7kb after Brotli!)</em> without changing anything else.</p>
+<h3><a id="disabling-unused-utilities-and-variants" name="//apple_ref/cpp/Section/Disabling%20unused%20utilities%20and%20variants" class="dashAnchor"></a>Disabling unused utilities and variants</h3>
+<p>If you don't expect to need a certain utility plugin in your project at all, you can disable it completely by setting it to <code>false</code> in the <code>corePlugins</code> section of your config file:</p>
+<pre><code class="language-js">// tailwind.config.js
+module.exports = {
+  // ...
+  corePlugins: {
+    float: false
+  }
+}</code></pre>
+<p>If you need a utility but don't need the responsive versions, set its variants to an empty array to generate 80% fewer classes:</p>
+<pre><code class="language-js">module.exports = {
+  // ...
+  variants: {
+    appearance: []
+  }
+}</code></pre>
+<p>These are mostly small wins compared to limiting your color palette or using fewer breakpoints, but they can still add up.</p>              </div>
+
+              
+              
+              
+
+            </div>
+          </div>
+          
+
+
+        </div>
+        
+
+        <script src="app.js%3Fid=4e0678930121543c0338"></script>
+
+        <!-- Algolia DocSearch  -->
+        <script type="text/javascript" src="https://cdn.jsdelivr.net/docsearch.js/2/docsearch.min.js"></script>
+        <script type="text/javascript">
+          docsearch({
+            apiKey: '3df93446658cd9c4e314d4c02a052188',
+            indexName: 'tailwindcss',
+            inputSelector: '#docsearch',
+            algoliaOptions: { 'facetFilters': ["version:v1"] },
+          });
+        </script>
+      </div>
+      
+
+
+    </div>
+    
+
+  </div>
+</div>
+
+
+  <!-- Google Analytics  -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-109068504-1"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'UA-109068504-1');
+  </script>
+
+<script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+<script src="nav.js%3Fid=b3eb7d558e0420f9b29c" defer></script>
+
+</body>
+</html>

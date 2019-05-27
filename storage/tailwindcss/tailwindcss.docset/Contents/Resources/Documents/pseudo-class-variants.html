@@ -1,0 +1,660 @@
+<!DOCTYPE html>
+<html lang="en" class="bg-white antialiased">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+  <link rel="manifest" href="manifest.json">
+  <link rel="mask-icon" href="safari-pinned-tab.svg" color="#00b4b6">
+  <title>Pseudo-Class Variants - Tailwind CSS</title>
+  <meta name="theme-color" content="#ffffff">
+  <meta name="twitter:card" content="summary">
+<meta name="twitter:site" content="@tailwindcss">
+<meta name="twitter:title" content="Pseudo-Class Variants - Tailwind CSS">
+<meta name="twitter:description" content="Using utilities to style elements on hover, focus, and more.">
+<meta name="twitter:image" content="https://tailwindcss.com/img/tailwind-twitter-square.png">
+<meta name="twitter:creator" content="@tailwindcss">
+<meta property="og:url" content="https://tailwindcss.com/">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Pseudo-Class Variants - Tailwind CSS">
+<meta property="og:description" content="Using utilities to style elements on hover, focus, and more.">
+<meta property="og:image" content="https://tailwindcss.com/img/twitter-large-card.png">
+  <link rel="stylesheet" href="main.css%3Fid=f43316eaa338cb39cc2b.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/docsearch.js/2/docsearch.min.css">
+</head>
+<body data-sidebar-visible="true" class="text-gray-900 leading-normal pb-8">
+
+
+
+
+
+
+
+
+<div class="w-full mx-auto px-6">
+  <div class="lg:flex -mx-6">
+
+    
+    
+    
+
+    
+    <div id="content-wrapper" class="min-h-screen w-full">
+
+      
+      <div id="content">
+
+        
+        <div id="app" class="flex" v-cloak>
+
+          
+          <div class="w-full">
+            <div class="markdown mb-6 px-6 mx-auto">
+                              <a name="//apple_ref/cpp/Section/Top" class="dashAnchor"></a><h1>Pseudo-Class Variants</h1>
+              
+                              <div class="mt-0 mb-4 text-gray-600">
+                  Using utilities to style elements on hover, focus, and more.
+                </div>
+                                          <hr class="my-8 border-b-2 border-gray-200">
+                          </div>
+            <div class="flex">
+              <div class="markdown px-6 w-full mx-auto">
+                <h2 style="font-size: 0" class="invisible m-0 -mb-6"><a id="overview" name="//apple_ref/cpp/Section/Overview" class="dashAnchor"></a>Overview</h2>
+<p>Similar to how Tailwind handles <a href="responsive-design.html">responsive design</a>, styling elements on hover, focus, and more can be accomplished by prefixing utilities with the appropriate pseudo-class.</p>
+<div class="relative overflow-hidden mb-8">
+  <div v-pre class="bg-white rounded-t-lg overflow-hidden border-t border-l border-r border-gray-400 p-4 ">
+    <form class="flex w-full max-w-sm mx-auto">
+  <input class="flex-1 bg-gray-200 hover:bg-white hover:border-gray-300 focus:outline-none focus:bg-white focus:shadow-outline focus:border-gray-300 appearance-none border border-transparent rounded w-full py-2 px-4 text-gray-700 leading-tight " type="email" placeholder="Your email">
+  <button class="ml-4 flex-shrink-0 bg-teal-500 hover:bg-teal-600 focus:outline-none focus:shadow-outline text-white font-bold py-2 px-4 rounded" type="button">
+    Sign Up
+  </button>
+</form>
+  </div>
+  <div v-pre class="rounded-b-lg bg-gray-800">
+    <pre class="scrollbar-none m-0 p-0 language-html"><code class="inline-block p-4 scrolling-touch">&lt;form&gt;
+  &lt;input class="bg-gray-200 hover:bg-white hover:border-gray-300 focus:outline-none focus:bg-white focus:shadow-outline focus:border-gray-300 ..."&gt;
+  &lt;button class="bg-teal-500 hover:bg-teal-600 focus:outline-none focus:shadow-outline ..."&gt;
+    Sign Up
+  &lt;/button&gt;
+&lt;/form&gt;</code></pre>
+  </div>
+</div>
+<p><strong>Not all pseudo-class variants are enabled for all utilities by default due to file-size considerations</strong>, but we've tried our best to enable the most commonly used combinations out of the box.</p>
+<p>For a complete list of which variants are enabled by default, see the <a href="pseudo-class-variants.html#default-variants-reference">reference table</a> at the end of this page.</p>
+<hr>
+<h2><a id="using-pseudo-class-variants" name="//apple_ref/cpp/Section/Using%20pseudo-class%20variants" class="dashAnchor"></a>Using pseudo-class variants</h2>
+<p>Tailwind includes first-class support for styling elements on <a href="pseudo-class-variants.html#hover">hover</a>, <a href="pseudo-class-variants.html#focus">focus</a>, <a href="pseudo-class-variants.html#active">active</a>, <a href="pseudo-class-variants.html#group-hover">group-hover</a>, and <a href="pseudo-class-variants.html#focus-within">focus-within</a>. If you need to target a pseudo-class that Tailwind doesn't support, you can extend the supported variants by <a href="pseudo-class-variants.html#creating-custom-variants">writing a variant plugin</a>.</p>
+<h3><a id="hover" name="//apple_ref/cpp/Section/Hover" class="dashAnchor"></a>Hover</h3>
+<p>Add the <code>hover:</code> prefix to only apply a utility on hover.</p>
+<div class="relative overflow-hidden mb-8">
+  <div v-pre class="bg-white rounded-t-lg overflow-hidden border-t border-l border-r border-gray-400 p-4 text-center">
+    <button type="button" class="bg-transparent hover:bg-blue-500 text-blue-700 font-semibold hover:text-white py-2 px-4 border border-blue-500 hover:border-transparent rounded focus:outline-none focus:shadow-outline">
+  Hover me
+</button>
+  </div>
+  <div v-pre class="rounded-b-lg bg-gray-800">
+    <pre class="scrollbar-none m-0 p-0 language-html"><code class="inline-block p-4 scrolling-touch">&lt;button class="bg-transparent hover:bg-blue-500 text-blue-700 hover:text-white..."&gt;
+  Hover me
+&lt;/button&gt;</code></pre>
+  </div>
+</div>
+<p>You can control whether <code>hover</code> variants are enabled for a utility in the <code>variants</code> section of your <code>tailwind.config.js</code> file:</p>
+<pre><code class="language-js">// tailwind.config.js
+module.exports = {
+  // ...
+  variants: {
+    backgroundColor: ['hover'],
+  },
+}</code></pre>
+<h3><a id="focus" name="//apple_ref/cpp/Section/Focus" class="dashAnchor"></a>Focus</h3>
+<p>Add the <code>focus:</code> prefix to only apply a utility on focus.</p>
+<div class="relative overflow-hidden mb-8">
+  <div v-pre class="bg-white rounded-t-lg overflow-hidden border-t border-l border-r border-gray-400 p-4 ">
+    <div class="max-w-xs w-full mx-auto">
+  <input class="bg-gray-200 focus:bg-white border-transparent focus:border-blue-400 text-gray-900 appearance-none inline-block w-full text-gray-900 border rounded py-3 px-4 focus:outline-none" placeholder="Focus me">
+</div>
+  </div>
+  <div v-pre class="rounded-b-lg bg-gray-800">
+    <pre class="scrollbar-none m-0 p-0 language-html"><code class="inline-block p-4 scrolling-touch">&lt;input class="bg-gray-200 focus:bg-white border-transparent focus:border-blue-400 ..." placeholder="Focus me"&gt;</code></pre>
+  </div>
+</div>
+<p>You can control whether <code>focus</code> variants are enabled for a utility in the <code>variants</code> section of your <code>tailwind.config.js</code> file:</p>
+<pre><code class="language-js">// tailwind.config.js
+module.exports = {
+  // ...
+  variants: {
+    backgroundColor: ['focus'],
+  },
+}</code></pre>
+<h3><a id="active" name="//apple_ref/cpp/Section/Active" class="dashAnchor"></a>Active</h3>
+<p>Add the <code>active:</code> prefix to only apply a utility when an element is active.</p>
+<div class="relative overflow-hidden mb-8">
+  <div v-pre class="bg-white rounded-t-lg overflow-hidden border-t border-l border-r border-gray-400 p-4 text-center">
+    <button type="button" class="bg-blue-500 active:bg-blue-700 text-white font-semibold hover:text-white py-2 px-4 rounded focus:outline-none focus:shadow-outline">
+  Click me
+</button>
+  </div>
+  <div v-pre class="rounded-b-lg bg-gray-800">
+    <pre class="scrollbar-none m-0 p-0 language-html"><code class="inline-block p-4 scrolling-touch">&lt;button class="bg-blue-500 active:bg-blue-700 text-white..."&gt;
+  Click me
+&lt;/button&gt;</code></pre>
+  </div>
+</div>
+<p>You can control whether <code>active</code> variants are enabled for a utility in the <code>variants</code> section of your <code>tailwind.config.js</code> file:</p>
+<pre><code class="language-js">// tailwind.config.js
+module.exports = {
+  // ...
+  variants: {
+    backgroundColor: ['active'],
+  },
+}</code></pre>
+<h3><a id="group-hover" name="//apple_ref/cpp/Section/Group-hover" class="dashAnchor"></a>Group-hover</h3>
+<p>If you need to style a child element when hovering over a specific parent element, add the <code>.group</code> class to the parent element and add the <code>group-hover:</code> prefix to the utility on the child element.</p>
+<div class="relative overflow-hidden mb-8">
+  <div v-pre class="bg-white rounded-t-lg overflow-hidden border-t border-l border-r border-gray-400 p-4 bg-gray-200 p-8">
+    <div class="group hover:bg-blue-500 p-4 cursor-pointer bg-white rounded max-w-xs w-full shadow-lg select-none overflow-hidden mx-auto">
+  <p class="font-semibold text-lg mb-1 text-gray-900 group-hover:text-white">New Project</p>
+  <p class="text-gray-700 group-hover:text-white mb-2">Create a new project from a variety of starting templates.</p>
+</div>
+  </div>
+  <div v-pre class="rounded-b-lg bg-gray-800">
+    <pre class="scrollbar-none m-0 p-0 language-html"><code class="inline-block p-4 scrolling-touch">&lt;div class="group bg-white hover:bg-blue-500 ..."&gt;
+  &lt;p class="text-gray-900 group-hover:text-white ..."&gt;New Project&lt;/p&gt;
+  &lt;p class="text-gray-700 group-hover:text-white ..."&gt;Create a new project from a variety of starting templates.&lt;/p&gt;
+&lt;/div&gt;</code></pre>
+  </div>
+</div>
+<p>You can control whether <code>group-hover</code> variants are enabled for a utility in the <code>variants</code> section of your <code>tailwind.config.js</code> file:</p>
+<pre><code class="language-js">// tailwind.config.js
+module.exports = {
+  // ...
+  variants: {
+    backgroundColor: ['group-hover'],
+  },
+}</code></pre>
+<h3><a id="focus-within" name="//apple_ref/cpp/Section/Focus-within" class="dashAnchor"></a>Focus-within</h3>
+<div class="text-sm bg-blue-100 text-blue-700 font-semi-bold px-4 py-2 mb-4 rounded">
+  <div class="flex items-center">
+    <div class="mr-2">
+      <svg class="block text-blue-400 h-5 w-5" fill="currentColor" xmlns="http://www.w3.org/2000/svg" viewbox="0 0 20 20"><path fill-rule="evenodd" clip-rule="evenodd" d="M16.432 15C14.387 9.893 12 8.547 12 6V3h.5a.5.5 0 0 0 .5-.5v-1a.5.5 0 0 0-.5-.5h-5a.5.5 0 0 0-.5.5v1a.5.5 0 0 0 .5.5H8v3c0 2.547-2.387 3.893-4.432 9-.651 1.625-2.323 4 6.432 4s7.083-2.375 6.432-4zm-1.617 1.751c-.702.21-2.099.449-4.815.449s-4.113-.239-4.815-.449c-.249-.074-.346-.363-.258-.628.22-.67.635-1.828 1.411-3.121 1.896-3.159 3.863.497 5.5.497s1.188-1.561 1.824-.497a15.353 15.353 0 0 1 1.411 3.121c.088.265-.009.553-.258.628z"></path></svg>
+    </div>
+    <div>
+      <p class="font-semibold">Note that focus-within is not supported in IE or Edge.</p>
+    </div>
+  </div>
+</div>
+<p>Add the <code>focus-within:</code> prefix to only apply a utility when a child element has focus.</p>
+<div class="relative overflow-hidden mb-8">
+  <div v-pre class="bg-white rounded-t-lg overflow-hidden border-t border-l border-r border-gray-400 p-4 bg-white p-8">
+    <form class="w-full max-w-sm mx-auto">
+  <div class="flex items-center border-b-2 border-gray-400 focus-within:border-teal-500 py-2">
+    <input class="appearance-none bg-transparent border-none w-full text-gray-700 mr-3 py-1 px-2 leading-tight focus:outline-none" type="text" placeholder="Jane Doe" aria-label="Full name">
+    <button class="focus:shadow-outline focus:outline-none flex-shrink-0 bg-teal-500 hover:bg-teal-700 border-teal-500 hover:border-teal-700 text-sm border-4 text-white py-1 px-2 rounded" type="button">
+      Sign Up
+    </button>
+  </div>
+</form>
+  </div>
+  <div v-pre class="rounded-b-lg bg-gray-800">
+    <pre class="scrollbar-none m-0 p-0 language-html"><code class="inline-block p-4 scrolling-touch">&lt;form class="border-b-2 border-gray-400 focus-within:border-teal-500 ..."&gt;
+  &lt;input class="..." placeholder="Jane Doe" ...&gt;
+  &lt;button class="..."&gt;
+    Sign Up
+  &lt;/button&gt;
+&lt;/form&gt;</code></pre>
+  </div>
+</div>
+<p>You can control whether <code>focus-within</code> variants are enabled for a utility in the <code>variants</code> section of your <code>tailwind.config.js</code> file:</p>
+<pre><code class="language-js">// tailwind.config.js
+module.exports = {
+  // ...
+  variants: {
+    backgroundColor: ['focus-within'],
+  },
+}</code></pre>
+<hr>
+<h2><a id="combining-with-responsive-prefixes" name="//apple_ref/cpp/Section/Combining%20with%20responsive%20prefixes" class="dashAnchor"></a>Combining with responsive prefixes</h2>
+<p>Pseudo-class variants are also responsive, meaning you can do things like change an element's hover style at different breakpoints for example.</p>
+<p>To apply a pseudo-class variant at a specific breakpoint, add the responsive prefix first, before the pseudo-class prefix:</p>
+<div class="mt-8 v-cloak-hidden">
+  <responsive-code-sample code='&lt;button class="none:bg-orange-500 none:hover:bg-orange-600 sm:bg-green-500 sm:hover:bg-green-600 md:bg-red-500 md:hover:bg-red-600 lg:bg-indigo-500 lg:hover:bg-indigo-600 xl:bg-pink-500 xl:hover:bg-pink-600 "&gt;
+  Button
+&lt;/button&gt;' slot-class="text-center">
+    <div slot="none"><button class="px-4 py-2 rounded text-white font-bold bg-orange-500 hover:bg-orange-600">Button</button></div>
+    <div slot="sm"><button class="px-4 py-2 rounded text-white font-bold bg-green-500 hover:bg-green-600">Button</button></div>
+    <div slot="md"><button class="px-4 py-2 rounded text-white font-bold bg-red-500 hover:bg-red-600">Button</button></div>
+    <div slot="lg"><button class="px-4 py-2 rounded text-white font-bold bg-indigo-500 hover:bg-indigo-600">Button</button></div>
+    <div slot="xl"><button class="px-4 py-2 rounded text-white font-bold bg-pink-500 hover:bg-pink-600">Button</button></div>
+  </responsive-code-sample>
+</div>
+<hr>
+<h2><a id="generative-variants-for-custom-utilities" name="//apple_ref/cpp/Section/Generative%20variants%20for%20custom%20utilities" class="dashAnchor"></a>Generative variants for custom utilities</h2>
+<p>You can generate pseudo-class variants for your own custom utilities by wrapping them with the <code>@variants</code> directive in your CSS:</p>
+<pre><code class="language-css">/* Input: */
+@variants group-hover, hover, focus {
+  .banana {
+    color: yellow;
+  }
+}
+
+/* Output: */
+.banana {
+  color: yellow;
+}
+.group:hover group-hover\:banana {
+  color: yellow;
+}
+.hover\:banana:hover {
+  color: yellow;
+}
+.focus\:banana:focus {
+  color: yellow;
+}
+</code></pre>
+<p>For more information, see the <a href="functions-and-directives.html#variants">@variants directive documentation</a>.</p>
+<hr>
+<h2><a id="creating-custom-variants" name="//apple_ref/cpp/Section/Creating%20custom%20variants" class="dashAnchor"></a>Creating custom variants</h2>
+<p>You can create your own variants for any pseudo-classes Tailwind doesn't include by default by writing a custom variant plugin.</p>
+<p>For example, this simple plugin adds support for the <code>disabled</code> pseudo-class variant:</p>
+<pre><code class="language-js">// tailwind.config.js
+module.exports = {
+  plugins: [
+    function({ addVariant, e }) {
+      addVariant('disabled', ({ modifySelectors, separator }) =&gt; {
+        modifySelectors(({ className }) =&gt; {
+          return `.${e(`disabled${separator}${className}`)}:disabled`
+        })
+      })
+    }
+  ]
+}</code></pre>
+<p>Learn more about writing variant plugins in the <a href="plugins.html#adding-variants">variant plugin documentation</a>.</p>
+<hr>
+<h2><a id="default-variants-reference" name="//apple_ref/cpp/Section/Default%20variants%20reference" class="dashAnchor"></a>Default variants reference</h2>
+<p>Due to file-size considerations, Tailwind does not generate <code>active</code>, <code>group-hover</code>, or <code>focus-within</code> variants for any utilities by default.</p>
+<p>To configure which variants are enabled for your project, see the <a href="configuring-variants.html">configuring variants documentation</a>.</p>
+<table>
+<thead>
+<tr>
+<th>Core Plugin</th>
+<th>Hover</th>
+<th>Focus</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>alignContent</code></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><code>alignItems</code></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><code>alignSelf</code></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><code>appearance</code></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><code>backgroundAttachment</code></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><code>backgroundColor</code></td>
+<td>&amp;check;</td>
+<td>&amp;check;</td>
+</tr>
+<tr>
+<td><code>backgroundPosition</code></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><code>backgroundRepeat</code></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><code>backgroundSize</code></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><code>borderCollapse</code></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><code>borderColor</code></td>
+<td>&amp;check;</td>
+<td>&amp;check;</td>
+</tr>
+<tr>
+<td><code>borderRadius</code></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><code>borderStyle</code></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><code>borderWidth</code></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><code>boxShadow</code></td>
+<td>&amp;check;</td>
+<td>&amp;check;</td>
+</tr>
+<tr>
+<td><code>cursor</code></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><code>display</code></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><code>fill</code></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><code>flex</code></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><code>flexDirection</code></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><code>flexGrow</code></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><code>flexShrink</code></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><code>flexWrap</code></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><code>float</code></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><code>fontFamily</code></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><code>fontSize</code></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><code>fontSmoothing</code></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><code>fontStyle</code></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><code>fontWeight</code></td>
+<td>&amp;check;</td>
+<td>&amp;check;</td>
+</tr>
+<tr>
+<td><code>height</code></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><code>inset</code></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><code>justifyContent</code></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><code>letterSpacing</code></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><code>lineHeight</code></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><code>listStylePosition</code></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><code>listStyleType</code></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><code>margin</code></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><code>maxHeight</code></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><code>maxWidth</code></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><code>minHeight</code></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><code>minWidth</code></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><code>objectFit</code></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><code>objectPosition</code></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><code>opacity</code></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><code>order</code></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><code>outline</code></td>
+<td></td>
+<td>&amp;check;</td>
+</tr>
+<tr>
+<td><code>overflow</code></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><code>padding</code></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><code>pointerEvents</code></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><code>position</code></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><code>resize</code></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><code>stroke</code></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><code>tableLayout</code></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><code>textAlign</code></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><code>textColor</code></td>
+<td>&amp;check;</td>
+<td>&amp;check;</td>
+</tr>
+<tr>
+<td><code>textDecoration</code></td>
+<td>&amp;check;</td>
+<td>&amp;check;</td>
+</tr>
+<tr>
+<td><code>textTransform</code></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><code>userSelect</code></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><code>verticalAlign</code></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><code>visibility</code></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><code>whitespace</code></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><code>width</code></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><code>wordBreak</code></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><code>zIndex</code></td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>              </div>
+
+              
+              
+              
+
+            </div>
+          </div>
+          
+
+
+        </div>
+        
+
+        <script src="app.js%3Fid=4e0678930121543c0338"></script>
+
+        <!-- Algolia DocSearch  -->
+        <script type="text/javascript" src="https://cdn.jsdelivr.net/docsearch.js/2/docsearch.min.js"></script>
+        <script type="text/javascript">
+          docsearch({
+            apiKey: '3df93446658cd9c4e314d4c02a052188',
+            indexName: 'tailwindcss',
+            inputSelector: '#docsearch',
+            algoliaOptions: { 'facetFilters': ["version:v1"] },
+          });
+        </script>
+      </div>
+      
+
+
+    </div>
+    
+
+  </div>
+</div>
+
+
+  <!-- Google Analytics  -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-109068504-1"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'UA-109068504-1');
+  </script>
+
+<script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+<script src="nav.js%3Fid=b3eb7d558e0420f9b29c" defer></script>
+
+</body>
+</html>
