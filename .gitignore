@@ -5,3 +5,5 @@
 
 .DS_Store
 /database/database.sqlite
+
+/build
