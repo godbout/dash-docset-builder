@@ -7,7 +7,7 @@ use App\Docsets\LaravelZero;
 use App\Services\DocsetBuilder;
 use Illuminate\Support\Facades\Storage;
 
-/*** @group laravel-zero */
+/** @group laravel-zero */
 class LaravelZeroTest extends TestCase
 {
     public function setUp(): void

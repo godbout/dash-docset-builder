@@ -21,6 +21,21 @@ class TailwindCSSTest extends TestCase
     /** @test */
     public function it_can_generate_a_table_of_contents()
     {
+        // Sample entries
+        $toc = $this->docset->entries(
+            $this->docset->downloadedDirectory() . '/alerts.html'
+        );
+
+        $this->assertNotEmpty($toc);
+
+        // Resource entries
+        $toc = $this->docset->entries(
+            $this->docset->downloadedDirectory() . '/resources.html'
+        );
+
+        $this->assertNotEmpty($toc);
+
+        // All other entries
         $toc = $this->docset->entries(
             $this->docset->downloadedIndex()
         );
