@@ -5,7 +5,9 @@ namespace Tests\Feature\Docsets;
 use Tests\TestCase;
 use App\Docsets\Jigsaw;
 use App\Services\DocsetBuilder;
+use Illuminate\Support\Facades\DB;
 use Wa72\HtmlPageDom\HtmlPageCrawler;
+use Illuminate\Support\Facades\Config;
 use Illuminate\Support\Facades\Artisan;
 use Illuminate\Support\Facades\Storage;
 
@@ -31,13 +33,14 @@ class JigsawTest extends TestCase
     }
 
     /** @test */
-    public function it_generates_a_table_of_contents()
+    public function it_has_a_table_of_contents()
     {
-        $toc = $this->docset->entries(
-            $this->docset->innerIndex()
+        Config::set(
+            'database.connections.sqlite.database',
+            "storage/{$this->docset->databaseFile()}"
         );
 
-        $this->assertNotEmpty($toc);
+        $this->assertNotEquals(0, DB::table('searchIndex')->count());
     }
 
     /** @test */
