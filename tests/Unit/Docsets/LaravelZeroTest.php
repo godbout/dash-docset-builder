@@ -7,7 +7,7 @@ use App\Docsets\LaravelZero;
 use App\Services\DocsetBuilder;
 use Illuminate\Support\Facades\Storage;
 
-/** @group laravel-zero */
+/*** @group laravel-zero */
 class LaravelZeroTest extends TestCase
 {
     public function setUp(): void
@@ -22,7 +22,7 @@ class LaravelZeroTest extends TestCase
     public function it_can_generate_a_table_of_contents()
     {
         $toc = $this->docset->entries(
-            $this->docset->innerDirectory() . '/logging.html'
+            $this->docset->downloadedDirectory() . '/logging.html'
         );
 
         $this->assertNotEmpty($toc);
@@ -35,12 +35,14 @@ class LaravelZeroTest extends TestCase
 
         $this->assertStringContainsString(
             $header,
-            Storage::get($this->docset->downloadedIndex())
+            Storage::get($this->docset->downloadedDirectory() . '/logging.html')
         );
 
         $this->assertStringNotContainsString(
             $header,
-            $this->docset->format(Storage::get($this->docset->downloadedIndex()))
+            $this->docset->format(
+                Storage::get($this->docset->downloadedDirectory() . '/logging.html')
+            )
         );
     }
 }
