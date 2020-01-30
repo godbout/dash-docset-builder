@@ -317,6 +317,9 @@
 <pre><code class="language-bash">C:\application\path&gt; php builds\&lt;your-build-name&gt;</code></pre>
 <p>We use <code>humbug/box</code> to provide fast application bundling. In order to configure your build, you should take a look at the file <code>box.json</code>.</p>
 <p>Please check the box documentation to understand all options: <a href="https://github.com/humbug/box/blob/master/doc/configuration.md">github.com/humbug/box/blob/master/doc/configuration.md</a>.</p>
+<h2>Non-interactive build</h2>
+<p>When you build you get asked about build version, in case you want to skip this step you can provide the build version as an option:</p>
+<pre><code class="language-bash">php your-app-name app:build --build-version=&lt;your-build-version&gt;</code></pre>
 <h2>Self update</h2>
 <p>Using the <code>app:install</code> Artisan command you can install the <code>self-update</code> component:</p>
 <pre><code class="language-bash">php &lt;your-app-name&gt; app:install self-update</code></pre>
@@ -328,7 +331,12 @@ will try to download the latest version from github, if available.</p>
 <h2>Environment Variables</h2>
 <p>If the <code>dotenv</code> component is installed, you can place a <code>.env</code> file in the same
 folder as the build application to make Laravel Zero load environment variables from
-that same file.</p>        </div>
+that same file.</p>
+<h2>Database</h2>
+<p>To use SQLite in your standalone PHAR application, you need to set the following value in your <code>.env</code> file:</p>
+<pre><code class="language-bash">DB_DATABASE=/absolute/path/to/database.sqlite</code></pre>
+<p>This must be the absolute path to your SQLite database file.</p>
+<p>By default the path points to <code>database_path('database.sqlite')</code>, which includes the PHAR executable as a folder in the path.</p>        </div>
     </div>
 </section>
         </main>
@@ -367,7 +375,7 @@ that same file.</p>        </div>
         <footer class="bg-white text-center text-sm mt-12 py-4" role="contentinfo">
             <ul class="flex flex-col md:flex-row justify-center list-reset">
                 <li class="md:mr-2">
-                    &copy; <a href="index.html" title="Laravel Zero website">Laravel Zero</a> 2019.
+                    &copy; <a href="index.html" title="Laravel Zero website">Laravel Zero</a> 2020.
                 </li>
 
                 <li>

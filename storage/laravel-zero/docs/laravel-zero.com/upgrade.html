@@ -310,10 +310,22 @@
         <div class="w-full lg:w-3/5 break-words pb-16 lg:pl-4" v-pre>
             <h1>Upgrade Guide</h1>
 <ul>
+<li><a href="upgrade.html#upgrade-6.0.0">Upgrading To 6.0 From 5.8</a></li>
 <li><a href="upgrade.html#upgrade-5.8.0">Upgrading To 5.8 From 5.7</a></li>
 <li><a href="upgrade.html#upgrade-5.7.0">Upgrading To 5.7 From 5.6</a></li>
 <li><a href="upgrade.html#upgrade-5.6.0">Upgrading To 5.6 From 4.0</a></li>
 </ul>
+<p><a name="upgrade-6.0.0"></a></p>
+<h2>Upgrading To 6.0 From 5.8</h2>
+<h4>Estimated Upgrade Time: 2 - 5 Minutes</h4>
+<blockquote>
+<p>We attempt to document every possible breaking change. Since some of these breaking changes are in obscure parts of the framework only a portion of these changes may actually affect your application.</p>
+</blockquote>
+<h3>Updating Dependencies</h3>
+<p>Update your <code>laravel-zero/framework</code> dependency to <code>^6.0</code> in your <code>composer.json</code> file.</p>
+<h4>If you are using Laravel's String &amp; Array Helper</h4>
+<p>All <code>str_</code> and <code>array_</code> helpers have been moved to the new <code>laravel/helpers</code> Composer package and removed from the framework. If desired, you may update all calls to these helpers to use the <code>Illuminate\Support\Str</code> and <code>Illuminate\Support\Arr</code> classes. Alternatively, you can add the new <code>laravel/helpers</code> package to your application to continue using these helpers:</p>
+<pre><code class="language-bash">composer require laravel/helpers</code></pre>
 <p><a name="upgrade-5.8.0"></a></p>
 <h2>Upgrading To 5.8 From 5.7</h2>
 <h4>Estimated Upgrade Time: 2 - 5 Minutes</h4>
@@ -484,7 +496,7 @@ customize the created file in order to determine the commands that should appear
         <footer class="bg-white text-center text-sm mt-12 py-4" role="contentinfo">
             <ul class="flex flex-col md:flex-row justify-center list-reset">
                 <li class="md:mr-2">
-                    &copy; <a href="index.html" title="Laravel Zero website">Laravel Zero</a> 2019.
+                    &copy; <a href="index.html" title="Laravel Zero website">Laravel Zero</a> 2020.
                 </li>
 
                 <li>

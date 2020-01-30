@@ -372,7 +372,13 @@ can be configured using <code>config/commands.php</code>:</p>
 <td>Removes the list of commands provided.</td>
 </tr>
 </tbody>
-</table>        </div>
+</table>
+<h3>Disabling default component providers</h3>
+<p>The Database, Log, and Queue components support disabling auto-loading for their
+default service provider to allow the use of a custom provider.</p>
+<p>To disable the default service provider for a component, set the <code>useDefaultProvider</code> value
+to <code>false</code> in the configuration file. You can then add your custom <code>ServiceProvider</code> class
+to the <code>app.providers</code> configuration array.</p>        </div>
     </div>
 </section>
         </main>
@@ -411,7 +417,7 @@ can be configured using <code>config/commands.php</code>:</p>
         <footer class="bg-white text-center text-sm mt-12 py-4" role="contentinfo">
             <ul class="flex flex-col md:flex-row justify-center list-reset">
                 <li class="md:mr-2">
-                    &copy; <a href="index.html" title="Laravel Zero website">Laravel Zero</a> 2019.
+                    &copy; <a href="index.html" title="Laravel Zero website">Laravel Zero</a> 2020.
                 </li>
 
                 <li>

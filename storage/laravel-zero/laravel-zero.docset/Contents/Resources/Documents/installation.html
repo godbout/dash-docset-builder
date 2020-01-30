@@ -55,13 +55,7 @@
 <a id="via-laravel-zero-installer" name="//apple_ref/cpp/Section/Via%20Laravel%20Zero%20Installer" class="dashAnchor"></a><h4>Via Laravel Zero Installer</h4>
 <p>First, download the Laravel Zero installer using Composer:</p>
 <pre><code class="language-bash">composer global require "laravel-zero/installer"</code></pre>
-<p>Make sure to place composer's system-wide vendor bin directory in your <code>$PATH</code> so the laravel Zero executable can be located by your system. This directory exists in different locations based on your operating system; however, some common locations include:</p>
-<div class="content-list">
-<ul>
-<li>macOS: <code>$HOME/.composer/vendor/bin</code></li>
-<li>GNU / Linux Distributions: <code>$HOME/.config/composer/vendor/bin</code></li>
-</ul>
-</div>
+<p>Make sure to place composer's system-wide vendor bin directory in your <code>$PATH</code> so the laravel Zero executable can be located by your system. This directory exists in different locations based on your operating system. On macOS and GNU/Linux distributions, it's <code>$HOME/.composer/vendor/bin</code>.</p>
 <p>Once installed, the <code>laravel-zero new</code> command will create a fresh Laravel Zero installation in the directory you specify. For instance, <code>laravel-zero new movie-cli</code> will create a directory named <code>movie-cli</code> containing a fresh Laravel Zero installation with all of Laravel Zero's dependencies already installed:</p>
 <pre><code class="language-bash">laravel-zero new movie-cli</code></pre>
 <a id="via-composer-create-project" name="//apple_ref/cpp/Section/Via%20Composer%20Create-Project" class="dashAnchor"></a><h4>Via Composer Create-Project</h4>

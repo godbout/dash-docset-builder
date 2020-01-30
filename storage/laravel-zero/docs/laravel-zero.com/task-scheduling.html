@@ -317,7 +317,20 @@ need to add the following Cron entry to your server:</p>
 <pre><code class="language-php">    public function schedule(Schedule $schedule)
     {
         $schedule-&gt;command(static::class)-&gt;everyMinute();
-    }</code></pre>        </div>
+    }</code></pre>
+<h3>Viewing scheduled tasks</h3>
+<p>The Schedule List component can be used to view a list of tasks that are scheduled in your application.</p>
+<p>Using the <code>app:install</code> Artisan command you can install the <code>schedule-list</code> component:</p>
+<pre><code class="language-bash">php &lt;your-app-name&gt; app:install schedule-list</code></pre>
+<p>After installation, the <code>schedule:list</code> command will be available to use. The binary name will be set
+by default in the <code>config/schedule-list.php</code> file, but you may need to update this to make sure the
+command outputs correctly. Note that Unix systems wrap the command parameters in single quotes,
+whereas Windows wraps them in double quotes so both will be needed in the configuration file.</p>
+<blockquote>
+<p>Behind the scenes, the <code>schedule-list</code> command uses the
+<a href="https://github.com/hmazter/laravel-schedule-list"><code>hmazter/laravel-schedule-list</code></a>
+package. You can find more details on how to use the command and configuration there.</p>
+</blockquote>        </div>
     </div>
 </section>
         </main>
@@ -356,7 +369,7 @@ need to add the following Cron entry to your server:</p>
         <footer class="bg-white text-center text-sm mt-12 py-4" role="contentinfo">
             <ul class="flex flex-col md:flex-row justify-center list-reset">
                 <li class="md:mr-2">
-                    &copy; <a href="index.html" title="Laravel Zero website">Laravel Zero</a> 2019.
+                    &copy; <a href="index.html" title="Laravel Zero website">Laravel Zero</a> 2020.
                 </li>
 
                 <li>

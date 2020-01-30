@@ -99,7 +99,7 @@ to define how to gather input from the user through arguments or options:</p>
 <pre><code class="language-php"> protected $signature = 'user:create
                         {name : The name of the user (required)}
                         {--age= : The age of the user (optional)}'</code></pre>
-<p>For more information, check out the <a href="https://laravel.com/docs/5.7/artisan#defining-input-expectations">Defining Input Expectations</a>
+<p>For more information, check out the <a href="https://laravel.com/docs/artisan#defining-input-expectations">Defining Input Expectations</a>
 on the Laravel Documentation.</p>
 <p>The <code>description</code> property should contain one line description of your command's job. Later, this description is
 used on the application list of commands.</p>
@@ -111,7 +111,7 @@ command is executed. Note that we are able to inject any dependencies we need in
 
         $this-&gt;info('Operation executed');
     }</code></pre>
-<p>The <a href="https://laravel.com/docs/latest/artisan#command-io">Command I/O</a> topic in the Laravel Documentation, can help
+<p>The <a href="https://laravel.com/docs/artisan#command-io">Command I/O</a> topic in the Laravel Documentation, can help
 you to understand how to capture those input expectations and interact with the user using commands
 like <code>line</code>, <code>info</code>, <code>comment</code>, <code>question</code> and <code>error</code> methods.</p>
 <p>The <code>schedule</code> method allows to define the command's schedule. Please head over to the
