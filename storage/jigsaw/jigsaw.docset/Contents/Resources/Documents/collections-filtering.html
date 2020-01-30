@@ -32,16 +32,9 @@
 
         <div class="markdown bg-white w-full px-6 pb-8 font-normal" v-pre style="margin-top: -1.5rem;">
             <h4 style="margin-top: 2.5rem;"><a href="collections.html">Collections</a></h4>
-<a name="//apple_ref/cpp/Section/Top" class="dashAnchor"></a><h2 class="text-3xl">Sorting</h2>
-<p>You can control the order in which your collection items are sorted. When iterating over your collection in a <code>@foreach</code> loop, the items will be returned in the order you specify.</p>
-<a id="default-sort" name="//apple_ref/cpp/Section/Default%20Sort" class="dashAnchor"></a><h3 style="font-size: 1.5rem;">Default Sort</h3>
-<p>By default, collection items will be sorted by their filenames in ascending order. This can be a handy way to order items by date, for instance, by prepending the date to each filename:</p>
-<pre><code>2017-01-01-my-first-post.md
-2017-02-14-my-second-post.md
-2017-03-15-my-third-post.md
-...</code></pre>
-<a id="sorting-by-a-variable" name="//apple_ref/cpp/Section/Sorting%20by%20a%20Variable" class="dashAnchor"></a><h3 style="font-size: 1.5rem;">Sorting by a Variable</h3>
-<p>You can also sort your collection by the values of variables defined in the YAML front matter of each collection item. Add a <code>sort</code> key to the collection's array in <code>config.php</code>, and specify the name of the field to sort by:</p>
+<a name="//apple_ref/cpp/Section/Top" class="dashAnchor"></a><h2 class="text-3xl">Filtering</h2>
+<p>You can filter collection items by adding a <code>filter</code> key to the collection's array in <code>config.php</code>, and specifying a callable that accepts the collection item and returns a boolean. Items that return <code>false</code> from the filter will not be built.</p>
+<p>A common use for filtering is to mark some blog posts as <code>published</code>, using a variable in the YAML front matter of each collection item that specifies a boolean or a date. Using a filter in <code>config.production.php</code>, draft posts can be made visible in the local or staging <a href="building-and-previewing-environments.html">environments</a>, but omitted from your production build.</p>
 <blockquote>
 <p><em>config.php</em></p>
 </blockquote>
@@ -50,33 +43,9 @@
 return [
     'collections' =&gt; [
         'posts' =&gt; [
-            'sort' =&gt; 'sort_order',
-        ],
-    ],
-];</code></pre>
-<p>To sort by multiple variables (for a hierarchical sort), specify an array of variables:</p>
-<blockquote>
-<p><em>config.php</em></p>
-</blockquote>
-<pre><code>&lt;?php
-
-return [
-    'collections' =&gt; [
-        'posts' =&gt; [
-            'sort' =&gt; ['featured', 'date'],
-        ],
-    ],
-];</code></pre>
-<p>To sort in descending order, prepend a <code>-</code> to the variable name:</p>
-<blockquote>
-<p><em>config.php</em></p>
-</blockquote>
-<pre><code>&lt;?php
-
-return [
-    'collections' =&gt; [
-        'posts' =&gt; [
-            'sort' =&gt; ['featured', '-date'],
+            'filter' =&gt; function ($item) {
+                return $item-&gt;published;
+            }
         ],
     ],
 ];</code></pre>        </div>
