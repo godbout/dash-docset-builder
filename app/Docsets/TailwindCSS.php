@@ -74,12 +74,6 @@ class TailwindCSS extends BaseDocset
         if (basename($file) === 'resources.html') {
             $parent = $crawler->filter('h1')->first();
 
-            $entries->push([
-                'name' => $this->cleanAnchorText($parent->text()),
-                'type' => 'Resource',
-                'path' => basename($file) . '#' . Str::slug($parent->text()),
-            ]);
-
             $crawler->filter('h2')->each(function (HtmlPageCrawler $node) use ($entries, $file, $parent) {
                 $entries->push([
                     'name' => $this->cleanAnchorText($node->text()) . ' - ' . $parent->text(),
