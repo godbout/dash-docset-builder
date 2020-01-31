@@ -56,6 +56,25 @@ class TailwindCSS extends BaseDocset
         }
     }
 
+    protected function instructionEntries(HtmlPageCrawler $crawler, string $file)
+    {
+        $entries = collect();
+
+        if (basename($file) === 'screencasts.html') {
+            $parent = $crawler->filter('h1')->first();
+
+            $crawler->filter('span.relative')->each(function (HtmlPageCrawler $node) use ($entries, $file, $parent) {
+                $entries->push([
+                    'name' => $this->cleanAnchorText($node->text()) . ' - ' . $parent->text(),
+                    'type' => 'Instruction',
+                    'path' => $node->parents('a')->first()->attr('href'),
+                ]);
+            });
+
+            return $entries;
+        }
+    }
+
     protected function sampleEntries(HtmlPageCrawler $crawler, string $file)
     {
         $entries = collect();
