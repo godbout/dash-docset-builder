@@ -109,6 +109,14 @@ class TailwindCSS extends BaseDocset
                 ]);
             });
 
+            $crawler->filter('h3')->each(function (HtmlPageCrawler $node) use ($entries, $file, $parent) {
+                $entries->push([
+                    'name' => $this->cleanAnchorText($node->text()) . ' - ' . $parent->text(),
+                    'type' => 'Section',
+                    'path' => basename($file) . '#' . Str::slug($node->text()),
+                ]);
+            });
+
             return $entries;
         }
     }
