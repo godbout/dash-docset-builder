@@ -22,7 +22,7 @@
 <meta property="og:title" content="Controlling File Size - Tailwind CSS">
 <meta property="og:description" content="Strategies for keeping your generated CSS small and performant.">
 <meta property="og:image" content="https://tailwindcss.com/img/twitter-large-card.png">
-  <link rel="stylesheet" href="main.css%3Fid=f43316eaa338cb39cc2b.css">
+  <link rel="stylesheet" href="http://tailwindcss.com/assets/build/css/main.css?id=e994f5f9525b4219e81f">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/docsearch.js/2/docsearch.min.css">
 </head>
 <body data-sidebar-visible="true" class="text-gray-900 leading-normal pb-8">
@@ -62,7 +62,7 @@
                           </div>
             <div class="flex">
               <div class="markdown px-6 w-full mx-auto">
-                <p>Using the default configuration, Tailwind CSS comes in at 58.1kb minified and gzipped.</p>
+                <p>Using the default configuration, Tailwind CSS comes in at 78.0kb minified and gzipped.</p>
 <p>Here are a few other popular frameworks for comparison:</p>
 <table>
 <thead>
@@ -77,10 +77,10 @@
 <tbody>
 <tr>
 <td>Tailwind</td>
-<td style="text-align: right;">477.6kb</td>
-<td style="text-align: right;">350.4kb</td>
-<td style="text-align: right;">58.8kb</td>
-<td style="text-align: right;">17.1kb</td>
+<td style="text-align: right;">783.5kb</td>
+<td style="text-align: right;">603.3kb</td>
+<td style="text-align: right;">78.0kb</td>
+<td style="text-align: right;">22.6kb</td>
 </tr>
 <tr>
 <td>Bootstrap</td>
@@ -91,10 +91,10 @@
 </tr>
 <tr>
 <td>Bulma</td>
-<td style="text-align: right;">205.6kb</td>
-<td style="text-align: right;">172.4kb</td>
-<td style="text-align: right;">23.0kb</td>
-<td style="text-align: right;">18.0kb</td>
+<td style="text-align: right;">224.2kb</td>
+<td style="text-align: right;">189.9kb</td>
+<td style="text-align: right;">24.9kb</td>
+<td style="text-align: right;">19.1kb</td>
 </tr>
 <tr>
 <td>Foundation</td>
@@ -137,10 +137,10 @@
 <p>In the future we may incorporate Purgecss directly into Tailwind, but for now the best way to use it in your project is as a PostCSS plugin.</p>
 <p>To get started with Purgecss, first install <code>@fullhuman/postcss-purgecss</code>:</p>
 <pre><code class="language-bash"># Using npm
-npm install @fullhuman/postcss-purgecss
+npm install @fullhuman/postcss-purgecss --save-dev
 
 # Using yarn
-yarn add @fullhuman/postcss-purgecss</code></pre>
+yarn add @fullhuman/postcss-purgecss -D</code></pre>
 <p>Next, add it as the last plugin in your <code>postcss.config.js</code> file:</p>
 <pre><code class="language-js">// postcss.config.js
 const purgecss = require('@fullhuman/postcss-purgecss')({
@@ -154,7 +154,7 @@ const purgecss = require('@fullhuman/postcss-purgecss')({
   ],
 
   // Include any special characters you're using in this regular expression
-  defaultExtractor: content =&gt; content.match(/[A-Za-z0-9-_:/]+/g) || []
+  defaultExtractor: content =&gt; content.match(/[\w-/:]+(?&lt;!:)/g) || []
 })
 
 module.exports = {
@@ -167,14 +167,22 @@ module.exports = {
   ]
 }</code></pre>
 <p>Note that in this example, <strong>we're only enabling Purgecss in production</strong>. We recommend configuring Purgecss this way because it can be slow to run, and during development it's nice to have every class available so you don't need to wait for a rebuild every time you change some HTML.</p>
+<p>Finally, we recommend only applying Purgecss to Tailwind's utility classes, and not to <a href="adding-base-styles.html">base styles</a> or <a href="extracting-components.html#extracting-css-components-with-apply">component classes</a>. The easiest way to do this is to use Purgecss's <a href="https://github.com/FullHuman/purgecss-docs/blob/master/whitelisting.md">whitelisting</a> feature to disable Purgecss for non-utility classes:</p>
+<pre><code class="language-css">/* purgecss start ignore */
+@tailwind  base;
+@tailwind  components;
+/* purgecss end ignore */
+
+@tailwind  utilities;</code></pre>
+<p>This will ensure you don't accidentally purge important base styles when working with frameworks like Next.js, Nuxt, vue-cli, create-react-app, and others that hide their base HTML template somewhere in your <code>node_modules</code> directory.</p>
 <h3><a id="writing-purgeable-html" name="//apple_ref/cpp/Section/Writing%20purgeable%20HTML" class="dashAnchor"></a>Writing purgeable HTML</h3>
 <p>Purgecss uses "extractors" to determine what strings in your templates are classes. In the example above, we use a custom extractor that will find all of the classes Tailwind generates by default:</p>
 <pre><code class="language-js">const purgecss = require('@fullhuman/postcss-purgecss')({
   // ...
-  defaultExtractor: content =&gt; content.match(/[A-Za-z0-9-_:/]+/g) || []
+  defaultExtractor: content =&gt; content.match(/[\w-/:]+(?&lt;!:)/g) || []
 })</code></pre>
-<p>The way it works is intentionally very "dumb". It doesn't try to parse your HTML and look for class attributes or dynamically execute your JavaScript &mdash; it simply looks for any strings in the entire file that match this regular expression:</p>
-<pre><code class="language-js">/[A-Za-z0-9-_:/]+/g</code></pre>
+<p>The way it works is intentionally very naive. It doesn't try to parse your HTML and look for class attributes or dynamically execute your JavaScript &mdash; it simply looks for any strings in the entire file that match this regular expression:</p>
+<pre><code class="language-js">/[\w-:/]+(?&lt;!:)/g</code></pre>
 <p>That means that <strong>it is important to avoid dynamically creating class strings in your templates with string concatenation</strong>, otherwise Purgecss won't know to preserve those classes.</p>
 <p class="flex items-start mt-8 mb-0">
   <svg class="h-6 w-6 mr-2 flex-shrink-0" xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24"><circle cx="12" cy="12" r="10" fill="#fed7d7"></circle><path fill="#f56565" d="M13.41 12l2.83 2.83a1 1 0 0 1-1.41 1.41L12 13.41l-2.83 2.83a1 1 0 1 1-1.41-1.41L10.59 12 7.76 9.17a1 1 0 0 1 1.41-1.41L12 10.59l2.83-2.83a1 1 0 0 1 1.41 1.41L13.41 12z"></path></svg>
@@ -187,12 +195,19 @@ module.exports = {
 </p>
 <pre class="language-html mt-4" v-pre><code>&lt;div :class="{{ error ? 'text-red-600' : 'text-green-600' }}"&gt;&lt;/div&gt;</code></pre>
 <p>As long as a class name appears in your template <em>in its entirety</em>, Purgecss will not remove it.</p>
-<h3><a id="customizing-the-regular-expression" name="//apple_ref/cpp/Section/Customizing%20the%20regular%20expression" class="dashAnchor"></a>Customizing the regular expression</h3>
-<p>In the example above, we use a regular expression that matches all of the non-standard characters Tailwind uses by default, like <code>:</code> and <code>/</code>.</p>
-<p>If you are using any other special characters in your class names, make sure to update the regular expression to include those as well.</p>
+<h3><a id="understanding-the-regex" name="//apple_ref/cpp/Section/Understanding%20the%20regex" class="dashAnchor"></a>Understanding the regex</h3>
+<p>The <code>/[\w-/:]+(?&lt;!:)/g</code> regular expression we recommend as a starting point matches all of the non-standard characters Tailwind uses by default, like <code>:</code> and <code>/</code>.</p>
+<p>It also uses a negative lookbehind to make sure that if a string ends in <code>:</code>, the <code>:</code> is not considered part of the string. This is to ensure compatibility with the class object syntax supported by Vue and the <a href="https://github.com/JedWatson/classnames">Classnames</a> library for React:</p>
+<pre><code class="language-html">&lt;!-- Match `hidden`, not `hidden:` --&gt;
+&lt;div :class="{ hidden: !isOpen, ... }"&gt;&lt;!-- ... --&gt;&lt;/div&gt;</code></pre>
+<p>It's important to note that because of the negative lookbehind in this regex, it's only compatible with Node.js 9.11.2 and above. If you need to use an older version of Node.js to build your assets, you can use this regular expression instead:</p>
+<pre><code class="language-diff">- /[\w-/:]+(?&lt;!:)/g
++ /[\w-/:]*[\w-/:]/g</code></pre>
+<h3><a id="customizing-the-regex" name="//apple_ref/cpp/Section/Customizing%20the%20regex" class="dashAnchor"></a>Customizing the regex</h3>
+<p>If you're using any other special characters in your class names, make sure to update the regular expression to include those as well.</p>
 <p>For example, if you have customized Tailwind to create classes like <code>w-50%</code>, you'll want to add <code>%</code> to the regular expression:</p>
-<pre><code class="language-diff">- /[A-Za-z0-9-_:/]+/g
-+ /[A-Za-z0-9-_:/%]+/g</code></pre>
+<pre><code class="language-diff">- /[\w-/:]+(?&lt;!:)/g
++ /[\w-/:%]+(?&lt;!:)/g</code></pre>
 <hr class="my-16">
 <h2><a id="removing-unused-theme-values" name="//apple_ref/cpp/Section/Removing%20unused%20theme%20values" class="dashAnchor"></a>Removing unused theme values</h2>
 <p>If you can't use Purgecss for one reason or another, you can also reduce Tailwind's footprint by removing unused values from <a href="configuration.html">your configuration file</a>.</p>
@@ -201,8 +216,8 @@ module.exports = {
 <p>This comes with a trade-off though: the default build is significantly heavier than it would be on a project with a purpose-built configuration file.</p>
 <p>Here are a few strategies you can use to keep your generated CSS small and performant.</p>
 <h3><a id="limiting-your-color-palette" name="//apple_ref/cpp/Section/Limiting%20your%20color%20palette" class="dashAnchor"></a>Limiting your color palette</h3>
-<p>The default theme includes a whopping <a href="colors.html">93 colors</a> used for backgrounds, borders, and text, all of which also have <code>hover:</code> and <code>focus</code> variants, as well as responsive variants at the five default screen sizes.</p>
-<p>This means that by default, there are 4185 classes generated from this color palette out of 8271 classes total in the entire default build.</p>
+<p>The default theme includes a whopping <a href="colors.html">93 colors</a> used for backgrounds, borders, text, and placeholders, all of which also have <code>hover:</code> and <code>focus</code> variants, as well as responsive variants at the five default screen sizes.</p>
+<p>This means that by default, there are 5580 classes generated from this color palette out of 12,230 classes total in the entire default build.</p>
 <p>Very few projects actually need this many colors, and removing colors you don't need can have a huge impact on the overall file size.</p>
 <p>Here's how using a smaller color palette affects the final size:</p>
 <table>
@@ -218,24 +233,15 @@ module.exports = {
 <tbody>
 <tr>
 <td>93 <em>(default)</em></td>
-<td style="text-align: right;">477.6kb</td>
-<td style="text-align: right;">350.4kb</td>
-<td style="text-align: right;">58.8kb</td>
-<td style="text-align: right;">17.1kb</td>
+<td style="text-align: right;">783.5kb &#9474; 603.3kb  &#9474; 78.0kb &#9474; 22.6kb</td>
 </tr>
 <tr>
 <td>50</td>
-<td style="text-align: right;">361.3kb</td>
-<td style="text-align: right;">260.3kb</td>
-<td style="text-align: right;">45.7kb</td>
-<td style="text-align: right;">13.9kb</td>
+<td style="text-align: right;">530.2kb &#9474; 399.3kb  &#9474; 56.6kb &#9474; 17.5kb</td>
 </tr>
 <tr>
 <td>25</td>
-<td style="text-align: right;">293.1kb</td>
-<td style="text-align: right;">207.2kb</td>
-<td style="text-align: right;">38.0kb</td>
-<td style="text-align: right;">12.2kb</td>
+<td style="text-align: right;">381.6kb &#9474; 279.5kb  &#9474; 44.1kb &#9474; 14.0kb</td>
 </tr>
 </tbody>
 </table>
@@ -255,35 +261,23 @@ module.exports = {
 <tbody>
 <tr>
 <td>4 <em>(default)</em></td>
-<td style="text-align: right;">477.6kb</td>
-<td style="text-align: right;">350.4kb</td>
-<td style="text-align: right;">58.8kb</td>
-<td style="text-align: right;">17.1kb</td>
+<td style="text-align: right;">783.5kb &#9474; 603.3kb  &#9474; 78.0kb &#9474; 22.6kb</td>
 </tr>
 <tr>
 <td>3</td>
-<td style="text-align: right;">380.9kb</td>
-<td style="text-align: right;">279.7kb</td>
-<td style="text-align: right;">47.4kb</td>
-<td style="text-align: right;">16.3kb</td>
+<td style="text-align: right;">624.0kb &#9474; 481.3kb  &#9474; 62.7kb &#9474; 20.8kb</td>
 </tr>
 <tr>
 <td>2</td>
-<td style="text-align: right;">284.2kb</td>
-<td style="text-align: right;">209.0kb</td>
-<td style="text-align: right;">36.0kb</td>
-<td style="text-align: right;">15.0kb</td>
+<td style="text-align: right;">464.6kb &#9474; 359.4kb  &#9474; 47.4kb &#9474; 19.2kb</td>
 </tr>
 <tr>
 <td>1</td>
-<td style="text-align: right;">187.5kb</td>
-<td style="text-align: right;">138.3kb</td>
-<td style="text-align: right;">24.5kb</td>
-<td style="text-align: right;">13.7kb</td>
+<td style="text-align: right;">305.1kb &#9474; 237.5kb  &#9474; 32.1kb &#9474; 17.6kb</td>
 </tr>
 </tbody>
 </table>
-<p>If you only need 3 screen sizes and 35 colors, you're down to 32.5kb after gzip <em>(11.7kb after Brotli!)</em> without changing anything else.</p>
+<p>If you only need 3 screen sizes and 35 colors, you're down to 39.5kb after gzip <em>(14.6kb after Brotli!)</em> without changing anything else.</p>
 <h3><a id="disabling-unused-utilities-and-variants" name="//apple_ref/cpp/Section/Disabling%20unused%20utilities%20and%20variants" class="dashAnchor"></a>Disabling unused utilities and variants</h3>
 <p>If you don't expect to need a certain utility plugin in your project at all, you can disable it completely by setting it to <code>false</code> in the <code>corePlugins</code> section of your config file:</p>
 <pre><code class="language-js">// tailwind.config.js
@@ -314,7 +308,7 @@ module.exports = {
         </div>
         
 
-        <script src="app.js%3Fid=4e0678930121543c0338"></script>
+        <script src="http://tailwindcss.com/assets/build/js/app.js?id=1fa8281e8c1912520ff1"></script>
 
         <!-- Algolia DocSearch  -->
         <script type="text/javascript" src="https://cdn.jsdelivr.net/docsearch.js/2/docsearch.min.js"></script>
@@ -348,7 +342,7 @@ module.exports = {
   </script>
 
 <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
-<script src="nav.js%3Fid=b3eb7d558e0420f9b29c" defer></script>
+<script src="http://tailwindcss.com/assets/build/js/nav.js?id=b3eb7d558e0420f9b29c" defer></script>
 
 </body>
 </html>

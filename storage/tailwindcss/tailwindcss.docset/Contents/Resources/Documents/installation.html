@@ -22,7 +22,7 @@
 <meta property="og:title" content="Installation - Tailwind CSS">
 <meta property="og:description" content="Quick start guide for installing and configuring Tailwind CSS.">
 <meta property="og:image" content="https://tailwindcss.com/img/twitter-large-card.png">
-  <link rel="stylesheet" href="main.css%3Fid=f43316eaa338cb39cc2b.css">
+  <link rel="stylesheet" href="http://tailwindcss.com/assets/build/css/main.css?id=e994f5f9525b4219e81f">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/docsearch.js/2/docsearch.min.css">
 </head>
 <body data-sidebar-visible="true" class="text-gray-900 leading-normal pb-8">
@@ -70,10 +70,10 @@
 </div>
 <p>For most projects (and to take advantage of Tailwind's customization features), you'll want to install Tailwind via npm.</p>
 <pre><code class="language-bash"># Using npm
-npm install tailwindcss --save-dev
+npm install tailwindcss
 
 # Using Yarn
-yarn add tailwindcss --dev</code></pre>
+yarn add tailwindcss</code></pre>
 <div class="heading mt-0">
   <h2 class="flex markdown"><a id="2-add-tailwind-to-your-css" name="//apple_ref/cpp/Section/2%20Add%20Tailwind%20to%20your%20CSS" class="dashAnchor"></a>
     <span class="text-lg bg-gray-200 text-gray-700 h-6 w-6 rounded-full inline-flex justify-center items-center mt-px mr-3">2</span>
@@ -94,8 +94,24 @@ yarn add tailwindcss --dev</code></pre>
 
 @import "tailwindcss/utilities";</code></pre>
 <div class="heading mt-0">
-  <h2 class="flex markdown"><a id="3-process-your-css-with-tailwind" name="//apple_ref/cpp/Section/3%20Process%20your%20CSS%20with%20Tailwind" class="dashAnchor"></a>
+  <h2 class="flex markdown"><a id="3-create-your-tailwind-config-file-optional" name="//apple_ref/cpp/Section/3%20Create%20your%20Tailwind%20config%20file%20%28optional%29" class="dashAnchor"></a>
     <span class="text-lg bg-gray-200 text-gray-700 h-6 w-6 rounded-full inline-flex justify-center items-center mt-px mr-3">3</span>
+    <span data-heading-text class="mt-0">Create your Tailwind config file <span class="text-gray-600">(optional)</span></span>
+  </h2>
+</div>
+<p>If you'd like to customize your Tailwind installation, you can generate a config file for your project using the Tailwind CLI utility included when you install the <code>tailwindcss</code> npm package:</p>
+<pre><code class="language-bash">npx tailwind init</code></pre>
+<p>This will create a minimal <code>tailwind.config.js</code> file at the root of your project:</p>
+<pre><code class="language-js">// tailwind.config.js
+module.exports = {
+  theme: {},
+  variants: {},
+  plugins: [],
+}</code></pre>
+<p>Learn more about configuring Tailwind in the <a href="configuration.html">configuration documentation</a>.</p>
+<div class="heading mt-0">
+  <h2 class="flex markdown"><a id="4-process-your-css-with-tailwind" name="//apple_ref/cpp/Section/4%20Process%20your%20CSS%20with%20Tailwind" class="dashAnchor"></a>
+    <span class="text-lg bg-gray-200 text-gray-700 h-6 w-6 rounded-full inline-flex justify-center items-center mt-px mr-3">4</span>
     Process your CSS with Tailwind
   </h2>
 </div>
@@ -131,20 +147,22 @@ module.exports = {
   // ...
   module: {
     rules: [
-      // ...
-      use: [
+      {
         // ...
-        {
-          loader: 'postcss-loader',
-          options: {
-            ident: 'postcss',
-            plugins: [
-              require('tailwindcss'),
-              require('autoprefixer'),
-            ],
+        use: [
+          // ...
+          {
+            loader: 'postcss-loader',
+            options: {
+              ident: 'postcss',
+              plugins: [
+                require('tailwindcss'),
+                require('autoprefixer'),
+              ],
+            },
           },
-        },
-      ],
+        ],
+      }
     ],
   }
 }</code></pre>
@@ -186,7 +204,7 @@ mix.sass('resources/sass/app.scss', 'public/css')
     processCssUrls: false,
     postCss: [ tailwindcss('./path/to/your/tailwind.config.js') ],
   })</code></pre>
-<p>For more information on what this feature does and the implications of disabling it, <a href="https://laravel-mix.com/docs/4.0/css-preprocessors#css-url-rewriting">see the Laravel Mix documentation</a>.</p>
+<p>For more information on what this feature does and the implications of disabling it, <a href="https://laravel-mix.com/docs/5.0/css-preprocessors#css-url-rewriting">see the Laravel Mix documentation</a>.</p>
 <h3><a id="webpack-encore" name="//apple_ref/cpp/Section/Webpack%20Encore" class="dashAnchor"></a>Webpack Encore</h3>
 <p>Create a <code>postcss.config.js</code> file, add <code>tailwindcss</code> as a plugin and pass the path to your config file:</p>
 <pre><code class="language-js">module.exports = {
@@ -228,9 +246,9 @@ module.exports = Encore.getWebpackConfig()</code></pre>
     // ...
   }
 }</code></pre>
-<h4>Ember.js</h4>
+<h3><a id="emberjs" name="//apple_ref/cpp/Section/Ember.js" class="dashAnchor"></a>Ember.js</h3>
 <p>Add <code>tailwindcss</code> to the list of plugins you pass to <a href="https://github.com/jeffjewiss/ember-cli-postcss">ember-cli-postcss</a>:</p>
-<pre><code class="language-js">// ember-cli-build.js 
+<pre><code class="language-js">// ember-cli-build.js
 'use strict';
 
 const EmberApp = require('ember-cli/lib/broccoli/ember-app');
@@ -268,9 +286,9 @@ module.exports = function(defaults) {
     <span>You can't install third-party plugins</span>
   </li>
 </ul>
-<p>To get the most out of Tailwind, you really should <a href="installation.html#step-1-install-tailwind-via-npm">install it via npm</a>.</p>
+<p>To get the most out of Tailwind, you really should <a href="installation.html#1-install-tailwind-via-npm">install it via npm</a>.</p>
 <p>To pull in Tailwind for quick demos or just giving the framework a spin, grab the latest default configuration build via CDN:</p>
-<pre><code class="language-html">&lt;link href="https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css" rel="stylesheet"&gt;</code></pre>
+<pre><code class="language-html">&lt;link href="https://unpkg.com/<a href="email-protection.html" class="__cf_email__" data-cfemail="0377626a6f746a6d6760707043">[email&nbsp;protected]</a>^1.0/dist/tailwind.min.css" rel="stylesheet"&gt;</code></pre>
 <p>Note that while the CDN build is large <em>(27kb compressed, 348kb raw)</em>, <strong>it's not representative of the sizes you see when including Tailwind as part of your build process</strong>.</p>
 <p>Sites that follow our <a href="controlling-file-size.html">best practices</a> are almost always under 10kb compressed. For example, <a href="https://send.firefox.com/">Firefox Send</a> is built with Tailwind and their CSS is under 4kb compressed and minified.</p>              </div>
 
@@ -286,7 +304,7 @@ module.exports = function(defaults) {
         </div>
         
 
-        <script src="app.js%3Fid=4e0678930121543c0338"></script>
+        <script data-cfasync="false" src="email-decode.min.js"></script><script src="http://tailwindcss.com/assets/build/js/app.js?id=1fa8281e8c1912520ff1"></script>
 
         <!-- Algolia DocSearch  -->
         <script type="text/javascript" src="https://cdn.jsdelivr.net/docsearch.js/2/docsearch.min.js"></script>
@@ -320,7 +338,7 @@ module.exports = function(defaults) {
   </script>
 
 <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
-<script src="nav.js%3Fid=b3eb7d558e0420f9b29c" defer></script>
+<script src="http://tailwindcss.com/assets/build/js/nav.js?id=b3eb7d558e0420f9b29c" defer></script>
 
 </body>
 </html>

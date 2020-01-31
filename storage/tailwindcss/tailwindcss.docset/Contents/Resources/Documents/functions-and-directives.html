@@ -22,7 +22,7 @@
 <meta property="og:title" content="Functions &amp; Directives - Tailwind CSS">
 <meta property="og:description" content="A reference for the custom functions and directives Tailwind exposes to your CSS.">
 <meta property="og:image" content="https://tailwindcss.com/img/twitter-large-card.png">
-  <link rel="stylesheet" href="main.css%3Fid=f43316eaa338cb39cc2b.css">
+  <link rel="stylesheet" href="http://tailwindcss.com/assets/build/css/main.css?id=e994f5f9525b4219e81f">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/docsearch.js/2/docsearch.min.css">
 </head>
 <body data-sidebar-visible="true" class="text-gray-900 leading-normal pb-8">
@@ -148,7 +148,11 @@
   padding-left: 1rem !important;
   border-radius: .25rem !important;
 }</code></pre>
-<p>Note that <code>@apply</code> <strong>will not work</strong> for inlining pseudo-class or responsive variants of another utility. Instead, apply the plain version of that utility into the appropriate pseudo-selector or a new media query:</p>
+<p>Note that if you're using Sass/SCSS, you'll need to use Sass' interpolation feature to get this to work:</p>
+<pre><code class="language-scss">.btn {
+  @apply font-bold py-2 px-4 rounded #{!important};
+}</code></pre>
+<p>It's important to understand that <code>@apply</code> <strong>will not work</strong> for inlining pseudo-class or responsive variants of another utility. Instead, apply the plain version of that utility into the appropriate pseudo-selector or a new media query:</p>
 <pre><code class="language-css">/* Won't work: */
 .btn {
   @apply block bg-red-500;
@@ -327,7 +331,7 @@
         </div>
         
 
-        <script src="app.js%3Fid=4e0678930121543c0338"></script>
+        <script src="http://tailwindcss.com/assets/build/js/app.js?id=1fa8281e8c1912520ff1"></script>
 
         <!-- Algolia DocSearch  -->
         <script type="text/javascript" src="https://cdn.jsdelivr.net/docsearch.js/2/docsearch.min.js"></script>
@@ -361,7 +365,7 @@
   </script>
 
 <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
-<script src="nav.js%3Fid=b3eb7d558e0420f9b29c" defer></script>
+<script src="http://tailwindcss.com/assets/build/js/nav.js?id=b3eb7d558e0420f9b29c" defer></script>
 
 </body>
 </html>
