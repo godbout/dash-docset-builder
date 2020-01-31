@@ -79,27 +79,14 @@ class TailwindCSS extends BaseDocset
     {
         $entries = collect();
 
-        if (in_array(basename($file), [
-            'alerts.html',
-            'buttons.html',
-            'cards.html',
-            'forms.html',
-            'grids.html',
-            'navigation.html'
-        ])) {
+        if (basename($file) === 'components.html') {
             $parent = $crawler->filter('h1')->first();
 
-            $entries->push([
-                'name' => $this->cleanAnchorText($parent->text()),
-                'type' => 'Sample',
-                'path' => basename($file) . '#' . Str::slug($parent->text()),
-            ]);
-
-            $crawler->filter('h2')->each(function (HtmlPageCrawler $node) use ($entries, $file, $parent) {
+            $crawler->filter('span.relative')->each(function (HtmlPageCrawler $node) use ($entries, $file, $parent) {
                 $entries->push([
                     'name' => $this->cleanAnchorText($node->text()) . ' - ' . $parent->text(),
                     'type' => 'Sample',
-                    'path' => basename($file) . '#' . Str::slug($node->text()),
+                    'path' => $node->parents('a')->first()->attr('href'),
                 ]);
             });
 
