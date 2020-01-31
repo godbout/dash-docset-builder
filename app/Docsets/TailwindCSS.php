@@ -27,12 +27,33 @@ class TailwindCSS extends BaseDocset
 
         $entries = collect();
 
+        $entries = $entries->merge($this->environmentEntries($crawler, $file));
+        $entries = $entries->merge($this->instructionEntries($crawler, $file));
         $entries = $entries->merge($this->sampleEntries($crawler, $file));
         $entries = $entries->merge($this->resourceEntries($crawler, $file));
         $entries = $entries->merge($this->guideEntries($crawler, $file));
         $entries = $entries->merge($this->sectionEntries($crawler, $file));
 
         return $entries;
+    }
+
+    protected function environmentEntries(HtmlPageCrawler $crawler, string $file)
+    {
+        $entries = collect();
+
+        if (basename($file) === 'community.html') {
+            $parent = $crawler->filter('h1')->first();
+
+            $crawler->filter('h2')->each(function (HtmlPageCrawler $node) use ($entries, $file, $parent) {
+                $entries->push([
+                    'name' => $this->cleanAnchorText($node->text()) . ' - ' . $parent->text(),
+                    'type' => 'Environment',
+                    'path' => basename($file) . '#' . Str::slug($node->text()),
+                ]);
+            });
+
+            return $entries;
+        }
     }
 
     protected function sampleEntries(HtmlPageCrawler $crawler, string $file)
