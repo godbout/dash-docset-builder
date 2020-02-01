@@ -67,7 +67,7 @@ class TailwindCSS extends BaseDocset
                 $entries->push([
                     'name' => $this->cleanAnchorText($node->text()) . ' - ' . $parent->text(),
                     'type' => 'Instruction',
-                    'path' => $node->parents('a')->first()->attr('href'),
+                    'path' => $node->parents()->first()->attr('href'),
                 ]);
             });
 
@@ -86,7 +86,7 @@ class TailwindCSS extends BaseDocset
                 $entries->push([
                     'name' => $this->cleanAnchorText($node->text()) . ' - ' . $parent->text(),
                     'type' => 'Sample',
-                    'path' => $node->parents('a')->first()->attr('href'),
+                    'path' => $node->parents()->first()->attr('href'),
                 ]);
             });
 
