@@ -63,7 +63,7 @@ class TailwindCSS extends BaseDocset
         if (basename($file) === 'screencasts.html') {
             $parent = $crawler->filter('h1')->first();
 
-            $crawler->filter('span.relative')->each(function (HtmlPageCrawler $node) use ($entries, $file, $parent) {
+            $crawler->filter('span.relative')->each(function (HtmlPageCrawler $node) use ($entries, $parent) {
                 $entries->push([
                     'name' => $this->cleanAnchorText($node->text()) . ' - ' . $parent->text(),
                     'type' => 'Instruction',
@@ -82,7 +82,7 @@ class TailwindCSS extends BaseDocset
         if (basename($file) === 'components.html') {
             $parent = $crawler->filter('h1')->first();
 
-            $crawler->filter('span.relative')->each(function (HtmlPageCrawler $node) use ($entries, $file, $parent) {
+            $crawler->filter('span.relative')->each(function (HtmlPageCrawler $node) use ($entries, $parent) {
                 $entries->push([
                     'name' => $this->cleanAnchorText($node->text()) . ' - ' . $parent->text(),
                     'type' => 'Sample',
