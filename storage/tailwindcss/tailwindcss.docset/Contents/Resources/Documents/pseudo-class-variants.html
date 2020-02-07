@@ -22,7 +22,8 @@
 <meta property="og:title" content="Pseudo-Class Variants - Tailwind CSS">
 <meta property="og:description" content="Using utilities to style elements on hover, focus, and more.">
 <meta property="og:image" content="https://tailwindcss.com/img/twitter-large-card.png">
-  <link rel="stylesheet" href="http://tailwindcss.com/assets/build/css/main.css?id=e994f5f9525b4219e81f">
+  <link rel="stylesheet" href="https://rsms.me/inter/inter.css">
+  <link rel="stylesheet" href="http://tailwindcss.com/assets/build/css/main.css?id=da35c01d0ae8bad54242">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/docsearch.js/2/docsearch.min.css">
 </head>
 <body data-sidebar-visible="true" class="text-gray-900 leading-normal pb-8">
@@ -416,15 +417,17 @@ module.exports = {
 <p>You can create your own variants for any pseudo-classes Tailwind doesn't include by default by writing a custom variant plugin.</p>
 <p>For example, this simple plugin adds support for the <code>disabled</code> pseudo-class variant:</p>
 <pre><code class="language-js">// tailwind.config.js
+const plugin = require('tailwindcss/plugin')
+
 module.exports = {
   plugins: [
-    function({ addVariant, e }) {
+    plugin(function({ addVariant, e }) {
       addVariant('disabled', ({ modifySelectors, separator }) =&gt; {
         modifySelectors(({ className }) =&gt; {
           return `.${e(`disabled${separator}${className}`)}:disabled`
         })
       })
-    }
+    })
   ]
 }</code></pre>
 <p>Learn more about writing variant plugins in the <a href="plugins.html#adding-variants">variant plugin documentation</a>.</p>

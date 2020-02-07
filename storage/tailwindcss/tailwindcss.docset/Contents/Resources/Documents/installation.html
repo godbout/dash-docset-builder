@@ -22,7 +22,8 @@
 <meta property="og:title" content="Installation - Tailwind CSS">
 <meta property="og:description" content="Quick start guide for installing and configuring Tailwind CSS.">
 <meta property="og:image" content="https://tailwindcss.com/img/twitter-large-card.png">
-  <link rel="stylesheet" href="http://tailwindcss.com/assets/build/css/main.css?id=e994f5f9525b4219e81f">
+  <link rel="stylesheet" href="https://rsms.me/inter/inter.css">
+  <link rel="stylesheet" href="http://tailwindcss.com/assets/build/css/main.css?id=da35c01d0ae8bad54242">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/docsearch.js/2/docsearch.min.css">
 </head>
 <body data-sidebar-visible="true" class="text-gray-900 leading-normal pb-8">
@@ -100,7 +101,7 @@ yarn add tailwindcss</code></pre>
   </h2>
 </div>
 <p>If you'd like to customize your Tailwind installation, you can generate a config file for your project using the Tailwind CLI utility included when you install the <code>tailwindcss</code> npm package:</p>
-<pre><code class="language-bash">npx tailwind init</code></pre>
+<pre><code class="language-bash">npx tailwindcss init</code></pre>
 <p>This will create a minimal <code>tailwind.config.js</code> file at the root of your project:</p>
 <pre><code class="language-js">// tailwind.config.js
 module.exports = {
@@ -117,8 +118,8 @@ module.exports = {
 </div>
 <h3><a id="using-tailwind-cli" name="//apple_ref/cpp/Section/Using%20Tailwind%20CLI" class="dashAnchor"></a>Using Tailwind CLI</h3>
 <p>For simple projects or just giving Tailwind a spin, you can use the Tailwind CLI tool to process your CSS:</p>
-<pre><code class="language-bash">npx tailwind build styles.css -o output.css</code></pre>
-<p>Use the <code>npx tailwind help build</code> command to learn more about the various CLI options.</p>
+<pre><code class="language-bash">npx tailwindcss build styles.css -o output.css</code></pre>
+<p>Use the <code>npx tailwindcss help build</code> command to learn more about the various CLI options.</p>
 <h3><a id="using-tailwind-with-postcss" name="//apple_ref/cpp/Section/Using%20Tailwind%20with%20PostCSS" class="dashAnchor"></a>Using Tailwind with PostCSS</h3>
 <p>For most projects, you'll want to add Tailwind as a PostCSS plugin in your build chain.</p>
 <p>Generally this means adding Tailwind as a plugin in your <code>postcss.config.js</code> file:</p>
@@ -267,7 +268,7 @@ module.exports = function(defaults) {
 };</code></pre>
 <hr class="my-16">
 <h2><a id="using-tailwind-via-cdn" name="//apple_ref/cpp/Section/Using%20Tailwind%20via%20CDN" class="dashAnchor"></a>Using Tailwind via CDN</h2>
-<p>Before using the CDN build please note, many of the features that make Tailwind CSS great are not available without incorporating Tailwind into your build process.</p>
+<p>Before using the CDN build, please note that many of the features that make Tailwind CSS great are not available without incorporating Tailwind into your build process.</p>
 <ul class="list-none pl-0">
   <li class="flex items-center">
     <svg class="h-6 w-6 mr-2 flex-shrink-0" xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24"><circle cx="12" cy="12" r="10" fill="#fed7d7"></circle><path fill="#f56565" d="M13.41 12l2.83 2.83a1 1 0 0 1-1.41 1.41L12 13.41l-2.83 2.83a1 1 0 1 1-1.41-1.41L10.59 12 7.76 9.17a1 1 0 0 1 1.41-1.41L12 10.59l2.83-2.83a1 1 0 0 1 1.41 1.41L13.41 12z"></path></svg>
@@ -288,7 +289,7 @@ module.exports = function(defaults) {
 </ul>
 <p>To get the most out of Tailwind, you really should <a href="installation.html#1-install-tailwind-via-npm">install it via npm</a>.</p>
 <p>To pull in Tailwind for quick demos or just giving the framework a spin, grab the latest default configuration build via CDN:</p>
-<pre><code class="language-html">&lt;link href="https://unpkg.com/<a href="email-protection.html" class="__cf_email__" data-cfemail="0377626a6f746a6d6760707043">[email&nbsp;protected]</a>^1.0/dist/tailwind.min.css" rel="stylesheet"&gt;</code></pre>
+<pre><code class="language-html">&lt;link href="https://unpkg.com/<a href="email-protection.html" class="__cf_email__" data-cfemail="c1b5a0a8adb6a8afa5a2b2b281">[email&nbsp;protected]</a>^1.0/dist/tailwind.min.css" rel="stylesheet"&gt;</code></pre>
 <p>Note that while the CDN build is large <em>(27kb compressed, 348kb raw)</em>, <strong>it's not representative of the sizes you see when including Tailwind as part of your build process</strong>.</p>
 <p>Sites that follow our <a href="controlling-file-size.html">best practices</a> are almost always under 10kb compressed. For example, <a href="https://send.firefox.com/">Firefox Send</a> is built with Tailwind and their CSS is under 4kb compressed and minified.</p>              </div>
 

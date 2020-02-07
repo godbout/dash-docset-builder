@@ -22,7 +22,8 @@
 <meta property="og:title" content="Configuring Variants - Tailwind CSS">
 <meta property="og:description" content="Configuring which utility variants are enabled in your project.">
 <meta property="og:image" content="https://tailwindcss.com/img/twitter-large-card.png">
-  <link rel="stylesheet" href="http://tailwindcss.com/assets/build/css/main.css?id=e994f5f9525b4219e81f">
+  <link rel="stylesheet" href="https://rsms.me/inter/inter.css">
+  <link rel="stylesheet" href="http://tailwindcss.com/assets/build/css/main.css?id=da35c01d0ae8bad54242">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/docsearch.js/2/docsearch.min.css">
 </head>
 <body data-sidebar-visible="true" class="text-gray-900 leading-normal pb-8">
@@ -298,6 +299,7 @@ module.exports  = {
 module.exports = {
   // ...
   variants: {
+    accessibility: ['responsive', 'focus'],
     alignContent: ['responsive'],
     alignItems: ['responsive'],
     alignSelf: ['responsive'],
@@ -313,6 +315,8 @@ module.exports = {
     borderStyle: ['responsive'],
     borderWidth: ['responsive'],
     boxShadow: ['responsive', 'hover', 'focus'],
+    boxSizing: ['responsive'],
+    clear: ['responsive'],
     cursor: ['responsive'],
     display: ['responsive'],
     fill: ['responsive'],
@@ -327,6 +331,16 @@ module.exports = {
     fontSmoothing: ['responsive'],
     fontStyle: ['responsive'],
     fontWeight: ['responsive', 'hover', 'focus'],
+    gap: ['responsive'],
+    gridAutoFlow: ['responsive'],
+    gridColumn: ['responsive'],
+    gridColumnEnd: ['responsive'],
+    gridColumnStart: ['responsive'],
+    gridRow: ['responsive'],
+    gridRowEnd: ['responsive'],
+    gridRowStart: ['responsive'],
+    gridTemplateColumns: ['responsive'],
+    gridTemplateRows: ['responsive'],
     height: ['responsive'],
     inset: ['responsive'],
     justifyContent: ['responsive'],
@@ -346,15 +360,26 @@ module.exports = {
     outline: ['responsive', 'focus'],
     overflow: ['responsive'],
     padding: ['responsive'],
+    placeholderColor: ['responsive', 'focus'],
     pointerEvents: ['responsive'],
     position: ['responsive'],
     resize: ['responsive'],
+    rotate: ['responsive', 'hover', 'focus'],
+    scale: ['responsive', 'hover', 'focus'],
+    skew: ['responsive', 'hover', 'focus'],
     stroke: ['responsive'],
+    strokeWidth: ['responsive'],
     tableLayout: ['responsive'],
     textAlign: ['responsive'],
     textColor: ['responsive', 'hover', 'focus'],
     textDecoration: ['responsive', 'hover', 'focus'],
     textTransform: ['responsive'],
+    transform: ['responsive'],
+    transformOrigin: ['responsive'],
+    transitionDuration: ['responsive'],
+    transitionProperty: ['responsive'],
+    transitionTimingFunction: ['responsive'],
+    translate: ['responsive', 'hover', 'focus'],
     userSelect: ['responsive'],
     verticalAlign: ['responsive'],
     visibility: ['responsive'],

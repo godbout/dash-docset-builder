@@ -22,7 +22,8 @@
 <meta property="og:title" content="Display - Tailwind CSS">
 <meta property="og:description" content="Utilities for controlling the display box type of an element.">
 <meta property="og:image" content="https://tailwindcss.com/img/twitter-large-card.png">
-  <link rel="stylesheet" href="http://tailwindcss.com/assets/build/css/main.css?id=e994f5f9525b4219e81f">
+  <link rel="stylesheet" href="https://rsms.me/inter/inter.css">
+  <link rel="stylesheet" href="http://tailwindcss.com/assets/build/css/main.css?id=da35c01d0ae8bad54242">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/docsearch.js/2/docsearch.min.css">
 </head>
 <body data-sidebar-visible="true" class="text-gray-900 leading-normal pb-8">
@@ -63,7 +64,7 @@
               <div class="markdown px-6 w-full mx-auto">
                 <h2 style="visibility: hidden; font-size: 0; margin: 0;"><a id="class-reference" name="//apple_ref/cpp/Section/Class%20reference" class="dashAnchor"></a>Class reference</h2>
 <div class="mt-0 border-t border-b border-gray-300 overflow-hidden relative">
-  <div class=" overflow-y-auto scrollbar-w-2 scrollbar-track-gray-lighter scrollbar-thumb-rounded scrollbar-thumb-gray scrolling-touch">
+  <div class="lg:max-h-sm overflow-y-auto scrollbar-w-2 scrollbar-track-gray-lighter scrollbar-thumb-rounded scrollbar-thumb-gray scrolling-touch">
     <table class="w-full text-left table-collapse">
       <thead>
         <tr>
@@ -73,8 +74,12 @@
       </thead>
       <tbody class="align-baseline">
                 <tr>
-          <td class="p-2 border-t border-gray-300 font-mono text-xs text-purple-700 whitespace-no-wrap">.block</td>
-          <td class="p-2 border-t border-gray-300 font-mono text-xs text-blue-700 whitespace-pre">display: block;</td>
+          <td class="p-2 border-t border-gray-300 font-mono text-xs text-purple-700 whitespace-no-wrap">.hidden</td>
+          <td class="p-2 border-t border-gray-300 font-mono text-xs text-blue-700 whitespace-pre">display: none;</td>
+        </tr>
+                <tr>
+          <td class="p-2 border-t border-gray-200 font-mono text-xs text-purple-700 whitespace-no-wrap">.block</td>
+          <td class="p-2 border-t border-gray-200 font-mono text-xs text-blue-700 whitespace-pre">display: block;</td>
         </tr>
                 <tr>
           <td class="p-2 border-t border-gray-200 font-mono text-xs text-purple-700 whitespace-no-wrap">.inline-block</td>
@@ -93,20 +98,44 @@
           <td class="p-2 border-t border-gray-200 font-mono text-xs text-blue-700 whitespace-pre">display: inline-flex;</td>
         </tr>
                 <tr>
+          <td class="p-2 border-t border-gray-200 font-mono text-xs text-purple-700 whitespace-no-wrap">.grid</td>
+          <td class="p-2 border-t border-gray-200 font-mono text-xs text-blue-700 whitespace-pre">display: grid;</td>
+        </tr>
+                <tr>
           <td class="p-2 border-t border-gray-200 font-mono text-xs text-purple-700 whitespace-no-wrap">.table</td>
           <td class="p-2 border-t border-gray-200 font-mono text-xs text-blue-700 whitespace-pre">display: table;</td>
         </tr>
                 <tr>
-          <td class="p-2 border-t border-gray-200 font-mono text-xs text-purple-700 whitespace-no-wrap">.table-row</td>
-          <td class="p-2 border-t border-gray-200 font-mono text-xs text-blue-700 whitespace-pre">display: table-row;</td>
+          <td class="p-2 border-t border-gray-200 font-mono text-xs text-purple-700 whitespace-no-wrap">.table-caption</td>
+          <td class="p-2 border-t border-gray-200 font-mono text-xs text-blue-700 whitespace-pre">display: table-caption;</td>
         </tr>
                 <tr>
           <td class="p-2 border-t border-gray-200 font-mono text-xs text-purple-700 whitespace-no-wrap">.table-cell</td>
           <td class="p-2 border-t border-gray-200 font-mono text-xs text-blue-700 whitespace-pre">display: table-cell;</td>
         </tr>
                 <tr>
-          <td class="p-2 border-t border-gray-200 font-mono text-xs text-purple-700 whitespace-no-wrap">.hidden</td>
-          <td class="p-2 border-t border-gray-200 font-mono text-xs text-blue-700 whitespace-pre">display: none;</td>
+          <td class="p-2 border-t border-gray-200 font-mono text-xs text-purple-700 whitespace-no-wrap">.table-column</td>
+          <td class="p-2 border-t border-gray-200 font-mono text-xs text-blue-700 whitespace-pre">display: table-column;</td>
+        </tr>
+                <tr>
+          <td class="p-2 border-t border-gray-200 font-mono text-xs text-purple-700 whitespace-no-wrap">.table-column-group</td>
+          <td class="p-2 border-t border-gray-200 font-mono text-xs text-blue-700 whitespace-pre">display: table-column-group;</td>
+        </tr>
+                <tr>
+          <td class="p-2 border-t border-gray-200 font-mono text-xs text-purple-700 whitespace-no-wrap">.table-footer-group</td>
+          <td class="p-2 border-t border-gray-200 font-mono text-xs text-blue-700 whitespace-pre">display: table-footer-group;</td>
+        </tr>
+                <tr>
+          <td class="p-2 border-t border-gray-200 font-mono text-xs text-purple-700 whitespace-no-wrap">.table-header-group</td>
+          <td class="p-2 border-t border-gray-200 font-mono text-xs text-blue-700 whitespace-pre">display: table-header-group;</td>
+        </tr>
+                <tr>
+          <td class="p-2 border-t border-gray-200 font-mono text-xs text-purple-700 whitespace-no-wrap">.table-row-group</td>
+          <td class="p-2 border-t border-gray-200 font-mono text-xs text-blue-700 whitespace-pre">display: table-row-group;</td>
+        </tr>
+                <tr>
+          <td class="p-2 border-t border-gray-200 font-mono text-xs text-purple-700 whitespace-no-wrap">.table-row</td>
+          <td class="p-2 border-t border-gray-200 font-mono text-xs text-blue-700 whitespace-pre">display: table-row;</td>
         </tr>
               </tbody>
     </table>
@@ -202,34 +231,60 @@
 &lt;/div&gt;</code></pre>
   </div>
 </div>
+<h2><a id="grid" name="//apple_ref/cpp/Section/Grid" class="dashAnchor"></a>Grid</h2>
+<p>Use <code>.grid</code> to create a grid container.</p>
+<div class="relative overflow-hidden mb-8">
+  <div v-pre class="bg-white rounded-t-lg overflow-hidden border-t border-l border-r border-gray-400 p-4 bg-white p-8">
+    <div class="grid gap-4 grid-cols-3">
+  <div class="bg-gray-300 h-12"></div>
+  <div class="bg-gray-500 h-12"></div>
+  <div class="bg-gray-300 h-12"></div>
+  <div class="bg-gray-500 h-12"></div>
+  <div class="bg-gray-300 h-12"></div>
+  <div class="bg-gray-500 h-12"></div>
+  <div class="bg-gray-300 h-12"></div>
+  <div class="bg-gray-500 h-12"></div>
+  <div class="bg-gray-300 h-12"></div>
+</div>
+  </div>
+  <div v-pre class="rounded-b-lg bg-gray-800">
+    <pre class="scrollbar-none m-0 p-0 language-html"><code class="inline-block p-4 scrolling-touch">&lt;div class="grid gap-4 grid-cols-3"&gt;
+  &lt;!-- ... --&gt;
+&lt;/div&gt;</code></pre>
+  </div>
+</div>
 <h2><a id="table" name="//apple_ref/cpp/Section/Table" class="dashAnchor"></a>Table</h2>
-<p>Use the <code>.table</code>, <code>.table-row</code>, and <code>.table-cell</code> to create elements that behave like a <code>&lt;table&gt;</code>, <code>&lt;tr&gt;</code>, or <code>&lt;td&gt;</code> element, respectively.</p>
+<p>Use the <code>.table</code>, <code>.table-row</code>, <code>.table-cell</code>, <code>.table-caption</code>, <code>.table-column</code>, <code>.table-column-group</code>, <code>.table-header-group</code>, <code>table-row-group</code>, and <code>.table-footer-group</code> utilities to create elements that behave like their respective table elements.</p>
 <div class="relative overflow-hidden mb-8">
   <div v-pre class="bg-white rounded-t-lg overflow-hidden border-t border-l border-r border-gray-400 p-4 ">
     <div class="table w-full">
-  <div class="table-row">
-    <div class="table-cell bg-gray-400 text-gray-700 px-4 py-2 text-sm">A cell with more content</div>
-    <div class="table-cell bg-gray-200 text-gray-700 px-4 py-2 text-sm">Cell 2</div>
-    <div class="table-cell bg-gray-400 text-gray-700 px-4 py-2 text-sm">Cell 3</div>
-  </div>
-  <div class="table-row">
-    <div class="table-cell bg-gray-200 text-gray-700 px-4 py-2 text-sm">Cell 4</div>
-    <div class="table-cell bg-gray-400 text-gray-700 px-4 py-2 text-sm">A cell with more content</div>
-    <div class="table-cell bg-gray-200 text-gray-700 px-4 py-2 text-sm">Cell 6</div>
+  <div class="table-row-group">
+    <div class="table-row">
+      <div class="table-cell bg-gray-400 text-gray-700 px-4 py-2 text-sm">A cell with more content</div>
+      <div class="table-cell bg-gray-200 text-gray-700 px-4 py-2 text-sm">Cell 2</div>
+      <div class="table-cell bg-gray-400 text-gray-700 px-4 py-2 text-sm">Cell 3</div>
+    </div>
+    <div class="table-row">
+      <div class="table-cell bg-gray-200 text-gray-700 px-4 py-2 text-sm">Cell 4</div>
+      <div class="table-cell bg-gray-400 text-gray-700 px-4 py-2 text-sm">A cell with more content</div>
+      <div class="table-cell bg-gray-200 text-gray-700 px-4 py-2 text-sm">Cell 6</div>
+    </div>
   </div>
 </div>
   </div>
   <div v-pre class="rounded-b-lg bg-gray-800">
     <pre class="scrollbar-none m-0 p-0 language-html"><code class="inline-block p-4 scrolling-touch">&lt;div class="table w-full"&gt;
-  &lt;div class="table-row"&gt;
-    &lt;div class="table-cell bg-gray-400 text-gray-700 px-4 py-2 text-sm"&gt;A cell with more content&lt;/div&gt;
-    &lt;div class="table-cell bg-gray-200 text-gray-700 px-4 py-2 text-sm"&gt;Cell 2&lt;/div&gt;
-    &lt;div class="table-cell bg-gray-400 text-gray-700 px-4 py-2 text-sm"&gt;Cell 3&lt;/div&gt;
-  &lt;/div&gt;
-  &lt;div class="table-row"&gt;
-    &lt;div class="table-cell bg-gray-200 text-gray-700 px-4 py-2 text-sm"&gt;Cell 4&lt;/div&gt;
-    &lt;div class="table-cell bg-gray-400 text-gray-700 px-4 py-2 text-sm"&gt;A cell with more content&lt;/div&gt;
-    &lt;div class="table-cell bg-gray-200 text-gray-700 px-4 py-2 text-sm"&gt;Cell 6&lt;/div&gt;
+  &lt;div class="table-row-group"&gt;
+    &lt;div class="table-row"&gt;
+      &lt;div class="table-cell bg-gray-400 text-gray-700 px-4 py-2 text-sm"&gt;A cell with more content&lt;/div&gt;
+      &lt;div class="table-cell bg-gray-200 text-gray-700 px-4 py-2 text-sm"&gt;Cell 2&lt;/div&gt;
+      &lt;div class="table-cell bg-gray-400 text-gray-700 px-4 py-2 text-sm"&gt;Cell 3&lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div class="table-row"&gt;
+      &lt;div class="table-cell bg-gray-200 text-gray-700 px-4 py-2 text-sm"&gt;Cell 4&lt;/div&gt;
+      &lt;div class="table-cell bg-gray-400 text-gray-700 px-4 py-2 text-sm"&gt;A cell with more content&lt;/div&gt;
+      &lt;div class="table-cell bg-gray-200 text-gray-700 px-4 py-2 text-sm"&gt;Cell 6&lt;/div&gt;
+    &lt;/div&gt;
   &lt;/div&gt;
 &lt;/div&gt;</code></pre>
   </div>

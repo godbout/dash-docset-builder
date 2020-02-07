@@ -22,7 +22,8 @@
 <meta property="og:title" content="Adding Base Styles - Tailwind CSS">
 <meta property="og:description" content="Best practices for adding your own global base styles on top of Tailwind.">
 <meta property="og:image" content="https://tailwindcss.com/img/twitter-large-card.png">
-  <link rel="stylesheet" href="main.css%3Fid=e994f5f9525b4219e81f.css">
+  <link rel="stylesheet" href="https://rsms.me/inter/inter.css">
+  <link rel="stylesheet" href="main.css%3Fid=da35c01d0ae8bad54242.css">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/docsearch.js/2/docsearch.min.css">
 </head>
 <body data-sidebar-visible="true" class="text-gray-900 leading-normal pb-8">
@@ -120,15 +121,17 @@ a {
 <h2><a id="using-a-plugin" name="//apple_ref/cpp/Section/Using%20a%20plugin" class="dashAnchor"></a>Using a plugin</h2>
 <p>You can also add base styles by <a href="https://tailwindcss.com/docs/plugins#adding-base-styles">writing a plugin</a> and using the <code>addBase</code> function:</p>
 <pre><code class="language-js">// tailwind.config.js
+const plugin = require('tailwindcss/plugin')
+
 module.exports = {
   plugins: [
-    function({ addBase, config }) {
+    plugin(function({ addBase, config }) {
       addBase({
         'h1': { fontSize: config('theme.fontSize.2xl') },
         'h2': { fontSize: config('theme.fontSize.xl') },
         'h3': { fontSize: config('theme.fontSize.lg') },
       })
-    },
+    })
   ]
 }</code></pre>
 <p>Any styles you added using <code>addBase</code> will automatically be included in your <code>@tailwind base</code> styles.</p>

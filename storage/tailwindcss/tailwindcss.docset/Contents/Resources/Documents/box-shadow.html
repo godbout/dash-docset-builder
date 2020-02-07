@@ -22,7 +22,8 @@
 <meta property="og:title" content="Box Shadow - Tailwind CSS">
 <meta property="og:description" content="Utilities for controlling the box shadow of an element.">
 <meta property="og:image" content="https://tailwindcss.com/img/twitter-large-card.png">
-  <link rel="stylesheet" href="http://tailwindcss.com/assets/build/css/main.css?id=e994f5f9525b4219e81f">
+  <link rel="stylesheet" href="https://rsms.me/inter/inter.css">
+  <link rel="stylesheet" href="http://tailwindcss.com/assets/build/css/main.css?id=da35c01d0ae8bad54242">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/docsearch.js/2/docsearch.min.css">
 </head>
 <body data-sidebar-visible="true" class="text-gray-900 leading-normal pb-8">
@@ -73,8 +74,16 @@
       </thead>
       <tbody class="align-baseline">
                 <tr>
-          <td class="p-2 border-t border-gray-300 font-mono text-xs text-purple-700 whitespace-no-wrap">.shadow</td>
-          <td class="p-2 border-t border-gray-300 font-mono text-xs text-blue-700 whitespace-pre">box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);</td>
+          <td class="p-2 border-t border-gray-300 font-mono text-xs text-purple-700 whitespace-no-wrap">.shadow-xs</td>
+          <td class="p-2 border-t border-gray-300 font-mono text-xs text-blue-700 whitespace-pre">box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.05);</td>
+        </tr>
+                <tr>
+          <td class="p-2 border-t border-gray-200 font-mono text-xs text-purple-700 whitespace-no-wrap">.shadow-sm</td>
+          <td class="p-2 border-t border-gray-200 font-mono text-xs text-blue-700 whitespace-pre">box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05);</td>
+        </tr>
+                <tr>
+          <td class="p-2 border-t border-gray-200 font-mono text-xs text-purple-700 whitespace-no-wrap">.shadow</td>
+          <td class="p-2 border-t border-gray-200 font-mono text-xs text-blue-700 whitespace-pre">box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);</td>
         </tr>
                 <tr>
           <td class="p-2 border-t border-gray-200 font-mono text-xs text-purple-700 whitespace-no-wrap">.shadow-md</td>
@@ -109,32 +118,41 @@
   </div>
 </div>
 <h2><a id="outer-shadow" name="//apple_ref/cpp/Section/Outer%20shadow" class="dashAnchor"></a>Outer shadow</h2>
-<p>Use the <code>.shadow</code>, <code>.shadow-md</code>, <code>.shadow-lg</code>, <code>.shadow-xl</code>, or <code>.shadow-2xl</code> utilities to apply different sized outer box shadows to an element.</p>
+<p>Use the <code>.shadow-sm</code>, <code>.shadow</code>, <code>.shadow-md</code>, <code>.shadow-lg</code>, <code>.shadow-xl</code>, or <code>.shadow-2xl</code> utilities to apply different sized outer box shadows to an element.</p>
 <div class="relative overflow-hidden mb-8">
-  <div v-pre class="bg-white rounded-t-lg overflow-hidden border-t border-l border-r border-gray-400 p-4 bg-gray-200 flex justify-around items-center text-sm py-8">
+  <div v-pre class="bg-white rounded-t-lg overflow-hidden border-t border-l border-r border-gray-400 p-4 bg-gray-100 lg:flex justify-around items-center text-sm py-8">
     <div class="text-center px-2">
+  <div class="mb-1 text-xs text-gray-600">xs</div>
+  <div class="mx-auto h-6 w-6 text-xs bg-white rounded shadow-xs"></div>
+</div>
+<div class="mt-6 lg:mt-0 text-center px-2">
+  <div class="mb-1 text-xs text-gray-600">sm</div>
+  <div class="mx-auto h-8 w-8 text-xs bg-white rounded shadow-sm"></div>
+</div>
+<div class="mt-6 lg:mt-0 text-center px-2">
   <div class="mb-1 text-xs text-gray-600">base</div>
-  <div class="h-8 w-8 text-xs bg-white rounded p-4 shadow"></div>
+  <div class="mx-auto h-10 w-10 text-xs bg-white rounded shadow"></div>
 </div>
-<div class="text-center px-2">
+<div class="mt-6 lg:mt-0 text-center px-2">
   <div class="mb-1 text-xs text-gray-600">md</div>
-  <div class="h-10 w-10 text-xs bg-white rounded p-4 shadow-md"></div>
+  <div class="mx-auto h-12 w-12 text-xs bg-white rounded shadow-md"></div>
 </div>
-<div class="text-center px-2">
+<div class="mt-6 lg:mt-0 text-center px-2">
   <div class="mb-1 text-xs text-gray-600">lg</div>
-  <div class="h-12 w-12 text-xs bg-white rounded p-4 shadow-lg"></div>
+  <div class="mx-auto h-16 w-16 text-xs bg-white rounded shadow-md"></div>
 </div>
-<div class="text-center px-2">
+<div class="mt-6 lg:mt-0 text-center px-2">
   <div class="mb-1 text-xs text-gray-600">xl</div>
-  <div class="h-16 w-16 text-xs bg-white rounded p-4 shadow-xl"></div>
+  <div class="mx-auto h-20 w-20 text-xs bg-white rounded shadow-xl"></div>
 </div>
-<div class="text-center px-2">
+<div class="mt-6 lg:mt-0 text-center px-2">
   <div class="mb-1 text-xs text-gray-600">2xl</div>
-  <div class="h-20 w-20 text-xs bg-white rounded p-4 shadow-2xl"></div>
+  <div class="mx-auto h-24 w-24 text-xs bg-white rounded shadow-2xl"></div>
 </div>
   </div>
   <div v-pre class="rounded-b-lg bg-gray-800">
-    <pre class="scrollbar-none m-0 p-0 language-html"><code class="inline-block p-4 scrolling-touch">&lt;div class="shadow"&gt;&lt;/div&gt;
+    <pre class="scrollbar-none m-0 p-0 language-html"><code class="inline-block p-4 scrolling-touch">&lt;div class="shadow-sm"&gt;&lt;/div&gt;
+&lt;div class="shadow"&gt;&lt;/div&gt;
 &lt;div class="shadow-md"&gt;&lt;/div&gt;
 &lt;div class="shadow-lg"&gt;&lt;/div&gt;
 &lt;div class="shadow-xl"&gt;&lt;/div&gt;
@@ -151,7 +169,7 @@
     <pre class="scrollbar-none m-0 p-0 language-html"><code class="inline-block p-4 scrolling-touch">&lt;div class="shadow-inner"&gt;&lt;/div&gt;</code></pre>
   </div>
 </div>
-<h2><a id="outline-shadow" name="//apple_ref/cpp/Section/Outline%20shadow" class="dashAnchor"></a>Outline shadow</h2>
+<h2><a id="focus-outline-shadow" name="//apple_ref/cpp/Section/Focus%20outline%20shadow" class="dashAnchor"></a>Focus outline shadow</h2>
 <p>Use the <code>.shadow-outline</code> utility to apply a focus-ring-style shadow to an element. This can be useful when combined with <code>.focus:outline-none</code> to create a better looking focus style that follows an element's border radius.</p>
 <div class="relative overflow-hidden mb-8">
   <div v-pre class="bg-white rounded-t-lg overflow-hidden border-t border-l border-r border-gray-400 p-4 flex justify-center text-sm py-8">
