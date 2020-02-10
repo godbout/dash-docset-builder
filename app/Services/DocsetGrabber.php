@@ -50,7 +50,6 @@ final class DocsetGrabber
             --no-directories \
             --span-hosts \
             --domains={$this->docset->externalDomains()} \
-            --level=2 \
             --quiet \
             --directory-prefix=storage/{$this->docset->downloadedDirectory()}";
     }
