@@ -42,11 +42,9 @@ class TailwindCSS extends BaseDocset
         $entries = collect();
 
         if (basename($file) === 'community.html') {
-            $parent = $crawler->filter('h1')->first();
-
-            $crawler->filter('h2')->each(function (HtmlPageCrawler $node) use ($entries, $file, $parent) {
+            $crawler->filter('h2')->each(function (HtmlPageCrawler $node) use ($entries, $file) {
                 $entries->push([
-                    'name' => $this->cleanAnchorText($node->text()) . ' - ' . $parent->text(),
+                    'name' => $this->cleanAnchorText($node->text()),
                     'type' => 'Environment',
                     'path' => basename($file) . '#' . Str::slug($node->text()),
                 ]);
@@ -61,11 +59,9 @@ class TailwindCSS extends BaseDocset
         $entries = collect();
 
         if (basename($file) === 'screencasts.html') {
-            $parent = $crawler->filter('h1')->first();
-
-            $crawler->filter('span.relative')->each(function (HtmlPageCrawler $node) use ($entries, $parent) {
+            $crawler->filter('span.relative')->each(function (HtmlPageCrawler $node) use ($entries) {
                 $entries->push([
-                    'name' => $this->cleanAnchorText($node->text()) . ' - ' . $parent->text(),
+                    'name' => $this->cleanAnchorText($node->text()),
                     'type' => 'Instruction',
                     'path' => $node->parents()->first()->attr('href'),
                 ]);
@@ -80,11 +76,9 @@ class TailwindCSS extends BaseDocset
         $entries = collect();
 
         if (basename($file) === 'components.html') {
-            $parent = $crawler->filter('h1')->first();
-
-            $crawler->filter('span.relative')->each(function (HtmlPageCrawler $node) use ($entries, $parent) {
+            $crawler->filter('span.relative')->each(function (HtmlPageCrawler $node) use ($entries) {
                 $entries->push([
-                    'name' => $this->cleanAnchorText($node->text()) . ' - ' . $parent->text(),
+                    'name' => $this->cleanAnchorText($node->text()),
                     'type' => 'Sample',
                     'path' => $node->parents()->first()->attr('href'),
                 ]);
@@ -99,19 +93,17 @@ class TailwindCSS extends BaseDocset
         $entries = collect();
 
         if (basename($file) === 'resources.html') {
-            $parent = $crawler->filter('h1')->first();
-
-            $crawler->filter('h2')->each(function (HtmlPageCrawler $node) use ($entries, $file, $parent) {
+            $crawler->filter('h2')->each(function (HtmlPageCrawler $node) use ($entries, $file) {
                 $entries->push([
-                    'name' => $this->cleanAnchorText($node->text()) . ' - ' . $parent->text(),
+                    'name' => $this->cleanAnchorText($node->text()),
                     'type' => 'Resource',
                     'path' => basename($file) . '#' . Str::slug($node->text()),
                 ]);
             });
 
-            $crawler->filter('h3')->each(function (HtmlPageCrawler $node) use ($entries, $file, $parent) {
+            $crawler->filter('h3')->each(function (HtmlPageCrawler $node) use ($entries, $file) {
                 $entries->push([
-                    'name' => $this->cleanAnchorText($node->text()) . ' - ' . $parent->text(),
+                    'name' => $this->cleanAnchorText($node->text()),
                     'type' => 'Section',
                     'path' => basename($file) . '#' . Str::slug($node->text()),
                 ]);
@@ -144,11 +136,9 @@ class TailwindCSS extends BaseDocset
     {
         $entries = collect();
 
-        $parent = $crawler->filter('h1')->first();
-
-        $crawler->filter('h2')->each(function (HtmlPageCrawler $node) use ($entries, $file, $parent) {
+        $crawler->filter('h2')->each(function (HtmlPageCrawler $node) use ($entries, $file) {
             $entries->push([
-                'name' => $this->cleanAnchorText($node->text()) . ' - ' . $parent->text(),
+                'name' => $this->cleanAnchorText($node->text()),
                 'type' => 'Section',
                 'path' => basename($file) . '#' . Str::slug($node->text()),
             ]);
