@@ -58,9 +58,7 @@ class LaravelZero extends BaseDocset
     {
         $entries = collect();
 
-        $h1 = $crawler->filter('h1')->last();
-
-        $crawler->filter('h2, h3, h4')->each(static function (HtmlPageCrawler $node) use ($entries, $file, $h1) {
+        $crawler->filter('h2, h3, h4')->each(static function (HtmlPageCrawler $node) use ($entries, $file) {
             $fileBasename = basename($file);
 
             if (! in_array($fileBasename, ['index.html', '404.html'])) {
