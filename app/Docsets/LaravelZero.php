@@ -65,7 +65,7 @@ class LaravelZero extends BaseDocset
 
             if (! in_array($fileBasename, ['index.html', '404.html'])) {
                 $entries->push([
-                    'name' => trim($node->text() . ' - ' . $h1->text()),
+                    'name' => trim($node->text()),
                     'type' => 'Section',
                     'path' => basename($file) . '#' . Str::slug($node->text())
                 ]);
