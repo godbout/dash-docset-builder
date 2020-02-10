@@ -53,14 +53,12 @@ class Jigsaw extends BaseDocset
     {
         $entries = collect();
 
-        $parent = $crawler->filter('h4')->first()->text() ?: $crawler->filter('h2')->first()->text();
-
-        $crawler->filter('h3')->each(static function (HtmlPageCrawler $node) use ($entries, $file, $parent) {
+        $crawler->filter('h3')->each(static function (HtmlPageCrawler $node) use ($entries, $file) {
             $fileBasename = basename($file);
 
             if ($fileBasename !== 'index.html') {
                 $entries->push([
-                    'name' => trim($node->text() . ' - ' . $parent),
+                    'name' => trim($node->text()),
                     'type' => 'Section',
                     'path' => $fileBasename . '#' . Str::slug($node->text())
                 ]);
