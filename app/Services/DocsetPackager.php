@@ -120,7 +120,9 @@ EOT;
         $files->each(function ($file) use (&$entries) {
             $entries = $entries
                 ->merge($this->docset->entries($file))
-                ->unique('name');
+                ->unique(function ($entry) {
+                    return $entry['name'].$entry['type'];
+                });
         });
 
         return $entries;
