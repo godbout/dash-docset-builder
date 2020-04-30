@@ -14,17 +14,18 @@
   <meta name="twitter:card" content="summary">
 <meta name="twitter:site" content="@tailwindcss">
 <meta name="twitter:title" content="Border Width - Tailwind CSS">
-<meta name="twitter:description" content="Utilities for controlling the width an element's borders.">
+<meta name="twitter:description" content="Utilities for controlling the width of an element's borders.">
 <meta name="twitter:image" content="https://tailwindcss.com/img/tailwind-twitter-square.png">
 <meta name="twitter:creator" content="@tailwindcss">
 <meta property="og:url" content="https://tailwindcss.com/">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Border Width - Tailwind CSS">
-<meta property="og:description" content="Utilities for controlling the width an element's borders.">
+<meta property="og:description" content="Utilities for controlling the width of an element's borders.">
 <meta property="og:image" content="https://tailwindcss.com/img/twitter-large-card.png">
   <link rel="stylesheet" href="https://rsms.me/inter/inter.css">
-  <link rel="stylesheet" href="http://tailwindcss.com/assets/build/css/main.css?id=da35c01d0ae8bad54242">
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/docsearch.js/2/docsearch.min.css">
+  <link rel="stylesheet" href="main.css%3Fid=4a7cbbbeb4816c16d9a7.css">
+  <link rel="stylesheet" href="docsearch.min.css">
+  <script src="alpine.js" defer></script>
 </head>
 <body data-sidebar-visible="true" class="text-gray-900 leading-normal pb-8">
 
@@ -54,10 +55,13 @@
           
           <div class="w-full">
             <div class="markdown mb-6 px-6 mx-auto">
-                              <a name="//apple_ref/cpp/Section/Top" class="dashAnchor"></a><h1>Border Width</h1>
+                              <a name="//apple_ref/cpp/Section/Top" class="dashAnchor"></a><h1 class="flex items-center">
+                  Border Width
+                  <!-- <span class="ml-4 text-teal-600 font-semibold text-base">v1.3.0+</span> -->
+                                  </h1>
               
                               <div class="mt-0 mb-4 text-gray-600">
-                  Utilities for controlling the width an element's borders.
+                  Utilities for controlling the width of an element's borders.
                 </div>
                                         </div>
             <div class="flex">
@@ -180,7 +184,7 @@
 <h2><a id="all-sides" name="//apple_ref/cpp/Section/All%20sides" class="dashAnchor"></a>All sides</h2>
 <p>Use the <code>.border</code>, <code>.border-0</code>, <code>.border-2</code>, <code>.border-4</code>, or <code>.border-8</code> utilities to set the border width for all sides of an element.</p>
 <div class="relative overflow-hidden mb-8">
-  <div v-pre class="bg-white rounded-t-lg overflow-hidden border-t border-l border-r border-gray-400 p-4 ">
+  <div v-pre class="bg-white rounded-t-lg overflow-hidden border-t border-l border-r border-gray-400 p-4 " style="">
     <div class="flex">
   <div class="w-1/2 sm:flex-1">
     <p class="text-center text-sm text-gray-600 mb-1">.border-0</p>
@@ -215,7 +219,7 @@
 <h2><a id="individual-sides" name="//apple_ref/cpp/Section/Individual%20sides" class="dashAnchor"></a>Individual sides</h2>
 <p>Use the <code>.border-{side}</code>, <code>.border-{side}-0</code>, <code>.border-{side}-2</code>, <code>.border-{side}-4</code>, or <code>.border-{side}-8</code> utilities to set the border width for one side of an element.</p>
 <div class="relative overflow-hidden mb-8">
-  <div v-pre class="bg-white rounded-t-lg overflow-hidden border-t border-l border-r border-gray-400 p-4 ">
+  <div v-pre class="bg-white rounded-t-lg overflow-hidden border-t border-l border-r border-gray-400 p-4 " style="">
     <div class="flex">
   <div class="w-1/2 sm:flex-1">
     <p class="text-center text-sm text-gray-600 mb-1">.border-t-2</p>
@@ -242,9 +246,35 @@
 &lt;div class="border-l-2 border-gray-600 ..."&gt;&lt;/div&gt;</code></pre>
   </div>
 </div>
+<h2><a id="between-elements-v130" name="//apple_ref/cpp/Section/Between%20elements%20v1.3.0%2B" class="dashAnchor"></a>
+  <span class="flex items-center" data-heading-text>
+    Between elements
+    <span class="ml-3 inline-flex items-center px-3 py-1 rounded-full text-sm font-medium leading-4 bg-green-150 text-green-900">
+      v1.3.0+
+    </span>
+  </span>
+</h2>
+<p>You can also add borders between child elements using the <code>divide-{x/y}-{width}</code> and <code>divide-{color}</code> utilities.</p>
+<p>Learn more in the <a href="divide-width.html">Divide Width</a> and <a href="divide-color.html">Divide Color</a> documentation.</p>
+<div class="relative overflow-hidden mb-8">
+  <div v-pre class="bg-white rounded-t-lg overflow-hidden border-t border-l border-r border-gray-400 p-4 " style="">
+    <div class="divide-y divide-gray-400">
+  <div class="text-center py-2">1</div>
+  <div class="text-center py-2">2</div>
+  <div class="text-center py-2">3</div>
+</div>
+  </div>
+  <div v-pre class="rounded-b-lg bg-gray-800">
+    <pre class="scrollbar-none m-0 p-0 language-html"><code class="inline-block p-4 scrolling-touch">&lt;div class="divide-y divide-gray-400"&gt;
+  &lt;div class="text-center py-2"&gt;1&lt;/div&gt;
+  &lt;div class="text-center py-2"&gt;2&lt;/div&gt;
+  &lt;div class="text-center py-2"&gt;3&lt;/div&gt;
+&lt;/div&gt;</code></pre>
+  </div>
+</div>
 <h2><a id="responsive" name="//apple_ref/cpp/Section/Responsive" class="dashAnchor"></a>Responsive</h2>
 <p>To control the border width of an element at a specific breakpoint, add a <code>{screen}:</code> prefix to any existing border width utility. For example, use <code>md:border-t-4</code> to apply the <code>border-t-4</code> utility at only medium screen sizes and above.</p>
-<p>For more information about Tailwind's responsive design features, check out the <a href="http://tailwindcss.com/docs/responsive-design">Responsive Design</a> documentation.</p>
+<p>For more information about Tailwind's responsive design features, check out the <a href="https://tailwindcss.com/docs/responsive-design">Responsive Design</a> documentation.</p>
 <div class="mt-8 v-cloak-hidden">
   <responsive-code-sample code='&lt;div class="none:border-2 sm:border-t-8 md:border-r-8 lg:border-b-8 xl:border-8"&gt;
 &lt;/div&gt;' slot-class="text-center">
@@ -333,10 +363,10 @@
         </div>
         
 
-        <script src="http://tailwindcss.com/assets/build/js/app.js?id=1fa8281e8c1912520ff1"></script>
+        <script src="app.js%3Fid=f831c3cf79135651b6a5"></script>
 
         <!-- Algolia DocSearch  -->
-        <script type="text/javascript" src="https://cdn.jsdelivr.net/docsearch.js/2/docsearch.min.js"></script>
+        <script type="text/javascript" src="docsearch.min.js"></script>
         <script type="text/javascript">
           docsearch({
             apiKey: '3df93446658cd9c4e314d4c02a052188',
@@ -356,6 +386,8 @@
 </div>
 
 
+
+
   <!-- Google Analytics  -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=UA-109068504-1"></script>
   <script>
@@ -367,7 +399,7 @@
   </script>
 
 <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
-<script src="http://tailwindcss.com/assets/build/js/nav.js?id=b3eb7d558e0420f9b29c" defer></script>
+<script src="nav.js%3Fid=b3eb7d558e0420f9b29c" defer></script>
 
 </body>
 </html>

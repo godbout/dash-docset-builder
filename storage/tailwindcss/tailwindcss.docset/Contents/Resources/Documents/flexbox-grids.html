@@ -23,8 +23,9 @@
 <meta property="og:description" content="Examples of building Flexbox grid layouts with Tailwind CSS.">
 <meta property="og:image" content="https://tailwindcss.com/img/twitter-large-card.png">
   <link rel="stylesheet" href="https://rsms.me/inter/inter.css">
-  <link rel="stylesheet" href="http://tailwindcss.com/assets/build/css/main.css?id=da35c01d0ae8bad54242">
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/docsearch.js/2/docsearch.min.css">
+  <link rel="stylesheet" href="main.css%3Fid=4a7cbbbeb4816c16d9a7.css">
+  <link rel="stylesheet" href="docsearch.min.css">
+  <script src="alpine.js" defer></script>
 </head>
 <body data-sidebar-visible="true" class="text-gray-900 leading-normal pb-8">
 
@@ -54,7 +55,10 @@
           
           <div class="w-full">
             <div class="markdown mb-6 px-6 mx-auto">
-                              <a name="//apple_ref/cpp/Section/Top" class="dashAnchor"></a><h1>Flexbox Grids</h1>
+                              <a name="//apple_ref/cpp/Section/Top" class="dashAnchor"></a><h1 class="flex items-center">
+                  Flexbox Grids
+                  <!-- <span class="ml-4 text-teal-600 font-semibold text-base">v1.3.0+</span> -->
+                                  </h1>
               
                               <div class="mt-0 mb-4 text-gray-600">
                   Examples of building Flexbox grid layouts with Tailwind CSS.
@@ -63,12 +67,12 @@
                           </div>
             <div class="flex">
               <div class="markdown px-6 w-full mx-auto">
-                <p>Tailwind v1.2+ includes <a href="grid-template-columns.html">utilities for CSS Grid</a> out of the box, but if you need to support older browers, you can also build grid layouts using Tailwind's <a href="http://tailwindcss.com/docs/flexbox-display">Flexbox</a> and <a href="width.html">width</a> utilities.</p>
+                <p>Tailwind v1.2+ includes <a href="grid-template-columns.html">utilities for CSS Grid</a> out of the box, but if you need to support older browers, you can also build grid layouts using Tailwind's <a href="flexbox-display.html">Flexbox</a> and <a href="width.html">width</a> utilities.</p>
 <p>Here are a few examples to help you get an idea of how to build Flexbox grids using Tailwind.</p>
 <h2><a id="basic-grids" name="//apple_ref/cpp/Section/Basic%20Grids" class="dashAnchor"></a>Basic Grids</h2>
-<p>Use the existing <a href="http://tailwindcss.com/docs/flexbox-display">Flexbox</a> and <a href="width.html">percentage width</a> utilities to construct basic grids.</p>
+<p>Use the existing <a href="flexbox-display.html">Flexbox</a> and <a href="width.html">percentage width</a> utilities to construct basic grids.</p>
 <div class="relative overflow-hidden mb-8">
-  <div v-pre class="bg-white rounded-t-lg overflow-hidden border-t border-l border-r border-gray-400 p-4 ">
+  <div v-pre class="bg-white rounded-t-lg overflow-hidden border-t border-l border-r border-gray-400 p-4 " style="">
     <!-- Full width column -->
 <div class="flex mb-4">
   <div class="w-full bg-gray-500 h-12"></div>
@@ -217,7 +221,7 @@
 <h2><a id="mixed-column-sizes" name="//apple_ref/cpp/Section/Mixed%20Column%20Sizes" class="dashAnchor"></a>Mixed Column Sizes</h2>
 <p>Mix different percentage width utilities to build mixed size grids.</p>
 <div class="relative overflow-hidden mb-8">
-  <div v-pre class="bg-white rounded-t-lg overflow-hidden border-t border-l border-r border-gray-400 p-4 ">
+  <div v-pre class="bg-white rounded-t-lg overflow-hidden border-t border-l border-r border-gray-400 p-4 " style="">
     <!-- Narrower side column -->
 <div class="flex mb-4">
   <div class="w-3/4 bg-gray-500 h-12"></div>
@@ -249,7 +253,7 @@
 <h2><a id="wrapping-columns" name="//apple_ref/cpp/Section/Wrapping%20Columns" class="dashAnchor"></a>Wrapping Columns</h2>
 <p>Add <code>flex-wrap</code> to your column container to allow columns to wrap when they run out of room.</p>
 <div class="relative overflow-hidden mb-8">
-  <div v-pre class="bg-white rounded-t-lg overflow-hidden border-t border-l border-r border-gray-400 p-4 ">
+  <div v-pre class="bg-white rounded-t-lg overflow-hidden border-t border-l border-r border-gray-400 p-4 " style="">
     <div class="flex flex-wrap -mb-4">
   <div class="w-1/3 mb-4 bg-gray-400 h-12"></div>
   <div class="w-1/3 mb-4 bg-gray-500 h-12"></div>
@@ -272,7 +276,7 @@
 <p>Add a negative horizontal margin like <code>-mx-2</code> to your column container and an equal horizontal padding like <code>px-2</code> to each column to add gutters.</p>
 <p>To prevent horizontal scrolling in full width layouts, add <code>overflow-hidden</code> to another parent container, or compensate for the negative margin with matching horizontal padding.</p>
 <div class="relative overflow-hidden mb-8">
-  <div v-pre class="bg-white rounded-t-lg overflow-hidden border-t border-l border-r border-gray-400 p-4 ">
+  <div v-pre class="bg-white rounded-t-lg overflow-hidden border-t border-l border-r border-gray-400 p-4 " style="">
     <div class="px-2">
   <div class="flex -mx-2">
     <div class="w-1/3 px-2">
@@ -306,7 +310,7 @@
 <h2><a id="automatic-column-widths" name="//apple_ref/cpp/Section/Automatic%20Column%20Widths" class="dashAnchor"></a>Automatic Column Widths</h2>
 <p>Use <code>flex-1</code> instead of an explicit width on your columns to have them size automatically to fill the row.</p>
 <div class="relative overflow-hidden mb-8">
-  <div v-pre class="bg-white rounded-t-lg overflow-hidden border-t border-l border-r border-gray-400 p-4 ">
+  <div v-pre class="bg-white rounded-t-lg overflow-hidden border-t border-l border-r border-gray-400 p-4 " style="">
     <!-- Full width column -->
 <div class="flex mb-4">
   <div class="flex-1 bg-gray-500 h-12"></div>
@@ -392,7 +396,7 @@
 <h2><a id="column-order" name="//apple_ref/cpp/Section/Column%20Order" class="dashAnchor"></a>Column Order</h2>
 <p>Use <code>flex-row-reverse</code> to reverse column order. Useful for two-column responsive layouts where the column on right should appear first on smaller screens.</p>
 <div class="relative overflow-hidden mb-8">
-  <div v-pre class="bg-white rounded-t-lg overflow-hidden border-t border-l border-r border-gray-400 p-4 ">
+  <div v-pre class="bg-white rounded-t-lg overflow-hidden border-t border-l border-r border-gray-400 p-4 " style="">
     <div class="flex md:flex-row-reverse flex-wrap">
   <div class="w-full md:w-3/4 bg-gray-500 p-4 text-center text-gray-200">1</div>
   <div class="w-full md:w-1/4 bg-gray-400 p-4 text-center text-gray-700">2</div>
@@ -408,7 +412,7 @@
 <h2><a id="simple-offsets" name="//apple_ref/cpp/Section/Simple%20Offsets" class="dashAnchor"></a>Simple Offsets</h2>
 <p>Use auto margin utilities like <code>ml-auto</code> and <code>mr-auto</code> to offset columns in a row.</p>
 <div class="relative overflow-hidden mb-8">
-  <div v-pre class="bg-white rounded-t-lg overflow-hidden border-t border-l border-r border-gray-400 p-4 ">
+  <div v-pre class="bg-white rounded-t-lg overflow-hidden border-t border-l border-r border-gray-400 p-4 " style="">
     <div class="flex flex-wrap">
   <div class="w-1/3 ml-auto bg-gray-500 h-12"></div>
   <div class="w-1/3 mr-auto bg-gray-400 h-12"></div>
@@ -434,10 +438,10 @@
         </div>
         
 
-        <script src="http://tailwindcss.com/assets/build/js/app.js?id=1fa8281e8c1912520ff1"></script>
+        <script src="app.js%3Fid=f831c3cf79135651b6a5"></script>
 
         <!-- Algolia DocSearch  -->
-        <script type="text/javascript" src="https://cdn.jsdelivr.net/docsearch.js/2/docsearch.min.js"></script>
+        <script type="text/javascript" src="docsearch.min.js"></script>
         <script type="text/javascript">
           docsearch({
             apiKey: '3df93446658cd9c4e314d4c02a052188',
@@ -457,6 +461,8 @@
 </div>
 
 
+
+
   <!-- Google Analytics  -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=UA-109068504-1"></script>
   <script>
@@ -468,7 +474,7 @@
   </script>
 
 <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
-<script src="http://tailwindcss.com/assets/build/js/nav.js?id=b3eb7d558e0420f9b29c" defer></script>
+<script src="nav.js%3Fid=b3eb7d558e0420f9b29c" defer></script>
 
 </body>
 </html>

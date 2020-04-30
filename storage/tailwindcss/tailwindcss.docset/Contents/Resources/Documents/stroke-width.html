@@ -23,8 +23,9 @@
 <meta property="og:description" content="Utilities for styling the stroke width of SVG elements.">
 <meta property="og:image" content="https://tailwindcss.com/img/twitter-large-card.png">
   <link rel="stylesheet" href="https://rsms.me/inter/inter.css">
-  <link rel="stylesheet" href="http://tailwindcss.com/assets/build/css/main.css?id=da35c01d0ae8bad54242">
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/docsearch.js/2/docsearch.min.css">
+  <link rel="stylesheet" href="main.css%3Fid=4a7cbbbeb4816c16d9a7.css">
+  <link rel="stylesheet" href="docsearch.min.css">
+  <script src="alpine.js" defer></script>
 </head>
 <body data-sidebar-visible="true" class="text-gray-900 leading-normal pb-8">
 
@@ -54,7 +55,13 @@
           
           <div class="w-full">
             <div class="markdown mb-6 px-6 mx-auto">
-                              <a name="//apple_ref/cpp/Section/Top" class="dashAnchor"></a><h1>Stroke Width</h1>
+                              <a name="//apple_ref/cpp/Section/Top" class="dashAnchor"></a><h1 class="flex items-center">
+                  Stroke Width
+                  <!-- <span class="ml-4 text-teal-600 font-semibold text-base">v1.3.0+</span> -->
+                                    <span class="ml-3 inline-flex items-center px-3 py-1 rounded-full text-sm font-medium leading-4 bg-green-150 text-green-900">
+                    v1.2.0+
+                  </span>
+                                  </h1>
               
                               <div class="mt-0 mb-4 text-gray-600">
                   Utilities for styling the stroke width of SVG elements.
@@ -93,7 +100,7 @@
 <p>Use the <code>.stroke-{width}</code> utilities to set the stroke width of an SVG.</p>
 <p>Useful for styling icon sets like <a href="https://feathericons.com/">Feather</a> that are drawn entirely with strokes.</p>
 <div class="relative overflow-hidden mb-8">
-  <div v-pre class="bg-white rounded-t-lg overflow-hidden border-t border-l border-r border-gray-400 p-4 text-center">
+  <div v-pre class="bg-white rounded-t-lg overflow-hidden border-t border-l border-r border-gray-400 p-4 text-center" style="">
     <svg class="stroke-current stroke-1 text-green-500 inline-block h-24 w-24" viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" fill="none" stroke-linecap="round" stroke-linejoin="round">
   <circle cx="12" cy="12" r="10"></circle>
   <line x1="14.31" y1="8" x2="20.05" y2="17.94"></line>
@@ -120,7 +127,7 @@
 </div>
 <h2><a id="responsive" name="//apple_ref/cpp/Section/Responsive" class="dashAnchor"></a>Responsive</h2>
 <p>To control the stroke width of an SVG element at a specific breakpoint, add a <code>{screen}:</code> prefix to any existing width utility. For example, adding the class <code>md:stroke-2</code> to an element would apply the <code>stroke-2</code> utility at medium screen sizes and above.</p>
-<p>For more information about Tailwind's responsive design features, check out the <a href="http://tailwindcss.com/docs/responsive-design">Responsive Design</a> documentation.</p>
+<p>For more information about Tailwind's responsive design features, check out the <a href="https://tailwindcss.com/docs/responsive-design">Responsive Design</a> documentation.</p>
 <div class="mt-8 v-cloak-hidden">
   <responsive-code-sample code='&lt;svg class="none:stroke-1 sm:stroke-2 md:stroke-1 lg:stroke-0 xl:stroke-1 ..."&gt;
   <!-- ... -->
@@ -246,10 +253,10 @@
         </div>
         
 
-        <script src="http://tailwindcss.com/assets/build/js/app.js?id=1fa8281e8c1912520ff1"></script>
+        <script src="app.js%3Fid=f831c3cf79135651b6a5"></script>
 
         <!-- Algolia DocSearch  -->
-        <script type="text/javascript" src="https://cdn.jsdelivr.net/docsearch.js/2/docsearch.min.js"></script>
+        <script type="text/javascript" src="docsearch.min.js"></script>
         <script type="text/javascript">
           docsearch({
             apiKey: '3df93446658cd9c4e314d4c02a052188',
@@ -269,6 +276,8 @@
 </div>
 
 
+
+
   <!-- Google Analytics  -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=UA-109068504-1"></script>
   <script>
@@ -280,7 +289,7 @@
   </script>
 
 <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
-<script src="http://tailwindcss.com/assets/build/js/nav.js?id=b3eb7d558e0420f9b29c" defer></script>
+<script src="nav.js%3Fid=b3eb7d558e0420f9b29c" defer></script>
 
 </body>
 </html>

@@ -23,8 +23,9 @@
 <meta property="og:description" content="Utilities for controlling gutters between grid rows and columns.">
 <meta property="og:image" content="https://tailwindcss.com/img/twitter-large-card.png">
   <link rel="stylesheet" href="https://rsms.me/inter/inter.css">
-  <link rel="stylesheet" href="http://tailwindcss.com/assets/build/css/main.css?id=da35c01d0ae8bad54242">
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/docsearch.js/2/docsearch.min.css">
+  <link rel="stylesheet" href="main.css%3Fid=4a7cbbbeb4816c16d9a7.css">
+  <link rel="stylesheet" href="docsearch.min.css">
+  <script src="alpine.js" defer></script>
 </head>
 <body data-sidebar-visible="true" class="text-gray-900 leading-normal pb-8">
 
@@ -54,7 +55,13 @@
           
           <div class="w-full">
             <div class="markdown mb-6 px-6 mx-auto">
-                              <a name="//apple_ref/cpp/Section/Top" class="dashAnchor"></a><h1>Gap</h1>
+                              <a name="//apple_ref/cpp/Section/Top" class="dashAnchor"></a><h1 class="flex items-center">
+                  Gap
+                  <!-- <span class="ml-4 text-teal-600 font-semibold text-base">v1.3.0+</span> -->
+                                    <span class="ml-3 inline-flex items-center px-3 py-1 rounded-full text-sm font-medium leading-4 bg-green-150 text-green-900">
+                    v1.2.0+
+                  </span>
+                                  </h1>
               
                               <div class="mt-0 mb-4 text-gray-600">
                   Utilities for controlling gutters between grid rows and columns.
@@ -308,7 +315,7 @@
 <h2><a id="gap" name="//apple_ref/cpp/Section/Gap" class="dashAnchor"></a>Gap</h2>
 <p>Use <code>.gap-{size}</code> to change the gutter size in grid layouts.</p>
 <div class="relative overflow-hidden mb-8">
-  <div v-pre class="bg-white rounded-t-lg overflow-hidden border-t border-l border-r border-gray-400 p-4 ">
+  <div v-pre class="bg-white rounded-t-lg overflow-hidden border-t border-l border-r border-gray-400 p-4 " style="">
     <div>
   <div class="mb-1 text-sm text-gray-600">gap-1</div>
   <div class="grid grid-cols-2 gap-1">
@@ -356,7 +363,7 @@
 <h2><a id="row-gap" name="//apple_ref/cpp/Section/Row%20Gap" class="dashAnchor"></a>Row Gap</h2>
 <p>Use <code>.row-gap-{size}</code> to change the gutter size between rows in grid layouts.</p>
 <div class="relative overflow-hidden mb-8">
-  <div v-pre class="bg-white rounded-t-lg overflow-hidden border-t border-l border-r border-gray-400 p-4 ">
+  <div v-pre class="bg-white rounded-t-lg overflow-hidden border-t border-l border-r border-gray-400 p-4 " style="">
     <div>
   <div class="mb-1 text-sm text-gray-600">row-gap-1</div>
   <div class="grid grid-cols-2 row-gap-1">
@@ -404,7 +411,7 @@
 <h2><a id="column-gap" name="//apple_ref/cpp/Section/Column%20Gap" class="dashAnchor"></a>Column Gap</h2>
 <p>Use <code>.col-gap-{size}</code> to change the gutter size between columns in grid layouts.</p>
 <div class="relative overflow-hidden mb-8">
-  <div v-pre class="bg-white rounded-t-lg overflow-hidden border-t border-l border-r border-gray-400 p-4 ">
+  <div v-pre class="bg-white rounded-t-lg overflow-hidden border-t border-l border-r border-gray-400 p-4 " style="">
     <div>
   <div class="mb-1 text-sm text-gray-600">col-gap-1</div>
   <div class="grid grid-cols-2 col-gap-1">
@@ -454,7 +461,7 @@
 <pre><code class="language-html">&lt;div class="grid gap-4 sm:gap-6 md:gap-8 lg:gap-12 xl:gap-16 ..."&gt;
   &lt;!-- ... --&gt;
 &lt;/div&gt;</code></pre>
-<p>For more information about Tailwind's responsive design features, check out the <a href="http://tailwindcss.com/docs/responsive-design">Responsive Design</a> documentation.</p>
+<p>For more information about Tailwind's responsive design features, check out the <a href="https://tailwindcss.com/docs/responsive-design">Responsive Design</a> documentation.</p>
 <h2><a id="customizing" name="//apple_ref/cpp/Section/Customizing" class="dashAnchor"></a>Customizing</h2>
 <h3><a id="gap-values" name="//apple_ref/cpp/Section/Gap%20values" class="dashAnchor"></a>Gap values</h3>
 <p>By default Tailwind's gap scale matches your configured <a href="customizing-spacing.html">spacing scale</a>.</p>
@@ -504,9 +511,9 @@
 </div>
 <p>Learn more about customizing the default theme in the <a href="theme.html#customizing-the-default-theme">theme customization documentation</a>.</p>
 <h3><a id="responsive-and-pseudo-class-variants" name="//apple_ref/cpp/Section/Responsive%20and%20pseudo-class%20variants" class="dashAnchor"></a>Responsive and pseudo-class variants</h3>
-<p>By default, no responsive, hover, focus, active, or group-hover variants are generated for gap utilities.</p>
+<p>By default, only responsive variants are generated for gap utilities.</p>
 <p>You can control which variants are generated for the gap utilities by modifying the <code>gap</code> property in the <code>variants</code> section of your <code>tailwind.config.js</code> file.</p>
-<p>For example, this config will generate responsive and hover variants:</p>
+<p>For example, this config will also generate hover and focus variants:</p>
 <div class="rounded-lg mb-8 overflow-hidden">
   <div class="bg-gray-800 p-4 font-mono text-sm overflow-x-scroll whitespace-no-wrap">
     <div class="whitespace-pre text-gray-400">// tailwind.config.js</div>
@@ -516,9 +523,26 @@
     <div>
 <div class="text-gray-400">&nbsp;&nbsp;&nbsp;&nbsp;// ...</div>
 <div class="text-gray-500">
-<span>-</span>&nbsp;&nbsp;&nbsp;gap: [''],</div>
+<span>-</span>&nbsp;&nbsp;&nbsp;gap: ['responsive'],</div>
 <div class="text-code-green">
-<span>+</span>&nbsp;&nbsp;&nbsp;gap: ['responsive', 'hover'],</div>
+<span>+</span>&nbsp;&nbsp;&nbsp;gap: ['responsive', 'hover', 'focus'],</div>
+</div>
+    <div class="whitespace-pre text-code-white">  }</div>
+    <div class="whitespace-pre text-code-white">}</div>
+  </div>
+</div>
+<h3><a id="disabling" name="//apple_ref/cpp/Section/Disabling" class="dashAnchor"></a>Disabling</h3>
+<p>If you don't plan to use the gap utilities in your project, you can disable them entirely by setting the <code>gap</code> property to <code>false</code> in the <code>corePlugins</code> section of your config file:</p>
+<div class="rounded-lg mb-8 overflow-hidden">
+  <div class="bg-gray-800 p-4 font-mono text-sm overflow-x-scroll whitespace-no-wrap">
+    <div class="whitespace-pre text-gray-400">// tailwind.config.js</div>
+    <div class="whitespace-pre text-code-white">module.exports = {</div>
+    <div class="whitespace-pre text-code-white">
+<span class="text-code-yellow">  corePlugins</span>: {</div>
+    <div>
+<div class="text-gray-400">&nbsp;&nbsp;&nbsp;&nbsp;// ...</div>
+<div class="text-code-green">
+<span>+</span>&nbsp;&nbsp;&nbsp;gap: false,</div>
 </div>
     <div class="whitespace-pre text-code-white">  }</div>
     <div class="whitespace-pre text-code-white">}</div>
@@ -537,10 +561,10 @@
         </div>
         
 
-        <script src="http://tailwindcss.com/assets/build/js/app.js?id=1fa8281e8c1912520ff1"></script>
+        <script src="app.js%3Fid=f831c3cf79135651b6a5"></script>
 
         <!-- Algolia DocSearch  -->
-        <script type="text/javascript" src="https://cdn.jsdelivr.net/docsearch.js/2/docsearch.min.js"></script>
+        <script type="text/javascript" src="docsearch.min.js"></script>
         <script type="text/javascript">
           docsearch({
             apiKey: '3df93446658cd9c4e314d4c02a052188',
@@ -560,6 +584,8 @@
 </div>
 
 
+
+
   <!-- Google Analytics  -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=UA-109068504-1"></script>
   <script>
@@ -571,7 +597,7 @@
   </script>
 
 <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
-<script src="http://tailwindcss.com/assets/build/js/nav.js?id=b3eb7d558e0420f9b29c" defer></script>
+<script src="nav.js%3Fid=b3eb7d558e0420f9b29c" defer></script>
 
 </body>
 </html>

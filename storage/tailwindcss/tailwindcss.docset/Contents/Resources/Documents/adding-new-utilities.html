@@ -23,8 +23,9 @@
 <meta property="og:description" content="Extending Tailwind with your own custom utility classes.">
 <meta property="og:image" content="https://tailwindcss.com/img/twitter-large-card.png">
   <link rel="stylesheet" href="https://rsms.me/inter/inter.css">
-  <link rel="stylesheet" href="http://tailwindcss.com/assets/build/css/main.css?id=da35c01d0ae8bad54242">
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/docsearch.js/2/docsearch.min.css">
+  <link rel="stylesheet" href="main.css%3Fid=4a7cbbbeb4816c16d9a7.css">
+  <link rel="stylesheet" href="docsearch.min.css">
+  <script src="alpine.js" defer></script>
 </head>
 <body data-sidebar-visible="true" class="text-gray-900 leading-normal pb-8">
 
@@ -54,7 +55,10 @@
           
           <div class="w-full">
             <div class="markdown mb-6 px-6 mx-auto">
-                              <a name="//apple_ref/cpp/Section/Top" class="dashAnchor"></a><h1>Adding New Utilities</h1>
+                              <a name="//apple_ref/cpp/Section/Top" class="dashAnchor"></a><h1 class="flex items-center">
+                  Adding New Utilities
+                  <!-- <span class="ml-4 text-teal-600 font-semibold text-base">v1.3.0+</span> -->
+                                  </h1>
               
                               <div class="mt-0 mb-4 text-gray-600">
                   Extending Tailwind with your own custom utility classes.
@@ -123,7 +127,7 @@
 @tailwind utilities;
 @import "./custom-utilities";</code></pre>
 <h3><a id="generating-responsive-variants" name="//apple_ref/cpp/Section/Generating%20responsive%20variants" class="dashAnchor"></a>Generating responsive variants</h3>
-<p>If you'd like to create <a href="http://tailwindcss.com/docs/responsive-design">responsive variants</a> of your own utilities based on the breakpoints defined in your <code>tailwind.config.js</code> file, wrap your utilities in the <code>@responsive</code> directive:</p>
+<p>If you'd like to create <a href="https://tailwindcss.com/docs/responsive-design">responsive variants</a> of your own utilities based on the breakpoints defined in your <code>tailwind.config.js</code> file, wrap your utilities in the <code>@responsive</code> directive:</p>
 <pre><code class="language-css">@tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -145,7 +149,7 @@
 <p>Tailwind will automatically generate prefixed versions of each custom utility that you can use to conditionally apply those styles at different breakpoints:</p>
 <pre><code class="language-html">&lt;!-- Rotate 180 degrees by default, but remove that rotation on medium screens and up --&gt;
 &lt;div class="rotate-180 md:rotate-0"&gt;&lt;/div&gt;</code></pre>
-<p>Learn more about responsive utilities in the <a href="http://tailwindcss.com/docs/responsive-design">responsive design documentation</a>.</p>
+<p>Learn more about responsive utilities in the <a href="https://tailwindcss.com/docs/responsive-design">responsive design documentation</a>.</p>
 <h3><a id="generating-pseudo-class-variants" name="//apple_ref/cpp/Section/Generating%20pseudo-class%20variants" class="dashAnchor"></a>Generating pseudo-class variants</h3>
 <p>If you'd like to create <a href="pseudo-class-variants.html">pseudo-class variants</a> of your own utilities, wrap your utilities in the <code>@variants</code> directive:</p>
 <pre><code class="language-css">@tailwind base;
@@ -250,10 +254,10 @@ module.exports = {
         </div>
         
 
-        <script src="http://tailwindcss.com/assets/build/js/app.js?id=1fa8281e8c1912520ff1"></script>
+        <script src="app.js%3Fid=f831c3cf79135651b6a5"></script>
 
         <!-- Algolia DocSearch  -->
-        <script type="text/javascript" src="https://cdn.jsdelivr.net/docsearch.js/2/docsearch.min.js"></script>
+        <script type="text/javascript" src="docsearch.min.js"></script>
         <script type="text/javascript">
           docsearch({
             apiKey: '3df93446658cd9c4e314d4c02a052188',
@@ -273,6 +277,8 @@ module.exports = {
 </div>
 
 
+
+
   <!-- Google Analytics  -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=UA-109068504-1"></script>
   <script>
@@ -284,7 +290,7 @@ module.exports = {
   </script>
 
 <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
-<script src="http://tailwindcss.com/assets/build/js/nav.js?id=b3eb7d558e0420f9b29c" defer></script>
+<script src="nav.js%3Fid=b3eb7d558e0420f9b29c" defer></script>
 
 </body>
 </html>

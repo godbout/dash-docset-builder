@@ -92,6 +92,22 @@ class TailwindCSSTest extends TestCase
     }
 
     /** @test */
+    public function the_tailwind_ui_early_access_alert_gets_removed_from_the_dash_docset_files()
+    {
+        $tailwindUIAlert = 'transition transform fixed z-100';
+
+        $this->assertStringContainsString(
+            $tailwindUIAlert,
+            Storage::get($this->docset->downloadedDirectory() .'/buttons.html')
+        );
+
+        $this->assertStringNotContainsString(
+            $tailwindUIAlert,
+            Storage::get($this->docset->innerDirectory() . '/buttons.html')
+        );
+    }
+
+    /** @test */
     public function the_CSS_gets_updated_in_the_dash_docset_files()
     {
         $crawler = HtmlPageCrawler::create(

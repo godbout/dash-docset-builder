@@ -23,8 +23,9 @@
 <meta property="og:description" content="Utilities for controlling the direction of flex items.">
 <meta property="og:image" content="https://tailwindcss.com/img/twitter-large-card.png">
   <link rel="stylesheet" href="https://rsms.me/inter/inter.css">
-  <link rel="stylesheet" href="http://tailwindcss.com/assets/build/css/main.css?id=da35c01d0ae8bad54242">
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/docsearch.js/2/docsearch.min.css">
+  <link rel="stylesheet" href="main.css%3Fid=4a7cbbbeb4816c16d9a7.css">
+  <link rel="stylesheet" href="docsearch.min.css">
+  <script src="alpine.js" defer></script>
 </head>
 <body data-sidebar-visible="true" class="text-gray-900 leading-normal pb-8">
 
@@ -54,7 +55,10 @@
           
           <div class="w-full">
             <div class="markdown mb-6 px-6 mx-auto">
-                              <a name="//apple_ref/cpp/Section/Top" class="dashAnchor"></a><h1>Flex Direction</h1>
+                              <a name="//apple_ref/cpp/Section/Top" class="dashAnchor"></a><h1 class="flex items-center">
+                  Flex Direction
+                  <!-- <span class="ml-4 text-teal-600 font-semibold text-base">v1.3.0+</span> -->
+                                  </h1>
               
                               <div class="mt-0 mb-4 text-gray-600">
                   Utilities for controlling the direction of flex items.
@@ -96,7 +100,7 @@
 <h2><a id="row" name="//apple_ref/cpp/Section/Row" class="dashAnchor"></a>Row</h2>
 <p>Use <code>.flex-row</code> to position flex items horizontally in the same direction as text:</p>
 <div class="relative overflow-hidden mb-8">
-  <div v-pre class="bg-white rounded-t-lg overflow-hidden border-t border-l border-r border-gray-400 p-4 ">
+  <div v-pre class="bg-white rounded-t-lg overflow-hidden border-t border-l border-r border-gray-400 p-4 " style="">
     <div class="flex flex-row bg-gray-200">
   <div class="text-gray-700 text-center bg-gray-400 px-4 py-2 m-2">1</div>
   <div class="text-gray-700 text-center bg-gray-400 px-4 py-2 m-2">2</div>
@@ -114,7 +118,7 @@
 <h2><a id="row-reversed" name="//apple_ref/cpp/Section/Row%20reversed" class="dashAnchor"></a>Row reversed</h2>
 <p>Use <code>.flex-row-reverse</code> to position flex items horizontally in the opposite direction:</p>
 <div class="relative overflow-hidden mb-8">
-  <div v-pre class="bg-white rounded-t-lg overflow-hidden border-t border-l border-r border-gray-400 p-4 ">
+  <div v-pre class="bg-white rounded-t-lg overflow-hidden border-t border-l border-r border-gray-400 p-4 " style="">
     <div class="flex flex-row-reverse bg-gray-200">
   <div class="text-gray-700 text-center bg-gray-400 px-4 py-2 m-2">1</div>
   <div class="text-gray-700 text-center bg-gray-400 px-4 py-2 m-2">2</div>
@@ -132,7 +136,7 @@
 <h2><a id="column" name="//apple_ref/cpp/Section/Column" class="dashAnchor"></a>Column</h2>
 <p>Use <code>.flex-col</code> to position flex items vertically:</p>
 <div class="relative overflow-hidden mb-8">
-  <div v-pre class="bg-white rounded-t-lg overflow-hidden border-t border-l border-r border-gray-400 p-4 ">
+  <div v-pre class="bg-white rounded-t-lg overflow-hidden border-t border-l border-r border-gray-400 p-4 " style="">
     <div class="flex flex-col bg-gray-200">
   <div class="text-gray-700 text-center bg-gray-400 px-4 py-2 m-2">1</div>
   <div class="text-gray-700 text-center bg-gray-400 px-4 py-2 m-2">2</div>
@@ -150,7 +154,7 @@
 <h2><a id="column-reversed" name="//apple_ref/cpp/Section/Column%20reversed" class="dashAnchor"></a>Column reversed</h2>
 <p>Use <code>.flex-col-reverse</code> to position flex items vertically in the opposite direction:</p>
 <div class="relative overflow-hidden mb-8">
-  <div v-pre class="bg-white rounded-t-lg overflow-hidden border-t border-l border-r border-gray-400 p-4 ">
+  <div v-pre class="bg-white rounded-t-lg overflow-hidden border-t border-l border-r border-gray-400 p-4 " style="">
     <div class="flex flex-col-reverse bg-gray-200">
   <div class="text-gray-700 text-center bg-gray-400 px-4 py-2 m-2">1</div>
   <div class="text-gray-700 text-center bg-gray-400 px-4 py-2 m-2">2</div>
@@ -167,7 +171,7 @@
 </div>
 <h2><a id="responsive" name="//apple_ref/cpp/Section/Responsive" class="dashAnchor"></a>Responsive</h2>
 <p>To apply a flex direction utility only at a specific breakpoint, add a <code>{screen}:</code> prefix to the existing class name. For example, adding the class <code>md:flex-row</code> to an element would apply the <code>flex-row</code> utility at medium screen sizes and above.</p>
-<p>For more information about Tailwind's responsive design features, check out the <a href="http://tailwindcss.com/docs/responsive-design">Responsive Design</a> documentation.</p>
+<p>For more information about Tailwind's responsive design features, check out the <a href="https://tailwindcss.com/docs/responsive-design">Responsive Design</a> documentation.</p>
 <div class="mt-8 v-cloak-hidden">
   <responsive-code-sample code='&lt;div class="none:flex-row sm:flex-col md:flex-row-reverse lg:flex-col-reverse xl:flex-row ..."&gt;
   <!-- ... -->
@@ -251,10 +255,10 @@
         </div>
         
 
-        <script src="http://tailwindcss.com/assets/build/js/app.js?id=1fa8281e8c1912520ff1"></script>
+        <script src="app.js%3Fid=f831c3cf79135651b6a5"></script>
 
         <!-- Algolia DocSearch  -->
-        <script type="text/javascript" src="https://cdn.jsdelivr.net/docsearch.js/2/docsearch.min.js"></script>
+        <script type="text/javascript" src="docsearch.min.js"></script>
         <script type="text/javascript">
           docsearch({
             apiKey: '3df93446658cd9c4e314d4c02a052188',
@@ -274,6 +278,8 @@
 </div>
 
 
+
+
   <!-- Google Analytics  -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=UA-109068504-1"></script>
   <script>
@@ -285,7 +291,7 @@
   </script>
 
 <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
-<script src="http://tailwindcss.com/assets/build/js/nav.js?id=b3eb7d558e0420f9b29c" defer></script>
+<script src="nav.js%3Fid=b3eb7d558e0420f9b29c" defer></script>
 
 </body>
 </html>

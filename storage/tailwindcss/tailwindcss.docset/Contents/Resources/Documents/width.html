@@ -23,8 +23,9 @@
 <meta property="og:description" content="Utilities for setting the width of an element">
 <meta property="og:image" content="https://tailwindcss.com/img/twitter-large-card.png">
   <link rel="stylesheet" href="https://rsms.me/inter/inter.css">
-  <link rel="stylesheet" href="http://tailwindcss.com/assets/build/css/main.css?id=da35c01d0ae8bad54242">
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/docsearch.js/2/docsearch.min.css">
+  <link rel="stylesheet" href="main.css%3Fid=4a7cbbbeb4816c16d9a7.css">
+  <link rel="stylesheet" href="docsearch.min.css">
+  <script src="alpine.js" defer></script>
 </head>
 <body data-sidebar-visible="true" class="text-gray-900 leading-normal pb-8">
 
@@ -54,7 +55,10 @@
           
           <div class="w-full">
             <div class="markdown mb-6 px-6 mx-auto">
-                              <a name="//apple_ref/cpp/Section/Top" class="dashAnchor"></a><h1>Width</h1>
+                              <a name="//apple_ref/cpp/Section/Top" class="dashAnchor"></a><h1 class="flex items-center">
+                  Width
+                  <!-- <span class="ml-4 text-teal-600 font-semibold text-base">v1.3.0+</span> -->
+                                  </h1>
               
                               <div class="mt-0 mb-4 text-gray-600">
                   Utilities for setting the width of an element
@@ -272,7 +276,7 @@
 <h2><a id="auto" name="//apple_ref/cpp/Section/Auto" class="dashAnchor"></a>Auto</h2>
 <p>Use <code>.w-auto</code> to let the browser calculate and select the width for the element.</p>
 <div class="relative overflow-hidden mb-8">
-  <div v-pre class="bg-white rounded-t-lg overflow-hidden border-t border-l border-r border-gray-400 p-4 ">
+  <div v-pre class="bg-white rounded-t-lg overflow-hidden border-t border-l border-r border-gray-400 p-4 " style="">
     <div class="w-auto bg-gray-400 mb-4 px-2">.w-auto on block element</div>
 <div class="w-auto inline-block bg-gray-400 px-2">.w-auto on inline-block element</div>
   </div>
@@ -284,7 +288,7 @@
 <h2><a id="screen-width" name="//apple_ref/cpp/Section/Screen%20Width" class="dashAnchor"></a>Screen Width</h2>
 <p>Use <code>.w-screen</code> to make an element span the entire width of the viewport.</p>
 <div class="relative overflow-hidden mb-8">
-  <div v-pre class="bg-white rounded-t-lg overflow-hidden border-t border-l border-r border-gray-400 p-4 overflow-x-scroll">
+  <div v-pre class="bg-white rounded-t-lg overflow-hidden border-t border-l border-r border-gray-400 p-4 overflow-x-scroll" style="">
     <div class="w-screen bg-gray-400 h-4"></div>
   </div>
   <div v-pre class="rounded-b-lg bg-gray-800">
@@ -294,7 +298,7 @@
 <h2><a id="fixed-width" name="//apple_ref/cpp/Section/Fixed%20Width" class="dashAnchor"></a>Fixed Width</h2>
 <p>Use <code>.w-{number}</code> or <code>.w-px</code> to set an element to a fixed width.</p>
 <div class="relative overflow-hidden mb-8">
-  <div v-pre class="bg-white rounded-t-lg overflow-hidden border-t border-l border-r border-gray-400 p-4 ">
+  <div v-pre class="bg-white rounded-t-lg overflow-hidden border-t border-l border-r border-gray-400 p-4 " style="">
     <div class="flex items-center mb-1">
   <p class="text-sm text-gray-600 w-12 mr-2">.w-0</p>
   <div class="h-4 bg-gray-400 w-0"></div>
@@ -397,7 +401,7 @@
 <h2><a id="fluid-width" name="//apple_ref/cpp/Section/Fluid%20Width" class="dashAnchor"></a>Fluid Width</h2>
 <p>Use <code>.w-{fraction}</code> or <code>.w-full</code> to set an element to a percentage based width.</p>
 <div class="relative overflow-hidden mb-8">
-  <div v-pre class="bg-white rounded-t-lg overflow-hidden border-t border-l border-r border-gray-400 p-4 ">
+  <div v-pre class="bg-white rounded-t-lg overflow-hidden border-t border-l border-r border-gray-400 p-4 " style="">
     <div class="bg-gray-200 p-4">
   <div class="flex mb-4">
     <div class="w-1/2 p-2 bg-gray-400 text-center">.w-1/2</div>
@@ -458,7 +462,7 @@
 </div>
 <h2><a id="responsive" name="//apple_ref/cpp/Section/Responsive" class="dashAnchor"></a>Responsive</h2>
 <p>To control the width of an element at a specific breakpoint, add a <code>{screen}:</code> prefix to any existing width utility. For example, adding the class <code>md:w-full</code> to an element would apply the <code>w-full</code> utility at medium screen sizes and above.</p>
-<p>For more information about Tailwind's responsive design features, check out the <a href="http://tailwindcss.com/docs/responsive-design">Responsive Design</a> documentation.</p>
+<p>For more information about Tailwind's responsive design features, check out the <a href="https://tailwindcss.com/docs/responsive-design">Responsive Design</a> documentation.</p>
 <div class="mt-8 v-cloak-hidden">
   <responsive-code-sample code='&lt;div class="bg-gray-400 p-4 text-center"&gt;
   &lt;div class="none:w-1/2 sm:w-auto md:w-full lg:w-32 xl:w-3/4 ..."&gt;
@@ -589,10 +593,10 @@
         </div>
         
 
-        <script src="http://tailwindcss.com/assets/build/js/app.js?id=1fa8281e8c1912520ff1"></script>
+        <script src="app.js%3Fid=f831c3cf79135651b6a5"></script>
 
         <!-- Algolia DocSearch  -->
-        <script type="text/javascript" src="https://cdn.jsdelivr.net/docsearch.js/2/docsearch.min.js"></script>
+        <script type="text/javascript" src="docsearch.min.js"></script>
         <script type="text/javascript">
           docsearch({
             apiKey: '3df93446658cd9c4e314d4c02a052188',
@@ -612,6 +616,8 @@
 </div>
 
 
+
+
   <!-- Google Analytics  -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=UA-109068504-1"></script>
   <script>
@@ -623,7 +629,7 @@
   </script>
 
 <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
-<script src="http://tailwindcss.com/assets/build/js/nav.js?id=b3eb7d558e0420f9b29c" defer></script>
+<script src="nav.js%3Fid=b3eb7d558e0420f9b29c" defer></script>
 
 </body>
 </html>

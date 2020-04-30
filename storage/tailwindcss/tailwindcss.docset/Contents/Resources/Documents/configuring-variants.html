@@ -23,8 +23,9 @@
 <meta property="og:description" content="Configuring which utility variants are enabled in your project.">
 <meta property="og:image" content="https://tailwindcss.com/img/twitter-large-card.png">
   <link rel="stylesheet" href="https://rsms.me/inter/inter.css">
-  <link rel="stylesheet" href="http://tailwindcss.com/assets/build/css/main.css?id=da35c01d0ae8bad54242">
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/docsearch.js/2/docsearch.min.css">
+  <link rel="stylesheet" href="main.css%3Fid=4a7cbbbeb4816c16d9a7.css">
+  <link rel="stylesheet" href="docsearch.min.css">
+  <script src="alpine.js" defer></script>
 </head>
 <body data-sidebar-visible="true" class="text-gray-900 leading-normal pb-8">
 
@@ -54,7 +55,10 @@
           
           <div class="w-full">
             <div class="markdown mb-6 px-6 mx-auto">
-                              <a name="//apple_ref/cpp/Section/Top" class="dashAnchor"></a><h1>Configuring Variants</h1>
+                              <a name="//apple_ref/cpp/Section/Top" class="dashAnchor"></a><h1 class="flex items-center">
+                  Configuring Variants
+                  <!-- <span class="ml-4 text-teal-600 font-semibold text-base">v1.3.0+</span> -->
+                                  </h1>
               
                               <div class="mt-0 mb-4 text-gray-600">
                   Configuring which utility variants are enabled in your project.
@@ -64,7 +68,7 @@
             <div class="flex">
               <div class="markdown px-6 w-full mx-auto">
                 <h2 style="font-size: 0" class="invisible m-0 -mb-6"><a id="overview" name="//apple_ref/cpp/Section/Overview" class="dashAnchor"></a>Overview</h2>
-<p>The <code>variants</code> section of your <code>tailwind.config.js</code> file is where you control which core utility plugins should have <a href="http://tailwindcss.com/docs/responsive-design">responsive variants</a> and <a href="pseudo-class-variants.html">pseudo-class variants</a> generated.</p>
+<p>The <code>variants</code> section of your <code>tailwind.config.js</code> file is where you control which core utility plugins should have <a href="https://tailwindcss.com/docs/responsive-design">responsive variants</a> and <a href="pseudo-class-variants.html">pseudo-class variants</a> generated.</p>
 <pre><code class="language-js">// tailwind.config.js
 module.exports = {
   variants: {
@@ -153,7 +157,7 @@ module.exports = {
 <pre><code class="language-html">&lt;input class="focus:bg-white hover:bg-black focus:border-white hover:border-black"&gt;</code></pre>
 <p>...if the input was hovered <em>and</em> focused at the same time, the background would be white but the border would be black.</p>
 <p>Generally, we recommend the following order for the built-in variants, although you are free to use whatever order makes the most sense for your own project:</p>
-<pre><code class="language-js">['responsive', 'group-hover', 'focus-within', 'first', 'last', 'odd', 'even', 'hover', 'focus', 'active', 'visited', 'disabled']</code></pre>
+<pre><code class="language-js">['responsive', 'group-hover', 'group-focus', 'focus-within', 'first', 'last', 'odd', 'even', 'hover', 'focus', 'active', 'visited', 'disabled']</code></pre>
 <h3><a id="the-responsive-variant" name="//apple_ref/cpp/Section/The%20responsive%20variant" class="dashAnchor"></a>The responsive variant</h3>
 <p>The <code>responsive</code> variant is the only variant that is <em>not</em> impacted by the order you list in your variants configuration.</p>
 <p>This is because the <code>responsive</code> variant automatically <em>stacks</em> with pseudo-class variants, meaning that if you specify both <code>responsive</code> and <code>hover</code> variants for a utility, Tailwind will generate <em>responsive hover</em> variants as well:</p>
@@ -306,11 +310,13 @@ module.exports = {
     appearance: ['responsive'],
     backgroundAttachment: ['responsive'],
     backgroundColor: ['responsive', 'hover', 'focus'],
+    backgroundOpacity: ['responsive', 'hover', 'focus'],
     backgroundPosition: ['responsive'],
     backgroundRepeat: ['responsive'],
     backgroundSize: ['responsive'],
     borderCollapse: ['responsive'],
     borderColor: ['responsive', 'hover', 'focus'],
+    borderOpacity: ['responsive', 'hover', 'focus'],
     borderRadius: ['responsive'],
     borderStyle: ['responsive'],
     borderWidth: ['responsive'],
@@ -319,6 +325,9 @@ module.exports = {
     clear: ['responsive'],
     cursor: ['responsive'],
     display: ['responsive'],
+    divideColor: ['responsive'],
+    divideOpacity: ['responsive'],
+    divideWidth: ['responsive'],
     fill: ['responsive'],
     flex: ['responsive'],
     flexDirection: ['responsive'],
@@ -361,21 +370,25 @@ module.exports = {
     overflow: ['responsive'],
     padding: ['responsive'],
     placeholderColor: ['responsive', 'focus'],
+    placeholderOpacity: ['responsive', 'focus'],
     pointerEvents: ['responsive'],
     position: ['responsive'],
     resize: ['responsive'],
     rotate: ['responsive', 'hover', 'focus'],
     scale: ['responsive', 'hover', 'focus'],
     skew: ['responsive', 'hover', 'focus'],
+    space: ['responsive'],
     stroke: ['responsive'],
     strokeWidth: ['responsive'],
     tableLayout: ['responsive'],
     textAlign: ['responsive'],
     textColor: ['responsive', 'hover', 'focus'],
     textDecoration: ['responsive', 'hover', 'focus'],
+    textOpacity: ['responsive', 'hover', 'focus'],
     textTransform: ['responsive'],
     transform: ['responsive'],
     transformOrigin: ['responsive'],
+    transitionDelay: ['responsive'],
     transitionDuration: ['responsive'],
     transitionProperty: ['responsive'],
     transitionTimingFunction: ['responsive'],
@@ -402,10 +415,10 @@ module.exports = {
         </div>
         
 
-        <script src="http://tailwindcss.com/assets/build/js/app.js?id=1fa8281e8c1912520ff1"></script>
+        <script src="app.js%3Fid=f831c3cf79135651b6a5"></script>
 
         <!-- Algolia DocSearch  -->
-        <script type="text/javascript" src="https://cdn.jsdelivr.net/docsearch.js/2/docsearch.min.js"></script>
+        <script type="text/javascript" src="docsearch.min.js"></script>
         <script type="text/javascript">
           docsearch({
             apiKey: '3df93446658cd9c4e314d4c02a052188',
@@ -425,6 +438,8 @@ module.exports = {
 </div>
 
 
+
+
   <!-- Google Analytics  -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=UA-109068504-1"></script>
   <script>
@@ -436,7 +451,7 @@ module.exports = {
   </script>
 
 <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
-<script src="http://tailwindcss.com/assets/build/js/nav.js?id=b3eb7d558e0420f9b29c" defer></script>
+<script src="nav.js%3Fid=b3eb7d558e0420f9b29c" defer></script>
 
 </body>
 </html>

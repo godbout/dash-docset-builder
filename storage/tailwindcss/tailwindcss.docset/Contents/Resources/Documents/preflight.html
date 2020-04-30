@@ -23,8 +23,9 @@
 <meta property="og:description" content="An opinionated set of base styles for Tailwind projects.">
 <meta property="og:image" content="https://tailwindcss.com/img/twitter-large-card.png">
   <link rel="stylesheet" href="https://rsms.me/inter/inter.css">
-  <link rel="stylesheet" href="http://tailwindcss.com/assets/build/css/main.css?id=da35c01d0ae8bad54242">
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/docsearch.js/2/docsearch.min.css">
+  <link rel="stylesheet" href="main.css%3Fid=4a7cbbbeb4816c16d9a7.css">
+  <link rel="stylesheet" href="docsearch.min.css">
+  <script src="alpine.js" defer></script>
 </head>
 <body data-sidebar-visible="true" class="text-gray-900 leading-normal pb-8">
 
@@ -54,7 +55,10 @@
           
           <div class="w-full">
             <div class="markdown mb-6 px-6 mx-auto">
-                              <a name="//apple_ref/cpp/Section/Top" class="dashAnchor"></a><h1>Preflight</h1>
+                              <a name="//apple_ref/cpp/Section/Top" class="dashAnchor"></a><h1 class="flex items-center">
+                  Preflight
+                  <!-- <span class="ml-4 text-teal-600 font-semibold text-base">v1.3.0+</span> -->
+                                  </h1>
               
                               <div class="mt-0 mb-4 text-gray-600">
                   An opinionated set of base styles for Tailwind projects.
@@ -108,7 +112,7 @@ h6 {
 <li><strong>It helps you avoid accidentally deviating from your type scale</strong>. By default, the browsers assigns sizes to headings that don't exist in Tailwind's default type scale, and aren't guaranteed to exist in your own type scale.</li>
 <li><strong>In UI development, headings should often be visually de-emphasized</strong>. Making headings unstyled by default means any styling you apply to headings happens consciously and deliberately.</li>
 </ul>
-<p>You can always add default header styles to your project by <a href="http://tailwindcss.com/docs/adding-base-styles">adding your own base styles</a>.</p>
+<p>You can always add default header styles to your project by <a href="adding-base-styles.html">adding your own base styles</a>.</p>
 <hr>
 <h2><a id="lists-are-unstyled" name="//apple_ref/cpp/Section/Lists%20are%20unstyled" class="dashAnchor"></a>Lists are unstyled</h2>
 <p>Ordered and unordered lists are unstyled by default, with no bullets/numbers and no margin or padding.</p>
@@ -124,7 +128,7 @@ ul {
   &lt;li&gt;Two&lt;/li&gt;
   &lt;li&gt;Three&lt;/li&gt;
 &lt;/ul&gt;</code></pre>
-<p>You can always add default list styles to your project by <a href="http://tailwindcss.com/docs/adding-base-styles">adding your own base styles</a>.</p>
+<p>You can always add default list styles to your project by <a href="adding-base-styles.html">adding your own base styles</a>.</p>
 <hr>
 <h2><a id="images-are-block-level" name="//apple_ref/cpp/Section/Images%20are%20block-level" class="dashAnchor"></a>Images are block-level</h2>
 <p>Images and other replaced elements (like <code>svg</code>, <code>video</code>, <code>canvas</code>, and others) are <code>display: block</code> by default.</p>
@@ -179,7 +183,7 @@ a {
 @tailwind components;
 
 @tailwind utilities;</code></pre>
-<p>Learn more in the <a href="http://tailwindcss.com/docs/adding-base-styles">adding base styles documentation</a>.</p>
+<p>Learn more in the <a href="adding-base-styles.html">adding base styles documentation</a>.</p>
 <hr>
 <h2><a id="disabling-preflight" name="//apple_ref/cpp/Section/Disabling%20Preflight" class="dashAnchor"></a>Disabling Preflight</h2>
 <p>If you'd like to completely disable Preflight &mdash; perhaps because you're integrating Tailwind into an existing project or because you'd like to provide your own base styles &mdash; all you need to do is set <code>preflight</code> to <code>false</code> in the <code>corePlugins</code> section of your <code>tailwind.config.js</code> file:</p>
@@ -208,10 +212,10 @@ a {
         </div>
         
 
-        <script src="http://tailwindcss.com/assets/build/js/app.js?id=1fa8281e8c1912520ff1"></script>
+        <script src="app.js%3Fid=f831c3cf79135651b6a5"></script>
 
         <!-- Algolia DocSearch  -->
-        <script type="text/javascript" src="https://cdn.jsdelivr.net/docsearch.js/2/docsearch.min.js"></script>
+        <script type="text/javascript" src="docsearch.min.js"></script>
         <script type="text/javascript">
           docsearch({
             apiKey: '3df93446658cd9c4e314d4c02a052188',
@@ -231,6 +235,8 @@ a {
 </div>
 
 
+
+
   <!-- Google Analytics  -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=UA-109068504-1"></script>
   <script>
@@ -242,7 +248,7 @@ a {
   </script>
 
 <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
-<script src="http://tailwindcss.com/assets/build/js/nav.js?id=b3eb7d558e0420f9b29c" defer></script>
+<script src="nav.js%3Fid=b3eb7d558e0420f9b29c" defer></script>
 
 </body>
 </html>

@@ -18,7 +18,8 @@ class TailwindCSS extends BaseDocset
     public const ICON_16 = 'favicon-16x16.png';
     public const ICON_32 = 'favicon-32x32.png';
     public const EXTERNAL_DOMAINS = [
-        'refactoring-ui.nyc3.cdn.digitaloceanspaces.com'
+        'refactoring-ui.nyc3.cdn.digitaloceanspaces.com',
+        'jsdelivr.net'
     ];
 
     public function entries(string $file): Collection
@@ -154,6 +155,7 @@ class TailwindCSS extends BaseDocset
         $this->removeNavbarAndHeader($crawler);
         $this->removeLeftSidebar($crawler);
         $this->removeRightSidebar($crawler);
+        $this->removeTailwindUIAlert($crawler);
         $this->updateCSS($crawler);
         $this->insertDashTableOfContents($crawler);
 
@@ -173,6 +175,11 @@ class TailwindCSS extends BaseDocset
     protected function removeRightSidebar(HtmlPageCrawler $crawler)
     {
         $crawler->filter('#app div.flex > div.hidden')->remove();
+    }
+
+    protected function removeTailwindUIAlert(HtmlPageCrawler $crawler)
+    {
+        $crawler->filter('body > div.transition.transform.fixed.z-100')->remove();
     }
 
     protected function updateCSS(HtmlPageCrawler $crawler)

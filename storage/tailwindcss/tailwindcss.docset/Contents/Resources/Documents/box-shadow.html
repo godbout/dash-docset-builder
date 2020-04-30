@@ -23,8 +23,9 @@
 <meta property="og:description" content="Utilities for controlling the box shadow of an element.">
 <meta property="og:image" content="https://tailwindcss.com/img/twitter-large-card.png">
   <link rel="stylesheet" href="https://rsms.me/inter/inter.css">
-  <link rel="stylesheet" href="http://tailwindcss.com/assets/build/css/main.css?id=da35c01d0ae8bad54242">
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/docsearch.js/2/docsearch.min.css">
+  <link rel="stylesheet" href="main.css%3Fid=4a7cbbbeb4816c16d9a7.css">
+  <link rel="stylesheet" href="docsearch.min.css">
+  <script src="alpine.js" defer></script>
 </head>
 <body data-sidebar-visible="true" class="text-gray-900 leading-normal pb-8">
 
@@ -54,7 +55,10 @@
           
           <div class="w-full">
             <div class="markdown mb-6 px-6 mx-auto">
-                              <a name="//apple_ref/cpp/Section/Top" class="dashAnchor"></a><h1>Box Shadow</h1>
+                              <a name="//apple_ref/cpp/Section/Top" class="dashAnchor"></a><h1 class="flex items-center">
+                  Box Shadow
+                  <!-- <span class="ml-4 text-teal-600 font-semibold text-base">v1.3.0+</span> -->
+                                  </h1>
               
                               <div class="mt-0 mb-4 text-gray-600">
                   Utilities for controlling the box shadow of an element.
@@ -118,9 +122,9 @@
   </div>
 </div>
 <h2><a id="outer-shadow" name="//apple_ref/cpp/Section/Outer%20shadow" class="dashAnchor"></a>Outer shadow</h2>
-<p>Use the <code>.shadow-sm</code>, <code>.shadow</code>, <code>.shadow-md</code>, <code>.shadow-lg</code>, <code>.shadow-xl</code>, or <code>.shadow-2xl</code> utilities to apply different sized outer box shadows to an element.</p>
+<p>Use the <code>.shadow-xs</code>, <code>.shadow-sm</code>, <code>.shadow</code>, <code>.shadow-md</code>, <code>.shadow-lg</code>, <code>.shadow-xl</code>, or <code>.shadow-2xl</code> utilities to apply different sized outer box shadows to an element.</p>
 <div class="relative overflow-hidden mb-8">
-  <div v-pre class="bg-white rounded-t-lg overflow-hidden border-t border-l border-r border-gray-400 p-4 bg-gray-100 lg:flex justify-around items-center text-sm py-8">
+  <div v-pre class="bg-white rounded-t-lg overflow-hidden border-t border-l border-r border-gray-400 p-4 bg-gray-100 lg:flex justify-around items-center text-sm py-8" style="">
     <div class="text-center px-2">
   <div class="mb-1 text-xs text-gray-600">xs</div>
   <div class="mx-auto h-6 w-6 text-xs bg-white rounded shadow-xs"></div>
@@ -139,7 +143,7 @@
 </div>
 <div class="mt-6 lg:mt-0 text-center px-2">
   <div class="mb-1 text-xs text-gray-600">lg</div>
-  <div class="mx-auto h-16 w-16 text-xs bg-white rounded shadow-md"></div>
+  <div class="mx-auto h-16 w-16 text-xs bg-white rounded shadow-lg"></div>
 </div>
 <div class="mt-6 lg:mt-0 text-center px-2">
   <div class="mb-1 text-xs text-gray-600">xl</div>
@@ -151,7 +155,8 @@
 </div>
   </div>
   <div v-pre class="rounded-b-lg bg-gray-800">
-    <pre class="scrollbar-none m-0 p-0 language-html"><code class="inline-block p-4 scrolling-touch">&lt;div class="shadow-sm"&gt;&lt;/div&gt;
+    <pre class="scrollbar-none m-0 p-0 language-html"><code class="inline-block p-4 scrolling-touch">&lt;div class="shadow-xs"&gt;&lt;/div&gt;
+&lt;div class="shadow-sm"&gt;&lt;/div&gt;
 &lt;div class="shadow"&gt;&lt;/div&gt;
 &lt;div class="shadow-md"&gt;&lt;/div&gt;
 &lt;div class="shadow-lg"&gt;&lt;/div&gt;
@@ -162,7 +167,7 @@
 <h2><a id="inner-shadow" name="//apple_ref/cpp/Section/Inner%20shadow" class="dashAnchor"></a>Inner shadow</h2>
 <p>Use the <code>.shadow-inner</code> utility to apply a subtle inset box shadow to an element. This can be useful for things like form controls or wells.</p>
 <div class="relative overflow-hidden mb-8">
-  <div v-pre class="bg-white rounded-t-lg overflow-hidden border-t border-l border-r border-gray-400 p-4 flex justify-around text-sm py-8">
+  <div v-pre class="bg-white rounded-t-lg overflow-hidden border-t border-l border-r border-gray-400 p-4 flex justify-around text-sm py-8" style="">
     <div class="rounded p-4 bg-gray-200 shadow-inner">.shadow-inner</div>
   </div>
   <div v-pre class="rounded-b-lg bg-gray-800">
@@ -172,7 +177,7 @@
 <h2><a id="focus-outline-shadow" name="//apple_ref/cpp/Section/Focus%20outline%20shadow" class="dashAnchor"></a>Focus outline shadow</h2>
 <p>Use the <code>.shadow-outline</code> utility to apply a focus-ring-style shadow to an element. This can be useful when combined with <code>.focus:outline-none</code> to create a better looking focus style that follows an element's border radius.</p>
 <div class="relative overflow-hidden mb-8">
-  <div v-pre class="bg-white rounded-t-lg overflow-hidden border-t border-l border-r border-gray-400 p-4 flex justify-center text-sm py-8">
+  <div v-pre class="bg-white rounded-t-lg overflow-hidden border-t border-l border-r border-gray-400 p-4 flex justify-center text-sm py-8" style="">
     <button class="focus:outline-none focus:shadow-outline bg-blue-500 hover:bg-blue-600 text-white font-bold py-2 px-4 rounded w-32 mr-6">
   Unfocused
 </button>
@@ -189,7 +194,7 @@
 <h2><a id="no-shadow" name="//apple_ref/cpp/Section/No%20shadow" class="dashAnchor"></a>No shadow</h2>
 <p>Use <code>.shadow-none</code> to remove an existing box shadow from an element. This is most commonly used to remove a shadow that was applied at a smaller breakpoint.</p>
 <div class="relative overflow-hidden mb-8">
-  <div v-pre class="bg-white rounded-t-lg overflow-hidden border-t border-l border-r border-gray-400 p-4 flex justify-around text-sm py-8">
+  <div v-pre class="bg-white rounded-t-lg overflow-hidden border-t border-l border-r border-gray-400 p-4 flex justify-around text-sm py-8" style="">
     <div class="rounded p-4 shadow-none bg-gray-200">.shadow-none</div>
   </div>
   <div v-pre class="rounded-b-lg bg-gray-800">
@@ -198,7 +203,7 @@
 </div>
 <h2><a id="responsive" name="//apple_ref/cpp/Section/Responsive" class="dashAnchor"></a>Responsive</h2>
 <p>To control the shadow of an element at a specific breakpoint, add a <code>{screen}:</code> prefix to any existing shadow utility. For example, use <code>md:shadow-lg</code> to apply the <code>shadow-lg</code> utility at only medium screen sizes and above.</p>
-<p>For more information about Tailwind's responsive design features, check out the <a href="http://tailwindcss.com/docs/responsive-design">Responsive Design</a> documentation.</p>
+<p>For more information about Tailwind's responsive design features, check out the <a href="https://tailwindcss.com/docs/responsive-design">Responsive Design</a> documentation.</p>
 <div class="mt-8 v-cloak-hidden">
   <responsive-code-sample code='&lt;div class="none:shadow sm:shadow-md md:shadow-lg lg:shadow-xl xl:shadow-2xl ..."&gt;
   <!-- ... -->
@@ -292,10 +297,10 @@
         </div>
         
 
-        <script src="http://tailwindcss.com/assets/build/js/app.js?id=1fa8281e8c1912520ff1"></script>
+        <script src="app.js%3Fid=f831c3cf79135651b6a5"></script>
 
         <!-- Algolia DocSearch  -->
-        <script type="text/javascript" src="https://cdn.jsdelivr.net/docsearch.js/2/docsearch.min.js"></script>
+        <script type="text/javascript" src="docsearch.min.js"></script>
         <script type="text/javascript">
           docsearch({
             apiKey: '3df93446658cd9c4e314d4c02a052188',
@@ -315,6 +320,8 @@
 </div>
 
 
+
+
   <!-- Google Analytics  -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=UA-109068504-1"></script>
   <script>
@@ -326,7 +333,7 @@
   </script>
 
 <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
-<script src="http://tailwindcss.com/assets/build/js/nav.js?id=b3eb7d558e0420f9b29c" defer></script>
+<script src="nav.js%3Fid=b3eb7d558e0420f9b29c" defer></script>
 
 </body>
 </html>

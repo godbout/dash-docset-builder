@@ -1,0 +1,1512 @@
+<!DOCTYPE html>
+<html lang="en" class="bg-white antialiased">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+  <link rel="manifest" href="manifest.json">
+  <link rel="mask-icon" href="safari-pinned-tab.svg" color="#00b4b6">
+  <title>Divide Color - Tailwind CSS</title>
+  <meta name="theme-color" content="#ffffff">
+  <meta name="twitter:card" content="summary">
+<meta name="twitter:site" content="@tailwindcss">
+<meta name="twitter:title" content="Divide Color - Tailwind CSS">
+<meta name="twitter:description" content="Utilities for controlling the border color between elements.">
+<meta name="twitter:image" content="https://tailwindcss.com/img/tailwind-twitter-square.png">
+<meta name="twitter:creator" content="@tailwindcss">
+<meta property="og:url" content="https://tailwindcss.com/">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Divide Color - Tailwind CSS">
+<meta property="og:description" content="Utilities for controlling the border color between elements.">
+<meta property="og:image" content="https://tailwindcss.com/img/twitter-large-card.png">
+  <link rel="stylesheet" href="https://rsms.me/inter/inter.css">
+  <link rel="stylesheet" href="main.css%3Fid=4a7cbbbeb4816c16d9a7.css">
+  <link rel="stylesheet" href="docsearch.min.css">
+  <script src="alpine.js" defer></script>
+</head>
+<body data-sidebar-visible="true" class="text-gray-900 leading-normal pb-8">
+
+
+
+
+
+
+
+
+<div class="w-full mx-auto px-6">
+  <div class="lg:flex -mx-6">
+
+    
+    
+    
+
+    
+    <div id="content-wrapper" class="min-h-screen w-full">
+
+      
+      <div id="content">
+
+        
+        <div id="app" class="flex" v-cloak>
+
+          
+          <div class="w-full">
+            <div class="markdown mb-6 px-6 mx-auto">
+                              <a name="//apple_ref/cpp/Section/Top" class="dashAnchor"></a><h1 class="flex items-center">
+                  Divide Color
+                  <!-- <span class="ml-4 text-teal-600 font-semibold text-base">v1.3.0+</span> -->
+                                    <span class="ml-3 inline-flex items-center px-3 py-1 rounded-full text-sm font-medium leading-4 bg-green-150 text-green-900">
+                    v1.3.0+
+                  </span>
+                                  </h1>
+              
+                              <div class="mt-0 mb-4 text-gray-600">
+                  Utilities for controlling the border color between elements.
+                </div>
+                                        </div>
+            <div class="flex">
+              <div class="markdown px-6 w-full mx-auto">
+                <h2 style="visibility: hidden; font-size: 0; margin: 0;"><a id="class-reference" name="//apple_ref/cpp/Section/Class%20reference" class="dashAnchor"></a>Class reference</h2>
+<div class="border-t border-b border-gray-300 overflow-hidden relative">
+  <div class="lg:max-h-xs overflow-y-auto scrollbar-w-2 scrollbar-track-gray-lighter scrollbar-thumb-rounded scrollbar-thumb-gray scrolling-touch">
+    <table class="relative w-full text-left table-collapse">
+      <thead>
+        <tr>
+          <th class="z-20 sticky top-0 text-sm font-semibold text-gray-700 bg-gray-100 p-0">
+            <div class="p-2 border-b border-gray-300">Class</div>
+          </th>
+          <th class="relative z-20 sticky top-0 text-sm font-semibold text-gray-700 bg-gray-100 p-0" colspan="2">
+            <div class="sm:hidden absolute inset-0 p-2 border-b border-gray-300"></div>
+            <div class="hidden sm:block p-2 border-b border-gray-300">Properties</div>
+          </th>
+        </tr>
+      </thead>
+      <tbody class="align-baseline">
+                <tr>
+          <td class="p-2  font-mono text-xs text-purple-700 whitespace-no-wrap">
+          .divide-transparent
+          <span class="ml-1 text-purple-300">&gt; * + *</span>
+          </td>
+          <td class="hidden sm:table-cell p-2  font-mono text-xs text-blue-700 whitespace-pre">border-color: transparent;</td>
+          <td class="relative w-20 p-2  font-mono text-xs text-blue-700 whitespace-pre">
+            <div class="absolute inset-0 flex flex-col m-2 divide-y divide-transparent">
+              <div class="flex-1"></div>
+              <div class="flex-1"></div>
+            </div>
+          </td>
+        </tr>
+                <tr>
+          <td class="p-2 border-t border-gray-200 font-mono text-xs text-purple-700 whitespace-no-wrap">
+          .divide-current
+          <span class="ml-1 text-purple-300">&gt; * + *</span>
+          </td>
+          <td class="hidden sm:table-cell p-2 border-t border-gray-200 font-mono text-xs text-blue-700 whitespace-pre">border-color: currentColor;</td>
+          <td class="relative w-20 p-2 border-t border-gray-200 font-mono text-xs text-blue-700 whitespace-pre">
+            <div class="absolute inset-0 flex flex-col m-2 divide-y divide-current">
+              <div class="flex-1"></div>
+              <div class="flex-1"></div>
+            </div>
+          </td>
+        </tr>
+                <tr>
+          <td class="p-2 border-t border-gray-200 font-mono text-xs text-purple-700 whitespace-no-wrap">
+          .divide-black
+          <span class="ml-1 text-purple-300">&gt; * + *</span>
+          </td>
+          <td class="hidden sm:table-cell p-2 border-t border-gray-200 font-mono text-xs text-blue-700 whitespace-pre">border-color: #000;</td>
+          <td class="relative w-20 p-2 border-t border-gray-200 font-mono text-xs text-blue-700 whitespace-pre">
+            <div class="absolute inset-0 flex flex-col m-2 divide-y divide-black">
+              <div class="flex-1"></div>
+              <div class="flex-1"></div>
+            </div>
+          </td>
+        </tr>
+                <tr>
+          <td class="p-2 border-t border-gray-200 font-mono text-xs text-purple-700 whitespace-no-wrap">
+          .divide-white
+          <span class="ml-1 text-purple-300">&gt; * + *</span>
+          </td>
+          <td class="hidden sm:table-cell p-2 border-t border-gray-200 font-mono text-xs text-blue-700 whitespace-pre">border-color: #fff;</td>
+          <td class="relative w-20 p-2 border-t border-gray-200 font-mono text-xs text-blue-700 whitespace-pre">
+            <div class="absolute inset-0 flex flex-col m-2 divide-y divide-white">
+              <div class="flex-1"></div>
+              <div class="flex-1"></div>
+            </div>
+          </td>
+        </tr>
+                <tr>
+          <td class="p-2 border-t border-gray-200 font-mono text-xs text-purple-700 whitespace-no-wrap">
+          .divide-gray-100
+          <span class="ml-1 text-purple-300">&gt; * + *</span>
+          </td>
+          <td class="hidden sm:table-cell p-2 border-t border-gray-200 font-mono text-xs text-blue-700 whitespace-pre">border-color: #f7fafc;</td>
+          <td class="relative w-20 p-2 border-t border-gray-200 font-mono text-xs text-blue-700 whitespace-pre">
+            <div class="absolute inset-0 flex flex-col m-2 divide-y divide-gray-100">
+              <div class="flex-1"></div>
+              <div class="flex-1"></div>
+            </div>
+          </td>
+        </tr>
+                <tr>
+          <td class="p-2 border-t border-gray-200 font-mono text-xs text-purple-700 whitespace-no-wrap">
+          .divide-gray-200
+          <span class="ml-1 text-purple-300">&gt; * + *</span>
+          </td>
+          <td class="hidden sm:table-cell p-2 border-t border-gray-200 font-mono text-xs text-blue-700 whitespace-pre">border-color: #edf2f7;</td>
+          <td class="relative w-20 p-2 border-t border-gray-200 font-mono text-xs text-blue-700 whitespace-pre">
+            <div class="absolute inset-0 flex flex-col m-2 divide-y divide-gray-200">
+              <div class="flex-1"></div>
+              <div class="flex-1"></div>
+            </div>
+          </td>
+        </tr>
+                <tr>
+          <td class="p-2 border-t border-gray-200 font-mono text-xs text-purple-700 whitespace-no-wrap">
+          .divide-gray-300
+          <span class="ml-1 text-purple-300">&gt; * + *</span>
+          </td>
+          <td class="hidden sm:table-cell p-2 border-t border-gray-200 font-mono text-xs text-blue-700 whitespace-pre">border-color: #e2e8f0;</td>
+          <td class="relative w-20 p-2 border-t border-gray-200 font-mono text-xs text-blue-700 whitespace-pre">
+            <div class="absolute inset-0 flex flex-col m-2 divide-y divide-gray-300">
+              <div class="flex-1"></div>
+              <div class="flex-1"></div>
+            </div>
+          </td>
+        </tr>
+                <tr>
+          <td class="p-2 border-t border-gray-200 font-mono text-xs text-purple-700 whitespace-no-wrap">
+          .divide-gray-400
+          <span class="ml-1 text-purple-300">&gt; * + *</span>
+          </td>
+          <td class="hidden sm:table-cell p-2 border-t border-gray-200 font-mono text-xs text-blue-700 whitespace-pre">border-color: #cbd5e0;</td>
+          <td class="relative w-20 p-2 border-t border-gray-200 font-mono text-xs text-blue-700 whitespace-pre">
+            <div class="absolute inset-0 flex flex-col m-2 divide-y divide-gray-400">
+              <div class="flex-1"></div>
+              <div class="flex-1"></div>
+            </div>
+          </td>
+        </tr>
+                <tr>
+          <td class="p-2 border-t border-gray-200 font-mono text-xs text-purple-700 whitespace-no-wrap">
+          .divide-gray-500
+          <span class="ml-1 text-purple-300">&gt; * + *</span>
+          </td>
+          <td class="hidden sm:table-cell p-2 border-t border-gray-200 font-mono text-xs text-blue-700 whitespace-pre">border-color: #a0aec0;</td>
+          <td class="relative w-20 p-2 border-t border-gray-200 font-mono text-xs text-blue-700 whitespace-pre">
+            <div class="absolute inset-0 flex flex-col m-2 divide-y divide-gray-500">
+              <div class="flex-1"></div>
+              <div class="flex-1"></div>
+            </div>
+          </td>
+        </tr>
+                <tr>
+          <td class="p-2 border-t border-gray-200 font-mono text-xs text-purple-700 whitespace-no-wrap">
+          .divide-gray-600
+          <span class="ml-1 text-purple-300">&gt; * + *</span>
+          </td>
+          <td class="hidden sm:table-cell p-2 border-t border-gray-200 font-mono text-xs text-blue-700 whitespace-pre">border-color: #718096;</td>
+          <td class="relative w-20 p-2 border-t border-gray-200 font-mono text-xs text-blue-700 whitespace-pre">
+            <div class="absolute inset-0 flex flex-col m-2 divide-y divide-gray-600">
+              <div class="flex-1"></div>
+              <div class="flex-1"></div>
+            </div>
+          </td>
+        </tr>
+                <tr>
+          <td class="p-2 border-t border-gray-200 font-mono text-xs text-purple-700 whitespace-no-wrap">
+          .divide-gray-700
+          <span class="ml-1 text-purple-300">&gt; * + *</span>
+          </td>
+          <td class="hidden sm:table-cell p-2 border-t border-gray-200 font-mono text-xs text-blue-700 whitespace-pre">border-color: #4a5568;</td>
+          <td class="relative w-20 p-2 border-t border-gray-200 font-mono text-xs text-blue-700 whitespace-pre">
+            <div class="absolute inset-0 flex flex-col m-2 divide-y divide-gray-700">
+              <div class="flex-1"></div>
+              <div class="flex-1"></div>
+            </div>
+          </td>
+        </tr>
+                <tr>
+          <td class="p-2 border-t border-gray-200 font-mono text-xs text-purple-700 whitespace-no-wrap">
+          .divide-gray-800
+          <span class="ml-1 text-purple-300">&gt; * + *</span>
+          </td>
+          <td class="hidden sm:table-cell p-2 border-t border-gray-200 font-mono text-xs text-blue-700 whitespace-pre">border-color: #2d3748;</td>
+          <td class="relative w-20 p-2 border-t border-gray-200 font-mono text-xs text-blue-700 whitespace-pre">
+            <div class="absolute inset-0 flex flex-col m-2 divide-y divide-gray-800">
+              <div class="flex-1"></div>
+              <div class="flex-1"></div>
+            </div>
+          </td>
+        </tr>
+                <tr>
+          <td class="p-2 border-t border-gray-200 font-mono text-xs text-purple-700 whitespace-no-wrap">
+          .divide-gray-900
+          <span class="ml-1 text-purple-300">&gt; * + *</span>
+          </td>
+          <td class="hidden sm:table-cell p-2 border-t border-gray-200 font-mono text-xs text-blue-700 whitespace-pre">border-color: #1a202c;</td>
+          <td class="relative w-20 p-2 border-t border-gray-200 font-mono text-xs text-blue-700 whitespace-pre">
+            <div class="absolute inset-0 flex flex-col m-2 divide-y divide-gray-900">
+              <div class="flex-1"></div>
+              <div class="flex-1"></div>
+            </div>
+          </td>
+        </tr>
+                <tr>
+          <td class="p-2 border-t border-gray-200 font-mono text-xs text-purple-700 whitespace-no-wrap">
+          .divide-red-100
+          <span class="ml-1 text-purple-300">&gt; * + *</span>
+          </td>
+          <td class="hidden sm:table-cell p-2 border-t border-gray-200 font-mono text-xs text-blue-700 whitespace-pre">border-color: #fff5f5;</td>
+          <td class="relative w-20 p-2 border-t border-gray-200 font-mono text-xs text-blue-700 whitespace-pre">
+            <div class="absolute inset-0 flex flex-col m-2 divide-y divide-red-100">
+              <div class="flex-1"></div>
+              <div class="flex-1"></div>
+            </div>
+          </td>
+        </tr>
+                <tr>
+          <td class="p-2 border-t border-gray-200 font-mono text-xs text-purple-700 whitespace-no-wrap">
+          .divide-red-200
+          <span class="ml-1 text-purple-300">&gt; * + *</span>
+          </td>
+          <td class="hidden sm:table-cell p-2 border-t border-gray-200 font-mono text-xs text-blue-700 whitespace-pre">border-color: #fed7d7;</td>
+          <td class="relative w-20 p-2 border-t border-gray-200 font-mono text-xs text-blue-700 whitespace-pre">
+            <div class="absolute inset-0 flex flex-col m-2 divide-y divide-red-200">
+              <div class="flex-1"></div>
+              <div class="flex-1"></div>
+            </div>
+          </td>
+        </tr>
+                <tr>
+          <td class="p-2 border-t border-gray-200 font-mono text-xs text-purple-700 whitespace-no-wrap">
+          .divide-red-300
+          <span class="ml-1 text-purple-300">&gt; * + *</span>
+          </td>
+          <td class="hidden sm:table-cell p-2 border-t border-gray-200 font-mono text-xs text-blue-700 whitespace-pre">border-color: #feb2b2;</td>
+          <td class="relative w-20 p-2 border-t border-gray-200 font-mono text-xs text-blue-700 whitespace-pre">
+            <div class="absolute inset-0 flex flex-col m-2 divide-y divide-red-300">
+              <div class="flex-1"></div>
+              <div class="flex-1"></div>
+            </div>
+          </td>
+        </tr>
+                <tr>
+          <td class="p-2 border-t border-gray-200 font-mono text-xs text-purple-700 whitespace-no-wrap">
+          .divide-red-400
+          <span class="ml-1 text-purple-300">&gt; * + *</span>
+          </td>
+          <td class="hidden sm:table-cell p-2 border-t border-gray-200 font-mono text-xs text-blue-700 whitespace-pre">border-color: #fc8181;</td>
+          <td class="relative w-20 p-2 border-t border-gray-200 font-mono text-xs text-blue-700 whitespace-pre">
+            <div class="absolute inset-0 flex flex-col m-2 divide-y divide-red-400">
+              <div class="flex-1"></div>
+              <div class="flex-1"></div>
+            </div>
+          </td>
+        </tr>
+                <tr>
+          <td class="p-2 border-t border-gray-200 font-mono text-xs text-purple-700 whitespace-no-wrap">
+          .divide-red-500
+          <span class="ml-1 text-purple-300">&gt; * + *</span>
+          </td>
+          <td class="hidden sm:table-cell p-2 border-t border-gray-200 font-mono text-xs text-blue-700 whitespace-pre">border-color: #f56565;</td>
+          <td class="relative w-20 p-2 border-t border-gray-200 font-mono text-xs text-blue-700 whitespace-pre">
+            <div class="absolute inset-0 flex flex-col m-2 divide-y divide-red-500">
+              <div class="flex-1"></div>
+              <div class="flex-1"></div>
+            </div>
+          </td>
+        </tr>
+                <tr>
+          <td class="p-2 border-t border-gray-200 font-mono text-xs text-purple-700 whitespace-no-wrap">
+          .divide-red-600
+          <span class="ml-1 text-purple-300">&gt; * + *</span>
+          </td>
+          <td class="hidden sm:table-cell p-2 border-t border-gray-200 font-mono text-xs text-blue-700 whitespace-pre">border-color: #e53e3e;</td>
+          <td class="relative w-20 p-2 border-t border-gray-200 font-mono text-xs text-blue-700 whitespace-pre">
+            <div class="absolute inset-0 flex flex-col m-2 divide-y divide-red-600">
+              <div class="flex-1"></div>
+              <div class="flex-1"></div>
+            </div>
+          </td>
+        </tr>
+                <tr>
+          <td class="p-2 border-t border-gray-200 font-mono text-xs text-purple-700 whitespace-no-wrap">
+          .divide-red-700
+          <span class="ml-1 text-purple-300">&gt; * + *</span>
+          </td>
+          <td class="hidden sm:table-cell p-2 border-t border-gray-200 font-mono text-xs text-blue-700 whitespace-pre">border-color: #c53030;</td>
+          <td class="relative w-20 p-2 border-t border-gray-200 font-mono text-xs text-blue-700 whitespace-pre">
+            <div class="absolute inset-0 flex flex-col m-2 divide-y divide-red-700">
+              <div class="flex-1"></div>
+              <div class="flex-1"></div>
+            </div>
+          </td>
+        </tr>
+                <tr>
+          <td class="p-2 border-t border-gray-200 font-mono text-xs text-purple-700 whitespace-no-wrap">
+          .divide-red-800
+          <span class="ml-1 text-purple-300">&gt; * + *</span>
+          </td>
+          <td class="hidden sm:table-cell p-2 border-t border-gray-200 font-mono text-xs text-blue-700 whitespace-pre">border-color: #9b2c2c;</td>
+          <td class="relative w-20 p-2 border-t border-gray-200 font-mono text-xs text-blue-700 whitespace-pre">
+            <div class="absolute inset-0 flex flex-col m-2 divide-y divide-red-800">
+              <div class="flex-1"></div>
+              <div class="flex-1"></div>
+            </div>
+          </td>
+        </tr>
+                <tr>
+          <td class="p-2 border-t border-gray-200 font-mono text-xs text-purple-700 whitespace-no-wrap">
+          .divide-red-900
+          <span class="ml-1 text-purple-300">&gt; * + *</span>
+          </td>
+          <td class="hidden sm:table-cell p-2 border-t border-gray-200 font-mono text-xs text-blue-700 whitespace-pre">border-color: #742a2a;</td>
+          <td class="relative w-20 p-2 border-t border-gray-200 font-mono text-xs text-blue-700 whitespace-pre">
+            <div class="absolute inset-0 flex flex-col m-2 divide-y divide-red-900">
+              <div class="flex-1"></div>
+              <div class="flex-1"></div>
+            </div>
+          </td>
+        </tr>
+                <tr>
+          <td class="p-2 border-t border-gray-200 font-mono text-xs text-purple-700 whitespace-no-wrap">
+          .divide-orange-100
+          <span class="ml-1 text-purple-300">&gt; * + *</span>
+          </td>
+          <td class="hidden sm:table-cell p-2 border-t border-gray-200 font-mono text-xs text-blue-700 whitespace-pre">border-color: #fffaf0;</td>
+          <td class="relative w-20 p-2 border-t border-gray-200 font-mono text-xs text-blue-700 whitespace-pre">
+            <div class="absolute inset-0 flex flex-col m-2 divide-y divide-orange-100">
+              <div class="flex-1"></div>
+              <div class="flex-1"></div>
+            </div>
+          </td>
+        </tr>
+                <tr>
+          <td class="p-2 border-t border-gray-200 font-mono text-xs text-purple-700 whitespace-no-wrap">
+          .divide-orange-200
+          <span class="ml-1 text-purple-300">&gt; * + *</span>
+          </td>
+          <td class="hidden sm:table-cell p-2 border-t border-gray-200 font-mono text-xs text-blue-700 whitespace-pre">border-color: #feebc8;</td>
+          <td class="relative w-20 p-2 border-t border-gray-200 font-mono text-xs text-blue-700 whitespace-pre">
+            <div class="absolute inset-0 flex flex-col m-2 divide-y divide-orange-200">
+              <div class="flex-1"></div>
+              <div class="flex-1"></div>
+            </div>
+          </td>
+        </tr>
+                <tr>
+          <td class="p-2 border-t border-gray-200 font-mono text-xs text-purple-700 whitespace-no-wrap">
+          .divide-orange-300
+          <span class="ml-1 text-purple-300">&gt; * + *</span>
+          </td>
+          <td class="hidden sm:table-cell p-2 border-t border-gray-200 font-mono text-xs text-blue-700 whitespace-pre">border-color: #fbd38d;</td>
+          <td class="relative w-20 p-2 border-t border-gray-200 font-mono text-xs text-blue-700 whitespace-pre">
+            <div class="absolute inset-0 flex flex-col m-2 divide-y divide-orange-300">
+              <div class="flex-1"></div>
+              <div class="flex-1"></div>
+            </div>
+          </td>
+        </tr>
+                <tr>
+          <td class="p-2 border-t border-gray-200 font-mono text-xs text-purple-700 whitespace-no-wrap">
+          .divide-orange-400
+          <span class="ml-1 text-purple-300">&gt; * + *</span>
+          </td>
+          <td class="hidden sm:table-cell p-2 border-t border-gray-200 font-mono text-xs text-blue-700 whitespace-pre">border-color: #f6ad55;</td>
+          <td class="relative w-20 p-2 border-t border-gray-200 font-mono text-xs text-blue-700 whitespace-pre">
+            <div class="absolute inset-0 flex flex-col m-2 divide-y divide-orange-400">
+              <div class="flex-1"></div>
+              <div class="flex-1"></div>
+            </div>
+          </td>
+        </tr>
+                <tr>
+          <td class="p-2 border-t border-gray-200 font-mono text-xs text-purple-700 whitespace-no-wrap">
+          .divide-orange-500
+          <span class="ml-1 text-purple-300">&gt; * + *</span>
+          </td>
+          <td class="hidden sm:table-cell p-2 border-t border-gray-200 font-mono text-xs text-blue-700 whitespace-pre">border-color: #ed8936;</td>
+          <td class="relative w-20 p-2 border-t border-gray-200 font-mono text-xs text-blue-700 whitespace-pre">
+            <div class="absolute inset-0 flex flex-col m-2 divide-y divide-orange-500">
+              <div class="flex-1"></div>
+              <div class="flex-1"></div>
+            </div>
+          </td>
+        </tr>
+                <tr>
+          <td class="p-2 border-t border-gray-200 font-mono text-xs text-purple-700 whitespace-no-wrap">
+          .divide-orange-600
+          <span class="ml-1 text-purple-300">&gt; * + *</span>
+          </td>
+          <td class="hidden sm:table-cell p-2 border-t border-gray-200 font-mono text-xs text-blue-700 whitespace-pre">border-color: #dd6b20;</td>
+          <td class="relative w-20 p-2 border-t border-gray-200 font-mono text-xs text-blue-700 whitespace-pre">
+            <div class="absolute inset-0 flex flex-col m-2 divide-y divide-orange-600">
+              <div class="flex-1"></div>
+              <div class="flex-1"></div>
+            </div>
+          </td>
+        </tr>
+                <tr>
+          <td class="p-2 border-t border-gray-200 font-mono text-xs text-purple-700 whitespace-no-wrap">
+          .divide-orange-700
+          <span class="ml-1 text-purple-300">&gt; * + *</span>
+          </td>
+          <td class="hidden sm:table-cell p-2 border-t border-gray-200 font-mono text-xs text-blue-700 whitespace-pre">border-color: #c05621;</td>
+          <td class="relative w-20 p-2 border-t border-gray-200 font-mono text-xs text-blue-700 whitespace-pre">
+            <div class="absolute inset-0 flex flex-col m-2 divide-y divide-orange-700">
+              <div class="flex-1"></div>
+              <div class="flex-1"></div>
+            </div>
+          </td>
+        </tr>
+                <tr>
+          <td class="p-2 border-t border-gray-200 font-mono text-xs text-purple-700 whitespace-no-wrap">
+          .divide-orange-800
+          <span class="ml-1 text-purple-300">&gt; * + *</span>
+          </td>
+          <td class="hidden sm:table-cell p-2 border-t border-gray-200 font-mono text-xs text-blue-700 whitespace-pre">border-color: #9c4221;</td>
+          <td class="relative w-20 p-2 border-t border-gray-200 font-mono text-xs text-blue-700 whitespace-pre">
+            <div class="absolute inset-0 flex flex-col m-2 divide-y divide-orange-800">
+              <div class="flex-1"></div>
+              <div class="flex-1"></div>
+            </div>
+          </td>
+        </tr>
+                <tr>
+          <td class="p-2 border-t border-gray-200 font-mono text-xs text-purple-700 whitespace-no-wrap">
+          .divide-orange-900
+          <span class="ml-1 text-purple-300">&gt; * + *</span>
+          </td>
+          <td class="hidden sm:table-cell p-2 border-t border-gray-200 font-mono text-xs text-blue-700 whitespace-pre">border-color: #7b341e;</td>
+          <td class="relative w-20 p-2 border-t border-gray-200 font-mono text-xs text-blue-700 whitespace-pre">
+            <div class="absolute inset-0 flex flex-col m-2 divide-y divide-orange-900">
+              <div class="flex-1"></div>
+              <div class="flex-1"></div>
+            </div>
+          </td>
+        </tr>
+                <tr>
+          <td class="p-2 border-t border-gray-200 font-mono text-xs text-purple-700 whitespace-no-wrap">
+          .divide-yellow-100
+          <span class="ml-1 text-purple-300">&gt; * + *</span>
+          </td>
+          <td class="hidden sm:table-cell p-2 border-t border-gray-200 font-mono text-xs text-blue-700 whitespace-pre">border-color: #fffff0;</td>
+          <td class="relative w-20 p-2 border-t border-gray-200 font-mono text-xs text-blue-700 whitespace-pre">
+            <div class="absolute inset-0 flex flex-col m-2 divide-y divide-yellow-100">
+              <div class="flex-1"></div>
+              <div class="flex-1"></div>
+            </div>
+          </td>
+        </tr>
+                <tr>
+          <td class="p-2 border-t border-gray-200 font-mono text-xs text-purple-700 whitespace-no-wrap">
+          .divide-yellow-200
+          <span class="ml-1 text-purple-300">&gt; * + *</span>
+          </td>
+          <td class="hidden sm:table-cell p-2 border-t border-gray-200 font-mono text-xs text-blue-700 whitespace-pre">border-color: #fefcbf;</td>
+          <td class="relative w-20 p-2 border-t border-gray-200 font-mono text-xs text-blue-700 whitespace-pre">
+            <div class="absolute inset-0 flex flex-col m-2 divide-y divide-yellow-200">
+              <div class="flex-1"></div>
+              <div class="flex-1"></div>
+            </div>
+          </td>
+        </tr>
+                <tr>
+          <td class="p-2 border-t border-gray-200 font-mono text-xs text-purple-700 whitespace-no-wrap">
+          .divide-yellow-300
+          <span class="ml-1 text-purple-300">&gt; * + *</span>
+          </td>
+          <td class="hidden sm:table-cell p-2 border-t border-gray-200 font-mono text-xs text-blue-700 whitespace-pre">border-color: #faf089;</td>
+          <td class="relative w-20 p-2 border-t border-gray-200 font-mono text-xs text-blue-700 whitespace-pre">
+            <div class="absolute inset-0 flex flex-col m-2 divide-y divide-yellow-300">
+              <div class="flex-1"></div>
+              <div class="flex-1"></div>
+            </div>
+          </td>
+        </tr>
+                <tr>
+          <td class="p-2 border-t border-gray-200 font-mono text-xs text-purple-700 whitespace-no-wrap">
+          .divide-yellow-400
+          <span class="ml-1 text-purple-300">&gt; * + *</span>
+          </td>
+          <td class="hidden sm:table-cell p-2 border-t border-gray-200 font-mono text-xs text-blue-700 whitespace-pre">border-color: #f6e05e;</td>
+          <td class="relative w-20 p-2 border-t border-gray-200 font-mono text-xs text-blue-700 whitespace-pre">
+            <div class="absolute inset-0 flex flex-col m-2 divide-y divide-yellow-400">
+              <div class="flex-1"></div>
+              <div class="flex-1"></div>
+            </div>
+          </td>
+        </tr>
+                <tr>
+          <td class="p-2 border-t border-gray-200 font-mono text-xs text-purple-700 whitespace-no-wrap">
+          .divide-yellow-500
+          <span class="ml-1 text-purple-300">&gt; * + *</span>
+          </td>
+          <td class="hidden sm:table-cell p-2 border-t border-gray-200 font-mono text-xs text-blue-700 whitespace-pre">border-color: #ecc94b;</td>
+          <td class="relative w-20 p-2 border-t border-gray-200 font-mono text-xs text-blue-700 whitespace-pre">
+            <div class="absolute inset-0 flex flex-col m-2 divide-y divide-yellow-500">
+              <div class="flex-1"></div>
+              <div class="flex-1"></div>
+            </div>
+          </td>
+        </tr>
+                <tr>
+          <td class="p-2 border-t border-gray-200 font-mono text-xs text-purple-700 whitespace-no-wrap">
+          .divide-yellow-600
+          <span class="ml-1 text-purple-300">&gt; * + *</span>
+          </td>
+          <td class="hidden sm:table-cell p-2 border-t border-gray-200 font-mono text-xs text-blue-700 whitespace-pre">border-color: #d69e2e;</td>
+          <td class="relative w-20 p-2 border-t border-gray-200 font-mono text-xs text-blue-700 whitespace-pre">
+            <div class="absolute inset-0 flex flex-col m-2 divide-y divide-yellow-600">
+              <div class="flex-1"></div>
+              <div class="flex-1"></div>
+            </div>
+          </td>
+        </tr>
+                <tr>
+          <td class="p-2 border-t border-gray-200 font-mono text-xs text-purple-700 whitespace-no-wrap">
+          .divide-yellow-700
+          <span class="ml-1 text-purple-300">&gt; * + *</span>
+          </td>
+          <td class="hidden sm:table-cell p-2 border-t border-gray-200 font-mono text-xs text-blue-700 whitespace-pre">border-color: #b7791f;</td>
+          <td class="relative w-20 p-2 border-t border-gray-200 font-mono text-xs text-blue-700 whitespace-pre">
+            <div class="absolute inset-0 flex flex-col m-2 divide-y divide-yellow-700">
+              <div class="flex-1"></div>
+              <div class="flex-1"></div>
+            </div>
+          </td>
+        </tr>
+                <tr>
+          <td class="p-2 border-t border-gray-200 font-mono text-xs text-purple-700 whitespace-no-wrap">
+          .divide-yellow-800
+          <span class="ml-1 text-purple-300">&gt; * + *</span>
+          </td>
+          <td class="hidden sm:table-cell p-2 border-t border-gray-200 font-mono text-xs text-blue-700 whitespace-pre">border-color: #975a16;</td>
+          <td class="relative w-20 p-2 border-t border-gray-200 font-mono text-xs text-blue-700 whitespace-pre">
+            <div class="absolute inset-0 flex flex-col m-2 divide-y divide-yellow-800">
+              <div class="flex-1"></div>
+              <div class="flex-1"></div>
+            </div>
+          </td>
+        </tr>
+                <tr>
+          <td class="p-2 border-t border-gray-200 font-mono text-xs text-purple-700 whitespace-no-wrap">
+          .divide-yellow-900
+          <span class="ml-1 text-purple-300">&gt; * + *</span>
+          </td>
+          <td class="hidden sm:table-cell p-2 border-t border-gray-200 font-mono text-xs text-blue-700 whitespace-pre">border-color: #744210;</td>
+          <td class="relative w-20 p-2 border-t border-gray-200 font-mono text-xs text-blue-700 whitespace-pre">
+            <div class="absolute inset-0 flex flex-col m-2 divide-y divide-yellow-900">
+              <div class="flex-1"></div>
+              <div class="flex-1"></div>
+            </div>
+          </td>
+        </tr>
+                <tr>
+          <td class="p-2 border-t border-gray-200 font-mono text-xs text-purple-700 whitespace-no-wrap">
+          .divide-green-100
+          <span class="ml-1 text-purple-300">&gt; * + *</span>
+          </td>
+          <td class="hidden sm:table-cell p-2 border-t border-gray-200 font-mono text-xs text-blue-700 whitespace-pre">border-color: #f0fff4;</td>
+          <td class="relative w-20 p-2 border-t border-gray-200 font-mono text-xs text-blue-700 whitespace-pre">
+            <div class="absolute inset-0 flex flex-col m-2 divide-y divide-green-100">
+              <div class="flex-1"></div>
+              <div class="flex-1"></div>
+            </div>
+          </td>
+        </tr>
+                <tr>
+          <td class="p-2 border-t border-gray-200 font-mono text-xs text-purple-700 whitespace-no-wrap">
+          .divide-green-200
+          <span class="ml-1 text-purple-300">&gt; * + *</span>
+          </td>
+          <td class="hidden sm:table-cell p-2 border-t border-gray-200 font-mono text-xs text-blue-700 whitespace-pre">border-color: #c6f6d5;</td>
+          <td class="relative w-20 p-2 border-t border-gray-200 font-mono text-xs text-blue-700 whitespace-pre">
+            <div class="absolute inset-0 flex flex-col m-2 divide-y divide-green-200">
+              <div class="flex-1"></div>
+              <div class="flex-1"></div>
+            </div>
+          </td>
+        </tr>
+                <tr>
+          <td class="p-2 border-t border-gray-200 font-mono text-xs text-purple-700 whitespace-no-wrap">
+          .divide-green-300
+          <span class="ml-1 text-purple-300">&gt; * + *</span>
+          </td>
+          <td class="hidden sm:table-cell p-2 border-t border-gray-200 font-mono text-xs text-blue-700 whitespace-pre">border-color: #9ae6b4;</td>
+          <td class="relative w-20 p-2 border-t border-gray-200 font-mono text-xs text-blue-700 whitespace-pre">
+            <div class="absolute inset-0 flex flex-col m-2 divide-y divide-green-300">
+              <div class="flex-1"></div>
+              <div class="flex-1"></div>
+            </div>
+          </td>
+        </tr>
+                <tr>
+          <td class="p-2 border-t border-gray-200 font-mono text-xs text-purple-700 whitespace-no-wrap">
+          .divide-green-400
+          <span class="ml-1 text-purple-300">&gt; * + *</span>
+          </td>
+          <td class="hidden sm:table-cell p-2 border-t border-gray-200 font-mono text-xs text-blue-700 whitespace-pre">border-color: #68d391;</td>
+          <td class="relative w-20 p-2 border-t border-gray-200 font-mono text-xs text-blue-700 whitespace-pre">
+            <div class="absolute inset-0 flex flex-col m-2 divide-y divide-green-400">
+              <div class="flex-1"></div>
+              <div class="flex-1"></div>
+            </div>
+          </td>
+        </tr>
+                <tr>
+          <td class="p-2 border-t border-gray-200 font-mono text-xs text-purple-700 whitespace-no-wrap">
+          .divide-green-500
+          <span class="ml-1 text-purple-300">&gt; * + *</span>
+          </td>
+          <td class="hidden sm:table-cell p-2 border-t border-gray-200 font-mono text-xs text-blue-700 whitespace-pre">border-color: #48bb78;</td>
+          <td class="relative w-20 p-2 border-t border-gray-200 font-mono text-xs text-blue-700 whitespace-pre">
+            <div class="absolute inset-0 flex flex-col m-2 divide-y divide-green-500">
+              <div class="flex-1"></div>
+              <div class="flex-1"></div>
+            </div>
+          </td>
+        </tr>
+                <tr>
+          <td class="p-2 border-t border-gray-200 font-mono text-xs text-purple-700 whitespace-no-wrap">
+          .divide-green-600
+          <span class="ml-1 text-purple-300">&gt; * + *</span>
+          </td>
+          <td class="hidden sm:table-cell p-2 border-t border-gray-200 font-mono text-xs text-blue-700 whitespace-pre">border-color: #38a169;</td>
+          <td class="relative w-20 p-2 border-t border-gray-200 font-mono text-xs text-blue-700 whitespace-pre">
+            <div class="absolute inset-0 flex flex-col m-2 divide-y divide-green-600">
+              <div class="flex-1"></div>
+              <div class="flex-1"></div>
+            </div>
+          </td>
+        </tr>
+                <tr>
+          <td class="p-2 border-t border-gray-200 font-mono text-xs text-purple-700 whitespace-no-wrap">
+          .divide-green-700
+          <span class="ml-1 text-purple-300">&gt; * + *</span>
+          </td>
+          <td class="hidden sm:table-cell p-2 border-t border-gray-200 font-mono text-xs text-blue-700 whitespace-pre">border-color: #2f855a;</td>
+          <td class="relative w-20 p-2 border-t border-gray-200 font-mono text-xs text-blue-700 whitespace-pre">
+            <div class="absolute inset-0 flex flex-col m-2 divide-y divide-green-700">
+              <div class="flex-1"></div>
+              <div class="flex-1"></div>
+            </div>
+          </td>
+        </tr>
+                <tr>
+          <td class="p-2 border-t border-gray-200 font-mono text-xs text-purple-700 whitespace-no-wrap">
+          .divide-green-800
+          <span class="ml-1 text-purple-300">&gt; * + *</span>
+          </td>
+          <td class="hidden sm:table-cell p-2 border-t border-gray-200 font-mono text-xs text-blue-700 whitespace-pre">border-color: #276749;</td>
+          <td class="relative w-20 p-2 border-t border-gray-200 font-mono text-xs text-blue-700 whitespace-pre">
+            <div class="absolute inset-0 flex flex-col m-2 divide-y divide-green-800">
+              <div class="flex-1"></div>
+              <div class="flex-1"></div>
+            </div>
+          </td>
+        </tr>
+                <tr>
+          <td class="p-2 border-t border-gray-200 font-mono text-xs text-purple-700 whitespace-no-wrap">
+          .divide-green-900
+          <span class="ml-1 text-purple-300">&gt; * + *</span>
+          </td>
+          <td class="hidden sm:table-cell p-2 border-t border-gray-200 font-mono text-xs text-blue-700 whitespace-pre">border-color: #22543d;</td>
+          <td class="relative w-20 p-2 border-t border-gray-200 font-mono text-xs text-blue-700 whitespace-pre">
+            <div class="absolute inset-0 flex flex-col m-2 divide-y divide-green-900">
+              <div class="flex-1"></div>
+              <div class="flex-1"></div>
+            </div>
+          </td>
+        </tr>
+                <tr>
+          <td class="p-2 border-t border-gray-200 font-mono text-xs text-purple-700 whitespace-no-wrap">
+          .divide-teal-100
+          <span class="ml-1 text-purple-300">&gt; * + *</span>
+          </td>
+          <td class="hidden sm:table-cell p-2 border-t border-gray-200 font-mono text-xs text-blue-700 whitespace-pre">border-color: #e6fffa;</td>
+          <td class="relative w-20 p-2 border-t border-gray-200 font-mono text-xs text-blue-700 whitespace-pre">
+            <div class="absolute inset-0 flex flex-col m-2 divide-y divide-teal-100">
+              <div class="flex-1"></div>
+              <div class="flex-1"></div>
+            </div>
+          </td>
+        </tr>
+                <tr>
+          <td class="p-2 border-t border-gray-200 font-mono text-xs text-purple-700 whitespace-no-wrap">
+          .divide-teal-200
+          <span class="ml-1 text-purple-300">&gt; * + *</span>
+          </td>
+          <td class="hidden sm:table-cell p-2 border-t border-gray-200 font-mono text-xs text-blue-700 whitespace-pre">border-color: #b2f5ea;</td>
+          <td class="relative w-20 p-2 border-t border-gray-200 font-mono text-xs text-blue-700 whitespace-pre">
+            <div class="absolute inset-0 flex flex-col m-2 divide-y divide-teal-200">
+              <div class="flex-1"></div>
+              <div class="flex-1"></div>
+            </div>
+          </td>
+        </tr>
+                <tr>
+          <td class="p-2 border-t border-gray-200 font-mono text-xs text-purple-700 whitespace-no-wrap">
+          .divide-teal-300
+          <span class="ml-1 text-purple-300">&gt; * + *</span>
+          </td>
+          <td class="hidden sm:table-cell p-2 border-t border-gray-200 font-mono text-xs text-blue-700 whitespace-pre">border-color: #81e6d9;</td>
+          <td class="relative w-20 p-2 border-t border-gray-200 font-mono text-xs text-blue-700 whitespace-pre">
+            <div class="absolute inset-0 flex flex-col m-2 divide-y divide-teal-300">
+              <div class="flex-1"></div>
+              <div class="flex-1"></div>
+            </div>
+          </td>
+        </tr>
+                <tr>
+          <td class="p-2 border-t border-gray-200 font-mono text-xs text-purple-700 whitespace-no-wrap">
+          .divide-teal-400
+          <span class="ml-1 text-purple-300">&gt; * + *</span>
+          </td>
+          <td class="hidden sm:table-cell p-2 border-t border-gray-200 font-mono text-xs text-blue-700 whitespace-pre">border-color: #4fd1c5;</td>
+          <td class="relative w-20 p-2 border-t border-gray-200 font-mono text-xs text-blue-700 whitespace-pre">
+            <div class="absolute inset-0 flex flex-col m-2 divide-y divide-teal-400">
+              <div class="flex-1"></div>
+              <div class="flex-1"></div>
+            </div>
+          </td>
+        </tr>
+                <tr>
+          <td class="p-2 border-t border-gray-200 font-mono text-xs text-purple-700 whitespace-no-wrap">
+          .divide-teal-500
+          <span class="ml-1 text-purple-300">&gt; * + *</span>
+          </td>
+          <td class="hidden sm:table-cell p-2 border-t border-gray-200 font-mono text-xs text-blue-700 whitespace-pre">border-color: #38b2ac;</td>
+          <td class="relative w-20 p-2 border-t border-gray-200 font-mono text-xs text-blue-700 whitespace-pre">
+            <div class="absolute inset-0 flex flex-col m-2 divide-y divide-teal-500">
+              <div class="flex-1"></div>
+              <div class="flex-1"></div>
+            </div>
+          </td>
+        </tr>
+                <tr>
+          <td class="p-2 border-t border-gray-200 font-mono text-xs text-purple-700 whitespace-no-wrap">
+          .divide-teal-600
+          <span class="ml-1 text-purple-300">&gt; * + *</span>
+          </td>
+          <td class="hidden sm:table-cell p-2 border-t border-gray-200 font-mono text-xs text-blue-700 whitespace-pre">border-color: #319795;</td>
+          <td class="relative w-20 p-2 border-t border-gray-200 font-mono text-xs text-blue-700 whitespace-pre">
+            <div class="absolute inset-0 flex flex-col m-2 divide-y divide-teal-600">
+              <div class="flex-1"></div>
+              <div class="flex-1"></div>
+            </div>
+          </td>
+        </tr>
+                <tr>
+          <td class="p-2 border-t border-gray-200 font-mono text-xs text-purple-700 whitespace-no-wrap">
+          .divide-teal-700
+          <span class="ml-1 text-purple-300">&gt; * + *</span>
+          </td>
+          <td class="hidden sm:table-cell p-2 border-t border-gray-200 font-mono text-xs text-blue-700 whitespace-pre">border-color: #2c7a7b;</td>
+          <td class="relative w-20 p-2 border-t border-gray-200 font-mono text-xs text-blue-700 whitespace-pre">
+            <div class="absolute inset-0 flex flex-col m-2 divide-y divide-teal-700">
+              <div class="flex-1"></div>
+              <div class="flex-1"></div>
+            </div>
+          </td>
+        </tr>
+                <tr>
+          <td class="p-2 border-t border-gray-200 font-mono text-xs text-purple-700 whitespace-no-wrap">
+          .divide-teal-800
+          <span class="ml-1 text-purple-300">&gt; * + *</span>
+          </td>
+          <td class="hidden sm:table-cell p-2 border-t border-gray-200 font-mono text-xs text-blue-700 whitespace-pre">border-color: #285e61;</td>
+          <td class="relative w-20 p-2 border-t border-gray-200 font-mono text-xs text-blue-700 whitespace-pre">
+            <div class="absolute inset-0 flex flex-col m-2 divide-y divide-teal-800">
+              <div class="flex-1"></div>
+              <div class="flex-1"></div>
+            </div>
+          </td>
+        </tr>
+                <tr>
+          <td class="p-2 border-t border-gray-200 font-mono text-xs text-purple-700 whitespace-no-wrap">
+          .divide-teal-900
+          <span class="ml-1 text-purple-300">&gt; * + *</span>
+          </td>
+          <td class="hidden sm:table-cell p-2 border-t border-gray-200 font-mono text-xs text-blue-700 whitespace-pre">border-color: #234e52;</td>
+          <td class="relative w-20 p-2 border-t border-gray-200 font-mono text-xs text-blue-700 whitespace-pre">
+            <div class="absolute inset-0 flex flex-col m-2 divide-y divide-teal-900">
+              <div class="flex-1"></div>
+              <div class="flex-1"></div>
+            </div>
+          </td>
+        </tr>
+                <tr>
+          <td class="p-2 border-t border-gray-200 font-mono text-xs text-purple-700 whitespace-no-wrap">
+          .divide-blue-100
+          <span class="ml-1 text-purple-300">&gt; * + *</span>
+          </td>
+          <td class="hidden sm:table-cell p-2 border-t border-gray-200 font-mono text-xs text-blue-700 whitespace-pre">border-color: #ebf8ff;</td>
+          <td class="relative w-20 p-2 border-t border-gray-200 font-mono text-xs text-blue-700 whitespace-pre">
+            <div class="absolute inset-0 flex flex-col m-2 divide-y divide-blue-100">
+              <div class="flex-1"></div>
+              <div class="flex-1"></div>
+            </div>
+          </td>
+        </tr>
+                <tr>
+          <td class="p-2 border-t border-gray-200 font-mono text-xs text-purple-700 whitespace-no-wrap">
+          .divide-blue-200
+          <span class="ml-1 text-purple-300">&gt; * + *</span>
+          </td>
+          <td class="hidden sm:table-cell p-2 border-t border-gray-200 font-mono text-xs text-blue-700 whitespace-pre">border-color: #bee3f8;</td>
+          <td class="relative w-20 p-2 border-t border-gray-200 font-mono text-xs text-blue-700 whitespace-pre">
+            <div class="absolute inset-0 flex flex-col m-2 divide-y divide-blue-200">
+              <div class="flex-1"></div>
+              <div class="flex-1"></div>
+            </div>
+          </td>
+        </tr>
+                <tr>
+          <td class="p-2 border-t border-gray-200 font-mono text-xs text-purple-700 whitespace-no-wrap">
+          .divide-blue-300
+          <span class="ml-1 text-purple-300">&gt; * + *</span>
+          </td>
+          <td class="hidden sm:table-cell p-2 border-t border-gray-200 font-mono text-xs text-blue-700 whitespace-pre">border-color: #90cdf4;</td>
+          <td class="relative w-20 p-2 border-t border-gray-200 font-mono text-xs text-blue-700 whitespace-pre">
+            <div class="absolute inset-0 flex flex-col m-2 divide-y divide-blue-300">
+              <div class="flex-1"></div>
+              <div class="flex-1"></div>
+            </div>
+          </td>
+        </tr>
+                <tr>
+          <td class="p-2 border-t border-gray-200 font-mono text-xs text-purple-700 whitespace-no-wrap">
+          .divide-blue-400
+          <span class="ml-1 text-purple-300">&gt; * + *</span>
+          </td>
+          <td class="hidden sm:table-cell p-2 border-t border-gray-200 font-mono text-xs text-blue-700 whitespace-pre">border-color: #63b3ed;</td>
+          <td class="relative w-20 p-2 border-t border-gray-200 font-mono text-xs text-blue-700 whitespace-pre">
+            <div class="absolute inset-0 flex flex-col m-2 divide-y divide-blue-400">
+              <div class="flex-1"></div>
+              <div class="flex-1"></div>
+            </div>
+          </td>
+        </tr>
+                <tr>
+          <td class="p-2 border-t border-gray-200 font-mono text-xs text-purple-700 whitespace-no-wrap">
+          .divide-blue-500
+          <span class="ml-1 text-purple-300">&gt; * + *</span>
+          </td>
+          <td class="hidden sm:table-cell p-2 border-t border-gray-200 font-mono text-xs text-blue-700 whitespace-pre">border-color: #4299e1;</td>
+          <td class="relative w-20 p-2 border-t border-gray-200 font-mono text-xs text-blue-700 whitespace-pre">
+            <div class="absolute inset-0 flex flex-col m-2 divide-y divide-blue-500">
+              <div class="flex-1"></div>
+              <div class="flex-1"></div>
+            </div>
+          </td>
+        </tr>
+                <tr>
+          <td class="p-2 border-t border-gray-200 font-mono text-xs text-purple-700 whitespace-no-wrap">
+          .divide-blue-600
+          <span class="ml-1 text-purple-300">&gt; * + *</span>
+          </td>
+          <td class="hidden sm:table-cell p-2 border-t border-gray-200 font-mono text-xs text-blue-700 whitespace-pre">border-color: #3182ce;</td>
+          <td class="relative w-20 p-2 border-t border-gray-200 font-mono text-xs text-blue-700 whitespace-pre">
+            <div class="absolute inset-0 flex flex-col m-2 divide-y divide-blue-600">
+              <div class="flex-1"></div>
+              <div class="flex-1"></div>
+            </div>
+          </td>
+        </tr>
+                <tr>
+          <td class="p-2 border-t border-gray-200 font-mono text-xs text-purple-700 whitespace-no-wrap">
+          .divide-blue-700
+          <span class="ml-1 text-purple-300">&gt; * + *</span>
+          </td>
+          <td class="hidden sm:table-cell p-2 border-t border-gray-200 font-mono text-xs text-blue-700 whitespace-pre">border-color: #2b6cb0;</td>
+          <td class="relative w-20 p-2 border-t border-gray-200 font-mono text-xs text-blue-700 whitespace-pre">
+            <div class="absolute inset-0 flex flex-col m-2 divide-y divide-blue-700">
+              <div class="flex-1"></div>
+              <div class="flex-1"></div>
+            </div>
+          </td>
+        </tr>
+                <tr>
+          <td class="p-2 border-t border-gray-200 font-mono text-xs text-purple-700 whitespace-no-wrap">
+          .divide-blue-800
+          <span class="ml-1 text-purple-300">&gt; * + *</span>
+          </td>
+          <td class="hidden sm:table-cell p-2 border-t border-gray-200 font-mono text-xs text-blue-700 whitespace-pre">border-color: #2c5282;</td>
+          <td class="relative w-20 p-2 border-t border-gray-200 font-mono text-xs text-blue-700 whitespace-pre">
+            <div class="absolute inset-0 flex flex-col m-2 divide-y divide-blue-800">
+              <div class="flex-1"></div>
+              <div class="flex-1"></div>
+            </div>
+          </td>
+        </tr>
+                <tr>
+          <td class="p-2 border-t border-gray-200 font-mono text-xs text-purple-700 whitespace-no-wrap">
+          .divide-blue-900
+          <span class="ml-1 text-purple-300">&gt; * + *</span>
+          </td>
+          <td class="hidden sm:table-cell p-2 border-t border-gray-200 font-mono text-xs text-blue-700 whitespace-pre">border-color: #2a4365;</td>
+          <td class="relative w-20 p-2 border-t border-gray-200 font-mono text-xs text-blue-700 whitespace-pre">
+            <div class="absolute inset-0 flex flex-col m-2 divide-y divide-blue-900">
+              <div class="flex-1"></div>
+              <div class="flex-1"></div>
+            </div>
+          </td>
+        </tr>
+                <tr>
+          <td class="p-2 border-t border-gray-200 font-mono text-xs text-purple-700 whitespace-no-wrap">
+          .divide-indigo-100
+          <span class="ml-1 text-purple-300">&gt; * + *</span>
+          </td>
+          <td class="hidden sm:table-cell p-2 border-t border-gray-200 font-mono text-xs text-blue-700 whitespace-pre">border-color: #ebf4ff;</td>
+          <td class="relative w-20 p-2 border-t border-gray-200 font-mono text-xs text-blue-700 whitespace-pre">
+            <div class="absolute inset-0 flex flex-col m-2 divide-y divide-indigo-100">
+              <div class="flex-1"></div>
+              <div class="flex-1"></div>
+            </div>
+          </td>
+        </tr>
+                <tr>
+          <td class="p-2 border-t border-gray-200 font-mono text-xs text-purple-700 whitespace-no-wrap">
+          .divide-indigo-200
+          <span class="ml-1 text-purple-300">&gt; * + *</span>
+          </td>
+          <td class="hidden sm:table-cell p-2 border-t border-gray-200 font-mono text-xs text-blue-700 whitespace-pre">border-color: #c3dafe;</td>
+          <td class="relative w-20 p-2 border-t border-gray-200 font-mono text-xs text-blue-700 whitespace-pre">
+            <div class="absolute inset-0 flex flex-col m-2 divide-y divide-indigo-200">
+              <div class="flex-1"></div>
+              <div class="flex-1"></div>
+            </div>
+          </td>
+        </tr>
+                <tr>
+          <td class="p-2 border-t border-gray-200 font-mono text-xs text-purple-700 whitespace-no-wrap">
+          .divide-indigo-300
+          <span class="ml-1 text-purple-300">&gt; * + *</span>
+          </td>
+          <td class="hidden sm:table-cell p-2 border-t border-gray-200 font-mono text-xs text-blue-700 whitespace-pre">border-color: #a3bffa;</td>
+          <td class="relative w-20 p-2 border-t border-gray-200 font-mono text-xs text-blue-700 whitespace-pre">
+            <div class="absolute inset-0 flex flex-col m-2 divide-y divide-indigo-300">
+              <div class="flex-1"></div>
+              <div class="flex-1"></div>
+            </div>
+          </td>
+        </tr>
+                <tr>
+          <td class="p-2 border-t border-gray-200 font-mono text-xs text-purple-700 whitespace-no-wrap">
+          .divide-indigo-400
+          <span class="ml-1 text-purple-300">&gt; * + *</span>
+          </td>
+          <td class="hidden sm:table-cell p-2 border-t border-gray-200 font-mono text-xs text-blue-700 whitespace-pre">border-color: #7f9cf5;</td>
+          <td class="relative w-20 p-2 border-t border-gray-200 font-mono text-xs text-blue-700 whitespace-pre">
+            <div class="absolute inset-0 flex flex-col m-2 divide-y divide-indigo-400">
+              <div class="flex-1"></div>
+              <div class="flex-1"></div>
+            </div>
+          </td>
+        </tr>
+                <tr>
+          <td class="p-2 border-t border-gray-200 font-mono text-xs text-purple-700 whitespace-no-wrap">
+          .divide-indigo-500
+          <span class="ml-1 text-purple-300">&gt; * + *</span>
+          </td>
+          <td class="hidden sm:table-cell p-2 border-t border-gray-200 font-mono text-xs text-blue-700 whitespace-pre">border-color: #667eea;</td>
+          <td class="relative w-20 p-2 border-t border-gray-200 font-mono text-xs text-blue-700 whitespace-pre">
+            <div class="absolute inset-0 flex flex-col m-2 divide-y divide-indigo-500">
+              <div class="flex-1"></div>
+              <div class="flex-1"></div>
+            </div>
+          </td>
+        </tr>
+                <tr>
+          <td class="p-2 border-t border-gray-200 font-mono text-xs text-purple-700 whitespace-no-wrap">
+          .divide-indigo-600
+          <span class="ml-1 text-purple-300">&gt; * + *</span>
+          </td>
+          <td class="hidden sm:table-cell p-2 border-t border-gray-200 font-mono text-xs text-blue-700 whitespace-pre">border-color: #5a67d8;</td>
+          <td class="relative w-20 p-2 border-t border-gray-200 font-mono text-xs text-blue-700 whitespace-pre">
+            <div class="absolute inset-0 flex flex-col m-2 divide-y divide-indigo-600">
+              <div class="flex-1"></div>
+              <div class="flex-1"></div>
+            </div>
+          </td>
+        </tr>
+                <tr>
+          <td class="p-2 border-t border-gray-200 font-mono text-xs text-purple-700 whitespace-no-wrap">
+          .divide-indigo-700
+          <span class="ml-1 text-purple-300">&gt; * + *</span>
+          </td>
+          <td class="hidden sm:table-cell p-2 border-t border-gray-200 font-mono text-xs text-blue-700 whitespace-pre">border-color: #4c51bf;</td>
+          <td class="relative w-20 p-2 border-t border-gray-200 font-mono text-xs text-blue-700 whitespace-pre">
+            <div class="absolute inset-0 flex flex-col m-2 divide-y divide-indigo-700">
+              <div class="flex-1"></div>
+              <div class="flex-1"></div>
+            </div>
+          </td>
+        </tr>
+                <tr>
+          <td class="p-2 border-t border-gray-200 font-mono text-xs text-purple-700 whitespace-no-wrap">
+          .divide-indigo-800
+          <span class="ml-1 text-purple-300">&gt; * + *</span>
+          </td>
+          <td class="hidden sm:table-cell p-2 border-t border-gray-200 font-mono text-xs text-blue-700 whitespace-pre">border-color: #434190;</td>
+          <td class="relative w-20 p-2 border-t border-gray-200 font-mono text-xs text-blue-700 whitespace-pre">
+            <div class="absolute inset-0 flex flex-col m-2 divide-y divide-indigo-800">
+              <div class="flex-1"></div>
+              <div class="flex-1"></div>
+            </div>
+          </td>
+        </tr>
+                <tr>
+          <td class="p-2 border-t border-gray-200 font-mono text-xs text-purple-700 whitespace-no-wrap">
+          .divide-indigo-900
+          <span class="ml-1 text-purple-300">&gt; * + *</span>
+          </td>
+          <td class="hidden sm:table-cell p-2 border-t border-gray-200 font-mono text-xs text-blue-700 whitespace-pre">border-color: #3c366b;</td>
+          <td class="relative w-20 p-2 border-t border-gray-200 font-mono text-xs text-blue-700 whitespace-pre">
+            <div class="absolute inset-0 flex flex-col m-2 divide-y divide-indigo-900">
+              <div class="flex-1"></div>
+              <div class="flex-1"></div>
+            </div>
+          </td>
+        </tr>
+                <tr>
+          <td class="p-2 border-t border-gray-200 font-mono text-xs text-purple-700 whitespace-no-wrap">
+          .divide-purple-100
+          <span class="ml-1 text-purple-300">&gt; * + *</span>
+          </td>
+          <td class="hidden sm:table-cell p-2 border-t border-gray-200 font-mono text-xs text-blue-700 whitespace-pre">border-color: #faf5ff;</td>
+          <td class="relative w-20 p-2 border-t border-gray-200 font-mono text-xs text-blue-700 whitespace-pre">
+            <div class="absolute inset-0 flex flex-col m-2 divide-y divide-purple-100">
+              <div class="flex-1"></div>
+              <div class="flex-1"></div>
+            </div>
+          </td>
+        </tr>
+                <tr>
+          <td class="p-2 border-t border-gray-200 font-mono text-xs text-purple-700 whitespace-no-wrap">
+          .divide-purple-200
+          <span class="ml-1 text-purple-300">&gt; * + *</span>
+          </td>
+          <td class="hidden sm:table-cell p-2 border-t border-gray-200 font-mono text-xs text-blue-700 whitespace-pre">border-color: #e9d8fd;</td>
+          <td class="relative w-20 p-2 border-t border-gray-200 font-mono text-xs text-blue-700 whitespace-pre">
+            <div class="absolute inset-0 flex flex-col m-2 divide-y divide-purple-200">
+              <div class="flex-1"></div>
+              <div class="flex-1"></div>
+            </div>
+          </td>
+        </tr>
+                <tr>
+          <td class="p-2 border-t border-gray-200 font-mono text-xs text-purple-700 whitespace-no-wrap">
+          .divide-purple-300
+          <span class="ml-1 text-purple-300">&gt; * + *</span>
+          </td>
+          <td class="hidden sm:table-cell p-2 border-t border-gray-200 font-mono text-xs text-blue-700 whitespace-pre">border-color: #d6bcfa;</td>
+          <td class="relative w-20 p-2 border-t border-gray-200 font-mono text-xs text-blue-700 whitespace-pre">
+            <div class="absolute inset-0 flex flex-col m-2 divide-y divide-purple-300">
+              <div class="flex-1"></div>
+              <div class="flex-1"></div>
+            </div>
+          </td>
+        </tr>
+                <tr>
+          <td class="p-2 border-t border-gray-200 font-mono text-xs text-purple-700 whitespace-no-wrap">
+          .divide-purple-400
+          <span class="ml-1 text-purple-300">&gt; * + *</span>
+          </td>
+          <td class="hidden sm:table-cell p-2 border-t border-gray-200 font-mono text-xs text-blue-700 whitespace-pre">border-color: #b794f4;</td>
+          <td class="relative w-20 p-2 border-t border-gray-200 font-mono text-xs text-blue-700 whitespace-pre">
+            <div class="absolute inset-0 flex flex-col m-2 divide-y divide-purple-400">
+              <div class="flex-1"></div>
+              <div class="flex-1"></div>
+            </div>
+          </td>
+        </tr>
+                <tr>
+          <td class="p-2 border-t border-gray-200 font-mono text-xs text-purple-700 whitespace-no-wrap">
+          .divide-purple-500
+          <span class="ml-1 text-purple-300">&gt; * + *</span>
+          </td>
+          <td class="hidden sm:table-cell p-2 border-t border-gray-200 font-mono text-xs text-blue-700 whitespace-pre">border-color: #9f7aea;</td>
+          <td class="relative w-20 p-2 border-t border-gray-200 font-mono text-xs text-blue-700 whitespace-pre">
+            <div class="absolute inset-0 flex flex-col m-2 divide-y divide-purple-500">
+              <div class="flex-1"></div>
+              <div class="flex-1"></div>
+            </div>
+          </td>
+        </tr>
+                <tr>
+          <td class="p-2 border-t border-gray-200 font-mono text-xs text-purple-700 whitespace-no-wrap">
+          .divide-purple-600
+          <span class="ml-1 text-purple-300">&gt; * + *</span>
+          </td>
+          <td class="hidden sm:table-cell p-2 border-t border-gray-200 font-mono text-xs text-blue-700 whitespace-pre">border-color: #805ad5;</td>
+          <td class="relative w-20 p-2 border-t border-gray-200 font-mono text-xs text-blue-700 whitespace-pre">
+            <div class="absolute inset-0 flex flex-col m-2 divide-y divide-purple-600">
+              <div class="flex-1"></div>
+              <div class="flex-1"></div>
+            </div>
+          </td>
+        </tr>
+                <tr>
+          <td class="p-2 border-t border-gray-200 font-mono text-xs text-purple-700 whitespace-no-wrap">
+          .divide-purple-700
+          <span class="ml-1 text-purple-300">&gt; * + *</span>
+          </td>
+          <td class="hidden sm:table-cell p-2 border-t border-gray-200 font-mono text-xs text-blue-700 whitespace-pre">border-color: #6b46c1;</td>
+          <td class="relative w-20 p-2 border-t border-gray-200 font-mono text-xs text-blue-700 whitespace-pre">
+            <div class="absolute inset-0 flex flex-col m-2 divide-y divide-purple-700">
+              <div class="flex-1"></div>
+              <div class="flex-1"></div>
+            </div>
+          </td>
+        </tr>
+                <tr>
+          <td class="p-2 border-t border-gray-200 font-mono text-xs text-purple-700 whitespace-no-wrap">
+          .divide-purple-800
+          <span class="ml-1 text-purple-300">&gt; * + *</span>
+          </td>
+          <td class="hidden sm:table-cell p-2 border-t border-gray-200 font-mono text-xs text-blue-700 whitespace-pre">border-color: #553c9a;</td>
+          <td class="relative w-20 p-2 border-t border-gray-200 font-mono text-xs text-blue-700 whitespace-pre">
+            <div class="absolute inset-0 flex flex-col m-2 divide-y divide-purple-800">
+              <div class="flex-1"></div>
+              <div class="flex-1"></div>
+            </div>
+          </td>
+        </tr>
+                <tr>
+          <td class="p-2 border-t border-gray-200 font-mono text-xs text-purple-700 whitespace-no-wrap">
+          .divide-purple-900
+          <span class="ml-1 text-purple-300">&gt; * + *</span>
+          </td>
+          <td class="hidden sm:table-cell p-2 border-t border-gray-200 font-mono text-xs text-blue-700 whitespace-pre">border-color: #44337a;</td>
+          <td class="relative w-20 p-2 border-t border-gray-200 font-mono text-xs text-blue-700 whitespace-pre">
+            <div class="absolute inset-0 flex flex-col m-2 divide-y divide-purple-900">
+              <div class="flex-1"></div>
+              <div class="flex-1"></div>
+            </div>
+          </td>
+        </tr>
+                <tr>
+          <td class="p-2 border-t border-gray-200 font-mono text-xs text-purple-700 whitespace-no-wrap">
+          .divide-pink-100
+          <span class="ml-1 text-purple-300">&gt; * + *</span>
+          </td>
+          <td class="hidden sm:table-cell p-2 border-t border-gray-200 font-mono text-xs text-blue-700 whitespace-pre">border-color: #fff5f7;</td>
+          <td class="relative w-20 p-2 border-t border-gray-200 font-mono text-xs text-blue-700 whitespace-pre">
+            <div class="absolute inset-0 flex flex-col m-2 divide-y divide-pink-100">
+              <div class="flex-1"></div>
+              <div class="flex-1"></div>
+            </div>
+          </td>
+        </tr>
+                <tr>
+          <td class="p-2 border-t border-gray-200 font-mono text-xs text-purple-700 whitespace-no-wrap">
+          .divide-pink-200
+          <span class="ml-1 text-purple-300">&gt; * + *</span>
+          </td>
+          <td class="hidden sm:table-cell p-2 border-t border-gray-200 font-mono text-xs text-blue-700 whitespace-pre">border-color: #fed7e2;</td>
+          <td class="relative w-20 p-2 border-t border-gray-200 font-mono text-xs text-blue-700 whitespace-pre">
+            <div class="absolute inset-0 flex flex-col m-2 divide-y divide-pink-200">
+              <div class="flex-1"></div>
+              <div class="flex-1"></div>
+            </div>
+          </td>
+        </tr>
+                <tr>
+          <td class="p-2 border-t border-gray-200 font-mono text-xs text-purple-700 whitespace-no-wrap">
+          .divide-pink-300
+          <span class="ml-1 text-purple-300">&gt; * + *</span>
+          </td>
+          <td class="hidden sm:table-cell p-2 border-t border-gray-200 font-mono text-xs text-blue-700 whitespace-pre">border-color: #fbb6ce;</td>
+          <td class="relative w-20 p-2 border-t border-gray-200 font-mono text-xs text-blue-700 whitespace-pre">
+            <div class="absolute inset-0 flex flex-col m-2 divide-y divide-pink-300">
+              <div class="flex-1"></div>
+              <div class="flex-1"></div>
+            </div>
+          </td>
+        </tr>
+                <tr>
+          <td class="p-2 border-t border-gray-200 font-mono text-xs text-purple-700 whitespace-no-wrap">
+          .divide-pink-400
+          <span class="ml-1 text-purple-300">&gt; * + *</span>
+          </td>
+          <td class="hidden sm:table-cell p-2 border-t border-gray-200 font-mono text-xs text-blue-700 whitespace-pre">border-color: #f687b3;</td>
+          <td class="relative w-20 p-2 border-t border-gray-200 font-mono text-xs text-blue-700 whitespace-pre">
+            <div class="absolute inset-0 flex flex-col m-2 divide-y divide-pink-400">
+              <div class="flex-1"></div>
+              <div class="flex-1"></div>
+            </div>
+          </td>
+        </tr>
+                <tr>
+          <td class="p-2 border-t border-gray-200 font-mono text-xs text-purple-700 whitespace-no-wrap">
+          .divide-pink-500
+          <span class="ml-1 text-purple-300">&gt; * + *</span>
+          </td>
+          <td class="hidden sm:table-cell p-2 border-t border-gray-200 font-mono text-xs text-blue-700 whitespace-pre">border-color: #ed64a6;</td>
+          <td class="relative w-20 p-2 border-t border-gray-200 font-mono text-xs text-blue-700 whitespace-pre">
+            <div class="absolute inset-0 flex flex-col m-2 divide-y divide-pink-500">
+              <div class="flex-1"></div>
+              <div class="flex-1"></div>
+            </div>
+          </td>
+        </tr>
+                <tr>
+          <td class="p-2 border-t border-gray-200 font-mono text-xs text-purple-700 whitespace-no-wrap">
+          .divide-pink-600
+          <span class="ml-1 text-purple-300">&gt; * + *</span>
+          </td>
+          <td class="hidden sm:table-cell p-2 border-t border-gray-200 font-mono text-xs text-blue-700 whitespace-pre">border-color: #d53f8c;</td>
+          <td class="relative w-20 p-2 border-t border-gray-200 font-mono text-xs text-blue-700 whitespace-pre">
+            <div class="absolute inset-0 flex flex-col m-2 divide-y divide-pink-600">
+              <div class="flex-1"></div>
+              <div class="flex-1"></div>
+            </div>
+          </td>
+        </tr>
+                <tr>
+          <td class="p-2 border-t border-gray-200 font-mono text-xs text-purple-700 whitespace-no-wrap">
+          .divide-pink-700
+          <span class="ml-1 text-purple-300">&gt; * + *</span>
+          </td>
+          <td class="hidden sm:table-cell p-2 border-t border-gray-200 font-mono text-xs text-blue-700 whitespace-pre">border-color: #b83280;</td>
+          <td class="relative w-20 p-2 border-t border-gray-200 font-mono text-xs text-blue-700 whitespace-pre">
+            <div class="absolute inset-0 flex flex-col m-2 divide-y divide-pink-700">
+              <div class="flex-1"></div>
+              <div class="flex-1"></div>
+            </div>
+          </td>
+        </tr>
+                <tr>
+          <td class="p-2 border-t border-gray-200 font-mono text-xs text-purple-700 whitespace-no-wrap">
+          .divide-pink-800
+          <span class="ml-1 text-purple-300">&gt; * + *</span>
+          </td>
+          <td class="hidden sm:table-cell p-2 border-t border-gray-200 font-mono text-xs text-blue-700 whitespace-pre">border-color: #97266d;</td>
+          <td class="relative w-20 p-2 border-t border-gray-200 font-mono text-xs text-blue-700 whitespace-pre">
+            <div class="absolute inset-0 flex flex-col m-2 divide-y divide-pink-800">
+              <div class="flex-1"></div>
+              <div class="flex-1"></div>
+            </div>
+          </td>
+        </tr>
+                <tr>
+          <td class="p-2 border-t border-gray-200 font-mono text-xs text-purple-700 whitespace-no-wrap">
+          .divide-pink-900
+          <span class="ml-1 text-purple-300">&gt; * + *</span>
+          </td>
+          <td class="hidden sm:table-cell p-2 border-t border-gray-200 font-mono text-xs text-blue-700 whitespace-pre">border-color: #702459;</td>
+          <td class="relative w-20 p-2 border-t border-gray-200 font-mono text-xs text-blue-700 whitespace-pre">
+            <div class="absolute inset-0 flex flex-col m-2 divide-y divide-pink-900">
+              <div class="flex-1"></div>
+              <div class="flex-1"></div>
+            </div>
+          </td>
+        </tr>
+              </tbody>
+    </table>
+  </div>
+</div>
+<h2><a id="usage" name="//apple_ref/cpp/Section/Usage" class="dashAnchor"></a>Usage</h2>
+<p>Control the border color between elements using the <code>divide-{color}</code> utilities.</p>
+<div class="relative overflow-hidden mb-8">
+  <div v-pre class="bg-white rounded-t-lg overflow-hidden border-t border-l border-r border-gray-400 p-4 " style="">
+    <div class="divide-y divide-blue-300">
+  <div class="text-center py-2">1</div>
+  <div class="text-center py-2">2</div>
+  <div class="text-center py-2">3</div>
+</div>
+  </div>
+  <div v-pre class="rounded-b-lg bg-gray-800">
+    <pre class="scrollbar-none m-0 p-0 language-html"><code class="inline-block p-4 scrolling-touch">&lt;div class="divide-y divide-blue-300"&gt;
+  &lt;div class="text-center py-2"&gt;1&lt;/div&gt;
+  &lt;div class="text-center py-2"&gt;2&lt;/div&gt;
+  &lt;div class="text-center py-2"&gt;3&lt;/div&gt;
+&lt;/div&gt;</code></pre>
+  </div>
+</div>
+<h3><a id="changing-opacity-v140" name="//apple_ref/cpp/Section/Changing%20opacity%20v1.4.0%2B" class="dashAnchor"></a>
+  <span class="flex items-center" data-heading-text>
+    Changing opacity
+    <span class="ml-3 inline-flex items-center px-3 py-1 rounded-full text-sm font-medium leading-4 bg-green-150 text-green-900">
+      v1.4.0+
+    </span>
+  </span>
+</h3>
+<p>Control the opacity of borders between elements using the <code>.divide-opacity-{amount}</code> utilities.</p>
+<div class="relative overflow-hidden mb-8">
+  <div v-pre class="bg-white rounded-t-lg overflow-hidden border-t border-l border-r border-gray-400 p-4 " style="background-image: url('transparent-bg.svg')">
+    <div class="divide-y-4 divide-black divide-opacity-25">
+  <div class="text-center py-2">1</div>
+  <div class="text-center py-2">2</div>
+  <div class="text-center py-2">3</div>
+</div>
+  </div>
+  <div v-pre class="rounded-b-lg bg-gray-800">
+    <pre class="scrollbar-none m-0 p-0 language-html"><code class="inline-block p-4 scrolling-touch">&lt;div class="divide-y-4 divide-black divide-opacity-25"&gt;
+  &lt;div class="text-center py-2"&gt;1&lt;/div&gt;
+  &lt;div class="text-center py-2"&gt;2&lt;/div&gt;
+  &lt;div class="text-center py-2"&gt;3&lt;/div&gt;
+&lt;/div&gt;</code></pre>
+  </div>
+</div>
+<p>Learn more in the <a href="divide-opacity.html">divide opacity documentation</a>.</p>
+<hr>
+<h2><a id="responsive" name="//apple_ref/cpp/Section/Responsive" class="dashAnchor"></a>Responsive</h2>
+<p>To control the borders between elements at a specific breakpoint, add a <code>{screen}:</code> prefix to any existing divide utility. For example, adding the class <code>md:divide-x-8</code> to an element would apply the <code>divide-x-8</code> utility at medium screen sizes and above.</p>
+<p>For more information about Tailwind's responsive design features, check out the <a href="https://tailwindcss.com/docs/responsive-design">Responsive Design</a> documentation.</p>
+<div class="mt-8 v-cloak-hidden">
+  <responsive-code-sample code='&lt;div class="none:divide-teal-400 sm:divide-pink-400 md:divide-orange-400 lg:divide-green-400 xl:divide-red-400 divide-y"&gt;
+  &lt;div class="text-center py-2"&gt;1&lt;/div&gt;
+  &lt;div class="text-center py-2"&gt;2&lt;/div&gt;
+  &lt;div class="text-center py-2"&gt;3&lt;/div&gt;
+&lt;/div&gt;' slot-class="text-center">
+    <div slot="none"><div class="divide-y divide-teal-400">
+  <div class="text-center py-2">1</div>
+  <div class="text-center py-2">2</div>
+  <div class="text-center py-2">3</div>
+</div></div>
+    <div slot="sm"><div class="divide-y divide-pink-400">
+  <div class="text-center py-2">1</div>
+  <div class="text-center py-2">2</div>
+  <div class="text-center py-2">3</div>
+</div></div>
+    <div slot="md"><div class="divide-y divide-orange-400">
+  <div class="text-center py-2">1</div>
+  <div class="text-center py-2">2</div>
+  <div class="text-center py-2">3</div>
+</div></div>
+    <div slot="lg"><div class="divide-y divide-green-400">
+  <div class="text-center py-2">1</div>
+  <div class="text-center py-2">2</div>
+  <div class="text-center py-2">3</div>
+</div></div>
+    <div slot="xl"><div class="divide-y divide-red-400">
+  <div class="text-center py-2">1</div>
+  <div class="text-center py-2">2</div>
+  <div class="text-center py-2">3</div>
+</div></div>
+  </responsive-code-sample>
+</div>
+<hr>
+<h2><a id="customizing" name="//apple_ref/cpp/Section/Customizing" class="dashAnchor"></a>Customizing</h2>
+<h3><a id="border-colors" name="//apple_ref/cpp/Section/Border%20Colors" class="dashAnchor"></a>Border Colors</h3>
+<p>By default Tailwind makes the entire <a href="customizing-colors.html#default-color-palette">default color palette</a> available as divide colors.</p>
+<p>You can <a href="colors.html#customizing">customize your color palette</a> by editing the <code>theme.colors</code> section of your <code>tailwind.config.js</code> file, customize just your border and divide colors together using the <code>theme.borderColor</code> section, or customize only the divide colors using the <code>theme.divideColor</code> section.</p>
+<div class="rounded-lg mb-8 overflow-hidden">
+  <div class="bg-gray-800 p-4 font-mono text-sm overflow-x-scroll whitespace-no-wrap">
+    <div class="whitespace-pre text-gray-400">// tailwind.config.js</div>
+    <div class="whitespace-pre text-code-white">module.exports = {</div>
+    <div class="whitespace-pre text-code-white">  theme: {</div>
+<div class="whitespace-pre text-code-white">
+<span class="text-code-yellow">    divideColor</span>: theme =&gt; ({</div>
+    <div>
+<div class="text-gray-500">
+<span>-</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;...theme('borderColors'),</div>
+<div class="text-code-green">
+<span>+</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;'primary': '#3490dc',</div>
+<div class="text-code-green">
+<span>+</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;'secondary': '#ffed4a',</div>
+<div class="text-code-green">
+<span>+</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;'danger': '#e3342f',</div>
+</div>
+    <div class="whitespace-pre text-code-white">    })</div>
+<div class="whitespace-pre text-code-white">  }</div>
+    <div class="whitespace-pre text-code-white">}</div>
+  </div>
+</div>
+<h3><a id="responsive-and-pseudo-class-variants" name="//apple_ref/cpp/Section/Responsive%20and%20pseudo-class%20variants" class="dashAnchor"></a>Responsive and pseudo-class variants</h3>
+<p>By default, only responsive variants are generated for divide color utilities.</p>
+<p>You can control which variants are generated for the divide color utilities by modifying the <code>divideColor</code> property in the <code>variants</code> section of your <code>tailwind.config.js</code> file.</p>
+<p>For example, this config will also generate hover and focus variants:</p>
+<div class="rounded-lg mb-8 overflow-hidden">
+  <div class="bg-gray-800 p-4 font-mono text-sm overflow-x-scroll whitespace-no-wrap">
+    <div class="whitespace-pre text-gray-400">// tailwind.config.js</div>
+    <div class="whitespace-pre text-code-white">module.exports = {</div>
+    <div class="whitespace-pre text-code-white">
+<span class="text-code-yellow">  variants</span>: {</div>
+    <div>
+<div class="text-gray-400">&nbsp;&nbsp;&nbsp;&nbsp;// ...</div>
+<div class="text-gray-500">
+<span>-</span>&nbsp;&nbsp;&nbsp;divideColor: ['responsive'],</div>
+<div class="text-code-green">
+<span>+</span>&nbsp;&nbsp;&nbsp;divideColor: ['responsive', 'hover', 'focus'],</div>
+</div>
+    <div class="whitespace-pre text-code-white">  }</div>
+    <div class="whitespace-pre text-code-white">}</div>
+  </div>
+</div>
+<h3><a id="disabling" name="//apple_ref/cpp/Section/Disabling" class="dashAnchor"></a>Disabling</h3>
+<p>If you don't plan to use the divide color utilities in your project, you can disable them entirely by setting the <code>divideColor</code> property to <code>false</code> in the <code>corePlugins</code> section of your config file:</p>
+<div class="rounded-lg mb-8 overflow-hidden">
+  <div class="bg-gray-800 p-4 font-mono text-sm overflow-x-scroll whitespace-no-wrap">
+    <div class="whitespace-pre text-gray-400">// tailwind.config.js</div>
+    <div class="whitespace-pre text-code-white">module.exports = {</div>
+    <div class="whitespace-pre text-code-white">
+<span class="text-code-yellow">  corePlugins</span>: {</div>
+    <div>
+<div class="text-gray-400">&nbsp;&nbsp;&nbsp;&nbsp;// ...</div>
+<div class="text-code-green">
+<span>+</span>&nbsp;&nbsp;&nbsp;divideColor: false,</div>
+</div>
+    <div class="whitespace-pre text-code-white">  }</div>
+    <div class="whitespace-pre text-code-white">}</div>
+  </div>
+</div>              </div>
+
+              
+              
+              
+
+            </div>
+          </div>
+          
+
+
+        </div>
+        
+
+        <script src="app.js%3Fid=f831c3cf79135651b6a5"></script>
+
+        <!-- Algolia DocSearch  -->
+        <script type="text/javascript" src="docsearch.min.js"></script>
+        <script type="text/javascript">
+          docsearch({
+            apiKey: '3df93446658cd9c4e314d4c02a052188',
+            indexName: 'tailwindcss',
+            inputSelector: '#docsearch',
+            algoliaOptions: { 'facetFilters': ["version:v1"] },
+          });
+        </script>
+      </div>
+      
+
+
+    </div>
+    
+
+  </div>
+</div>
+
+
+
+
+  <!-- Google Analytics  -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-109068504-1"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'UA-109068504-1');
+  </script>
+
+<script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+<script src="nav.js%3Fid=b3eb7d558e0420f9b29c" defer></script>
+
+</body>
+</html>

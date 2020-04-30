@@ -23,8 +23,9 @@
 <meta property="og:description" content="Utilities for controlling the decoration of text.">
 <meta property="og:image" content="https://tailwindcss.com/img/twitter-large-card.png">
   <link rel="stylesheet" href="https://rsms.me/inter/inter.css">
-  <link rel="stylesheet" href="http://tailwindcss.com/assets/build/css/main.css?id=da35c01d0ae8bad54242">
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/docsearch.js/2/docsearch.min.css">
+  <link rel="stylesheet" href="main.css%3Fid=4a7cbbbeb4816c16d9a7.css">
+  <link rel="stylesheet" href="docsearch.min.css">
+  <script src="alpine.js" defer></script>
 </head>
 <body data-sidebar-visible="true" class="text-gray-900 leading-normal pb-8">
 
@@ -54,7 +55,10 @@
           
           <div class="w-full">
             <div class="markdown mb-6 px-6 mx-auto">
-                              <a name="//apple_ref/cpp/Section/Top" class="dashAnchor"></a><h1>Text Decoration</h1>
+                              <a name="//apple_ref/cpp/Section/Top" class="dashAnchor"></a><h1 class="flex items-center">
+                  Text Decoration
+                  <!-- <span class="ml-4 text-teal-600 font-semibold text-base">v1.3.0+</span> -->
+                                  </h1>
               
                               <div class="mt-0 mb-4 text-gray-600">
                   Utilities for controlling the decoration of text.
@@ -92,7 +96,7 @@
 <h2><a id="underline" name="//apple_ref/cpp/Section/Underline" class="dashAnchor"></a>Underline</h2>
 <p>Use the <code>.underline</code> utility to underline text.</p>
 <div class="relative overflow-hidden mb-8">
-  <div v-pre class="bg-white rounded-t-lg overflow-hidden border-t border-l border-r border-gray-400 p-4 ">
+  <div v-pre class="bg-white rounded-t-lg overflow-hidden border-t border-l border-r border-gray-400 p-4 " style="">
     <p class="underline text-lg text-gray-800">The quick brown fox jumped over the lazy dog.</p>
   </div>
   <div v-pre class="rounded-b-lg bg-gray-800">
@@ -102,7 +106,7 @@
 <h2><a id="line-through" name="//apple_ref/cpp/Section/Line%20Through" class="dashAnchor"></a>Line Through</h2>
 <p>Use the <code>.line-through</code> utility to strike out text.</p>
 <div class="relative overflow-hidden mb-8">
-  <div v-pre class="bg-white rounded-t-lg overflow-hidden border-t border-l border-r border-gray-400 p-4 ">
+  <div v-pre class="bg-white rounded-t-lg overflow-hidden border-t border-l border-r border-gray-400 p-4 " style="">
     <p class="line-through text-lg text-gray-800">The quick brown fox jumped over the lazy dog.</p>
   </div>
   <div v-pre class="rounded-b-lg bg-gray-800">
@@ -112,7 +116,7 @@
 <h2><a id="no-underline" name="//apple_ref/cpp/Section/No%20Underline" class="dashAnchor"></a>No Underline</h2>
 <p>Use the <code>.no-underline</code> utility to remove underline or line-through styling.</p>
 <div class="relative overflow-hidden mb-8">
-  <div v-pre class="bg-white rounded-t-lg overflow-hidden border-t border-l border-r border-gray-400 p-4 ">
+  <div v-pre class="bg-white rounded-t-lg overflow-hidden border-t border-l border-r border-gray-400 p-4 " style="">
     <div class="text-center">
   <a href="text-decoration.html#" class="no-underline text-blue-500 text-lg">Link with no underline</a>
 </div>
@@ -123,7 +127,7 @@
 </div>
 <h2><a id="responsive" name="//apple_ref/cpp/Section/Responsive" class="dashAnchor"></a>Responsive</h2>
 <p>To control the text decoration of an element at a specific breakpoint, add a <code>{screen}:</code> prefix to any existing text decoration utility. For example, use <code>md:underline</code> to apply the <code>underline</code> utility at only medium screen sizes and above.</p>
-<p>For more information about Tailwind's responsive design features, check out the <a href="http://tailwindcss.com/docs/responsive-design">Responsive Design</a> documentation.</p>
+<p>For more information about Tailwind's responsive design features, check out the <a href="https://tailwindcss.com/docs/responsive-design">Responsive Design</a> documentation.</p>
 <div class="mt-8 v-cloak-hidden">
   <responsive-code-sample code='&lt;p class="none:underline sm:no-underline md:line-through lg:underline xl:no-underline ..."&gt;
   The quick brown fox jumped over the lazy dog.
@@ -138,7 +142,7 @@
 <h2><a id="hover" name="//apple_ref/cpp/Section/Hover" class="dashAnchor"></a>Hover</h2>
 <p>To control the text decoration of an element on hover, add the <code>hover:</code> prefix to any existing text decoration utility. For example, use <code>hover:underline</code> to apply the <code>underline</code> utility on hover.</p>
 <div class="relative overflow-hidden mb-8">
-  <div v-pre class="bg-white rounded-t-lg overflow-hidden border-t border-l border-r border-gray-400 p-4 text-center">
+  <div v-pre class="bg-white rounded-t-lg overflow-hidden border-t border-l border-r border-gray-400 p-4 text-center" style="">
     <a href="text-decoration.html#hover" class="no-underline hover:underline text-blue-500 text-lg">Link</a>
   </div>
   <div v-pre class="rounded-b-lg bg-gray-800">
@@ -150,7 +154,7 @@
 <h2><a id="focus" name="//apple_ref/cpp/Section/Focus" class="dashAnchor"></a>Focus</h2>
 <p>To control the text decoration of an element on focus, add the <code>focus:</code> prefix to any existing text decoration utility. For example, use <code>focus:underline</code> to apply the <code>underline</code> utility on focus.</p>
 <div class="relative overflow-hidden mb-8">
-  <div v-pre class="bg-white rounded-t-lg overflow-hidden border-t border-l border-r border-gray-400 p-4 ">
+  <div v-pre class="bg-white rounded-t-lg overflow-hidden border-t border-l border-r border-gray-400 p-4 " style="">
     <div class="max-w-xs w-full mx-auto">
   <input class="bg-white focus:underline focus:shadow-outline text-gray-900 appearance-none inline-block w-full text-gray-900 border rounded py-3 px-4 focus:outline-none" value="Focus me" placeholder="Focus me">
 </div>
@@ -213,10 +217,10 @@
         </div>
         
 
-        <script src="http://tailwindcss.com/assets/build/js/app.js?id=1fa8281e8c1912520ff1"></script>
+        <script src="app.js%3Fid=f831c3cf79135651b6a5"></script>
 
         <!-- Algolia DocSearch  -->
-        <script type="text/javascript" src="https://cdn.jsdelivr.net/docsearch.js/2/docsearch.min.js"></script>
+        <script type="text/javascript" src="docsearch.min.js"></script>
         <script type="text/javascript">
           docsearch({
             apiKey: '3df93446658cd9c4e314d4c02a052188',
@@ -236,6 +240,8 @@
 </div>
 
 
+
+
   <!-- Google Analytics  -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=UA-109068504-1"></script>
   <script>
@@ -247,7 +253,7 @@
   </script>
 
 <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
-<script src="http://tailwindcss.com/assets/build/js/nav.js?id=b3eb7d558e0420f9b29c" defer></script>
+<script src="nav.js%3Fid=b3eb7d558e0420f9b29c" defer></script>
 
 </body>
 </html>

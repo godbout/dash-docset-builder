@@ -23,8 +23,9 @@
 <meta property="og:description" content="Utilities for controlling the color of placeholder text.">
 <meta property="og:image" content="https://tailwindcss.com/img/twitter-large-card.png">
   <link rel="stylesheet" href="https://rsms.me/inter/inter.css">
-  <link rel="stylesheet" href="http://tailwindcss.com/assets/build/css/main.css?id=da35c01d0ae8bad54242">
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/docsearch.js/2/docsearch.min.css">
+  <link rel="stylesheet" href="main.css%3Fid=4a7cbbbeb4816c16d9a7.css">
+  <link rel="stylesheet" href="docsearch.min.css">
+  <script src="alpine.js" defer></script>
 </head>
 <body data-sidebar-visible="true" class="text-gray-900 leading-normal pb-8">
 
@@ -54,7 +55,13 @@
           
           <div class="w-full">
             <div class="markdown mb-6 px-6 mx-auto">
-                              <a name="//apple_ref/cpp/Section/Top" class="dashAnchor"></a><h1>Placeholder Color</h1>
+                              <a name="//apple_ref/cpp/Section/Top" class="dashAnchor"></a><h1 class="flex items-center">
+                  Placeholder Color
+                  <!-- <span class="ml-4 text-teal-600 font-semibold text-base">v1.3.0+</span> -->
+                                    <span class="ml-3 inline-flex items-center px-3 py-1 rounded-full text-sm font-medium leading-4 bg-green-150 text-green-900">
+                    v1.1.0+
+                  </span>
+                                  </h1>
               
                               <div class="mt-0 mb-4 text-gray-600">
                   Utilities for controlling the color of placeholder text.
@@ -78,7 +85,7 @@
         </tr>
       </thead>
       <tbody class="align-baseline">
-                <tr>
+                <tr class="text-black">
           <td class="p-2  font-mono text-xs text-purple-700 whitespace-no-wrap">.placeholder-transparent<span class="text-gray-500">::placeholder</span>
 </td>
           <td class="hidden sm:table-cell p-2  font-mono text-xs text-blue-700 whitespace-pre">color: transparent;</td>
@@ -86,7 +93,15 @@
             Aa
           </td>
         </tr>
-                <tr>
+                <tr class="text-black">
+          <td class="p-2 border-t border-gray-200 font-mono text-xs text-purple-700 whitespace-no-wrap">.placeholder-current<span class="text-gray-500">::placeholder</span>
+</td>
+          <td class="hidden sm:table-cell p-2 border-t border-gray-200 font-mono text-xs text-blue-700 whitespace-pre">color: currentColor;</td>
+          <td class="relative w-16 font-medium border-t border-gray-200 text-base whitespace-no-wrap text-current">
+            Aa
+          </td>
+        </tr>
+                <tr class="text-black">
           <td class="p-2 border-t border-gray-200 font-mono text-xs text-purple-700 whitespace-no-wrap">.placeholder-black<span class="text-gray-500">::placeholder</span>
 </td>
           <td class="hidden sm:table-cell p-2 border-t border-gray-200 font-mono text-xs text-blue-700 whitespace-pre">color: #000;</td>
@@ -94,7 +109,7 @@
             Aa
           </td>
         </tr>
-                <tr>
+                <tr class="text-black">
           <td class="p-2 border-t border-gray-200 font-mono text-xs text-purple-700 whitespace-no-wrap">.placeholder-white<span class="text-gray-500">::placeholder</span>
 </td>
           <td class="hidden sm:table-cell p-2 border-t border-gray-200 font-mono text-xs text-blue-700 whitespace-pre">color: #fff;</td>
@@ -102,7 +117,7 @@
             Aa
           </td>
         </tr>
-                <tr>
+                <tr class="text-black">
           <td class="p-2 border-t border-gray-200 font-mono text-xs text-purple-700 whitespace-no-wrap">.placeholder-gray-100<span class="text-gray-500">::placeholder</span>
 </td>
           <td class="hidden sm:table-cell p-2 border-t border-gray-200 font-mono text-xs text-blue-700 whitespace-pre">color: #f7fafc;</td>
@@ -110,7 +125,7 @@
             Aa
           </td>
         </tr>
-                <tr>
+                <tr class="text-black">
           <td class="p-2 border-t border-gray-200 font-mono text-xs text-purple-700 whitespace-no-wrap">.placeholder-gray-200<span class="text-gray-500">::placeholder</span>
 </td>
           <td class="hidden sm:table-cell p-2 border-t border-gray-200 font-mono text-xs text-blue-700 whitespace-pre">color: #edf2f7;</td>
@@ -118,7 +133,7 @@
             Aa
           </td>
         </tr>
-                <tr>
+                <tr class="text-black">
           <td class="p-2 border-t border-gray-200 font-mono text-xs text-purple-700 whitespace-no-wrap">.placeholder-gray-300<span class="text-gray-500">::placeholder</span>
 </td>
           <td class="hidden sm:table-cell p-2 border-t border-gray-200 font-mono text-xs text-blue-700 whitespace-pre">color: #e2e8f0;</td>
@@ -126,7 +141,7 @@
             Aa
           </td>
         </tr>
-                <tr>
+                <tr class="text-black">
           <td class="p-2 border-t border-gray-200 font-mono text-xs text-purple-700 whitespace-no-wrap">.placeholder-gray-400<span class="text-gray-500">::placeholder</span>
 </td>
           <td class="hidden sm:table-cell p-2 border-t border-gray-200 font-mono text-xs text-blue-700 whitespace-pre">color: #cbd5e0;</td>
@@ -134,7 +149,7 @@
             Aa
           </td>
         </tr>
-                <tr>
+                <tr class="text-black">
           <td class="p-2 border-t border-gray-200 font-mono text-xs text-purple-700 whitespace-no-wrap">.placeholder-gray-500<span class="text-gray-500">::placeholder</span>
 </td>
           <td class="hidden sm:table-cell p-2 border-t border-gray-200 font-mono text-xs text-blue-700 whitespace-pre">color: #a0aec0;</td>
@@ -142,7 +157,7 @@
             Aa
           </td>
         </tr>
-                <tr>
+                <tr class="text-black">
           <td class="p-2 border-t border-gray-200 font-mono text-xs text-purple-700 whitespace-no-wrap">.placeholder-gray-600<span class="text-gray-500">::placeholder</span>
 </td>
           <td class="hidden sm:table-cell p-2 border-t border-gray-200 font-mono text-xs text-blue-700 whitespace-pre">color: #718096;</td>
@@ -150,7 +165,7 @@
             Aa
           </td>
         </tr>
-                <tr>
+                <tr class="text-black">
           <td class="p-2 border-t border-gray-200 font-mono text-xs text-purple-700 whitespace-no-wrap">.placeholder-gray-700<span class="text-gray-500">::placeholder</span>
 </td>
           <td class="hidden sm:table-cell p-2 border-t border-gray-200 font-mono text-xs text-blue-700 whitespace-pre">color: #4a5568;</td>
@@ -158,7 +173,7 @@
             Aa
           </td>
         </tr>
-                <tr>
+                <tr class="text-black">
           <td class="p-2 border-t border-gray-200 font-mono text-xs text-purple-700 whitespace-no-wrap">.placeholder-gray-800<span class="text-gray-500">::placeholder</span>
 </td>
           <td class="hidden sm:table-cell p-2 border-t border-gray-200 font-mono text-xs text-blue-700 whitespace-pre">color: #2d3748;</td>
@@ -166,7 +181,7 @@
             Aa
           </td>
         </tr>
-                <tr>
+                <tr class="text-black">
           <td class="p-2 border-t border-gray-200 font-mono text-xs text-purple-700 whitespace-no-wrap">.placeholder-gray-900<span class="text-gray-500">::placeholder</span>
 </td>
           <td class="hidden sm:table-cell p-2 border-t border-gray-200 font-mono text-xs text-blue-700 whitespace-pre">color: #1a202c;</td>
@@ -174,7 +189,7 @@
             Aa
           </td>
         </tr>
-                <tr>
+                <tr class="text-black">
           <td class="p-2 border-t border-gray-200 font-mono text-xs text-purple-700 whitespace-no-wrap">.placeholder-red-100<span class="text-gray-500">::placeholder</span>
 </td>
           <td class="hidden sm:table-cell p-2 border-t border-gray-200 font-mono text-xs text-blue-700 whitespace-pre">color: #fff5f5;</td>
@@ -182,7 +197,7 @@
             Aa
           </td>
         </tr>
-                <tr>
+                <tr class="text-black">
           <td class="p-2 border-t border-gray-200 font-mono text-xs text-purple-700 whitespace-no-wrap">.placeholder-red-200<span class="text-gray-500">::placeholder</span>
 </td>
           <td class="hidden sm:table-cell p-2 border-t border-gray-200 font-mono text-xs text-blue-700 whitespace-pre">color: #fed7d7;</td>
@@ -190,7 +205,7 @@
             Aa
           </td>
         </tr>
-                <tr>
+                <tr class="text-black">
           <td class="p-2 border-t border-gray-200 font-mono text-xs text-purple-700 whitespace-no-wrap">.placeholder-red-300<span class="text-gray-500">::placeholder</span>
 </td>
           <td class="hidden sm:table-cell p-2 border-t border-gray-200 font-mono text-xs text-blue-700 whitespace-pre">color: #feb2b2;</td>
@@ -198,7 +213,7 @@
             Aa
           </td>
         </tr>
-                <tr>
+                <tr class="text-black">
           <td class="p-2 border-t border-gray-200 font-mono text-xs text-purple-700 whitespace-no-wrap">.placeholder-red-400<span class="text-gray-500">::placeholder</span>
 </td>
           <td class="hidden sm:table-cell p-2 border-t border-gray-200 font-mono text-xs text-blue-700 whitespace-pre">color: #fc8181;</td>
@@ -206,7 +221,7 @@
             Aa
           </td>
         </tr>
-                <tr>
+                <tr class="text-black">
           <td class="p-2 border-t border-gray-200 font-mono text-xs text-purple-700 whitespace-no-wrap">.placeholder-red-500<span class="text-gray-500">::placeholder</span>
 </td>
           <td class="hidden sm:table-cell p-2 border-t border-gray-200 font-mono text-xs text-blue-700 whitespace-pre">color: #f56565;</td>
@@ -214,7 +229,7 @@
             Aa
           </td>
         </tr>
-                <tr>
+                <tr class="text-black">
           <td class="p-2 border-t border-gray-200 font-mono text-xs text-purple-700 whitespace-no-wrap">.placeholder-red-600<span class="text-gray-500">::placeholder</span>
 </td>
           <td class="hidden sm:table-cell p-2 border-t border-gray-200 font-mono text-xs text-blue-700 whitespace-pre">color: #e53e3e;</td>
@@ -222,7 +237,7 @@
             Aa
           </td>
         </tr>
-                <tr>
+                <tr class="text-black">
           <td class="p-2 border-t border-gray-200 font-mono text-xs text-purple-700 whitespace-no-wrap">.placeholder-red-700<span class="text-gray-500">::placeholder</span>
 </td>
           <td class="hidden sm:table-cell p-2 border-t border-gray-200 font-mono text-xs text-blue-700 whitespace-pre">color: #c53030;</td>
@@ -230,7 +245,7 @@
             Aa
           </td>
         </tr>
-                <tr>
+                <tr class="text-black">
           <td class="p-2 border-t border-gray-200 font-mono text-xs text-purple-700 whitespace-no-wrap">.placeholder-red-800<span class="text-gray-500">::placeholder</span>
 </td>
           <td class="hidden sm:table-cell p-2 border-t border-gray-200 font-mono text-xs text-blue-700 whitespace-pre">color: #9b2c2c;</td>
@@ -238,7 +253,7 @@
             Aa
           </td>
         </tr>
-                <tr>
+                <tr class="text-black">
           <td class="p-2 border-t border-gray-200 font-mono text-xs text-purple-700 whitespace-no-wrap">.placeholder-red-900<span class="text-gray-500">::placeholder</span>
 </td>
           <td class="hidden sm:table-cell p-2 border-t border-gray-200 font-mono text-xs text-blue-700 whitespace-pre">color: #742a2a;</td>
@@ -246,7 +261,7 @@
             Aa
           </td>
         </tr>
-                <tr>
+                <tr class="text-black">
           <td class="p-2 border-t border-gray-200 font-mono text-xs text-purple-700 whitespace-no-wrap">.placeholder-orange-100<span class="text-gray-500">::placeholder</span>
 </td>
           <td class="hidden sm:table-cell p-2 border-t border-gray-200 font-mono text-xs text-blue-700 whitespace-pre">color: #fffaf0;</td>
@@ -254,7 +269,7 @@
             Aa
           </td>
         </tr>
-                <tr>
+                <tr class="text-black">
           <td class="p-2 border-t border-gray-200 font-mono text-xs text-purple-700 whitespace-no-wrap">.placeholder-orange-200<span class="text-gray-500">::placeholder</span>
 </td>
           <td class="hidden sm:table-cell p-2 border-t border-gray-200 font-mono text-xs text-blue-700 whitespace-pre">color: #feebc8;</td>
@@ -262,7 +277,7 @@
             Aa
           </td>
         </tr>
-                <tr>
+                <tr class="text-black">
           <td class="p-2 border-t border-gray-200 font-mono text-xs text-purple-700 whitespace-no-wrap">.placeholder-orange-300<span class="text-gray-500">::placeholder</span>
 </td>
           <td class="hidden sm:table-cell p-2 border-t border-gray-200 font-mono text-xs text-blue-700 whitespace-pre">color: #fbd38d;</td>
@@ -270,7 +285,7 @@
             Aa
           </td>
         </tr>
-                <tr>
+                <tr class="text-black">
           <td class="p-2 border-t border-gray-200 font-mono text-xs text-purple-700 whitespace-no-wrap">.placeholder-orange-400<span class="text-gray-500">::placeholder</span>
 </td>
           <td class="hidden sm:table-cell p-2 border-t border-gray-200 font-mono text-xs text-blue-700 whitespace-pre">color: #f6ad55;</td>
@@ -278,7 +293,7 @@
             Aa
           </td>
         </tr>
-                <tr>
+                <tr class="text-black">
           <td class="p-2 border-t border-gray-200 font-mono text-xs text-purple-700 whitespace-no-wrap">.placeholder-orange-500<span class="text-gray-500">::placeholder</span>
 </td>
           <td class="hidden sm:table-cell p-2 border-t border-gray-200 font-mono text-xs text-blue-700 whitespace-pre">color: #ed8936;</td>
@@ -286,7 +301,7 @@
             Aa
           </td>
         </tr>
-                <tr>
+                <tr class="text-black">
           <td class="p-2 border-t border-gray-200 font-mono text-xs text-purple-700 whitespace-no-wrap">.placeholder-orange-600<span class="text-gray-500">::placeholder</span>
 </td>
           <td class="hidden sm:table-cell p-2 border-t border-gray-200 font-mono text-xs text-blue-700 whitespace-pre">color: #dd6b20;</td>
@@ -294,7 +309,7 @@
             Aa
           </td>
         </tr>
-                <tr>
+                <tr class="text-black">
           <td class="p-2 border-t border-gray-200 font-mono text-xs text-purple-700 whitespace-no-wrap">.placeholder-orange-700<span class="text-gray-500">::placeholder</span>
 </td>
           <td class="hidden sm:table-cell p-2 border-t border-gray-200 font-mono text-xs text-blue-700 whitespace-pre">color: #c05621;</td>
@@ -302,7 +317,7 @@
             Aa
           </td>
         </tr>
-                <tr>
+                <tr class="text-black">
           <td class="p-2 border-t border-gray-200 font-mono text-xs text-purple-700 whitespace-no-wrap">.placeholder-orange-800<span class="text-gray-500">::placeholder</span>
 </td>
           <td class="hidden sm:table-cell p-2 border-t border-gray-200 font-mono text-xs text-blue-700 whitespace-pre">color: #9c4221;</td>
@@ -310,7 +325,7 @@
             Aa
           </td>
         </tr>
-                <tr>
+                <tr class="text-black">
           <td class="p-2 border-t border-gray-200 font-mono text-xs text-purple-700 whitespace-no-wrap">.placeholder-orange-900<span class="text-gray-500">::placeholder</span>
 </td>
           <td class="hidden sm:table-cell p-2 border-t border-gray-200 font-mono text-xs text-blue-700 whitespace-pre">color: #7b341e;</td>
@@ -318,7 +333,7 @@
             Aa
           </td>
         </tr>
-                <tr>
+                <tr class="text-black">
           <td class="p-2 border-t border-gray-200 font-mono text-xs text-purple-700 whitespace-no-wrap">.placeholder-yellow-100<span class="text-gray-500">::placeholder</span>
 </td>
           <td class="hidden sm:table-cell p-2 border-t border-gray-200 font-mono text-xs text-blue-700 whitespace-pre">color: #fffff0;</td>
@@ -326,7 +341,7 @@
             Aa
           </td>
         </tr>
-                <tr>
+                <tr class="text-black">
           <td class="p-2 border-t border-gray-200 font-mono text-xs text-purple-700 whitespace-no-wrap">.placeholder-yellow-200<span class="text-gray-500">::placeholder</span>
 </td>
           <td class="hidden sm:table-cell p-2 border-t border-gray-200 font-mono text-xs text-blue-700 whitespace-pre">color: #fefcbf;</td>
@@ -334,7 +349,7 @@
             Aa
           </td>
         </tr>
-                <tr>
+                <tr class="text-black">
           <td class="p-2 border-t border-gray-200 font-mono text-xs text-purple-700 whitespace-no-wrap">.placeholder-yellow-300<span class="text-gray-500">::placeholder</span>
 </td>
           <td class="hidden sm:table-cell p-2 border-t border-gray-200 font-mono text-xs text-blue-700 whitespace-pre">color: #faf089;</td>
@@ -342,7 +357,7 @@
             Aa
           </td>
         </tr>
-                <tr>
+                <tr class="text-black">
           <td class="p-2 border-t border-gray-200 font-mono text-xs text-purple-700 whitespace-no-wrap">.placeholder-yellow-400<span class="text-gray-500">::placeholder</span>
 </td>
           <td class="hidden sm:table-cell p-2 border-t border-gray-200 font-mono text-xs text-blue-700 whitespace-pre">color: #f6e05e;</td>
@@ -350,7 +365,7 @@
             Aa
           </td>
         </tr>
-                <tr>
+                <tr class="text-black">
           <td class="p-2 border-t border-gray-200 font-mono text-xs text-purple-700 whitespace-no-wrap">.placeholder-yellow-500<span class="text-gray-500">::placeholder</span>
 </td>
           <td class="hidden sm:table-cell p-2 border-t border-gray-200 font-mono text-xs text-blue-700 whitespace-pre">color: #ecc94b;</td>
@@ -358,7 +373,7 @@
             Aa
           </td>
         </tr>
-                <tr>
+                <tr class="text-black">
           <td class="p-2 border-t border-gray-200 font-mono text-xs text-purple-700 whitespace-no-wrap">.placeholder-yellow-600<span class="text-gray-500">::placeholder</span>
 </td>
           <td class="hidden sm:table-cell p-2 border-t border-gray-200 font-mono text-xs text-blue-700 whitespace-pre">color: #d69e2e;</td>
@@ -366,7 +381,7 @@
             Aa
           </td>
         </tr>
-                <tr>
+                <tr class="text-black">
           <td class="p-2 border-t border-gray-200 font-mono text-xs text-purple-700 whitespace-no-wrap">.placeholder-yellow-700<span class="text-gray-500">::placeholder</span>
 </td>
           <td class="hidden sm:table-cell p-2 border-t border-gray-200 font-mono text-xs text-blue-700 whitespace-pre">color: #b7791f;</td>
@@ -374,7 +389,7 @@
             Aa
           </td>
         </tr>
-                <tr>
+                <tr class="text-black">
           <td class="p-2 border-t border-gray-200 font-mono text-xs text-purple-700 whitespace-no-wrap">.placeholder-yellow-800<span class="text-gray-500">::placeholder</span>
 </td>
           <td class="hidden sm:table-cell p-2 border-t border-gray-200 font-mono text-xs text-blue-700 whitespace-pre">color: #975a16;</td>
@@ -382,7 +397,7 @@
             Aa
           </td>
         </tr>
-                <tr>
+                <tr class="text-black">
           <td class="p-2 border-t border-gray-200 font-mono text-xs text-purple-700 whitespace-no-wrap">.placeholder-yellow-900<span class="text-gray-500">::placeholder</span>
 </td>
           <td class="hidden sm:table-cell p-2 border-t border-gray-200 font-mono text-xs text-blue-700 whitespace-pre">color: #744210;</td>
@@ -390,7 +405,7 @@
             Aa
           </td>
         </tr>
-                <tr>
+                <tr class="text-black">
           <td class="p-2 border-t border-gray-200 font-mono text-xs text-purple-700 whitespace-no-wrap">.placeholder-green-100<span class="text-gray-500">::placeholder</span>
 </td>
           <td class="hidden sm:table-cell p-2 border-t border-gray-200 font-mono text-xs text-blue-700 whitespace-pre">color: #f0fff4;</td>
@@ -398,7 +413,7 @@
             Aa
           </td>
         </tr>
-                <tr>
+                <tr class="text-black">
           <td class="p-2 border-t border-gray-200 font-mono text-xs text-purple-700 whitespace-no-wrap">.placeholder-green-200<span class="text-gray-500">::placeholder</span>
 </td>
           <td class="hidden sm:table-cell p-2 border-t border-gray-200 font-mono text-xs text-blue-700 whitespace-pre">color: #c6f6d5;</td>
@@ -406,7 +421,7 @@
             Aa
           </td>
         </tr>
-                <tr>
+                <tr class="text-black">
           <td class="p-2 border-t border-gray-200 font-mono text-xs text-purple-700 whitespace-no-wrap">.placeholder-green-300<span class="text-gray-500">::placeholder</span>
 </td>
           <td class="hidden sm:table-cell p-2 border-t border-gray-200 font-mono text-xs text-blue-700 whitespace-pre">color: #9ae6b4;</td>
@@ -414,7 +429,7 @@
             Aa
           </td>
         </tr>
-                <tr>
+                <tr class="text-black">
           <td class="p-2 border-t border-gray-200 font-mono text-xs text-purple-700 whitespace-no-wrap">.placeholder-green-400<span class="text-gray-500">::placeholder</span>
 </td>
           <td class="hidden sm:table-cell p-2 border-t border-gray-200 font-mono text-xs text-blue-700 whitespace-pre">color: #68d391;</td>
@@ -422,7 +437,7 @@
             Aa
           </td>
         </tr>
-                <tr>
+                <tr class="text-black">
           <td class="p-2 border-t border-gray-200 font-mono text-xs text-purple-700 whitespace-no-wrap">.placeholder-green-500<span class="text-gray-500">::placeholder</span>
 </td>
           <td class="hidden sm:table-cell p-2 border-t border-gray-200 font-mono text-xs text-blue-700 whitespace-pre">color: #48bb78;</td>
@@ -430,7 +445,7 @@
             Aa
           </td>
         </tr>
-                <tr>
+                <tr class="text-black">
           <td class="p-2 border-t border-gray-200 font-mono text-xs text-purple-700 whitespace-no-wrap">.placeholder-green-600<span class="text-gray-500">::placeholder</span>
 </td>
           <td class="hidden sm:table-cell p-2 border-t border-gray-200 font-mono text-xs text-blue-700 whitespace-pre">color: #38a169;</td>
@@ -438,7 +453,7 @@
             Aa
           </td>
         </tr>
-                <tr>
+                <tr class="text-black">
           <td class="p-2 border-t border-gray-200 font-mono text-xs text-purple-700 whitespace-no-wrap">.placeholder-green-700<span class="text-gray-500">::placeholder</span>
 </td>
           <td class="hidden sm:table-cell p-2 border-t border-gray-200 font-mono text-xs text-blue-700 whitespace-pre">color: #2f855a;</td>
@@ -446,7 +461,7 @@
             Aa
           </td>
         </tr>
-                <tr>
+                <tr class="text-black">
           <td class="p-2 border-t border-gray-200 font-mono text-xs text-purple-700 whitespace-no-wrap">.placeholder-green-800<span class="text-gray-500">::placeholder</span>
 </td>
           <td class="hidden sm:table-cell p-2 border-t border-gray-200 font-mono text-xs text-blue-700 whitespace-pre">color: #276749;</td>
@@ -454,7 +469,7 @@
             Aa
           </td>
         </tr>
-                <tr>
+                <tr class="text-black">
           <td class="p-2 border-t border-gray-200 font-mono text-xs text-purple-700 whitespace-no-wrap">.placeholder-green-900<span class="text-gray-500">::placeholder</span>
 </td>
           <td class="hidden sm:table-cell p-2 border-t border-gray-200 font-mono text-xs text-blue-700 whitespace-pre">color: #22543d;</td>
@@ -462,7 +477,7 @@
             Aa
           </td>
         </tr>
-                <tr>
+                <tr class="text-black">
           <td class="p-2 border-t border-gray-200 font-mono text-xs text-purple-700 whitespace-no-wrap">.placeholder-teal-100<span class="text-gray-500">::placeholder</span>
 </td>
           <td class="hidden sm:table-cell p-2 border-t border-gray-200 font-mono text-xs text-blue-700 whitespace-pre">color: #e6fffa;</td>
@@ -470,7 +485,7 @@
             Aa
           </td>
         </tr>
-                <tr>
+                <tr class="text-black">
           <td class="p-2 border-t border-gray-200 font-mono text-xs text-purple-700 whitespace-no-wrap">.placeholder-teal-200<span class="text-gray-500">::placeholder</span>
 </td>
           <td class="hidden sm:table-cell p-2 border-t border-gray-200 font-mono text-xs text-blue-700 whitespace-pre">color: #b2f5ea;</td>
@@ -478,7 +493,7 @@
             Aa
           </td>
         </tr>
-                <tr>
+                <tr class="text-black">
           <td class="p-2 border-t border-gray-200 font-mono text-xs text-purple-700 whitespace-no-wrap">.placeholder-teal-300<span class="text-gray-500">::placeholder</span>
 </td>
           <td class="hidden sm:table-cell p-2 border-t border-gray-200 font-mono text-xs text-blue-700 whitespace-pre">color: #81e6d9;</td>
@@ -486,7 +501,7 @@
             Aa
           </td>
         </tr>
-                <tr>
+                <tr class="text-black">
           <td class="p-2 border-t border-gray-200 font-mono text-xs text-purple-700 whitespace-no-wrap">.placeholder-teal-400<span class="text-gray-500">::placeholder</span>
 </td>
           <td class="hidden sm:table-cell p-2 border-t border-gray-200 font-mono text-xs text-blue-700 whitespace-pre">color: #4fd1c5;</td>
@@ -494,7 +509,7 @@
             Aa
           </td>
         </tr>
-                <tr>
+                <tr class="text-black">
           <td class="p-2 border-t border-gray-200 font-mono text-xs text-purple-700 whitespace-no-wrap">.placeholder-teal-500<span class="text-gray-500">::placeholder</span>
 </td>
           <td class="hidden sm:table-cell p-2 border-t border-gray-200 font-mono text-xs text-blue-700 whitespace-pre">color: #38b2ac;</td>
@@ -502,7 +517,7 @@
             Aa
           </td>
         </tr>
-                <tr>
+                <tr class="text-black">
           <td class="p-2 border-t border-gray-200 font-mono text-xs text-purple-700 whitespace-no-wrap">.placeholder-teal-600<span class="text-gray-500">::placeholder</span>
 </td>
           <td class="hidden sm:table-cell p-2 border-t border-gray-200 font-mono text-xs text-blue-700 whitespace-pre">color: #319795;</td>
@@ -510,7 +525,7 @@
             Aa
           </td>
         </tr>
-                <tr>
+                <tr class="text-black">
           <td class="p-2 border-t border-gray-200 font-mono text-xs text-purple-700 whitespace-no-wrap">.placeholder-teal-700<span class="text-gray-500">::placeholder</span>
 </td>
           <td class="hidden sm:table-cell p-2 border-t border-gray-200 font-mono text-xs text-blue-700 whitespace-pre">color: #2c7a7b;</td>
@@ -518,7 +533,7 @@
             Aa
           </td>
         </tr>
-                <tr>
+                <tr class="text-black">
           <td class="p-2 border-t border-gray-200 font-mono text-xs text-purple-700 whitespace-no-wrap">.placeholder-teal-800<span class="text-gray-500">::placeholder</span>
 </td>
           <td class="hidden sm:table-cell p-2 border-t border-gray-200 font-mono text-xs text-blue-700 whitespace-pre">color: #285e61;</td>
@@ -526,7 +541,7 @@
             Aa
           </td>
         </tr>
-                <tr>
+                <tr class="text-black">
           <td class="p-2 border-t border-gray-200 font-mono text-xs text-purple-700 whitespace-no-wrap">.placeholder-teal-900<span class="text-gray-500">::placeholder</span>
 </td>
           <td class="hidden sm:table-cell p-2 border-t border-gray-200 font-mono text-xs text-blue-700 whitespace-pre">color: #234e52;</td>
@@ -534,7 +549,7 @@
             Aa
           </td>
         </tr>
-                <tr>
+                <tr class="text-black">
           <td class="p-2 border-t border-gray-200 font-mono text-xs text-purple-700 whitespace-no-wrap">.placeholder-blue-100<span class="text-gray-500">::placeholder</span>
 </td>
           <td class="hidden sm:table-cell p-2 border-t border-gray-200 font-mono text-xs text-blue-700 whitespace-pre">color: #ebf8ff;</td>
@@ -542,7 +557,7 @@
             Aa
           </td>
         </tr>
-                <tr>
+                <tr class="text-black">
           <td class="p-2 border-t border-gray-200 font-mono text-xs text-purple-700 whitespace-no-wrap">.placeholder-blue-200<span class="text-gray-500">::placeholder</span>
 </td>
           <td class="hidden sm:table-cell p-2 border-t border-gray-200 font-mono text-xs text-blue-700 whitespace-pre">color: #bee3f8;</td>
@@ -550,7 +565,7 @@
             Aa
           </td>
         </tr>
-                <tr>
+                <tr class="text-black">
           <td class="p-2 border-t border-gray-200 font-mono text-xs text-purple-700 whitespace-no-wrap">.placeholder-blue-300<span class="text-gray-500">::placeholder</span>
 </td>
           <td class="hidden sm:table-cell p-2 border-t border-gray-200 font-mono text-xs text-blue-700 whitespace-pre">color: #90cdf4;</td>
@@ -558,7 +573,7 @@
             Aa
           </td>
         </tr>
-                <tr>
+                <tr class="text-black">
           <td class="p-2 border-t border-gray-200 font-mono text-xs text-purple-700 whitespace-no-wrap">.placeholder-blue-400<span class="text-gray-500">::placeholder</span>
 </td>
           <td class="hidden sm:table-cell p-2 border-t border-gray-200 font-mono text-xs text-blue-700 whitespace-pre">color: #63b3ed;</td>
@@ -566,7 +581,7 @@
             Aa
           </td>
         </tr>
-                <tr>
+                <tr class="text-black">
           <td class="p-2 border-t border-gray-200 font-mono text-xs text-purple-700 whitespace-no-wrap">.placeholder-blue-500<span class="text-gray-500">::placeholder</span>
 </td>
           <td class="hidden sm:table-cell p-2 border-t border-gray-200 font-mono text-xs text-blue-700 whitespace-pre">color: #4299e1;</td>
@@ -574,7 +589,7 @@
             Aa
           </td>
         </tr>
-                <tr>
+                <tr class="text-black">
           <td class="p-2 border-t border-gray-200 font-mono text-xs text-purple-700 whitespace-no-wrap">.placeholder-blue-600<span class="text-gray-500">::placeholder</span>
 </td>
           <td class="hidden sm:table-cell p-2 border-t border-gray-200 font-mono text-xs text-blue-700 whitespace-pre">color: #3182ce;</td>
@@ -582,7 +597,7 @@
             Aa
           </td>
         </tr>
-                <tr>
+                <tr class="text-black">
           <td class="p-2 border-t border-gray-200 font-mono text-xs text-purple-700 whitespace-no-wrap">.placeholder-blue-700<span class="text-gray-500">::placeholder</span>
 </td>
           <td class="hidden sm:table-cell p-2 border-t border-gray-200 font-mono text-xs text-blue-700 whitespace-pre">color: #2b6cb0;</td>
@@ -590,7 +605,7 @@
             Aa
           </td>
         </tr>
-                <tr>
+                <tr class="text-black">
           <td class="p-2 border-t border-gray-200 font-mono text-xs text-purple-700 whitespace-no-wrap">.placeholder-blue-800<span class="text-gray-500">::placeholder</span>
 </td>
           <td class="hidden sm:table-cell p-2 border-t border-gray-200 font-mono text-xs text-blue-700 whitespace-pre">color: #2c5282;</td>
@@ -598,7 +613,7 @@
             Aa
           </td>
         </tr>
-                <tr>
+                <tr class="text-black">
           <td class="p-2 border-t border-gray-200 font-mono text-xs text-purple-700 whitespace-no-wrap">.placeholder-blue-900<span class="text-gray-500">::placeholder</span>
 </td>
           <td class="hidden sm:table-cell p-2 border-t border-gray-200 font-mono text-xs text-blue-700 whitespace-pre">color: #2a4365;</td>
@@ -606,7 +621,7 @@
             Aa
           </td>
         </tr>
-                <tr>
+                <tr class="text-black">
           <td class="p-2 border-t border-gray-200 font-mono text-xs text-purple-700 whitespace-no-wrap">.placeholder-indigo-100<span class="text-gray-500">::placeholder</span>
 </td>
           <td class="hidden sm:table-cell p-2 border-t border-gray-200 font-mono text-xs text-blue-700 whitespace-pre">color: #ebf4ff;</td>
@@ -614,7 +629,7 @@
             Aa
           </td>
         </tr>
-                <tr>
+                <tr class="text-black">
           <td class="p-2 border-t border-gray-200 font-mono text-xs text-purple-700 whitespace-no-wrap">.placeholder-indigo-200<span class="text-gray-500">::placeholder</span>
 </td>
           <td class="hidden sm:table-cell p-2 border-t border-gray-200 font-mono text-xs text-blue-700 whitespace-pre">color: #c3dafe;</td>
@@ -622,7 +637,7 @@
             Aa
           </td>
         </tr>
-                <tr>
+                <tr class="text-black">
           <td class="p-2 border-t border-gray-200 font-mono text-xs text-purple-700 whitespace-no-wrap">.placeholder-indigo-300<span class="text-gray-500">::placeholder</span>
 </td>
           <td class="hidden sm:table-cell p-2 border-t border-gray-200 font-mono text-xs text-blue-700 whitespace-pre">color: #a3bffa;</td>
@@ -630,7 +645,7 @@
             Aa
           </td>
         </tr>
-                <tr>
+                <tr class="text-black">
           <td class="p-2 border-t border-gray-200 font-mono text-xs text-purple-700 whitespace-no-wrap">.placeholder-indigo-400<span class="text-gray-500">::placeholder</span>
 </td>
           <td class="hidden sm:table-cell p-2 border-t border-gray-200 font-mono text-xs text-blue-700 whitespace-pre">color: #7f9cf5;</td>
@@ -638,7 +653,7 @@
             Aa
           </td>
         </tr>
-                <tr>
+                <tr class="text-black">
           <td class="p-2 border-t border-gray-200 font-mono text-xs text-purple-700 whitespace-no-wrap">.placeholder-indigo-500<span class="text-gray-500">::placeholder</span>
 </td>
           <td class="hidden sm:table-cell p-2 border-t border-gray-200 font-mono text-xs text-blue-700 whitespace-pre">color: #667eea;</td>
@@ -646,7 +661,7 @@
             Aa
           </td>
         </tr>
-                <tr>
+                <tr class="text-black">
           <td class="p-2 border-t border-gray-200 font-mono text-xs text-purple-700 whitespace-no-wrap">.placeholder-indigo-600<span class="text-gray-500">::placeholder</span>
 </td>
           <td class="hidden sm:table-cell p-2 border-t border-gray-200 font-mono text-xs text-blue-700 whitespace-pre">color: #5a67d8;</td>
@@ -654,7 +669,7 @@
             Aa
           </td>
         </tr>
-                <tr>
+                <tr class="text-black">
           <td class="p-2 border-t border-gray-200 font-mono text-xs text-purple-700 whitespace-no-wrap">.placeholder-indigo-700<span class="text-gray-500">::placeholder</span>
 </td>
           <td class="hidden sm:table-cell p-2 border-t border-gray-200 font-mono text-xs text-blue-700 whitespace-pre">color: #4c51bf;</td>
@@ -662,7 +677,7 @@
             Aa
           </td>
         </tr>
-                <tr>
+                <tr class="text-black">
           <td class="p-2 border-t border-gray-200 font-mono text-xs text-purple-700 whitespace-no-wrap">.placeholder-indigo-800<span class="text-gray-500">::placeholder</span>
 </td>
           <td class="hidden sm:table-cell p-2 border-t border-gray-200 font-mono text-xs text-blue-700 whitespace-pre">color: #434190;</td>
@@ -670,7 +685,7 @@
             Aa
           </td>
         </tr>
-                <tr>
+                <tr class="text-black">
           <td class="p-2 border-t border-gray-200 font-mono text-xs text-purple-700 whitespace-no-wrap">.placeholder-indigo-900<span class="text-gray-500">::placeholder</span>
 </td>
           <td class="hidden sm:table-cell p-2 border-t border-gray-200 font-mono text-xs text-blue-700 whitespace-pre">color: #3c366b;</td>
@@ -678,7 +693,7 @@
             Aa
           </td>
         </tr>
-                <tr>
+                <tr class="text-black">
           <td class="p-2 border-t border-gray-200 font-mono text-xs text-purple-700 whitespace-no-wrap">.placeholder-purple-100<span class="text-gray-500">::placeholder</span>
 </td>
           <td class="hidden sm:table-cell p-2 border-t border-gray-200 font-mono text-xs text-blue-700 whitespace-pre">color: #faf5ff;</td>
@@ -686,7 +701,7 @@
             Aa
           </td>
         </tr>
-                <tr>
+                <tr class="text-black">
           <td class="p-2 border-t border-gray-200 font-mono text-xs text-purple-700 whitespace-no-wrap">.placeholder-purple-200<span class="text-gray-500">::placeholder</span>
 </td>
           <td class="hidden sm:table-cell p-2 border-t border-gray-200 font-mono text-xs text-blue-700 whitespace-pre">color: #e9d8fd;</td>
@@ -694,7 +709,7 @@
             Aa
           </td>
         </tr>
-                <tr>
+                <tr class="text-black">
           <td class="p-2 border-t border-gray-200 font-mono text-xs text-purple-700 whitespace-no-wrap">.placeholder-purple-300<span class="text-gray-500">::placeholder</span>
 </td>
           <td class="hidden sm:table-cell p-2 border-t border-gray-200 font-mono text-xs text-blue-700 whitespace-pre">color: #d6bcfa;</td>
@@ -702,7 +717,7 @@
             Aa
           </td>
         </tr>
-                <tr>
+                <tr class="text-black">
           <td class="p-2 border-t border-gray-200 font-mono text-xs text-purple-700 whitespace-no-wrap">.placeholder-purple-400<span class="text-gray-500">::placeholder</span>
 </td>
           <td class="hidden sm:table-cell p-2 border-t border-gray-200 font-mono text-xs text-blue-700 whitespace-pre">color: #b794f4;</td>
@@ -710,7 +725,7 @@
             Aa
           </td>
         </tr>
-                <tr>
+                <tr class="text-black">
           <td class="p-2 border-t border-gray-200 font-mono text-xs text-purple-700 whitespace-no-wrap">.placeholder-purple-500<span class="text-gray-500">::placeholder</span>
 </td>
           <td class="hidden sm:table-cell p-2 border-t border-gray-200 font-mono text-xs text-blue-700 whitespace-pre">color: #9f7aea;</td>
@@ -718,7 +733,7 @@
             Aa
           </td>
         </tr>
-                <tr>
+                <tr class="text-black">
           <td class="p-2 border-t border-gray-200 font-mono text-xs text-purple-700 whitespace-no-wrap">.placeholder-purple-600<span class="text-gray-500">::placeholder</span>
 </td>
           <td class="hidden sm:table-cell p-2 border-t border-gray-200 font-mono text-xs text-blue-700 whitespace-pre">color: #805ad5;</td>
@@ -726,7 +741,7 @@
             Aa
           </td>
         </tr>
-                <tr>
+                <tr class="text-black">
           <td class="p-2 border-t border-gray-200 font-mono text-xs text-purple-700 whitespace-no-wrap">.placeholder-purple-700<span class="text-gray-500">::placeholder</span>
 </td>
           <td class="hidden sm:table-cell p-2 border-t border-gray-200 font-mono text-xs text-blue-700 whitespace-pre">color: #6b46c1;</td>
@@ -734,7 +749,7 @@
             Aa
           </td>
         </tr>
-                <tr>
+                <tr class="text-black">
           <td class="p-2 border-t border-gray-200 font-mono text-xs text-purple-700 whitespace-no-wrap">.placeholder-purple-800<span class="text-gray-500">::placeholder</span>
 </td>
           <td class="hidden sm:table-cell p-2 border-t border-gray-200 font-mono text-xs text-blue-700 whitespace-pre">color: #553c9a;</td>
@@ -742,7 +757,7 @@
             Aa
           </td>
         </tr>
-                <tr>
+                <tr class="text-black">
           <td class="p-2 border-t border-gray-200 font-mono text-xs text-purple-700 whitespace-no-wrap">.placeholder-purple-900<span class="text-gray-500">::placeholder</span>
 </td>
           <td class="hidden sm:table-cell p-2 border-t border-gray-200 font-mono text-xs text-blue-700 whitespace-pre">color: #44337a;</td>
@@ -750,7 +765,7 @@
             Aa
           </td>
         </tr>
-                <tr>
+                <tr class="text-black">
           <td class="p-2 border-t border-gray-200 font-mono text-xs text-purple-700 whitespace-no-wrap">.placeholder-pink-100<span class="text-gray-500">::placeholder</span>
 </td>
           <td class="hidden sm:table-cell p-2 border-t border-gray-200 font-mono text-xs text-blue-700 whitespace-pre">color: #fff5f7;</td>
@@ -758,7 +773,7 @@
             Aa
           </td>
         </tr>
-                <tr>
+                <tr class="text-black">
           <td class="p-2 border-t border-gray-200 font-mono text-xs text-purple-700 whitespace-no-wrap">.placeholder-pink-200<span class="text-gray-500">::placeholder</span>
 </td>
           <td class="hidden sm:table-cell p-2 border-t border-gray-200 font-mono text-xs text-blue-700 whitespace-pre">color: #fed7e2;</td>
@@ -766,7 +781,7 @@
             Aa
           </td>
         </tr>
-                <tr>
+                <tr class="text-black">
           <td class="p-2 border-t border-gray-200 font-mono text-xs text-purple-700 whitespace-no-wrap">.placeholder-pink-300<span class="text-gray-500">::placeholder</span>
 </td>
           <td class="hidden sm:table-cell p-2 border-t border-gray-200 font-mono text-xs text-blue-700 whitespace-pre">color: #fbb6ce;</td>
@@ -774,7 +789,7 @@
             Aa
           </td>
         </tr>
-                <tr>
+                <tr class="text-black">
           <td class="p-2 border-t border-gray-200 font-mono text-xs text-purple-700 whitespace-no-wrap">.placeholder-pink-400<span class="text-gray-500">::placeholder</span>
 </td>
           <td class="hidden sm:table-cell p-2 border-t border-gray-200 font-mono text-xs text-blue-700 whitespace-pre">color: #f687b3;</td>
@@ -782,7 +797,7 @@
             Aa
           </td>
         </tr>
-                <tr>
+                <tr class="text-black">
           <td class="p-2 border-t border-gray-200 font-mono text-xs text-purple-700 whitespace-no-wrap">.placeholder-pink-500<span class="text-gray-500">::placeholder</span>
 </td>
           <td class="hidden sm:table-cell p-2 border-t border-gray-200 font-mono text-xs text-blue-700 whitespace-pre">color: #ed64a6;</td>
@@ -790,7 +805,7 @@
             Aa
           </td>
         </tr>
-                <tr>
+                <tr class="text-black">
           <td class="p-2 border-t border-gray-200 font-mono text-xs text-purple-700 whitespace-no-wrap">.placeholder-pink-600<span class="text-gray-500">::placeholder</span>
 </td>
           <td class="hidden sm:table-cell p-2 border-t border-gray-200 font-mono text-xs text-blue-700 whitespace-pre">color: #d53f8c;</td>
@@ -798,7 +813,7 @@
             Aa
           </td>
         </tr>
-                <tr>
+                <tr class="text-black">
           <td class="p-2 border-t border-gray-200 font-mono text-xs text-purple-700 whitespace-no-wrap">.placeholder-pink-700<span class="text-gray-500">::placeholder</span>
 </td>
           <td class="hidden sm:table-cell p-2 border-t border-gray-200 font-mono text-xs text-blue-700 whitespace-pre">color: #b83280;</td>
@@ -806,7 +821,7 @@
             Aa
           </td>
         </tr>
-                <tr>
+                <tr class="text-black">
           <td class="p-2 border-t border-gray-200 font-mono text-xs text-purple-700 whitespace-no-wrap">.placeholder-pink-800<span class="text-gray-500">::placeholder</span>
 </td>
           <td class="hidden sm:table-cell p-2 border-t border-gray-200 font-mono text-xs text-blue-700 whitespace-pre">color: #97266d;</td>
@@ -814,7 +829,7 @@
             Aa
           </td>
         </tr>
-                <tr>
+                <tr class="text-black">
           <td class="p-2 border-t border-gray-200 font-mono text-xs text-purple-700 whitespace-no-wrap">.placeholder-pink-900<span class="text-gray-500">::placeholder</span>
 </td>
           <td class="hidden sm:table-cell p-2 border-t border-gray-200 font-mono text-xs text-blue-700 whitespace-pre">color: #702459;</td>
@@ -829,20 +844,58 @@
 <h2><a id="usage" name="//apple_ref/cpp/Section/Usage" class="dashAnchor"></a>Usage</h2>
 <p>Control the placeholder color of an element using the <code>.placeholder-{color}</code> utilities.</p>
 <div class="relative overflow-hidden mb-8">
-  <div v-pre class="bg-white rounded-t-lg overflow-hidden border-t border-l border-r border-gray-400 p-4 text-center p-6">
+  <div v-pre class="bg-white rounded-t-lg overflow-hidden border-t border-l border-r border-gray-400 p-4 text-center p-6" style="">
     <div class="max-w-xs">
   <input class="block appearance-none placeholder-gray-500 border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" placeholder="jane@example.com">
   <input class="mt-4 block appearance-none placeholder-red-300 border border-red-400 rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" placeholder="jane@example.com">
 </div>
   </div>
   <div v-pre class="rounded-b-lg bg-gray-800">
-    <pre class="scrollbar-none m-0 p-0 language-html"><code class="inline-block p-4 scrolling-touch">&lt;input class="placeholder-gray-500 border" placeholder="<a href="email-protection.html" class="__cf_email__" data-cfemail="99f3f8f7fcd9fce1f8f4e9f5fcb7faf6f4">[email&nbsp;protected]</a>"&gt;
-&lt;input class="placeholder-red-300 border border-red-400" placeholder="<a href="email-protection.html" class="__cf_email__" data-cfemail="d1bbb0bfb491b4a9b0bca1bdb4ffb2bebc">[email&nbsp;protected]</a>"&gt;</code></pre>
+    <pre class="scrollbar-none m-0 p-0 language-html"><code class="inline-block p-4 scrolling-touch">&lt;input class="placeholder-gray-500 border" placeholder="<a href="email-protection.html" class="__cf_email__" data-cfemail="cda7aca3a88da8b5aca0bda1a8e3aea2a0">[email&nbsp;protected]</a>"&gt;
+&lt;input class="placeholder-red-300 border border-red-400" placeholder="<a href="email-protection.html" class="__cf_email__" data-cfemail="1278737c7752776a737f627e773c717d7f">[email&nbsp;protected]</a>"&gt;</code></pre>
   </div>
 </div>
+<h3><a id="changing-opacity-v140" name="//apple_ref/cpp/Section/Changing%20opacity%20v1.4.0%2B" class="dashAnchor"></a>
+  <span class="flex items-center" data-heading-text>
+    Changing opacity
+    <span class="ml-3 inline-flex items-center px-3 py-1 rounded-full text-sm font-medium leading-4 bg-green-150 text-green-900">
+      v1.4.0+
+    </span>
+  </span>
+</h3>
+<p>Control the opacity of an element's placeholder color using the <code>.placeholder-opacity-{amount}</code> utilities.</p>
+<div class="relative overflow-hidden mb-8">
+  <div v-pre class="bg-white rounded-t-lg overflow-hidden border-t border-l border-r border-gray-400 p-4 " style="">
+    <div class="space-y-4">
+    <div class="max-w-xs">
+    <input class="block appearance-none placeholder-gray-500 placeholder-opacity-100 border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" placeholder="jane@example.com">
+  </div>
+    <div class="max-w-xs">
+    <input class="block appearance-none placeholder-gray-500 placeholder-opacity-75 border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" placeholder="jane@example.com">
+  </div>
+    <div class="max-w-xs">
+    <input class="block appearance-none placeholder-gray-500 placeholder-opacity-50 border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" placeholder="jane@example.com">
+  </div>
+    <div class="max-w-xs">
+    <input class="block appearance-none placeholder-gray-500 placeholder-opacity-25 border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" placeholder="jane@example.com">
+  </div>
+    <div class="max-w-xs">
+    <input class="block appearance-none placeholder-gray-500 placeholder-opacity-0 border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" placeholder="jane@example.com">
+  </div>
+  </div>
+  </div>
+  <div v-pre class="rounded-b-lg bg-gray-800">
+    <pre class="scrollbar-none m-0 p-0 language-html"><code class="inline-block p-4 scrolling-touch">&lt;input class="placeholder-gray-500 placeholder-opacity-100 ..." placeholder="<a href="email-protection.html" class="__cf_email__" data-cfemail="b3d9d2ddd6f3d6cbd2dec3dfd69dd0dcde">[email&nbsp;protected]</a>"&gt;
+&lt;input class="placeholder-gray-500 placeholder-opacity-75 ..." placeholder="<a href="email-protection.html" class="__cf_email__" data-cfemail="6c060d02092c09140d011c0009420f0301">[email&nbsp;protected]</a>"&gt;
+&lt;input class="placeholder-gray-500 placeholder-opacity-50 ..." placeholder="<a href="email-protection.html" class="__cf_email__" data-cfemail="640e050a0124011c05091408014a070b09">[email&nbsp;protected]</a>"&gt;
+&lt;input class="placeholder-gray-500 placeholder-opacity-25 ..." placeholder="<a href="email-protection.html" class="__cf_email__" data-cfemail="d4beb5bab194b1acb5b9a4b8b1fab7bbb9">[email&nbsp;protected]</a>"&gt;
+&lt;input class="placeholder-gray-500 placeholder-opacity-0 ..." placeholder="<a href="email-protection.html" class="__cf_email__" data-cfemail="cfa5aea1aa8faab7aea2bfa3aae1aca0a2">[email&nbsp;protected]</a>"&gt;</code></pre>
+  </div>
+</div>
+<p>Learn more in the <a href="placeholder-opacity.html">placeholder opacity documentation</a>.</p>
 <h2><a id="responsive" name="//apple_ref/cpp/Section/Responsive" class="dashAnchor"></a>Responsive</h2>
 <p>To control the text color of an element at a specific breakpoint, add a <code>{screen}:</code> prefix to any existing text color utility. For example, use <code>md:text-green-600</code> to apply the <code>text-green-600</code> utility at only medium screen sizes and above.</p>
-<p>For more information about Tailwind's responsive design features, check out the <a href="http://tailwindcss.com/docs/responsive-design">Responsive Design</a> documentation.</p>
+<p>For more information about Tailwind's responsive design features, check out the <a href="https://tailwindcss.com/docs/responsive-design">Responsive Design</a> documentation.</p>
 <div class="mt-8 v-cloak-hidden">
   <responsive-code-sample code='&lt;input class="none:placeholder-gray-500 sm:placeholder-red-400 md:placeholder-blue-400 lg:placeholder-green-400 xl:placeholder-orange-400 " placeholder="jane@example.com"&gt;' slot-class="text-center">
     <div slot="none"><div class="max-w-xs mx-auto">
@@ -865,13 +918,13 @@
 <h2><a id="focus" name="//apple_ref/cpp/Section/Focus" class="dashAnchor"></a>Focus</h2>
 <p>To control the placeholder color of an element on focus, add the <code>focus:</code> prefix to any existing placeholder color utility. For example, use <code>focus:placeholder-blue-600</code> to apply the <code>placeholder-blue-600</code> utility on focus.</p>
 <div class="relative overflow-hidden mb-8">
-  <div v-pre class="bg-white rounded-t-lg overflow-hidden border-t border-l border-r border-gray-400 p-4 text-center p-6">
+  <div v-pre class="bg-white rounded-t-lg overflow-hidden border-t border-l border-r border-gray-400 p-4 text-center p-6" style="">
     <div class="max-w-xs mx-auto">
   <input class="block appearance-none bg-gray-200 placeholder-gray-600 border border-transparent focus:border-gray-300 focus:bg-white focus:placeholder-gray-500 rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none" placeholder="jane@example.com">
 </div>
   </div>
   <div v-pre class="rounded-b-lg bg-gray-800">
-    <pre class="scrollbar-none m-0 p-0 language-html"><code class="inline-block p-4 scrolling-touch">&lt;input class="placeholder-gray-600 focus:placeholder-gray-500 ..." placeholder="<a href="email-protection.html" class="__cf_email__" data-cfemail="b2d8d3dcd7f2d7cad3dfc2ded79cd1dddf">[email&nbsp;protected]</a>"&gt;</code></pre>
+    <pre class="scrollbar-none m-0 p-0 language-html"><code class="inline-block p-4 scrolling-touch">&lt;input class="placeholder-gray-600 focus:placeholder-gray-500 ..." placeholder="<a href="email-protection.html" class="__cf_email__" data-cfemail="046e656a6144617c65697468612a676b69">[email&nbsp;protected]</a>"&gt;</code></pre>
   </div>
 </div>
 <p>Focus utilities can also be combined with responsive utilities by adding the responsive <code>{screen}:</code> prefix <em>before</em> the <code>focus:</code> prefix.</p>
@@ -955,10 +1008,10 @@
         </div>
         
 
-        <script data-cfasync="false" src="email-decode.min.js"></script><script src="http://tailwindcss.com/assets/build/js/app.js?id=1fa8281e8c1912520ff1"></script>
+        <script data-cfasync="false" src="email-decode.min.js"></script><script src="app.js%3Fid=f831c3cf79135651b6a5"></script>
 
         <!-- Algolia DocSearch  -->
-        <script type="text/javascript" src="https://cdn.jsdelivr.net/docsearch.js/2/docsearch.min.js"></script>
+        <script type="text/javascript" src="docsearch.min.js"></script>
         <script type="text/javascript">
           docsearch({
             apiKey: '3df93446658cd9c4e314d4c02a052188',
@@ -978,6 +1031,8 @@
 </div>
 
 
+
+
   <!-- Google Analytics  -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=UA-109068504-1"></script>
   <script>
@@ -989,7 +1044,7 @@
   </script>
 
 <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
-<script src="http://tailwindcss.com/assets/build/js/nav.js?id=b3eb7d558e0420f9b29c" defer></script>
+<script src="nav.js%3Fid=b3eb7d558e0420f9b29c" defer></script>
 
 </body>
 </html>

@@ -4,11 +4,11 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <meta http-equiv="x-ua-compatible" content="ie=edge">
-  <link rel="apple-touch-icon" sizes="180x180" href="https://tailwindcss.com/apple-touch-icon.png">
-  <link rel="icon" type="image/png" sizes="32x32" href="https://tailwindcss.com/favicon-32x32.png">
-  <link rel="icon" type="image/png" sizes="16x16" href="https://tailwindcss.com/favicon-16x16.png">
-  <link rel="manifest" href="https://tailwindcss.com/manifest.json">
-  <link rel="mask-icon" href="https://tailwindcss.com/safari-pinned-tab.svg" color="#00b4b6">
+  <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+  <link rel="manifest" href="manifest.json">
+  <link rel="mask-icon" href="safari-pinned-tab.svg" color="#00b4b6">
   <title>Extracting Components - Tailwind CSS</title>
   <meta name="theme-color" content="#ffffff">
   <meta name="twitter:card" content="summary">
@@ -23,8 +23,9 @@
 <meta property="og:description" content="Dealing with duplication and keeping utility-first projects maintainable.">
 <meta property="og:image" content="https://tailwindcss.com/img/twitter-large-card.png">
   <link rel="stylesheet" href="https://rsms.me/inter/inter.css">
-  <link rel="stylesheet" href="main.css%3Fid=da35c01d0ae8bad54242.css">
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/docsearch.js/2/docsearch.min.css">
+  <link rel="stylesheet" href="main.css%3Fid=4a7cbbbeb4816c16d9a7.css">
+  <link rel="stylesheet" href="docsearch.min.css">
+  <script src="alpine.js" defer></script>
 </head>
 <body data-sidebar-visible="true" class="text-gray-900 leading-normal pb-8">
 
@@ -54,7 +55,10 @@
           
           <div class="w-full">
             <div class="markdown mb-6 px-6 mx-auto">
-                              <a name="//apple_ref/cpp/Section/Top" class="dashAnchor"></a><h1>Extracting Components</h1>
+                              <a name="//apple_ref/cpp/Section/Top" class="dashAnchor"></a><h1 class="flex items-center">
+                  Extracting Components
+                  <!-- <span class="ml-4 text-teal-600 font-semibold text-base">v1.3.0+</span> -->
+                                  </h1>
               
                               <div class="mt-0 mb-4 text-gray-600">
                   Dealing with duplication and keeping utility-first projects maintainable.
@@ -63,9 +67,9 @@
                           </div>
             <div class="flex">
               <div class="markdown px-6 w-full mx-auto">
-                <p>Tailwind encourages a <a href="https://tailwindcss.com/docs/utility-first">utility-first</a> workflow, where designs are initially implemented using only utility classes to avoid premature abstraction.</p>
+                <p>Tailwind encourages a <a href="utility-first.html">utility-first</a> workflow, where designs are initially implemented using only utility classes to avoid premature abstraction.</p>
 <div class="relative overflow-hidden mb-8">
-  <div v-pre class="bg-white rounded-t-lg overflow-hidden border-t border-l border-r border-gray-400 p-4 p-8">
+  <div v-pre class="bg-white rounded-t-lg overflow-hidden border-t border-l border-r border-gray-400 p-4 p-8" style="">
     <!-- A marketing page card built entirely with utility classes -->
 <div class="md:flex">
   <div class="md:flex-shrink-0">
@@ -94,7 +98,7 @@
 </div>
 <p>But as a project grows, you'll inevitably find yourself repeating common utility combinations to recreate the same component in many different places. This is most apparent with small components, like buttons, form elements, badges, etc.</p>
 <div class="relative overflow-hidden mb-8">
-  <div v-pre class="bg-white rounded-t-lg overflow-hidden border-t border-l border-r border-gray-400 p-4 text-center">
+  <div v-pre class="bg-white rounded-t-lg overflow-hidden border-t border-l border-r border-gray-400 p-4 text-center" style="">
     <button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
   Button
 </button>
@@ -115,7 +119,7 @@
   <strong class="text-base font-semibold text-gray-800">Don't rely on CSS classes to extract complex components</strong>
 </p>
 <div class="relative overflow-hidden mb-8">
-  <div v-pre class="bg-white rounded-t-lg overflow-hidden border-t border-l border-r border-gray-400 p-4 p-8">
+  <div v-pre class="bg-white rounded-t-lg overflow-hidden border-t border-l border-r border-gray-400 p-4 p-8" style="">
     <div class="w-64 mx-auto">
   <img class="rounded" src="https://images.unsplash.com/photo-1452784444945-3f422708fe5e?ixlib=rb-1.2.1&amp;ixid=eyJhcHBfaWQiOjEyMDd9&amp;auto=format&amp;fit=crop&amp;w=512&amp;q=80" alt="Beach">
   <div class="mt-2">
@@ -197,7 +201,7 @@
 <p>In these situations, you can use Tailwind's <code>@apply</code> directive to easily extract common utility patterns to CSS component classes.</p>
 <p>Here's what a <code>.btn-blue</code> class might look like using <code>@apply</code> to compose it from existing utilities:</p>
 <div class="relative overflow-hidden mb-8">
-  <div v-pre class="bg-white rounded-t-lg overflow-hidden border-t border-l border-r border-gray-400 p-4 text-center">
+  <div v-pre class="bg-white rounded-t-lg overflow-hidden border-t border-l border-r border-gray-400 p-4 text-center" style="">
     <button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
   Button
 </button>
@@ -254,7 +258,7 @@
 <h3><a id="keeping-things-composable" name="//apple_ref/cpp/Section/Keeping%20things%20composable" class="dashAnchor"></a>Keeping things composable</h3>
 <p>Say you have these two buttons:</p>
 <div class="relative overflow-hidden mb-8">
-  <div v-pre class="bg-white rounded-t-lg overflow-hidden border-t border-l border-r border-gray-400 p-4 text-center">
+  <div v-pre class="bg-white rounded-t-lg overflow-hidden border-t border-l border-r border-gray-400 p-4 text-center" style="">
     <button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded mr-4">
   Button
 </button>
@@ -309,7 +313,7 @@
 }</code></pre>
 <p>Now you'd apply two classes any time you needed to style a button:</p>
 <div class="relative overflow-hidden mb-8">
-  <div v-pre class="bg-white rounded-t-lg overflow-hidden border-t border-l border-r border-gray-400 p-4 text-center">
+  <div v-pre class="bg-white rounded-t-lg overflow-hidden border-t border-l border-r border-gray-400 p-4 text-center" style="">
     <button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded mr-4">
   Button
 </button>
@@ -331,7 +335,7 @@
 <p>This makes it easy to change the shared styles in one place by just editing the <code>.btn</code> class.</p>
 <p>It also allows you to add new one-off button styles without being forced to create a new component class or duplicate the shared styles:</p>
 <div class="relative overflow-hidden mb-8">
-  <div v-pre class="bg-white rounded-t-lg overflow-hidden border-t border-l border-r border-gray-400 p-4 text-center">
+  <div v-pre class="bg-white rounded-t-lg overflow-hidden border-t border-l border-r border-gray-400 p-4 text-center" style="">
     <button class="bg-green-500 hover:bg-green-400 text-white font-bold py-2 px-4 rounded">
   Button
 </button>
@@ -377,7 +381,7 @@ module.exports = {
   ]
 }</code></pre>
 <p>This can be a good choice if you want to publish your Tailwind components as a library or make it easier to share components across multiple projects.</p>
-<p>Learn more in the <a href="https://tailwindcss.com/docs/plugins#adding-components">component plugin documentation</a>.</p>              </div>
+<p>Learn more in the <a href="plugins.html#adding-components">component plugin documentation</a>.</p>              </div>
 
               
               
@@ -391,10 +395,10 @@ module.exports = {
         </div>
         
 
-        <script src="app.js%3Fid=1fa8281e8c1912520ff1"></script>
+        <script src="app.js%3Fid=f831c3cf79135651b6a5"></script>
 
         <!-- Algolia DocSearch  -->
-        <script type="text/javascript" src="https://cdn.jsdelivr.net/docsearch.js/2/docsearch.min.js"></script>
+        <script type="text/javascript" src="docsearch.min.js"></script>
         <script type="text/javascript">
           docsearch({
             apiKey: '3df93446658cd9c4e314d4c02a052188',
@@ -412,6 +416,8 @@ module.exports = {
 
   </div>
 </div>
+
+
 
 
   <!-- Google Analytics  -->

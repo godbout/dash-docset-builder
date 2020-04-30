@@ -23,8 +23,9 @@
 <meta property="og:description" content="Understanding how to think about browser support with a utility-first framework.">
 <meta property="og:image" content="https://tailwindcss.com/img/twitter-large-card.png">
   <link rel="stylesheet" href="https://rsms.me/inter/inter.css">
-  <link rel="stylesheet" href="http://tailwindcss.com/assets/build/css/main.css?id=da35c01d0ae8bad54242">
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/docsearch.js/2/docsearch.min.css">
+  <link rel="stylesheet" href="main.css%3Fid=4a7cbbbeb4816c16d9a7.css">
+  <link rel="stylesheet" href="docsearch.min.css">
+  <script src="alpine.js" defer></script>
 </head>
 <body data-sidebar-visible="true" class="text-gray-900 leading-normal pb-8">
 
@@ -54,7 +55,10 @@
           
           <div class="w-full">
             <div class="markdown mb-6 px-6 mx-auto">
-                              <a name="//apple_ref/cpp/Section/Top" class="dashAnchor"></a><h1>Browser Support</h1>
+                              <a name="//apple_ref/cpp/Section/Top" class="dashAnchor"></a><h1 class="flex items-center">
+                  Browser Support
+                  <!-- <span class="ml-4 text-teal-600 font-semibold text-base">v1.3.0+</span> -->
+                                  </h1>
               
                               <div class="mt-0 mb-4 text-gray-600">
                   Understanding how to think about browser support with a utility-first framework.
@@ -63,13 +67,12 @@
                           </div>
             <div class="flex">
               <div class="markdown px-6 w-full mx-auto">
-                <p><strong>As a general rule, Tailwind targets IE11 and the latest version of all modern browsers like Chrome, Firefox, Safari, and Edge.</strong></p>
-<p>We do include support for a few features out of the box that are not supported by IE11 (notably <a href="object-fit.html">object-fit</a>, <a href="object-position.html">object-position</a>, and <a href="position.html#sticky">sticky positioning</a>), and have done our best to make it clear that those features require modern browsers in the documentation.</p>
-<p>That said, because Tailwind is such a low-level framework you can still easily use it to build sites that need to support older browsers.</p>
+                <p>Tailwind includes support for a lot of CSS features that are only available in modern evergreen browsers, such as <a href="grid-template-columns.html">grid layout</a>, <a href="object-fit.html">object-fit</a>/<a href="object-position.html">position</a>, and <a href="position.html#sticky">sticky positioning</a>, and uses other modern CSS features like custom properties to implement utilities like <a href="translate.html">translate</a>, <a href="rotate.html">rotate</a>, and <a href="scale.html">scale</a>.</p>
+<p>That said, because Tailwind is such a low-level framework you can still easily use it to build sites that need to support older browsers like IE10/11.</p>
 <h2><a id="using-tailwind-with-older-browsers" name="//apple_ref/cpp/Section/Using%20Tailwind%20with%20older%20browsers" class="dashAnchor"></a>Using Tailwind with older browsers</h2>
 <p>In popular component-based frameworks like Bootstrap or Bulma, it's important to know what browsers are supported because the implementation details for each component are abstracted away from you.</p>
 <p>For example, when you are building a grid with classes like <code>.row</code> or <code>.col-4</code>, you need to know which browsers the framework author is targeting because you have no idea if those classes are implemented using floats, Flexbox, or CSS Grid.</p>
-<p>Tailwind on the other hand is a low-level utility framework, where most of the classes map directly to individual CSS properties. This means that which browsers you support is really up to you, not the framework.</p>
+<p>Tailwind on the other hand is a low-level utility framework, where most of the classes map directly to individual CSS properties. This means that <strong>which browsers you support is really up to you, not the framework</strong>.</p>
 <p>For example, here is a three column grid built with Tailwind's Flexbox utilities, so it will only work in IE10+ since Flexbox isn't supported in IE9:</p>
 <pre><code class="language-html">&lt;div class="flex"&gt;
   &lt;div class="w-1/3"&gt;&lt;!-- ... --&gt;&lt;/div&gt;
@@ -112,10 +115,10 @@ yarn add autoprefixer</code></pre>
         </div>
         
 
-        <script src="http://tailwindcss.com/assets/build/js/app.js?id=1fa8281e8c1912520ff1"></script>
+        <script src="app.js%3Fid=f831c3cf79135651b6a5"></script>
 
         <!-- Algolia DocSearch  -->
-        <script type="text/javascript" src="https://cdn.jsdelivr.net/docsearch.js/2/docsearch.min.js"></script>
+        <script type="text/javascript" src="docsearch.min.js"></script>
         <script type="text/javascript">
           docsearch({
             apiKey: '3df93446658cd9c4e314d4c02a052188',
@@ -135,6 +138,8 @@ yarn add autoprefixer</code></pre>
 </div>
 
 
+
+
   <!-- Google Analytics  -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=UA-109068504-1"></script>
   <script>
@@ -146,7 +151,7 @@ yarn add autoprefixer</code></pre>
   </script>
 
 <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
-<script src="http://tailwindcss.com/assets/build/js/nav.js?id=b3eb7d558e0420f9b29c" defer></script>
+<script src="nav.js%3Fid=b3eb7d558e0420f9b29c" defer></script>
 
 </body>
 </html>

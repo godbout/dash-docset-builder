@@ -23,8 +23,9 @@
 <meta property="og:description" content="Quick start guide for installing and configuring Tailwind CSS.">
 <meta property="og:image" content="https://tailwindcss.com/img/twitter-large-card.png">
   <link rel="stylesheet" href="https://rsms.me/inter/inter.css">
-  <link rel="stylesheet" href="http://tailwindcss.com/assets/build/css/main.css?id=da35c01d0ae8bad54242">
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/docsearch.js/2/docsearch.min.css">
+  <link rel="stylesheet" href="main.css%3Fid=4a7cbbbeb4816c16d9a7.css">
+  <link rel="stylesheet" href="docsearch.min.css">
+  <script src="alpine.js" defer></script>
 </head>
 <body data-sidebar-visible="true" class="text-gray-900 leading-normal pb-8">
 
@@ -54,7 +55,10 @@
           
           <div class="w-full">
             <div class="markdown mb-6 px-6 mx-auto">
-                              <a name="//apple_ref/cpp/Section/Top" class="dashAnchor"></a><h1>Installation</h1>
+                              <a name="//apple_ref/cpp/Section/Top" class="dashAnchor"></a><h1 class="flex items-center">
+                  Installation
+                  <!-- <span class="ml-4 text-teal-600 font-semibold text-base">v1.3.0+</span> -->
+                                  </h1>
               
                               <div class="mt-0 mb-4 text-gray-600">
                   Quick start guide for installing and configuring Tailwind CSS.
@@ -116,10 +120,6 @@ module.exports = {
     Process your CSS with Tailwind
   </h2>
 </div>
-<h3><a id="using-tailwind-cli" name="//apple_ref/cpp/Section/Using%20Tailwind%20CLI" class="dashAnchor"></a>Using Tailwind CLI</h3>
-<p>For simple projects or just giving Tailwind a spin, you can use the Tailwind CLI tool to process your CSS:</p>
-<pre><code class="language-bash">npx tailwindcss build styles.css -o output.css</code></pre>
-<p>Use the <code>npx tailwindcss help build</code> command to learn more about the various CLI options.</p>
 <h3><a id="using-tailwind-with-postcss" name="//apple_ref/cpp/Section/Using%20Tailwind%20with%20PostCSS" class="dashAnchor"></a>Using Tailwind with PostCSS</h3>
 <p>For most projects, you'll want to add Tailwind as a PostCSS plugin in your build chain.</p>
 <p>Generally this means adding Tailwind as a plugin in your <code>postcss.config.js</code> file:</p>
@@ -132,7 +132,13 @@ module.exports = {
   ]
 }</code></pre>
 <p>We've included more specific instructions for a few popular tools below, but for instructions on getting started with PostCSS in general, see the <a href="https://github.com/postcss/postcss#usage">PostCSS documentation</a>.</p>
-<h3><a id="webpack" name="//apple_ref/cpp/Section/Webpack" class="dashAnchor"></a>Webpack</h3>
+<h3><a id="using-tailwind-cli" name="//apple_ref/cpp/Section/Using%20Tailwind%20CLI" class="dashAnchor"></a>Using Tailwind CLI</h3>
+<p>For simple projects or just giving Tailwind a spin, you can use the Tailwind CLI tool to process your CSS:</p>
+<pre><code class="language-bash">npx tailwindcss build styles.css -o output.css</code></pre>
+<p>Use the <code>npx tailwindcss help build</code> command to learn more about the various CLI options.</p>
+<h3><a id="build-tool-examples" name="//apple_ref/cpp/Section/Build%20Tool%20Examples" class="dashAnchor"></a>Build Tool Examples</h3>
+<p>We've included some basic examples of setting up Tailwind with common build tools below, but also look at our <a href="https://github.com/tailwindcss/setup-examples/">setup-examples</a> repository for even more examples that you can even clone and play with locally.</p>
+<h4>Webpack</h4>
 <p>Add <code>tailwindcss</code> as a plugin in your  <code>postcss.config.js</code> file:</p>
 <pre><code class="language-js">module.exports = {
   plugins: [
@@ -167,7 +173,7 @@ module.exports = {
     ],
   }
 }</code></pre>
-<h3><a id="gulp" name="//apple_ref/cpp/Section/Gulp" class="dashAnchor"></a>Gulp</h3>
+<h4>Gulp</h4>
 <p>Add <code>tailwindcss</code> to the list of plugins you pass to <a href="https://github.com/postcss/gulp-postcss">gulp-postcss</a>:</p>
 <pre><code class="language-js">gulp.task('css', function () {
   const postcss = require('gulp-postcss')
@@ -183,7 +189,7 @@ module.exports = {
     // ...
     .pipe(gulp.dest('build/'))
 })</code></pre>
-<h3><a id="laravel-mix" name="//apple_ref/cpp/Section/Laravel%20Mix" class="dashAnchor"></a>Laravel Mix</h3>
+<h4>Laravel Mix</h4>
 <p>If you're writing your project in plain CSS, use Mix's <code>postCss</code> method to process your CSS and include <code>tailwindcss</code> as a plugin:</p>
 <pre><code class="language-js">mix.postCss('resources/css/main.css', 'public/css', [
   require('tailwindcss'),
@@ -206,7 +212,7 @@ mix.sass('resources/sass/app.scss', 'public/css')
     postCss: [ tailwindcss('./path/to/your/tailwind.config.js') ],
   })</code></pre>
 <p>For more information on what this feature does and the implications of disabling it, <a href="https://laravel-mix.com/docs/5.0/css-preprocessors#css-url-rewriting">see the Laravel Mix documentation</a>.</p>
-<h3><a id="webpack-encore" name="//apple_ref/cpp/Section/Webpack%20Encore" class="dashAnchor"></a>Webpack Encore</h3>
+<h4>Webpack Encore</h4>
 <p>Create a <code>postcss.config.js</code> file, add <code>tailwindcss</code> as a plugin and pass the path to your config file:</p>
 <pre><code class="language-js">module.exports = {
   plugins: [
@@ -233,7 +239,7 @@ module.exports = Encore.getWebpackConfig()</code></pre>
 <pre><code class="language-js">Encore.enableSassLoader(function (options) {}, {
   resolveUrlLoader: false
 })</code></pre>
-<h3><a id="brunch" name="//apple_ref/cpp/Section/Brunch" class="dashAnchor"></a>Brunch</h3>
+<h4>Brunch</h4>
 <p>Add <code>tailwindcss</code> to the list of processors you pass to <a href="https://github.com/brunch/postcss-brunch">postcss-brunch</a>:</p>
 <pre><code class="language-js">exports.config = {
   // ..
@@ -247,7 +253,7 @@ module.exports = Encore.getWebpackConfig()</code></pre>
     // ...
   }
 }</code></pre>
-<h3><a id="emberjs" name="//apple_ref/cpp/Section/Ember.js" class="dashAnchor"></a>Ember.js</h3>
+<h4>Ember.js</h4>
 <p>Add <code>tailwindcss</code> to the list of plugins you pass to <a href="https://github.com/jeffjewiss/ember-cli-postcss">ember-cli-postcss</a>:</p>
 <pre><code class="language-js">// ember-cli-build.js
 'use strict';
@@ -289,7 +295,7 @@ module.exports = function(defaults) {
 </ul>
 <p>To get the most out of Tailwind, you really should <a href="installation.html#1-install-tailwind-via-npm">install it via npm</a>.</p>
 <p>To pull in Tailwind for quick demos or just giving the framework a spin, grab the latest default configuration build via CDN:</p>
-<pre><code class="language-html">&lt;link href="https://unpkg.com/<a href="email-protection.html" class="__cf_email__" data-cfemail="c1b5a0a8adb6a8afa5a2b2b281">[email&nbsp;protected]</a>^1.0/dist/tailwind.min.css" rel="stylesheet"&gt;</code></pre>
+<pre><code class="language-html">&lt;link href="https://unpkg.com/<a href="email-protection.html" class="__cf_email__" data-cfemail="dda9bcb4b1aab4b3b9beaeae9d">[email&nbsp;protected]</a>^1.0/dist/tailwind.min.css" rel="stylesheet"&gt;</code></pre>
 <p>Note that while the CDN build is large <em>(27kb compressed, 348kb raw)</em>, <strong>it's not representative of the sizes you see when including Tailwind as part of your build process</strong>.</p>
 <p>Sites that follow our <a href="controlling-file-size.html">best practices</a> are almost always under 10kb compressed. For example, <a href="https://send.firefox.com/">Firefox Send</a> is built with Tailwind and their CSS is under 4kb compressed and minified.</p>              </div>
 
@@ -305,10 +311,10 @@ module.exports = function(defaults) {
         </div>
         
 
-        <script data-cfasync="false" src="email-decode.min.js"></script><script src="http://tailwindcss.com/assets/build/js/app.js?id=1fa8281e8c1912520ff1"></script>
+        <script data-cfasync="false" src="email-decode.min.js"></script><script src="app.js%3Fid=f831c3cf79135651b6a5"></script>
 
         <!-- Algolia DocSearch  -->
-        <script type="text/javascript" src="https://cdn.jsdelivr.net/docsearch.js/2/docsearch.min.js"></script>
+        <script type="text/javascript" src="docsearch.min.js"></script>
         <script type="text/javascript">
           docsearch({
             apiKey: '3df93446658cd9c4e314d4c02a052188',
@@ -328,6 +334,8 @@ module.exports = function(defaults) {
 </div>
 
 
+
+
   <!-- Google Analytics  -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=UA-109068504-1"></script>
   <script>
@@ -339,7 +347,7 @@ module.exports = function(defaults) {
   </script>
 
 <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
-<script src="http://tailwindcss.com/assets/build/js/nav.js?id=b3eb7d558e0420f9b29c" defer></script>
+<script src="nav.js%3Fid=b3eb7d558e0420f9b29c" defer></script>
 
 </body>
 </html>

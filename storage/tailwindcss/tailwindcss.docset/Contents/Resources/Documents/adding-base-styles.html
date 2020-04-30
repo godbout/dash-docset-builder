@@ -4,11 +4,11 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <meta http-equiv="x-ua-compatible" content="ie=edge">
-  <link rel="apple-touch-icon" sizes="180x180" href="https://tailwindcss.com/apple-touch-icon.png">
-  <link rel="icon" type="image/png" sizes="32x32" href="https://tailwindcss.com/favicon-32x32.png">
-  <link rel="icon" type="image/png" sizes="16x16" href="https://tailwindcss.com/favicon-16x16.png">
-  <link rel="manifest" href="https://tailwindcss.com/manifest.json">
-  <link rel="mask-icon" href="https://tailwindcss.com/safari-pinned-tab.svg" color="#00b4b6">
+  <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+  <link rel="manifest" href="manifest.json">
+  <link rel="mask-icon" href="safari-pinned-tab.svg" color="#00b4b6">
   <title>Adding Base Styles - Tailwind CSS</title>
   <meta name="theme-color" content="#ffffff">
   <meta name="twitter:card" content="summary">
@@ -23,8 +23,9 @@
 <meta property="og:description" content="Best practices for adding your own global base styles on top of Tailwind.">
 <meta property="og:image" content="https://tailwindcss.com/img/twitter-large-card.png">
   <link rel="stylesheet" href="https://rsms.me/inter/inter.css">
-  <link rel="stylesheet" href="main.css%3Fid=da35c01d0ae8bad54242.css">
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/docsearch.js/2/docsearch.min.css">
+  <link rel="stylesheet" href="main.css%3Fid=4a7cbbbeb4816c16d9a7.css">
+  <link rel="stylesheet" href="docsearch.min.css">
+  <script src="alpine.js" defer></script>
 </head>
 <body data-sidebar-visible="true" class="text-gray-900 leading-normal pb-8">
 
@@ -54,7 +55,10 @@
           
           <div class="w-full">
             <div class="markdown mb-6 px-6 mx-auto">
-                              <a name="//apple_ref/cpp/Section/Top" class="dashAnchor"></a><h1>Adding Base Styles</h1>
+                              <a name="//apple_ref/cpp/Section/Top" class="dashAnchor"></a><h1 class="flex items-center">
+                  Adding Base Styles
+                  <!-- <span class="ml-4 text-teal-600 font-semibold text-base">v1.3.0+</span> -->
+                                  </h1>
               
                               <div class="mt-0 mb-4 text-gray-600">
                   Best practices for adding your own global base styles on top of Tailwind.
@@ -64,7 +68,7 @@
             <div class="flex">
               <div class="markdown px-6 w-full mx-auto">
                 <p>Base (or global) styles are the styles at the beginning of a stylesheet that set useful defaults for basic HTML elements like <code>&lt;a&gt;</code> tags, headings, etc. or apply opinionated resets like the popular <a href="https://www.paulirish.com/2012/box-sizing-border-box-ftw/">box-sizing reset</a>.</p>
-<p>Tailwind includes a useful set of base styles out of the box that we call <a href="https://tailwindcss.com/docs/preflight">Preflight</a>, which is really just <a href="https://github.com/necolas/normalize.css/">normalize.css</a> plus a thin layer of additional more opinionated styles.</p>
+<p>Tailwind includes a useful set of base styles out of the box that we call <a href="preflight.html">Preflight</a>, which is really just <a href="https://github.com/necolas/normalize.css/">normalize.css</a> plus a thin layer of additional more opinionated styles.</p>
 <p>Preflight is a great starting point for most projects, but if you'd ever like to add your own additional base styles, here are some recommendations for doing it idiomatically.</p>
 <hr>
 <h2><a id="using-classes-in-your-html" name="//apple_ref/cpp/Section/Using%20classes%20in%20your%20HTML" class="dashAnchor"></a>Using classes in your HTML</h2>
@@ -98,7 +102,7 @@ a {
 @tailwind components;
 
 @tailwind utilities;</code></pre>
-<p>It's a good idea to use <a href="https://tailwindcss.com/docs/functions-and-directives#apply">@apply</a> or <a href="https://tailwindcss.com/docs/functions-and-directives#theme">theme()</a> to define these styles to avoid introducing new magic values or accidentally deviating from your design system.</p>
+<p>It's a good idea to use <a href="functions-and-directives.html#apply">@apply</a> or <a href="functions-and-directives.html#theme">theme()</a> to define these styles to avoid introducing new magic values or accidentally deviating from your design system.</p>
 <h3><a id="at-font-face-rules" name="//apple_ref/cpp/Section/%40font-face%20rules" class="dashAnchor"></a>@font-face rules</h3>
 <p>You can use the same approach to add your <code>@font-face</code> rules for any custom fonts you are using:</p>
 <pre><code class="language-css">@tailwind base;
@@ -119,7 +123,7 @@ a {
 @tailwind utilities;</code></pre>
 <hr>
 <h2><a id="using-a-plugin" name="//apple_ref/cpp/Section/Using%20a%20plugin" class="dashAnchor"></a>Using a plugin</h2>
-<p>You can also add base styles by <a href="https://tailwindcss.com/docs/plugins#adding-base-styles">writing a plugin</a> and using the <code>addBase</code> function:</p>
+<p>You can also add base styles by <a href="plugins.html#adding-base-styles">writing a plugin</a> and using the <code>addBase</code> function:</p>
 <pre><code class="language-js">// tailwind.config.js
 const plugin = require('tailwindcss/plugin')
 
@@ -155,10 +159,10 @@ module.exports = {
         </div>
         
 
-        <script src="app.js%3Fid=1fa8281e8c1912520ff1"></script>
+        <script src="app.js%3Fid=f831c3cf79135651b6a5"></script>
 
         <!-- Algolia DocSearch  -->
-        <script type="text/javascript" src="https://cdn.jsdelivr.net/docsearch.js/2/docsearch.min.js"></script>
+        <script type="text/javascript" src="docsearch.min.js"></script>
         <script type="text/javascript">
           docsearch({
             apiKey: '3df93446658cd9c4e314d4c02a052188',
@@ -176,6 +180,8 @@ module.exports = {
 
   </div>
 </div>
+
+
 
 
   <!-- Google Analytics  -->

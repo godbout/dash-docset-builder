@@ -23,8 +23,9 @@
 <meta property="og:description" content="What's new in the latest version of Tailwind CSS.">
 <meta property="og:image" content="https://tailwindcss.com/img/twitter-large-card.png">
   <link rel="stylesheet" href="https://rsms.me/inter/inter.css">
-  <link rel="stylesheet" href="http://tailwindcss.com/assets/build/css/main.css?id=da35c01d0ae8bad54242">
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/docsearch.js/2/docsearch.min.css">
+  <link rel="stylesheet" href="main.css%3Fid=4a7cbbbeb4816c16d9a7.css">
+  <link rel="stylesheet" href="docsearch.min.css">
+  <script src="alpine.js" defer></script>
 </head>
 <body data-sidebar-visible="true" class="text-gray-900 leading-normal pb-8">
 
@@ -54,7 +55,10 @@
           
           <div class="w-full">
             <div class="markdown mb-6 px-6 mx-auto">
-                              <a name="//apple_ref/cpp/Section/Top" class="dashAnchor"></a><h1>Release Notes</h1>
+                              <a name="//apple_ref/cpp/Section/Top" class="dashAnchor"></a><h1 class="flex items-center">
+                  Release Notes
+                  <!-- <span class="ml-4 text-teal-600 font-semibold text-base">v1.3.0+</span> -->
+                                  </h1>
               
                               <div class="mt-0 mb-4 text-gray-600">
                   What's new in the latest version of Tailwind CSS.
@@ -63,7 +67,27 @@
                           </div>
             <div class="flex">
               <div class="markdown px-6 w-full mx-auto">
-                <h2 class="mb-0"><a id="tailwind-css-v12" name="//apple_ref/cpp/Section/Tailwind%20CSS%20v1.2" class="dashAnchor"></a>Tailwind CSS v1.2</h2>
+                <h2 class="mb-0"><a id="tailwind-css-v14" name="//apple_ref/cpp/Section/Tailwind%20CSS%20v1.4" class="dashAnchor"></a>Tailwind CSS v1.4</h2>
+<div class="mt-0 text-gray-600">Apr 29, 2020</div>
+<p>Tailwind CSS v1.4 is out now with a couple of major new features:</p>
+<ul>
+<li><a href="background-opacity.html">New color opacity utilities</a></li>
+<li><a href="controlling-file-size.html">Built-in PurgeCSS support</a></li>
+</ul>
+<p>For the full list of changes, <a href="https://github.com/tailwindcss/tailwindcss/releases/tag/v1.4.0">check out the complete release notes on GitHub</a>.</p>
+<hr>
+<h2 class="mb-0"><a id="tailwind-css-v13" name="//apple_ref/cpp/Section/Tailwind%20CSS%20v1.3" class="dashAnchor"></a>Tailwind CSS v1.3</h2>
+<div class="mt-0 text-gray-600">Apr 21, 2020</div>
+<p>Tailwind CSS v1.3 is now available with a bunch of super useful new features, including:</p>
+<ul>
+<li><a href="space.html">New "space between" layout utilities</a></li>
+<li><a href="divide-width.html">New "border between" utilities</a></li>
+<li><a href="transition-delay.html">New transition-delay utilities</a></li>
+<li><a href="pseudo-class-variants.html#group-focus">New group-focus variant</a></li>
+</ul>
+<p>For the full list of changes, <a href="https://github.com/tailwindcss/tailwindcss/releases/tag/v1.3.0">check out the complete release notes on GitHub</a>.</p>
+<hr>
+<h2 class="mb-0"><a id="tailwind-css-v12" name="//apple_ref/cpp/Section/Tailwind%20CSS%20v1.2" class="dashAnchor"></a>Tailwind CSS v1.2</h2>
 <div class="mt-0 text-gray-600">Feb 5, 2020</div>
 <p>Tailwind CSS v1.2 is here and it's the biggest feature release since v0.1 dropped two and a half years ago!</p>
 <p>Here are the features you're probably going to be the most excited about:</p>
@@ -212,7 +236,7 @@ module.exports = {
   }
 }</code></pre>
 <p>The new breakpoints are more practical to work with and make it a bit easier to avoid annoying compromises in your responsive designs.</p>
-<p>New to responsive design with Tailwind? Check out our <a href="http://tailwindcss.com/docs/responsive-design">responsive design documentation</a> to learn more.</p>
+<p>New to responsive design with Tailwind? Check out our <a href="https://tailwindcss.com/docs/responsive-design">responsive design documentation</a> to learn more.</p>
 <h3><a id="new-toprightbottomleft-utilities" name="//apple_ref/cpp/Section/New%20top%2Fright%2Fbottom%2Fleft%20utilities" class="dashAnchor"></a>New top/right/bottom/left utilities</h3>
 <p>Tailwind v1.0 includes new configurable utilities for <code>top</code>, <code>right</code>, <code>bottom</code>, and <code>left</code>, so you're no longer limited by the old <code>pin</code> classes.</p>
 <pre><code class="language-html">&lt;div class="top-16"&gt;&lt;!-- ... --&gt;&lt;/div&gt;</code></pre>
@@ -238,10 +262,10 @@ module.exports = {
         </div>
         
 
-        <script src="http://tailwindcss.com/assets/build/js/app.js?id=1fa8281e8c1912520ff1"></script>
+        <script src="app.js%3Fid=f831c3cf79135651b6a5"></script>
 
         <!-- Algolia DocSearch  -->
-        <script type="text/javascript" src="https://cdn.jsdelivr.net/docsearch.js/2/docsearch.min.js"></script>
+        <script type="text/javascript" src="docsearch.min.js"></script>
         <script type="text/javascript">
           docsearch({
             apiKey: '3df93446658cd9c4e314d4c02a052188',
@@ -261,6 +285,8 @@ module.exports = {
 </div>
 
 
+
+
   <!-- Google Analytics  -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=UA-109068504-1"></script>
   <script>
@@ -272,7 +298,7 @@ module.exports = {
   </script>
 
 <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
-<script src="http://tailwindcss.com/assets/build/js/nav.js?id=b3eb7d558e0420f9b29c" defer></script>
+<script src="nav.js%3Fid=b3eb7d558e0420f9b29c" defer></script>
 
 </body>
 </html>
