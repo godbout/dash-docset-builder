@@ -4,12 +4,12 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
         <meta http-equiv="x-ua-compatible" content="ie=edge">
-        <meta name="description" content="Dotenv component loads environment variables from a .env file">
+        <meta name="description" content="Laravel Zero includes a minimal HTTP Client component">
 
         <meta property="og:site_name" content="Laravel Zero">
-        <meta property="og:title" content="Environment Variables | Laravel Zero">
-        <meta property="og:description" content="Dotenv component loads environment variables from a .env file">
-        <meta property="og:url" content="https://laravel-zero.com/docs/environment-variables">
+        <meta property="og:title" content="HTTP Client | Laravel Zero">
+        <meta property="og:description" content="Laravel Zero includes a minimal HTTP Client component">
+        <meta property="og:url" content="https://laravel-zero.com/docs/http-client">
         <meta property="og:image" content="/assets/img/logo.png">
         <meta property="og:type" content="website">
 
@@ -18,7 +18,7 @@
 
                     <meta name="generator" content="tighten_jigsaw_doc">
         
-        <title>Laravel Zero | Environment Variables</title>
+        <title>Laravel Zero | HTTP Client</title>
 
         <link rel="home" href="index.html">
         <link rel="icon" href="favicon.ico">
@@ -47,22 +47,18 @@
         
 
         <div class="w-full break-words" v-pre>
-            <a name="//apple_ref/cpp/Section/Top" class="dashAnchor"></a><h1 style="margin-top: 1rem;">Environment Variables</h1>
-<p>Using the <code>app:install</code> Artisan command you can install the <code>dotenv</code> component:</p>
-<pre><code class="language-bash">php &lt;your-app-name&gt; app:install dotenv</code></pre>
-<p>The <code>dotenv</code> component allows you to load environment variables from a <code>.env</code> file. And behind
-the scenes, it's based on the <a href="https://github.com/vlucas/phpdotenv">DotEnv PHP</a> package.</p>
-<p>After installing the component, an empty <code>.env.example</code> will be create on the root of your
-project, and you should rename it manually to <code>.env</code>.</p>
-<p>Assuming that your <code>.env</code> contains:</p>
-<pre><code>SECRET_KEY=234567</code></pre>
-<p>You can access those variables using the <code>env()</code> helper:</p>
-<pre><code class="language-php">echo env('SECRET_KEY') // outputs 234567</code></pre>
-<a id="after-building-your-application" name="//apple_ref/cpp/Section/After%20building%20your%20application" class="dashAnchor"></a><h2>After building your application</h2>
-<p>After your application is built, you may create a <code>.env</code> file, in the same directory as your build.</p>
-<pre><code>.
-&#9500;&#9472;&#9472; .env
-&#9492;&#9472;&#9472; application</code></pre>        </div>
+            <a name="//apple_ref/cpp/Section/Top" class="dashAnchor"></a><h1 style="margin-top: 1rem;">HTTP Client</h1>
+<p>Laravel includes an expressive API around the <a href="https://github.com/guzzle/guzzle">Guzzle HTTP client</a>.
+This can easily be installed into Laravel Zero using the <code>http</code> component.</p>
+<p>To install this component, run the following command:</p>
+<pre><code class="language-shell">php &lt;your-app-name&gt; app:install http</code></pre>
+<a id="usage" name="//apple_ref/cpp/Section/Usage%3A" class="dashAnchor"></a><h4>Usage:</h4>
+<p>The HTTP Client adds easy to use methods for standard HTTP requests.</p>
+<pre><code class="language-php">use Illuminate\Support\Facades\Http;
+
+Http::get($url);
+Http::post($url, $data);</code></pre>
+<p>Full details on using the HTTP Client is available on the <a href="https://laravel.com/docs/http-client">main Laravel documentation</a>.</p>        </div>
     </div>
 </section>
         </main>

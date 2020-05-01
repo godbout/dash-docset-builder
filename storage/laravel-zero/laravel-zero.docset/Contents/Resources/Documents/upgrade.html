@@ -24,7 +24,7 @@
         <link rel="icon" href="favicon.ico">
 
         
-                    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-61404619-3"></script>
+                    <script async src="js%3Fid=UA-61404619-3"></script>
             <script>
                 window.dataLayer = window.dataLayer || [];
                 function gtag(){dataLayer.push(arguments);}
@@ -32,10 +32,10 @@
                 gtag('config', 'UA-61404619-3');
             </script>
         
-        <link href="https://fonts.googleapis.com/css?family=Nunito+Sans:300,300i,400,400i,700,700i,800,800i" rel="stylesheet">
+        <link href="./css%3Ffamily=Nunito+Sans:300,300i,400,400i,700,700i,800,800i.css" rel="stylesheet">
         <link rel="stylesheet" href="main.css%3Fid=54b89e2eb922f2893d01.css">
 
-                    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.css">
+                    <link rel="stylesheet" href="docsearch.min.css">
             </head>
 
     <body class="flex flex-col justify-between min-h-screen bg-grey-lightest text-grey-darkest leading-normal font-sans">
@@ -49,11 +49,34 @@
         <div class="w-full break-words" v-pre>
             <a name="//apple_ref/cpp/Section/Top" class="dashAnchor"></a><h1 style="margin-top: 1rem;">Upgrade Guide</h1>
 <ul>
+<li><a href="upgrade.html#upgrade-7.0.0">Upgrading To 7.0 From 6.x</a></li>
 <li><a href="upgrade.html#upgrade-6.0.0">Upgrading To 6.0 From 5.8</a></li>
 <li><a href="upgrade.html#upgrade-5.8.0">Upgrading To 5.8 From 5.7</a></li>
 <li><a href="upgrade.html#upgrade-5.7.0">Upgrading To 5.7 From 5.6</a></li>
 <li><a href="upgrade.html#upgrade-5.6.0">Upgrading To 5.6 From 4.0</a></li>
 </ul>
+<p><a name="upgrade-7.0.0"></a></p>
+<a id="upgrading-to-70-from-6x" name="//apple_ref/cpp/Section/Upgrading%20To%207.0%20From%206.x" class="dashAnchor"></a><h2>Upgrading To 7.0 From 6.x</h2>
+<a id="estimated-upgrade-time-5-10-minutes" name="//apple_ref/cpp/Section/Estimated%20Upgrade%20Time%3A%205-10%20Minutes" class="dashAnchor"></a><h4>Estimated Upgrade Time: 5-10 Minutes</h4>
+<blockquote>
+<p>We attempt to document every possible breaking change. Since some of these breaking changes are in obscure parts of the framework only a portion of these changes may actually affect your application.</p>
+</blockquote>
+<a id="php-725-required" name="//apple_ref/cpp/Section/PHP%207.2.5%20required" class="dashAnchor"></a><h3>PHP 7.2.5 required</h3>
+<p>The new minimum PHP version is now 7.2.5.</p>
+<a id="updating-dependencies" name="//apple_ref/cpp/Section/Updating%20Dependencies" class="dashAnchor"></a><h3>Updating Dependencies</h3>
+<p>Update your <code>laravel-zero/framework</code> dependency to <code>^7.0</code> in your <code>composer.json</code> file.</p>
+<a id="symfony-5-required" name="//apple_ref/cpp/Section/Symfony%205%20required" class="dashAnchor"></a><h4>Symfony 5 required</h4>
+<p>Laravel Zero 7 upgraded its underlying Symfony components to the 5.x series, which is now also the new minimum compatible version.</p>
+<p>Update any <code>symfony/*</code> dependencies to <code>^5.0</code> in your <code>composer.json</code> file where necessary.</p>
+<a id="phpunit-changes" name="//apple_ref/cpp/Section/PHPUnit%20changes" class="dashAnchor"></a><h4>PHPUnit changes</h4>
+<p>Laravel Zero 7 now requires a minimum of Collision v4.1.0 which updated the PHPUnit adapter class name.</p>
+<p>Remove the <code>NunoMaduro\Collision\Adapters\Phpunit\Listener</code> class from your <code>listeners</code> block in your <a href="https://github.com/laravel-zero/laravel-zero/blob/v7.0.0/phpunit.xml.dist"><code>phpunit.xml.dist</code></a> file.</p>
+<a id="if-you-are-using-the-logo-component" name="//apple_ref/cpp/Section/If%20you%20are%20using%20the%20Logo%20component" class="dashAnchor"></a><h4>If you are using the Logo component</h4>
+<p>The Logo component now depends on the <a href="https://github.com/laminas/laminas-text">Laminas Text</a> package for Figlet generation.</p>
+<p>Replace your <code>zendframework/zend-text</code> dependency with <code>"laminas/laminas-text": "^2.7"</code> in your <code>composer.json</code>.</p>
+<a id="configuration-changes" name="//apple_ref/cpp/Section/Configuration%20changes" class="dashAnchor"></a><h3>Configuration changes</h3>
+<p>The <code>app.production</code> configuration value has been removed and replaced by an <code>app.env</code> value in order to match Laravel.</p>
+<p>Replace <code>'production' =&gt; false</code> with <code>'env' =&gt; 'development'</code> in your <a href="https://github.com/laravel-zero/laravel-zero/blob/v7.0.0/config/app.php"><code>config/app.php</code></a> file.</p>
 <p><a name="upgrade-6.0.0"></a></p>
 <a id="upgrading-to-60-from-58" name="//apple_ref/cpp/Section/Upgrading%20To%206.0%20From%205.8" class="dashAnchor"></a><h2>Upgrading To 6.0 From 5.8</h2>
 <a id="estimated-upgrade-time-2-5-minutes" name="//apple_ref/cpp/Section/Estimated%20Upgrade%20Time%3A%202%20-%205%20Minutes" class="dashAnchor"></a><h4>Estimated Upgrade Time: 2 - 5 Minutes</h4>

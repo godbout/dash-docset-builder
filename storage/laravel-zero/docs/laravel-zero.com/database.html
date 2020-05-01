@@ -24,7 +24,7 @@
         <link rel="icon" href="favicon.ico">
 
         
-                    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-61404619-3"></script>
+                    <script async src="js%3Fid=UA-61404619-3"></script>
             <script>
                 window.dataLayer = window.dataLayer || [];
                 function gtag(){dataLayer.push(arguments);}
@@ -32,10 +32,10 @@
                 gtag('config', 'UA-61404619-3');
             </script>
         
-        <link href="https://fonts.googleapis.com/css?family=Nunito+Sans:300,300i,400,400i,700,700i,800,800i" rel="stylesheet">
+        <link href="./css%3Ffamily=Nunito+Sans:300,300i,400,400i,700,700i,800,800i.css" rel="stylesheet">
         <link rel="stylesheet" href="main.css%3Fid=54b89e2eb922f2893d01.css">
 
-                    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.css" />
+                    <link rel="stylesheet" href="docsearch.min.css" />
             </head>
 
     <body class="flex flex-col justify-between min-h-screen bg-grey-lightest text-grey-darkest leading-normal font-sans">
@@ -284,6 +284,15 @@
         </a>
     
     </li>
+            <li class="list-reset pl-4">
+            
+        <a href="http-client.html"
+            class="lvl1   nav-menu__item hover:text-blue"
+        >
+            HTTP Client
+        </a>
+    
+    </li>
     </ul>
     </li>
             <li class="list-reset pl-4">
@@ -321,7 +330,10 @@ DB::table('users')-&gt;insert(
 );
 
 $users = DB::table('users')-&gt;get();</code></pre>
-<p>Laravel <a href="https://laravel.com/docs/migrations">Database Migrations</a>, <a href="https://laravel.com/docs/5.8/database-testing#writing-factories">database factories</a>, and <a href="https://laravel.com/docs/seeding">Database Seeding</a> features are also included.</p>        </div>
+<p>Laravel <a href="https://laravel.com/docs/migrations">Database Migrations</a>, <a href="https://laravel.com/docs/database-testing#writing-factories">database factories</a>, and <a href="https://laravel.com/docs/seeding">Database Seeding</a> features are also included.</p>
+<h2>Note on PHAR builds</h2>
+<p>The <code>database</code> directory isn't included in Laravel Zero standalone PHAR builds by default.</p>
+<p>If you are using the Database components migration, factory, or seeder functionality make sure to add the directory to your <a href="https://github.com/laravel-zero/laravel-zero/blob/stable/box.json">Box configurations</a> <code>directories</code> section.</p>        </div>
     </div>
 </section>
         </main>

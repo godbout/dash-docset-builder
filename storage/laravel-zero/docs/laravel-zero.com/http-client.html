@@ -4,12 +4,12 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
         <meta http-equiv="x-ua-compatible" content="ie=edge">
-        <meta name="description" content="Laravel Zero includes a powerful REPL, called Tinker">
+        <meta name="description" content="Laravel Zero includes a minimal HTTP Client component">
 
         <meta property="og:site_name" content="Laravel Zero"/>
-        <meta property="og:title" content="Tinker REPL | Laravel Zero"/>
-        <meta property="og:description" content="Laravel Zero includes a powerful REPL, called Tinker"/>
-        <meta property="og:url" content="https://laravel-zero.com/docs/tinker-repl"/>
+        <meta property="og:title" content="HTTP Client | Laravel Zero"/>
+        <meta property="og:description" content="Laravel Zero includes a minimal HTTP Client component"/>
+        <meta property="og:url" content="https://laravel-zero.com/docs/http-client"/>
         <meta property="og:image" content="/assets/img/logo.png"/>
         <meta property="og:type" content="website"/>
 
@@ -18,7 +18,7 @@
 
                     <meta name="generator" content="tighten_jigsaw_doc">
         
-        <title>Laravel Zero | Tinker REPL</title>
+        <title>Laravel Zero | HTTP Client</title>
 
         <link rel="home" href="index.html">
         <link rel="icon" href="favicon.ico">
@@ -278,7 +278,7 @@
             <li class="list-reset pl-4">
             
         <a href="tinker-repl.html"
-            class="lvl1  active font-semibold text-blue nav-menu__item hover:text-blue"
+            class="lvl1   nav-menu__item hover:text-blue"
         >
             Tinker REPL
         </a>
@@ -287,7 +287,7 @@
             <li class="list-reset pl-4">
             
         <a href="http-client.html"
-            class="lvl1   nav-menu__item hover:text-blue"
+            class="lvl1  active font-semibold text-blue nav-menu__item hover:text-blue"
         >
             HTTP Client
         </a>
@@ -317,11 +317,18 @@
         </nav>
 
         <div class="w-full lg:w-3/5 break-words pb-16 lg:pl-4" v-pre>
-            <h1>Tinker REPL</h1>
-<p>Laravel includes a powerful REPL, called Tinker, powered by the PsySH console
-by Justin Hileman under the hood. The tinker console allows you to interact
-with your Laravel application from the command line in an interactive shell.</p>
-<p><a href="https://github.com/scrubmx">Jorge González</a> made it available for Laravel Zero. Get more details: <a href="https://github.com/intonate/tinker-zero">https://github.com/intonate/tinker-zero</a>.</p>        </div>
+            <h1>HTTP Client</h1>
+<p>Laravel includes an expressive API around the <a href="https://github.com/guzzle/guzzle">Guzzle HTTP client</a>.
+This can easily be installed into Laravel Zero using the <code>http</code> component.</p>
+<p>To install this component, run the following command:</p>
+<pre><code class="language-shell">php &lt;your-app-name&gt; app:install http</code></pre>
+<h4>Usage:</h4>
+<p>The HTTP Client adds easy to use methods for standard HTTP requests.</p>
+<pre><code class="language-php">use Illuminate\Support\Facades\Http;
+
+Http::get($url);
+Http::post($url, $data);</code></pre>
+<p>Full details on using the HTTP Client is available on the <a href="https://laravel.com/docs/http-client">main Laravel documentation</a>.</p>        </div>
     </div>
 </section>
         </main>

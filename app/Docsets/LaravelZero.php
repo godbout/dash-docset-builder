@@ -18,7 +18,10 @@ class LaravelZero extends BaseDocset
     public const ICON_32 = '../icon@2x.png';
     public const EXTERNAL_DOMAINS = [
         'github.com',
-        'raw.githubusercontent.com'
+        'raw.githubusercontent.com',
+        'jsdelivr.net',
+        'googleapis.com',
+        'googletagmanager.com'
     ];
 
     public function entries(string $file): Collection

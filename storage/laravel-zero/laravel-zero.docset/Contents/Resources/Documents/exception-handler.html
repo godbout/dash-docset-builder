@@ -24,7 +24,7 @@
         <link rel="icon" href="favicon.ico">
 
         
-                    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-61404619-3"></script>
+                    <script async src="js%3Fid=UA-61404619-3"></script>
             <script>
                 window.dataLayer = window.dataLayer || [];
                 function gtag(){dataLayer.push(arguments);}
@@ -32,10 +32,10 @@
                 gtag('config', 'UA-61404619-3');
             </script>
         
-        <link href="https://fonts.googleapis.com/css?family=Nunito+Sans:300,300i,400,400i,700,700i,800,800i" rel="stylesheet">
+        <link href="./css%3Ffamily=Nunito+Sans:300,300i,400,400i,700,700i,800,800i.css" rel="stylesheet">
         <link rel="stylesheet" href="main.css%3Fid=54b89e2eb922f2893d01.css">
 
-                    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.css">
+                    <link rel="stylesheet" href="docsearch.min.css">
             </head>
 
     <body class="flex flex-col justify-between min-h-screen bg-grey-lightest text-grey-darkest leading-normal font-sans">
@@ -64,13 +64,13 @@
 
 namespace App\Exceptions;
 
-use Exception;
 use Illuminate\Foundation\Exceptions\Handler as ExceptionHandler;
+use Throwable;
 
 class Handler extends ExceptionHandler
 {
     /**
-     * A list of the exception types that should not be reported.
+     * A list of the exception types that are not reported.
      *
      * @var array
      */
@@ -81,16 +81,15 @@ class Handler extends ExceptionHandler
     /**
      * Report or log an exception.
      *
-     * This is a great spot to send exceptions to Sentry, Bugsnag, etc.
-     *
-     * @param  \Exception  $exception
+     * @param  \Throwable  $exception
      * @return void
+     *
+     * @throws \Exception
      */
-    public function report(Exception $exception)
+    public function report(Throwable $exception)
     {
         parent::report($exception);
     }
-
 }</code></pre>
 <p>As you can see we are just extending the default handler here.</p>
 <blockquote>
@@ -119,7 +118,7 @@ You can now start handling exceptions in your new <code>Handler.php</code> file.
     ];</code></pre>
 <p>This however results in <code>RuntimeException</code> not being reported at all. More fine grained control can be achieved by updating the <code>report</code> function.</p>
 <p>The following would prevent the <em>Not enough arguments</em> exception to be reported, but any other <code>RuntimeException</code> would still be reported.</p>
-<pre><code class="language-php">public function report(Exception $exception)
+<pre><code class="language-php">public function report(Throwable $exception)
 {
     if ($exception instanceof RuntimeException) {
         if (Str::contains($exception-&gt;getMessage(), ['Not enough arguments'])) {
