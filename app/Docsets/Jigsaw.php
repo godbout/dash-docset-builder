@@ -16,7 +16,10 @@ class Jigsaw extends BaseDocset
     public const PLAYGROUND = '';
     public const ICON_16 = '../icon.png';
     public const ICON_32 = '../icon@2x.png';
-    public const EXTERNAL_DOMAINS = [];
+    public const EXTERNAL_DOMAINS = [
+        'googleapis.com',
+        'jsdelivr.net',
+    ];
 
 
     public function entries(string $file): Collection
