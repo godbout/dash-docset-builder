@@ -13,11 +13,11 @@
 
         <link rel="stylesheet" href="https://use.typekit.net/fac7rzg.css">
 
-        <link rel="stylesheet" type="text/css" href="main.css%3Fid=adb321df4f1d32123ca9.css">
+        <link rel="stylesheet" type="text/css" href="main.css%3Fid=e363eb510547c81027c5.css">
 
-        <link href="https://fonts.googleapis.com/css?family=Lato:100,300,300italic,400,400italic,500,500italic,700,700italic" rel="stylesheet" type="text/css">
+        <link href="./css%3Ffamily=Lato:100,300,300italic,400,400italic,500,500italic,700,700italic.css" rel="stylesheet" type="text/css">
 
-        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.css">
+        <link rel="stylesheet" href="docsearch.min.css">
     </head>
 
     <body class="min-h-screen font-sans leading-tight">
@@ -28,17 +28,17 @@
 
 <div class="bg-brown-lightest min-h-screen px-0">
     <div class="flex flex-col lg:flex-row justify-center mx-auto">
-        <navigation :links='{"Installation":{"root":"\/docs\/installation","children":{"Using a Starter Template":{"root":"\/docs\/starter-templates"}}},"Building \u0026 Previewing":{"root":"\/docs\/building-and-previewing","children":{"Environments":{"root":"\/docs\/building-and-previewing-environments"}}},"Compiling Assets":{"root":"\/docs\/compiling-assets"},"Creating your Site\u0027s Content":{"root":"\/docs\/content","children":{"Blade Templates \u0026 Partials":{"root":"\/docs\/content-blade"},"Markdown":{"root":"\/docs\/content-markdown"},"Other File Types":{"root":"\/docs\/content-other-file-types"}}},"Site Variables":{"root":"\/docs\/site-variables"},"Helper Methods":{"root":"\/docs\/helper-methods"},"Page Metadata":{"root":"\/docs\/page-metadata"},"Collections":{"root":"\/docs\/collections","children":{"Extending Parent Templates":{"root":"\/docs\/collections-extending-parent-templates"},"Paths":{"root":"\/docs\/collections-paths"},"Sorting":{"root":"\/docs\/collections-sorting"},"Filtering":{"root":"\/docs\/collections-filtering"},"Pagination":{"root":"\/docs\/collections-pagination"},"Variables and Functions":{"root":"\/docs\/collections-variables-and-functions"},"Remote Collections":{"root":"\/docs\/collections-remote-collections"}}},"Pretty Urls":{"root":"\/docs\/pretty-urls"},"Custom 404 Page":{"root":"\/docs\/custom-404-page"},"Event Listeners":{"root":"\/docs\/event-listeners"},"Deploying Your Site":{"root":"\/docs\/deploying-your-site"}}'></navigation>
+        <navigation :links='{"Installation":{"root":"\/docs\/installation","children":{"Using a Starter Template":{"root":"\/docs\/starter-templates"}}},"Building \u0026 Previewing":{"root":"\/docs\/building-and-previewing","children":{"Environments":{"root":"\/docs\/building-and-previewing-environments"}}},"Compiling Assets":{"root":"\/docs\/compiling-assets"},"Creating your Site\u0027s Content":{"root":"\/docs\/content","children":{"Blade Templates \u0026 Partials":{"root":"\/docs\/content-blade"},"Markdown":{"root":"\/docs\/content-markdown"},"Other File Types":{"root":"\/docs\/content-other-file-types"}}},"Site Variables":{"root":"\/docs\/site-variables"},"Helper Methods":{"root":"\/docs\/helper-methods"},"Page Metadata":{"root":"\/docs\/page-metadata"},"Collections":{"root":"\/docs\/collections","children":{"Extending Parent Templates":{"root":"\/docs\/collections-extending-parent-templates"},"Paths":{"root":"\/docs\/collections-paths"},"Sorting":{"root":"\/docs\/collections-sorting"},"Filtering":{"root":"\/docs\/collections-filtering"},"Mapping":{"root":"\/docs\/collections-mapping"},"Pagination":{"root":"\/docs\/collections-pagination"},"Variables and Functions":{"root":"\/docs\/collections-variables-and-functions"},"Remote Collections":{"root":"\/docs\/collections-remote-collections"}}},"Pretty Urls":{"root":"\/docs\/pretty-urls"},"Custom 404 Page":{"root":"\/docs\/custom-404-page"},"Event Listeners":{"root":"\/docs\/event-listeners"},"Deploying Your Site":{"root":"\/docs\/deploying-your-site"}}'></navigation>
 
         <div class="markdown bg-white w-full px-6 pb-8 font-normal" v-pre style="margin-top: -1.5rem;">
             <a name="//apple_ref/cpp/Section/Top" class="dashAnchor"></a><h2 class="text-3xl">Compiling Assets with Laravel Mix</h2>
-<p>Jigsaw sites are configured with support for <a href="https://laravel.com/docs/5.8/mix">Laravel Mix</a> out of the box. If you've ever used Mix in a Laravel project, you already know how to use Mix with Jigsaw.</p>
+<p>Jigsaw sites are configured with support for <a href="https://laravel.com/docs/7.x/mix">Laravel Mix</a> out of the box. If you've ever used Mix in a Laravel project, you already know how to use Mix with Jigsaw.</p>
 <hr>
 <a id="setup" name="//apple_ref/cpp/Section/Setup" class="dashAnchor"></a><h3 style="font-size: 1.5rem;">Setup</h3>
 <p>To get started, first make sure you have Node.js and NPM installed in your environment.</p>
 <p>Once you have Node.js and NPM installed, pull in the dependencies needed to compile your assets:</p>
 <pre><code>$ npm install</code></pre>
-<p>For more detailed installation instructions, check out the <a href="https://laravel.com/docs/5.8/mix">full Laravel Mix documentation</a>.</p>
+<p>For more detailed installation instructions, check out the <a href="https://laravel.com/docs/7.x/mix">full Laravel Mix documentation</a>.</p>
 <a id="organizing-your-assets" name="//apple_ref/cpp/Section/Organizing%20your%20assets" class="dashAnchor"></a><h3 style="font-size: 1.5rem;">Organizing your assets</h3>
 <p>By default, any assets you want to process with Mix should live in <code>/source/_assets</code>:</p>
 <div class="files">
@@ -103,7 +103,7 @@
 </div>
 <p>Then, when Jigsaw builds your site, the entire <code>/source/assets</code> directory containing your <code>build</code> files (and any other directories containing static assets, such as <code>images</code> or <code>fonts</code>, that you choose to store there) will be copied to <code>/build_local</code> or <code>/build_production</code>.</p>
 <p>In your templates, you can reference these assets using the <code>mix</code> Blade directive. If you are using the default setup, your compiled assets will be copied to your site's <code>/assets/build</code> directory, which should be specified as the 2nd parameter of the <code>mix</code> directive:</p>
-<pre><code class="language-php">// &lt;link rel="stylesheet" href="{{ mix('css/main.css', 'assets/build') }}"&gt;</code></pre>
+<pre><code class="language-php">&lt;link rel="stylesheet" href="{{ mix('css/main.css', 'assets/build') }}"&gt;</code></pre>
 <a id="compiling-your-assets" name="//apple_ref/cpp/Section/Compiling%20your%20assets" class="dashAnchor"></a><h3 style="font-size: 1.5rem;">Compiling your assets</h3>
 <p>To compile your assets, run:</p>
 <pre><code>$ npm run dev</code></pre>
@@ -150,6 +150,10 @@ mix.js('source/_assets/js/main.js', 'js')
 <pre><code class="language-js">mix.react('source/_assets/js/main.js', 'js')
     .less('source/_assets/sass/main.less', 'css')
     .version();</code></pre>
+<hr>
+<a id="inlining-your-assets" name="//apple_ref/cpp/Section/Inlining%20your%20assets" class="dashAnchor"></a><h3 style="font-size: 1.5rem;">Inlining your assets</h3>
+<p>You may choose to inline your CSS or JavaScript assets into the <code>&lt;style&gt;</code> or <code>&lt;script&gt;</code> tags in your page <code>&lt;head&gt;</code>, to save a network request and to avoid blocking the rest of the page from loading. The <code>inline</code> helper function will accomplish this:</p>
+<pre><code>{{ inline(mix('css/main.css', 'assets/build')) }}</code></pre>
 <hr>
 <a id="note-for-sass-users" name="//apple_ref/cpp/Section/Note%20for%20Sass%20users" class="dashAnchor"></a><h3 style="font-size: 1.5rem;">Note for Sass users</h3>
 <p>To prevent URLs in your <code>.scss</code> files&mdash;such as background images and fonts&mdash;from being processed and modified by Mix, set the <code>processCssUrls</code> option to <code>false</code> in your <code>webpack.mix.js</code> file.</p>        </div>

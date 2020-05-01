@@ -13,11 +13,11 @@
 
         <link rel="stylesheet" href="https://use.typekit.net/fac7rzg.css">
 
-        <link rel="stylesheet" type="text/css" href="main.css%3Fid=adb321df4f1d32123ca9.css">
+        <link rel="stylesheet" type="text/css" href="main.css%3Fid=e363eb510547c81027c5.css">
 
-        <link href="https://fonts.googleapis.com/css?family=Lato:100,300,300italic,400,400italic,500,500italic,700,700italic" rel="stylesheet" type="text/css">
+        <link href="./css%3Ffamily=Lato:100,300,300italic,400,400italic,500,500italic,700,700italic.css" rel="stylesheet" type="text/css">
 
-        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.css">
+        <link rel="stylesheet" href="docsearch.min.css">
     </head>
 
     <body class="min-h-screen font-sans leading-tight">
@@ -28,7 +28,7 @@
 
 <div class="bg-brown-lightest min-h-screen px-0">
     <div class="flex flex-col lg:flex-row justify-center mx-auto">
-        <navigation :links='{"Installation":{"root":"\/docs\/installation","children":{"Using a Starter Template":{"root":"\/docs\/starter-templates"}}},"Building \u0026 Previewing":{"root":"\/docs\/building-and-previewing","children":{"Environments":{"root":"\/docs\/building-and-previewing-environments"}}},"Compiling Assets":{"root":"\/docs\/compiling-assets"},"Creating your Site\u0027s Content":{"root":"\/docs\/content","children":{"Blade Templates \u0026 Partials":{"root":"\/docs\/content-blade"},"Markdown":{"root":"\/docs\/content-markdown"},"Other File Types":{"root":"\/docs\/content-other-file-types"}}},"Site Variables":{"root":"\/docs\/site-variables"},"Helper Methods":{"root":"\/docs\/helper-methods"},"Page Metadata":{"root":"\/docs\/page-metadata"},"Collections":{"root":"\/docs\/collections","children":{"Extending Parent Templates":{"root":"\/docs\/collections-extending-parent-templates"},"Paths":{"root":"\/docs\/collections-paths"},"Sorting":{"root":"\/docs\/collections-sorting"},"Filtering":{"root":"\/docs\/collections-filtering"},"Pagination":{"root":"\/docs\/collections-pagination"},"Variables and Functions":{"root":"\/docs\/collections-variables-and-functions"},"Remote Collections":{"root":"\/docs\/collections-remote-collections"}}},"Pretty Urls":{"root":"\/docs\/pretty-urls"},"Custom 404 Page":{"root":"\/docs\/custom-404-page"},"Event Listeners":{"root":"\/docs\/event-listeners"},"Deploying Your Site":{"root":"\/docs\/deploying-your-site"}}'></navigation>
+        <navigation :links='{"Installation":{"root":"\/docs\/installation","children":{"Using a Starter Template":{"root":"\/docs\/starter-templates"}}},"Building \u0026 Previewing":{"root":"\/docs\/building-and-previewing","children":{"Environments":{"root":"\/docs\/building-and-previewing-environments"}}},"Compiling Assets":{"root":"\/docs\/compiling-assets"},"Creating your Site\u0027s Content":{"root":"\/docs\/content","children":{"Blade Templates \u0026 Partials":{"root":"\/docs\/content-blade"},"Markdown":{"root":"\/docs\/content-markdown"},"Other File Types":{"root":"\/docs\/content-other-file-types"}}},"Site Variables":{"root":"\/docs\/site-variables"},"Helper Methods":{"root":"\/docs\/helper-methods"},"Page Metadata":{"root":"\/docs\/page-metadata"},"Collections":{"root":"\/docs\/collections","children":{"Extending Parent Templates":{"root":"\/docs\/collections-extending-parent-templates"},"Paths":{"root":"\/docs\/collections-paths"},"Sorting":{"root":"\/docs\/collections-sorting"},"Filtering":{"root":"\/docs\/collections-filtering"},"Mapping":{"root":"\/docs\/collections-mapping"},"Pagination":{"root":"\/docs\/collections-pagination"},"Variables and Functions":{"root":"\/docs\/collections-variables-and-functions"},"Remote Collections":{"root":"\/docs\/collections-remote-collections"}}},"Pretty Urls":{"root":"\/docs\/pretty-urls"},"Custom 404 Page":{"root":"\/docs\/custom-404-page"},"Event Listeners":{"root":"\/docs\/event-listeners"},"Deploying Your Site":{"root":"\/docs\/deploying-your-site"}}'></navigation>
 
         <div class="markdown bg-white w-full px-6 pb-8 font-normal" v-pre style="margin-top: -1.5rem;">
             <a name="//apple_ref/cpp/Section/Top" class="dashAnchor"></a><h2 class="text-3xl">Collections</h2>
@@ -123,7 +123,7 @@ This post is *profoundly* interesting.</code></pre>
 @endsection</code></pre>
 <a id="accessing-collection-items" name="//apple_ref/cpp/Section/Accessing%20Collection%20Items" class="dashAnchor"></a><h3 style="font-size: 1.5rem;">Accessing Collection Items</h3>
 <p>In any Blade template, you have access to each of your collections using a variable with the collection's name. This variable references an object that contains all the elements in your collection, and can be iterated over to
-access individual collection items. The collection variable also behaves as if it were an <a href="https://laravel.com/docs/5.8/collections">Illuminate Collection</a> in Laravel, meaning you have access to all of Laravel's standard collection methods like <code>count()</code>, <code>filter()</code>, and <code>where()</code>.</p>
+access individual collection items. The collection variable also behaves as if it were an <a href="https://laravel.com/docs/7.x/collections">Illuminate Collection</a> in Laravel, meaning you have access to all of Laravel's standard collection methods like <code>count()</code>, <code>filter()</code>, and <code>where()</code>.</p>
 <p>For example, to create a list of the titles for all your blog posts, you can iterate over the <code>$posts</code> object in a Blade <code>@foreach</code> loop, and display the <code>title</code> property that you defined in the YAML front matter of each post:</p>
 <blockquote>
 <p><em>posts.blade.php</em></p>
