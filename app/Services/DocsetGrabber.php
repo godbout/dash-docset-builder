@@ -14,6 +14,23 @@ final class DocsetGrabber
         $this->docset = $docset;
     }
 
+    public function specificPagesGiven()
+    {
+        return !! count($this->docset->specificPages());
+    }
+
+    public function grabFromSpecificPages()
+    {
+        $specificPages = implode(" ", $this->docset->specificPages());
+
+        system(
+            "wget $specificPages {$this->wgetOptions()}",
+            $result
+        );
+
+        return $result === 0;
+    }
+
     public function sitemapExists()
     {
         return @file_get_contents("https://{$this->docset->url()}/sitemap.xml");
@@ -24,7 +41,7 @@ final class DocsetGrabber
         system(
             "wget {$this->docset->url()}/sitemap.xml --quiet --output-document - | \
             egrep --only-matching '{$this->docset->url()}[^<]+' | \
-            wget --input-file - {$this->wgetOptions()}",
+            wget --input-file - --mirror {$this->wgetOptions()}",
             $result
         );
 
@@ -34,7 +51,7 @@ final class DocsetGrabber
     public function grabFromIndex()
     {
         system(
-            "wget {$this->docset->url()} {$this->wgetOptions()}",
+            "wget {$this->docset->url()} --mirror {$this->wgetOptions()}",
             $result
         );
 
@@ -43,8 +60,7 @@ final class DocsetGrabber
 
     protected function wgetOptions()
     {
-        return "--mirror \
-            -e robots=off \
+        return "-e robots=off \
             --page-requisites \
             --adjust-extension \
             --convert-links \

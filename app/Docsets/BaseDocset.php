@@ -11,6 +11,7 @@ abstract class BaseDocset implements Docset
     public const CODE = self::CODE;
     public const NAME = self::NAME;
     public const URL = self::URL;
+    public const SPECIFIC_PAGES = self::SPECIFIC_PAGES;
     public const INDEX = self::INDEX;
     public const PLAYGROUND = self::PLAYGROUND;
     public const ICON_16 = self::ICON_16;
@@ -31,6 +32,11 @@ abstract class BaseDocset implements Docset
     final public function url(): string
     {
         return static::URL;
+    }
+
+    final public function specificPages(): array
+    {
+        return static::SPECIFIC_PAGES;
     }
 
     final public function index(): string

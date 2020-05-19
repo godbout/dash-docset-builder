@@ -1,0 +1,35 @@
+#fullscreen { 
+	left: 0px; 
+	top: 0px; 
+	position: absolute; 
+	z-index: 9999; 
+	background-color: white; 
+	text-align: center; 
+} 
+#fullscreen #tiki_draw_editor{ 
+	width: inherit ! important; 
+	height: inherit ! important; 
+} 
+#fullscreen #svg-menu{ 
+	position: absolute; 
+	z-index: 99991; 
+} 
+#fullscreen iframe { 
+	width: 100%; 
+	border: none ! important; 
+} 
+#tiki_draw iframe { 
+	width: 100%; 
+	border: none ! important; 
+}
+#tiki_draw_editor iframe { 
+	border: none ! important; 
+} 
+.full_screen_body { 
+	overflow: hidden; 
+}
+
+.ui-widget-overlay.ui-front {
+    z-index: auto;
+}
+

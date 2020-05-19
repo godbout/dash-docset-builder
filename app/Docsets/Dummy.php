@@ -12,6 +12,7 @@ class Dummy extends BaseDocset
     public const NAME = 'Dummy';
     public const URL = 'glmb.today';
     public const INDEX = 'index.html';
+    public const SPECIFIC_PAGES = [];
     public const PLAYGROUND = '';
     public const ICON_16 = 'favicon-16x16.png';
     public const ICON_32 = 'favicon-32x32.png';

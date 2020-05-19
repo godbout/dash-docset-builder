@@ -13,6 +13,7 @@ class LaravelZero extends BaseDocset
     public const NAME = 'Laravel Zero';
     public const URL = 'laravel-zero.com';
     public const INDEX = 'introduction.html';
+    public const SPECIFIC_PAGES = [];
     public const PLAYGROUND = '';
     public const ICON_16 = '../icon.png';
     public const ICON_32 = '../icon@2x.png';

@@ -37,11 +37,22 @@ class DocsetBuilder
 
     public function grab()
     {
+        if ($this->grabber->specificPagesGiven()) {
+            return $this->grabFromSpecificPages();
+        }
+
         if ($this->grabber->sitemapExists()) {
             return $this->grabFromSitemap();
         }
 
         return $this->grabFromIndex();
+    }
+
+    protected function grabFromSpecificPages()
+    {
+        return $this->command->task('  - Downloading doc from specific pages', function () {
+            return $this->grabber->grabFromSpecificPages();
+        });
     }
 
     protected function grabFromSitemap()

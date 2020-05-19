@@ -1,0 +1,65 @@
+.CodeMirror {
+	background-color: #F8F8F8;
+	border: 1px solid gray;
+	cursor: text;
+	font: 1em Arial,Helvetica,sans-serif ! important;
+	clear: both;
+    height: auto;
+	margin-bottom: .5em;
+}
+
+/*from the codemirror website*/
+.CodeMirror-fullscreen  #editwiki_toolbar{
+	width: 100% ! important;
+}
+
+.CodeMirror-fullscreen  .CodeMirror-scroll{
+	height: inherit ! important;
+	width: inherit ! important;
+}
+
+.CodeMirror-fullscreen {
+	display: block;
+	width: 100%;
+	height: 100%;
+	margin: 0;
+	padding: 0;
+	border: 0px solid #BBBBBB;
+	opacity: 1;
+	width: 100%;
+	top: 0px ! important;
+	left: 0px ! important;
+	position: fixed;
+	background-color: gray;
+}
+
+.noScroll
+{
+	overflow: hidden ! important;
+}
+
+.CodeMirror pre {
+	font-size: 1em !important;
+	line-height: 1.2em !important;
+}
+
+.preCodeMirror {
+	display: none;
+}
+
+.CodeMirrorHide {
+	z-index: -99999999;
+	opacity:0.01;
+	filter:alpha(opacity=1);
+}
+
+.CodeMirrorPrepSize {
+	position: absolute;
+	z-index: -99999999;
+	opacity:0.01;
+	filter:alpha(opacity=1);
+}
+
+.CodeMirror-scroll.cm-s-default {
+	height: auto !important;
+}
