@@ -44,6 +44,7 @@ final class DocsetGrabber
     protected function wgetOptions()
     {
         return "--mirror \
+            -e robots=off \
             --page-requisites \
             --adjust-extension \
             --convert-links \
