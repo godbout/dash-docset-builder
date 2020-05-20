@@ -14,7 +14,6 @@ class TailwindCSS extends BaseDocset
     public const NAME = 'Tailwind CSS';
     public const URL = 'tailwindcss.com';
     public const INDEX = 'installation.html';
-    public const SPECIFIC_PAGES = [];
     public const PLAYGROUND = 'https://codesandbox.io/s/github/lbogdan/tailwindcss-playground';
     public const ICON_16 = 'favicon-16x16.png';
     public const ICON_32 = 'favicon-32x32.png';

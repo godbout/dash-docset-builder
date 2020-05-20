@@ -12,7 +12,6 @@ class Jigsaw extends BaseDocset
     public const CODE = 'jigsaw';
     public const NAME = 'Jigsaw';
     public const URL = 'jigsaw.tighten.co';
-    public const SPECIFIC_PAGES = [];
     public const INDEX = 'installation.html';
     public const PLAYGROUND = '';
     public const ICON_16 = '../icon.png';

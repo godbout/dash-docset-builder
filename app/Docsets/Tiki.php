@@ -12,10 +12,6 @@ class Tiki extends BaseDocset
     public const NAME = 'Tiki';
     public const URL = 'doc.tiki.org';
     public const INDEX = 'PluginList-output-control-block.html';
-    public const SPECIFIC_PAGES = [
-        'http://doc.tiki.org/PluginList-output-control-block',
-        'http://doc.tiki.org/PluginList-filter-control-block'
-    ];
     public const PLAYGROUND = '';
     public const ICON_16 = '../icon.png';
     public const ICON_32 = '../icon@2x.png';
