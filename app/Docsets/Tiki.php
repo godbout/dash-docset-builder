@@ -11,12 +11,36 @@ class Tiki extends BaseDocset
     public const CODE = 'tiki';
     public const NAME = 'Tiki';
     public const URL = 'doc.tiki.org';
-    public const INDEX = 'PluginList-output-control-block.html';
+    public const INDEX = 'All-the-Documentation.html';
     public const PLAYGROUND = '';
     public const ICON_16 = '../icon.png';
     public const ICON_32 = '../icon@2x.png';
     public const EXTERNAL_DOMAINS = [];
 
+
+    public function grab()
+    {
+        Storage::deleteDirectory($this->downloadedDirectory());
+
+        system(
+            "wget doc.tiki.org/All-the-Documentation \
+                --mirror \
+                -e robots=off \
+                --header 'Cookie: javascript_enabled_detect=true' \
+                --accept-regex='/PluginList|\.css|\.js|\.manifest|\.jpg|\.png|\.ico' \
+                --reject-regex='\?|fullscreen' \
+                --page-requisites \
+                --adjust-extension \
+                --convert-links \
+                --no-directories \
+                --span-hosts \
+                --domains={$this->externalDomains()} \
+                --directory-prefix=storage/{$this->downloadedDirectory()}",
+            $result
+        );
+
+        return $result === 0;
+    }
 
     public function entries(string $file): Collection
     {

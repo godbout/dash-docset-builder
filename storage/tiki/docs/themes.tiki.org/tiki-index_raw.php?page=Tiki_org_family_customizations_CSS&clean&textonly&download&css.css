@@ -1,0 +1,294 @@
+Tiki_org_family_customizations_CSS
+
+.keep_this_line_here_for_now_to_prevent_the_page_title_to_be_interpreted_as_a_CSS_selector_till_fixed,
+
+
+/*****
+* TO REQUEST THIS CODE AS CSS FILE TYPE USE: tiki-index_raw.php?page=Tiki_org_family_customizations_CSS&clean&textonly&download&css
+* Example: <link rel="stylesheet" href="https://themes.tiki.org/tiki-index_raw.php?page=Tiki_org_family_customizations_CSS&clean&textonly&download&css" type="text/css"> or @import url("https://themes.tiki.org/tiki-index_raw.php?page=Tiki_org_family_customizations_CSS&clean&textonly&download&css");
+*****/
+
+/*** Link color definitions for "sister" sites ***/
+
+article a[href^="http://"]::before,
+article a[href^="https://"]::before,
+article a.ext:before {
+color: #fff;
+display: inline-block;
+font-size: 75%;
+border-radius: 50%;
+height: 0.952381em;
+overflow: hidden;
+margin-right: 0.285714em;
+text-indent: -10em;
+transition: transform .25s;
+vertical-align: middle;
+width: 0.952381em;
+}
+
+article a[href^="http://"]:hover::before,
+article a[href^="https://"]:hover::before {
+box-shadow: 0.5em 0.5em 1em -0.5em rgba(0,0,0,.5);
+width: auto;
+transition: text-indent .1s;
+text-indent: 0;
+padding: 0.142857em 0.357143em;
+height: auto;
+border-radius: 9em;
+top: -1em;
+position: absolute;
+margin-left: -0.928571em;
+word-break: normal;
+}
+
+article a[href^="http://"]:hover::after,
+article a[href^="https://"]:hover::after {
+border-left-width: .5em;
+border-left-style: solid;
+border-bottom-color: transparent;
+border-bottom-width: .5em;
+border-bottom-style: solid;
+left: .5em;
+margin-top: 1.39em;
+top: -1em;
+position: absolute;
+transform: skewX(-20deg);
+}
+
+/* rules common for all URLs we want to match */
+article a[href^="http://branding.tiki"]:hover,
+article a[href^="https://branding.tiki"]:hover,
+article a[href^="http://community.tiki"]:hover,
+article a[href^="https://community.tiki"]:hover,
+article a[href^="http://dev.tiki"]:hover,
+article a[href^="https://dev.tiki"]:hover,
+article a[href^="http://doc.tiki"]:hover,
+article a[href^="https://doc.tiki"]:hover,
+article a[href^="http://info.tiki"]:hover,
+article a[href^="https://info.tiki"]:hover,
+article a[href^="http://profiles.tiki"]:hover,
+article a[href^="https://profiles.tiki"]:hover,
+article a[href^="http://suite.tiki"]:hover,
+article a[href^="https://suite.tiki"]:hover,
+article a[href^="http://themes.tiki"]:hover,
+article a[href^="https://themes.tiki"]:hover,
+article a[href^="http://tiki.org"]:hover,
+article a[href^="https://tiki.org"]:hover,
+article a[href^="http://tikiwiki.org"]:hover,
+article a[href^="https://tikiwiki.org"]:hover,
+article a[href^="http://de.wikipedia.org"]:hover,
+article a[href^="https://de.wikipedia.org"]:hover,
+article a[href^="http://en.wikipedia.org"]:hover,
+article a[href^="https://en.wikipedia.org"]:hover,
+article a[href^="https://www.wikipedia.org"]:hover,
+article a[href^="http://wikisuite.org"]:hover,
+article a[href^="https://wikisuite.org"]:hover,
+article a.ext_page:hover {
+padding-left: 0.9285714285714286em;
+position: relative;
+}
+
+/* Sometimes we want to prevent these so we can wrap the content in .rawlinks class and the links will display raw */
+.rawlinks a::before, .rawlinks a::after {
+display: none !important;
+}
+.rawlinks a.btn {
+padding: 6px 12px !important;
+}
+.rawlinks a.btn-lg, .rawlinks .btn-group-lg > .btn {
+padding: 10px 16px !important;
+}
+.rawlinks a.list-group-item {
+padding: 10px 15px !important;
+}
+
+/* Color and badge definitions for specific URLs follow */
+article a[href^="http://branding.tiki"]:hover:after,
+article a[href^="https://branding.tiki"]:hover:after,
+article a.branding:hover:after {
+border-left-color: #eb0a82;
+content: "";
+}
+
+article a[href^="http://branding.tiki"]:before,
+article a[href^="https://branding.tiki"]:before,
+article a.branding:before {
+background-color: #eb0a82;
+content: "branding:";
+}
+
+article a[href^="http://tiki.org"]:hover:after,
+article a[href^="https://tiki.org"]:hover:after,
+article a[href^="http://tikiwiki.org"]:hover:after,
+article a[href^="https://tikiwiki.org"]:hover:after,
+article a[href^="http://info.tiki"]:hover:after,
+article a[href^="https://info.tiki"]:hover:after,
+article a.info:hover:after {
+border-left-color: #117485;
+content: "";
+}
+
+article a[href^="http://tiki.org"]:before,
+article a[href^="https://tiki.org"]:before,
+article a[href^="http://tikiwiki.org"]:before,
+article a[href^="https://tikiwiki.org"]:before,
+article a[href^="http://info.tiki"]:before,
+article a[href^="https://info.tiki"]:before,
+article a.info:before {
+background-color: #117485;
+content: "info:";
+}
+
+/* orange for community ext wiki links */
+article a[href^="http://community.tiki"]:hover:after,
+article a[href^="https://community.tiki"]:hover:after,
+article a.tw:hover:after {
+border-left-color: #ec6223;
+content: "";
+}
+
+article a[href^="http://community.tiki"]:before,
+article a[href^="https://community.tiki"]:before,
+article a.tw:before {
+background-color: #ec6223;
+content: "community:";
+}
+
+article a[href^="http://dev.tiki"]:hover:after,
+article a[href^="https://dev.tiki"]:hover:after,
+article a.dev:hover:after {
+border-left-color: #c21e3b;
+content: "";
+}
+
+article a[href^="http://dev.tiki"]:before,
+article a[href^="https://dev.tiki"]:before,
+article a.dev:before {
+background-color: #c21e3b;
+content: "dev:";
+}
+
+article a[href^="http://doc.tiki"]:hover:after,
+article a[href^="https://doc.tiki"]:hover:after,
+article a.doc:hover:after {
+border-left-color: #96a032;
+content: "";
+}
+
+article a[href^="http://doc.tiki"]:before,
+article a[href^="https://doc.tiki"]:before,
+article a.doc:before {
+background-color: #96a032;
+content: "doc:";
+}
+
+article a[href^="http://profiles.tiki"]:hover:after,
+article a[href^="https://profiles.tiki"]:hover:after,
+article a.profiles:hover:after {
+border-left-color: #ffc506;
+content: "";
+}
+
+article a[href^="http://profiles.tiki"]:before,
+article a[href^="https://profiles.tiki"]:before,
+article a.profiles:before {
+background-color: #ffc506;
+content: "profiles:";
+}
+
+article a[href^="http://suite.tiki"]:hover:after,
+article a[href^="https://suite.tiki"]:hover:after,
+article a.suite:hover:after {
+border-left-color: #7001a7;
+content: "";
+}
+
+article a[href^="http://suite.tiki"]:before,
+article a[href^="https://suite.tiki"]:before,
+article a.suite:before {
+background-color: #7001a7;
+content: "suite:";
+}
+
+article a[href^="http://themes.tiki"]:hover:after,
+article a[href^="https://themes.tiki"]:hover:after,
+article a.themes:hover:after {
+border-left-color: #8e286a;
+content: "";
+}
+
+article a[href^="http://themes.tiki"]:before,
+article a[href^="https://themes.tiki"]:before,
+article a.themes:before {
+background-color: #8e286a;
+content: "themes:";
+}
+
+article a[href^="http://de.wikipedia.org"]:hover:after,
+article a[href^="https://de.wikipedia.org"]:hover:after,
+article a[href^="http://en.wikipedia.org"]:hover:after,
+article a[href^="https://en.wikipedia.org"]:hover:after,
+article a[href^="https://www.wikipedia.org"]:hover:after,
+article a.wikipedia:hover:after {
+border-left-color: #cedff2;
+content: "";
+}
+
+article a[href^="http://de.wikipedia.org"]:before,
+article a[href^="https://de.wikipedia.org"]:before,
+article a[href^="http://en.wikipedia.org"]:before,
+article a[href^="https://en.wikipedia.org"]:before,
+article a[href^="https://www.wikipedia.org"]:before,
+article a.wikipedia:before {
+background-color: #cedff2;
+color: #000;
+content: "wikipedia:";
+}
+
+article a[href^="http://de.wikipedia.org"]:before,
+article a[href^="https://de.wikipedia.org"]:before,
+article a.wikipedia.de:before {
+content: "wikipedia (german):";
+}
+
+article a[href^="http://wikisuite.org"]:before,
+article a[href^="https://wikisuite.org"]:before,
+article a.wikisuite:before {
+background-color: #192263;
+border-radius: .25rem;
+content: "wikisuite:";
+transform: rotate(-45deg);
+}
+
+article a[href^="http://wikisuite.org"]:hover:after, 
+article a[href^="https://wikisuite.org"]:hover:after, 
+article a.wikisuite:hover:after {
+border-left-color: #192263;
+content: "";
+}
+
+article a[href^="http://wikisuite.org"]:hover:before,
+article a[href^="https://wikisuite.org"]:hover:before,
+article a.wikisuite:hover:before {
+transform: rotate(0deg);
+}
+
+/* To have the “bubble” stay on the same line as the link */
+article a[href^="http://"],
+article a[href^="https://"] {
+display: inline-block;
+vertical-align: top;
+word-break: break-all;
+}
+
+article .rawlinks a[href^="http://"], article .rawlinks a[href^="https://"] {
+display: inherit;
+padding-left: 0 !important;
+word-break: normal;
+}
+
+	
+
+[hidden] {
+    display: block !important; 
+}

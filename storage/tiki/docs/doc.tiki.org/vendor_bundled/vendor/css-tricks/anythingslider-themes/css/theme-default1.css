@@ -1,0 +1,274 @@
+/*
+	AnythingSlider v1.7+ themes
+	Default 1 theme - no images/css3
+	by Rob Garrison (aka Mottie)
+*/
+
+/****************************
+ SET DEFAULT DIMENSIONS HERE
+ ****************************/
+/* Change the ID to match your slider */
+#slider {
+	width: 700px;
+	height: 390px;
+	list-style: none;
+	/* Prevent FOUC (see FAQ page) and keep things readable if javascript is disabled */
+	overflow-y: auto;
+	overflow-x: hidden;
+}
+
+/* Opera width restriction */
+.anythingBase {
+	background: transparent;
+	list-style: none;
+	position: absolute;
+	top: 0;
+	left: 0;
+	margin: 0;
+	padding: 0;
+	/* override the #slider overflow above, once the class is added */
+	overflow: visible !important;
+}
+
+/*************
+ ACTIVE STATE (slider has keyboard focus)
+ *************/
+/* slider window - top & bottom borders, active state */
+.anythingSlider-default1.activeSlider .anythingWindow {
+	border-color: #6699aa;
+}
+/* Text arrows */
+.anythingSlider-default1.activeSlider .arrow a:link {
+	color: #6699aa;
+}
+.anythingSlider-default1.activeSlider .arrow a:hover {
+	color: #44bbcc;
+}
+/* Navigation tabs, active state */
+.anythingSlider-default1.activeSlider .anythingControls ul a:link {
+	background-color: #6699aa;
+	color: #ddd;
+}
+.anythingSlider-default1.activeSlider .anythingControls ul a.cur:link,
+.anythingSlider-default1.activeSlider .anythingControls ul a:hover,
+.anythingSlider-default1.activeSlider .anythingControls ul a.hover {
+	background-color: #44bbcc;
+}
+/* start-stop button, stopped, active state */
+.anythingSlider-default1.activeSlider .start-stop {
+	background-color: #6699aa;
+}
+/* start-stop button, stopped, active state, hovered */
+.anythingSlider-default1.activeSlider .start-stop:hover,
+.anythingSlider-default1.activeSlider .start-stop.hover {
+	background-color: #44bbcc;
+}
+/* start-stop button, playing, active state */
+.anythingSlider-default1.activeSlider .start-stop.playing:link {
+	background-color: #d00;
+}
+/* start-stop button, playing, active state, hovered */
+.anythingSlider-default1.activeSlider .start-stop.playing:hover,
+.anythingSlider-default1.activeSlider .start-stop.playing.hover {
+	background-color: #a00;
+}
+
+/*****************
+ DEFAULT STATE (no keyboard focus)
+ *****************/
+
+/* Slider window - top & bottom borders, default state */
+.anythingSlider-default1 .anythingWindow {
+	border-top: 3px solid #777;
+	border-bottom: 3px solid #777;
+	overflow: hidden;
+	position: relative;
+	width: 100%;
+	height: 100%;
+}
+/* Text arrows */
+.anythingSlider-default1 .arrow a:link {
+	color: #777;
+}
+.anythingSlider-default1 .arrow a:hover {
+	color: #999;
+}
+/* Disabled arrows - infiniteSlide = false & stopAtEnd = true */
+.anythingSlider-default1 .back.disabled,
+.anythingSlider-default1 .forward.disabled {
+	display: none;
+}
+/* Navigation tabs */
+.anythingSlider-default1 .anythingControls ul a.cur,
+.anythingSlider-default1 .anythingControls ul a {
+	background: #777;
+	color: #ddd;
+}
+.anythingSlider-default1 .anythingControls ul a.cur:hover,
+.anythingSlider-default1 .anythingControls ul a.hover,
+.anythingSlider-default1 .anythingControls ul a:hover {
+	background: #999;
+}
+/* Start/stop button - stopped */
+.anythingSlider-default1 .start-stop {
+	background-color: #779;
+	color: #ddd;
+	font: 10px/14px Georgia, Serif;
+	width: 40px;
+	text-align: center;
+	text-decoration: none;
+	float: right;
+	z-index: 100;
+	outline: 0;
+	padding: 2px 5px;
+}
+/* Start/stop button - stopped */
+.anythingSlider-default1 .start-stop:hover,
+.anythingSlider-default1 .start-stop.hover {
+	background-color: #88a;
+}
+/* start/stop button - playing */
+.anythingSlider-default1 .start-stop.playing {
+	background-color: #300;
+}
+.anythingSlider-default1 .start-stop.playing:hover,
+.anythingSlider-default1 .start-stop.playing.hover {
+	background-color: #700;
+}
+
+/***********************
+  COMMON SLIDER STYLING
+ ***********************/
+/* Overall Wrapper */
+.anythingSlider-default1 {
+	display: block;
+	position: relative;
+	margin: 0 auto;
+	padding: 0; /* adjust left/right padding here to move arrows towards or away from the center */
+}
+
+/* all panels inside the slider; horizontal mode */
+.anythingSlider .panel {
+	background: transparent;
+	display: block;
+	overflow: hidden;
+	float: left;
+	padding: 0;
+	margin: 0;
+}
+/* vertical mode */
+.anythingSlider .vertical .panel {
+	float: none;
+}
+
+/* fade mode */
+.anythingSlider .fade .panel {
+	float: none;
+	position: absolute;
+	top: 0;
+	left: 0;
+	z-index: -1;
+}
+/* fade mode active page - visible & on top */
+.anythingSlider .fade .activePage {
+	z-index: 0;
+}
+
+/* Arrow buttons position */
+.anythingSlider-default1 .arrow {
+	top: 50%;
+	position: absolute;
+	display: block;
+}
+.anythingSlider-default1 span.back {
+	left: 0;
+}
+.anythingSlider-default1 span.forward {
+	right: 0;
+}
+/* Arrow buttons dimensions */
+.anythingSlider-default1 .arrow a {
+	display: block;
+	height: 48px;
+	width: 35px;
+	text-align: center;
+	text-decoration: none;
+	outline: 0;
+	margin: -26px 0 0; /* set to 1/2 height */
+}
+/* Arrow buttons text */
+.anythingSlider-default1 .arrow a span {
+	display: block;
+	font-size: 40px;
+}
+
+/* Slider control block */
+.anythingSlider-default1 .anythingControls {
+	outline: 0;
+	float: right;
+	position: absolute;
+	bottom: 3px;
+	right: 25px;
+	z-index: 100;
+	opacity: 0.90;
+	filter: alpha(opacity=90);
+}
+/* control list */
+.anythingSlider-default1 .anythingControls ul {
+	float: left;
+	margin: 0;
+	padding: 0;
+}
+/* control tabs */
+.anythingSlider-default1 .anythingControls ul li {
+	display: block;
+	float: left;
+}
+/* control links */
+.anythingSlider-default1 .anythingControls ul a {
+	font: 10px/14px Georgia, Serif;
+	display: block;
+	height: 14px;
+	text-align: center;
+	text-decoration: none;
+	outline: 0;
+	margin: 0 5px 0 0;
+	padding: 2px 8px;
+}
+/* control nav window (navigationSize = true) */
+.anythingSlider-default1 .anythingControls .anythingNavWindow {
+	overflow: hidden;
+	float: left;
+}
+
+/* Navigation size window arrows */
+.anythingSlider-default1 .anythingControls li.next a span, .anythingSlider-default1 .anythingControls li.prev a span {
+	text-indent: 1px;
+	margin-top: 3px;
+}
+.anythingSlider-default1 .anythingControls li.prev a, .anythingSlider-default1 .anythingControls li.next a {
+	color: #ddd;
+}
+.anythingSlider-default1 .anythingControls li.next a:hover, .anythingSlider-default1 .anythingControls li.prev a:hover {
+	color: #000;
+}
+/* AnythingSlider IE7 and older styling */
+.as-oldie div.anythingSlider .arrow {
+	margin: 0;
+}
+/* When using the navigationSize option, the side margins need to be zero
+   None of the navigation panels look good in IE7 now =( */
+.as-oldie div.anythingSlider .anythingControls {
+	margin: 0 0 0 30px;
+}
+}.as-oldie div.anythingSlider .anythingControls ul.thumbNav a {
+	margin: 0 0 0 2px;
+}
+.as-oldie div.anythingSlider .anythingControls .anythingNavWindow li {
+	padding: 3px 0 0 0;
+}
+.as-oldie div.anythingSlider .anythingControls {
+	display: block;
+	width: 95%; /* arbitrary percentage, adjust to fit your slider in IE7 */
+	margin: 0;
+}

@@ -1,0 +1,30 @@
+Tiki_org_family_headers_fix_CSS
+
+.keep_this_line_here_for_now_to_prevent_the_page_title_to_be_interpreted_as_a_CSS_selector_till_fixed,
+
+
+/*****
+* TO REQUEST THIS CODE AS CSS FILE TYPE USE: tiki-index_raw.php?page=Tiki_org_family_headers_fix_CSS&clean&textonly&download&css
+* Example: <link rel="stylesheet" href="https://themes.tiki.org/tiki-index_raw.php?page=Tiki_org_family_headers_fix_CSS&clean&textonly&download&css" type="text/css"> or @import url("https://themes.tiki.org/tiki-index_raw.php?page=Tiki_org_family_headers_fix_CSS&clean&textonly&download&css");
+*****/
+
+/* START of Move this into the fivealive-lite theme CSS (the rules with "auto" values can be actually deleted from the less -- luci) */
+
+body.tiki.navbar-padding, .layout_fixed_top_modules, .layout_social_modules {
+  padding-top: 39px; /* before was 48px - needed change in the hide top nav on scroll module too */
+}
+.layout_fixed_top_modules .top_modules, .navbar-fixed-top {
+  height: 39px;
+}
+.navbar-fixed-top .btn, .layout_social .topbar_modules .btn, .layout_social_modules .topbar_modules .btn, .layout_fixed_top_modules #top_modules .btn, .navbar-fixed-top .btn-link, .layout_social .topbar_modules .btn-link, .layout_social_modules .topbar_modules .btn-link, .layout_fixed_top_modules #top_modules .btn-link {
+  margin-top: auto;
+}
+ .layout_fixed_top_modules .top_modules { min-width: 50%; }  /* create enough width for module contents */
+
+/* END of Move this into the fivealive-lite theme CSS */
+
+	
+
+[hidden] {
+    display: block !important; 
+}

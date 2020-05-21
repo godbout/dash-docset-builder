@@ -1,1020 +1,0 @@
-<!DOCTYPE html>
-<html lang="en" id="page_4867">
-<head>
-	
-<!--Latest IE Compatibility-->
-<meta http-equiv="X-UA-Compatible" content="IE=Edge">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-<meta name="generator" content="Tiki Wiki CMS Groupware - https://tiki.org">
-
-<meta content="http://doc.tiki.org/" name="twitter:domain"> 
-
-
-			<link rel="canonical" href="PluginList-filter-control-block.html">
-		<meta content="http://doc.tiki.org/PluginList-filter-control-block" property="og:url">
-	
-	<meta name="keywords" content="documentation, tiki, tikiwiki, document, help, install, wiki syntax  ">
-	<meta name="author" content="Tiki Community">
-
-		<meta name="description" content="Tiki Wiki CMS Groupware Official Documentation" property="og:description">
-	<meta name="twitter:description" content="Tiki Wiki CMS Groupware Official Documentation">
-	<meta name="revisit-after" content="15 days">
-
-<meta content="Documentation for Tiki Wiki CMS Groupware" property="og:site_name">
-<meta content="Documentation for Tiki Wiki CMS Groupware" name="twitter:site">
-
-
-
-<title>PluginList filter control block | Documentation for Tiki Wiki CMS Groupware</title>
-
-
-<meta property="og:title" content="PluginList filter control block | Documentation for Tiki Wiki CMS Groupware">
-
-<meta name="twitter:title" content="PluginList filter control block | Documentation for Tiki Wiki CMS Groupware">
-
-			<meta content="website" property="og:type">
-	
-
-<meta name="twitter:card" content="summary">
-
-						
-
-	<link rel="alternate" type="application/rss+xml" title="Tiki RSS feed for the wiki pages" href="http://doc.tiki.org/tiki-wiki_rss.php?ver=2">
-	<link rel="alternate" type="application/rss+xml" title="Tiki RSS feed for articles" href="http://doc.tiki.org/tiki-articles_rss.php?ver=2">
-	<link rel="alternate" type="application/rss+xml" title="Tiki RSS feed for image galleries" href="http://doc.tiki.org/tiki-image_galleries_rss.php?ver=2">
-	<link rel="alternate" type="application/rss+xml" title="Tiki RSS feed for file galleries" href="http://doc.tiki.org/tiki-file_galleries_rss.php?ver=2">
-	<!--[if lt IE 9]>
-	<script src="vendor_bundled/vendor/afarkas/html5shiv/dist/html5shiv.min.js" type="text/javascript"></script>
-<![endif]-->
-		
-<meta name="msapplication-config" content="themes/base_files/favicons/browserconfig.xml">
-
-<link rel="icon" href="http://doc.tiki.org/themes/base_files/favicons/favicon-16x16.png" sizes="16x16" type="image/png">
-<link rel="apple-touch-icon" href="http://doc.tiki.org/themes/base_files/favicons/apple-touch-icon.png" sizes="180x180">
-<link rel="icon" href="http://doc.tiki.org/themes/base_files/favicons/favicon-32x32.png" sizes="32x32" type="image/png">
-<link rel="manifest" href="http://doc.tiki.org/themes/base_files/favicons/site.webmanifest">
-<link rel="shortcut icon" href="favicon.ico">
-<link rel="mask-icon" href="http://doc.tiki.org/themes/base_files/favicons/safari-pinned-tab.svg" color="#5bbad5">
-<link rel="stylesheet" href="codemirror_modes.css" type="text/css">
-<link rel="stylesheet" href="tiki_base.css" type="text/css">
-<link rel="stylesheet" href="all.css" type="text/css">
-<link rel="stylesheet" href="fivealive-lite.css" type="text/css">
-<link rel="stylesheet" href="kiwi.css" type="text/css">
-<link rel="stylesheet" href="elfinder.full.css" type="text/css">
-<link rel="stylesheet" href="style.css" type="text/css">
-<link rel="stylesheet" href="codemirror.css" type="text/css">
-<link rel="stylesheet" href="codemirror_tiki.css" type="text/css">
-<link rel="stylesheet" href="jquery-ui.css" type="text/css">
-<link rel="stylesheet" href="jquery-ui-timepicker-addon.css" type="text/css">
-<link rel="stylesheet" href="colorbox.css" type="text/css">
-<link rel="stylesheet" href="jquery.treetable.css" type="text/css">
-<link rel="stylesheet" href="svg-edit-draw.css" type="text/css">
-<style type="text/css"><!--
-/* css 0 */
-@media (min-width: 1200px) { .container { max-width:1240px; } }
-
-.img_zoom {
-	display:inline-block;
-}
-.img_zoom:after {
-	content:"";
-	display:block;
-	width:33px;
-	height:33px;
-	position:absolute;
-	top:0;
-	right:0;
-	background:url(icon.png);
-}
-.img_zoom img {
-	display:block;
-}
-
-.ui-autocomplete-loading { background: white url("spinner.gif") right center no-repeat; }
-div#outerToc {
-	top: 31px;
-}
-.sitelogo {
-	line-height: 46px; /* same as .sitetitle */
-}
-.navbar-fixed-top .sitelogo a img, .layout_fixed_top_modules #top_modules .sitelogo a img {
-	margin-right: 0;
-	margin-top: 0;
-}
-
-@media (max-width:991px) {
-  .navbar-brand {
-    font-size: 12px; 
-    width: 65%;
-    overflow-x: hidden;
-    white-space: nowrap;
-    text-overflow: "&hellip;"; }
-  }
-
-.ui-autocomplete-loading { background: white url("spinner.gif") right center no-repeat; }
-
-.wikitext .card {
-    margin-bottom: 1rem;
-}
-
-#module_75 .card-body,
-#module_25 .card-body { /* keywords module for Tiki 13 (jb) */
-    height: 20em;
-    overflow-y: scroll;
-    overflow-x: hidden;
-}
-
-#module_75 .card-body .nav > li > a { padding: 0 15px; }
-
-/* Display first paragraph of wiki pages as a leading text */
-#page-data > p:first-of-type, .wikipreview .wikitext > p:first-of-type {
-    font-size: 120%;
-    padding: 2rem;
-    background: #f0f0f0;
-    border-radius: .5rem;
-    box-shadow: rgba(50, 50, 50, .15) 0 3rem 3rem -2rem inset, rgba(50, 50, 50, 0.1) 0 -1rem 2rem -1rem inset;
-}
-#page-data > p:first-of-type > br:first-of-type, .wikipreview .wikitext > p:first-of-type > br:first-of-type {
-    display: none;
-}
-
-#page-data a {
-	font-weight: bold;
-}
-
-@-ms-viewport{
-	width: auto!important;
-}
-
-/* Reduce page-top vertical whitespace */
-#alternate_register_link_because_InterTiki > br,
-#doc-dev-crosslinks > br { display: none; }
-
-/* Responsive Youtube videos - video wrapper class */
-.video-wrapper {
-     position: relative;
-     padding-bottom: 56.25%;
-     padding-top: 10px;
-     overflow: hidden;
- }
- .video-wrapper iframe {
-     position: absolute;
-     width: 100%;
-     height: 100%;
-     top: 0;
-     left: 0;
- }
-
-/* End Responsive Youtube videos - video wrapper class */
-
-/* test to make dropdowns visible in mobile views */
-.tiki .navbar-collapse.in { overflow-y: visible; }
-
-/* Fix bad contrast- check and fix in stylesheet - GC-L 8/18 */
-.tiki-edit_structure .structure-container .ui-state-default { background: inherit; }
-
-footer.help-block {  border-top: 1px solid #737373; padding: .7em 0; margin-bottom: 1.2em; }
-
-/* Added for Tiki 19 - will move to stylesheet if it's a general fix/improvement. */
-#bottom_modules .row { width: 100%; max-width: 100%; }
-#bottom_modules .icon-link-external { display: none; } 
-#bottom_modules h4 { font-size: 1.2rem; }
-#bottom_modules ul { list-style: none; padding-left: 0; }
-
-textarea, .CodeMirror {
-    font-family: monospace !important;
-}
-
-/* Added by Bsfez for the Video Tutorials pages */
-
-.row .videoTutorials {
-  margin-bottom: 1em;
-  border-bottom: 1px solid #ccc
-}
-
-.videoTitle h5 a.heading-link {display:none}
-/*
-.videoLevel-Beginner,
-.videoLevel-Intermediate,
-.videoLevel-PowerUser,
-.videoLevel-Developer,
-.videoRole,
-.videoTitle a.wiki.external,
-.videoTag {
-  font-size: small
-}*/
-
-.videoLevel-Beginner {color: #117485}
-.videoLevel-Intermediate {color: #a59705}
-.videoLevel-PowerUser {color: #a53723}
-.videoLevel-Developer {color: #a51e37}
-.videoRole {color: #888}
-
-.videoTitle h5 {margin-bottom:0.1em}
-.videoTitle p {margin-bottom:0.2em}
-
-.videoTitle a.wiki.external,
-.videoTitle a:hover.wiki.external {
-  word-break: normal;
-  letter-spacing: -0.05em;
-}
-
-.videoTitle a.wiki.external:before,
-.videoTitle a.wiki.external:after,
-.videoTitle a:hover.wiki.external:before,
-.videoTitle a:hover.wiki.external:after
-{display: none}
-
-.videoTitle a:hover.wiki.external {padding-left:0}
-
-.videoDescription {
-  overflow: hidden;
-  position: relative; 
-  line-height: 1.2em;
-  max-height: 6em; 
-  text-align: justify;
-}
-
-/* END - Added by Bsfez for the Video Tutorials pages */
-
-/* Added by Bsfez for the tooh joinus message */
-#mod-menutopbar1 > nav > div > ul > li:nth-child(8) > a {
-  font-weight: bold;
-  margin-left: 6em;
-  color: rgb(255, 248, 33);}
-/* END Added by Bsfez for the tooh joinus message */
-
-/* Make input labels inline on "Video-Tutorials" */
-.videoresourceTikiExperienceLevel input+br, .videoresourceTikiUserGroupRole input+br {display: none; }
-
-/* Limit height of video transcript */
-.transcript-container { max-height: 300px; overflow-y: auto; }
-
-/* temp fix - Gary */
-.tiki .col-lg-9 {
-    flex-basis: 75%;
-}
-
-/* was: liquid layout to display all of wide table */
-#page_5154 .field259 { width: 280px; } 
-/*#page_5154 .tiki .container {width: 100%; max-width: 100%; }
-#page_5154 .tiki #col1 .table-responsive {overflow: visible; width: inherit; border-right-color: transparent;}
-#page_5154 .tiki #col1 .table-responsive > .table { width: 1200px; }*/
-
-.modal-dialog {
-    width: 80%; /* responsive width */
-}
-
-@media (min-width: 1200px) { .container { width:1240px; max-width:1240px;} }
-.affix {top:44px;}
--->
-</style>
-	<style type="text/css">#sitelogo img {margin-top: 0; position: relative; top: -12px;}</style>
-
-<link rel="stylesheet" href="https://themes.tiki.org/tiki-index_raw.php?page=Tiki_org_family_customizations_CSS&amp;clean&amp;textonly&amp;download&amp;css" type="text/css">
-
-<link rel="stylesheet" href="https://themes.tiki.org/tiki-index_raw.php?page=Tiki_org_family_headers_fix_CSS&amp;clean&amp;textonly&amp;download&amp;css" type="text/css">
-
-<meta name="google-site-verification" content="OKHyWtoBAnRUctKvFQmKl2x1cAPGnHf8y_h8zUu-aeo">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	
-	<style type="text/css">
-	
-	/* Prevent target anchors from being covered by fixed top navbar */
-	h1:target:before,
-	h2:target:before,
-	h3:target:before,
-	h4:target:before,
-	h5:target:before,
-	h6:target:before {
-		content: "";
-		display: block;
-		height: 44px; /* fixed header height*/
-		margin: -44px 0 0; /* negative fixed header height */
-	}
-	</style></head>
-<body class="tiki tiki-index tiki_wiki_page fixed_width layout_social en hide_zone_left" style="padding-top: 0;">
-	
-
-	
-
-
-
-	
-
-			<div id="ajaxLoading">Loading...</div>
-<div id="ajaxLoadingBG"> </div>
-<div id="ajaxDebug"></div>
-		<div class="middle_outer" id="middle_outer">
-					<div class="fixed-topbar"></div>
-				<div class="container container-std middle" id="middle">
-						
-						
-
-			<div class="row row-middle" id="row-middle">
-															
-									<div class="d-flex flex-row flex-wrap w-100">
-					<div class="col col1 col-md-12 col-lg-9 order-md-1 order-lg-2 pb-4" id="col1">
-													
-												
-
-<div id="tikifeedback">
-	</div>
-
-						
-			
-<div class="wikitopline clearfix" style="clear: both;">
-	<div class="content">
-					<div class="wikiinfo float-left">
-				
-				
-				
-
-											</div>
-		 
-					<div class="wikiinfo float-left" id="pdfinfo" style="display:none">
-				<div class="alert alert-info" style="width:500px"><h4><span class="icon icon-information fas fa-info-circle fa-fw "></span> <span class="rboxtitle">Please wait</span></h4><div class="rboxcontent" style="display: inline"><span class="fas fa-circle-notch fa-spin" style="font-size:24px"></span> The PDF is being prepared, please wait...</div></div>
-			</div>
-			</div> 
-</div> 
-
-	
-	
-						
-												
-		
-	
-						
-						
-			
-	
-				
-	
-				
-	<article id="top" class="wikitext clearfix nopagetitle" style="padding-top: 44px;">
-					
-			
-							
-
-			
-												 
-
-		
-		<div id="page-data" class="clearfix">
-										<h1 class="showhide_heading" id="PluginList_filter_control_block"> PluginList filter control block<a href="PluginList-filter-control-block.html#PluginList_filter_control_block" class="heading-link"><span class="icon icon-link fas fa-link "></span></a></h1>
-<p>
-<br>A filter is used to define the search query that will be run to gather a set of results for the list. A large number of possible individual parameters can be 'filtered' as set out in the table below and multiple filter control blocks can be applied in an additive manner ie the equivalent of an AND operation. See also <a href="http://doc.tiki.org/PluginList-with-editable-filters" title="PluginList with editable filters" class="wiki wiki_page">PluginList with editable filters</a>
-</p>
-
-<h2 class="showhide_heading" id="Available_filters"><em><u>Available filters</u></em><a href="PluginList-filter-control-block.html#Available_filters" class="heading-link"><span class="icon icon-link fas fa-link "></span></a></h2>
-<div class="table-responsive"><div id="wpfancytable1-div" class="ts-wrapperdiv">	<table class="table table-striped table-hover normal" id="wpfancytable1">	<thead>		<tr>			<th><strong>Name</strong></th>			<th><strong>Description</strong></th>			<th><strong>Boolean</strong></th>			<th><strong>Sample</strong></th>			<th><strong>Tiki Version</strong></th>		</tr>	</thead>	<tbody>		<tr>			<td>categories</td>			<td>Match on the object's directly associated categories</td>			<td>yes</td>			<td>1 OR 3</td>			<td>7</td>		</tr>		<tr>			<td>content</td>			<td>Full text search on all of the object's content <br> Additional field argument can be provided to search for other fields instead of the default ones.</td>			<td>yes</td>			<td>hello world</td>			<td>7</td>		</tr>		<tr>			<td>contributors</td>			<td>user login to search for as the contributors for the content</td>			<td>yes</td>			<td>admin OR testuser</td>			<td>8</td>		</tr>		<tr>			<td>deepcategories</td>			<td>Match on the object's categories or their parents, providing deep searching</td>			<td>yes</td>			<td>1 OR 3</td>			<td>8</td>		</tr>		<tr>			<td>distance</td>			<td>filtering on object location by distance (Seems to work with Elasticsearch only - Tiki19.1)</td>			<td> no </td>			<td> <code>{filter distance="10km" lat="51.5287336" lon="-0.3824611"}</code> </td>			<td> 16.1</td>		</tr>		<tr>			<td>exact</td>			<td>Exact text search <br> Use with the field argument to search for an exact title or field value. Can be used to look for empty tracker field <code>{filter field="tracker_field_foobar_text" exact=""}</code></td>			<td>yes</td>			<td>hello world</td>			<td>13</td>		</tr>		<tr>			<td>favorite</td>			<td>Show only the favorited objects of a certain user.  The feature Wiki Argument Variables must be set at : Admin -&gt; Editing and Plugins -&gt; Wiki argument variables</td>			<td>no</td>			<td> {filter favorite="{{user}}"} </td>			<td>8</td>		</tr>		<tr>			<td>field </td>			<td> Basic filter by field contents <br> For the full list of fields see <a class="wiki" href="http://doc.tiki.org/Unified+Index#Fields" rel="">Unified+Index#Fields</a> </td>			<td>yes</td>			<td> <code>{filter field="title" content="foo"}</code>, <br>  <code>{filter field="tracker_id" content="42"}</code>, <br>  <code>{filter field="tracker_field_foobar" content="John Doe"}</code>, <br>  <code>{filter field="tracker_status" content="o OR p"} </code>, <br>  <code>{filter field="blog_excerpt" content="Some text"} </code>  </td>			<td> 7 <em>(and onwards with more fields arriving most releases)</em></td>		</tr>		<tr>			<td>language</td>			<td>Search on the object's language (2-letter code) when available. <em>unknown</em> is used when unspecified.</td>			<td>yes*</td>			<td>en or fr OR unknown</td>			<td>7</td>		</tr>		<tr>			<td>multivalue</td>			<td>needed when filtering on array type fields like users' groups</td>			<td>no</td>			<td>Customers OR Staff</td>			<td>?</td>		</tr>		<tr>			<td>personalize </td>			<td> to filter down to own contibutions without relying on argument variables </td>			<td> ? </td>			<td> ? </td>			<td> 12</td>		</tr>		<tr>			<td>range</td>			<td>A date (unix timestamp) range <br> Must have from and to arguments specified</td>			<td>no</td>			<td> <code></code> </td>			<td>8</td>		</tr>		<tr>			<td>range</td>			<td>In Tiki 9, from and to can now take <code>now</code> instead of a unix timestamp, and you can also set either from or to together with "gap" to specify the one relatively to the other</td>			<td>no</td>			<td> <code></code> </td>			<td>9</td>		</tr>		<tr>			<td>relation</td>			<td>Must have certain relation <br> Additional field arguments <code>objecttype</code> and <code>qualifier</code> (the relationship) must be specified</td>			<td>no </td>			<td> <code>ject_id &gt;</code> </td>			<td> 8</td>		</tr>		<tr>			<td>textrange</td>			<td>A text range <br> Must have from and to arguments specified</td>			<td>no</td>			<td> <code></code> </td>			<td>8</td>		</tr>		<tr>			<td>type</td>			<td>Filter on object type</td>			<td>no</td>			<td> <code>wiki page</code> (from Tiki 8 you can search for multiple types by providing a comma separated list)<br> <code>trackeritem</code> to search trackers</td>			<td>7/8%%% <br>11 or earlier</td>		</tr>	</tbody></table></div></div>
-<p>
-<br>* AND matching won't make much sense, single-value field
-</p>
-
-<h3 class="showhide_heading" id="Boolean_Syntax"> Boolean Syntax<a href="PluginList-filter-control-block.html#Boolean_Syntax" class="heading-link"><span class="icon icon-link fas fa-link "></span></a></h3>
-<p>When applying an individual filter more complex logic can also be applied using a Boolean syntax  - that applies to all aspects of <a href="http://dev.tiki.org/UnifiedSearch" class="wiki ext_page dev">Unified Search</a> - e.g. when filtering on content you could exclude all items not containing the word "water" by using:
-</p>
-<pre class="codelisting" data-theme="off" data-syntax="tiki" data-wrap="1" dir="ltr" style="white-space:pre-wrap; overflow-wrap: break-word; word-wrap: break-word;" id="codebox1">{filter content="NOT water"}</pre>
-<p>
-</p>
-<h3 class="showhide_heading" id="Empty_or_Non-empty"> Empty or Non-empty<a href="PluginList-filter-control-block.html#Empty_or_Non-empty" class="heading-link"><span class="icon icon-link fas fa-link "></span></a></h3>
-<p>To filter for a <strong>empty</strong> or <strong>non-empty</strong> fields, the syntax might depend on the <a href="http://doc.tiki.org/Unified-Index" title="Unified Index" class="wiki wiki_page">Unified Index</a> engine.
-</p>
-<ul><li> When using "MySQL Full Text Search" or "Elasticsearch" as the Unified Search Engine, you can use these syntaxes:
-<ul><li> to include all <strong>non-blanks non-NULL</strong> values:
-<br> <pre class="codelisting" data-theme="off" data-syntax="tiki" data-wrap="1" dir="ltr" style="white-space:pre-wrap; overflow-wrap: break-word; word-wrap: break-word;" id="codebox2">{filter content="NOT "}</pre>
-</li><li> to include all <strong>blanks</strong> OR <strong>NULL</strong> values:
-<br> <pre class="codelisting" data-theme="off" data-syntax="tiki" data-wrap="1" dir="ltr" style="white-space:pre-wrap; overflow-wrap: break-word; word-wrap: break-word;" id="codebox3">{filter exact=""}</pre>
-</li><li> Note: it's not possible at the moment to perform an OR or AND filter operation where one of the elements is blank and the other is not, e.g.: "  OR 1".
-</li></ul></li></ul><p>
-</p>
-
-<div id="rbox_1" class="alert alert-info alert-dismissable"><button type="button" class="close" data-dismiss="alert" aria-hidden="true">×</button><div class="alert-heading h4"><span class="icon icon-information fas fa-info-circle "></span> <span class="rboxtitle">Special case: 'Non-empty' for date fields using Elasticsearch</span></div><div class="rboxcontent" style="display: inline">In the specific case of filtering for 'Non-empty' date fields when using Elasticsearch, you need to convert your syntax to filter for a (wide enough) range of valid dates: this way you will match all items having some date and leave out the ones without dates set. Otherwise, Elasticsearch will fail and trigger some error (tested with Elasticsearch 1.x and 2.x). </div></div>
-
-
-<p>
-</p>
-<h2 class="showhide_heading" id="Peculiarities_for_Elasticsearch"> Peculiarities for Elasticsearch<a href="PluginList-filter-control-block.html#Peculiarities_for_Elasticsearch" class="heading-link"><span class="icon icon-link fas fa-link "></span></a></h2>
-<p>When using <a href="http://doc.tiki.org/Elasticsearch" title="Elasticsearch" class="wiki wiki_page">Elasticsearch</a> as the <a href="http://doc.tiki.org/Unified-Index" title="Unified Index" class="wiki wiki_page">Unified Search Index</a>, you need to be aware of a few peculiarities:
-</p>
-<ol><li> To filter by <strong>exact value</strong> use the tracker field perm name <strong>with the tracker_field_ prefix</strong>
-</li><li> To filter by <strong>exact EMPTY value</strong> (i.e. missing value), <strong>use the _text version of the permanent name</strong> for that field where available.
-<ul><li> Mysql index works with non _text version too but elastic does not. The reason is that Radio button, dropdown and a number of other fields use the normal permName field as identifier and add a _text version which is a plain text.
-</li><li> In Elasticsearch, this means that identifiers are exact-matches - they are not analyzed by search index and wildcard searches (like the empty one) does not work on them. Plain text, on the other hand, support wildcard searches, are anayzed and thus, work for exact="" search.
-</li></ul></li><li> When you use a field (let's say radio button, or dropdown, for instance) with a value "No", you will get some problems when search for that value in <a href="http://doc.tiki.org/Elasticsearch" title="Elasticsearch" class="wiki wiki_page">Elasticsearch</a> since "No" is a stopword in <a href="http://doc.tiki.org/Elasticsearch" title="Elasticsearch" class="wiki wiki_page">Elasticsearch</a>.
-<ul><li> This is defined in the "Control Panel &gt; Search" where you can exclude it to not be a stopword.
-</li><li> Being a stopword means that for analyzed string fields like <code>tracker_field_myPermanentName_text</code>, searching for stopword will result in nothing and searching for an empty value will show those fields containing a stopword. So, instead of seeing all empty ones, you will see all empty ones and all the ones that have a stopword in them - like all the "No" ones. This is undesired, so if you have such a field and need to filter on a stopword, please update the list of stopwords to exclude that specific value.
-</li></ul></li></ol><p>
-</p>
-<h2 class="showhide_heading" id="Examples"> Examples<a href="PluginList-filter-control-block.html#Examples" class="heading-link"><span class="icon icon-link fas fa-link "></span></a></h2>
-<h3 class="showhide_heading" id="Basic">1.1.1.  Basic<a href="PluginList-filter-control-block.html#Basic" class="heading-link"><span class="icon icon-link fas fa-link "></span></a></h3>
-<div class="codecaption">Basic usage</div><pre class="codelisting" data-theme="off" data-syntax="tiki" data-wrap="1" dir="ltr" style="white-space:pre-wrap; overflow-wrap: break-word; word-wrap: break-word;" id="codebox4">{LIST()}
-    {pagination max="10"}
-    {filter content="hello world"}
-    {filter categories="1 AND 2"}
-    {filter language="en or unknown"}
-    {filter type="wiki page"}
-    {filter range="modification_date" from="2014-01-01" to="last week"}
-{LIST}</pre>
-<p>
-<br>The date filters use <a class="wiki external" target="_blank" href="https://php.net/strtotime" rel="external">strtotime</a> to convert various common formats to Unix epoch.  Unlike what the documentation previously said, this has always been the case.
-</p>
-
-<h3 class="showhide_heading" id="Date_ranges">1.1.2.  Date ranges<a href="PluginList-filter-control-block.html#Date_ranges" class="heading-link"><span class="icon icon-link fas fa-link "></span></a></h3>
-<p>Parameters to, from and gap:
-</p>
-<ul><li> The idea is that you specify the value in <strong>to</strong> as the <strong>last day you want that filter to work on</strong>.
-<ul><li> For instance: 1 week ago or "-1 week" - both should work with php's strtotime() parsing.
-</li></ul></li><li> Then, the <strong>gap</strong> should cover the whole previous date range that you need. If you want, for instance, items older than 1 week, you can use a number there as big as you can, for instance <strong>40 years</strong>
-<br> (of course not going beyond 1970 as this is the start of the UNIX era and strtotime will return odd results).
-</li><li> And the idea of parameter <strong>from</strong> is that you specify the <strong>first day you want that filter to work on</strong>.
-</li></ul><p>
-</p>
-<div class="card bg-light"><div class="card-body">Note that the upper boundary of the range is not included in the search</div></div>
-<p>
-<br>In <a href="http://doc.tiki.org/Tiki15" title="Tiki15" class="wiki wiki_page">Tiki 15</a>, the date filters are based on seconds and the following are possible:
-</p>
-<div class="codecaption">Tiki 15+</div><pre class="codelisting" data-theme="off" data-syntax="tiki" data-wrap="1" dir="ltr" style="white-space:pre-wrap; overflow-wrap: break-word; word-wrap: break-word;" id="codebox5">{filter range="tracker_field_myDate" gap="86400" to="now"} {* Within the last day *}</pre>
-<p>
-<br>From <a href="http://doc.tiki.org/Tiki16" title="Tiki16" class="wiki wiki_page">Tiki 16</a>+, the date filter has been "humanised" and the following date filters are possible:
-</p>
-<div class="codecaption">Tiki 15+</div><pre class="codelisting" data-theme="off" data-syntax="tiki" data-wrap="1" dir="ltr" style="white-space:pre-wrap; overflow-wrap: break-word; word-wrap: break-word;" id="codebox6">{filter range="tracker_field_myDate" gap="1 day" to="now"} {* Within the last day *}
-	{filter range="tracker_field_myDate" gap="10 years" to="-1 week"} {* Older than one week *}
-    {filter range="tracker_field_myDate" gap="1 week" to_field="tracker_field_myDeadline"}  {* 1 week before the deadline *}
-    {filter range="modification_date" from="-10 years" gap="1 year"} {* Between 9 and 10 years ago *}
-    {filter range="modification_date" gap="1 year" to="10 years"} {* In between 9 and 10 years from now *}
-    {filter range="modification_date" from="-40 years" to="now"} {* Within the last 40 years; a.k.a, "in the past" *}
-    {filter range="modification_date" from="2014-01-01" to="last week"}</pre>
-<p>
-<br>You can also filter using human value like this month, next month, etc.
-</p>
-<div class="codecaption"></div><pre class="codelisting" data-theme="off" data-syntax="tiki" data-wrap="1" dir="ltr" style="white-space:pre-wrap; overflow-wrap: break-word; word-wrap: break-word;" id="codebox7">{filter range="creation_date" from="first day of midnight" to="first day of next month midnight"} =&gt; This month
-{filter range="creation_date" from="first day of previous month midnight" to="first day of midnight"} =&gt; Previous month</pre>
-<p>
-</p>
-<h4 class="showhide_heading" id="Unix_timestamps">1.1.2.1.  Unix timestamps<a href="PluginList-filter-control-block.html#Unix_timestamps" class="heading-link"><span class="icon icon-link fas fa-link "></span></a></h4>
-<p>Unix timestamps may also be used. In <a href="http://doc.tiki.org/Tiki19" title="Tiki19" class="wiki wiki_page">Tiki 9</a>+, the following date filters are possible:
-</p>
-<div class="codecaption">Tiki 9+</div><pre class="codelisting" data-theme="off" data-syntax="tiki" data-wrap="1" dir="ltr" style="white-space:pre-wrap; overflow-wrap: break-word; word-wrap: break-word;" id="codebox8">{filter range="modification_date" from="1317427200" to="now"}
-    {filter range="modification_date" gap="31536000" to="now"}
-    {filter range="modification_date" from="now" gap="31536000"}</pre>
-<p>
-</p>
-<h3 class="showhide_heading" id="Numeric_ranges">1.1.3.  Numeric ranges<a href="PluginList-filter-control-block.html#Numeric_ranges" class="heading-link"><span class="icon icon-link fas fa-link "></span></a></h3>
-<div class="card bg-light"><div class="card-body">Note that the upper boundary of the range is not included in the search</div></div>
-<p>When you use <strong><a href="http://doc.tiki.org/Elasticsearch" title="Elasticsearch" class="wiki wiki_page">Elasticsearch</a></strong> as the <a href="http://doc.tiki.org/Unified-Index" title="Unified Index" class="wiki wiki_page">unified search index</a>, you can reuse the same parameters to, from and gap that are shown above for <strong>Date ranges</strong>:
-</p>
-<div class="codecaption">Tiki 15</div><pre class="codelisting" data-theme="off" data-syntax="tiki" data-wrap="1" dir="ltr" style="white-space:pre-wrap; overflow-wrap: break-word; word-wrap: break-word;" id="codebox9">{filter range="tracker_field_myPermanentName" from="40" gap="100"}</pre>
-<p>
-<br>This will display items which have the field with <a href="http://doc.tiki.org/Permanent-Names" title="Permanent Names" class="wiki wiki_page">permanent name</a> "myPermanentName" with values starting at 40 and up to 100 numbers higher (from 40 to 140).
-</p>
-
-<h3 class="showhide_heading" id="Tracker_with_categories">1.1.4.  Tracker with categories<a href="PluginList-filter-control-block.html#Tracker_with_categories" class="heading-link"><span class="icon icon-link fas fa-link "></span></a></h3>
-<div class="codecaption">Filter in a specific tracker</div><pre class="codelisting" data-theme="off" data-syntax="tiki" data-wrap="1" dir="ltr" style="white-space:pre-wrap; overflow-wrap: break-word; word-wrap: break-word;" id="codebox10">{LIST()}
-    {list max="10"}
-    {filter content="hello world"}
-    {filter categories="1 AND 2"}
-    {filter content=5 field=tracker_id}
-{LIST}</pre>
-<p>
-</p>
-<h3 class="showhide_heading" id="Tracker_and_logged_user_items">1.1.5.  Tracker and logged user items<a href="PluginList-filter-control-block.html#Tracker_and_logged_user_items" class="heading-link"><span class="icon icon-link fas fa-link "></span></a></h3>
-<div class="codecaption">Filter in a specific tracker and the logged user item(s) - single user selection</div><pre class="codelisting" data-theme="off" data-syntax="tiki" data-wrap="1" dir="ltr" style="white-space:pre-wrap; overflow-wrap: break-word; word-wrap: break-word;" id="codebox11">{LIST()}
-{list max="1"}
-{filter content="2" field="tracker_id"}
-{filter field="tracker_field_username" content="{{user&amp;sect;45cbfe6386dd0044943d3742e9d22266&amp;sect;user&amp;sect;5a70ab49235070be56c3bc7593f5944b&amp;sect;user}}"}
-{LIST}</pre>
-<p>
-<br>
-</p>
-<h3 class="showhide_heading" id="Tracker_item_status">1.1.6.  Tracker item status<a href="PluginList-filter-control-block.html#Tracker_item_status" class="heading-link"><span class="icon icon-link fas fa-link "></span></a></h3>
-<div class="codecaption">Filter by tracker item status</div><pre class="codelisting" data-theme="off" data-syntax="tiki" data-wrap="1" dir="ltr" style="white-space:pre-wrap; overflow-wrap: break-word; word-wrap: break-word;" id="codebox12">{LIST()}
-  {filter content="2" field="tracker_id"}
-  {filter field="tracker_status" content="o OR p"}
-{LIST}</pre>
-<p>
-</p>
-<h3 class="showhide_heading" id="Tracker_items_with_empty_field">1.1.7.  Tracker items with empty field<a href="PluginList-filter-control-block.html#Tracker_items_with_empty_field" class="heading-link"><span class="icon icon-link fas fa-link "></span></a></h3>
-<div class="codecaption">Filter tracker items having an empty field (exact match)</div><pre class="codelisting" data-theme="off" data-syntax="tiki" data-wrap="1" dir="ltr" style="white-space:pre-wrap; overflow-wrap: break-word; word-wrap: break-word;" id="codebox13">{LIST()}
-  {filter content="2" field="tracker_id"}
-  {filter field="tracker_field_fieldPermanentName" exact=""}
-{LIST}</pre>
-<p>
-</p>
-<h3 class="showhide_heading" id="Wiki_pages_with_partial_match">1.1.8.  Wiki pages with partial match<a href="PluginList-filter-control-block.html#Wiki_pages_with_partial_match" class="heading-link"><span class="icon icon-link fas fa-link "></span></a></h3>
-<div class="codecaption">Filter wiki pages with a partial match with some text string such as 'foo'</div><pre class="codelisting" data-theme="off" data-syntax="tiki" data-wrap="1" dir="ltr" style="white-space:pre-wrap; overflow-wrap: break-word; word-wrap: break-word;" id="codebox14">{LIST()}
-  {filter type="wiki page"}
-  {filter field="title" content="foo"}
-{LIST}</pre>
-<p>
-</p>
-<h3 class="showhide_heading" id="Wiki_pages_with_partial_match_and_spaces_in_string">1.1.9.  Wiki pages with partial match and spaces in string<a href="PluginList-filter-control-block.html#Wiki_pages_with_partial_match_and_spaces_in_string" class="heading-link"><span class="icon icon-link fas fa-link "></span></a></h3>
-<div class="codecaption">Filter wiki pages with a partial match with some text string containing spaces such as 'foo bar'</div><pre class="codelisting" data-theme="off" data-syntax="tiki" data-wrap="1" dir="ltr" style="white-space:pre-wrap; overflow-wrap: break-word; word-wrap: break-word;" id="codebox15">{LIST()}
-  {filter type="wiki page"}
-  {filter field="title" content="\"foo bar\""}
-{LIST}</pre>
-<p>
-</p>
-<h3 class="showhide_heading" id="Wiki_pages_with_exact_match_and_spaces_in_string">1.1.10.  Wiki pages with exact match and spaces in string<a href="PluginList-filter-control-block.html#Wiki_pages_with_exact_match_and_spaces_in_string" class="heading-link"><span class="icon icon-link fas fa-link "></span></a></h3>
-<div class="codecaption">Filter wiki pages with an exact match with some text string containing spaces such as 'foo bar'</div><pre class="codelisting" data-theme="off" data-syntax="tiki" data-wrap="1" dir="ltr" style="white-space:pre-wrap; overflow-wrap: break-word; word-wrap: break-word;" id="codebox16">{LIST()}
-  {filter type="wiki page"}
-  {filter field="title" exact="foo bar"}
-{LIST}</pre>
-<p>
-</p>
-<h3 class="showhide_heading" id="Wiki_pages_with_boolean_partial_matches_and_spaces_in_strings">1.1.11.  Wiki pages with boolean partial matches and spaces in strings<a href="PluginList-filter-control-block.html#Wiki_pages_with_boolean_partial_matches_and_spaces_in_strings" class="heading-link"><span class="icon icon-link fas fa-link "></span></a></h3>
-<div class="codecaption">Filter on literal text with spaces in</div><pre class="codelisting" data-theme="off" data-syntax="tiki" data-wrap="1" dir="ltr" style="white-space:pre-wrap; overflow-wrap: break-word; word-wrap: break-word;" id="codebox17">{LIST()}
-    {filter content="\"hello world\" OR \"goodbye world\""}
-{LIST}</pre>
-<p>
-</p>
-<h3 class="showhide_heading" id="Users_in_specific_group_s_">1.1.12.  Users in specific group(s)<a href="PluginList-filter-control-block.html#Users_in_specific_group_s_" class="heading-link"><span class="icon icon-link fas fa-link "></span></a></h3>
-<div class="codecaption">Filter users in a specific group</div><pre class="codelisting" data-theme="off" data-syntax="tiki" data-wrap="1" dir="ltr" style="white-space:pre-wrap; overflow-wrap: break-word; word-wrap: break-word;" id="codebox18">{LIST()}
-  {filter field="object_type" content="user"}
-  {filter field="groups" multivalue="Customers OR Staff"}
-{LIST}</pre>
-<p>
-</p>
-<h3 class="showhide_heading" id="Related_items">1.1.13.  Related items<a href="PluginList-filter-control-block.html#Related_items" class="heading-link"><span class="icon icon-link fas fa-link "></span></a></h3>
-<p>In this example we want to find all objects related to <em>trackeritem</em> itemId 42 related using the qualifier <code>thing.related.content</code>. Note we need to add <em>.invert</em> to the end of it becasue they are all related via a Relations field on this tracker, so the relation from their point of view is "inverted"
-</p>
-<div class="codecaption">Related objects</div><pre class="codelisting" data-theme="off" data-syntax="tiki" data-wrap="1" dir="ltr" style="white-space:pre-wrap; overflow-wrap: break-word; word-wrap: break-word;" id="codebox19">{LIST()}
-  {filter relation="42" objecttype="trackeritem" qualifier="thing.related.content.invert"}
-{LIST}</pre>
-<p>
-</p>
-<div class="codecaption">Objects related to a wiki page</div><pre class="codelisting" data-theme="off" data-syntax="tiki" data-wrap="1" dir="ltr" style="white-space:pre-wrap; overflow-wrap: break-word; word-wrap: break-word;" id="codebox20">{LIST()}
-  {filter relation="page name" objecttype="wiki page" qualifier="thing.related.content"}
-{LIST}</pre>
-<h2 class="showhide_heading" id="All_the_LIST_Plugin_control_blocks"> All the LIST Plugin control blocks<a href="PluginList-filter-control-block.html#All_the_LIST_Plugin_control_blocks" class="heading-link"><span class="icon icon-link fas fa-link "></span></a></h2>
- <ul class="toc">
-<li class="toclevel"><div><a href="http://doc.tiki.org/PluginList-pagination-or-list-control-block" class="link" title="">PluginList pagination or list control block</a></div>	</li>
-<li class="toclevel"><div><a href="PluginList-filter-control-block.html" class="link" title="">PluginList filter control block</a></div>	</li>
-<li class="toclevel"><div><a href="PluginList-output-control-block.html" class="link" title="">PluginList output control block</a></div>	</li>
-<li class="toclevel"><div><a href="http://doc.tiki.org/PluginList-format-control-block" class="link" title="">PluginList format control block</a></div>	</li>
-<li class="toclevel"><div><a href="http://doc.tiki.org/PluginList-display-control-block" class="link" title="">PluginList display control block</a></div>	</li>
-<li class="toclevel"><div><a href="http://doc.tiki.org/PluginList-sort-control-block" class="link" title="">PluginList sort control block</a></div>	</li>
-<li class="toclevel"><div><a href="http://doc.tiki.org/PluginList-advanced-output-control-block" class="link" title="">PluginList advanced output control block</a></div>	</li>
-<li class="toclevel"><div><a href="http://doc.tiki.org/PluginList-aggregate-control-block" class="link" title="">PluginList aggregate control block</a></div>	</li>
-<li class="toclevel"><div><a href="http://doc.tiki.org/PluginList-overview-about-control-blocks-parameters-and-values" class="link" title="">PluginList overview about control blocks parameters and values</a></div>	</li>
-<li class="toclevel"><div><a href="http://doc.tiki.org/LIST---Troubleshooting-The-List-Plugin" class="link" title="">LIST - Troubleshooting The List Plugin</a></div>	</li>
-<li class="toclevel"><div><a href="http://doc.tiki.org/LIST---Graphical-User-Interface" class="link" title="">LIST - Graphical User Interface</a></div>	</li>
-<li class="toclevel"><div><a href="http://doc.tiki.org/LIST---Hacks-and-Fun" class="link" title="">LIST - Hacks and Fun</a></div>	</li>
-</ul>
-
-
- 
-<p>
-<br>
-<br>Alias names of this page:
-<br><a href="http://doc.tiki.org/listfilter" class="wiki wiki_page alias">listfilter</a> | <a href="http://doc.tiki.org/listfilters" class="wiki wiki_page alias">listfilters</a>  | <a href="http://doc.tiki.org/list-filter" class="wiki wiki_page alias">list filter</a>  | <a href="http://doc.tiki.org/list-filters" class="wiki wiki_page alias">list filters</a> | <a href="http://doc.tiki.org/listfilterrange" class="wiki wiki_page alias">listfilterrange</a> | <a href="http://doc.tiki.org/filterrange" class="wiki wiki_page alias">filterrange</a></p>
-
-					</div>
-
-		
-			</article> 
-
-	
-	<footer class="form-text">
-		
-					<div class="wiki-authors">
-<hr>
-	Created by <a title="User Information" href="http://doc.tiki.org/user10155" class="userlink ajaxtips" data-ajaxtips="tiki-user-info?username=eromneg">Geoff Brickell</a>.
-	Last Modification: Thursday 09 April, 2020 15:54:17 GMT-0000 by <a title="User:Marc Laporte" href="http://doc.tiki.org/user10" class="userlink tips geolocated" data-geo-lat="45.5223065" data-geo-lon="-73.5779607" data-geo-zoom="14">Marc Laporte</a>.
-	
-	</div>		
-		
-			</footer>
-
-		
-							
-		
-	
-			
-	
-	
-
-<a id="attachments"></a>
-
-	<div id="attzone" class="w-100" style="display:block;">
-
-	
-
-	
-	
-
-	</div>
-<div id="comment-container"></div>
-			
-													<div class="content clearfix modules mt-3" id="pagebottom_modules">
-	
-
-
-
-
-			<div id="module_91" style="" class="module box-related_video">
-				<div id="mod-related_videopagebottom1">
-										
-<div id="related_video" style="display:block;">
-</div>
-
-													
-					</div>
-</div>
-
-	
-
-
-
-			<div id="module_92" style="" class="module box-menupage">
-				<div id="mod-menupagepagebottom2">
-													
-
-		
-													
-					</div>
-</div>
-
-
-</div>
-											</div>
-					
-				</div>
-				
-			</div> 
-		</div> 
-	</div> 
-			
-
-		
-	
-	
-
-<div id="bootstrap-modal" class="modal fade footer-modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-	<div class="modal-dialog">
-		<div class="modal-content">
-			
-			<div class="modal-header">
-				<h4 class="modal-title" id="myModalLabel"></h4>
-			</div>
-		</div>
-	</div>
-</div>
-<div id="bootstrap-modal-2" class="modal fade footer-modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-	<div class="modal-dialog">
-		<div class="modal-content">
-		</div>
-	</div>
-</div>
-<div id="bootstrap-modal-3" class="modal fade footer-modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-	<div class="modal-dialog">
-		<div class="modal-content">
-		</div>
-	</div>
-</div>
-				
-	
-
-
-	<!-- Global site tag (gtag.js) - Google Analytics -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=UA-2110868-4"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'UA-2110868-4');
-</script>
-<!-- Put JS at the end -->
-	
-	
-<script type="text/javascript" src="jquery.js"></script>
-<script type="text/javascript" src="jquery-migrate.js"></script>
-<script type="text/javascript" src="codemirror.js"></script>
-<script type="text/javascript" src="jquery-ui.js"></script>
-<script type="text/javascript" src="codemirror_modes.js"></script>
-<script type="text/javascript" src="popper.js"></script>
-<script type="text/javascript" src="bootstrap.js"></script>
-<script type="text/javascript" src="tiki-bootstrapmodalfix.js"></script>
-<script type="text/javascript" src="iconsets.js"></script>
-<script type="text/javascript" src="tiki-js.js"></script>
-<script type="text/javascript" src="elfinder.full.js"></script>
-<script type="text/javascript" src="tiki-elfinder.js"></script>
-<script type="text/javascript" src="tiki-jquery.js"></script>
-<script type="text/javascript" src="tiki-maps.js"></script>
-<script type="text/javascript" src="jquery.json.js"></script>
-<script type="text/javascript" src="jquery.zoom.js"></script>
-<script type="text/javascript" src="searchcursor.js"></script>
-<script type="text/javascript" src="overlay.js"></script>
-<script type="text/javascript" src="codemirror_tiki.js"></script>
-<script type="text/javascript" src="jquery.infinitecarousel3.js"></script>
-<script type="text/javascript" src="tiki-confirm.js"></script>
-<script type="text/javascript" src="autosave.js"></script>
-<script type="text/javascript" src="chosen.jquery.min.js"></script>
-<script type="text/javascript" src="jquery-ui-timepicker-addon.js"></script>
-<script type="text/javascript" src="jquery.fitvids.js"></script>
-<script type="text/javascript" src="superfish.js"></script>
-<script type="text/javascript" src="supersubs.js"></script>
-<script type="text/javascript" src="hoverIntent.js"></script>
-<script type="text/javascript" src="reflection.js"></script>
-<script type="text/javascript" src="jquery.media.js"></script>
-<script type="text/javascript" src="jquery.tablesorter.combined.js"></script>
-<script type="text/javascript" src="parser-input-select.js"></script>
-<script type="text/javascript" src="widget-columnSelector.js"></script>
-<script type="text/javascript" src="widget-filter-formatter-jui.js"></script>
-<script type="text/javascript" src="widget-grouping.js"></script>
-<script type="text/javascript" src="widget-math.js"></script>
-<script type="text/javascript" src="widget-pager.js"></script>
-<script type="text/javascript" src="widget-sort2Hash.js"></script>
-<script type="text/javascript" src="tablesorter.js"></script>
-<script type="text/javascript" src="jquery.tagcanvas.js"></script>
-<script type="text/javascript" src="jquery.colorbox.js"></script>
-<script type="text/javascript" src="swfobject.js"></script>
-<script type="text/javascript" src="jquery.timeago.js"></script>
-<script type="text/javascript" src="jquery.timeago.en.js"></script>
-<script type="text/javascript" src="jquery.doubleScroll.js"></script>
-<script type="text/javascript" src="jquery.validate.js"></script>
-<script type="text/javascript" src="validator_tiki.js"></script>
-<script type="text/javascript" src="jquery.async.js"></script>
-<script type="text/javascript" src="jquery.treetable.js"></script>
-<script type="text/javascript" src="bootstrap-hover-dropdown.js"></script>
-<script type="text/javascript" src="files.js"></script>
-<script type="text/javascript" src="tiki-trackers.js"></script>
-<script type="text/javascript" src="embedapi.js"></script>
-<script type="text/javascript" src="draw.js"></script>
-<script type="text/javascript" src="inline_edit.js"></script>
-<script type="text/javascript" src="tiki-tasks.js"></script>
-<script type="text/javascript" src="pluginedit.js"></script>
-<script type="text/javascript" src="pdf.js"></script>
-<script type="text/javascript" src="html2canvas.min.js"></script>
-<script type="text/javascript" src="jspdf.min.js"></script>
-<script type="text/javascript" src="fullcalendar_to_pdf.js"></script>
-<script type="text/javascript" src="language.js"></script>
-<script type="text/javascript" src="captchalib.js"></script>
-
-	
-<script type="text/javascript">
-<!--//--><![CDATA[//><!--
-// js 0 
-tiki_cookie_jar=new Object();
-setCookieBrowser('javascript_enabled', '1621431478000', '', new Date(1621431478000));
-$.lang = 'en';
-
-// JS Object to hold prefs for jq
-var jqueryTiki = {"ui":true,"ui_theme":"flick","tooltips":true,"autocomplete":true,"superfish":true,"reflection":true,"tablesorter":true,"colorbox":true,"cboxCurrent":"{current} / {total}","sheet":true,"carousel":true,"validate":true,"zoom":true,"effect":"","effect_direction":"vertical","effect_speed":"400","effect_tabs":"none","effect_tabs_direction":"vertical","effect_tabs_speed":"fast","home_file_gallery":"5","autosave":true,"sefurl":true,"ajax":true,"syntaxHighlighter":true,"chosen":true,"chosen_sortable":false,"mapTileSets":["openstreetmap"],"infoboxTypes":["trackeritem","activity"],"googleStreetView":false,"googleStreetViewOverlay":false,"googleMapsAPIKey":"ABQIAAAAQNyVqGjgbUkeBZjVGN43nBQm7qDLuUr6PD9lu03O3Na4Jgp-xBTEdlCs9LWoI9vHWo2xg50eOgmWKw","structurePageRepeat":false,"mobile":false,"no_cookie":false,"language":"en","useInlineComment":false,"useInlineAnnotations":false,"helpurl":"http://doc.tiki.org/","shortDateFormat":"yy-mm-dd","shortTimeFormat":"HH:mm","username":null,"userRealName":null,"userAvatar":"http://doc.tiki.org/img/noavatar.png?v=1581008146","autoToc_inline":false,"autoToc_pos":"right","autoToc_offset":"44","bingMapsAPIKey":"","nextzenAPIKey":"","numericFieldScroll":"none","securityTimeout":"1440","current_object":{"type":"wiki page","object":"PluginList filter control block"},"firstDayofWeek":0}
-
-jqueryTiki.iconset = {"defaults":["500px","accessible-icon","accusoft","ad","address-book","address-card","adjust","adn","adversal","affiliatetheme","air-freshener","algolia","align-center","align-justify","align-left","align-right","alipay","allergies","amazon","amazon-pay","ambulance","american-sign-language-interpreting","amilia","anchor","android","angellist","angle-double-down","angle-double-left","angle-double-right","angle-double-up","angle-down","angle-left","angle-right","angle-up","angry","angrycreative","angular","ankh","app-store","app-store-ios","apper","apple","apple-alt","apple-pay","archive","archway","arrow-alt-circle-down","arrow-alt-circle-left","arrow-alt-circle-right","arrow-alt-circle-up","arrow-circle-down","arrow-circle-left","arrow-circle-right","arrow-circle-up","arrow-down","arrow-left","arrow-right","arrow-up","arrows-alt","arrows-alt-h","arrows-alt-v","assistive-listening-systems","asterisk","asymmetrik","at","atlas","atom","audible","audio-description","autoprefixer","avianex","aviato","award","aws","backspace","backward","balance-scale","ban","band-aid","bandcamp","barcode","bars","baseball-ball","basketball-ball","bath","battery-empty","battery-full","battery-half","battery-quarter","battery-three-quarters","bed","beer","behance","behance-square","bell","bell-slash","bezier-curve","bible","bicycle","bimobject","binoculars","birthday-cake","bitbucket","bitcoin","bity","black-tie","blackberry","blender","blind","blogger","blogger-b","bluetooth","bluetooth-b","bold","bolt","bomb","bone","bong","book","book-open","book-reader","bookmark","bowling-ball","box","box-open","boxes","braille","brain","briefcase","briefcase-medical","broadcast-tower","broom","brush","btc","bug","building","bullhorn","bullseye","burn","buromobelexperte","bus","bus-alt","business-time","buysellads","calculator","calendar","calendar-alt","calendar-check","calendar-minus","calendar-plus","calendar-times","camera","camera-retro","cannabis","capsules","car","car-alt","car-battery","car-crash","car-side","caret-down","caret-left","caret-right","caret-square-down","caret-square-left","caret-square-right","caret-square-up","caret-up","cart-arrow-down","cart-plus","cc-amazon-pay","cc-amex","cc-apple-pay","cc-diners-club","cc-discover","cc-jcb","cc-mastercard","cc-paypal","cc-stripe","cc-visa","centercode","certificate","chalkboard","chalkboard-teacher","charging-station","chart-area","chart-bar","chart-line","chart-pie","check","check-circle","check-double","check-square","chess","chess-bishop","chess-board","chess-king","chess-knight","chess-pawn","chess-queen","chess-rook","chevron-circle-down","chevron-circle-left","chevron-circle-right","chevron-circle-up","chevron-down","chevron-left","chevron-right","chevron-up","child","chrome","church","circle","circle-notch","city","clipboard","clipboard-check","clipboard-list","clock","clone","closed-captioning","cloud","cloud-download-alt","cloud-upload-alt","cloudscale","cloudsmith","cloudversify","cocktail","code","code-branch","codepen","codiepie","coffee","cog","cogs","coins","columns","comment","comment-alt","comment-dollar","comment-dots","comment-slash","comments","comments-dollar","compact-disc","compass","compress","concierge-bell","connectdevelop","contao","cookie","cookie-bite","copy","copyright","couch","cpanel","creative-commons","creative-commons-by","creative-commons-nc","creative-commons-nc-eu","creative-commons-nc-jp","creative-commons-nd","creative-commons-pd","creative-commons-pd-alt","creative-commons-remix","creative-commons-sa","creative-commons-sampling","creative-commons-sampling-plus","creative-commons-share","credit-card","crop","crop-alt","cross","crosshairs","crow","crown","css3","css3-alt","cube","cubes","cut","cuttlefish","d-and-d","dashcube","database","deaf","delicious","deploydog","deskpro","desktop","deviantart","dharmachakra","diagnoses","dice","dice-five","dice-four","dice-one","dice-six","dice-three","dice-two","digg","digital-ocean","digital-tachograph","directions","discord","discourse","divide","dizzy","dna","dochub","docker","dollar-sign","dolly","dolly-flatbed","donate","door-closed","door-open","dot-circle","dove","download","draft2digital","drafting-compass","draw-polygon","dribbble","dribbble-square","dropbox","drum","drum-steelpan","drupal","dumbbell","dyalog","earlybirds","ebay","edge","edit","eject","elementor","ellipsis-h","ellipsis-v","ello","ember","empire","envelope","envelope-open","envelope-open-text","envelope-square","envira","equals","eraser","erlang","ethereum","etsy","euro-sign","exchange-alt","exclamation","exclamation-circle","exclamation-triangle","expand","expand-arrows-alt","expeditedssl","external-link-alt","external-link-square-alt","eye","eye-dropper","eye-slash","facebook","facebook-f","facebook-messenger","facebook-square","fast-backward","fast-forward","fax","feather","feather-alt","female","fighter-jet","file","file-alt","file-archive","file-audio","file-code","file-contract","file-download","file-excel","file-export","file-image","file-import","file-invoice","file-invoice-dollar","file-medical","file-medical-alt","file-pdf","file-powerpoint","file-prescription","file-signature","file-upload","file-video","file-word","fill","fill-drip","film","filter","fingerprint","fire","fire-extinguisher","firefox","first-aid","first-order","first-order-alt","firstdraft","fish","flag","flag-checkered","flask","flickr","flipboard","flushed","fly","folder","folder-minus","folder-open","folder-plus","font","font-awesome","font-awesome-alt","font-awesome-flag","fonticons","fonticons-fi","football-ball","fort-awesome","fort-awesome-alt","forumbee","forward","foursquare","free-code-camp","freebsd","frog","frown","frown-open","fulcrum","funnel-dollar","futbol","galactic-republic","galactic-senate","gamepad","gas-pump","gavel","gem","genderless","get-pocket","gg","gg-circle","ghost","gift","gifts","git","git-square","github","github-alt","github-square","gitkraken","gitlab","gitter","glass-cheers","glass-martini","glass-martini-alt","glass-whiskey","glasses","glide","glide-g","globe","globe-africa","globe-americas","globe-asia","globe-europe","gofore","golf-ball","goodreads","goodreads-g","google","google-drive","google-play","google-plus","google-plus-g","google-plus-square","google-wallet","gopuram","graduation-cap","gratipay","grav","greater-than","greater-than-equal","grimace","grin","grin-alt","grin-beam","grin-beam-sweat","grin-hearts","grin-squint","grin-squint-tears","grin-stars","grin-tears","grin-tongue","grin-tongue-squint","grin-tongue-wink","grin-wink","grip-horizontal","grip-lines","grip-lines-vertical","grip-vertical","gripfire","grunt","guitar","gulp","h-square","hacker-news","hacker-news-square","hackerrank","hammer","hamsa","hand-holding","hand-holding-heart","hand-holding-usd","hand-lizard","hand-paper","hand-peace","hand-point-down","hand-point-left","hand-point-right","hand-point-up","hand-pointer","hand-rock","hand-scissors","hand-spock","hands","hands-helping","handshake","hanukiah","hashtag","hat-wizard","haykal","hdd","heading","headphones","headphones-alt","headset","heart","heart-broken","heartbeat","helicopter","highlighter","hiking","hippo","hips","hire-a-helper","history","hockey-puck","holly-berry","home","hooli","hornbill","horse","horse-head","hospital","hospital-alt","hospital-symbol","hot-tub","hotel","hotjar","hourglass","hourglass-end","hourglass-half","hourglass-start","house-damage","houzz","hryvnia","html5","hubspot","i-cursor","id-badge","id-card","id-card-alt","image","images","imdb","inbox","indent","industry","infinity","info","info-circle","instagram","internet-explorer","ioxhost","italic","itunes","itunes-note","java","jedi","jedi-order","jenkins","joget","joint","joomla","journal-whills","js","js-square","jsfiddle","kaaba","kaggle","key","keybase","keyboard","keycdn","khanda","kickstarter","kickstarter-k","kiss","kiss-beam","kiss-wink-heart","kiwi-bird","korvue","landmark","language","laptop","laptop-code","laravel","lastfm","lastfm-square","laugh","laugh-beam","laugh-squint","laugh-wink","layer-group","leaf","leanpub","lemon","less","less-than","less-than-equal","level-down-alt","level-up-alt","life-ring","lightbulb","line","link","linkedin","linkedin-in","linode","linux","lira-sign","list","list-alt","list-ol","list-ul","location-arrow","lock","lock-open","long-arrow-alt-down","long-arrow-alt-left","long-arrow-alt-right","long-arrow-alt-up","low-vision","luggage-cart","lyft","magento","magic","magnet","mail-bulk","mailchimp","male","mandalorian","map","map-marked","map-marked-alt","map-marker","map-marker-alt","map-pin","map-signs","markdown","marker","mars","mars-double","mars-stroke","mars-stroke-h","mars-stroke-v","mastodon","maxcdn","medal","medapps","medium","medium-m","medkit","medrt","meetup","megaport","meh","meh-blank","meh-rolling-eyes","memory","menorah","mercury","microchip","microphone","microphone-alt","microphone-alt-slash","microphone-slash","microscope","microsoft","minus","minus-circle","minus-square","mix","mixcloud","mizuni","mobile","mobile-alt","modx","monero","money-bill","money-bill-alt","money-bill-wave","money-bill-wave-alt","money-check","money-check-alt","monument","moon","mortar-pestle","mosque","motorcycle","mouse-pointer","music","napster","neos","neuter","newspaper","nimblr","nintendo-switch","node","node-js","not-equal","notes-medical","npm","ns8","nutritionix","object-group","object-ungroup","odnoklassniki","odnoklassniki-square","oil-can","old-republic","om","opencart","openid","opera","optin-monster","osi","outdent","page4","pagelines","paint-brush","paint-roller","palette","palfed","pallet","paper-plane","paperclip","parachute-box","paragraph","parking","passport","pastafarianism","paste","patreon","pause","pause-circle","paw","paypal","peace","pen","pen-alt","pen-fancy","pen-nib","pen-square","pencil-alt","pencil-ruler","people-carry","percent","percentage","periscope","phabricator","phoenix-framework","phoenix-squadron","phone","phone-slash","phone-square","phone-volume","php","pied-piper","pied-piper-alt","pied-piper-hat","pied-piper-pp","piggy-bank","pills","pinterest","pinterest-p","pinterest-square","place-of-worship","plane","plane-arrival","plane-departure","play","play-circle","playstation","plug","plus","plus-circle","plus-square","podcast","poll","poll-h","poo","poop","portrait","pound-sign","power-off","pray","praying-hands","prescription","prescription-bottle","prescription-bottle-alt","print","procedures","product-hunt","project-diagram","pushed","puzzle-piece","python","qq","qrcode","question","question-circle","quidditch","quinscape","quora","quote-left","quote-right","quran","r-project","radiation","radiation-alt","rainbow","random","raspberry-pi","ravelry","react","reacteurope","readme","rebel","receipt","recycle","red-river","reddit","reddit-alien","reddit-square","redhat","redo","redo-alt","registered","renren","reply","reply-all","replyd","republican","researchgate","resolving","restroom","retweet","rev","ribbon","ring","road","robot","rocket","rocketchat","rockrms","route","rss","rss-square","ruble-sign","ruler","ruler-combined","ruler-horizontal","ruler-vertical","running","rupee-sign","sad-cry","sad-tear","safari","sass","save","schlix","school","screwdriver","scribd","search","search-dollar","search-location","search-minus","search-plus","searchengin","seedling","sellcast","sellsy","server","servicestack","shapes","share","share-alt","share-alt-square","share-square","shekel-sign","shield-alt","ship","shipping-fast","shirtsinbulk","shoe-prints","shopping-bag","shopping-basket","shopping-cart","shopware","shower","shuttle-van","sign","sign-in-alt","sign-language","sign-out-alt","signal","signature","simplybuilt","sistrix","sitemap","sith","skull","skyatlas","skype","slack","slack-hash","sliders-h","slideshare","smile","smile-beam","smile-wink","smoking","smoking-ban","snapchat","snapchat-ghost","snapchat-square","snowflake","socks","solar-panel","sort","sort-alpha-down","sort-alpha-up","sort-amount-down","sort-amount-up","sort-down","sort-numeric-down","sort-numeric-up","sort-up","soundcloud","spa","space-shuttle","speakap","spinner","splotch","spotify","spray-can","square","square-full","square-root-alt","squarespace","stack-exchange","stack-overflow","stamp","star","star-and-crescent","star-half","star-half-alt","star-of-david","star-of-life","staylinked","steam","steam-square","steam-symbol","step-backward","step-forward","stethoscope","sticker-mule","sticky-note","stop","stop-circle","stopwatch","store","store-alt","strava","stream","street-view","strikethrough","stripe","stripe-s","stroopwafel","studiovinari","stumbleupon","stumbleupon-circle","subscript","subway","suitcase","suitcase-rolling","sun","superpowers","superscript","supple","surprise","swatchbook","swimmer","swimming-pool","synagogue","sync","sync-alt","syringe","table","table-tennis","tablet","tablet-alt","tablets","tachometer-alt","tag","tags","tape","tasks","taxi","teamspeak","teeth","teeth-open","telegram","telegram-plane","tencent-weibo","terminal","text-height","text-width","th","th-large","th-list","the-red-yeti","theater-masks","themeco","themeisle","thermometer","thermometer-empty","thermometer-full","thermometer-half","thermometer-quarter","thermometer-three-quarters","thumbs-down","thumbs-up","thumbtack","ticket-alt","times","times-circle","tint","tint-slash","tired","toggle-off","toggle-on","toolbox","tooth","torah","torii-gate","trade-federation","trademark","traffic-light","train","transgender","transgender-alt","trash","trash-alt","tree","trello","tripadvisor","trophy","truck","truck-loading","truck-monster","truck-moving","truck-pickup","tshirt","tty","tumblr","tumblr-square","tv","twitch","twitter","twitter-square","typo3","uber","uikit","umbrella","umbrella-beach","underline","undo","undo-alt","uniregistry","universal-access","university","unlink","unlock","unlock-alt","untappd","upload","usb","user","user-alt","user-alt-slash","user-astronaut","user-check","user-circle","user-clock","user-cog","user-edit","user-friends","user-graduate","user-lock","user-md","user-minus","user-ninja","user-plus","user-secret","user-shield","user-slash","user-tag","user-tie","user-times","users","users-cog","ussunnah","utensil-spoon","utensils","vaadin","vector-square","venus","venus-double","venus-mars","viacoin","viadeo","viadeo-square","vial","vials","viber","video","video-slash","vihara","vimeo","vimeo-square","vimeo-v","vine","vk","vnv","volleyball-ball","volume-down","volume-mute","volume-off","volume-up","vote-yea","vr-cardboard","vuejs","walking","wallet","warehouse","water","weebly","weibo","weight","weight-hanging","weixin","whatsapp","whatsapp-square","wheelchair","whmcs","wifi","wikipedia-w","wind","window-close","window-maximize","window-minimize","window-restore","windows","wine-bottle","wine-glass","wine-glass-alt","wix","wizards-of-the-coast","wolf-pack-battalion","won-sign","wordpress","wordpress-simple","wpbeginner","wpexplorer","wpforms","wpressr","wrench","x-ray","xbox","xing","xing-square","y-combinator","yahoo","yandex","yandex-international","yelp","yen-sign","yin-yang","yoast","youtube","youtube-square","zhihu"],"icons":{"actions":{"id":"play-circle"},"admin":{"id":"cog"},"add":{"id":"plus-circle"},"admin_ads":{"id":"film"},"admin_articles":{"id":"newspaper","prepend":"far fa-"},"admin_blogs":{"id":"bold"},"admin_calendar":{"id":"calendar-alt","prepend":"far fa-"},"admin_category":{"id":"sitemap fa-rotate-270"},"admin_comments":{"id":"comment"},"admin_community":{"id":"users"},"admin_connect":{"id":"link"},"admin_copyright":{"id":"copyright","prepend":"far fa-"},"admin_directory":{"id":"folder","prepend":"far fa-"},"admin_faqs":{"id":"question"},"admin_features":{"id":"power-off"},"admin_fgal":{"id":"folder-open"},"admin_forums":{"id":"comments"},"admin_freetags":{"id":"tags"},"admin_gal":{"id":"file-image","prepend":"far fa-"},"admin_general":{"id":"cog"},"admin_i18n":{"id":"language"},"admin_intertiki":{"id":"exchange-alt"},"admin_login":{"id":"sign-in-alt"},"admin_user":{"id":"user"},"admin_look":{"id":"image","prepend":"far fa-"},"admin_maps":{"id":"map-marker-alt"},"admin_messages":{"id":"envelope","prepend":"far fa-"},"admin_metatags":{"id":"tag"},"admin_module":{"id":"shapes"},"admin_payment":{"id":"credit-card","prepend":"far fa-"},"admin_performance":{"id":"tachometer-alt"},"admin_polls":{"id":"tasks"},"admin_profiles":{"id":"cube"},"admin_rating":{"id":"check-square"},"admin_rss":{"id":"rss"},"admin_score":{"id":"trophy"},"admin_search":{"id":"search"},"admin_semantic":{"id":"arrows-alt-h"},"admin_security":{"id":"lock"},"admin_sefurl":{"id":"search-plus"},"admin_share":{"id":"share-alt"},"admin_socialnetworks":{"id":"thumbs-up"},"admin_stats":{"id":"chart-bar","prepend":"far fa-"},"admin_textarea":{"id":"edit"},"admin_trackers":{"id":"database"},"admin_userfiles":{"id":"cog"},"admin_video":{"id":"video"},"admin_webmail":{"id":"inbox"},"admin_webservices":{"id":"cog"},"admin_wiki":{"id":"file-alt","prepend":"far fa-"},"admin_workspace":{"id":"desktop"},"admin_wysiwyg":{"id":"file-alt"},"admin_print":{"id":"print"},"admin_packages":{"id":"gift"},"admin_rtc":{"id":"bullhorn"},"adn":{"id":"adn","prepend":"fab fa-"},"amazon":{"id":"amazon","prepend":"fab fa-"},"android":{"id":"android","prepend":"fab fa-"},"angellist":{"id":"angellist","prepend":"fab fa-"},"apple":{"id":"apple","prepend":"fab fa-"},"area-chart":{"id":"chart-area"},"arrows":{"id":"arrows-alt"},"arrows-h":{"id":"arrows-alt-h"},"arrows-v":{"id":"arrows-alt-v"},"articles":{"id":"newspaper","prepend":"far fa-"},"attach":{"id":"paperclip"},"audio":{"id":"file-audio","prepend":"far fa-"},"back":{"id":"arrow-left"},"background-color":{"id":"paint-brush"},"backlink":{"id":"reply"},"backward_step":{"id":"step-backward"},"bar-chart":{"id":"chart-bar"},"behance":{"id":"behance","prepend":"fab fa-"},"behance-square":{"id":"behance-square","prepend":"fab fa-"},"bitbucket":{"id":"bitbucket","prepend":"fab fa-"},"black-tie":{"id":"black-tie","prepend":"fab fa-"},"bluetooth":{"id":"bluetooth","prepend":"fab fa-"},"bluetooth-b":{"id":"bluetooth-b","prepend":"fab fa-"},"box":{"id":"list-alt","prepend":"far fa-"},"btc":{"id":"btc","prepend":"fab fa-"},"buysellads":{"id":"buysellads","prepend":"fab fa-"},"cart":{"id":"shopping-cart"},"chart":{"id":"chart-area"},"cc-amex":{"id":"cc-amex","prepend":"fab fa-"},"cc-diners-club":{"id":"cc-diners-club","prepend":"fab fa-"},"cc-discover":{"id":"cc-discover","prepend":"fab fa-"},"cc-jcb":{"id":"cc-jcb","prepend":"fab fa-"},"cc-mastercard":{"id":"cc-mastercard","prepend":"fab fa-"},"cc-paypal":{"id":"cc-paypal","prepend":"fab fa-"},"cc-stripe":{"id":"cc-stripe","prepend":"fab fa-"},"cc-visa":{"id":"cc-visa","prepend":"fab fa-"},"chrome":{"id":"chrome","prepend":"fab fa-"},"close":{"id":"times"},"cloud-download":{"id":"cloud-download-alt"},"cloud-upload":{"id":"cloud-upload-alt"},"code_file":{"id":"file-code","prepend":"far fa-"},"code-fork":{"id":"code-branch"},"codepen":{"id":"codepen","prepend":"fab fa-"},"codiepie":{"id":"codiepie","prepend":"fab fa-"},"collapsed":{"id":"plus-square","prepend":"far fa-"},"comments":{"id":"comments","prepend":"far fa-"},"compose":{"id":"pencil-alt"},"computer":{"id":"desktop"},"contacts":{"id":"users"},"content-template":{"id":"file","prepend":"far fa-"},"create":{"id":"plus"},"creative-commons":{"id":"creative-commons","prepend":"fab fa-"},"css3":{"id":"css3","prepend":"fab fa-"},"dashboard":{"id":"tachometer-alt"},"dashcube":{"id":"dashcube","prepend":"fab fa-"},"delete":{"id":"times"},"delicious":{"id":"delicious","prepend":"fab fa-"},"deviantart":{"id":"deviantart","prepend":"fab fa-"},"difference":{"id":"strikethrough"},"disable":{"id":"minus-square"},"documentation":{"id":"book"},"down":{"id":"sort-down"},"dribbble":{"id":"dribbble","prepend":"fab fa-"},"dropbox":{"id":"dropbox","prepend":"fab fa-"},"drupal":{"id":"drupal","prepend":"fab fa-"},"edge":{"id":"edge","prepend":"fab fa-"},"education":{"id":"graduation-cap"},"empire":{"id":"empire","prepend":"fab fa-"},"envelope":{"id":"envelope","prepend":"far fa-"},"envira":{"id":"envira","prepend":"fab fa-"},"erase":{"id":"eraser"},"error":{"id":"exclamation-circle"},"excel":{"id":"file-excel","prepend":"far fa-"},"exchange":{"id":"exchange-alt"},"expanded":{"id":"minus-square","prepend":"far fa-"},"expeditedssl":{"id":"expeditedssl","prepend":"fab fa-"},"export":{"id":"download"},"facebook":{"id":"facebook","prepend":"fab fa-"},"facebook-f":{"id":"facebook-f","prepend":"fab fa-"},"file":{"id":"file","prepend":"far fa-"},"file-archive":{"id":"folder"},"file-archive-open":{"id":"folder-open"},"file-text":{"id":"file-alt"},"file-text-o":{"id":"file-alt","prepend":"far fa-"},"firefox":{"id":"firefox","prepend":"fab fa-"},"first-order":{"id":"first-order","prepend":"fab fa-"},"flickr":{"id":"flickr","prepend":"fab fa-"},"floppy":{"id":"save","prepend":"far fa-"},"font-awesome":{"id":"font-awesome","prepend":"fab fa-"},"font-color":{"id":"font","class":"text-danger"},"fonticons":{"id":"fonticons","prepend":"fab fa-"},"fort-awesome":{"id":"fort-awesome","prepend":"fab fa-"},"forumbee":{"id":"forumbee","prepend":"fab fa-"},"forward_step":{"id":"step-forward"},"foursquare":{"id":"foursquare","prepend":"fab fa-"},"fullscreen":{"id":"expand-arrows-alt"},"get-pocket":{"id":"get-pocket","prepend":"fab fa-"},"gg":{"id":"gg","prepend":"fab fa-"},"gg-circle":{"id":"gg-circle","prepend":"fab fa-"},"git":{"id":"git","prepend":"fab fa-"},"git-square":{"id":"git-square","prepend":"fab fa-"},"github":{"id":"github","prepend":"fab fa-"},"github-alt":{"id":"github-alt","prepend":"fab fa-"},"github-square":{"id":"github-square","prepend":"fab fa-"},"gitlab":{"id":"gitlab","prepend":"fab fa-"},"glide":{"id":"glide","prepend":"fab fa-"},"glide-g":{"id":"glide-g","prepend":"fab fa-"},"google":{"id":"google","prepend":"fab fa-"},"google-plus":{"id":"google-plus","prepend":"fab fa-"},"google-plus-g":{"id":"google-plus-g","prepend":"fab fa-"},"google-plus-square":{"id":"google-plus-square","prepend":"fab fa-"},"group":{"id":"users"},"h1":{"id":"heading"},"h2":{"id":"heading","size":".9"},"h3":{"id":"heading","size":".8"},"hacker-news":{"id":"hacker-news","prepend":"fab fa-"},"help":{"id":"question-circle"},"history":{"id":"clock","prepend":"far fa-"},"horizontal-rule":{"id":"minus"},"houzz":{"id":"houzz","prepend":"fab fa-"},"html":{"id":"html5","prepend":"fab fa-"},"image":{"id":"file-image","prepend":"far fa-"},"import":{"id":"upload"},"index":{"id":"spinner"},"information":{"id":"info-circle","prepend":null,"append":null},"instagram":{"id":"instagram","prepend":"fab fa-"},"internet-explorer":{"id":"internet-explorer","prepend":"fab fa-"},"ioxhost":{"id":"ioxhost","prepend":"fab fa-"},"java":{"id":"java","prepend":"fab fa-"},"joomla":{"id":"joomla","prepend":"fab fa-"},"js":{"id":"js","prepend":"fab fa-"},"jsfiddle":{"id":"jsfiddle","prepend":"fab fa-"},"keyboard":{"id":"keyboard","prepend":"far fa-"},"lastfm":{"id":"lastfm","prepend":"fab fa-"},"lastfm-square":{"id":"lastfm-square","prepend":"fab fa-"},"leanpub":{"id":"leanpub","prepend":"fab fa-"},"less":{"id":"less","prepend":"fab fa-"},"level-down":{"id":"level-down-alt"},"level-up":{"id":"level-up-alt"},"like":{"id":"thumbs-up"},"line-chart":{"id":"chart-line"},"link-external":{"id":"external-link-alt"},"link-external-alt":{"id":"external-link-square-alt"},"linkedin":{"id":"linkedin","prepend":"fab fa-"},"linkedin-in":{"id":"linkedin-in","prepend":"fab fa-"},"linux":{"id":"linux","prepend":"fab fa-"},"list-numbered":{"id":"list-ol"},"listgui_display":{"id":"desktop"},"listgui_filter":{"id":"filter"},"listgui_format":{"id":"indent"},"listgui_pagination":{"id":"book"},"listgui_output":{"id":"eye","prepend":"far fa-"},"listgui_column":{"id":"columns"},"listgui_tablesorter":{"id":"table"},"listgui_icon":{"id":"user"},"listgui_body":{"id":"align-justify"},"listgui_carousel":{"id":"slideshare","prepend":"fab fa-"},"listgui_sort":{"id":"sort-alpha-up"},"listgui_wikitext":{"id":"file-alt","prepend":"far fa-"},"listgui_caption":{"id":"align-center"},"log":{"id":"history"},"login":{"id":"sign-in-alt"},"logout":{"id":"sign-out-alt"},"long-arrow-down":{"id":"long-arrow-alt-down"},"long-arrow-left":{"id":"long-arrow-alt-left"},"long-arrow-right":{"id":"long-arrow-alt-right"},"long-arrow-up":{"id":"long-arrow-alt-up"},"mailbox":{"id":"inbox"},"magnifier":{"id":"search"},"maxcdn":{"id":"maxcdn","prepend":"fab fa-"},"medium":{"id":"medium","prepend":"fab fa-"},"menu":{"id":"bars"},"menu-extra":{"id":"chevron-down"},"menuitem":{"id":"angle-right"},"merge":{"id":"random"},"microsoft":{"id":"microsoft","prepend":"fab fa-"},"minimize":{"id":"compress"},"mixcloud":{"id":"mixcloud","prepend":"fab fa-"},"module":{"id":"square"},"modules":{"id":"shapes"},"modx":{"id":"modx","prepend":"fab fa-"},"money":{"id":"money-bill"},"more":{"id":"ellipsis-h"},"move":{"id":"exchange-alt"},"next":{"id":"arrow-right"},"notepad":{"id":"file-alt","prepend":"far fa-"},"notification":{"id":"bell","prepend":"far fa-"},"off":{"id":"power-off"},"ok":{"id":"check-circle"},"opencart":{"id":"opencart","prepend":"fab fa-"},"openid":{"id":"openid","prepend":"fab fa-"},"opera":{"id":"opera","prepend":"fab fa-"},"optin-monster":{"id":"optin-monster","prepend":"fab fa-"},"page-break":{"id":"cut"},"pagelines":{"id":"pagelines","prepend":"fab fa-"},"paypal":{"id":"paypal","prepend":"fab fa-"},"pdf":{"id":"file-pdf","prepend":"far fa-"},"pencil":{"id":"pencil-alt"},"permission":{"id":"key"},"pie-chart":{"id":"chart-pie"},"pied-piper":{"id":"pied-piper","prepend":"fab fa-"},"pied-piper-alt":{"id":"pied-piper-alt","prepend":"fab fa-"},"pied-piper-pp":{"id":"pied-piper-pp","prepend":"fab fa-"},"pinterest":{"id":"pinterest","prepend":"fab fa-"},"pinterest-p":{"id":"pinterest-p","prepend":"fab fa-"},"pinterest-square":{"id":"pinterest-square","prepend":"fab fa-"},"plugin":{"id":"puzzle-piece"},"popup":{"id":"list-alt","prepend":"far fa-"},"post":{"id":"pencil-alt"},"powerpoint":{"id":"file-powerpoint","prepend":"far fa-"},"previous":{"id":"arrow-left"},"qq":{"id":"qq","prepend":"fab fa-"},"quotes":{"id":"quote-left"},"ranking":{"id":"sort-numeric-down"},"reddit":{"id":"reddit","prepend":"fab fa-"},"reddit-alien":{"id":"reddit-alien","prepend":"fab fa-"},"reddit-square":{"id":"reddit-square","prepend":"fab fa-"},"refresh":{"id":"sync"},"remove":{"id":"times"},"renren":{"id":"renren","prepend":"fab fa-"},"repeat":{"id":"redo"},"safari":{"id":"safari","prepend":"fab fa-"},"sass":{"id":"sass","prepend":"fab fa-"},"scissors":{"id":"cut"},"scribd":{"id":"scribd","prepend":"fab fa-"},"screencapture":{"id":"camera"},"selectall":{"id":"file-alt"},"send":{"id":"paper-plane"},"settings":{"id":"wrench"},"sharethis":{"id":"share-alt"},"shorten":{"id":"crop"},"simplybuilt":{"id":"simplybuilt","prepend":"fab fa-"},"skyatlas":{"id":"skyatlas","prepend":"fab fa-"},"skype":{"id":"skype","prepend":"fab fa-"},"slack":{"id":"slack","prepend":"fab fa-"},"smile":{"id":"smile","prepend":"far fa-"},"snapchat":{"id":"snapchat","prepend":"fab fa-"},"snapchat-ghost":{"id":"snapchat-ghost","prepend":"fab fa-"},"snapchat-square":{"id":"snapchat-square","prepend":"fab fa-"},"sort-asc":{"id":"sort-up"},"sort-alpha-asc":{"id":"sort-alpha-up"},"sort-alpha-desc":{"id":"sort-alpha-down"},"sort-amount-asc":{"id":"sort-amount-up"},"sort-amount-desc":{"id":"sort-amount-down"},"sort-desc":{"id":"sort-down"},"sort-down":{"id":"sort-down"},"sort-numeric-asc":{"id":"sort-numeric-up"},"sort-numeric-desc":{"id":"sort-numeric-down"},"sort-up":{"id":"sort-up"},"soundcloud":{"id":"soundcloud","prepend":"fab fa-"},"spotify":{"id":"spotify","prepend":"fab fa-"},"stack-exchange":{"id":"stack-exchange","prepend":"fab fa-"},"stack-overflow":{"id":"stack-overflow","prepend":"fab fa-"},"star-empty":{"id":"star","prepend":"far fa-"},"star-empty-selected":{"id":"star","prepend":"far fa-","class":"text-success"},"star-half-rating":{"id":"star-half","prepend":"far fa-"},"star-half-selected":{"id":"star-half","prepend":"far fa-","class":"text-success"},"star-selected":{"id":"star","class":"text-success"},"status-open":{"id":"circle","style":"color:green"},"status-pending":{"id":"adjust","style":"color:orange"},"status-closed":{"id":"times-circle","prepend":"far fa-","style":"color:grey"},"steam":{"id":"steam","prepend":"fab fa-"},"steam-square":{"id":"steam-square","prepend":"fab fa-"},"stop-watching":{"id":"eye-slash","prepend":"far fa-"},"structure":{"id":"sitemap"},"stumbleupon":{"id":"stumbleupon","prepend":"fab fa-"},"success":{"id":"check"},"textfile":{"id":"file-alt","prepend":"far fa-"},"themeisle":{"id":"themeisle","prepend":"fab fa-"},"three-d":{"id":"cube"},"ticket":{"id":"ticket-alt"},"time":{"id":"clock","prepend":"far fa-"},"title":{"id":"text-width"},"toggle-left":{"id":"caret-square-left","prepend":"far fa-"},"toggle-off":{"id":"toggle-off"},"toggle-on":{"id":"toggle-on"},"toggle-right":{"id":"caret-square-right","prepend":"far fa-"},"trackers":{"id":"database"},"translate":{"id":"language"},"trash":{"id":"trash-alt","prepend":"far fa-"},"trello":{"id":"trello","prepend":"fab fa-"},"tripadvisor":{"id":"tripadvisor","prepend":"fab fa-"},"tumblr":{"id":"tumblr","prepend":"fab fa-"},"tumblr-square":{"id":"tumblr-square","prepend":"fab fa-"},"twitch":{"id":"twitch","prepend":"fab fa-"},"twitter":{"id":"twitter","prepend":"fab fa-"},"twitter-square":{"id":"twitter-square","prepend":"fab fa-"},"unlike":{"id":"thumbs-down"},"up":{"id":"sort-up"},"usb":{"id":"usb","prepend":"fab fa-"},"viacoin":{"id":"viacoin","prepend":"fab fa-"},"video":{"id":"file-video","prepend":"far fa-"},"video_file":{"id":"file-video","prepend":"far fa-"},"view":{"id":"search-plus"},"vimeo":{"id":"vimeo-square","prepend":"fab fa-"},"vine":{"id":"vine","prepend":"fab fa-"},"vk":{"id":"vk","prepend":"fab fa-"},"warning":{"id":"exclamation-triangle"},"watch":{"id":"eye","prepend":"far fa-"},"watch-group":{"id":"users"},"weibo":{"id":"weibo","prepend":"fab fa-"},"whatsapp":{"id":"whatsapp","prepend":"fab fa-"},"windows":{"id":"windows","prepend":"fab fa-"},"wiki":{"id":"file-alt","prepend":"far fa-"},"wizard":{"id":"magic"},"word":{"id":"file-word","prepend":"far fa-"},"wysiwyg":{"id":"file-alt"},"xbox":{"id":"xbox","prepend":"fab fa-"},"xing":{"id":"xing","prepend":"fab fa-"},"xing-square":{"id":"xing-square","prepend":"fab fa-"},"yahoo":{"id":"yahoo","prepend":"fab fa-"},"youtube":{"id":"youtube","prepend":"fab fa-"},"youtube-square":{"id":"youtube-square","prepend":"fab fa-"},"zip":{"id":"file-archive","prepend":"far fa-"}},"tag":"span","prepend":"fas fa-","append":" fa-fw","rotate":{"90":" fa-rotate-90","180":" fa-rotate-180","270":" fa-rotate-270","horizontal":" fa-flip-horizontal","vertical":" fa-flip-vertical"}}
-var zoomToFoundLocation = "street";
-
-var bootstrapButton;
-if (typeof $.fn.button.noConflict === "function") {
-	bootstrapButton = $.fn.button.noConflict() // return $.fn.button to previously assigned value
-	$.fn.bootstrapBtn = bootstrapButton            // give $().bootstrapBtn the Bootstrap functionality
-}
-
-/*
-if (getCookie('postitnote') != 'hidden') {
-  $('#postitnote').removeClass('hidden').hide().delay('500').fadeIn('slow');
-}
-*/
-
-/* 
- * this section of the custom js amends the way that OpenLayers 'spaces out' 
- * dot and dot/dash markings for paths etc - added by Geoff (eromneg) Aug '14
-*/
- if ( typeof OpenLayers != "undefined") {
- OpenLayers.Renderer.SVG.prototype.dashStyle = function(style, widthFactor) {
-        var w = style.strokeWidth * widthFactor;
-        var str = style.strokeDashstyle;
-        switch (str) {
-            case 'solid':
-                return 'none';
-            case 'dot':
-                return [1, 4 * w].join();
-            case 'dash':
-                return [4 * w, 2 * w].join();
-            case 'dashdot':
-                return [4 * w, 2 * w, 1, 2 * w].join();
-            case 'longdash':
-                return [8 * w, 2 * w].join();
-            case 'longdashdot':
-                return [8 * w, 2 * w, 1, 2 * w].join();
-            default:
-                return OpenLayers.String.trim(str).replace(/\s+/g, ",");
-        }
-    }
-}
-					function submitSearch1() {
-						var $f = $('#search-module-form1');
-						if ($f.attr('action') !== "tiki-editpage.php" && $f.data('page_selected') === $("#search_mod_input_1").val()) {
-							if ($f.find('input[name="find"]').length) {
-								$f.find('input[name="find"]').val($f.data('page_selected'));
-							} else {
-								$f.append($('<input name="find">').val($f.data('page_selected')));
-							}
-							$f.attr('action', 'tiki-listpages.php');
-						} else if ($f.attr('action') == "#") {
-							$f.attr('action', 'tiki-searchindex.php');
-						}
-						$exact = $f.find("input[name=exact_match]");
-						if ($exact.val() != "y") {
-							$exact.remove(); // seems exact_match is true even if empty
-						}
-						return true;
-					}
-				
-
-function capLock(e, el){
-	kc = e.keyCode ? e.keyCode : e.which;
-	sk = e.shiftKey ? e.shiftKey : (kc == 16 ? true : false);
-	if ((kc >= 65 && kc <= 90 && !sk) || (kc >= 97 && kc <= 122 && sk)) {
-		$('.divCapson', $(el).parents('div:first')).show();
-	} else {
-		$('.divCapson', $(el).parents('div:first')).hide();
-	}
-}
-
-// js 2 
-
-try {
-	var timezone = Intl.DateTimeFormat().resolvedOptions().timeZone;
-	setCookie("local_tz", timezone);
-} catch (e) {}
-
-// this is used by tiki-confirm.js checkTimeout, so needs to be always set
-var now = new Date();
-
-if (! timezone) {
-	function inArray(item, array) {
-		for (var i in array) {
-			if (array[i] === item) {
-				return i;
-			}
-		}
-		return false;
-	}
-	var allTimeZoneCodes = ["ACDT","ACST","ADDT","ADT","AEDT","AEST","AHDT","AHST","AKDT","AKST","AMT","APT","AST","AWDT","AWST","AWT","BDST","BDT","BMT","BOST","BST","CAST","CAT","CDDT","CDT","CEMT","CEST","CET","CMT","CPT","CST","CWT","CHST","DMT","EAT","EDDT","EDT","EEST","EET","EMT","EPT","EST","EWT","FFMT","FMT","GMT","GST","HDT","HKST","HKT","HMT","HST","IDDT","IDT","IMT","IST","JDT","JMT","JST","KDT","KMT","KST","LST","MDDT","MDST","MDT","MMT","MPT","MSD","MSK","MST","MWT","NDDT","NDT","NPT","NST","NWT","NZDT","NZMT","NZST","PDDT","PDT","PKST","PKT","PLMT","PMMT","PMT","PPMT","PPT","PST","PWT","QMT","RMT","SAST","SDMT","SET","SJMT","SMT","SST","TBMT","TMT","UCT","UTC","WAST","WAT","WEMT","WEST","WET","WIB","WITA","WIT","WMT","YDDT","YDT","YPT","YST","YWT","A","B","C","D","E","F","G","H","I","K","L","M","N","O","P","Q","R","S","T","U","V","W","X","Y","Z"];
-	var now_string = now.toString();
-	var offsethours = - now.getTimezoneOffset() / 60;
-	setCookie("local_tzoffset", offsethours);
-	var m = now_string.match(/[ \(]([A-Z]{3,6})[ \)]?[ \d]*$/);	// try three or more char tz first at the end or just before the year
-	if (!m) {
-		m = now_string.match(/[ \(]([A-Z]{1,6})[ \)]?[ \d]*$/);	// might be a "military" one if not
-	}
-	if (m) {
-		m = m[1];
-	} else {	// IE (sometimes) gives UTC +offset instead of the abbreviation
-		// sadly this workaround will fail for non-whole hour offsets
-		var hours = - now.getTimezoneOffset() / 60;
-		m = "GMT" + (hours > 0 ? "+" : "") + hours;
-	}
-	// Etc/GMT+ is equivalent to GMT-
-	if (m.substring(0,4) == "GMT+") {
-		m = "Etc/GMT-" + m.substring(4);
-		setCookie("local_tz", m);
-	}
-	if (m.substring(0,4) == "GMT-") {
-		m = "Etc/GMT+" + m.substring(4);
-		setCookie("local_tz", m);
-	}
-	if (inArray(m, allTimeZoneCodes)) {
-		setCookie("local_tz", m);
-	}
-}
-
-//--><!]]>
-</script>
-<script type="text/javascript">
-<!--//--><![CDATA[//><!--
-$(document).ready(function(){
-// jq_onready 0 
-$("article").fitVids();
-$("time.timeago").timeago(); jQuery.timeago.settings.allowFuture = true;
-$(".table-responsive").doubleScroll({resetOnWindowResize: true});
-$(".convert-mailto").removeClass("convert-mailto").each(function () {
-				var address = $(this).data("encode-name") + "@" + $(this).data("encode-domain");
-				$(this).attr("href", "mailto:" + address).text(address);
-			});
-$(".search_mod_magnifier").mouseover( function () {
-	$(".search_mod_buttons", $(this).parents(".module"))
-		.show('fast')
-		.mouseleave( function () {
-			$(this).hide('fast');
-		});
-}).click( function () {
-	$(this).parents("form").submit();
-});
-$("#search_mod_input_1")
-.keydown( function () {
-	$(".search_mod_magnifier", $(this).parent()).mouseover();}
-);
-						
-$("#search_mod_input_1").tiki("autocomplete", "pagename",{select: function(event, item) {
-						$('#search-module-form1').data('page_selected', item.item.value).find("input[name=exact_match]").val("y");
-						}, open: function(event, item) {
-						$(".search_mod_buttons", "#search-module-form1").hide();
-						}, close: function(event, item) {
-						$(".search_mod_buttons", "#search-module-form1").show();
-						}});
-$(document).ready(function () {
-  var resetCSS = {
-    transition: 'all .5s ease 0s',
-    top: '',
-    height: '',
-    minHeight: '',
-    opacity: '',
-    overflow: ''
-  };
-  $(window).on("scroll", function () {
-    if ($(window).scrollTop() > 200) {
-      $('.navbar.fixed-top, .navbar-fixed-top').css({
-          transition: 'all .75s ease 0s',
-          top: '-20px',
-          height: '25px',
-          minHeight: '5px',
-          opacity: '.75',
-          overflow: 'hidden'
-      });
-      $('html:not(#page_1) .topbar').css({
-          'box-shadow': '0 5px 10px 0px rgba(0,0,0,.25)',
-          position: 'fixed',
-          top: '6px',
-          width: '100%',
-          left: 0,
-          'z-index': 3
-      });
-    } else {
-      $('.navbar.fixed-top, .navbar-fixed-top').css(resetCSS);
-      $(".topbar").removeAttr('style');
-    }
-  });
-  $('.navbar.fixed-top, .navbar-fixed-top').on('mouseover', function () {
-    $(this).css(resetCSS);
-    $('html:not(#page_1) .topbar').css({
-      top: '46px'
-    });
-  });
-});
-
-$('.backtotop').hide();
-function backtotop(){
-    var scrolled = $(window).scrollTop();
-    if (scrolled > 0) {
-        $('.backtotop').fadeIn();
-    } else {
-        $('.backtotop').fadeOut().removeAttr('style');
-    }
-}
-$(window).scroll(function(e){
-    backtotop();
-});
-$('.backtotop a').click(function(event){
-    event.preventDefault();
-    $('html,body').animate({
-        scrollTop:$('body').offset().top
-    }, 1000);
-});
-
-$("#loginbox-1").submit( function () {
-	if ($("#login-user_1").val() && $("#login-pass_1").val()) {
-		return true;
-	} else {
-		$("#login-user_1").focus();
-		return false;
-	}
-});
-if (jqueryTiki.no_cookie) {
-	$('.box-login_box input').each(function(){
-		$(this).change(function() {
-			if (jqueryTiki.no_cookie && $(this).val()) {
-				alert(jqueryTiki.cookie_consent_alert);
-			}
-		});
-	});
-}
-
-if ($('#login-user_1:visible').length) {if ($("#login-user_1").offset().top < $(window).height()) {$('#login-user_1')[0].focus();} }
-});
-//--><!]]>
-</script>
-
-	
-		<!-- Piwik -->
-<script type="text/javascript">
-  var _paq = _paq || [];
-  _paq.push(['trackPageView']);
-  _paq.push(['enableLinkTracking']);
-  (function() {
-    var u="//piwik.tiki.org/";
-    _paq.push(['setTrackerUrl', u+'piwik.php']);
-    _paq.push(['setSiteId', 2]);
-    var d=document, p=d.location.protocol, g=d.createElement('script'), s=d.getElementsByTagName('script')[0];
-    g.type='text/javascript'; g.async=true; g.defer=true; g.src=p+u+'piwik.js'; s.parentNode.insertBefore(g,s);
-  })();
-</script>
-<noscript><p><img src="https://piwik.tiki.org/piwik.php?idsite=2" style="border:0;" alt=""></p></noscript>
-<!-- End Piwik Code -->
-</body>
-</html>

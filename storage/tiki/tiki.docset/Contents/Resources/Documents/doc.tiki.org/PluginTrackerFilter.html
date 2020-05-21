@@ -1,0 +1,1618 @@
+<!DOCTYPE html>
+<html lang="en" id="page_2831">
+<head>
+	
+<!--Latest IE Compatibility-->
+<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta name="generator" content="Tiki Wiki CMS Groupware - https://tiki.org">
+
+<meta content="http://doc.tiki.org/" name="twitter:domain"> 
+
+
+			<link rel="canonical" href="PluginTrackerFilter.html">
+		<meta content="http://doc.tiki.org/PluginTrackerFilter" property="og:url">
+	
+	<meta name="keywords" content="documentation, tiki, tikiwiki, document, help, install, wiki syntax  ">
+	<meta name="author" content="Tiki Community">
+
+		<meta name="description" content="Tiki Wiki CMS Groupware Official Documentation" property="og:description">
+	<meta name="twitter:description" content="Tiki Wiki CMS Groupware Official Documentation">
+	<meta name="revisit-after" content="15 days">
+
+<meta content="Documentation for Tiki Wiki CMS Groupware" property="og:site_name">
+<meta content="Documentation for Tiki Wiki CMS Groupware" name="twitter:site">
+
+
+
+<title>PluginTrackerFilter | Documentation for Tiki Wiki CMS Groupware</title>
+
+
+<meta property="og:title" content="PluginTrackerFilter | Documentation for Tiki Wiki CMS Groupware">
+
+<meta name="twitter:title" content="PluginTrackerFilter | Documentation for Tiki Wiki CMS Groupware">
+
+			<meta content="website" property="og:type">
+	
+
+<meta name="twitter:card" content="summary">
+
+						
+
+	<link rel="alternate" type="application/rss+xml" title="Tiki RSS feed for the wiki pages" href="http://doc.tiki.org/tiki-wiki_rss.php?ver=2">
+	<link rel="alternate" type="application/rss+xml" title="Tiki RSS feed for articles" href="http://doc.tiki.org/tiki-articles_rss.php?ver=2">
+	<link rel="alternate" type="application/rss+xml" title="Tiki RSS feed for image galleries" href="http://doc.tiki.org/tiki-image_galleries_rss.php?ver=2">
+	<link rel="alternate" type="application/rss+xml" title="Tiki RSS feed for file galleries" href="http://doc.tiki.org/tiki-file_galleries_rss.php?ver=2">
+	<!--[if lt IE 9]>
+	<script src="vendor_bundled/vendor/afarkas/html5shiv/dist/html5shiv.min.js" type="text/javascript"></script>
+<![endif]-->
+		
+<meta name="msapplication-config" content="themes/base_files/favicons/browserconfig.xml">
+
+<link rel="icon" href="themes/base_files/favicons/favicon-16x16.png" sizes="16x16" type="image/png">
+<link rel="apple-touch-icon" href="themes/base_files/favicons/apple-touch-icon.png" sizes="180x180">
+<link rel="icon" href="themes/base_files/favicons/favicon-32x32.png" sizes="32x32" type="image/png">
+<link rel="manifest" href="themes/base_files/favicons/site.webmanifest.html">
+<link rel="shortcut icon" href="themes/base_files/favicons/favicon.ico">
+<link rel="mask-icon" href="themes/base_files/favicons/safari-pinned-tab.svg" color="#5bbad5">
+<link rel="stylesheet" href="temp/public/codemirror_modes.css" type="text/css">
+<link rel="stylesheet" href="themes/base_files/css/tiki_base.css" type="text/css">
+<link rel="stylesheet" href="vendor_bundled/vendor/bower-asset/fontawesome/css/all.css" type="text/css">
+<link rel="stylesheet" href="themes/fivealive-lite/css/fivealive-lite.css" type="text/css">
+<link rel="stylesheet" href="themes/fivealive-lite/options/kiwi/css/kiwi.css" type="text/css">
+<link rel="stylesheet" href="vendor_bundled/vendor/studio-42/elfinder/css/elfinder.full.css" type="text/css">
+<link rel="stylesheet" href="lib/openlayers/theme/default/style.css" type="text/css">
+<link rel="stylesheet" href="vendor_bundled/vendor/codemirror/codemirror/lib/codemirror.css" type="text/css">
+<link rel="stylesheet" href="themes/base_files/feature_css/codemirror_tiki.css" type="text/css">
+<link rel="stylesheet" href="vendor_bundled/vendor/components/jqueryui/themes/flick/jquery-ui.css" type="text/css">
+<link rel="stylesheet" href="vendor_bundled/vendor/jquery/jquery-timepicker-addon/dist/jquery-ui-timepicker-addon.css" type="text/css">
+<link rel="stylesheet" href="vendor_bundled/vendor/jquery-plugins/colorbox/example1/colorbox.css" type="text/css">
+<link rel="stylesheet" href="vendor_bundled/vendor/jquery-plugins/treetable/css/jquery.treetable.css" type="text/css">
+<link rel="stylesheet" href="themes/base_files/feature_css/svg-edit-draw.css" type="text/css">
+<style type="text/css"><!--
+/* css 0 */
+@media (min-width: 1200px) { .container { max-width:1240px; } }
+
+.img_zoom {
+	display:inline-block;
+}
+.img_zoom:after {
+	content:"";
+	display:block;
+	width:33px;
+	height:33px;
+	position:absolute;
+	top:0;
+	right:0;
+	background:url(vendor_bundled/vendor/jquery-plugins/zoom/icon.png);
+}
+.img_zoom img {
+	display:block;
+}
+
+.ui-autocomplete-loading { background: white url("img/spinner.gif") right center no-repeat; }
+div#outerToc {
+	top: 31px;
+}
+.sitelogo {
+	line-height: 46px; /* same as .sitetitle */
+}
+.navbar-fixed-top .sitelogo a img, .layout_fixed_top_modules #top_modules .sitelogo a img {
+	margin-right: 0;
+	margin-top: 0;
+}
+
+@media (max-width:991px) {
+  .navbar-brand {
+    font-size: 12px; 
+    width: 65%;
+    overflow-x: hidden;
+    white-space: nowrap;
+    text-overflow: "&hellip;"; }
+  }
+
+.ui-autocomplete-loading { background: white url("img/spinner.gif") right center no-repeat; }
+
+.wikitext .card {
+    margin-bottom: 1rem;
+}
+
+#module_75 .card-body,
+#module_25 .card-body { /* keywords module for Tiki 13 (jb) */
+    height: 20em;
+    overflow-y: scroll;
+    overflow-x: hidden;
+}
+
+#module_75 .card-body .nav > li > a { padding: 0 15px; }
+
+/* Display first paragraph of wiki pages as a leading text */
+#page-data > p:first-of-type, .wikipreview .wikitext > p:first-of-type {
+    font-size: 120%;
+    padding: 2rem;
+    background: #f0f0f0;
+    border-radius: .5rem;
+    box-shadow: rgba(50, 50, 50, .15) 0 3rem 3rem -2rem inset, rgba(50, 50, 50, 0.1) 0 -1rem 2rem -1rem inset;
+}
+#page-data > p:first-of-type > br:first-of-type, .wikipreview .wikitext > p:first-of-type > br:first-of-type {
+    display: none;
+}
+
+#page-data a {
+	font-weight: bold;
+}
+
+@-ms-viewport{
+	width: auto!important;
+}
+
+/* Reduce page-top vertical whitespace */
+#alternate_register_link_because_InterTiki > br,
+#doc-dev-crosslinks > br { display: none; }
+
+/* Responsive Youtube videos - video wrapper class */
+.video-wrapper {
+     position: relative;
+     padding-bottom: 56.25%;
+     padding-top: 10px;
+     overflow: hidden;
+ }
+ .video-wrapper iframe {
+     position: absolute;
+     width: 100%;
+     height: 100%;
+     top: 0;
+     left: 0;
+ }
+
+/* End Responsive Youtube videos - video wrapper class */
+
+/* test to make dropdowns visible in mobile views */
+.tiki .navbar-collapse.in { overflow-y: visible; }
+
+/* Fix bad contrast- check and fix in stylesheet - GC-L 8/18 */
+.tiki-edit_structure .structure-container .ui-state-default { background: inherit; }
+
+footer.help-block {  border-top: 1px solid #737373; padding: .7em 0; margin-bottom: 1.2em; }
+
+/* Added for Tiki 19 - will move to stylesheet if it's a general fix/improvement. */
+#bottom_modules .row { width: 100%; max-width: 100%; }
+#bottom_modules .icon-link-external { display: none; } 
+#bottom_modules h4 { font-size: 1.2rem; }
+#bottom_modules ul { list-style: none; padding-left: 0; }
+
+textarea, .CodeMirror {
+    font-family: monospace !important;
+}
+
+/* Added by Bsfez for the Video Tutorials pages */
+
+.row .videoTutorials {
+  margin-bottom: 1em;
+  border-bottom: 1px solid #ccc
+}
+
+.videoTitle h5 a.heading-link {display:none}
+/*
+.videoLevel-Beginner,
+.videoLevel-Intermediate,
+.videoLevel-PowerUser,
+.videoLevel-Developer,
+.videoRole,
+.videoTitle a.wiki.external,
+.videoTag {
+  font-size: small
+}*/
+
+.videoLevel-Beginner {color: #117485}
+.videoLevel-Intermediate {color: #a59705}
+.videoLevel-PowerUser {color: #a53723}
+.videoLevel-Developer {color: #a51e37}
+.videoRole {color: #888}
+
+.videoTitle h5 {margin-bottom:0.1em}
+.videoTitle p {margin-bottom:0.2em}
+
+.videoTitle a.wiki.external,
+.videoTitle a:hover.wiki.external {
+  word-break: normal;
+  letter-spacing: -0.05em;
+}
+
+.videoTitle a.wiki.external:before,
+.videoTitle a.wiki.external:after,
+.videoTitle a:hover.wiki.external:before,
+.videoTitle a:hover.wiki.external:after
+{display: none}
+
+.videoTitle a:hover.wiki.external {padding-left:0}
+
+.videoDescription {
+  overflow: hidden;
+  position: relative; 
+  line-height: 1.2em;
+  max-height: 6em; 
+  text-align: justify;
+}
+
+/* END - Added by Bsfez for the Video Tutorials pages */
+
+/* Added by Bsfez for the tooh joinus message */
+#mod-menutopbar1 > nav > div > ul > li:nth-child(8) > a {
+  font-weight: bold;
+  margin-left: 6em;
+  color: rgb(255, 248, 33);}
+/* END Added by Bsfez for the tooh joinus message */
+
+/* Make input labels inline on "Video-Tutorials" */
+.videoresourceTikiExperienceLevel input+br, .videoresourceTikiUserGroupRole input+br {display: none; }
+
+/* Limit height of video transcript */
+.transcript-container { max-height: 300px; overflow-y: auto; }
+
+/* temp fix - Gary */
+.tiki .col-lg-9 {
+    flex-basis: 75%;
+}
+
+/* was: liquid layout to display all of wide table */
+#page_5154 .field259 { width: 280px; } 
+/*#page_5154 .tiki .container {width: 100%; max-width: 100%; }
+#page_5154 .tiki #col1 .table-responsive {overflow: visible; width: inherit; border-right-color: transparent;}
+#page_5154 .tiki #col1 .table-responsive > .table { width: 1200px; }*/
+
+.modal-dialog {
+    width: 80%; /* responsive width */
+}
+
+@media (min-width: 1200px) { .container { width:1240px; max-width:1240px;} }
+.affix {top:44px;}
+
+			.lozadFade {
+				animation-name: lozadFade;
+				animation-duration: 1s;
+			}
+			@keyframes lozadFade {
+				from {
+					opacity: 0;
+				}
+				to {
+					opacity: 1;
+				}
+			}
+		
+-->
+</style>
+	<style type="text/css">#sitelogo img {margin-top: 0; position: relative; top: -12px;}</style>
+
+<link rel="stylesheet" href="../themes.tiki.org/tiki-index_raw.php%3Fpage=Tiki_org_family_customizations_CSS&amp;clean&amp;textonly&amp;download&amp;css.css" type="text/css">
+
+<link rel="stylesheet" href="../themes.tiki.org/tiki-index_raw.php%3Fpage=Tiki_org_family_headers_fix_CSS&amp;clean&amp;textonly&amp;download&amp;css.css" type="text/css">
+
+<meta name="google-site-verification" content="OKHyWtoBAnRUctKvFQmKl2x1cAPGnHf8y_h8zUu-aeo">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	
+	<style type="text/css">
+	
+	/* Prevent target anchors from being covered by fixed top navbar */
+	h1:target:before,
+	h2:target:before,
+	h3:target:before,
+	h4:target:before,
+	h5:target:before,
+	h6:target:before {
+		content: "";
+		display: block;
+		height: 44px; /* fixed header height*/
+		margin: -44px 0 0; /* negative fixed header height */
+	}
+	</style></head>
+<body class="tiki tiki-index tiki_wiki_page fixed_width layout_social en hide_zone_left" style="padding-top: 0;">
+	
+
+	
+
+
+
+	
+
+			<div id="ajaxLoading">Loading...</div>
+<div id="ajaxLoadingBG"> </div>
+<div id="ajaxDebug"></div>
+		<div class="middle_outer" id="middle_outer">
+					<div class="fixed-topbar"></div>
+				<div class="container container-std middle" id="middle">
+						
+						
+
+			<div class="row row-middle" id="row-middle">
+															
+									<div class="d-flex flex-row flex-wrap w-100">
+					<div class="col col1 col-md-12 col-lg-9 order-md-1 order-lg-2 pb-4" id="col1">
+													
+												
+
+<div id="tikifeedback">
+	</div>
+
+						
+			
+<div class="wikitopline clearfix" style="clear: both;">
+	<div class="content">
+					<div class="wikiinfo float-left">
+				
+				
+				Create a form to filter tracker fields
+
+											</div>
+		 
+					<div class="wikiinfo float-left" id="pdfinfo" style="display:none">
+				<div class="alert alert-info" style="width:500px"><h4><span class="icon icon-information fas fa-info-circle fa-fw "></span> <span class="rboxtitle">Please wait</span></h4><div class="rboxcontent" style="display: inline"><span class="fas fa-circle-notch fa-spin" style="font-size:24px"></span> The PDF is being prepared, please wait...</div></div>
+			</div>
+			</div> 
+</div> 
+
+	
+	
+						
+												
+		
+	
+						
+						
+			
+	
+				
+	
+				
+	<article id="top" class="wikitext clearfix nopagetitle" style="padding-top: 44px;">
+					
+			
+							
+
+			
+												 
+
+		
+		<div id="page-data" class="clearfix">
+										<a name="//apple_ref/cpp/Section/Top" class="dashAnchor"></a><h1 class="showhide_heading" id="Plugin_TrackerFilter"> Plugin TrackerFilter<a href="PluginTrackerFilter.html#Plugin_TrackerFilter" class="heading-link"><span class="icon icon-link fas fa-link "></span></a></h1>
+<p>See also <a href="PluginList-with-editable-filters.html" title="PluginList with editable filters" class="wiki wiki_page">PluginList with editable filters</a>
+</p>
+
+<a id="introduction" name="//apple_ref/cpp/Section/Introduction" class="dashAnchor"></a><h2 class="showhide_heading" id="Introduction"> Introduction<a href="PluginTrackerFilter.html#Introduction" class="heading-link"><span class="icon icon-link fas fa-link "></span></a></h2>
+<p>Use this <a href="http://doc.tiki.org/wiki%20plugin" title="" class="wiki wiki_page">wiki plugin</a> to give an interface to filter a tracker's items by field values.
+</p>
+
+<p>It should be noted that, whilst it will take a bit more effort to become familiar with and an understanding of <a href="http://doc.tiki.org/Unified-Index" title="Unified Index" class="wiki wiki_page">UNIFIED SEARCH</a> is also needed, using the <a href="Plugin-Custom-Search.html" title="Create a custom search form for searching or listing items on the site" class="wiki wiki_page">CUSTOMSEARCH</a> plugin which utilises the <a href="Plugin-List.html" title="Search for, list, and filter all types of items and display custom formatted results" class="wiki wiki_page">LIST</a> plugin capabilities, provides a much more feature rich set of capabilities.
+</p>
+<a id="syntax" name="//apple_ref/cpp/Section/Syntax" class="dashAnchor"></a><h2 class="showhide_heading" id="Syntax"> Syntax<a href="PluginTrackerFilter.html#Syntax" class="heading-link"><span class="icon icon-link fas fa-link "></span></a></h2>
+<div class="codecaption">example</div><pre class="codelisting" data-theme="off" data-wrap="1" dir="ltr" style="white-space:pre-wrap; overflow-wrap: break-word; word-wrap: break-word;" id="codebox1">{TRACKERFILTER(trackerId=1, filters=1/d:2/r:3, fields=1:4:5)}This is the result{TRACKERFILTER}</pre>
+<p>
+</p>
+<a id="parameters" name="//apple_ref/cpp/Section/Parameters" class="dashAnchor"></a><h2 class="showhide_heading" id="Parameters"> Parameters<a href="PluginTrackerFilter.html#Parameters" class="heading-link"><span class="icon icon-link fas fa-link "></span></a></h2>
+<p>The plugin has a core set of parameters, but because it also shares all the parameters available from the <a href="PluginTrackerList.html" title="List, filter and sort the items in a tracker" class="wiki wiki_page">TRACKERLIST</a> plugin, these additional parameters can be added to customise the look of the result (except the filterfield, exactvalue and filtervalue - using these parameters will overwrite the core filter selection)
+</p>
+
+<p>The<strong> core set of parameters </strong>are as follows:
+</p>
+<ul><li> <strong>trackerId</strong>: Id of the tracker
+</li><li> <strong>filters</strong> is the list of fields that can be filtered with the format of their display.
+<br>The fields are identified by their numeric Ids. All the fields must belong to the same tracker. After tiki&gt;=8, the status can be a filter and must be entered as status or Status (Filter example: 3/d:Status/d)
+<br>The Id can be followed by the character / and one of this format:
+<ul><li> d: drop down list of all the values occurring for the field: only one value can be selected
+</li><li> r: radio buttons of all the values occurring for the field: only one value can be selected
+</li><li> m: multiple choice in the drop down list of all the values occurring for the field( a multiple choice acts as an OR between the values of the choice)
+</li><li> c: checkbox (multiple choice) in the drop down list of all the values occurring for the field
+</li><li> t: text entry (tiki &gt;= 2.0): a text input where the user must enter a part of the text
+<br>If the text contains % like a%. it will search all the values beginning with % (can also do %a or a%b%c) or a* or *a
+</li><li> T: text entry (tiki &gt;= 2.0): a text input where the user must enter an exact value of the field
+</li><li> i: text entry + initial (tiki &gt;=2.0): a list of initial that will directly filter on an initial. Note: if you use initial, not other field can be filtered
+</li><li> sqlsearch: advanced mysql search (tiki &gt;= 5.0): a list of fields where a mysql advanced search will be done - Note: the search is done field content per field content: It means if you query A B and A is in a field and B in another one you will not find the item. The syntax will be (1:2)/sqlsearch means 'do a advanced mysqlsearch on fields 1 and 2.
+</li><li> &gt; or &lt; or &gt;= or &lt;=: comparison (tw &gt;=6.0): the field will be compared using the format as operator. Ex: filters="1/&gt;=" will find all the items with the field 1 bigger (for a numeric)  or after (for a date) the value the user will give
+</li><li> range: range of values ( <code>from</code> and <code>to</code> search boxes shown). Timezone-aware fields like JsCalendar field are converted properly before being searched, so search is done in the correct timezone. Range filter can be used with any field - not only dates but it is most useful for dates and numeric fields. <a href="http://doc.tiki.org/Tiki16" title="Tiki16" class="wiki wiki_page">tiki &gt;=16.2</a>
+</li></ul></li><li> <strong>fields</strong> will show the fields displayed for the selected items
+</li><li> <strong>action</strong> : name of the submit button - default is "filter" (tiki &gt;= 1.9.8)
+</li><li> <strong>noflipflop</strong>:  will not show the flipflop to hide and display the list of filters. (tiki &gt;=6.0)
+</li><li> <strong>export_action</strong>:  (tiki &gt;= 6.0) if set to appropriate text e.g."Confirm CSV Download" this over-rides the normal trackerfilter approach and displays a button with the designated text that directly exports the set of fields specified as a CSV file. A filter to define a specific 'filter set' must be defined by using the filterfield, filtervalue/exactvalue parameters, formatted in the standard ways. Additional parameter options are (default|alternate):
+<ul><li><strong>export_itemid</strong>=y|n - includes the ItemId in the export
+</li><li><strong>export_status</strong>=n|y - includes the status field in the export
+</li><li><strong>export_modif</strong>=n|y - includes the modified date in the export
+</li><li><strong>export_created</strong>=n|y - includes the creation date in the export
+</li><li><strong>export_charset</strong>=UTF-8|ISO-8859-1 - defines the character set to be used for the export
+</li></ul></li><li><strong>mapButtons</strong>=y|n - Display Mapview and Listview buttons (from Tiki6, requires Google Maps feature)
+</li><li><strong>url</strong> replace tracker item url with the url you input in the field. You can include the Item Id. This is very usefull combined with TrackerList and/or Pretty tracker to link the results of the tracker filter to another page (wiki or template) where the item will be displayed as single entity (using TrackerList plugin).
+<br><em>Use Case</em> : Search and display tracker item in wiki pages without any relation to the trackers usual design (buttons, pagination, etc)
+<br>Set the plugin TrackerFilter in a wiki page to display and filter tracker item. Be sure it is working with the usual parameters and display items. Set the parameter Show Links to yes (showlinks="y") and in the parameter URL set the page that will be used to display the item once the item link is clicked with the following url="singleitem_tpl?itemId".
+<br>Create a second wiki page named "singleitem_tpl". In this page set the plugin TrackerList with the Tracker Id parameter and set for Wiki Page (wiki="item_tpl").
+<br>Create a third page named item_tpl that you are now free to design the way you want that will display the item fields.
+<br> That way you can design all the way the page using wiki syntax and CSS and the user will never have the feeling he is looking at a tracker or at trackers items.
+</li></ul><p>
+<br>The <strong>full set of available parameters</strong>,  the core TRACKERFILTER set and the additional ones from TRACKERLIST,  are set out in the various TABS below:
+</p>
+
+<p>
+</p>
+<div class="clearfix tabs" data-name="_index1"><div class="float-right"><a class="btn btn-primary btn-sm btn-secondary" target="" data-role="button" data-inline="true" href="PluginTrackerFilter.html" onclick="setCookie('_index1','n', 'tabs') ;">No Tabs</a></div><ul class="nav nav-tabs"><li class="nav-item"><a class="nav-link active show" href="PluginTrackerFilter.html#content_index1-1" data-toggle="tab">Main</a></li><li class="nav-item"><a class="nav-link " href="PluginTrackerFilter.html#content_index1-2" data-toggle="tab">Basic Filtering</a></li><li class="nav-item"><a class="nav-link " href="PluginTrackerFilter.html#content_index1-3" data-toggle="tab">Show/Hide</a></li><li class="nav-item"><a class="nav-link " href="PluginTrackerFilter.html#content_index1-4" data-toggle="tab">Calendar</a></li><li class="nav-item"><a class="nav-link " href="PluginTrackerFilter.html#content_index1-5" data-toggle="tab">Export</a></li></ul></div><div class="tab-content"><div id="content_index1-1" class="tab-pane pt-3 active show"><p>
+<em>Introduced in Tiki 1.</em><em> Required parameters are in</em> <strong><code>bold</code></strong>.<br><em>Preferences required:</em> feature_trackers, wikiplugin_trackerfilter<br></p><div class="table-responsive"><table class="table table-striped table-hover">
+	<tr class="heading">
+		<th class="heading">Parameters
+		</th><th class="heading">Accepted Values</th>
+		<th class="heading">Description</th>
+		<th class="heading">Default</th>
+		<th class="heading">Since</th>
+	</tr>
+	<tr>
+		<td>(body of plugin)</td>
+		<td></td>
+		<td>notice</td>
+		<td></td>
+		<td></td>
+	</tr>
+	<tr>
+		<td><strong><code>trackerId</code></strong></td>
+		<td>digits</td>
+		<td>Numeric value representing the tracker ID</td>
+		<td></td>
+		<td>1</td>
+	</tr>
+	<tr>
+		<td><code>tstotalformat</code></td>
+		<td></td>
+		<td>Format for table totals (click <a href="http://mottie.github.io/tablesorter/docs/example-widget-math.html#mask_examples">here</a> for patterns). Example: <code>#,###.</code><br></td>
+		<td></td>
+		<td></td>
+	</tr>
+	<tr>
+		<td><code>ldelim</code></td>
+		<td></td>
+		<td>Smarty left delimiter for Latex generation. Example:<code>@{</code></td>
+		<td>{</td>
+		<td>2.0</td>
+	</tr>
+	<tr>
+		<td><code>rdelim</code></td>
+		<td></td>
+		<td>Smarty right delimiter for Latex generation Example:<code>}@</code></td>
+		<td>}</td>
+		<td>2.0</td>
+	</tr>
+	<tr>
+		<td><code>tpl</code></td>
+		<td></td>
+		<td>Use content of the specified tpl file as template to display the item.
+					Use <code>{$f_fieldId}</code> to display a field with ID <code>fieldId</code>.</td>
+		<td></td>
+		<td>2.0</td>
+	</tr>
+	<tr>
+		<td><code>urlafterdelete</code></td>
+		<td>url</td>
+		<td>Url to redirect to after delete</td>
+		<td></td>
+		<td>11.0</td>
+	</tr>
+	<tr>
+		<td><code>force_separate_compile</code></td>
+		<td>(blank)<br>y<br>n</td>
+		<td>Compile each item separately instead of compiling the entire template.</td>
+		<td>y</td>
+		<td>11.0</td>
+	</tr>
+	<tr>
+		<td><code>displaysheet</code></td>
+		<td>(blank)<br>y<br>n</td>
+		<td>Display tracker as a spreadsheet (not used by default)</td>
+		<td>n</td>
+		<td>6.0</td>
+	</tr>
+	<tr>
+		<td><code>list_mode</code></td>
+		<td>(blank)<br>y<br>n<br>csv</td>
+		<td>Set output format. Yes (y) displays tracker list view with truncated values
+					(default); No (n) displays in tracker item view; Comma Separated Values (csv) outputs without any
+					HTML formatting.</td>
+		<td>y</td>
+		<td>3.0</td>
+	</tr>
+	<tr>
+		<td><code>popup</code></td>
+		<td>digits<br><em>separator:</em> <code>:</code></td>
+		<td>Colon-separated list of fields which will display in a tooltip on mouse over.
+					Example: <code>6:7</code>. Setting this parameter implies <code>y</code> value for <code>sort</code> param.</td>
+		<td></td>
+		<td>2.0</td>
+	</tr>
+	<tr>
+		<td><code>sort</code></td>
+		<td>(blank)<br>y<br>n</td>
+		<td>Display columns in the order listed in the <code>fields</code> parameter instead of by
+					field ID (field ID order is used by default</td>
+		<td>n</td>
+		<td>2.0</td>
+	</tr>
+	<tr>
+		<td><code>sortchoice</code></td>
+		<td>text<br><em>separator:</em> <code>:</code></td>
+		<td>Add a dropdown of sorting choices. Separate each choice with a <code>:</code>. For each
+					choice, use the format <code>value|label</code>. See <code>sort_mode</code> for value choices. Example with two
+					sorting choices: <code>sortchoice="created_desc|Newest first:lastModif_desc|Last modified first"</code></td>
+		<td></td>
+		<td>5.0</td>
+	</tr>
+	<tr>
+		<td><code>stickypopup</code></td>
+		<td>(blank)<br>y<br>n</td>
+		<td>Choose whether the popup tooltip will stay displayed on mouse out (does not stay open by default)</td>
+		<td></td>
+		<td>2.0</td>
+	</tr>
+	<tr>
+		<td><code>export</code></td>
+		<td>(blank)<br>y<br>n</td>
+		<td>Show an export button (not shown by default)</td>
+		<td>n</td>
+		<td>3.0</td>
+	</tr>
+	<tr>
+		<td><code>force_compile</code></td>
+		<td>(blank)<br>y<br>n</td>
+		<td>Force Smarty to recompile the templates for each tracker item when using a
+				    wiki page as a template. Default=n (best performance)</td>
+		<td>n</td>
+		<td>6.0</td>
+	</tr>
+	<tr>
+		<td><code>editableall</code></td>
+		<td>(blank)<br>y<br>n</td>
+		<td>Allow all displayed fields to be editable</td>
+		<td>y</td>
+		<td>11.0</td>
+	</tr>
+	<tr>
+		<td><code>sort_mode</code></td>
+		<td>created_asc, created_desc, lastModif_asc, lastModif_desc, f_fieldId_asc, f_filedId_desc (replacing <code>fieldId</code> with the field ID number, e.g. <code>f_3_asc</code>)</td>
+		<td>Sort rows in ascending (_asc) or descending (_desc) order based on field ID,
+					date created or date last modified</td>
+		<td></td>
+		<td>1</td>
+	</tr>
+	<tr>
+		<td><code>tplwiki</code></td>
+		<td>pagename</td>
+		<td>Use content of the wiki page as template to display the item but with as little
+					parsing on the content as with a tpl on disk. The page should have the permission
+					<code>tiki_p_use_as_template</code> set, and should only be editable by trusted users such as other site
+					admins</td>
+		<td></td>
+		<td>6.5 &amp; 7.1</td>
+	</tr>
+	<tr>
+		<td><code>wiki</code></td>
+		<td>pagename</td>
+		<td>Use content of the wiki page as template to display the item. The page should
+					have the permission <code>tiki_p_use_as_template</code> set, and should only be editable by trusted users
+					such as other site admins</td>
+		<td></td>
+		<td>2.0</td>
+	</tr>
+	<tr>
+		<td><code>compute</code></td>
+		<td><code>fieldId/operator</code>, separated by <code>:</code></td>
+		<td>Sum or average all the values of a field and displays it at the bottom of the
+					table. <code>fieldId/sum:fieldId/avg</code></td>
+		<td></td>
+		<td>3.0</td>
+	</tr>
+	<tr>
+		<td><code>fields</code></td>
+		<td>digits<br><em>separator:</em> <code>:</code></td>
+		<td>Colon-separated list of field IDs for the fields to be displayed.
+					Example: <code>2:4:5</code>. The field order specified here determines the column order if the <code>sort</code>
+					parameter is set to <code>y</code>.</td>
+		<td></td>
+		<td>1</td>
+	</tr>
+	<tr>
+		<td><code>editable</code></td>
+		<td>digits<br><em>separator:</em> <code>:</code></td>
+		<td>Colon-separated list of fields for which inline editing will be enabled.</td>
+		<td></td>
+		<td>11.0</td>
+
+	</tr></table></div>
+<p>
+<br></p></div><div id="content_index1-2" class="tab-pane pt-3 ">
+
+
+<div id="rbox_1" class="alert alert-info alert-dismissable"><button type="button" class="close" data-dismiss="alert" aria-hidden="true">×</button><div class="alert-heading h4"><span class="icon icon-information fas fa-info-circle "></span> <span class="rboxtitle">Note</span></div><div class="rboxcontent" style="display: inline"><em>These parameters allow the results to be pre-filtered before the user sees them. To allow the user to filter, sort or paginate results, see the parameters under the tablesorter tab.</em> </div></div>
+
+
+<em>Introduced in Tiki 1.</em><em> Required parameters are in</em> <strong><code>bold</code></strong>.<br><em>Preferences required:</em> feature_trackers, wikiplugin_trackerfilter<br><div class="table-responsive"><table class="table table-striped table-hover">
+	<tr class="heading">
+		<th class="heading">Parameters
+		</th><th class="heading">Accepted Values</th>
+		<th class="heading">Description</th>
+		<th class="heading">Default</th>
+		<th class="heading">Since</th>
+	</tr>
+	<tr>
+		<td><strong><code>filters</code></strong></td>
+		<td></td>
+		<td>The list of fields that can be used as filters along with their formats.
+					The field number and format are separated by a <code>/</code> and multiple fields are separated by <code>:</code>.Format choices are:<br><code>d</code> - dropdown<br><code>r</code> - radio buttons<br><code>m</code> - multiple choice dropdown<br><code>c</code> - checkbox<br><code>t</code> - text with wild characters<br><code>T</code> - exact text match<br><code>i</code> - initials<br><code>sqlsearch</code> - advanced search<br><code>range</code> - range search (from/to)<br><code>&gt;</code>, <code>&gt;, <code>&gt;&gt;=</code>, <code>&gt; - greater
+						than, less than, greater than or equal, less than or equal.<br>Example: <code>2/d:4/r:5:(6:7)/sqlsearch</code></code></code></td>
+		<td></td>
+		<td>1</td>
+	</tr>
+	<tr>
+		<td><code>view_user</code></td>
+		<td></td>
+		<td>Will display the items of the specified user</td>
+		<td></td>
+		<td>2.0</td>
+	</tr>
+	<tr>
+		<td><code>max</code></td>
+		<td>int</td>
+		<td>Maximum number of items to display or -1 for all items. Defaults to max records
+					preference, if set. Pagination will not show if all items are shown by setting to -1.</td>
+		<td></td>
+		<td>1</td>
+	</tr>
+	<tr>
+		<td><code>offset</code></td>
+		<td>int</td>
+		<td>Offset of first item. Default is no offset.</td>
+		<td>0</td>
+		<td>6.0</td>
+	</tr>
+	<tr>
+		<td><code>periodQuantity</code></td>
+		<td>int</td>
+		<td>Numeric value to display only last tracker items created within a user defined
+				    time-frame. Used in conjunction with the next parameter "Period unit", this parameter indicates how
+				    many of those units are to be considered to define the time frame. Use in conjunction with
+				    <code>max=-"1"</code> to list all items (by default <code>max</code> is set to <code>10</code>).</td>
+		<td></td>
+		<td>6.5, <s>7.x</s> &amp; 8.0</td>
+	</tr>
+	<tr>
+		<td><code>forceoffset</code></td>
+		<td>(blank)<br>y<br>n</td>
+		<td>Fix offset to that specified. This will disallow pagination.</td>
+		<td>n</td>
+		<td>8.0</td>
+	</tr>
+	<tr>
+		<td><code>periodType</code></td>
+		<td>(blank)<br>c<br>m</td>
+		<td>Time period after creation or after modification</td>
+		<td></td>
+		<td>6.7, <s>7.x</s>, 8.4 &amp; 9.0</td>
+	</tr>
+	<tr>
+		<td><code>periodUnit</code></td>
+		<td>(blank)<br>hour<br>day<br>week<br>month</td>
+		<td>Time unit used with "Period quantity"</td>
+		<td></td>
+		<td>6.5, <s>7.x</s> &amp; 8.0</td>
+	</tr>
+	<tr>
+		<td><code>status</code></td>
+		<td>(blank)<br>o<br>p<br>c<br>op<br>oc<br>pc<br>opc</td>
+		<td>Only show items matching certain status filters (only items with open status shown by default)</td>
+		<td>o</td>
+		<td>1</td>
+	</tr>
+	<tr>
+		<td><code>exactvalue</code></td>
+		<td>any text<br><em>separator:</em> <code>:</code></td>
+		<td>Exact value (or multiple values) that correspond to <code>filterfield</code>. <br>Special
+					search values to filter by:<br><code>categories(x)</code> - tracker item is in category with ID x or one its descendants<br><code>notcategories(x)</code> - tracker item is not in category with ID x or one of its descendants<br><code>preference(name)</code> - match against the value of a Tiki preference<br><code>notpreference(name)</code> - match if value does not equal a Tiki preference value<br><code>not(value)</code> - match if the field does not equal "value"<br><code>not()</code> - match for non empty values (opposite with <code>exactvalue</code>="")<br><code>or(value1,value2)</code> - match if the field equals "value1" or "value2" (can list more than 2 alternative values)<br><code>field(x, itemid)</code> - match field with ID x in item with ID itemid.
+						<code>field(x)</code> can be used if the <code>itemId</code> URL parameter is set<br><code>notfield(x, itemid)</code> - match if not equal to field with ID x in item with ID itemid
+						<code>field(x)</code> can be used if the <code>itemId</code> URL parameter is set<br>The following comparisons can also be applied to date fields by using date phrases that PHP recognizes
+						(see <a target="_blank" class="wiki" href="http://us.php.net/manual/en/function.strtotime.php">http://us.php.net/manual/en/function.strtotime.php</a> ):<br><code>less(value)</code> - match if less than "value"<br><code>greater(value)</code> - match if greater than "value"<br><code>lessequal(value)</code> - match if less than or equal to "value"<br><code>greaterequal(value)</code> - match if greater than or equal to "value"<br></td>
+		<td></td>
+		<td>1</td>
+	</tr>
+	<tr>
+		<td><code>filtervalue</code></td>
+		<td>any text<br><em>separator:</em> <code>:</code></td>
+		<td>Filter value (or multiple values) that correspond to <code>filterfield</code>. For better performance, use <code>exactvalue</code>
+					instead. <br>Special search values to match:<br><code>*value</code> - text that ends in "value"<br><code>value*</code> - text that begins with "value"<br><code>#user</code> - the current user's login name<br><code>#group_default</code> - the current user's default group.<br>To filter by empty/non-empty values, use parameter <code>exactvalue</code> instead<br></td>
+		<td></td>
+		<td>1</td>
+	</tr>
+	<tr>
+		<td><code>ignoreRequestItemId</code></td>
+		<td>(blank)<br>y<br>n</td>
+		<td>Ignore the itemId url parameter when filtering list (not ignored by default)</td>
+		<td>n</td>
+		<td>5.0</td>
+	</tr>
+	<tr>
+		<td><code>itemId</code></td>
+		<td>digits<br><em>separator:</em> <code>:</code></td>
+		<td>Colon-separated list of item IDs to restrict the listing to</td>
+		<td></td>
+		<td>2.0, multiple since 3.0</td>
+	</tr>
+	<tr>
+		<td><code>view</code></td>
+		<td>(blank)<br>page<br>user<br>group<br>ip</td>
+		<td>Display only the items of the following:<br><code>user</code> - the current user<br><code>group</code> - the current user's groups<br><code>page</code> - the current page name<br><code>ip</code> - the current IP address<br></td>
+		<td></td>
+		<td>2.0</td>
+	</tr>
+	<tr>
+		<td><code>goIfOne</code></td>
+		<td>(blank)<br>y<br>n</td>
+		<td>Display the item rather than list if only one item is found</td>
+		<td></td>
+		<td>1</td>
+	</tr>
+	<tr>
+		<td><code>filterfield</code></td>
+		<td>digits<br><em>separator:</em> <code>:</code></td>
+		<td>Colon-separated list of fields to allow filtering on.</td>
+		<td></td>
+		<td>1</td>
+	</tr></table></div>
+<p>
+<br></p></div><div id="content_index1-3" class="tab-pane pt-3 ">
+<em>Introduced in Tiki 1.</em><br><em>Preferences required:</em> feature_trackers, wikiplugin_trackerfilter<br><div class="table-responsive"><table class="table table-striped table-hover">
+	<tr class="heading">
+		<th class="heading">Parameters
+		</th><th class="heading">Accepted Values</th>
+		<th class="heading">Description</th>
+		<th class="heading">Default</th>
+		<th class="heading">Since</th>
+	</tr>
+	<tr>
+		<td><code>action</code></td>
+		<td></td>
+		<td>Label on the submit button. Default: <code>Filter</code>. Use a space character to omit the
+					button (for use in datachannels etc)</td>
+		<td>Filter</td>
+		<td>2.0</td>
+	</tr>
+	<tr>
+		<td><code>checkbox</code></td>
+		<td></td>
+		<td>Adds a checkbox on each line to perform an action. Required elements are separated
+					by <code>/</code>. Those elements are:<br><code>FieldId</code> - the value of this field will be posted to the action<br><code>PostName</code> - the name of the post<br><code>Title</code> - the title of the submit button<br><code>Submit</code> - the name of the submit button<br><code>ActionUrl</code> - the file that will be called upon submit<br><code>Tpl</code> - optional template inserted before the submit button and returned<br><code>SelectType</code> - Leave empty for multiple select, or use <code>dropdown</code> or
+						<code>radio</code>.<br><code>Embed</code> - Set to %0y%1 if the trackerlist table is embedded inside an existing form.
+						ActionUrl is ignored in this case.<br><code>Checked</code> - comma-separated list of pre-checked items<br>Format: <code>checkbox="FieldId/PostName/Title/Submit/ActionUrl/Tpl/SelectType/Embed/Checked"</code><br>Example: <code>checkbox="6/to/Email to selected/submit/messu-compose.php//dropdown//1,2,3"</code><br></td>
+		<td></td>
+		<td>1</td>
+	</tr>
+	<tr>
+		<td><code>moreurl</code></td>
+		<td>url</td>
+		<td>More link pointing to specified URL instead of default tracker item link</td>
+		<td>tiki-view_tracker.php</td>
+		<td>2.0</td>
+	</tr>
+	<tr>
+		<td><code>displayList</code></td>
+		<td>(blank)<br>y<br>n</td>
+		<td>Show the full list (before filtering) initially (filtered list shown by default)</td>
+		<td>n</td>
+		<td>2.0</td>
+	</tr>
+	<tr>
+		<td><code>showlastmodif</code></td>
+		<td>(blank)<br>y<br>n</td>
+		<td>Last modification date display is based on tracker settings unless overridden here</td>
+		<td></td>
+		<td>2.0</td>
+	</tr>
+	<tr>
+		<td><code>showlastmodifby</code></td>
+		<td>(blank)<br>y<br>n</td>
+		<td>Last modified by user display is based on tracker settings unless overridden here</td>
+		<td></td>
+		<td>14.0</td>
+	</tr>
+	<tr>
+		<td><code>line</code></td>
+		<td>(blank)<br>y<br>in<br>n</td>
+		<td>Displays all the filters on the same line (not shown on same line by default)</td>
+		<td>n</td>
+		<td>2.0</td>
+	</tr>
+	<tr>
+		<td><code>mapButtons</code></td>
+		<td>(blank)<br>y<br>n</td>
+		<td>Display Mapview and Listview buttons</td>
+		<td></td>
+		<td>6.0 - was <code>googlemapButtons</code> until 12.0</td>
+	</tr>
+	<tr>
+		<td><code>more</code></td>
+		<td>(blank)<br>y<br>n</td>
+		<td>Show a 'more' button that links to the tracker item (not shown by default)</td>
+		<td>n</td>
+		<td>2.0</td>
+	</tr>
+	<tr>
+		<td><code>noflipflop</code></td>
+		<td>(blank)<br>y<br>n</td>
+		<td>The toggle button to show/hide filters will not be shown if set to Yes (<code>y</code>).
+					Default is not to show the toggle (default changed from "n" to "y" in Tiki 20.0).</td>
+		<td>y</td>
+		<td>6.0</td>
+	</tr>
+	<tr>
+		<td><code>showcloseitem</code></td>
+		<td>(blank)<br>y<br>n</td>
+		<td>Show a close item option (not shown by default)</td>
+		<td>n</td>
+		<td>8.0</td>
+	</tr>
+	<tr>
+		<td><code>showcomments</code></td>
+		<td>(blank)<br>y<br>n</td>
+		<td>Show comments count or last comment date and user depending on tracker preferences</td>
+		<td>y</td>
+		<td>16.0</td>
+	</tr>
+	<tr>
+		<td><code>showcreated</code></td>
+		<td>(blank)<br>y<br>n</td>
+		<td>Creation date display is based on tracker settings unless overridden here</td>
+		<td></td>
+		<td>2.0</td>
+	</tr>
+	<tr>
+		<td><code>showdelete</code></td>
+		<td>(blank)<br>y<br>n</td>
+		<td>Show a delete icon for each item (not shown by default)</td>
+		<td>n</td>
+		<td>4.0</td>
+	</tr>
+	<tr>
+		<td><code>showdesc</code></td>
+		<td>(blank)<br>y<br>n</td>
+		<td>Show the tracker's description (not shown by default)</td>
+		<td>n</td>
+		<td>1</td>
+	</tr>
+	<tr>
+		<td><code>showrss</code></td>
+		<td>(blank)<br>y<br>n</td>
+		<td>Show an RSS feed button (not shown by default)</td>
+		<td>n</td>
+		<td>5.0</td>
+	</tr>
+	<tr>
+		<td><code>showfieldname</code></td>
+		<td>(blank)<br>y<br>n</td>
+		<td>Use the field names as column titles (used by default)</td>
+		<td>y</td>
+		<td>1</td>
+	</tr>
+	<tr>
+		<td><code>showinitials</code></td>
+		<td>(blank)<br>y<br>n</td>
+		<td>Show an alphabetical index by first letter to assist in navigation (not shown
+					by default)</td>
+		<td>n</td>
+		<td>1</td>
+	</tr>
+	<tr>
+		<td><code>shownbitems</code></td>
+		<td>(blank)<br>y<br>n</td>
+		<td>Show the number of items found (not shown by default)</td>
+		<td>n</td>
+		<td>2.0</td>
+	</tr>
+	<tr>
+		<td><code>showitemrank</code></td>
+		<td>(blank)<br>y<br>n</td>
+		<td>Show item ranks (not shown by default)</td>
+		<td>n</td>
+		<td>4.0</td>
+	</tr>
+	<tr>
+		<td><code>showlinks</code></td>
+		<td>(blank)<br>y<br>n<br>r</td>
+		<td>Show links to each tracker item (not shown by default). At least one field needs
+					to be set as Public in order for this to work.</td>
+		<td>n</td>
+		<td>1</td>
+	</tr>
+	<tr>
+		<td><code>showopenitem</code></td>
+		<td>(blank)<br>y<br>n</td>
+		<td>Show an open item  option (not shown by default)</td>
+		<td>n</td>
+		<td>8.0</td>
+	</tr>
+	<tr>
+		<td><code>showpagination</code></td>
+		<td>(blank)<br>y<br>n</td>
+		<td>Determines whether pagination will be shown (shown by default)</td>
+		<td>y</td>
+		<td>4.0</td>
+	</tr>
+	<tr>
+		<td><code>showpenditem</code></td>
+		<td>(blank)<br>y<br>n</td>
+		<td>Show a pending item option (not shown by default)</td>
+		<td>n</td>
+		<td>8.0</td>
+	</tr>
+	<tr>
+		<td><code>showmap</code></td>
+		<td>(blank)<br>y<br>n</td>
+		<td>Show Map of results (not shown by default)</td>
+		<td></td>
+		<td>12.0</td>
+	</tr>
+	<tr>
+		<td><code>showstatus</code></td>
+		<td>(blank)<br>y<br>n</td>
+		<td>Show the status of the items (not shown by default)</td>
+		<td>n</td>
+		<td>1</td>
+	</tr>
+	<tr>
+		<td><code>showtitle</code></td>
+		<td>(blank)<br>y<br>n</td>
+		<td>Display the title of the tracker (not shown by default)</td>
+		<td>n</td>
+		<td>1</td>
+	</tr>
+	<tr>
+		<td><code>showwatch</code></td>
+		<td>(blank)<br>y<br>n</td>
+		<td>Show a watch button (not shown by default)</td>
+		<td></td>
+		<td>5.0</td>
+	</tr>
+	<tr>
+		<td><code>allowtableexpansion</code></td>
+		<td>(blank)<br>y<br>n</td>
+		<td>Show a toggle button to allow wide tables to overflow to the right of the content area rather than be scrollable in a limited-width area (not by default).</td>
+		<td>n</td>
+		<td>18.0</td>
+	</tr>
+	<tr>
+		<td><code>silent</code></td>
+		<td>(blank)<br>y<br>n</td>
+		<td>Show nothing if no items found (the table header and a 'No records found'
+				    message is shown by default).</td>
+		<td></td>
+		<td>4.0</td>
+	</tr>
+	<tr>
+		<td><code>url</code></td>
+		<td>url</td>
+		<td>The link that will be on each main field when <code>showlinks="y"</code>. Special values:<br><code>url="mypage?<strong>itemId</strong>"</code> - will link to the item based on its item ID<br><code>url="mypage?<strong>tr_offset</strong>"</code> - will link to the item based on its offset value<br><code>url="<strong>sefurl</strong>"</code> - will link to the item using <code>itemX</code> (where X is the item ID) for when SEFURL is being
+						used<br><code><strong>vi_tpl</strong></code> - use to show the item without admin buttons and with a back button
+						when using a template (Display &gt; Section Format must be set to "Configured" in the tracker
+						properties). Example: <code>url="tiki-view_tracker_item.php?<strong>vi_tpl</strong>=wiki:PageName&amp;itemId"</code><br><code><strong>ei_tpl</strong></code> - similar to <code>vi_tpl</code> except that admin buttons are shown for users
+						with proper permissions when "Restrict non admins to wiki page access only" is set in the
+						tracker properties.<br></td>
+		<td></td>
+		<td>2.0, 3.0 for <code>itemId</code>, 11.0 for <code>tr_offset</code>, 14.0 for <code>sefurl</code> and <code>vi_tpl</code></td>
+
+	</tr></table></div>
+<p>
+<br></p></div><div id="content_index1-4" class="tab-pane pt-3 ">
+<em>Introduced in Tiki 1.</em><br><em>Preferences required:</em> feature_trackers, wikiplugin_trackerfilter<br><div class="table-responsive"><table class="table table-striped table-hover">
+	<tr class="heading">
+		<th class="heading">Parameters
+		</th><th class="heading">Accepted Values</th>
+		<th class="heading">Description</th>
+		<th class="heading">Default</th>
+		<th class="heading">Since</th>
+	</tr>
+	<tr>
+		<td><code>calendartitle</code></td>
+		<td>text</td>
+		<td>Enter a title to display a calendar title (not set by default)</td>
+		<td></td>
+		<td>6.0</td>
+	</tr>
+	<tr>
+		<td><code>calendarbeginmonth</code></td>
+		<td>(blank)<br>y<br>n</td>
+		<td>Set whether calendar will begin at the beginning of the month (does by default).</td>
+		<td>y</td>
+		<td>6.0</td>
+	</tr>
+	<tr>
+		<td><code>calendardelta</code></td>
+		<td>(blank)<br>+month<br>-month<br>+bimester<br>-bimester</td>
+		<td>Set the calendar delta that will be shown (not set by default)</td>
+		<td></td>
+		<td>6.0</td>
+	</tr>
+	<tr>
+		<td><code>calendarpopup</code></td>
+		<td>(blank)<br>y<br>n</td>
+		<td>Calendar items will popup, overrides the <code>stickypopup</code> parameter if turned off
+					(default is to pop up).</td>
+		<td>y</td>
+		<td>6.0</td>
+	</tr>
+	<tr>
+		<td><code>calendarviewmode</code></td>
+		<td>(blank)<br>month<br>bimester<br>trimester<br>quarter<br>semester<br>year</td>
+		<td>Calendar view type time span (default is month)</td>
+		<td>month</td>
+		<td>6.0</td>
+	</tr>
+	<tr>
+		<td><code>calendarviewnavbar</code></td>
+		<td>(blank)<br>y<br>n<br>partial</td>
+		<td>Show calendar navigation bar (shown by default).</td>
+		<td>y</td>
+		<td>6.0</td>
+	</tr>
+	<tr>
+		<td><code>calendarstickypopup</code></td>
+		<td>(blank)<br>y<br>n</td>
+		<td>Calendar item popups will stay open if set to y (Yes). Not sticky by default</td>
+		<td>n</td>
+		<td>6.0</td>
+	</tr>
+	<tr>
+		<td><code>calendarfielddate</code></td>
+		<td>digits<br><em>separator:</em> <code>:</code></td>
+		<td>Used to display items in a calendar view. One fieldId if one date, or 2 fieldIds
+					separated with <code>:</code> for <code>start:end</code></td>
+		<td></td>
+		<td>6.0</td>
+
+	</tr></table></div>
+<p>
+<br></p></div><div id="content_index1-5" class="tab-pane pt-3 ">
+<em>Introduced in Tiki 1.</em><br><em>Preferences required:</em> feature_trackers, wikiplugin_trackerfilter<br><div class="table-responsive"><table class="table table-striped table-hover">
+	<tr class="heading">
+		<th class="heading">Parameters
+		</th><th class="heading">Accepted Values</th>
+		<th class="heading">Description</th>
+		<th class="heading">Default</th>
+		<th class="heading">Since</th>
+	</tr>
+	<tr>
+		<td><code>export_action</code></td>
+		<td></td>
+		<td>Label for an export button. Leave blank to show the usual "Filter" button instead.</td>
+		<td></td>
+		<td>6.0</td>
+	</tr>
+	<tr>
+		<td><code>export_charset</code></td>
+		<td></td>
+		<td>Character set to be used if the Export CSV option is used</td>
+		<td>UTF-8</td>
+		<td>11.1</td>
+	</tr>
+	<tr>
+		<td><code>export_created</code></td>
+		<td>(blank)<br>y<br>n</td>
+		<td>Export the created date field if the Export CSV option is used</td>
+		<td>n</td>
+		<td>11.1</td>
+	</tr>
+	<tr>
+		<td><code>export_modif</code></td>
+		<td>(blank)<br>y<br>n</td>
+		<td>Export the modified date field if the Export CSV option is used</td>
+		<td>n</td>
+		<td>11.1</td>
+	</tr>
+	<tr>
+		<td><code>export_status</code></td>
+		<td>(blank)<br>y<br>n</td>
+		<td>Export the status field if the Export CSV option is used</td>
+		<td>n</td>
+		<td>11.1</td>
+
+	</tr></table></div>
+<p>
+<br></p>
+</div></div>
+<p>
+</p>
+<h3 class="showhide_heading" id="Additional_note_on_parameters">Additional note on parameters<a href="PluginTrackerFilter.html#Additional_note_on_parameters" class="heading-link"><span class="icon icon-link fas fa-link "></span></a></h3>
+<ul><li> <strong>Info on 'filters' parameter field formats:</strong>
+<ul><li> d: drop down list of all the values occurring for the field: only one value can be selected
+</li><li> r: radio buttons of all the values occurring for the field: only one value can be selected
+</li><li> m: multiple choice in the drop down list of all the values occurring for the field( a multiple choice acts as an OR between the values of the choice)
+</li><li> c: checkbox (multiple choice) in the drop down list of all the values occurring for the field
+</li><li> t: text entry: a text input where the user must enter a part of the text
+<br>If the text contains % like a%. it will search all the values beginning with % (can also do %a or a%b%c) or a* or *a
+</li><li> T: text entry: a text input where the user must enter an exact value of the field
+</li><li> i: text entry + initial: a list of initial that will directly filter on an initial. Note: if you use initial, not other field can be filtered
+</li><li> sqlsearch: advanced mysql search (Tiki5): a list of fields where a mysql advanced search will be done - Note: the search is done field content per field content: It means if you query A B and A is in a field and B in another one you will not find the item. The syntax will be (1:2)/sqlsearch means 'do a advanced mysqlsearch on fields 1 and 2.
+</li><li> &gt; or &lt; or &gt;= or &lt;=: comparison (Tiki6): the field will be compared using the format as operator. Ex: filters="1/&gt;=" will find all the items with the field 1 bigger (for a numeric)  or after (for a date) the value the user will give
+</li></ul></li><li><strong>Notes on the use of the export option:</strong>
+<ul><li>if the export_action parameter is not empty then the basic functionality of the plugin is changed to allow designated fields and other parameters to be exported as a CSV file for ALL the tracker items with the substitution of the normal  'Filter' button  by a custom button using the export_action text
+</li><li>the fields that are exported are those specified in the 'fields' parameter
+</li><li>other item values can be exported by setting the following parameters:
+<ul><li>export_status is set to 'y' to show the status of the individual item in the CSV file (the default is 'n')
+</li><li>export_created is set to 'y' to show the item's creation date in the CSV file (the default is 'n')
+</li><li>export_modif is set to 'y' to show the item's modification date  in the CSV file (the default is 'n')
+</li><li>export_charset can be set to the character set to be used in the export ie typically UTF-8 which is the default
+</li></ul></li><li><strong>Please note:</strong> if the export_action parameter is not empty then there is currently a problem with using the plugin editor, since for the export option there is no need to set the filters parameter - but for normal use this is a required parameter. This exception is allowed for in the main plugin code but at present the plugin editor does not recognise the exception and will not complete the 'Insert' until this parameter is entered. It is therefore recommended that edits to the trackerfilter plugin are carried direct in the main editor(s) when using the export option.
+</li></ul></li><li><strong>url</strong> replace tracker item url with the url you input in the field. You can include the Item Id. This is very useful combined with TrackerList and/or Pretty tracker to link the results of the tracker filter to another page (wiki or template) where the item will be displayed as single entity (using TrackerList plugin).
+<br><em>Use Case</em> : Search and display tracker item in wiki pages without any relation to the trackers usual design (buttons, pagination, etc)
+<br>Set the plugin TrackerFilter in a wiki page to display and filter tracker item. Be sure it is working with the usual parameters and display items. Set the parameter Show Links to yes ( <code>showlinks="y"</code> ) and in the parameter URL set the page that will be used to display the item once the item link is clicked with the following <code>ur<x>l="singleitem_tpl?itemId"</x></code> .
+<br>Create a second wiki page named "singleitem_tpl". In this page set the plugin TrackerList with the Tracker Id parameter and set for Wiki Page ( <code>wiki="item_tpl"</code> ).
+<br>Create a third page named <code>item_tpl</code> that you are now free to design the way you want that will display the item fields.
+<br> That way you can design all the way the page using wiki syntax and CSS and the user will never have the feeling he is looking at a tracker or at trackers items.
+</li></ul><h3 class="showhide_heading" id="Field_types_allowed"> Field types allowed<a href="PluginTrackerFilter.html#Field_types_allowed" class="heading-link"><span class="icon icon-link fas fa-link "></span></a></h3>
+<table class="wikitable table table-striped table-hover"><tr><td class="wikicell"> Field type </td><td class="wikicell"> since tiki version</td></tr><tr><td class="wikicell">category - e </td><td class="wikicell"> 6, and probably earlier</td></tr><tr><td class="wikicell">drop-down list - d </td><td class="wikicell"> 6, and probably earlier</td></tr><tr><td class="wikicell">email - m </td><td class="wikicell"> 6, and probably earlier</td></tr><tr><td class="wikicell">text field - t </td><td class="wikicell"> 6, and probably earlier</td></tr><tr><td class="wikicell">textarea - a </td><td class="wikicell"> 6, and probably earlier</td></tr><tr><td class="wikicell">numeric field - n </td><td class="wikicell"> 6, and probably earlier</td></tr><tr><td class="wikicell">country - y </td><td class="wikicell"> 6, and probably earlier</td></tr><tr><td class="wikicell">user </td><td class="wikicell"> 6, and probably earlier</td></tr><tr><td class="wikicell">group </td><td class="wikicell"> 6, and probably earlier</td></tr><tr><td class="wikicell">item list </td><td class="wikicell"> 9, only as text</td></tr><tr><td class="wikicell">item link </td><td class="wikicell"> 9, only as text</td></tr><tr><td class="wikicell">auto-increment </td><td class="wikicell"> 9</td></tr><tr><td class="wikicell">freetags </td><td class="wikicell"> 9</td></tr></table>
+<p>
+<br>Note:
+<br>For a drop-down list, the values of the drop down list will be displayed, For the other field types, the values found in the database will be displayed.
+</p>
+<a id="examples" name="//apple_ref/cpp/Section/Examples" class="dashAnchor"></a><h2 class="showhide_heading" id="Examples">Examples<a href="PluginTrackerFilter.html#Examples" class="heading-link"><span class="icon icon-link fas fa-link "></span></a></h2>
+<p>It can be interesting to use the checkbox capacity of trackerlist to do some action on some filtered items:
+</p>
+<pre class="codelisting" data-theme="off" data-syntax="tiki" data-wrap="1" dir="ltr" style="white-space:pre-wrap; overflow-wrap: break-word; word-wrap: break-word;" id="codebox2">{trackerfilter filters="82/d:84" fields="82:83" checkbox="85/to/Email to checked/send/soho-send_message.php/soho-send_message.tpl"}</pre>
+<p>
+<br>You can also get directly connected to the message box
+</p>
+<pre class="codelisting" data-theme="off" data-syntax="tiki" data-wrap="1" dir="ltr" style="white-space:pre-wrap; overflow-wrap: break-word; word-wrap: break-word;" id="codebox3">{trackerfilter filters="82/m:84" fields="82:83" checkbox="85/to/Email to checked/xxx/messu-compose.php"}</pre>
+<p>
+<br>Imagine a tracker
+</p>
+<div class="panel " style=" background: grey; margin:0;    "><div class="panel-body" style=" background: grey;"><img width="443" height="539" alt="trackerfilter3" class="regImage pluginImg213 img-fluid lozad" data-src="dl213?display"></div></div>
+<p>A search page like this
+</p>
+<pre class="codelisting" data-theme="off" data-syntax="tiki" data-wrap="1" dir="ltr" style="white-space:pre-wrap; overflow-wrap: break-word; word-wrap: break-word;" id="codebox4">{trackerfilter trackerId="1" filters="5:6:9:8/d:(2:1:3)/sqlsearch" showlinks="y" fields="5:2:1" wiki="tracker ideas"}</pre>
+<p>The page will look like
+</p>
+<div class="panel " style=" background: grey; margin:0;    "><div class="panel-body" style=" background: grey;"><img width="606" height="318" alt="trackerfilter1" class="regImage pluginImg212 img-fluid lozad" data-src="dl212?display"></div></div>
+<p>
+<br>and when you  click on filter you will have something like this
+</p>
+<div class="panel " style=" background: grey; margin:0;    "><div class="panel-body" style=" background: grey;"><img width="585" height="375" alt="trackerfilter2" class="regImage pluginImg214 img-fluid lozad" data-src="dl214?display"></div></div>
+					</div>
+
+		
+			</article> 
+
+	
+	<footer class="form-text">
+		
+					<div class="wiki-authors">
+<hr>
+	Created by <a title="User Information" href="http://doc.tiki.org/user21" class="userlink ajaxtips" data-ajaxtips="tiki-user-info?username=sylvie">sylvie</a>.
+	Last Modification: Monday 06 January, 2020 19:23:12 GMT-0000 by <a title="User:Marc Laporte" href="http://doc.tiki.org/user10" class="userlink tips geolocated" data-geo-lat="45.5223065" data-geo-lon="-73.5779607" data-geo-zoom="14">Marc Laporte</a>.
+	
+	</div>		
+		
+			</footer>
+
+		
+							
+		
+	
+			
+	
+	
+
+<a id="attachments"></a>
+
+	<div id="attzone" class="w-100" style="display:block;">
+
+	
+
+	
+	
+
+	</div>
+<div id="comment-container"></div>
+			
+													<div class="content clearfix modules mt-3" id="pagebottom_modules">
+	
+
+
+
+
+			<div id="module_91" style="" class="module box-related_video">
+				<div id="mod-related_videopagebottom1">
+										
+<div id="related_video" style="display:block;">
+</div>
+
+													
+					</div>
+</div>
+
+	
+
+
+
+			<div id="module_92" style="" class="module box-menupage">
+				<div id="mod-menupagepagebottom2">
+													
+
+		
+													
+					</div>
+</div>
+
+
+</div>
+											</div>
+					
+				</div>
+				
+			</div> 
+		</div> 
+	</div> 
+			
+
+		
+	
+	
+
+<div id="bootstrap-modal" class="modal fade footer-modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+	<div class="modal-dialog">
+		<div class="modal-content">
+			
+			<div class="modal-header">
+				<h4 class="modal-title" id="myModalLabel"></h4>
+			</div>
+		</div>
+	</div>
+</div>
+<div id="bootstrap-modal-2" class="modal fade footer-modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+	<div class="modal-dialog">
+		<div class="modal-content">
+		</div>
+	</div>
+</div>
+<div id="bootstrap-modal-3" class="modal fade footer-modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+	<div class="modal-dialog">
+		<div class="modal-content">
+		</div>
+	</div>
+</div>
+				
+	
+
+
+	<!-- Global site tag (gtag.js) - Google Analytics -->
+
+
+<!-- Put JS at the end -->
+	
+	
+<script type="text/javascript" src="vendor_bundled/vendor/components/jquery/jquery.js"></script>
+<script type="text/javascript" src="vendor_bundled/vendor/components/jquery-migrate/jquery-migrate.js"></script>
+<script type="text/javascript" src="vendor_bundled/vendor/codemirror/codemirror/lib/codemirror.js"></script>
+<script type="text/javascript" src="vendor_bundled/vendor/components/jqueryui/jquery-ui.js"></script>
+<script type="text/javascript" src="temp/public/codemirror_modes.js"></script>
+<script type="text/javascript" src="vendor_bundled/vendor/npm-asset/popper.js/dist/umd/popper.js"></script>
+<script type="text/javascript" src="vendor_bundled/vendor/twbs/bootstrap/dist/js/bootstrap.js"></script>
+<script type="text/javascript" src="lib/jquery_tiki/tiki-bootstrapmodalfix.js"></script>
+<script type="text/javascript" src="lib/jquery_tiki/iconsets.js"></script>
+<script type="text/javascript" src="lib/tiki-js.js"></script>
+<script type="text/javascript" src="vendor_bundled/vendor/studio-42/elfinder/js/elfinder.full.js"></script>
+<script type="text/javascript" src="lib/jquery_tiki/elfinder/tiki-elfinder.js"></script>
+<script type="text/javascript" src="lib/jquery_tiki/tiki-jquery.js"></script>
+<script type="text/javascript" src="lib/jquery_tiki/tiki-maps.js"></script>
+<script type="text/javascript" src="vendor_bundled/vendor/jquery-plugins/jquery-json/src/jquery.json.js"></script>
+<script type="text/javascript" src="vendor_bundled/vendor/jquery-plugins/zoom/jquery.zoom.js"></script>
+<script type="text/javascript" src="vendor_bundled/vendor/codemirror/codemirror/addon/search/searchcursor.js"></script>
+<script type="text/javascript" src="vendor_bundled/vendor/codemirror/codemirror/addon/mode/overlay.js"></script>
+<script type="text/javascript" src="lib/codemirror_tiki/codemirror_tiki.js"></script>
+<script type="text/javascript" src="vendor_bundled/vendor/jquery-plugins/infinitecarousel/jquery.infinitecarousel3.js"></script>
+<script type="text/javascript" src="lib/jquery_tiki/tiki-confirm.js"></script>
+
+<script type="text/javascript" src="vendor_bundled/vendor/harvesthq/chosen/chosen.jquery.min.js"></script>
+<script type="text/javascript" src="vendor_bundled/vendor/jquery/jquery-timepicker-addon/dist/jquery-ui-timepicker-addon.js"></script>
+<script type="text/javascript" src="vendor_bundled/vendor/jquery-plugins/fitvidjs/jquery.fitvids.js"></script>
+<script type="text/javascript" src="vendor_bundled/vendor/jquery-plugins/superfish/dist/js/superfish.js"></script>
+<script type="text/javascript" src="vendor_bundled/vendor/jquery-plugins/superfish/dist/js/supersubs.js"></script>
+<script type="text/javascript" src="vendor_bundled/vendor/jquery-plugins/superfish/dist/js/hoverIntent.js"></script>
+<script type="text/javascript" src="vendor_bundled/vendor/jquery-plugins/reflection-jquery/js/reflection.js"></script>
+<script type="text/javascript" src="vendor_bundled/vendor/jquery-plugins/media/jquery.media.js"></script>
+<script type="text/javascript" src="vendor_bundled/vendor/mottie/tablesorter/js/jquery.tablesorter.combined.js"></script>
+<script type="text/javascript" src="vendor_bundled/vendor/mottie/tablesorter/js/parsers/parser-input-select.js"></script>
+<script type="text/javascript" src="vendor_bundled/vendor/mottie/tablesorter/js/widgets/widget-columnSelector.js"></script>
+<script type="text/javascript" src="vendor_bundled/vendor/mottie/tablesorter/js/widgets/widget-filter-formatter-jui.js"></script>
+<script type="text/javascript" src="vendor_bundled/vendor/mottie/tablesorter/js/widgets/widget-grouping.js"></script>
+<script type="text/javascript" src="vendor_bundled/vendor/mottie/tablesorter/js/widgets/widget-math.js"></script>
+<script type="text/javascript" src="vendor_bundled/vendor/mottie/tablesorter/js/widgets/widget-pager.js"></script>
+<script type="text/javascript" src="vendor_bundled/vendor/mottie/tablesorter/js/widgets/widget-sort2Hash.js"></script>
+<script type="text/javascript" src="lib/jquery_tiki/tablesorter.js"></script>
+<script type="text/javascript" src="vendor_bundled/vendor/jquery-plugins/tagcanvas/jquery.tagcanvas.js"></script>
+<script type="text/javascript" src="vendor_bundled/vendor/jquery-plugins/colorbox/jquery.colorbox.js"></script>
+<script type="text/javascript" src="vendor_bundled/vendor/bower-asset/swfobject/swfobject/swfobject.js"></script>
+<script type="text/javascript" src="vendor_bundled/vendor/rmm5t/jquery-timeago/jquery.timeago.js"></script>
+<script type="text/javascript" src="vendor_bundled/vendor/rmm5t/jquery-timeago/locales/jquery.timeago.en.js"></script>
+<script type="text/javascript" src="vendor_bundled/vendor/avianey/jqdoublescroll/jquery.doubleScroll.js"></script>
+<script type="text/javascript" src="vendor_bundled/vendor/jquery-plugins/jquery-validation/dist/jquery.validate.js"></script>
+<script type="text/javascript" src="lib/validators/validator_tiki.js"></script>
+<script type="text/javascript" src="vendor_bundled/vendor/jquery-plugins/async/jquery.async.js"></script>
+<script type="text/javascript" src="vendor_bundled/vendor/jquery-plugins/treetable/jquery.treetable.js"></script>
+<script type="text/javascript" src="vendor_bundled/vendor/cwspear/bootstrap-hover-dropdown/bootstrap-hover-dropdown.js"></script>
+<script type="text/javascript" src="lib/jquery_tiki/files.js"></script>
+<script type="text/javascript" src="lib/jquery_tiki/tiki-trackers.js"></script>
+<script type="text/javascript" src="vendor_bundled/vendor/svg-edit/svg-edit/embedapi.js"></script>
+<script type="text/javascript" src="lib/svg-edit_tiki/draw.js"></script>
+<script type="text/javascript" src="lib/jquery_tiki/inline_edit.js"></script>
+<script type="text/javascript" src="lib/jquery_tiki/tiki-tasks.js"></script>
+<script type="text/javascript" src="lib/jquery_tiki/pluginedit.js"></script>
+<script type="text/javascript" src="lib/jquery_tiki/pdf.js"></script>
+<script type="text/javascript" src="vendor_bundled/vendor/npm-asset/html2canvas/dist/html2canvas.min.js"></script>
+<script type="text/javascript" src="vendor_bundled/vendor/mrrio/jspdf/jspdf.min.js"></script>
+<script type="text/javascript" src="lib/jquery_tiki/fullcalendar_to_pdf.js"></script>
+<script type="text/javascript" src="lang/en/language.js"></script>
+<script type="text/javascript" src="lib/captcha/captchalib.js"></script>
+
+<script type="text/javascript" src="vendor/npm-asset/lozad/dist/lozad.js"></script>
+	
+<script type="text/javascript">
+<!--//--><![CDATA[//><!--
+// js 0 
+tiki_cookie_jar=new Object();
+setCookieBrowser('javascript_enabled', '1621789348000', '', new Date(1621789348000));
+$.lang = 'en';
+
+// JS Object to hold prefs for jq
+var jqueryTiki = {"ui":true,"ui_theme":"flick","tooltips":true,"autocomplete":true,"superfish":true,"reflection":true,"tablesorter":true,"colorbox":true,"cboxCurrent":"{current} / {total}","sheet":true,"carousel":true,"validate":true,"zoom":true,"effect":"","effect_direction":"vertical","effect_speed":"400","effect_tabs":"none","effect_tabs_direction":"vertical","effect_tabs_speed":"fast","home_file_gallery":"5","autosave":true,"sefurl":true,"ajax":true,"syntaxHighlighter":true,"chosen":true,"chosen_sortable":false,"mapTileSets":["openstreetmap"],"infoboxTypes":["trackeritem","activity"],"googleStreetView":false,"googleStreetViewOverlay":false,"googleMapsAPIKey":"ABQIAAAAQNyVqGjgbUkeBZjVGN43nBQm7qDLuUr6PD9lu03O3Na4Jgp-xBTEdlCs9LWoI9vHWo2xg50eOgmWKw","structurePageRepeat":false,"mobile":false,"no_cookie":false,"language":"en","useInlineComment":false,"useInlineAnnotations":false,"helpurl":"http://doc.tiki.org/","shortDateFormat":"yy-mm-dd","shortTimeFormat":"HH:mm","username":null,"userRealName":null,"userAvatar":"http://doc.tiki.org/img/noavatar.png?v=1581008146","autoToc_inline":false,"autoToc_pos":"right","autoToc_offset":"44","bingMapsAPIKey":"","nextzenAPIKey":"","numericFieldScroll":"none","securityTimeout":"1440","current_object":{"type":"wiki page","object":"PluginTrackerFilter"},"firstDayofWeek":0}
+
+jqueryTiki.iconset = {"defaults":["500px","accessible-icon","accusoft","ad","address-book","address-card","adjust","adn","adversal","affiliatetheme","air-freshener","algolia","align-center","align-justify","align-left","align-right","alipay","allergies","amazon","amazon-pay","ambulance","american-sign-language-interpreting","amilia","anchor","android","angellist","angle-double-down","angle-double-left","angle-double-right","angle-double-up","angle-down","angle-left","angle-right","angle-up","angry","angrycreative","angular","ankh","app-store","app-store-ios","apper","apple","apple-alt","apple-pay","archive","archway","arrow-alt-circle-down","arrow-alt-circle-left","arrow-alt-circle-right","arrow-alt-circle-up","arrow-circle-down","arrow-circle-left","arrow-circle-right","arrow-circle-up","arrow-down","arrow-left","arrow-right","arrow-up","arrows-alt","arrows-alt-h","arrows-alt-v","assistive-listening-systems","asterisk","asymmetrik","at","atlas","atom","audible","audio-description","autoprefixer","avianex","aviato","award","aws","backspace","backward","balance-scale","ban","band-aid","bandcamp","barcode","bars","baseball-ball","basketball-ball","bath","battery-empty","battery-full","battery-half","battery-quarter","battery-three-quarters","bed","beer","behance","behance-square","bell","bell-slash","bezier-curve","bible","bicycle","bimobject","binoculars","birthday-cake","bitbucket","bitcoin","bity","black-tie","blackberry","blender","blind","blogger","blogger-b","bluetooth","bluetooth-b","bold","bolt","bomb","bone","bong","book","book-open","book-reader","bookmark","bowling-ball","box","box-open","boxes","braille","brain","briefcase","briefcase-medical","broadcast-tower","broom","brush","btc","bug","building","bullhorn","bullseye","burn","buromobelexperte","bus","bus-alt","business-time","buysellads","calculator","calendar","calendar-alt","calendar-check","calendar-minus","calendar-plus","calendar-times","camera","camera-retro","cannabis","capsules","car","car-alt","car-battery","car-crash","car-side","caret-down","caret-left","caret-right","caret-square-down","caret-square-left","caret-square-right","caret-square-up","caret-up","cart-arrow-down","cart-plus","cc-amazon-pay","cc-amex","cc-apple-pay","cc-diners-club","cc-discover","cc-jcb","cc-mastercard","cc-paypal","cc-stripe","cc-visa","centercode","certificate","chalkboard","chalkboard-teacher","charging-station","chart-area","chart-bar","chart-line","chart-pie","check","check-circle","check-double","check-square","chess","chess-bishop","chess-board","chess-king","chess-knight","chess-pawn","chess-queen","chess-rook","chevron-circle-down","chevron-circle-left","chevron-circle-right","chevron-circle-up","chevron-down","chevron-left","chevron-right","chevron-up","child","chrome","church","circle","circle-notch","city","clipboard","clipboard-check","clipboard-list","clock","clone","closed-captioning","cloud","cloud-download-alt","cloud-upload-alt","cloudscale","cloudsmith","cloudversify","cocktail","code","code-branch","codepen","codiepie","coffee","cog","cogs","coins","columns","comment","comment-alt","comment-dollar","comment-dots","comment-slash","comments","comments-dollar","compact-disc","compass","compress","concierge-bell","connectdevelop","contao","cookie","cookie-bite","copy","copyright","couch","cpanel","creative-commons","creative-commons-by","creative-commons-nc","creative-commons-nc-eu","creative-commons-nc-jp","creative-commons-nd","creative-commons-pd","creative-commons-pd-alt","creative-commons-remix","creative-commons-sa","creative-commons-sampling","creative-commons-sampling-plus","creative-commons-share","credit-card","crop","crop-alt","cross","crosshairs","crow","crown","css3","css3-alt","cube","cubes","cut","cuttlefish","d-and-d","dashcube","database","deaf","delicious","deploydog","deskpro","desktop","deviantart","dharmachakra","diagnoses","dice","dice-five","dice-four","dice-one","dice-six","dice-three","dice-two","digg","digital-ocean","digital-tachograph","directions","discord","discourse","divide","dizzy","dna","dochub","docker","dollar-sign","dolly","dolly-flatbed","donate","door-closed","door-open","dot-circle","dove","download","draft2digital","drafting-compass","draw-polygon","dribbble","dribbble-square","dropbox","drum","drum-steelpan","drupal","dumbbell","dyalog","earlybirds","ebay","edge","edit","eject","elementor","ellipsis-h","ellipsis-v","ello","ember","empire","envelope","envelope-open","envelope-open-text","envelope-square","envira","equals","eraser","erlang","ethereum","etsy","euro-sign","exchange-alt","exclamation","exclamation-circle","exclamation-triangle","expand","expand-arrows-alt","expeditedssl","external-link-alt","external-link-square-alt","eye","eye-dropper","eye-slash","facebook","facebook-f","facebook-messenger","facebook-square","fast-backward","fast-forward","fax","feather","feather-alt","female","fighter-jet","file","file-alt","file-archive","file-audio","file-code","file-contract","file-download","file-excel","file-export","file-image","file-import","file-invoice","file-invoice-dollar","file-medical","file-medical-alt","file-pdf","file-powerpoint","file-prescription","file-signature","file-upload","file-video","file-word","fill","fill-drip","film","filter","fingerprint","fire","fire-extinguisher","firefox","first-aid","first-order","first-order-alt","firstdraft","fish","flag","flag-checkered","flask","flickr","flipboard","flushed","fly","folder","folder-minus","folder-open","folder-plus","font","font-awesome","font-awesome-alt","font-awesome-flag","fonticons","fonticons-fi","football-ball","fort-awesome","fort-awesome-alt","forumbee","forward","foursquare","free-code-camp","freebsd","frog","frown","frown-open","fulcrum","funnel-dollar","futbol","galactic-republic","galactic-senate","gamepad","gas-pump","gavel","gem","genderless","get-pocket","gg","gg-circle","ghost","gift","gifts","git","git-square","github","github-alt","github-square","gitkraken","gitlab","gitter","glass-cheers","glass-martini","glass-martini-alt","glass-whiskey","glasses","glide","glide-g","globe","globe-africa","globe-americas","globe-asia","globe-europe","gofore","golf-ball","goodreads","goodreads-g","google","google-drive","google-play","google-plus","google-plus-g","google-plus-square","google-wallet","gopuram","graduation-cap","gratipay","grav","greater-than","greater-than-equal","grimace","grin","grin-alt","grin-beam","grin-beam-sweat","grin-hearts","grin-squint","grin-squint-tears","grin-stars","grin-tears","grin-tongue","grin-tongue-squint","grin-tongue-wink","grin-wink","grip-horizontal","grip-lines","grip-lines-vertical","grip-vertical","gripfire","grunt","guitar","gulp","h-square","hacker-news","hacker-news-square","hackerrank","hammer","hamsa","hand-holding","hand-holding-heart","hand-holding-usd","hand-lizard","hand-paper","hand-peace","hand-point-down","hand-point-left","hand-point-right","hand-point-up","hand-pointer","hand-rock","hand-scissors","hand-spock","hands","hands-helping","handshake","hanukiah","hashtag","hat-wizard","haykal","hdd","heading","headphones","headphones-alt","headset","heart","heart-broken","heartbeat","helicopter","highlighter","hiking","hippo","hips","hire-a-helper","history","hockey-puck","holly-berry","home","hooli","hornbill","horse","horse-head","hospital","hospital-alt","hospital-symbol","hot-tub","hotel","hotjar","hourglass","hourglass-end","hourglass-half","hourglass-start","house-damage","houzz","hryvnia","html5","hubspot","i-cursor","id-badge","id-card","id-card-alt","image","images","imdb","inbox","indent","industry","infinity","info","info-circle","instagram","internet-explorer","ioxhost","italic","itunes","itunes-note","java","jedi","jedi-order","jenkins","joget","joint","joomla","journal-whills","js","js-square","jsfiddle","kaaba","kaggle","key","keybase","keyboard","keycdn","khanda","kickstarter","kickstarter-k","kiss","kiss-beam","kiss-wink-heart","kiwi-bird","korvue","landmark","language","laptop","laptop-code","laravel","lastfm","lastfm-square","laugh","laugh-beam","laugh-squint","laugh-wink","layer-group","leaf","leanpub","lemon","less","less-than","less-than-equal","level-down-alt","level-up-alt","life-ring","lightbulb","line","link","linkedin","linkedin-in","linode","linux","lira-sign","list","list-alt","list-ol","list-ul","location-arrow","lock","lock-open","long-arrow-alt-down","long-arrow-alt-left","long-arrow-alt-right","long-arrow-alt-up","low-vision","luggage-cart","lyft","magento","magic","magnet","mail-bulk","mailchimp","male","mandalorian","map","map-marked","map-marked-alt","map-marker","map-marker-alt","map-pin","map-signs","markdown","marker","mars","mars-double","mars-stroke","mars-stroke-h","mars-stroke-v","mastodon","maxcdn","medal","medapps","medium","medium-m","medkit","medrt","meetup","megaport","meh","meh-blank","meh-rolling-eyes","memory","menorah","mercury","microchip","microphone","microphone-alt","microphone-alt-slash","microphone-slash","microscope","microsoft","minus","minus-circle","minus-square","mix","mixcloud","mizuni","mobile","mobile-alt","modx","monero","money-bill","money-bill-alt","money-bill-wave","money-bill-wave-alt","money-check","money-check-alt","monument","moon","mortar-pestle","mosque","motorcycle","mouse-pointer","music","napster","neos","neuter","newspaper","nimblr","nintendo-switch","node","node-js","not-equal","notes-medical","npm","ns8","nutritionix","object-group","object-ungroup","odnoklassniki","odnoklassniki-square","oil-can","old-republic","om","opencart","openid","opera","optin-monster","osi","outdent","page4","pagelines","paint-brush","paint-roller","palette","palfed","pallet","paper-plane","paperclip","parachute-box","paragraph","parking","passport","pastafarianism","paste","patreon","pause","pause-circle","paw","paypal","peace","pen","pen-alt","pen-fancy","pen-nib","pen-square","pencil-alt","pencil-ruler","people-carry","percent","percentage","periscope","phabricator","phoenix-framework","phoenix-squadron","phone","phone-slash","phone-square","phone-volume","php","pied-piper","pied-piper-alt","pied-piper-hat","pied-piper-pp","piggy-bank","pills","pinterest","pinterest-p","pinterest-square","place-of-worship","plane","plane-arrival","plane-departure","play","play-circle","playstation","plug","plus","plus-circle","plus-square","podcast","poll","poll-h","poo","poop","portrait","pound-sign","power-off","pray","praying-hands","prescription","prescription-bottle","prescription-bottle-alt","print","procedures","product-hunt","project-diagram","pushed","puzzle-piece","python","qq","qrcode","question","question-circle","quidditch","quinscape","quora","quote-left","quote-right","quran","r-project","radiation","radiation-alt","rainbow","random","raspberry-pi","ravelry","react","reacteurope","readme","rebel","receipt","recycle","red-river","reddit","reddit-alien","reddit-square","redhat","redo","redo-alt","registered","renren","reply","reply-all","replyd","republican","researchgate","resolving","restroom","retweet","rev","ribbon","ring","road","robot","rocket","rocketchat","rockrms","route","rss","rss-square","ruble-sign","ruler","ruler-combined","ruler-horizontal","ruler-vertical","running","rupee-sign","sad-cry","sad-tear","safari","sass","save","schlix","school","screwdriver","scribd","search","search-dollar","search-location","search-minus","search-plus","searchengin","seedling","sellcast","sellsy","server","servicestack","shapes","share","share-alt","share-alt-square","share-square","shekel-sign","shield-alt","ship","shipping-fast","shirtsinbulk","shoe-prints","shopping-bag","shopping-basket","shopping-cart","shopware","shower","shuttle-van","sign","sign-in-alt","sign-language","sign-out-alt","signal","signature","simplybuilt","sistrix","sitemap","sith","skull","skyatlas","skype","slack","slack-hash","sliders-h","slideshare","smile","smile-beam","smile-wink","smoking","smoking-ban","snapchat","snapchat-ghost","snapchat-square","snowflake","socks","solar-panel","sort","sort-alpha-down","sort-alpha-up","sort-amount-down","sort-amount-up","sort-down","sort-numeric-down","sort-numeric-up","sort-up","soundcloud","spa","space-shuttle","speakap","spinner","splotch","spotify","spray-can","square","square-full","square-root-alt","squarespace","stack-exchange","stack-overflow","stamp","star","star-and-crescent","star-half","star-half-alt","star-of-david","star-of-life","staylinked","steam","steam-square","steam-symbol","step-backward","step-forward","stethoscope","sticker-mule","sticky-note","stop","stop-circle","stopwatch","store","store-alt","strava","stream","street-view","strikethrough","stripe","stripe-s","stroopwafel","studiovinari","stumbleupon","stumbleupon-circle","subscript","subway","suitcase","suitcase-rolling","sun","superpowers","superscript","supple","surprise","swatchbook","swimmer","swimming-pool","synagogue","sync","sync-alt","syringe","table","table-tennis","tablet","tablet-alt","tablets","tachometer-alt","tag","tags","tape","tasks","taxi","teamspeak","teeth","teeth-open","telegram","telegram-plane","tencent-weibo","terminal","text-height","text-width","th","th-large","th-list","the-red-yeti","theater-masks","themeco","themeisle","thermometer","thermometer-empty","thermometer-full","thermometer-half","thermometer-quarter","thermometer-three-quarters","thumbs-down","thumbs-up","thumbtack","ticket-alt","times","times-circle","tint","tint-slash","tired","toggle-off","toggle-on","toolbox","tooth","torah","torii-gate","trade-federation","trademark","traffic-light","train","transgender","transgender-alt","trash","trash-alt","tree","trello","tripadvisor","trophy","truck","truck-loading","truck-monster","truck-moving","truck-pickup","tshirt","tty","tumblr","tumblr-square","tv","twitch","twitter","twitter-square","typo3","uber","uikit","umbrella","umbrella-beach","underline","undo","undo-alt","uniregistry","universal-access","university","unlink","unlock","unlock-alt","untappd","upload","usb","user","user-alt","user-alt-slash","user-astronaut","user-check","user-circle","user-clock","user-cog","user-edit","user-friends","user-graduate","user-lock","user-md","user-minus","user-ninja","user-plus","user-secret","user-shield","user-slash","user-tag","user-tie","user-times","users","users-cog","ussunnah","utensil-spoon","utensils","vaadin","vector-square","venus","venus-double","venus-mars","viacoin","viadeo","viadeo-square","vial","vials","viber","video","video-slash","vihara","vimeo","vimeo-square","vimeo-v","vine","vk","vnv","volleyball-ball","volume-down","volume-mute","volume-off","volume-up","vote-yea","vr-cardboard","vuejs","walking","wallet","warehouse","water","weebly","weibo","weight","weight-hanging","weixin","whatsapp","whatsapp-square","wheelchair","whmcs","wifi","wikipedia-w","wind","window-close","window-maximize","window-minimize","window-restore","windows","wine-bottle","wine-glass","wine-glass-alt","wix","wizards-of-the-coast","wolf-pack-battalion","won-sign","wordpress","wordpress-simple","wpbeginner","wpexplorer","wpforms","wpressr","wrench","x-ray","xbox","xing","xing-square","y-combinator","yahoo","yandex","yandex-international","yelp","yen-sign","yin-yang","yoast","youtube","youtube-square","zhihu"],"icons":{"actions":{"id":"play-circle"},"admin":{"id":"cog"},"add":{"id":"plus-circle"},"admin_ads":{"id":"film"},"admin_articles":{"id":"newspaper","prepend":"far fa-"},"admin_blogs":{"id":"bold"},"admin_calendar":{"id":"calendar-alt","prepend":"far fa-"},"admin_category":{"id":"sitemap fa-rotate-270"},"admin_comments":{"id":"comment"},"admin_community":{"id":"users"},"admin_connect":{"id":"link"},"admin_copyright":{"id":"copyright","prepend":"far fa-"},"admin_directory":{"id":"folder","prepend":"far fa-"},"admin_faqs":{"id":"question"},"admin_features":{"id":"power-off"},"admin_fgal":{"id":"folder-open"},"admin_forums":{"id":"comments"},"admin_freetags":{"id":"tags"},"admin_gal":{"id":"file-image","prepend":"far fa-"},"admin_general":{"id":"cog"},"admin_i18n":{"id":"language"},"admin_intertiki":{"id":"exchange-alt"},"admin_login":{"id":"sign-in-alt"},"admin_user":{"id":"user"},"admin_look":{"id":"image","prepend":"far fa-"},"admin_maps":{"id":"map-marker-alt"},"admin_messages":{"id":"envelope","prepend":"far fa-"},"admin_metatags":{"id":"tag"},"admin_module":{"id":"shapes"},"admin_payment":{"id":"credit-card","prepend":"far fa-"},"admin_performance":{"id":"tachometer-alt"},"admin_polls":{"id":"tasks"},"admin_profiles":{"id":"cube"},"admin_rating":{"id":"check-square"},"admin_rss":{"id":"rss"},"admin_score":{"id":"trophy"},"admin_search":{"id":"search"},"admin_semantic":{"id":"arrows-alt-h"},"admin_security":{"id":"lock"},"admin_sefurl":{"id":"search-plus"},"admin_share":{"id":"share-alt"},"admin_socialnetworks":{"id":"thumbs-up"},"admin_stats":{"id":"chart-bar","prepend":"far fa-"},"admin_textarea":{"id":"edit"},"admin_trackers":{"id":"database"},"admin_userfiles":{"id":"cog"},"admin_video":{"id":"video"},"admin_webmail":{"id":"inbox"},"admin_webservices":{"id":"cog"},"admin_wiki":{"id":"file-alt","prepend":"far fa-"},"admin_workspace":{"id":"desktop"},"admin_wysiwyg":{"id":"file-alt"},"admin_print":{"id":"print"},"admin_packages":{"id":"gift"},"admin_rtc":{"id":"bullhorn"},"adn":{"id":"adn","prepend":"fab fa-"},"amazon":{"id":"amazon","prepend":"fab fa-"},"android":{"id":"android","prepend":"fab fa-"},"angellist":{"id":"angellist","prepend":"fab fa-"},"apple":{"id":"apple","prepend":"fab fa-"},"area-chart":{"id":"chart-area"},"arrows":{"id":"arrows-alt"},"arrows-h":{"id":"arrows-alt-h"},"arrows-v":{"id":"arrows-alt-v"},"articles":{"id":"newspaper","prepend":"far fa-"},"attach":{"id":"paperclip"},"audio":{"id":"file-audio","prepend":"far fa-"},"back":{"id":"arrow-left"},"background-color":{"id":"paint-brush"},"backlink":{"id":"reply"},"backward_step":{"id":"step-backward"},"bar-chart":{"id":"chart-bar"},"behance":{"id":"behance","prepend":"fab fa-"},"behance-square":{"id":"behance-square","prepend":"fab fa-"},"bitbucket":{"id":"bitbucket","prepend":"fab fa-"},"black-tie":{"id":"black-tie","prepend":"fab fa-"},"bluetooth":{"id":"bluetooth","prepend":"fab fa-"},"bluetooth-b":{"id":"bluetooth-b","prepend":"fab fa-"},"box":{"id":"list-alt","prepend":"far fa-"},"btc":{"id":"btc","prepend":"fab fa-"},"buysellads":{"id":"buysellads","prepend":"fab fa-"},"cart":{"id":"shopping-cart"},"chart":{"id":"chart-area"},"cc-amex":{"id":"cc-amex","prepend":"fab fa-"},"cc-diners-club":{"id":"cc-diners-club","prepend":"fab fa-"},"cc-discover":{"id":"cc-discover","prepend":"fab fa-"},"cc-jcb":{"id":"cc-jcb","prepend":"fab fa-"},"cc-mastercard":{"id":"cc-mastercard","prepend":"fab fa-"},"cc-paypal":{"id":"cc-paypal","prepend":"fab fa-"},"cc-stripe":{"id":"cc-stripe","prepend":"fab fa-"},"cc-visa":{"id":"cc-visa","prepend":"fab fa-"},"chrome":{"id":"chrome","prepend":"fab fa-"},"close":{"id":"times"},"cloud-download":{"id":"cloud-download-alt"},"cloud-upload":{"id":"cloud-upload-alt"},"code_file":{"id":"file-code","prepend":"far fa-"},"code-fork":{"id":"code-branch"},"codepen":{"id":"codepen","prepend":"fab fa-"},"codiepie":{"id":"codiepie","prepend":"fab fa-"},"collapsed":{"id":"plus-square","prepend":"far fa-"},"comments":{"id":"comments","prepend":"far fa-"},"compose":{"id":"pencil-alt"},"computer":{"id":"desktop"},"contacts":{"id":"users"},"content-template":{"id":"file","prepend":"far fa-"},"create":{"id":"plus"},"creative-commons":{"id":"creative-commons","prepend":"fab fa-"},"css3":{"id":"css3","prepend":"fab fa-"},"dashboard":{"id":"tachometer-alt"},"dashcube":{"id":"dashcube","prepend":"fab fa-"},"delete":{"id":"times"},"delicious":{"id":"delicious","prepend":"fab fa-"},"deviantart":{"id":"deviantart","prepend":"fab fa-"},"difference":{"id":"strikethrough"},"disable":{"id":"minus-square"},"documentation":{"id":"book"},"down":{"id":"sort-down"},"dribbble":{"id":"dribbble","prepend":"fab fa-"},"dropbox":{"id":"dropbox","prepend":"fab fa-"},"drupal":{"id":"drupal","prepend":"fab fa-"},"edge":{"id":"edge","prepend":"fab fa-"},"education":{"id":"graduation-cap"},"empire":{"id":"empire","prepend":"fab fa-"},"envelope":{"id":"envelope","prepend":"far fa-"},"envira":{"id":"envira","prepend":"fab fa-"},"erase":{"id":"eraser"},"error":{"id":"exclamation-circle"},"excel":{"id":"file-excel","prepend":"far fa-"},"exchange":{"id":"exchange-alt"},"expanded":{"id":"minus-square","prepend":"far fa-"},"expeditedssl":{"id":"expeditedssl","prepend":"fab fa-"},"export":{"id":"download"},"facebook":{"id":"facebook","prepend":"fab fa-"},"facebook-f":{"id":"facebook-f","prepend":"fab fa-"},"file":{"id":"file","prepend":"far fa-"},"file-archive":{"id":"folder"},"file-archive-open":{"id":"folder-open"},"file-text":{"id":"file-alt"},"file-text-o":{"id":"file-alt","prepend":"far fa-"},"firefox":{"id":"firefox","prepend":"fab fa-"},"first-order":{"id":"first-order","prepend":"fab fa-"},"flickr":{"id":"flickr","prepend":"fab fa-"},"floppy":{"id":"save","prepend":"far fa-"},"font-awesome":{"id":"font-awesome","prepend":"fab fa-"},"font-color":{"id":"font","class":"text-danger"},"fonticons":{"id":"fonticons","prepend":"fab fa-"},"fort-awesome":{"id":"fort-awesome","prepend":"fab fa-"},"forumbee":{"id":"forumbee","prepend":"fab fa-"},"forward_step":{"id":"step-forward"},"foursquare":{"id":"foursquare","prepend":"fab fa-"},"fullscreen":{"id":"expand-arrows-alt"},"get-pocket":{"id":"get-pocket","prepend":"fab fa-"},"gg":{"id":"gg","prepend":"fab fa-"},"gg-circle":{"id":"gg-circle","prepend":"fab fa-"},"git":{"id":"git","prepend":"fab fa-"},"git-square":{"id":"git-square","prepend":"fab fa-"},"github":{"id":"github","prepend":"fab fa-"},"github-alt":{"id":"github-alt","prepend":"fab fa-"},"github-square":{"id":"github-square","prepend":"fab fa-"},"gitlab":{"id":"gitlab","prepend":"fab fa-"},"glide":{"id":"glide","prepend":"fab fa-"},"glide-g":{"id":"glide-g","prepend":"fab fa-"},"google":{"id":"google","prepend":"fab fa-"},"google-plus":{"id":"google-plus","prepend":"fab fa-"},"google-plus-g":{"id":"google-plus-g","prepend":"fab fa-"},"google-plus-square":{"id":"google-plus-square","prepend":"fab fa-"},"group":{"id":"users"},"h1":{"id":"heading"},"h2":{"id":"heading","size":".9"},"h3":{"id":"heading","size":".8"},"hacker-news":{"id":"hacker-news","prepend":"fab fa-"},"help":{"id":"question-circle"},"history":{"id":"clock","prepend":"far fa-"},"horizontal-rule":{"id":"minus"},"houzz":{"id":"houzz","prepend":"fab fa-"},"html":{"id":"html5","prepend":"fab fa-"},"image":{"id":"file-image","prepend":"far fa-"},"import":{"id":"upload"},"index":{"id":"spinner"},"information":{"id":"info-circle","prepend":null,"append":null},"instagram":{"id":"instagram","prepend":"fab fa-"},"internet-explorer":{"id":"internet-explorer","prepend":"fab fa-"},"ioxhost":{"id":"ioxhost","prepend":"fab fa-"},"java":{"id":"java","prepend":"fab fa-"},"joomla":{"id":"joomla","prepend":"fab fa-"},"js":{"id":"js","prepend":"fab fa-"},"jsfiddle":{"id":"jsfiddle","prepend":"fab fa-"},"keyboard":{"id":"keyboard","prepend":"far fa-"},"lastfm":{"id":"lastfm","prepend":"fab fa-"},"lastfm-square":{"id":"lastfm-square","prepend":"fab fa-"},"leanpub":{"id":"leanpub","prepend":"fab fa-"},"less":{"id":"less","prepend":"fab fa-"},"level-down":{"id":"level-down-alt"},"level-up":{"id":"level-up-alt"},"like":{"id":"thumbs-up"},"line-chart":{"id":"chart-line"},"link-external":{"id":"external-link-alt"},"link-external-alt":{"id":"external-link-square-alt"},"linkedin":{"id":"linkedin","prepend":"fab fa-"},"linkedin-in":{"id":"linkedin-in","prepend":"fab fa-"},"linux":{"id":"linux","prepend":"fab fa-"},"list-numbered":{"id":"list-ol"},"listgui_display":{"id":"desktop"},"listgui_filter":{"id":"filter"},"listgui_format":{"id":"indent"},"listgui_pagination":{"id":"book"},"listgui_output":{"id":"eye","prepend":"far fa-"},"listgui_column":{"id":"columns"},"listgui_tablesorter":{"id":"table"},"listgui_icon":{"id":"user"},"listgui_body":{"id":"align-justify"},"listgui_carousel":{"id":"slideshare","prepend":"fab fa-"},"listgui_sort":{"id":"sort-alpha-up"},"listgui_wikitext":{"id":"file-alt","prepend":"far fa-"},"listgui_caption":{"id":"align-center"},"log":{"id":"history"},"login":{"id":"sign-in-alt"},"logout":{"id":"sign-out-alt"},"long-arrow-down":{"id":"long-arrow-alt-down"},"long-arrow-left":{"id":"long-arrow-alt-left"},"long-arrow-right":{"id":"long-arrow-alt-right"},"long-arrow-up":{"id":"long-arrow-alt-up"},"mailbox":{"id":"inbox"},"magnifier":{"id":"search"},"maxcdn":{"id":"maxcdn","prepend":"fab fa-"},"medium":{"id":"medium","prepend":"fab fa-"},"menu":{"id":"bars"},"menu-extra":{"id":"chevron-down"},"menuitem":{"id":"angle-right"},"merge":{"id":"random"},"microsoft":{"id":"microsoft","prepend":"fab fa-"},"minimize":{"id":"compress"},"mixcloud":{"id":"mixcloud","prepend":"fab fa-"},"module":{"id":"square"},"modules":{"id":"shapes"},"modx":{"id":"modx","prepend":"fab fa-"},"money":{"id":"money-bill"},"more":{"id":"ellipsis-h"},"move":{"id":"exchange-alt"},"next":{"id":"arrow-right"},"notepad":{"id":"file-alt","prepend":"far fa-"},"notification":{"id":"bell","prepend":"far fa-"},"off":{"id":"power-off"},"ok":{"id":"check-circle"},"opencart":{"id":"opencart","prepend":"fab fa-"},"openid":{"id":"openid","prepend":"fab fa-"},"opera":{"id":"opera","prepend":"fab fa-"},"optin-monster":{"id":"optin-monster","prepend":"fab fa-"},"page-break":{"id":"cut"},"pagelines":{"id":"pagelines","prepend":"fab fa-"},"paypal":{"id":"paypal","prepend":"fab fa-"},"pdf":{"id":"file-pdf","prepend":"far fa-"},"pencil":{"id":"pencil-alt"},"permission":{"id":"key"},"pie-chart":{"id":"chart-pie"},"pied-piper":{"id":"pied-piper","prepend":"fab fa-"},"pied-piper-alt":{"id":"pied-piper-alt","prepend":"fab fa-"},"pied-piper-pp":{"id":"pied-piper-pp","prepend":"fab fa-"},"pinterest":{"id":"pinterest","prepend":"fab fa-"},"pinterest-p":{"id":"pinterest-p","prepend":"fab fa-"},"pinterest-square":{"id":"pinterest-square","prepend":"fab fa-"},"plugin":{"id":"puzzle-piece"},"popup":{"id":"list-alt","prepend":"far fa-"},"post":{"id":"pencil-alt"},"powerpoint":{"id":"file-powerpoint","prepend":"far fa-"},"previous":{"id":"arrow-left"},"qq":{"id":"qq","prepend":"fab fa-"},"quotes":{"id":"quote-left"},"ranking":{"id":"sort-numeric-down"},"reddit":{"id":"reddit","prepend":"fab fa-"},"reddit-alien":{"id":"reddit-alien","prepend":"fab fa-"},"reddit-square":{"id":"reddit-square","prepend":"fab fa-"},"refresh":{"id":"sync"},"remove":{"id":"times"},"renren":{"id":"renren","prepend":"fab fa-"},"repeat":{"id":"redo"},"safari":{"id":"safari","prepend":"fab fa-"},"sass":{"id":"sass","prepend":"fab fa-"},"scissors":{"id":"cut"},"scribd":{"id":"scribd","prepend":"fab fa-"},"screencapture":{"id":"camera"},"selectall":{"id":"file-alt"},"send":{"id":"paper-plane"},"settings":{"id":"wrench"},"sharethis":{"id":"share-alt"},"shorten":{"id":"crop"},"simplybuilt":{"id":"simplybuilt","prepend":"fab fa-"},"skyatlas":{"id":"skyatlas","prepend":"fab fa-"},"skype":{"id":"skype","prepend":"fab fa-"},"slack":{"id":"slack","prepend":"fab fa-"},"smile":{"id":"smile","prepend":"far fa-"},"snapchat":{"id":"snapchat","prepend":"fab fa-"},"snapchat-ghost":{"id":"snapchat-ghost","prepend":"fab fa-"},"snapchat-square":{"id":"snapchat-square","prepend":"fab fa-"},"sort-asc":{"id":"sort-up"},"sort-alpha-asc":{"id":"sort-alpha-up"},"sort-alpha-desc":{"id":"sort-alpha-down"},"sort-amount-asc":{"id":"sort-amount-up"},"sort-amount-desc":{"id":"sort-amount-down"},"sort-desc":{"id":"sort-down"},"sort-down":{"id":"sort-down"},"sort-numeric-asc":{"id":"sort-numeric-up"},"sort-numeric-desc":{"id":"sort-numeric-down"},"sort-up":{"id":"sort-up"},"soundcloud":{"id":"soundcloud","prepend":"fab fa-"},"spotify":{"id":"spotify","prepend":"fab fa-"},"stack-exchange":{"id":"stack-exchange","prepend":"fab fa-"},"stack-overflow":{"id":"stack-overflow","prepend":"fab fa-"},"star-empty":{"id":"star","prepend":"far fa-"},"star-empty-selected":{"id":"star","prepend":"far fa-","class":"text-success"},"star-half-rating":{"id":"star-half","prepend":"far fa-"},"star-half-selected":{"id":"star-half","prepend":"far fa-","class":"text-success"},"star-selected":{"id":"star","class":"text-success"},"status-open":{"id":"circle","style":"color:green"},"status-pending":{"id":"adjust","style":"color:orange"},"status-closed":{"id":"times-circle","prepend":"far fa-","style":"color:grey"},"steam":{"id":"steam","prepend":"fab fa-"},"steam-square":{"id":"steam-square","prepend":"fab fa-"},"stop-watching":{"id":"eye-slash","prepend":"far fa-"},"structure":{"id":"sitemap"},"stumbleupon":{"id":"stumbleupon","prepend":"fab fa-"},"success":{"id":"check"},"textfile":{"id":"file-alt","prepend":"far fa-"},"themeisle":{"id":"themeisle","prepend":"fab fa-"},"three-d":{"id":"cube"},"ticket":{"id":"ticket-alt"},"time":{"id":"clock","prepend":"far fa-"},"title":{"id":"text-width"},"toggle-left":{"id":"caret-square-left","prepend":"far fa-"},"toggle-off":{"id":"toggle-off"},"toggle-on":{"id":"toggle-on"},"toggle-right":{"id":"caret-square-right","prepend":"far fa-"},"trackers":{"id":"database"},"translate":{"id":"language"},"trash":{"id":"trash-alt","prepend":"far fa-"},"trello":{"id":"trello","prepend":"fab fa-"},"tripadvisor":{"id":"tripadvisor","prepend":"fab fa-"},"tumblr":{"id":"tumblr","prepend":"fab fa-"},"tumblr-square":{"id":"tumblr-square","prepend":"fab fa-"},"twitch":{"id":"twitch","prepend":"fab fa-"},"twitter":{"id":"twitter","prepend":"fab fa-"},"twitter-square":{"id":"twitter-square","prepend":"fab fa-"},"unlike":{"id":"thumbs-down"},"up":{"id":"sort-up"},"usb":{"id":"usb","prepend":"fab fa-"},"viacoin":{"id":"viacoin","prepend":"fab fa-"},"video":{"id":"file-video","prepend":"far fa-"},"video_file":{"id":"file-video","prepend":"far fa-"},"view":{"id":"search-plus"},"vimeo":{"id":"vimeo-square","prepend":"fab fa-"},"vine":{"id":"vine","prepend":"fab fa-"},"vk":{"id":"vk","prepend":"fab fa-"},"warning":{"id":"exclamation-triangle"},"watch":{"id":"eye","prepend":"far fa-"},"watch-group":{"id":"users"},"weibo":{"id":"weibo","prepend":"fab fa-"},"whatsapp":{"id":"whatsapp","prepend":"fab fa-"},"windows":{"id":"windows","prepend":"fab fa-"},"wiki":{"id":"file-alt","prepend":"far fa-"},"wizard":{"id":"magic"},"word":{"id":"file-word","prepend":"far fa-"},"wysiwyg":{"id":"file-alt"},"xbox":{"id":"xbox","prepend":"fab fa-"},"xing":{"id":"xing","prepend":"fab fa-"},"xing-square":{"id":"xing-square","prepend":"fab fa-"},"yahoo":{"id":"yahoo","prepend":"fab fa-"},"youtube":{"id":"youtube","prepend":"fab fa-"},"youtube-square":{"id":"youtube-square","prepend":"fab fa-"},"zip":{"id":"file-archive","prepend":"far fa-"}},"tag":"span","prepend":"fas fa-","append":" fa-fw","rotate":{"90":" fa-rotate-90","180":" fa-rotate-180","270":" fa-rotate-270","horizontal":" fa-flip-horizontal","vertical":" fa-flip-vertical"}}
+var zoomToFoundLocation = "street";
+
+var bootstrapButton;
+if (typeof $.fn.button.noConflict === "function") {
+	bootstrapButton = $.fn.button.noConflict() // return $.fn.button to previously assigned value
+	$.fn.bootstrapBtn = bootstrapButton            // give $().bootstrapBtn the Bootstrap functionality
+}
+
+/*
+if (getCookie('postitnote') != 'hidden') {
+  $('#postitnote').removeClass('hidden').hide().delay('500').fadeIn('slow');
+}
+*/
+
+/* 
+ * this section of the custom js amends the way that OpenLayers 'spaces out' 
+ * dot and dot/dash markings for paths etc - added by Geoff (eromneg) Aug '14
+*/
+ if ( typeof OpenLayers != "undefined") {
+ OpenLayers.Renderer.SVG.prototype.dashStyle = function(style, widthFactor) {
+        var w = style.strokeWidth * widthFactor;
+        var str = style.strokeDashstyle;
+        switch (str) {
+            case 'solid':
+                return 'none';
+            case 'dot':
+                return [1, 4 * w].join();
+            case 'dash':
+                return [4 * w, 2 * w].join();
+            case 'dashdot':
+                return [4 * w, 2 * w, 1, 2 * w].join();
+            case 'longdash':
+                return [8 * w, 2 * w].join();
+            case 'longdashdot':
+                return [8 * w, 2 * w, 1, 2 * w].join();
+            default:
+                return OpenLayers.String.trim(str).replace(/\s+/g, ",");
+        }
+    }
+}
+					function submitSearch1() {
+						var $f = $('#search-module-form1');
+						if ($f.attr('action') !== "tiki-editpage.php" && $f.data('page_selected') === $("#search_mod_input_1").val()) {
+							if ($f.find('input[name="find"]').length) {
+								$f.find('input[name="find"]').val($f.data('page_selected'));
+							} else {
+								$f.append($('<input name="find">').val($f.data('page_selected')));
+							}
+							$f.attr('action', 'tiki-listpages.php');
+						} else if ($f.attr('action') == "#") {
+							$f.attr('action', 'tiki-searchindex.php');
+						}
+						$exact = $f.find("input[name=exact_match]");
+						if ($exact.val() != "y") {
+							$exact.remove(); // seems exact_match is true even if empty
+						}
+						return true;
+					}
+				
+
+function capLock(e, el){
+	kc = e.keyCode ? e.keyCode : e.which;
+	sk = e.shiftKey ? e.shiftKey : (kc == 16 ? true : false);
+	if ((kc >= 65 && kc <= 90 && !sk) || (kc >= 97 && kc <= 122 && sk)) {
+		$('.divCapson', $(el).parents('div:first')).show();
+	} else {
+		$('.divCapson', $(el).parents('div:first')).hide();
+	}
+}
+
+// js 2 
+
+try {
+	var timezone = Intl.DateTimeFormat().resolvedOptions().timeZone;
+	setCookie("local_tz", timezone);
+} catch (e) {}
+
+// this is used by tiki-confirm.js checkTimeout, so needs to be always set
+var now = new Date();
+
+if (! timezone) {
+	function inArray(item, array) {
+		for (var i in array) {
+			if (array[i] === item) {
+				return i;
+			}
+		}
+		return false;
+	}
+	var allTimeZoneCodes = ["ACDT","ACST","ADDT","ADT","AEDT","AEST","AHDT","AHST","AKDT","AKST","AMT","APT","AST","AWDT","AWST","AWT","BDST","BDT","BMT","BOST","BST","CAST","CAT","CDDT","CDT","CEMT","CEST","CET","CMT","CPT","CST","CWT","CHST","DMT","EAT","EDDT","EDT","EEST","EET","EMT","EPT","EST","EWT","FFMT","FMT","GMT","GST","HDT","HKST","HKT","HMT","HST","IDDT","IDT","IMT","IST","JDT","JMT","JST","KDT","KMT","KST","LST","MDDT","MDST","MDT","MMT","MPT","MSD","MSK","MST","MWT","NDDT","NDT","NPT","NST","NWT","NZDT","NZMT","NZST","PDDT","PDT","PKST","PKT","PLMT","PMMT","PMT","PPMT","PPT","PST","PWT","QMT","RMT","SAST","SDMT","SET","SJMT","SMT","SST","TBMT","TMT","UCT","UTC","WAST","WAT","WEMT","WEST","WET","WIB","WITA","WIT","WMT","YDDT","YDT","YPT","YST","YWT","A","B","C","D","E","F","G","H","I","K","L","M","N","O","P","Q","R","S","T","U","V","W","X","Y","Z"];
+	var now_string = now.toString();
+	var offsethours = - now.getTimezoneOffset() / 60;
+	setCookie("local_tzoffset", offsethours);
+	var m = now_string.match(/[ \(]([A-Z]{3,6})[ \)]?[ \d]*$/);	// try three or more char tz first at the end or just before the year
+	if (!m) {
+		m = now_string.match(/[ \(]([A-Z]{1,6})[ \)]?[ \d]*$/);	// might be a "military" one if not
+	}
+	if (m) {
+		m = m[1];
+	} else {	// IE (sometimes) gives UTC +offset instead of the abbreviation
+		// sadly this workaround will fail for non-whole hour offsets
+		var hours = - now.getTimezoneOffset() / 60;
+		m = "GMT" + (hours > 0 ? "+" : "") + hours;
+	}
+	// Etc/GMT+ is equivalent to GMT-
+	if (m.substring(0,4) == "GMT+") {
+		m = "Etc/GMT-" + m.substring(4);
+		setCookie("local_tz", m);
+	}
+	if (m.substring(0,4) == "GMT-") {
+		m = "Etc/GMT+" + m.substring(4);
+		setCookie("local_tz", m);
+	}
+	if (inArray(m, allTimeZoneCodes)) {
+		setCookie("local_tz", m);
+	}
+}
+
+//--><!]]>
+</script>
+<script type="text/javascript">
+<!--//--><![CDATA[//><!--
+$(document).ready(function(){
+// jq_onready 0 
+$("article").fitVids();
+$("time.timeago").timeago(); jQuery.timeago.settings.allowFuture = true;
+$(".table-responsive").doubleScroll({resetOnWindowResize: true});
+$(".convert-mailto").removeClass("convert-mailto").each(function () {
+				var address = $(this).data("encode-name") + "@" + $(this).data("encode-domain");
+				$(this).attr("href", "mailto:" + address).text(address);
+			});
+
+			lozad('.lozad', {
+				load: function(el) {
+					el.src = el.dataset.src;
+					el.onload = function() {
+						el.classList.add('lozadFade');
+					}
+				}
+			}).observe();
+		
+$(".search_mod_magnifier").mouseover( function () {
+	$(".search_mod_buttons", $(this).parents(".module"))
+		.show('fast')
+		.mouseleave( function () {
+			$(this).hide('fast');
+		});
+}).click( function () {
+	$(this).parents("form").submit();
+});
+$("#search_mod_input_1")
+.keydown( function () {
+	$(".search_mod_magnifier", $(this).parent()).mouseover();}
+);
+						
+$("#search_mod_input_1").tiki("autocomplete", "pagename",{select: function(event, item) {
+						$('#search-module-form1').data('page_selected', item.item.value).find("input[name=exact_match]").val("y");
+						}, open: function(event, item) {
+						$(".search_mod_buttons", "#search-module-form1").hide();
+						}, close: function(event, item) {
+						$(".search_mod_buttons", "#search-module-form1").show();
+						}});
+$(document).ready(function () {
+  var resetCSS = {
+    transition: 'all .5s ease 0s',
+    top: '',
+    height: '',
+    minHeight: '',
+    opacity: '',
+    overflow: ''
+  };
+  $(window).on("scroll", function () {
+    if ($(window).scrollTop() > 200) {
+      $('.navbar.fixed-top, .navbar-fixed-top').css({
+          transition: 'all .75s ease 0s',
+          top: '-20px',
+          height: '25px',
+          minHeight: '5px',
+          opacity: '.75',
+          overflow: 'hidden'
+      });
+      $('html:not(#page_1) .topbar').css({
+          'box-shadow': '0 5px 10px 0px rgba(0,0,0,.25)',
+          position: 'fixed',
+          top: '6px',
+          width: '100%',
+          left: 0,
+          'z-index': 3
+      });
+    } else {
+      $('.navbar.fixed-top, .navbar-fixed-top').css(resetCSS);
+      $(".topbar").removeAttr('style');
+    }
+  });
+  $('.navbar.fixed-top, .navbar-fixed-top').on('mouseover', function () {
+    $(this).css(resetCSS);
+    $('html:not(#page_1) .topbar').css({
+      top: '46px'
+    });
+  });
+});
+
+$('.backtotop').hide();
+function backtotop(){
+    var scrolled = $(window).scrollTop();
+    if (scrolled > 0) {
+        $('.backtotop').fadeIn();
+    } else {
+        $('.backtotop').fadeOut().removeAttr('style');
+    }
+}
+$(window).scroll(function(e){
+    backtotop();
+});
+$('.backtotop a').click(function(event){
+    event.preventDefault();
+    $('html,body').animate({
+        scrollTop:$('body').offset().top
+    }, 1000);
+});
+
+$("#loginbox-1").submit( function () {
+	if ($("#login-user_1").val() && $("#login-pass_1").val()) {
+		return true;
+	} else {
+		$("#login-user_1").focus();
+		return false;
+	}
+});
+if (jqueryTiki.no_cookie) {
+	$('.box-login_box input').each(function(){
+		$(this).change(function() {
+			if (jqueryTiki.no_cookie && $(this).val()) {
+				alert(jqueryTiki.cookie_consent_alert);
+			}
+		});
+	});
+}
+
+if ($('#login-user_1:visible').length) {if ($("#login-user_1").offset().top < $(window).height()) {$('#login-user_1')[0].focus();} }
+});
+//--><!]]>
+</script>
+
+	
+		<!-- Piwik -->
+
+
+<!-- End Piwik Code -->
+</body>
+</html>

@@ -1,0 +1,252 @@
+﻿/*
+	AnythingSlider v1.7+ themes
+	Ribbon theme
+	by Rob Garrison (aka Mottie)
+*/
+
+/****************************
+ SET DEFAULT DIMENSIONS HERE
+ ****************************/
+/* Change the ID to match your slider */
+#slider {
+	width: 700px;
+	height: 390px;
+	list-style: none;
+	/* Prevent FOUC (see FAQ page) and keep things readable if javascript is disabled */
+	overflow-y: auto;
+	overflow-x: hidden;
+}
+
+/* Opera width restriction */
+.anythingBase {
+	background: transparent;
+	list-style: none;
+	position: absolute;
+	top: 0;
+	left: 0;
+	margin: 0;
+	padding: 0;
+	/* override the #slider overflow above, once the class is added */
+	overflow: visible !important;
+}
+
+/*************
+ ACTIVE STATE (slider has keyboard focus)
+ *************/
+/* slider window - top & bottom borders, active state */
+.anythingSlider-ribbon.activeSlider .anythingWindow {
+	border-color: #74a1ba;
+}
+
+/*****************
+ DEFAULT STATE (no keyboard focus)
+ *****************/
+/* Overall Wrapper */
+.anythingSlider-ribbon {
+	display: block;
+	position: relative;
+	margin: 0 auto;
+	padding: 0 6px; /* adjust left/right padding here to move arrows towards or away from the center */
+}
+
+/* all panels inside the slider; horizontal mode */
+.anythingSlider .panel {
+	background: transparent;
+	display: block;
+	overflow: hidden;
+	float: left;
+	padding: 0;
+	margin: 0;
+}
+/* vertical mode */
+.anythingSlider .vertical .panel {
+	float: none;
+}
+
+/* fade mode */
+.anythingSlider .fade .panel {
+	float: none;
+	position: absolute;
+	top: 0;
+	left: 0;
+	z-index: -1;
+}
+/* fade mode active page - visible & on top */
+.anythingSlider .fade .activePage {
+	z-index: 0;
+}
+
+/* Slider window - top & bottom borders, default state */
+.anythingSlider-ribbon .anythingWindow {
+	border-top: 3px solid #111;
+	border-bottom: 3px solid #111;
+	overflow: hidden;
+	position: relative;
+	width: 100%;
+	height: 100%;
+}
+/* Arrow buttons position */
+.anythingSlider-ribbon .arrow {
+	top: 50%;
+	position: absolute;
+	display: block;
+}
+.anythingSlider-ribbon span.back {
+	left: 0;
+}
+.anythingSlider-ribbon span.forward {
+	right: 0;
+}
+/* Arrow buttons images */
+.anythingSlider-ribbon .arrow a {
+	display: block;
+	background: transparent url(../images/ribbon.png) no-repeat;
+	width: 41px;
+	height: 39px;
+	text-align: center;
+	text-decoration: none;
+	outline: 0;
+	margin: -20px 0 0; /* set to 1/2 height */
+}
+.anythingSlider-ribbon .back a {
+	background-position: -2px top;
+}
+.anythingSlider-ribbon .forward a {
+	background-position: right top;
+}
+.anythingSlider-ribbon .back a:hover,
+.anythingSlider-ribbon .back a.hover {
+	background-position: -2px -39px;
+}
+.anythingSlider-ribbon .forward a:hover,
+.anythingSlider-ribbon .forward a.hover {
+	background-position: right -39px;
+}
+
+/* Disabled arrows - infiniteSlide = false & stopAtEnd = true */
+.anythingSlider-ribbon .back.disabled,
+.anythingSlider-ribbon .forward.disabled {
+	display: none;
+}
+
+/* Navigation tabs - Slider control block */
+.anythingSlider-ribbon .anythingControls {
+	outline: 0;
+	float: right;
+	position: absolute;
+	bottom: 5px;
+	right: 55px;
+	z-index: 100;
+}
+/* control list */
+.anythingSlider-ribbon .anythingControls ul {
+	float: left;
+	margin: 0;
+	padding: 0;
+	z-index: 100;
+}
+/* control tabs */
+.anythingSlider-ribbon .anythingControls ul li {
+	display: block;
+	float: left;
+}
+/* control links */
+.anythingSlider-ribbon .anythingControls ul a {
+	display: block;
+	background: transparent url(../images/ribbon.png) no-repeat left -77px; /* default tab, active/inactive slider */
+	text-decoration: none;
+	width: 16px;
+	height: 17px;
+	margin: 0 1px;
+	padding: 0;
+	outline: 0;
+}
+/* control nav window (navigationSize = true) */
+.anythingSlider-ribbon .anythingControls .anythingNavWindow {
+	overflow: hidden;
+	float: left;
+}
+.anythingSlider-ribbon .anythingControls ul a.hover,
+.anythingSlider-ribbon .anythingControls ul a:hover {
+	background-position: left -93px;
+}
+.anythingSlider-ribbon .anythingControls ul a.cur {
+	background-position: -17px -77px;
+}
+.anythingSlider-ribbon .anythingControls ul a.cur:hover {
+	background-position: -17px -93px;
+}
+
+/* Start/stop button - stopped */
+.anythingSlider-ribbon .start-stop {
+	background: transparent url(../images/ribbon.png) no-repeat -51px -77px;
+	color: #ddd;
+	width: 16px;
+	height: 17px;
+	padding: 0;
+	float: right;
+	z-index: 100;
+	outline: 0;
+	margin: 0 0 0 3px;
+}
+/* Start/stop button - stopped */
+.anythingSlider-ribbon .start-stop:hover,
+.anythingSlider-ribbon .start-stop.hover {
+	background-position: -51px -93px;
+}
+/* start/stop button - playing */
+.anythingSlider-ribbon .start-stop.playing {
+	background-position: -34px -77px;
+}
+.anythingSlider-ribbon .start-stop.playing:hover,
+.anythingSlider-ribbon .start-stop.playing.hover {
+	background-position: -34px -93px;
+}
+
+/* Navigation size window arrows */
+.anythingSlider-ribbon .anythingControls li.next a span, .anythingSlider-ribbon .anythingControls li.prev a span {
+	text-indent: 1px;
+	font-size: 11px;
+	padding: 7px 0 0 5px;
+}
+.anythingSlider-ribbon .anythingControls li.prev a, .anythingSlider-ribbon .anythingControls li.next a {
+	color: #ddd;
+}
+.anythingSlider-ribbon .anythingControls li.next a:hover, .anythingSlider-ribbon .anythingControls li.prev a:hover {
+	color: #000;
+}
+
+/***********************
+  COMMON SLIDER STYLING
+ ***********************/
+/* text indent moved to span inside "a", for IE7; apparently, a negative text-indent on an "a" link moves the link as well as the text */
+.anythingSlider-ribbon .arrow a span, .anythingSlider-ribbon .anythingControls ul a span, .anythingSlider-ribbon .start-stop span {
+	display: block;
+	line-height: 1px; /* needed for IE7 */
+	width: 0;
+	visibility: hidden; /* needed for IE8, instead of text-indent: -9999px */
+}
+/* AnythingSlider IE7 and older styling */
+.as-oldie div.anythingSlider .arrow {
+	margin: 0;
+}
+/* When using the navigationSize option, the side margins need to be zero
+   None of the navigation panels look good in IE7 now =( */
+.as-oldie div.anythingSlider .anythingControls {
+	margin: 0 0 0 30px;
+}
+}.as-oldie div.anythingSlider .anythingControls ul.thumbNav a {
+	margin: 0 0 0 2px;
+}
+.as-oldie div.anythingSlider .anythingControls .anythingNavWindow li {
+	padding: 3px 0 0 0;
+}
+.as-oldie div.anythingSlider .anythingControls {
+	display: block;
+	width: 95%; /* arbitrary percentage, adjust to fit your slider in IE7 */
+	margin: 0;
+}
+.as-oldie .anythingSlider-ribbon .anythingControls {
+	width: 90%;
+	margin-left: 0;
+}

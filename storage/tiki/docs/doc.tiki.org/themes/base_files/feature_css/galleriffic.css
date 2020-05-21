@@ -1,0 +1,151 @@
+.wp_galleriffic div.content {
+	/* The display of content is enabled using jQuery so that the slideshow content won't display unless javascript is enabled. */
+	display: none;
+	float: right;
+	width: 550px;
+}
+.wp_galleriffic div#gallery{
+	float:left;
+}
+.wp_galleriffic div#thumbs{
+	width:530px !important;
+	padding-left:15px;
+}
+.wp_galleriffic div.content a, div.navigation a {
+	text-decoration: none;
+	color: #777;
+}
+.wp_galleriffic div.content a:focus, div.content a:hover, div.content a:active {
+	text-decoration: underline;
+}
+.wp_galleriffic div.controls {
+	margin-top: 5px;
+	height: 23px;
+}
+.wp_galleriffic div.controls a {
+	padding: 5px;
+}
+.wp_galleriffic div.ss-controls {
+	float: left;
+}
+.wp_galleriffic div.nav-controls {
+	float: right;
+}
+.wp_galleriffic div.slideshow-container {
+	position: relative;
+	clear: both;
+	height: 502px; /* This should be set to be at least the height of the largest image in the slideshow */
+}
+.wp_galleriffic div.loader {
+	position: absolute;
+	top: 0;
+	left: 0;
+	background-image: url('../../../vendor_bundled/vendor/jquery-plugins/galleriffic/css/loader.gif');
+	background-repeat: no-repeat;
+	background-position: center;
+	width: 550px;
+	height: 502px; /* This should be set to be at least the height of the largest image in the slideshow */
+}
+.wp_galleriffic div.slideshow span.image-wrapper {
+	display: block;
+	position: absolute;
+	top: 0;
+	left: 0;
+}
+.wp_galleriffic div.slideshow a.advance-link {
+	display: block;
+	width: 550px;
+	height: 502px; /* This should be set to be at least the height of the largest image in the slideshow */
+	line-height: 502px; /* This should be set to be at least the height of the largest image in the slideshow */
+	text-align: center;
+}
+.wp_galleriffic div.slideshow a.advance-link:hover, div.slideshow a.advance-link:active, div.slideshow a.advance-link:visited {
+	text-decoration: none;
+}
+.wp_galleriffic div.slideshow img {
+	vertical-align: middle;
+	border: 1px solid #ccc;
+}
+.wp_galleriffic div.download {
+	float: right;
+}
+.wp_galleriffic div.caption-container {
+	position: relative;
+	clear: left;
+	height: 75px;
+}
+.wp_galleriffic span.image-caption {
+	display: block;
+	position: absolute;
+	width: 550px;
+	top: 0;
+	left: 0;
+}
+.wp_galleriffic div.caption {
+	padding: 12px;
+}
+.wp_galleriffic div.image-title {
+	font-weight: bold;
+	font-size: 1.4em;
+}
+.wp_galleriffic div.image-desc {
+	line-height: 1.3em;
+	padding-top: 12px;
+}
+.wp_galleriffic ul.thumbs {
+	clear: both;
+	margin: 0;
+	padding: 0;
+}
+.wp_galleriffic ul.thumbs li {
+	float: left;
+	padding: 0;
+	margin: 5px 10px 5px 0;
+	list-style: none;
+}
+.wp_galleriffic a.thumb {
+	padding: 2px;
+	display: block;
+	border: 1px solid #ccc;
+}
+.wp_galleriffic ul.thumbs li.selected a.thumb {
+	background: #000;
+}
+.wp_galleriffic a.thumb:focus {
+	outline: none;
+}
+.wp_galleriffic ul.thumbs img {
+	border: none;
+	display: block;
+}
+.wp_galleriffic div.pagination {
+	clear: both;
+}
+.wp_galleriffic div.navigation div.top {
+	margin-bottom: 12px;
+	height: 11px;
+}
+.wp_galleriffic div.navigation div.bottom {
+	margin-top: 12px;
+}
+.wp_galleriffic div.pagination a, div.pagination span.current, div.pagination span.ellipsis {
+	display: block;
+	float: left;
+	margin-right: 2px;
+	padding: 4px 7px 2px 7px;
+	border: 1px solid #ccc;
+}
+.wp_galleriffic div.pagination a:hover {
+	background-color: #eee;
+	text-decoration: none;
+}
+.wp_galleriffic div.pagination span.current {
+	font-weight: bold;
+	background-color: #000;
+	border-color: #000;
+	color: #fff;
+}
+.wp_galleriffic div.pagination span.ellipsis {
+	border: none;
+	padding: 5px 0 3px 2px;
+}

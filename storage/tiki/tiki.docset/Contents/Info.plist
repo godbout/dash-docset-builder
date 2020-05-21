@@ -9,7 +9,7 @@
     <key>DocSetPlatformFamily</key>
     <string>tiki</string>
     <key>dashIndexFilePath</key>
-    <string>index.html</string>
+    <string>doc.tiki.org/All-the-Documentation.html</string>
     <key>DashDocSetFallbackURL</key>
     <string>doc.tiki.org</string>
     <key>DashDocSetPlayURL</key>
