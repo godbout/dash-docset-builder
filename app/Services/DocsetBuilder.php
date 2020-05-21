@@ -37,11 +37,22 @@ class DocsetBuilder
 
     public function grab()
     {
+        if (method_exists($this->docset, 'grab')) {
+            return $this->grabFromDocset();
+        }
+
         if ($this->grabber->sitemapExists()) {
             return $this->grabFromSitemap();
         }
 
         return $this->grabFromIndex();
+    }
+
+    protected function grabFromDocset()
+    {
+        return $this->command->task('  - Downloading doc from docset custom instructions', function () {
+            return $this->docset->grab();
+        });
     }
 
     protected function grabFromSitemap()
