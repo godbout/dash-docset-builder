@@ -21,7 +21,8 @@ class TailwindCSS extends BaseDocset
         'refactoring-ui.nyc3.cdn.digitaloceanspaces.com',
         'jsdelivr.net',
         'code.jquery.com',
-        'rsms.me'
+        'rsms.me',
+        // 'images.unsplash.com'
     ];
 
     public function entries(string $file): Collection
