@@ -158,6 +158,7 @@ class TailwindCSS extends BaseDocset
         $this->removeLeftSidebar($crawler);
         $this->removeRightSidebar($crawler);
         $this->removeTailwindUIAlert($crawler);
+        $this->removeUnwantedJavaScript($crawler);
         $this->updateCSS($crawler);
         $this->insertDashTableOfContents($crawler);
 
@@ -182,6 +183,18 @@ class TailwindCSS extends BaseDocset
     protected function removeTailwindUIAlert(HtmlPageCrawler $crawler)
     {
         $crawler->filter('body > div.transition.transform.fixed.z-100')->remove();
+    }
+
+    protected function removeUnwantedJavaScript(HtmlPageCrawler $crawler)
+    {
+        $crawler->filter('script[src*=analytics]')->remove();
+        $crawler->filter('script[src*=docsearch]')->remove();
+        $crawler->filter('script[src*=gtag]')->remove();
+        $crawler->filterXPath("//script[text()[contains(.,'docsearch')]]")->remove();
+        $crawler->filterXPath("//script[text()[contains(.,'gtag')]]")->remove();
+        $crawler->filter('script[src*=jquery]')
+            ->removeAttribute('integrity')
+            ->removeAttribute('crossorigin');
     }
 
     protected function updateCSS(HtmlPageCrawler $crawler)
