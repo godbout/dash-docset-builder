@@ -22,6 +22,7 @@ class TailwindCSS extends BaseDocset
         'jsdelivr.net',
         'code.jquery.com',
         'rsms.me',
+        'googleapis.com',
         // 'images.unsplash.com'
     ];
 
