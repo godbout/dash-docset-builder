@@ -201,7 +201,25 @@ module.exports = {
 <p>Then you can use classes like <code>print:text-black</code> to specify styles that should only be applied when someone tries to print the page you're working on:</p>
 <pre><code class="language-html">&lt;div class="text-gray-700 print:text-black"&gt;
   &lt;!-- ... --&gt;
-&lt;/div&gt;</code></pre>              </div>
+&lt;/div&gt;</code></pre>
+<h3><a id="dark-mode" name="//apple_ref/cpp/Section/Dark%20mode" class="dashAnchor"></a>Dark mode</h3>
+<p>The <code>raw</code> option can even be used to implement a "dark mode" screen:</p>
+<pre><code class="language-js">// tailwind.config.js
+module.exports = {
+  theme: {
+    extend: {
+      screens: {
+        'dark': {'raw': '(prefers-color-scheme: dark)'},
+        // =&gt; @media (prefers-color-scheme: dark) { ... }
+      }
+    }
+  }
+}</code></pre>
+<p>Then you can style elements differently in dark mode using the <code>dark:</code> prefix:</p>
+<pre><code class="language-html">&lt;div class="text-gray-700 dark:text-gray-200"&gt;
+  &lt;!-- ... --&gt;
+&lt;/div&gt;</code></pre>
+<p>Note that because of how these screen variants are implemented in Tailwind <strong>you can't combine breakpoints with dark mode using this approach</strong>, for example <code>md:dark:text-gray-300</code> won't work. This is something we're hoping to address with official dark mode support in a future release.</p>              </div>
 
               
               
@@ -215,7 +233,7 @@ module.exports = {
         </div>
         
 
-        <script src="app.js%3Fid=f831c3cf79135651b6a5"></script>
+        <script src="app.js%3Fid=67e749265d091bed73b6"></script>
 
         <!-- Algolia DocSearch  -->
         <script type="text/javascript" src="docsearch.min.js"></script>
@@ -250,7 +268,7 @@ module.exports = {
     gtag('config', 'UA-109068504-1');
   </script>
 
-<script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+<script src="jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
 <script src="nav.js%3Fid=b3eb7d558e0420f9b29c" defer></script>
 
 </body>

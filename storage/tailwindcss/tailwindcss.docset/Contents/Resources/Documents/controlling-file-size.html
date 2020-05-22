@@ -135,16 +135,14 @@ module.exports = {
 }</code></pre>
 <p>We recomend only removing unused styles in production, as removing them in development means you need to recompile any time you change your templates and compiling with PurgeCSS enabled is much slower.</p>
 <h3><a id="removing-all-unused-styles" name="//apple_ref/cpp/Section/Removing%20all%20unused%20styles" class="dashAnchor"></a>Removing all unused styles</h3>
-<p>By default, Tailwind will only remove unused component and utility styles that it itself generates. You can conceptually think of it working like this:</p>
+<p>By default, Tailwind will only remove unused utility styles that it itself generates. You can conceptually think of it working like this:</p>
 <pre><code class="language-css">@tailwind  base;
 
 /* Your own custom base styles */
 h1 { /* ... */ }
 a { /* ... */ }
 
-/* Start purging... */
 @tailwind  components;
-/* Stop purging. */
 
 /* Your own custom component styles */
 .btn { /* ... */ }
@@ -156,7 +154,7 @@ a { /* ... */ }
 
 /* Your own custom utilities */
 .text-shadow-sm { /* ... */ }</code></pre>
-<p>This is to avoid accidentally removing styles that you might need but not directly reference in your templates, for example base syles for elements like <code>html</code> and <code>body</code>, or classes that are only referenced deep in your <code>node_modules</code> folder that are part of some other dependency.</p>
+<p>This is to avoid accidentally removing styles that you might need but not directly reference in your templates, for example base styles for elements like <code>html</code> and <code>body</code>, or classes that are only referenced deep in your <code>node_modules</code> folder that are part of some other dependency.</p>
 <p>If you really want to remove <em>all</em> unused styles, use the <code>mode: 'all'</code> option and <strong>be very careful</strong> to provide the paths to <em>all</em> files that might reference any classes or HTML elements:</p>
 <pre><code class="language-js">// tailwind.config.js
 module.exports = {
@@ -371,7 +369,7 @@ module.exports = {
         </div>
         
 
-        <script src="app.js%3Fid=f831c3cf79135651b6a5"></script>
+        <script src="app.js%3Fid=67e749265d091bed73b6"></script>
 
         <!-- Algolia DocSearch  -->
         <script type="text/javascript" src="docsearch.min.js"></script>
@@ -406,7 +404,7 @@ module.exports = {
     gtag('config', 'UA-109068504-1');
   </script>
 
-<script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+<script src="jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
 <script src="nav.js%3Fid=b3eb7d558e0420f9b29c" defer></script>
 
 </body>

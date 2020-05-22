@@ -19,7 +19,9 @@ class TailwindCSS extends BaseDocset
     public const ICON_32 = 'favicon-32x32.png';
     public const EXTERNAL_DOMAINS = [
         'refactoring-ui.nyc3.cdn.digitaloceanspaces.com',
-        'jsdelivr.net'
+        'jsdelivr.net',
+        'code.jquery.com',
+        'rsms.me'
     ];
 
     public function entries(string $file): Collection
