@@ -121,7 +121,7 @@ EOT;
             $entries = $entries
                 ->merge($this->docset->entries($file))
                 ->unique(function ($entry) {
-                    return $entry['name'].$entry['type'];
+                    return $entry['name'] . $entry['type'];
                 });
         });
 

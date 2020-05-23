@@ -103,7 +103,7 @@ class TailwindCSSTest extends TestCase
 
         $this->assertStringNotContainsString(
             $tailwindUIAlert,
-            Storage::get($this->docset->innerDirectory() . '/' .$this->docset->url() . '/components/buttons.html')
+            Storage::get($this->docset->innerDirectory() . '/' . $this->docset->url() . '/components/buttons.html')
         );
     }
 

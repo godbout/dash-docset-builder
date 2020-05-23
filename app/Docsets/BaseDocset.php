@@ -68,12 +68,12 @@ abstract class BaseDocset implements Docset
 
     final public function innerDirectory(): string
     {
-        return self::file() . '/Contents/Resources/Documents';
+        return $this->file() . '/Contents/Resources/Documents';
     }
 
     final public function innerIndex(): string
     {
-        return self::innerDirectory() . '/' . self::url() . '/' . static::INDEX;
+        return $this->innerDirectory() . '/' . $this->url() . '/' . static::INDEX;
     }
 
     final public function downloadedDirectory(): string
@@ -83,23 +83,23 @@ abstract class BaseDocset implements Docset
 
     final public function downloadedIndex(): string
     {
-        return self::downloadedDirectory() . '/' .self::url() . '/' . static::INDEX;
+        return $this->downloadedDirectory() . '/' . $this->url() . '/' . static::INDEX;
     }
 
     final public function infoPlistFile(): string
     {
-        return self::file() . '/Contents/Info.plist';
+        return $this->file() . '/Contents/Info.plist';
     }
 
     final public function databaseFile(): string
     {
-        return self::file() . '/Contents/Resources/docSet.dsidx';
+        return $this->file() . '/Contents/Resources/docSet.dsidx';
     }
 
     final public function htmlFiles(): Collection
     {
         $files = Storage::allFiles(
-            self::innerDirectory()
+            $this->innerDirectory()
         );
 
         return collect($files)->reject(static function ($file) {
