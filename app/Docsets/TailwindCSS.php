@@ -160,6 +160,7 @@ class TailwindCSS extends BaseDocset
         $this->removeLeftSidebar($crawler);
         $this->removeRightSidebar($crawler);
         $this->removeTailwindUIAlert($crawler);
+        $this->removeUnwantedCSS($crawler);
         $this->removeUnwantedJavaScript($crawler);
         $this->updateCSS($crawler);
         $this->insertDashTableOfContents($crawler);
@@ -185,6 +186,11 @@ class TailwindCSS extends BaseDocset
     protected function removeTailwindUIAlert(HtmlPageCrawler $crawler)
     {
         $crawler->filter('body > div.transition.transform.fixed.z-100')->remove();
+    }
+
+    protected function removeUnwantedCSS(HtmlPageCrawler $crawler)
+    {
+        $crawler->filter('link[href*="docsearch.min.css"]')->remove();
     }
 
     protected function removeUnwantedJavaScript(HtmlPageCrawler $crawler)
