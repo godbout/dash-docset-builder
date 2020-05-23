@@ -22,7 +22,7 @@ class LaravelZeroTest extends TestCase
     public function it_can_generate_a_table_of_contents()
     {
         $toc = $this->docset->entries(
-            $this->docset->downloadedDirectory() . '/logging.html'
+            $this->docset->downloadedDirectory() . '/' . $this->docset->url() . '/docs/logging.html'
         );
 
         $this->assertNotEmpty($toc);
@@ -35,13 +35,13 @@ class LaravelZeroTest extends TestCase
 
         $this->assertStringContainsString(
             $header,
-            Storage::get($this->docset->downloadedDirectory() . '/logging.html')
+            Storage::get($this->docset->downloadedDirectory() . '/' . $this->docset->url() . '/docs/logging.html')
         );
 
         $this->assertStringNotContainsString(
             $header,
             $this->docset->format(
-                Storage::get($this->docset->downloadedDirectory() . '/logging.html')
+                Storage::get($this->docset->downloadedDirectory() . '/' . $this->docset->url() . '/docs/logging.html')
             )
         );
     }
