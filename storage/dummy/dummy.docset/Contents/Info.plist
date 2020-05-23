@@ -9,7 +9,7 @@
     <key>DocSetPlatformFamily</key>
     <string>dummy</string>
     <key>dashIndexFilePath</key>
-    <string>index.html</string>
+    <string>glmb.today/index.html</string>
     <key>DashDocSetFallbackURL</key>
     <string>glmb.today</string>
     <key>DashDocSetPlayURL</key>

@@ -28,7 +28,7 @@ class Dummy extends BaseDocset
             $entries->push([
                 'name' => $node->text(),
                 'type' => 'Guide',
-                'path' => $node->attr('href')
+                'path' => $this->url() . '/' . $node->attr('href')
             ]);
         });
 
