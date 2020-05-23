@@ -17,10 +17,6 @@ abstract class BaseDocset implements Docset
     public const ICON_32 = self::ICON_32;
     public const EXTERNAL_DOMAINS = self::EXTERNAL_DOMAINS;
 
-    public function grab(): bool
-    {
-        return false;
-    }
 
     final public function code(): string
     {
