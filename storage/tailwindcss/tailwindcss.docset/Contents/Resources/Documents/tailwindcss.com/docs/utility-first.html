@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="en" class="bg-white antialiased">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <link rel="apple-touch-icon" sizes="180x180" href="../apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="../favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="../favicon-16x16.png">
+  <link rel="manifest" href="../manifest.json">
+  <link rel="mask-icon" href="../safari-pinned-tab.svg" color="#00b4b6">
+  <title>Utility-First - Tailwind CSS</title>
+  <meta name="theme-color" content="#ffffff">
+  <meta name="twitter:card" content="summary">
+<meta name="twitter:site" content="@tailwindcss">
+<meta name="twitter:title" content="Utility-First - Tailwind CSS">
+<meta name="twitter:description" content="Building complex components from a constrained set of primitive utilities.">
+<meta name="twitter:image" content="https://tailwindcss.com/img/tailwind-twitter-square.png">
+<meta name="twitter:creator" content="@tailwindcss">
+<meta property="og:url" content="https://tailwindcss.com/">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Utility-First - Tailwind CSS">
+<meta property="og:description" content="Building complex components from a constrained set of primitive utilities.">
+<meta property="og:image" content="https://tailwindcss.com/img/twitter-large-card.png">
+  <link rel="stylesheet" href="../../rsms.me/inter/inter.css">
+  <link rel="stylesheet" href="../assets/build/css/main.css%3Fid=4a7cbbbeb4816c16d9a7.css">
+  <link rel="stylesheet" href="../../cdn.jsdelivr.net/docsearch.js/2/docsearch.min.css">
+  <script src="../../cdn.jsdelivr.net/gh/alpinejs/alpine@v1.11.1/dist/alpine.js" defer></script>
+</head>
+<body data-sidebar-visible="true" class="text-gray-900 leading-normal pb-8">
+
+
+
+
+
+
+
+
+<div class="w-full mx-auto px-6">
+  <div class="lg:flex -mx-6">
+
+    
+    
+    
+
+    
+    <div id="content-wrapper" class="min-h-screen w-full">
+
+      
+      <div id="content">
+
+        
+        <div id="app" class="flex" v-cloak>
+
+          
+          <div class="w-full">
+            <div class="markdown mb-6 px-6 mx-auto">
+                              <a name="//apple_ref/cpp/Section/Top" class="dashAnchor"></a><h1 class="flex items-center">
+                  Utility-First
+                  <!-- <span class="ml-4 text-teal-600 font-semibold text-base">v1.3.0+</span> -->
+                                  </h1>
+              
+                              <div class="mt-0 mb-4 text-gray-600">
+                  Building complex components from a constrained set of primitive utilities.
+                </div>
+                                          <hr class="my-8 border-b-2 border-gray-200">
+                          </div>
+            <div class="flex">
+              <div class="markdown px-6 w-full mx-auto">
+                <h2 style="font-size: 0" class="invisible m-0 -mb-6"><a id="overview" name="//apple_ref/cpp/Section/Overview" class="dashAnchor"></a>Overview</h2>
+<p>Traditionally, whenever you need to style something on the web, you write CSS.</p>
+<p class="flex items-start mt-8 mb-0">
+  <svg class="h-6 w-6 mr-2 flex-shrink-0" xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24"><circle cx="12" cy="12" r="10" fill="#fed7d7"></circle><path fill="#f56565" d="M13.41 12l2.83 2.83a1 1 0 0 1-1.41 1.41L12 13.41l-2.83 2.83a1 1 0 1 1-1.41-1.41L10.59 12 7.76 9.17a1 1 0 0 1 1.41-1.41L12 10.59l2.83-2.83a1 1 0 0 1 1.41 1.41L13.41 12z"></path></svg>
+  <strong class="text-base font-semibold text-gray-800">Using a traditional approach where custom designs require custom CSS</strong>
+</p>
+<div class="relative overflow-hidden mb-8">
+  <div v-pre class="bg-white rounded-t-lg overflow-hidden border-t border-l border-r border-gray-400 p-4 bg-gray-200 px-8 py-12" style="">
+    <div class="max-w-sm mx-auto flex p-6 bg-white rounded-lg shadow-xl">
+  <div class="flex-shrink-0">
+    <svg class="h-12 w-12" viewbox="0 0 40 40" xmlns="http://www.w3.org/2000/svg"><defs><lineargradient x1="50%" y1="0%" x2="50%" y2="100%" id="a"><stop stop-color="#2397B3" offset="0%"></stop><stop stop-color="#13577E" offset="100%"></stop></lineargradient><lineargradient x1="50%" y1="0%" x2="50%" y2="100%" id="b"><stop stop-color="#73DFF2" offset="0%"></stop><stop stop-color="#47B1EB" offset="100%"></stop></lineargradient></defs><g fill="none" fill-rule="evenodd"><path d="M28.872 22.096c.084.622.128 1.258.128 1.904 0 7.732-6.268 14-14 14-2.176 0-4.236-.496-6.073-1.382l-6.022 2.007c-1.564.521-3.051-.966-2.53-2.53l2.007-6.022A13.944 13.944 0 0 1 1 24c0-7.331 5.635-13.346 12.81-13.95A9.967 9.967 0 0 0 13 14c0 5.523 4.477 10 10 10a9.955 9.955 0 0 0 5.872-1.904z" fill="url(#a)" transform="translate(1 1)"></path><path d="M35.618 20.073l2.007 6.022c.521 1.564-.966 3.051-2.53 2.53l-6.022-2.007A13.944 13.944 0 0 1 23 28c-7.732 0-14-6.268-14-14S15.268 0 23 0s14 6.268 14 14c0 2.176-.496 4.236-1.382 6.073z" fill="url(#b)" transform="translate(1 1)"></path><path d="M18 17a2 2 0 1 0 0-4 2 2 0 0 0 0 4zM24 17a2 2 0 1 0 0-4 2 2 0 0 0 0 4zM30 17a2 2 0 1 0 0-4 2 2 0 0 0 0 4z" fill="#FFF"></path></g></svg>
+  </div>
+  <div class="ml-6 pt-1">
+    <div class="text-xl text-gray-900 leading-tight">ChitChat</div>
+    <p class="text-base text-gray-600 leading-normal">You have a new message!</p>
+  </div>
+</div>
+  </div>
+  <div v-pre class="rounded-b-lg bg-gray-800">
+    <pre class="scrollbar-none m-0 p-0 language-html"><code class="inline-block p-4 scrolling-touch">&lt;div class="chat-notification"&gt;
+  &lt;div class="chat-notification-logo-wrapper"&gt;
+    &lt;img class="chat-notification-logo" src="/img/logo.svg" alt="ChitChat Logo"&gt;
+  &lt;/div&gt;
+  &lt;div class="chat-notification-content"&gt;
+    &lt;h4 class="chat-notification-title"&gt;ChitChat&lt;/h4&gt;
+    &lt;p class="chat-notification-message"&gt;You have a new message!&lt;/p&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+
+&lt;style&gt;
+  .chat-notification {
+    display: flex;
+    max-width: 24rem;
+    margin: 0 auto;
+    padding: 1.5rem;
+    border-radius: 0.5rem;
+    background-color: #fff;
+    box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+  }
+  .chat-notification-logo-wrapper {
+    flex-shrink: 0;
+  }
+  .chat-notification-logo {
+    height: 3rem;
+    width: 3rem;
+  }
+  .chat-notification-content {
+    margin-left: 1.5rem;
+    padding-top: 0.25rem;
+  }
+  .chat-notification-title {
+    color: #1a202c;
+    font-size: 1.25rem;
+    line-height: 1.25;
+  }
+  .chat-notification-message {
+    color: #718096;
+    font-size: 1rem;
+    line-height: 1.5;
+  }
+&lt;/style&gt;</code></pre>
+  </div>
+</div>
+<p>With Tailwind, you style elements by applying pre-existing classes directly in your HTML.</p>
+<p class="flex items-start mt-8 mb-0">
+  <svg class="h-6 w-6 mr-2 flex-shrink-0" xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24"><circle class="text-green-200 fill-current" cx="12" cy="12" r="10"></circle><path class="text-green-600 fill-current" d="M10 14.59l6.3-6.3a1 1 0 0 1 1.4 1.42l-7 7a1 1 0 0 1-1.4 0l-3-3a1 1 0 0 1 1.4-1.42l2.3 2.3z"></path></svg>
+  <strong class="text-base font-semibold text-gray-800">Using utility classes to build custom designs without writing CSS</strong>
+</p>
+<div class="relative overflow-hidden mb-8">
+  <div v-pre class="bg-white rounded-t-lg overflow-hidden border-t border-l border-r border-gray-400 p-4 bg-gray-200 px-8 py-12" style="">
+    <div class="max-w-sm mx-auto flex p-6 bg-white rounded-lg shadow-xl">
+  <div class="flex-shrink-0">
+    <svg class="h-12 w-12" viewbox="0 0 40 40" xmlns="http://www.w3.org/2000/svg"><defs><lineargradient x1="50%" y1="0%" x2="50%" y2="100%" id="a"><stop stop-color="#2397B3" offset="0%"></stop><stop stop-color="#13577E" offset="100%"></stop></lineargradient><lineargradient x1="50%" y1="0%" x2="50%" y2="100%" id="b"><stop stop-color="#73DFF2" offset="0%"></stop><stop stop-color="#47B1EB" offset="100%"></stop></lineargradient></defs><g fill="none" fill-rule="evenodd"><path d="M28.872 22.096c.084.622.128 1.258.128 1.904 0 7.732-6.268 14-14 14-2.176 0-4.236-.496-6.073-1.382l-6.022 2.007c-1.564.521-3.051-.966-2.53-2.53l2.007-6.022A13.944 13.944 0 0 1 1 24c0-7.331 5.635-13.346 12.81-13.95A9.967 9.967 0 0 0 13 14c0 5.523 4.477 10 10 10a9.955 9.955 0 0 0 5.872-1.904z" fill="url(#a)" transform="translate(1 1)"></path><path d="M35.618 20.073l2.007 6.022c.521 1.564-.966 3.051-2.53 2.53l-6.022-2.007A13.944 13.944 0 0 1 23 28c-7.732 0-14-6.268-14-14S15.268 0 23 0s14 6.268 14 14c0 2.176-.496 4.236-1.382 6.073z" fill="url(#b)" transform="translate(1 1)"></path><path d="M18 17a2 2 0 1 0 0-4 2 2 0 0 0 0 4zM24 17a2 2 0 1 0 0-4 2 2 0 0 0 0 4zM30 17a2 2 0 1 0 0-4 2 2 0 0 0 0 4z" fill="#FFF"></path></g></svg>
+  </div>
+  <div class="ml-6 pt-1">
+    <div class="text-xl text-gray-900 leading-tight">ChitChat</div>
+    <p class="text-base text-gray-600 leading-normal">You have a new message!</p>
+  </div>
+</div>
+  </div>
+  <div v-pre class="rounded-b-lg bg-gray-800">
+    <pre class="scrollbar-none m-0 p-0 language-html"><code class="inline-block p-4 scrolling-touch">&lt;div class="max-w-sm mx-auto flex p-6 bg-white rounded-lg shadow-xl"&gt;
+  &lt;div class="flex-shrink-0"&gt;
+    &lt;img class="h-12 w-12" src="/img/logo.svg" alt="ChitChat Logo"&gt;
+  &lt;/div&gt;
+  &lt;div class="ml-6 pt-1"&gt;
+    &lt;h4 class="text-xl text-gray-900 leading-tight"&gt;ChitChat&lt;/h4&gt;
+    &lt;p class="text-base text-gray-600 leading-normal"&gt;You have a new message!&lt;/p&gt;
+  &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+  </div>
+</div>
+<p>In the example above, we've used:</p>
+<ul>
+<li>Tailwind's <a href="display.html#flex">flexbox</a> and <a href="padding.html">padding</a> utilities (<code>flex</code>, <code>flex-shrink-0</code>, and <code>p-6</code>) to control the overall card layout</li>
+<li>The <a href="max-width.html">max-width</a> and <a href="margin.html">margin</a> utilities (<code>max-w-sm</code> and <code>mx-auto</code>) to constrain the card width and center it horizontally</li>
+<li>The <a href="background-color.html">background color</a>, <a href="border-radius.html">border radius</a>, and <a href="box-shadow.html">box-shadow</a> utilities (<code>bg-white</code>, <code>rounded-lg</code>, and <code>shadow-xl</code>) to style the card's appearance</li>
+<li>The <a href="width.html">width</a> and <a href="height.html">height</a> utilities (<code>w-12</code> and <code>h-12</code>) to size the logo image</li>
+<li>The <a href="margin.html">margin</a> and <a href="padding.html">padding</a> utilities (<code>ml-6</code> and <code>pt-1</code>) to position the card text</li>
+<li>The <a href="font-size.html">font size</a>, <a href="text-color.html">text color</a>, and <a href="line-height.html">line-height</a> utilities (<code>text-xl</code>, <code>text-gray-900</code>, <code>leading-tight</code>, etc.) to style the card text</li>
+</ul>
+<p>...allowing us to implement a completely custom component design, without writing a single line of custom CSS.</p>
+<p>Now I know what you're thinking, <em>"this is an atrocity, what a horrible mess!"</em> and you're right, it's kind of ugly. In fact it's just about impossible to think this is a good idea the first time you see it &mdash; <strong>you have to actually try it</strong>.</p>
+<p>But once you've actually built something this way, you'll quickly notice some really important benefits:</p>
+<ul>
+<li><strong>You aren't wasting energy inventing class names</strong>. No more adding silly class names like <code>sidebar-inner-wrapper</code> just to be able to style something, and no more agonizing over the perfect abstract name for something that's really just a flex container.</li>
+<li><strong>Your CSS stops growing</strong>. Using a traditional approach, your CSS files get bigger every time you add a new feature. With utilities, everything is reusable so you rarely need to write new CSS.</li>
+<li><strong>Making changes feels safer</strong>. CSS is global and you never know what you're breaking when you make a change. Classes in your HTML are local, so you can change them without worrying about something else breaking.</li>
+</ul>
+<p>When you realize how productive you can be working exclusively in HTML with predefined utility classes, working any other way will feel like torture.</p>
+<hr>
+<h2><a id="why-not-just-use-inline-styles" name="//apple_ref/cpp/Section/Why%20not%20just%20use%20inline%20styles%3F" class="dashAnchor"></a>Why not just use inline styles?</h2>
+<p>A common reaction to this approach is wondering, "isn't this just inline styles?" and in some ways it is &mdash; you're applying styles directly to elements instead of assigning them a class name and then styling that class.</p>
+<p>But using utility classes has a few important advantages over inline styles:</p>
+<ul>
+<li><strong>Designing with constraints</strong>. Using inline styles, every value is a magic number. With utilities, you're choosing styles from a predefined <a href="theme.html">design system</a>, which makes it much easier to build visually consistent UIs.</li>
+<li><strong>Responsive design</strong>. You can't use media queries in inline styles, but you can use Tailwind's <a href="responsive-design.html">responsive utilities</a> to build fully responsive interfaces easily.</li>
+<li><strong>Pseudo-classes</strong>. Inline styles can't target states like hover or focus, but Tailwind's <a href="pseudo-class-variants.html">pseudo-class variants</a> make it easy to style those states with utility classes.</li>
+</ul>
+<p>This component is fully responsive and includes a button with hover styles, and is built entirely with utility classes:</p>
+<div class="relative overflow-hidden mb-8">
+  <div v-pre class="bg-white rounded-t-lg overflow-hidden border-t border-l border-r border-gray-400 p-4 p-8 bg-gray-200" style="">
+    <div class="max-w-sm mx-auto bg-white shadow-lg rounded-lg overflow-hidden">
+  <div class="sm:flex sm:items-center px-6 py-4">
+    <img class="block mx-auto sm:mx-0 sm:flex-shrink-0 h-16 sm:h-24 rounded-full" src="https://randomuser.me/api/portraits/women/17.jpg" alt="Woman's Face">
+    <div class="mt-4 sm:mt-0 sm:ml-4 text-center sm:text-left">
+      <p class="text-xl leading-tight">Erin Lindford</p>
+      <p class="text-sm leading-tight text-gray-600">Customer Support Specialist</p>
+      <div class="mt-4">
+        <button class="text-purple-500 hover:text-white hover:bg-purple-500 border border-purple-500 text-xs font-semibold rounded-full px-4 py-1 leading-normal">Message</button>
+      </div>
+    </div>
+  </div>
+</div>
+  </div>
+  <div v-pre class="rounded-b-lg bg-gray-800">
+    <pre class="scrollbar-none m-0 p-0 language-html"><code class="inline-block p-4 scrolling-touch">&lt;div class="max-w-sm mx-auto bg-white shadow-lg rounded-lg overflow-hidden"&gt;
+  &lt;div class="sm:flex sm:items-center px-6 py-4"&gt;
+    &lt;img class="block mx-auto sm:mx-0 sm:flex-shrink-0 h-16 sm:h-24 rounded-full" src="https://randomuser.me/api/portraits/women/17.jpg" alt="Woman's Face"&gt;
+    &lt;div class="mt-4 sm:mt-0 sm:ml-4 text-center sm:text-left"&gt;
+      &lt;p class="text-xl leading-tight"&gt;Erin Lindford&lt;/p&gt;
+      &lt;p class="text-sm leading-tight text-gray-600"&gt;Customer Support Specialist&lt;/p&gt;
+      &lt;div class="mt-4"&gt;
+        &lt;button class="text-purple-500 hover:text-white hover:bg-purple-500 border border-purple-500 text-xs font-semibold rounded-full px-4 py-1 leading-normal"&gt;Message&lt;/button&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+  </div>
+</div>
+<hr>
+<h2><a id="maintainability-concerns" name="//apple_ref/cpp/Section/Maintainability%20concerns" class="dashAnchor"></a>Maintainability concerns</h2>
+<p>The biggest maintainability concern when using a utility-first approach is managing commonly repeated utility combinations.</p>
+<p>This is easily solved by <a href="extracting-components.html">extracting components</a>, either as template partials/JavaScript components, or using Tailwind's <code>@apply</code> feature to create abstractions around common utility patterns.</p>
+<div class="relative overflow-hidden mb-8">
+  <div v-pre class="bg-white rounded-t-lg overflow-hidden border-t border-l border-r border-gray-400 p-4 text-center" style="">
+    <button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
+  Button
+</button>
+  </div>
+  <div v-pre class="rounded-b-lg bg-gray-800">
+    <pre class="scrollbar-none m-0 p-0 language-html"><code class="inline-block p-4 scrolling-touch">&lt;!-- Using utilities --&gt;
+&lt;button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"&gt;
+  Button
+&lt;/button&gt;
+
+&lt;!-- Extracting classes using @apply --&gt;
+&lt;button class="btn btn-blue"&gt;
+  Button
+&lt;/button&gt;
+
+&lt;style&gt;
+  .btn {
+    @apply font-bold py-2 px-4 rounded;
+  }
+  .btn-blue {
+    @apply bg-blue-500 text-white;
+  }
+  .btn-blue:hover {
+    @apply bg-blue-700;
+  }
+&lt;/style&gt;</code></pre>
+  </div>
+</div>
+<p>Aside from that, maintaining a utility-first CSS project turns out to be a lot easier than maintaining a large CSS codebase, simply because HTML is so much easier to maintain than CSS. Large companies like GitHub, Heroku, Kickstarter, Twitch, Segment, and more are using this approach with great success.</p>
+<p>If you'd like to hear about others' experiences with this approach, check out the following resources:</p>
+<ul>
+<li><a href="https://medium.com/@johnpolacek/by-the-numbers-a-year-and-half-with-atomic-css-39d75b1263b4">By The Numbers: A Year and a Half with Atomic CSS</a> by John Polacek</li>
+<li><a href="https://blog.algolia.com/redesigning-our-docs-part-4-building-a-scalable-css-architecture/">Building a Scalable CSS Architecture</a> by Sarah Dayan of Algolia</li>
+<li><a href="http://www.fullstackradio.com/75">Diana Mounter on using utility classes at GitHub</a>, a podcast interview</li>
+</ul>
+<p>For even more, check out <a href="https://johnpolacek.github.io/the-case-for-atomic-css/">The Case for Atomic/Utility-First CSS</a>, curated by <a href="https://twitter.com/johnpolacek">John Polacek</a>.</p>              </div>
+
+              
+              
+              
+
+            </div>
+          </div>
+          
+
+
+        </div>
+        
+
+        <script src="../assets/build/js/app.js%3Fid=67e749265d091bed73b6"></script>
+
+        <!-- Algolia DocSearch  -->
+        
+        
+      </div>
+      
+
+
+    </div>
+    
+
+  </div>
+</div>
+
+
+
+
+  <!-- Google Analytics  -->
+  
+  
+
+<script src="../../code.jquery.com/jquery-3.4.1.min.js"></script>
+<script src="../assets/build/js/nav.js%3Fid=b3eb7d558e0420f9b29c" defer></script>
+
+</body>
+</html>

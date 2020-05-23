@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en" class="bg-white antialiased">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <link rel="apple-touch-icon" sizes="180x180" href="../apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="../favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="../favicon-16x16.png">
+  <link rel="manifest" href="../manifest.json">
+  <link rel="mask-icon" href="../safari-pinned-tab.svg" color="#00b4b6">
+  <title>Responsive Design - Tailwind CSS</title>
+  <meta name="theme-color" content="#ffffff">
+  <meta name="twitter:card" content="summary">
+<meta name="twitter:site" content="@tailwindcss">
+<meta name="twitter:title" content="Responsive Design - Tailwind CSS">
+<meta name="twitter:description" content="Using responsive utility variants to build adaptive user interfaces.">
+<meta name="twitter:image" content="https://tailwindcss.com/img/tailwind-twitter-square.png">
+<meta name="twitter:creator" content="@tailwindcss">
+<meta property="og:url" content="https://tailwindcss.com/">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Responsive Design - Tailwind CSS">
+<meta property="og:description" content="Using responsive utility variants to build adaptive user interfaces.">
+<meta property="og:image" content="https://tailwindcss.com/img/twitter-large-card.png">
+  <link rel="stylesheet" href="../../rsms.me/inter/inter.css">
+  <link rel="stylesheet" href="../assets/build/css/main.css%3Fid=4a7cbbbeb4816c16d9a7.css">
+  <link rel="stylesheet" href="../../cdn.jsdelivr.net/docsearch.js/2/docsearch.min.css">
+  <script src="../../cdn.jsdelivr.net/gh/alpinejs/alpine@v1.11.1/dist/alpine.js" defer></script>
+</head>
+<body data-sidebar-visible="true" class="text-gray-900 leading-normal pb-8">
+
+
+
+
+
+
+
+
+<div class="w-full mx-auto px-6">
+  <div class="lg:flex -mx-6">
+
+    
+    
+    
+
+    
+    <div id="content-wrapper" class="min-h-screen w-full">
+
+      
+      <div id="content">
+
+        
+        <div id="app" class="flex" v-cloak>
+
+          
+          <div class="w-full">
+            <div class="markdown mb-6 px-6 mx-auto">
+                              <a name="//apple_ref/cpp/Section/Top" class="dashAnchor"></a><h1 class="flex items-center">
+                  Responsive Design
+                  <!-- <span class="ml-4 text-teal-600 font-semibold text-base">v1.3.0+</span> -->
+                                  </h1>
+              
+                              <div class="mt-0 mb-4 text-gray-600">
+                  Using responsive utility variants to build adaptive user interfaces.
+                </div>
+                                          <hr class="my-8 border-b-2 border-gray-200">
+                          </div>
+            <div class="flex">
+              <div class="markdown px-6 w-full mx-auto">
+                <h2 style="font-size: 0" class="invisible m-0 -mb-6"><a id="overview" name="//apple_ref/cpp/Section/Overview" class="dashAnchor"></a>Overview</h2>
+<p>Every utility class in Tailwind can be applied conditionally at different breakpoints, which makes it a piece of cake to build complex responsive interfaces without ever leaving your HTML.</p>
+<p>There are four breakpoints by default, inspired by common device resolutions:</p>
+<pre><code class="language-css">/* Small (sm) */
+@media (min-width: 640px) { /* ... */ }
+
+/* Medium (md) */
+@media (min-width: 768px) { /* ... */ }
+
+/* Large (lg) */
+@media (min-width: 1024px) { /* ... */ }
+
+/* Extra Large (xl) */
+@media (min-width: 1280px) { /* ... */ }</code></pre>
+<p>To add a utility but only have it take effect at a certain breakpoint, all you need to do is prefix the utility with the breakpoint name, followed by the <code>:</code> character:</p>
+<pre><code class="language-html">&lt;!-- Width of 16 by default, 32 on medium screens, and 48 on large screens --&gt;
+&lt;img class="w-16 md:w-32 lg:w-48" src="..."&gt;</code></pre>
+<p>This works for <strong>every utility class in the framework</strong>, which means you can change literally anything at a given breakpoint &mdash; even things like letter spacing or cursor styles.</p>
+<p>Here's a simple example of a marketing page component that uses a stacked layout on small screens, and a side-by-side layout on larger screens <em>(resize your browser to see it in action)</em>:</p>
+<div class="relative overflow-hidden mb-8">
+  <div v-pre class="bg-white rounded-t-lg overflow-hidden border-t border-l border-r border-gray-400 p-4 p-8" style="">
+    <div class="md:flex">
+  <div class="md:flex-shrink-0">
+    <img class="rounded-lg md:w-56" src="https://images.unsplash.com/photo-1556740738-b6a63e27c4df?ixlib=rb-1.2.1&amp;ixid=eyJhcHBfaWQiOjEyMDd9&amp;auto=format&amp;fit=crop&amp;w=2550&amp;q=80" alt="Woman paying for a purchase">
+  </div>
+  <div class="mt-4 md:mt-0 md:ml-6">
+    <div class="uppercase tracking-wide text-sm text-indigo-600 font-bold">Marketing</div>
+    <a href="responsive-design.html#" class="block mt-1 text-lg leading-tight font-semibold text-gray-900 hover:underline">Finding customers for your new business</a>
+    <p class="mt-2 text-gray-600">Getting a new business off the ground is a lot of hard work. Here are five ideas you can use to find your first customers.</p>
+  </div>
+</div>
+  </div>
+  <div v-pre class="rounded-b-lg bg-gray-800">
+    <pre class="scrollbar-none m-0 p-0 language-html"><code class="inline-block p-4 scrolling-touch">&lt;div class="md:flex"&gt;
+  &lt;div class="md:flex-shrink-0"&gt;
+    &lt;img class="rounded-lg md:w-56" src="https://images.unsplash.com/photo-1556740738-b6a63e27c4df?ixlib=rb-1.2.1&amp;ixid=eyJhcHBfaWQiOjEyMDd9&amp;auto=format&amp;fit=crop&amp;w=2550&amp;q=80" alt="Woman paying for a purchase"&gt;
+  &lt;/div&gt;
+  &lt;div class="mt-4 md:mt-0 md:ml-6"&gt;
+    &lt;div class="uppercase tracking-wide text-sm text-indigo-600 font-bold"&gt;Marketing&lt;/div&gt;
+    &lt;a href="#" class="block mt-1 text-lg leading-tight font-semibold text-gray-900 hover:underline"&gt;Finding customers for your new business&lt;/a&gt;
+    &lt;p class="mt-2 text-gray-600"&gt;Getting a new business off the ground is a lot of hard work. Here are five ideas you can use to find your first customers.&lt;/p&gt;
+  &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+  </div>
+</div>
+<p>Here's how the example above works:</p>
+<ul>
+<li>By default, the outer <code>div</code> is <code>display: block</code>, but by adding the <code>md:flex</code> utility, it becomes <code>display: flex</code> on medium screens and larger.</li>
+<li>When the parent is a flex container, we want to make sure the image never shrinks, so we've added <code>md:flex-shrink-0</code> to prevent shrinking on medium screens and larger. Technically we could have just used <code>flex-shrink-0</code> since it would do nothing on smaller screens, but since it only matters on <code>md</code> screens, it's a good idea to make that clear in the class name.</li>
+<li>On small screens the image is automatically full width by default. On medium screens and up, we've constrained that width to a fixed size using <code>md:w-56</code>.</li>
+<li>On small screens, the content section uses <code>mt-4</code> to add some margin between the content and the image. This margin isn't necessary in the horizontal layout, so we've used <code>md:mt-0</code> to undo that margin, and used <code>md:ml-6</code> to add some left margin instead.</li>
+</ul>
+<p>We've only used one breakpoint in this example, but you could easily customize this component at other sizes using the <code>sm</code>, <code>lg</code>, or <code>xl</code> responsive prefixes as well.</p>
+<hr>
+<h2><a id="mobile-first" name="//apple_ref/cpp/Section/Mobile%20First" class="dashAnchor"></a>Mobile First</h2>
+<p>By default, Tailwind uses a mobile first breakpoint system, similar to what you might be used to in Bootstrap or Foundation.</p>
+<p>What this means is that unprefixed utilities (like <code>uppercase</code>) take effect on all screen sizes, while prefixed utilities (like <code>md:uppercase</code>) only take effect at the specified breakpoint <em>and above</em>.</p>
+<p>Here's a simple example that cycles through several background colors at different breakpoints <em>(resize your browser to see the background color change)</em>:</p>
+<div class="relative overflow-hidden mb-8">
+  <div v-pre class="bg-white rounded-t-lg overflow-hidden border-t border-l border-r border-gray-400 p-4 p-0" style="">
+    <div class="h-20 w-20 mx-auto rounded-lg bg-red-500 sm:bg-green-500 md:bg-blue-500 lg:bg-pink-500 xl:bg-teal-500"></div>
+  </div>
+  <div v-pre class="rounded-b-lg bg-gray-800">
+    <pre class="scrollbar-none m-0 p-0 language-html"><code class="inline-block p-4 scrolling-touch">&lt;div class="bg-red-500 sm:bg-green-500 md:bg-blue-500 lg:bg-pink-500 xl:bg-teal-500"&gt;&lt;/div&gt;</code></pre>
+  </div>
+</div>
+<p>Throughout the documentation, you'll often see this interactive widget which we use to quickly demonstrate how some code would look on different screen sizes without forcing you to resize the browser &mdash; simply click the device icons at the top to see how the code below would render at that breakpoint:</p>
+<div class="mt-8 v-cloak-hidden">
+  <responsive-code-sample code='&lt;div class="none:bg-red-500 sm:bg-green-500 md:bg-blue-500 lg:bg-pink-500 xl:bg-teal-500"&gt;&lt;/div&gt;' slot-class="">
+    <div slot="none"><div class="h-20 w-20 mx-auto rounded-lg bg-red-500"></div></div>
+    <div slot="sm"><div class="h-20 w-20 mx-auto rounded-lg bg-green-500"></div></div>
+    <div slot="md"><div class="h-20 w-20 mx-auto rounded-lg bg-blue-500"></div></div>
+    <div slot="lg"><div class="h-20 w-20 mx-auto rounded-lg bg-pink-500"></div></div>
+    <div slot="xl"><div class="h-20 w-20 mx-auto rounded-lg bg-teal-500"></div></div>
+  </responsive-code-sample>
+</div>
+<p>Examples like this intentionally <strong>do not react to changing your browser size</strong>. This is by design &mdash; it allows even people reading the documentation on smaller screens to preview how some code would look on a desktop display.</p>
+<h3><a id="targeting-mobile-screens" name="//apple_ref/cpp/Section/Targeting%20mobile%20screens" class="dashAnchor"></a>Targeting mobile screens</h3>
+<p>Where this approach surprises people most often is that to style something for mobile, you need to use the unprefixed version of a utility, not the <code>sm:</code> prefixed version. Don't think of <code>sm:</code> as meaning "on small screens", think of it as "at the small <em>breakpoint</em>".</p>
+<p class="flex items-start mt-8 mb-0">
+  <svg class="h-6 w-6 mr-2 flex-shrink-0" xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24"><circle cx="12" cy="12" r="10" fill="#fed7d7"></circle><path fill="#f56565" d="M13.41 12l2.83 2.83a1 1 0 0 1-1.41 1.41L12 13.41l-2.83 2.83a1 1 0 1 1-1.41-1.41L10.59 12 7.76 9.17a1 1 0 0 1 1.41-1.41L12 10.59l2.83-2.83a1 1 0 0 1 1.41 1.41L13.41 12z"></path></svg>
+  <strong class="text-base font-semibold text-gray-800">Don't use <code class="text-sm font-bold text-gray-800">sm:</code> to target mobile devices</strong>
+</p>
+<pre><code class="language-html">&lt;!-- This will only center text on screens 640px and wider, not on small screens --&gt;
+&lt;div class="sm:text-center"&gt;&lt;/div&gt;</code></pre>
+<p class="flex items-start mt-8 mb-0">
+  <svg class="h-6 w-6 mr-2 flex-shrink-0" xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24"><circle class="text-green-200 fill-current" cx="12" cy="12" r="10"></circle><path class="text-green-600 fill-current" d="M10 14.59l6.3-6.3a1 1 0 0 1 1.4 1.42l-7 7a1 1 0 0 1-1.4 0l-3-3a1 1 0 0 1 1.4-1.42l2.3 2.3z"></path></svg>
+  <strong class="text-base font-semibold text-gray-800">Use unprefixed utilities to target mobile, and override them at larger breakpoints</strong>
+</p>
+<pre><code class="language-html">&lt;!-- This will center text on mobile, and left align it on screens 640px and wider --&gt;
+&lt;div class="text-center sm:text-left"&gt;&lt;/div&gt;</code></pre>
+<p>For this reason, it's often a good idea to implement the mobile layout for a design first, then layer on any changes that make sense for <code>sm</code> screens, followed by <code>md</code> screens, etc.</p>
+<h3><a id="targeting-a-single-breakpoint" name="//apple_ref/cpp/Section/Targeting%20a%20single%20breakpoint" class="dashAnchor"></a>Targeting a single breakpoint</h3>
+<p>Tailwind's breakpoints only include a <code>min-width</code> and don't include a <code>max-width</code>, which means any utilities you add at a smaller breakpoint will also be applied at larger breakpoints.</p>
+<p>If you'd like to apply a utility at one breakpoint only, the solution is to <em>undo</em> that utility at larger sizes by adding another utility that counteracts it.</p>
+<p>Here is an example where the background color is red at the <code>md</code> breakpoint, but teal at every other breakpoint:</p>
+<div class="mt-8 v-cloak-hidden">
+  <responsive-code-sample code='&lt;div class="none:bg-teal-500 md:bg-red-500 lg:bg-teal-500"&gt;&lt;/div&gt;' slot-class="">
+    <div slot="none"><div class="h-20 w-20 mx-auto rounded-lg bg-teal-500"></div></div>
+    <div slot="sm"><div class="h-20 w-20 mx-auto rounded-lg bg-teal-500"></div></div>
+    <div slot="md"><div class="h-20 w-20 mx-auto rounded-lg bg-red-500"></div></div>
+    <div slot="lg"><div class="h-20 w-20 mx-auto rounded-lg bg-teal-500"></div></div>
+    <div slot="xl"><div class="h-20 w-20 mx-auto rounded-lg bg-teal-500"></div></div>
+  </responsive-code-sample>
+</div>
+<p>Notice that <strong>we did not</strong> have to specify a background color for the <code>sm</code> breakpoint or the <code>xl</code> breakpoint &mdash; you only need to specify when a utility should <em>start</em> taking effect, not when it should stop.</p>
+<hr>
+<h2><a id="customizing-breakpoints" name="//apple_ref/cpp/Section/Customizing%20breakpoints" class="dashAnchor"></a>Customizing breakpoints</h2>
+<p>You can completely customize your breakpoints in your <code>tailwind.config.js</code> file:</p>
+<pre><code class="language-js">// tailwind.config.js
+module.exports = {
+  theme: {
+    screens: {
+      'tablet': '640px',
+      // =&gt; @media (min-width: 640px) { ... }
+
+      'laptop': '1024px',
+      // =&gt; @media (min-width: 1024px) { ... }
+
+      'desktop': '1280px',
+      // =&gt; @media (min-width: 1280px) { ... }
+    },
+  }
+}</code></pre>
+<p>Learn more in the <a href="breakpoints.html">customizing breakpoints documentation</a>.</p>              </div>
+
+              
+              
+              
+
+            </div>
+          </div>
+          
+
+
+        </div>
+        
+
+        <script src="../assets/build/js/app.js%3Fid=67e749265d091bed73b6"></script>
+
+        <!-- Algolia DocSearch  -->
+        
+        
+      </div>
+      
+
+
+    </div>
+    
+
+  </div>
+</div>
+
+
+
+
+  <!-- Google Analytics  -->
+  
+  
+
+<script src="../../code.jquery.com/jquery-3.4.1.min.js"></script>
+<script src="../assets/build/js/nav.js%3Fid=b3eb7d558e0420f9b29c" defer></script>
+
+</body>
+</html>

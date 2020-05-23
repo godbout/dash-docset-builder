@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html lang="en" class="bg-white antialiased">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <link rel="apple-touch-icon" sizes="180x180" href="../apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="../favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="../favicon-16x16.png">
+  <link rel="manifest" href="../manifest.json">
+  <link rel="mask-icon" href="../safari-pinned-tab.svg" color="#00b4b6">
+  <title>Line Height - Tailwind CSS</title>
+  <meta name="theme-color" content="#ffffff">
+  <meta name="twitter:card" content="summary">
+<meta name="twitter:site" content="@tailwindcss">
+<meta name="twitter:title" content="Line Height - Tailwind CSS">
+<meta name="twitter:description" content="Utilities for controlling the leading (line height) of an element.">
+<meta name="twitter:image" content="https://tailwindcss.com/img/tailwind-twitter-square.png">
+<meta name="twitter:creator" content="@tailwindcss">
+<meta property="og:url" content="https://tailwindcss.com/">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Line Height - Tailwind CSS">
+<meta property="og:description" content="Utilities for controlling the leading (line height) of an element.">
+<meta property="og:image" content="https://tailwindcss.com/img/twitter-large-card.png">
+  <link rel="stylesheet" href="../../rsms.me/inter/inter.css">
+  <link rel="stylesheet" href="../assets/build/css/main.css%3Fid=4a7cbbbeb4816c16d9a7.css">
+  <link rel="stylesheet" href="../../cdn.jsdelivr.net/docsearch.js/2/docsearch.min.css">
+  <script src="../../cdn.jsdelivr.net/gh/alpinejs/alpine@v1.11.1/dist/alpine.js" defer></script>
+</head>
+<body data-sidebar-visible="true" class="text-gray-900 leading-normal pb-8">
+
+
+
+
+
+
+
+
+<div class="w-full mx-auto px-6">
+  <div class="lg:flex -mx-6">
+
+    
+    
+    
+
+    
+    <div id="content-wrapper" class="min-h-screen w-full">
+
+      
+      <div id="content">
+
+        
+        <div id="app" class="flex" v-cloak>
+
+          
+          <div class="w-full">
+            <div class="markdown mb-6 px-6 mx-auto">
+                              <a name="//apple_ref/cpp/Section/Top" class="dashAnchor"></a><h1 class="flex items-center">
+                  Line Height
+                  <!-- <span class="ml-4 text-teal-600 font-semibold text-base">v1.3.0+</span> -->
+                                  </h1>
+              
+                              <div class="mt-0 mb-4 text-gray-600">
+                  Utilities for controlling the leading (line height) of an element.
+                </div>
+                                        </div>
+            <div class="flex">
+              <div class="markdown px-6 w-full mx-auto">
+                <h2 style="visibility: hidden; font-size: 0; margin: 0;"><a id="class-reference" name="//apple_ref/cpp/Section/Class%20reference" class="dashAnchor"></a>Class reference</h2>
+<div class="mt-0 border-t border-b border-gray-300 overflow-hidden relative">
+  <div class="lg:max-h-sm overflow-y-auto scrollbar-w-2 scrollbar-track-gray-lighter scrollbar-thumb-rounded scrollbar-thumb-gray scrolling-touch">
+    <table class="w-full text-left table-collapse">
+      <thead>
+        <tr>
+          <th class="text-sm font-semibold text-gray-700 p-2 bg-gray-100">Class</th>
+          <th class="text-sm font-semibold text-gray-700 p-2 bg-gray-100">Properties</th>
+        </tr>
+      </thead>
+      <tbody class="align-baseline">
+                <tr>
+          <td class="p-2 border-t border-gray-300 font-mono text-xs text-purple-700 whitespace-no-wrap">.leading-none</td>
+          <td class="p-2 border-t border-gray-300 font-mono text-xs text-blue-700 whitespace-pre">line-height: 1;</td>
+        </tr>
+                <tr>
+          <td class="p-2 border-t border-gray-200 font-mono text-xs text-purple-700 whitespace-no-wrap">.leading-tight</td>
+          <td class="p-2 border-t border-gray-200 font-mono text-xs text-blue-700 whitespace-pre">line-height: 1.25;</td>
+        </tr>
+                <tr>
+          <td class="p-2 border-t border-gray-200 font-mono text-xs text-purple-700 whitespace-no-wrap">.leading-snug</td>
+          <td class="p-2 border-t border-gray-200 font-mono text-xs text-blue-700 whitespace-pre">line-height: 1.375;</td>
+        </tr>
+                <tr>
+          <td class="p-2 border-t border-gray-200 font-mono text-xs text-purple-700 whitespace-no-wrap">.leading-normal</td>
+          <td class="p-2 border-t border-gray-200 font-mono text-xs text-blue-700 whitespace-pre">line-height: 1.5;</td>
+        </tr>
+                <tr>
+          <td class="p-2 border-t border-gray-200 font-mono text-xs text-purple-700 whitespace-no-wrap">.leading-relaxed</td>
+          <td class="p-2 border-t border-gray-200 font-mono text-xs text-blue-700 whitespace-pre">line-height: 1.625;</td>
+        </tr>
+                <tr>
+          <td class="p-2 border-t border-gray-200 font-mono text-xs text-purple-700 whitespace-no-wrap">.leading-loose</td>
+          <td class="p-2 border-t border-gray-200 font-mono text-xs text-blue-700 whitespace-pre">line-height: 2;</td>
+        </tr>
+                <tr>
+          <td class="p-2 border-t border-gray-200 font-mono text-xs text-purple-700 whitespace-no-wrap">.leading-3</td>
+          <td class="p-2 border-t border-gray-200 font-mono text-xs text-blue-700 whitespace-pre">line-height: .75rem;</td>
+        </tr>
+                <tr>
+          <td class="p-2 border-t border-gray-200 font-mono text-xs text-purple-700 whitespace-no-wrap">.leading-4</td>
+          <td class="p-2 border-t border-gray-200 font-mono text-xs text-blue-700 whitespace-pre">line-height: 1rem;</td>
+        </tr>
+                <tr>
+          <td class="p-2 border-t border-gray-200 font-mono text-xs text-purple-700 whitespace-no-wrap">.leading-5</td>
+          <td class="p-2 border-t border-gray-200 font-mono text-xs text-blue-700 whitespace-pre">line-height: 1.25rem;</td>
+        </tr>
+                <tr>
+          <td class="p-2 border-t border-gray-200 font-mono text-xs text-purple-700 whitespace-no-wrap">.leading-6</td>
+          <td class="p-2 border-t border-gray-200 font-mono text-xs text-blue-700 whitespace-pre">line-height: 1.5rem;</td>
+        </tr>
+                <tr>
+          <td class="p-2 border-t border-gray-200 font-mono text-xs text-purple-700 whitespace-no-wrap">.leading-7</td>
+          <td class="p-2 border-t border-gray-200 font-mono text-xs text-blue-700 whitespace-pre">line-height: 1.75rem;</td>
+        </tr>
+                <tr>
+          <td class="p-2 border-t border-gray-200 font-mono text-xs text-purple-700 whitespace-no-wrap">.leading-8</td>
+          <td class="p-2 border-t border-gray-200 font-mono text-xs text-blue-700 whitespace-pre">line-height: 2rem;</td>
+        </tr>
+                <tr>
+          <td class="p-2 border-t border-gray-200 font-mono text-xs text-purple-700 whitespace-no-wrap">.leading-9</td>
+          <td class="p-2 border-t border-gray-200 font-mono text-xs text-blue-700 whitespace-pre">line-height: 2.25rem;</td>
+        </tr>
+                <tr>
+          <td class="p-2 border-t border-gray-200 font-mono text-xs text-purple-700 whitespace-no-wrap">.leading-10</td>
+          <td class="p-2 border-t border-gray-200 font-mono text-xs text-blue-700 whitespace-pre">line-height: 2.5rem;</td>
+        </tr>
+              </tbody>
+    </table>
+  </div>
+</div>
+<h2><a id="relative-line-heights" name="//apple_ref/cpp/Section/Relative%20line-heights" class="dashAnchor"></a>Relative line-heights</h2>
+<p>Use the <code>leading-none</code>, <code>leading-tight</code>, <code>leading-snug</code>, <code>leading-normal</code>, <code>leading-relaxed</code>, and <code>leading-loose</code> utilities to give an element a relative line-height based on its current font-size.</p>
+<div class="relative overflow-hidden mb-8">
+  <div v-pre class="bg-white rounded-t-lg overflow-hidden border-t border-l border-r border-gray-400 p-4 " style="">
+    <div class="mb-6">
+  <p class="text-sm text-gray-600">.leading-none</p>
+  <p class="leading-none text-gray-800">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Assumenda, quia temporibus eveniet a libero incidunt suscipit laborum, rerum accusantium modi quidem, ipsam illum quis sed voluptatum quae eum fugit earum.</p>
+</div>
+<div class="mb-6">
+  <p class="text-sm text-gray-600">.leading-tight</p>
+  <p class="leading-tight text-gray-800">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Assumenda, quia temporibus eveniet a libero incidunt suscipit laborum, rerum accusantium modi quidem, ipsam illum quis sed voluptatum quae eum fugit earum.</p>
+</div>
+<div class="mb-6">
+  <p class="text-sm text-gray-600">.leading-snug</p>
+  <p class="leading-snug text-gray-800">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Assumenda, quia temporibus eveniet a libero incidunt suscipit laborum, rerum accusantium modi quidem, ipsam illum quis sed voluptatum quae eum fugit earum.</p>
+</div>
+<div class="mb-6">
+  <p class="text-sm text-gray-600">.leading-normal</p>
+  <p class="leading-normal text-gray-800">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Assumenda, quia temporibus eveniet a libero incidunt suscipit laborum, rerum accusantium modi quidem, ipsam illum quis sed voluptatum quae eum fugit earum.</p>
+</div>
+<div class="mb-6">
+  <p class="text-sm text-gray-600">.leading-relaxed</p>
+  <p class="leading-relaxed text-gray-800">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Assumenda, quia temporibus eveniet a libero incidunt suscipit laborum, rerum accusantium modi quidem, ipsam illum quis sed voluptatum quae eum fugit earum.</p>
+</div>
+<div>
+  <p class="text-sm text-gray-600">.leading-loose</p>
+  <p class="leading-loose text-gray-800">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Assumenda, quia temporibus eveniet a libero incidunt suscipit laborum, rerum accusantium modi quidem, ipsam illum quis sed voluptatum quae eum fugit earum.</p>
+</div>
+  </div>
+  <div v-pre class="rounded-b-lg bg-gray-800">
+    <pre class="scrollbar-none m-0 p-0 language-html"><code class="inline-block p-4 scrolling-touch">&lt;p class="leading-none ..."&gt;Lorem ipsum dolor sit amet ...&lt;/p&gt;
+&lt;p class="leading-tight ..."&gt;Lorem ipsum dolor sit amet ...&lt;/p&gt;
+&lt;p class="leading-snug ..."&gt;Lorem ipsum dolor sit amet ...&lt;/p&gt;
+&lt;p class="leading-normal ..."&gt;Lorem ipsum dolor sit amet ...&lt;/p&gt;
+&lt;p class="leading-relaxed ..."&gt;Lorem ipsum dolor sit amet ...&lt;/p&gt;
+&lt;p class="leading-loose ..."&gt;Lorem ipsum dolor sit amet ...&lt;/p&gt;</code></pre>
+  </div>
+</div>
+<h2 class="flex items-center"><a id="fixed-line-heights-v120" name="//apple_ref/cpp/Section/Fixed%20line-heights%20v1.2.0%2B" class="dashAnchor"></a>
+  Fixed line-heights
+  <span class="ml-3 inline-flex items-center px-3 py-1 rounded-full text-sm font-medium leading-4 bg-green-150 text-green-900">
+    v1.2.0+
+  </span>
+</h2>
+<p>Use the <code>leading-{size}</code> utilities to give an element a fixed line-height, irrespective of the current font-size. These are useful when you need very precise control over an element's final size.</p>
+<div class="relative overflow-hidden mb-8">
+  <div v-pre class="bg-white rounded-t-lg overflow-hidden border-t border-l border-r border-gray-400 p-4 " style="">
+    <div class="mb-6">
+  <p class="text-sm text-gray-600">.leading-3</p>
+  <p class="leading-3 text-gray-800">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Assumenda, quia temporibus eveniet a libero incidunt suscipit laborum, rerum accusantium modi quidem, ipsam illum quis sed voluptatum quae eum fugit earum.</p>
+</div>
+<div class="mb-6">
+  <p class="text-sm text-gray-600">.leading-4</p>
+  <p class="leading-4 text-gray-800">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Assumenda, quia temporibus eveniet a libero incidunt suscipit laborum, rerum accusantium modi quidem, ipsam illum quis sed voluptatum quae eum fugit earum.</p>
+</div>
+<div class="mb-6">
+  <p class="text-sm text-gray-600">.leading-5</p>
+  <p class="leading-5 text-gray-800">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Assumenda, quia temporibus eveniet a libero incidunt suscipit laborum, rerum accusantium modi quidem, ipsam illum quis sed voluptatum quae eum fugit earum.</p>
+</div>
+<div class="mb-6">
+  <p class="text-sm text-gray-600">.leading-6</p>
+  <p class="leading-6 text-gray-800">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Assumenda, quia temporibus eveniet a libero incidunt suscipit laborum, rerum accusantium modi quidem, ipsam illum quis sed voluptatum quae eum fugit earum.</p>
+</div>
+<div class="mb-6">
+  <p class="text-sm text-gray-600">.leading-7</p>
+  <p class="leading-7 text-gray-800">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Assumenda, quia temporibus eveniet a libero incidunt suscipit laborum, rerum accusantium modi quidem, ipsam illum quis sed voluptatum quae eum fugit earum.</p>
+</div>
+<div class="mb-6">
+  <p class="text-sm text-gray-600">.leading-8</p>
+  <p class="leading-8 text-gray-800">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Assumenda, quia temporibus eveniet a libero incidunt suscipit laborum, rerum accusantium modi quidem, ipsam illum quis sed voluptatum quae eum fugit earum.</p>
+</div>
+<div class="mb-6">
+  <p class="text-sm text-gray-600">.leading-9</p>
+  <p class="leading-9 text-gray-800">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Assumenda, quia temporibus eveniet a libero incidunt suscipit laborum, rerum accusantium modi quidem, ipsam illum quis sed voluptatum quae eum fugit earum.</p>
+</div>
+<div>
+  <p class="text-sm text-gray-600">.leading-10</p>
+  <p class="leading-10 text-gray-800">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Assumenda, quia temporibus eveniet a libero incidunt suscipit laborum, rerum accusantium modi quidem, ipsam illum quis sed voluptatum quae eum fugit earum.</p>
+</div>
+  </div>
+  <div v-pre class="rounded-b-lg bg-gray-800">
+    <pre class="scrollbar-none m-0 p-0 language-html"><code class="inline-block p-4 scrolling-touch">&lt;p class="leading-3 ..."&gt;Lorem ipsum dolor sit amet ...&lt;/p&gt;
+&lt;p class="leading-4 ..."&gt;Lorem ipsum dolor sit amet ...&lt;/p&gt;
+&lt;p class="leading-5 ..."&gt;Lorem ipsum dolor sit amet ...&lt;/p&gt;
+&lt;p class="leading-6 ..."&gt;Lorem ipsum dolor sit amet ...&lt;/p&gt;
+&lt;p class="leading-7 ..."&gt;Lorem ipsum dolor sit amet ...&lt;/p&gt;
+&lt;p class="leading-8 ..."&gt;Lorem ipsum dolor sit amet ...&lt;/p&gt;
+&lt;p class="leading-9 ..."&gt;Lorem ipsum dolor sit amet ...&lt;/p&gt;
+&lt;p class="leading-10 ..."&gt;Lorem ipsum dolor sit amet ...&lt;/p&gt;</code></pre>
+  </div>
+</div>
+<h2><a id="responsive" name="//apple_ref/cpp/Section/Responsive" class="dashAnchor"></a>Responsive</h2>
+<p>To control the line height of an element at a specific breakpoint, add a <code>{screen}:</code> prefix to any existing line height utility. For example, use <code>md:leading-loose</code> to apply the <code>leading-loose</code> utility at only medium screen sizes and above.</p>
+<p>For more information about Tailwind's responsive design features, check out the <a href="responsive-design.html">Responsive Design</a> documentation.</p>
+<div class="mt-8 v-cloak-hidden">
+  <responsive-code-sample code='&lt;p class="none:leading-none sm:leading-tight md:leading-normal lg:leading-relaxed xl:leading-loose ..."&gt;Lorem ipsum dolor sit amet ...&lt;/p&gt;' slot-class="">
+    <div slot="none"><p class="leading-none text-gray-800">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Assumenda, quia temporibus eveniet a libero incidunt suscipit laborum, rerum accusantium modi quidem, ipsam illum quis sed voluptatum quae eum fugit earum.</p></div>
+    <div slot="sm"><p class="leading-tight text-gray-800">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Assumenda, quia temporibus eveniet a libero incidunt suscipit laborum, rerum accusantium modi quidem, ipsam illum quis sed voluptatum quae eum fugit earum.</p></div>
+    <div slot="md"><p class="leading-normal text-gray-800">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Assumenda, quia temporibus eveniet a libero incidunt suscipit laborum, rerum accusantium modi quidem, ipsam illum quis sed voluptatum quae eum fugit earum.</p></div>
+    <div slot="lg"><p class="leading-relaxed text-gray-800">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Assumenda, quia temporibus eveniet a libero incidunt suscipit laborum, rerum accusantium modi quidem, ipsam illum quis sed voluptatum quae eum fugit earum.</p></div>
+    <div slot="xl"><p class="leading-loose text-gray-800">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Assumenda, quia temporibus eveniet a libero incidunt suscipit laborum, rerum accusantium modi quidem, ipsam illum quis sed voluptatum quae eum fugit earum.</p></div>
+  </responsive-code-sample>
+</div>
+<h2><a id="customizing" name="//apple_ref/cpp/Section/Customizing" class="dashAnchor"></a>Customizing</h2>
+<p>By default Tailwind provides six relative and eight fixed <code>line-height</code> utilities. You change, add, or remove these by customizing the <code>lineHeight</code> section of your Tailwind theme config.</p>
+<div class="rounded-lg mb-8 overflow-hidden">
+  <div class="bg-gray-800 p-4 font-mono text-sm overflow-x-scroll whitespace-no-wrap">
+    <div class="whitespace-pre text-gray-400">// tailwind.config.js</div>
+    <div class="whitespace-pre text-code-white">module.exports = {</div>
+    <div class="whitespace-pre text-code-white">  theme: {</div>
+<div class="whitespace-pre text-code-white">    extend: {</div>
+<div class="whitespace-pre text-code-white">
+<span class="text-code-yellow">      lineHeight</span>: {</div>
+    <div>
+<div class="text-code-green">
+<span>+</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;'extra-loose': '2.5',</div>
+<div class="text-code-green">
+<span>+</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;'12': '3rem',</div>
+</div>
+    <div class="whitespace-pre text-code-white">      }</div>
+<div class="whitespace-pre text-code-white">    }</div>
+<div class="whitespace-pre text-code-white">  }</div>
+    <div class="whitespace-pre text-code-white">}</div>
+  </div>
+</div>
+<h3><a id="responsive-and-pseudo-class-variants" name="//apple_ref/cpp/Section/Responsive%20and%20pseudo-class%20variants" class="dashAnchor"></a>Responsive and pseudo-class variants</h3>
+<p>By default, only responsive variants are generated for line height utilities.</p>
+<p>You can control which variants are generated for the line height utilities by modifying the <code>lineHeight</code> property in the <code>variants</code> section of your <code>tailwind.config.js</code> file.</p>
+<p>For example, this config will also generate hover and focus variants:</p>
+<div class="rounded-lg mb-8 overflow-hidden">
+  <div class="bg-gray-800 p-4 font-mono text-sm overflow-x-scroll whitespace-no-wrap">
+    <div class="whitespace-pre text-gray-400">// tailwind.config.js</div>
+    <div class="whitespace-pre text-code-white">module.exports = {</div>
+    <div class="whitespace-pre text-code-white">
+<span class="text-code-yellow">  variants</span>: {</div>
+    <div>
+<div class="text-gray-400">&nbsp;&nbsp;&nbsp;&nbsp;// ...</div>
+<div class="text-gray-500">
+<span>-</span>&nbsp;&nbsp;&nbsp;lineHeight: ['responsive'],</div>
+<div class="text-code-green">
+<span>+</span>&nbsp;&nbsp;&nbsp;lineHeight: ['responsive', 'hover', 'focus'],</div>
+</div>
+    <div class="whitespace-pre text-code-white">  }</div>
+    <div class="whitespace-pre text-code-white">}</div>
+  </div>
+</div>
+<h3><a id="disabling" name="//apple_ref/cpp/Section/Disabling" class="dashAnchor"></a>Disabling</h3>
+<p>If you don't plan to use the line height utilities in your project, you can disable them entirely by setting the <code>lineHeight</code> property to <code>false</code> in the <code>corePlugins</code> section of your config file:</p>
+<div class="rounded-lg mb-8 overflow-hidden">
+  <div class="bg-gray-800 p-4 font-mono text-sm overflow-x-scroll whitespace-no-wrap">
+    <div class="whitespace-pre text-gray-400">// tailwind.config.js</div>
+    <div class="whitespace-pre text-code-white">module.exports = {</div>
+    <div class="whitespace-pre text-code-white">
+<span class="text-code-yellow">  corePlugins</span>: {</div>
+    <div>
+<div class="text-gray-400">&nbsp;&nbsp;&nbsp;&nbsp;// ...</div>
+<div class="text-code-green">
+<span>+</span>&nbsp;&nbsp;&nbsp;lineHeight: false,</div>
+</div>
+    <div class="whitespace-pre text-code-white">  }</div>
+    <div class="whitespace-pre text-code-white">}</div>
+  </div>
+</div>              </div>
+
+              
+              
+              
+
+            </div>
+          </div>
+          
+
+
+        </div>
+        
+
+        <script src="../assets/build/js/app.js%3Fid=67e749265d091bed73b6"></script>
+
+        <!-- Algolia DocSearch  -->
+        
+        
+      </div>
+      
+
+
+    </div>
+    
+
+  </div>
+</div>
+
+
+
+
+  <!-- Google Analytics  -->
+  
+  
+
+<script src="../../code.jquery.com/jquery-3.4.1.min.js"></script>
+<script src="../assets/build/js/nav.js%3Fid=b3eb7d558e0420f9b29c" defer></script>
+
+</body>
+</html>

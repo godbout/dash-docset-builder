@@ -9,7 +9,7 @@
     <key>DocSetPlatformFamily</key>
     <string>tailwindcss</string>
     <key>dashIndexFilePath</key>
-    <string>installation.html</string>
+    <string>tailwindcss.com/docs/installation.html</string>
     <key>DashDocSetFallbackURL</key>
     <string>tailwindcss.com</string>
     <key>DashDocSetPlayURL</key>
