@@ -11,7 +11,7 @@ use Illuminate\Support\Facades\Config;
 use Illuminate\Support\Facades\Artisan;
 use Illuminate\Support\Facades\Storage;
 
-/** @group@ jigsaw */
+/** @group jigsaw */
 class JigsawTest extends TestCase
 {
     public function setUp(): void
