@@ -49,7 +49,7 @@
         "post-create-project-cmd": [
             "@php application app:rename"
         ],
-        "test": "phpunit --group=default,download --color=always",
+        "test": "phpunit --group=default,jigsaw --color=always",
         "format": "php-cs-fixer fix -vvv --config=.php_cs.dist --ansi"
     },
     "minimum-stability": "dev",
