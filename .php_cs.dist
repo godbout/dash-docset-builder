@@ -1,8 +1,8 @@
 <?php
 
 $finder = PhpCsFixer\Finder::create()
-    ->in(['app', 'tests'])
-    ->notPath('CreatesApplication.php')
+    ->in(['/Users/guill/Development/dash-docset-builder/app', '/Users/guill/Development/dash-docset-builder/tests'])
+    ->notPath('/Users/guill/Development/dash-docset-builder/CreatesApplication.php')
 ;
 
 return PhpCsFixer\Config::create()
@@ -12,7 +12,6 @@ return PhpCsFixer\Config::create()
         'binary_operator_spaces' => ['default' => 'single_space'],
         'blank_line_after_opening_tag' => true,
         'blank_line_before_statement' => true,
-        'cast_spaces' => ['space' => 'single'],
         'concat_space' => ['spacing' => 'one'],
         'method_chaining_indentation' => true,
         'no_blank_lines_after_phpdoc' => true,
