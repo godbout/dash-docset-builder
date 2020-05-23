@@ -11,7 +11,7 @@ use Illuminate\Support\Facades\Config;
 use Illuminate\Support\Facades\Artisan;
 use Illuminate\Support\Facades\Storage;
 
-/** @group jigsaw */
+/** @group@ jigsaw */
 class JigsawTest extends TestCase
 {
     public function setUp(): void
@@ -141,7 +141,7 @@ class JigsawTest extends TestCase
     public function the_h4_padding_gets_updated_in_the_dash_docset_files()
     {
         $crawler = HtmlPageCrawler::create(
-            Storage::get($this->docset->downloadedDirectory() . '/collections-pagination.html')
+            Storage::get($this->docset->downloadedDirectory() . '/' . $this->docset->url() . '/docs/collections-pagination.html')
         );
 
         $this->assertFalse(
@@ -149,7 +149,7 @@ class JigsawTest extends TestCase
         );
 
         $crawler = HtmlPageCrawler::create(
-            Storage::get($this->docset->innerDirectory() . '/collections-pagination.html')
+            Storage::get($this->docset->innerDirectory() . '/' . $this->docset->url() . '/docs/collections-pagination.html')
         );
 
         $this->assertTrue(
@@ -158,16 +158,48 @@ class JigsawTest extends TestCase
     }
 
     /** @test */
-    public function the_JavaScript_tags_get_removed_from_the_dash_docset_files()
+    public function the_left_sidebar_gets_removed_from_the_dash_docset_files()
     {
+        $leftSidebar = '<navigation';
+
         $this->assertStringContainsString(
-            '<script',
+            $leftSidebar,
             Storage::get($this->docset->downloadedIndex())
         );
 
         $this->assertStringNotContainsString(
-            '<script',
-            $this->docset->innerIndex()
+            $leftSidebar,
+            Storage::get($this->docset->innerIndex())
+        );
+    }
+
+    /** @test */
+    public function the_right_sidebar_gets_removed_from_the_dash_docset_files()
+    {
+        $rightSidebar = '<navigation-on-page';
+
+        $this->assertStringContainsString(
+            $rightSidebar,
+            Storage::get($this->docset->downloadedIndex())
+        );
+
+        $this->assertStringNotContainsString(
+            $rightSidebar,
+            Storage::get($this->docset->innerIndex())
+        );
+    }
+
+    /** @test */
+    public function the_unwanted_JavaScript_tags_get_removed_from_the_dash_docset_files()
+    {
+        $this->assertStringContainsString(
+            'docsearch.min.js',
+            Storage::get($this->docset->downloadedIndex())
+        );
+
+        $this->assertStringNotContainsString(
+            'docsearch.min.js',
+            Storage::get($this->docset->innerIndex())
         );
     }
 

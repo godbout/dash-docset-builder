@@ -12,13 +12,14 @@ class Jigsaw extends BaseDocset
     public const CODE = 'jigsaw';
     public const NAME = 'Jigsaw';
     public const URL = 'jigsaw.tighten.co';
-    public const INDEX = 'installation.html';
+    public const INDEX = 'docs/installation.html';
     public const PLAYGROUND = '';
-    public const ICON_16 = '../icon.png';
-    public const ICON_32 = '../icon@2x.png';
+    public const ICON_16 = '../../icons/icon.png';
+    public const ICON_32 = '../../icons/icon@2x.png';
     public const EXTERNAL_DOMAINS = [
         'googleapis.com',
         'jsdelivr.net',
+        'typekit.net',
     ];
 
 
@@ -37,14 +38,12 @@ class Jigsaw extends BaseDocset
     {
         $entries = collect();
 
-        $crawler->filter('h2')->each(static function (HtmlPageCrawler $node) use ($entries, $file) {
-            $fileBasename = basename($file);
-
-            if ($fileBasename !== 'index.html') {
+        $crawler->filter('h2')->each(function (HtmlPageCrawler $node) use ($entries, $file) {
+            if (basename($file) !== 'index.html') {
                 $entries->push([
                     'name' => trim($node->text()),
                     'type' => 'Guide',
-                    'path' => $fileBasename
+                    'path' => Str::after($file . '#' . Str::slug($node->text()), $this->innerDirectory()),
                 ]);
             }
         });
@@ -56,14 +55,12 @@ class Jigsaw extends BaseDocset
     {
         $entries = collect();
 
-        $crawler->filter('h3')->each(static function (HtmlPageCrawler $node) use ($entries, $file) {
-            $fileBasename = basename($file);
-
-            if ($fileBasename !== 'index.html') {
+        $crawler->filter('h3')->each(function (HtmlPageCrawler $node) use ($entries, $file) {
+            if (basename($file) !== 'index.html') {
                 $entries->push([
                     'name' => trim($node->text()),
                     'type' => 'Section',
-                    'path' => $fileBasename . '#' . Str::slug($node->text())
+                    'path' => Str::after($file . '#' . Str::slug($node->text()), $this->innerDirectory()),
                 ]);
             }
         });
@@ -75,16 +72,28 @@ class Jigsaw extends BaseDocset
     {
         $crawler = HtmlPageCrawler::create($html);
 
+        $this->removeLeftSidebar($crawler);
+        $this->removeRightSidebar($crawler);
         $this->removeHeader($crawler);
         $this->removeFooter($crawler);
         $this->updateTopPadding($crawler);
         $this->updateContainer($crawler);
         $this->updateTextSize($crawler);
         $this->updateH4Padding($crawler);
-        $this->removeJavaScript($crawler);
+        $this->removeUnwantedJavaScript($crawler);
         $this->insertDashTableOfContents($crawler);
 
         return $crawler->saveHTML();
+    }
+
+    protected function removeLeftSidebar(HtmlPageCrawler $crawler)
+    {
+        $crawler->filterXPath('//main[@id="vue-app"]//navigation')->remove();
+    }
+
+    protected function removeRightSidebar(HtmlPageCrawler $crawler)
+    {
+        $crawler->filterXPath('//main[@id="vue-app"]//navigation-on-page')->remove();
     }
 
     protected function removeHeader(HtmlPageCrawler $crawler)
@@ -148,9 +157,10 @@ class Jigsaw extends BaseDocset
         ;
     }
 
-    protected function removeJavaScript(HtmlPageCrawler $crawler)
+    protected function removeUnwantedJavaScript(HtmlPageCrawler $crawler)
     {
-        $crawler->filter('script')->remove();
+        $crawler->filter('script[src*=docsearch]')->remove();
+        $crawler->filterXPath("//script[text()[contains(.,'docsearch')]]")->remove();
     }
 
     protected function insertDashTableOfContents(HtmlPageCrawler $crawler)
