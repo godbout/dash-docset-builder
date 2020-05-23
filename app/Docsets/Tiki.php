@@ -2,6 +2,7 @@
 
 namespace App\Docsets;
 
+use Illuminate\Support\Str;
 use Illuminate\Support\Collection;
 use Wa72\HtmlPageDom\HtmlPageCrawler;
 use Illuminate\Support\Facades\Storage;
@@ -13,26 +14,25 @@ class Tiki extends BaseDocset
     public const URL = 'doc.tiki.org';
     public const INDEX = 'All-the-Documentation.html';
     public const PLAYGROUND = '';
-    public const ICON_16 = '../icon.png';
-    public const ICON_32 = '../icon@2x.png';
-    public const EXTERNAL_DOMAINS = [];
+    public const ICON_16 = '../../icons/icon.png';
+    public const ICON_32 = '../../icons/icon@2x.png';
+    public const EXTERNAL_DOMAINS = [
+        'themes.tiki.org',
+    ];
 
 
-    public function grab()
+    public function grab(): bool
     {
-        Storage::deleteDirectory($this->downloadedDirectory());
-
         system(
             "wget doc.tiki.org/All-the-Documentation \
                 --mirror \
                 -e robots=off \
                 --header 'Cookie: javascript_enabled_detect=true' \
-                --accept-regex='/PluginList|\.css|\.js|\.manifest|\.jpg|\.png|\.ico' \
-                --reject-regex='\?|fullscreen' \
+                --reject-regex='/Plugins-|Plugins\.html|fullscreen=|PDF\.js|tikiversion=|comzone=|structure=|wp_files_sort_mode[0-9]=|offset=|\?refresh|\?session_filters|\?sort_mode' \
+                --accept-regex='/Plugin|/LIST|Tiki_org_family|\.css|\.js|\.jpg|\.png|\.gif|\.svg|\.ico|\.webmanifest' \
                 --page-requisites \
                 --adjust-extension \
                 --convert-links \
-                --no-directories \
                 --span-hosts \
                 --domains={$this->externalDomains()} \
                 --directory-prefix=storage/{$this->downloadedDirectory()}",
@@ -44,16 +44,46 @@ class Tiki extends BaseDocset
 
     public function entries(string $file): Collection
     {
-        $entries = collect();
-
         $crawler = HtmlPageCrawler::create(Storage::get($file));
 
-        $crawler->filter('link[rel=canonical]')->each(static function (HtmlPageCrawler $node) use ($entries) {
-            $entries->push([
-                'name' => $node->attr('href'),
-                'type' => 'Guide',
-                'path' => $node->attr('href')
-            ]);
+        $entries = collect();
+        $entries = $entries->merge($this->pluginEntries($crawler, $file));
+        // $entries = $entries->merge($this->sectionEntries($crawler, $file));
+
+        return $entries;
+    }
+
+    protected function pluginEntries(HtmlPageCrawler $crawler, string $file)
+    {
+        $entries = collect();
+
+        if (! in_array(basename($file), ['All-the-Documentation.html', 'site.webmanifest.html'])) {
+            $path = $crawler->filter('link[rel=canonical]')->attr('href');
+
+            $crawler->filter('#top h1:first-of-type')->each(function (HtmlPageCrawler $node) use ($entries, $file, $path) {
+                $entries->push([
+                        'name' => $node->text(),
+                        'type' => 'Plugin',
+                        'path' => Str::after($file . '#' . Str::slug($path), $this->innerDirectory()),
+                    ]);
+            });
+        }
+
+        return $entries;
+    }
+
+    protected function sectionEntries(HtmlPageCrawler $crawler, string $file)
+    {
+        $entries = collect();
+
+        $crawler->filter('h2')->each(function (HtmlPageCrawler $node) use ($entries, $file) {
+            if (! in_array(basename($file), ['All-the-Documentation.html', 'site.webmanifest.html'])) {
+                $entries->push([
+                    'name' => trim($node->text()),
+                    'type' => 'Section',
+                    'path' => Str::after($file . '#' . Str::slug($node->text()), $this->innerDirectory()),
+                ]);
+            }
         });
 
         return $entries;
@@ -74,8 +104,11 @@ class Tiki extends BaseDocset
         $this->removeRightSidebar($crawler);
         $this->removePagebar($crawler);
         $this->removeFooter($crawler);
+        $this->removeUnwantedJavaScript($crawler);
 
         $this->updateCss($crawler);
+
+        $this->insertDashTableOfContents($crawler);
 
         return $crawler->saveHTML();
     }
@@ -122,7 +155,7 @@ class Tiki extends BaseDocset
 
     protected function removeRightSidebar(HtmlPageCrawler $crawler)
     {
-        $crawler->filter('script[src="autoToc.js"]')->remove();
+        $crawler->filter('script[src*="autoToc.js"]')->remove();
     }
 
     protected function removePagebar(HtmlPageCrawler $crawler)
@@ -133,6 +166,15 @@ class Tiki extends BaseDocset
     protected function removeFooter(HtmlPageCrawler $crawler)
     {
         $crawler->filter('#footer')->remove();
+    }
+
+    protected function removeUnwantedJavaScript(HtmlPageCrawler $crawler)
+    {
+        $crawler->filter('script[src*=autosave]')->remove();
+        $crawler->filter('script[src*=gtag]')->remove();
+        $crawler->filter('noscript')->remove();
+        $crawler->filterXPath("//script[text()[contains(.,'piwik.tiki.org')]]")->remove();
+        $crawler->filterXPath("//script[text()[contains(.,'gtag')]]")->remove();
     }
 
     protected function updateCSS(HtmlPageCrawler $crawler)
@@ -159,5 +201,17 @@ class Tiki extends BaseDocset
         $crawler->filter('article#top')
             ->css('padding-top', '44px')
         ;
+    }
+
+    protected function insertDashTableOfContents(HtmlPageCrawler $crawler)
+    {
+        $crawler->filter('h1')
+            ->before('<a name="//apple_ref/cpp/Section/Top" class="dashAnchor"></a>');
+
+        $crawler->filter('h2')->each(static function (HtmlPageCrawler $node) {
+            $node->before(
+                '<a id="' . Str::slug($node->text()) . '" name="//apple_ref/cpp/Section/' . rawurlencode($node->text()) . '" class="dashAnchor"></a>'
+            );
+        });
     }
 }
