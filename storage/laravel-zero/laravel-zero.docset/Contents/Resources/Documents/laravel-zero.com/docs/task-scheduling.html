@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <meta name="description" content="Scheduler allows you to fluently and expressively define your command schedule">
+
+        <meta property="og:site_name" content="Laravel Zero">
+        <meta property="og:title" content="Task Scheduling | Laravel Zero">
+        <meta property="og:description" content="Scheduler allows you to fluently and expressively define your command schedule">
+        <meta property="og:url" content="https://laravel-zero.com/docs/task-scheduling">
+        <meta property="og:image" content="/assets/img/logo.png">
+        <meta property="og:type" content="website">
+
+        <meta name="twitter:image:alt" content="Laravel Zero">
+        <meta name="twitter:card" content="summary_large_image">
+
+                    <meta name="generator" content="tighten_jigsaw_doc">
+        
+        <title>Laravel Zero | Task Scheduling</title>
+
+        <link rel="home" href="../index.html">
+        <link rel="icon" href="../favicon.ico">
+
+        
+                    
+            
+        
+        <link href="../../fonts.googleapis.com/css%3Ffamily=Nunito+Sans:300,300i,400,400i,700,700i,800,800i.css" rel="stylesheet">
+        <link rel="stylesheet" href="../assets/build/css/main.css%3Fid=54b89e2eb922f2893d01.css">
+
+                    
+            </head>
+
+    <body class="flex flex-col justify-between min-h-screen bg-grey-lightest text-grey-darkest leading-normal font-sans">
+        
+
+        <main role="main" class="w-full flex-auto">
+            <section class="mx-auto px-6 py-4">
+    <div class="flex flex-col lg:flex-row">
+        
+
+        <div class="w-full break-words" v-pre>
+            <a name="//apple_ref/cpp/Section/Top" class="dashAnchor"></a><h1 style="margin-top: 1rem;">Task Scheduling</h1>
+<p>Laravel Zero ships with the <a href="https://laravel.com/docs/5.7/scheduling">Task Scheduling</a> system of
+Laravel. To use the scheduler, you need to periodically execute your application, and for that you
+need to add the following Cron entry to your server:</p>
+<pre><code>* * * * * php /path-to-your-project/your-app-name schedule:run &gt;&gt; /dev/null 2&gt;&amp;1</code></pre>
+<p>You may define all of your scheduled tasks in the <code>schedule</code> method of the Artisan command:</p>
+<pre><code class="language-php">    public function schedule(Schedule $schedule)
+    {
+        $schedule-&gt;command(static::class)-&gt;everyMinute();
+    }</code></pre>
+<a id="viewing-scheduled-tasks" name="//apple_ref/cpp/Section/Viewing%20scheduled%20tasks" class="dashAnchor"></a><h3>Viewing scheduled tasks</h3>
+<p>The Schedule List component can be used to view a list of tasks that are scheduled in your application.</p>
+<p>Using the <code>app:install</code> Artisan command you can install the <code>schedule-list</code> component:</p>
+<pre><code class="language-bash">php &lt;your-app-name&gt; app:install schedule-list</code></pre>
+<p>After installation, the <code>schedule:list</code> command will be available to use. The binary name will be set
+by default in the <code>config/schedule-list.php</code> file, but you may need to update this to make sure the
+command outputs correctly. Note that Unix systems wrap the command parameters in single quotes,
+whereas Windows wraps them in double quotes so both will be needed in the configuration file.</p>
+<blockquote>
+<p>Behind the scenes, the <code>schedule-list</code> command uses the
+<a href="https://github.com/hmazter/laravel-schedule-list"><code>hmazter/laravel-schedule-list</code></a>
+package. You can find more details on how to use the command and configuration there.</p>
+</blockquote>        </div>
+    </div>
+</section>
+        </main>
+
+        <script src="../assets/build/js/main.js%3Fid=ce06880262eb35d7b51f"></script>
+
+        <script>
+    const navMenu = {
+        toggle() {
+            const menu = document.getElementById('js-nav-menu');
+            menu.classList.toggle('hidden');
+            menu.classList.toggle('lg:block');
+            document.getElementById('js-nav-menu-hide').classList.toggle('hidden');
+            document.getElementById('js-nav-menu-show').classList.toggle('hidden');
+        },
+    }
+</script>
+            
+    
+        
+    </body>
+</html>

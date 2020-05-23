@@ -9,7 +9,7 @@
     <key>DocSetPlatformFamily</key>
     <string>laravel-zero</string>
     <key>dashIndexFilePath</key>
-    <string>introduction.html</string>
+    <string>laravel-zero.com/docs/introduction.html</string>
     <key>DashDocSetFallbackURL</key>
     <string>laravel-zero.com</string>
     <key>DashDocSetPlayURL</key>

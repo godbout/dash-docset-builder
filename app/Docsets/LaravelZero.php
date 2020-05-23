@@ -12,16 +12,13 @@ class LaravelZero extends BaseDocset
     public const CODE = 'laravel-zero';
     public const NAME = 'Laravel Zero';
     public const URL = 'laravel-zero.com';
-    public const INDEX = 'introduction.html';
+    public const INDEX = 'docs/introduction.html';
     public const PLAYGROUND = '';
-    public const ICON_16 = '../icon.png';
-    public const ICON_32 = '../icon@2x.png';
+    public const ICON_16 = '../../icons/icon.png';
+    public const ICON_32 = '../../icons/icon@2x.png';
     public const EXTERNAL_DOMAINS = [
-        'github.com',
         'raw.githubusercontent.com',
-        'jsdelivr.net',
         'googleapis.com',
-        'googletagmanager.com'
     ];
 
     public function entries(string $file): Collection
@@ -44,7 +41,7 @@ class LaravelZero extends BaseDocset
                 $entries->push([
                     'name' => trim($node->text()),
                     'type' => 'Guide',
-                    'path' => $node->attr('href')
+                    'path' => $this->url() . '/docs/' . $node->attr('href')
                 ]);
             }
         });
@@ -61,14 +58,12 @@ class LaravelZero extends BaseDocset
     {
         $entries = collect();
 
-        $crawler->filter('h2, h3, h4')->each(static function (HtmlPageCrawler $node) use ($entries, $file) {
-            $fileBasename = basename($file);
-
-            if (! in_array($fileBasename, ['index.html', '404.html'])) {
+        $crawler->filter('h2, h3, h4')->each(function (HtmlPageCrawler $node) use ($entries, $file) {
+            if (! in_array(basename($file), ['index.html', '404.html'])) {
                 $entries->push([
                     'name' => trim($node->text()),
                     'type' => 'Section',
-                    'path' => basename($file) . '#' . Str::slug($node->text())
+                    'path' => Str::after($file . '#' . Str::slug($node->text()), $this->innerDirectory()),
                 ]);
             }
         });
@@ -86,6 +81,8 @@ class LaravelZero extends BaseDocset
         $this->updateTopPadding($crawler);
         $this->updateContainerWidth($crawler);
         $this->updateBottomPadding($crawler);
+        $this->removeUnwantedCSS($crawler);
+        $this->removeUnwantedJavaScript($crawler);
         $this->insertDashTableOfContents($crawler);
 
         return $crawler->saveHTML();
@@ -132,6 +129,19 @@ class LaravelZero extends BaseDocset
         $crawler->filter('section > div > div')
             ->removeClass('pb-16')
         ;
+    }
+
+    protected function removeUnwantedCSS(HtmlPageCrawler $crawler)
+    {
+        $crawler->filter('link[href*="docsearch.min.css"]')->remove();
+    }
+
+    protected function removeUnwantedJavaScript(HtmlPageCrawler $crawler)
+    {
+        $crawler->filter('script[src*=docsearch]')->remove();
+        $crawler->filter('script[src*=gtag]')->remove();
+        $crawler->filterXPath("//script[text()[contains(.,'docsearch')]]")->remove();
+        $crawler->filterXPath("//script[text()[contains(.,'gtag')]]")->remove();
     }
 
     protected function insertDashTableOfContents(HtmlPageCrawler $crawler)

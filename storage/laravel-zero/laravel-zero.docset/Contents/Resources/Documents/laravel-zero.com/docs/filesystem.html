@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <meta name="description" content="Filesystem interaction through Storage of File facade, just like Laravel.">
+
+        <meta property="og:site_name" content="Laravel Zero">
+        <meta property="og:title" content="Filesystem | Laravel Zero">
+        <meta property="og:description" content="Filesystem interaction through Storage of File facade, just like Laravel.">
+        <meta property="og:url" content="https://laravel-zero.com/docs/filesystem">
+        <meta property="og:image" content="/assets/img/logo.png">
+        <meta property="og:type" content="website">
+
+        <meta name="twitter:image:alt" content="Laravel Zero">
+        <meta name="twitter:card" content="summary_large_image">
+
+                    <meta name="generator" content="tighten_jigsaw_doc">
+        
+        <title>Laravel Zero | Filesystem</title>
+
+        <link rel="home" href="../index.html">
+        <link rel="icon" href="../favicon.ico">
+
+        
+                    
+            
+        
+        <link href="../../fonts.googleapis.com/css%3Ffamily=Nunito+Sans:300,300i,400,400i,700,700i,800,800i.css" rel="stylesheet">
+        <link rel="stylesheet" href="../assets/build/css/main.css%3Fid=54b89e2eb922f2893d01.css">
+
+                    
+            </head>
+
+    <body class="flex flex-col justify-between min-h-screen bg-grey-lightest text-grey-darkest leading-normal font-sans">
+        
+
+        <main role="main" class="w-full flex-auto">
+            <section class="mx-auto px-6 py-4">
+    <div class="flex flex-col lg:flex-row">
+        
+
+        <div class="w-full break-words" v-pre>
+            <a name="//apple_ref/cpp/Section/Top" class="dashAnchor"></a><h1 style="margin-top: 1rem;">Filesystem</h1>
+<p>If you want to move files in your system, or to different providers like AwsS3 and Dropbox. By default,
+Laravel Zero ships with the <a href="https://laravel.com/docs/filesystem">Filesystem</a> component of Laravel.</p>
+<p><strong>Note:</strong> By default the root directory is <code>your-app-name/storage</code>.</p>
+<blockquote>
+<p>Writing files after you <a href="build-a-standalone-application.html">build</a> your application is different, check <a href="filesystem.html#production">Writing files in production</a></p>
+</blockquote>
+<a id="using-the-storage-facade" name="//apple_ref/cpp/Section/Using%20the%20Storage%20facade" class="dashAnchor"></a><h3>Using the Storage facade</h3>
+<pre><code class="language-php">use Storage;
+
+Storage::put("reminders.txt", "Task 1");</code></pre>
+<a id="using-the-file-facade" name="//apple_ref/cpp/Section/Using%20the%20File%20facade" class="dashAnchor"></a><h3>Using the File facade</h3>
+<pre><code class="language-php">use Illuminate\Support\Facades\File;
+
+File::put("/path/to/file/reminders.txt", "Task 1");</code></pre>
+<p><a name="production"></a></p>
+<a id="writing-files-in-production" name="//apple_ref/cpp/Section/Writing%20files%20in%20production" class="dashAnchor"></a><h3>Writing files in production</h3>
+<p>When using the filesystem be aware that when you build the application with <code>app:build</code> you create a <code>.phar</code> file. You can not add, update or delete files inside the <code>.phar</code> file.</p>
+<blockquote>
+<p>We are currently looking into streamlining the filesystem access. The code below is an example of how you can currently write files from the built application to the current working directory.</p>
+</blockquote>
+<a id="with-the-storage-facade" name="//apple_ref/cpp/Section/With%20the%20Storage%20facade" class="dashAnchor"></a><h4>With the Storage facade</h4>
+<p>If you want to use the <code>Storage</code> facade you will need to use a config file, similar to how Laravel does it.</p>
+<ul>
+<li>
+<p>Create a file <code>filesystems.php</code> in your <code>config/</code> directory.</p>
+</li>
+<li>
+<p>Copy and paste the following contents. This code will replace the default <code>your-app-name/storage/app</code> folder with the current working directory.</p>
+<pre><code class="language-php">&lt;?php
+
+return [
+    'default' =&gt; 'local',
+    'disks' =&gt; [
+        'local' =&gt; [
+            'driver' =&gt; 'local',
+            'root' =&gt; getcwd(),
+        ],
+    ],
+];
+</code></pre>
+</li>
+<li>
+<p>Use the <code>Storage</code> facade like you would before.</p>
+</li>
+</ul>
+<a id="with-the-file-facade" name="//apple_ref/cpp/Section/With%20the%20File%20facade" class="dashAnchor"></a><h4>With the File facade</h4>
+<p>Using the <code>File</code> facade is just the same as normal</p>
+<pre><code class="language-php ">File::put( getcwd() . DIRECTORY_SEPARATOR . "reminders.txt", "Task 1");</code></pre>        </div>
+    </div>
+</section>
+        </main>
+
+        <script src="../assets/build/js/main.js%3Fid=ce06880262eb35d7b51f"></script>
+
+        <script>
+    const navMenu = {
+        toggle() {
+            const menu = document.getElementById('js-nav-menu');
+            menu.classList.toggle('hidden');
+            menu.classList.toggle('lg:block');
+            document.getElementById('js-nav-menu-hide').classList.toggle('hidden');
+            document.getElementById('js-nav-menu-show').classList.toggle('hidden');
+        },
+    }
+</script>
+            
+    
+        
+    </body>
+</html>
