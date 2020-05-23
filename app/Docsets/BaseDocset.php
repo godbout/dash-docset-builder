@@ -73,17 +73,17 @@ abstract class BaseDocset implements Docset
 
     final public function innerIndex(): string
     {
-        return self::innerDirectory() . '/' . static::INDEX;
+        return self::innerDirectory() . '/' . self::url() . '/' . static::INDEX;
     }
 
     final public function downloadedDirectory(): string
     {
-        return static::CODE . '/docs/';
+        return static::CODE . '/docs';
     }
 
     final public function downloadedIndex(): string
     {
-        return self::downloadedDirectory() . '/' . static::INDEX;
+        return self::downloadedDirectory() . '/' .self::url() . '/' . static::INDEX;
     }
 
     final public function infoPlistFile(): string

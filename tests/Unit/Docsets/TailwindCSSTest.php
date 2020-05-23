@@ -23,14 +23,14 @@ class TailwindCSSTest extends TestCase
     {
         // Sample entries
         $toc = $this->docset->entries(
-            $this->docset->downloadedDirectory() . '/alerts.html'
+            $this->docset->downloadedDirectory() . '/' . $this->docset->url() . '/components/alerts.html'
         );
 
         $this->assertNotEmpty($toc);
 
         // Resource entries
         $toc = $this->docset->entries(
-            $this->docset->downloadedDirectory() . '/resources.html'
+            $this->docset->downloadedDirectory() . '/' . $this->docset->url() . '/resources.html'
         );
 
         $this->assertNotEmpty($toc);
