@@ -13,7 +13,7 @@ class TailwindCSS extends BaseDocset
     public const CODE = 'tailwindcss';
     public const NAME = 'Tailwind CSS';
     public const URL = 'tailwindcss.com';
-    public const INDEX = 'installation.html';
+    public const INDEX = 'docs/installation.html';
     public const PLAYGROUND = 'https://codesandbox.io/s/github/lbogdan/tailwindcss-playground';
     public const ICON_16 = 'favicon-16x16.png';
     public const ICON_32 = 'favicon-32x32.png';
@@ -51,7 +51,7 @@ class TailwindCSS extends BaseDocset
                 $entries->push([
                     'name' => $this->cleanAnchorText($node->text()),
                     'type' => 'Environment',
-                    'path' => basename($file) . '#' . Str::slug($node->text()),
+                    'path' => Str::after($file . '#' . Str::slug($node->text()), $this->innerDirectory()),
                 ]);
             });
 
@@ -68,7 +68,7 @@ class TailwindCSS extends BaseDocset
                 $entries->push([
                     'name' => $this->cleanAnchorText($node->text()),
                     'type' => 'Instruction',
-                    'path' => $node->parents()->first()->attr('href'),
+                    'path' => $this->url() . '/' . $node->parents()->first()->attr('href'),
                 ]);
             });
 
@@ -85,7 +85,7 @@ class TailwindCSS extends BaseDocset
                 $entries->push([
                     'name' => $this->cleanAnchorText($node->text()),
                     'type' => 'Sample',
-                    'path' => $node->parents()->first()->attr('href'),
+                    'path' => $this->url() . '/' . $node->parents()->first()->attr('href'),
                 ]);
             });
 
@@ -102,7 +102,7 @@ class TailwindCSS extends BaseDocset
                 $entries->push([
                     'name' => $this->cleanAnchorText($node->text()),
                     'type' => 'Resource',
-                    'path' => basename($file) . '#' . Str::slug($node->text()),
+                    'path' => Str::after($file . '#' . Str::slug($node->text()), $this->innerDirectory()),
                 ]);
             });
 
@@ -110,7 +110,7 @@ class TailwindCSS extends BaseDocset
                 $entries->push([
                     'name' => $this->cleanAnchorText($node->text()),
                     'type' => 'Section',
-                    'path' => basename($file) . '#' . Str::slug($node->text()),
+                    'path' => Str::after($file . '#' . Str::slug($node->text()), $this->innerDirectory()),
                 ]);
             });
 
@@ -125,11 +125,11 @@ class TailwindCSS extends BaseDocset
         $entries = collect();
 
         if ($pageTitle === 'Installation - Tailwind CSS') {
-            $crawler->filter('#navWrapper li a')->each(static function (HtmlPageCrawler $node) use ($entries) {
+            $crawler->filter('#navWrapper li a')->each(function (HtmlPageCrawler $node) use ($entries) {
                 $entries->push([
                     'name' => trim($node->text()),
                     'type' => 'Guide',
-                    'path' => $node->attr('href'),
+                    'path' => $this->url() . '/docs/' . $node->attr('href'),
                 ]);
             });
         }
@@ -145,7 +145,7 @@ class TailwindCSS extends BaseDocset
             $entries->push([
                 'name' => $this->cleanAnchorText($node->text()),
                 'type' => 'Section',
-                'path' => basename($file) . '#' . Str::slug($node->text()),
+                'path' => Str::after($file . '#' . Str::slug($node->text()), $this->innerDirectory()),
             ]);
         });
 
