@@ -13,8 +13,8 @@ class Dummy extends BaseDocset
     public const URL = 'glmb.today';
     public const INDEX = 'index.html';
     public const PLAYGROUND = '';
-    public const ICON_16 = 'favicon-16x16.png';
-    public const ICON_32 = 'favicon-32x32.png';
+    public const ICON_16 = 'assets/favicons/favicon-16x16.png';
+    public const ICON_32 = 'assets/favicons/favicon-32x32.png';
     public const EXTERNAL_DOMAINS = [];
 
 
@@ -24,7 +24,7 @@ class Dummy extends BaseDocset
 
         $crawler = HtmlPageCrawler::create(Storage::get($file));
 
-        $crawler->filter('a.nav-item')->each(static function (HtmlPageCrawler $node) use ($entries) {
+        $crawler->filter('a.nav-item')->each(function (HtmlPageCrawler $node) use ($entries) {
             $entries->push([
                 'name' => $node->text(),
                 'type' => 'Guide',
