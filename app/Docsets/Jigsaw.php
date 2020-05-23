@@ -18,7 +18,6 @@ class Jigsaw extends BaseDocset
     public const ICON_32 = '../../icons/icon@2x.png';
     public const EXTERNAL_DOMAINS = [
         'googleapis.com',
-        'jsdelivr.net',
         'typekit.net',
     ];
 
@@ -80,6 +79,7 @@ class Jigsaw extends BaseDocset
         $this->updateContainer($crawler);
         $this->updateTextSize($crawler);
         $this->updateH4Padding($crawler);
+        $this->removeUnwantedCSS($crawler);
         $this->removeUnwantedJavaScript($crawler);
         $this->insertDashTableOfContents($crawler);
 
@@ -155,6 +155,11 @@ class Jigsaw extends BaseDocset
         $crawler->filter('h4')
             ->css('margin-top', '2.5rem')
         ;
+    }
+
+    protected function removeUnwantedCSS(HtmlPageCrawler $crawler)
+    {
+        $crawler->filter('link[href*="docsearch.min.css"]')->remove();
     }
 
     protected function removeUnwantedJavaScript(HtmlPageCrawler $crawler)
