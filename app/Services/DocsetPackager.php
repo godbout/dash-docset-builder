@@ -21,21 +21,21 @@ final class DocsetPackager
 
     public function removePreviousDocsetFile()
     {
-        Storage::deleteDirectory(
+        return Storage::deleteDirectory(
             $this->docset->file()
         );
     }
 
     public function createDocsetFile()
     {
-        Storage::makeDirectory(
+        return Storage::makeDirectory(
             $this->docset->innerDirectory()
         );
     }
 
     public function copyDocFiles()
     {
-        File::copyDirectory(
+        return File::copyDirectory(
             "storage/{$this->docset->downloadedDirectory()}",
             "storage/{$this->docset->innerDirectory()}"
         );
@@ -70,7 +70,7 @@ final class DocsetPackager
 </plist>
 EOT;
 
-        Storage::put(
+        return Storage::put(
             $this->docset->infoPlistFile(),
             $infoPlist
         );

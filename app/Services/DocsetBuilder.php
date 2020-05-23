@@ -72,7 +72,7 @@ class DocsetBuilder
     public function package()
     {
         $this->command->task('  - Remove previous .docset', function () {
-            return $this->packager->removePreviousDocsetFile();
+            $this->packager->removePreviousDocsetFile();
         });
 
         $this->command->task('  - Create new .docset', function () {
@@ -96,7 +96,7 @@ class DocsetBuilder
         });
 
         $this->command->task('  - Copy icons', function () {
-            return $this->packager->copyIcons();
+            $this->packager->copyIcons();
         });
     }
 
