@@ -35,7 +35,7 @@ abstract class BaseDocset implements Docset
 
     final public function index(): string
     {
-        return static::INDEX;
+        return static::URL . '/' . static::INDEX;
     }
 
     final public function playground(): string
@@ -45,12 +45,12 @@ abstract class BaseDocset implements Docset
 
     final public function icon16(): string
     {
-        return static::ICON_16;
+        return static::URL . '/' . static::ICON_16;
     }
 
     final public function icon32(): string
     {
-        return static::ICON_32;
+        return static::URL . '/' . static::ICON_32;
     }
 
     final public function externalDomains(): string
@@ -78,7 +78,7 @@ abstract class BaseDocset implements Docset
 
     final public function downloadedDirectory(): string
     {
-        return static::CODE . '/docs/' . static::URL;
+        return static::CODE . '/docs/';
     }
 
     final public function downloadedIndex(): string

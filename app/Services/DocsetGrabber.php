@@ -48,7 +48,6 @@ final class DocsetGrabber
             --page-requisites \
             --adjust-extension \
             --convert-links \
-            --no-directories \
             --span-hosts \
             --domains={$this->docset->externalDomains()} \
             --quiet \
