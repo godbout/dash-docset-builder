@@ -4,7 +4,7 @@
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <title>Jigsaw – Static Sites for Laravel Developers</title>
+        <title>Jigsaw &ndash; Static Sites for Laravel Developers</title>
 
         <link rel="icon" type="image/png" href="assets/img/jigsaw-logo.png">
 
@@ -15,43 +15,40 @@
 
         <link rel="stylesheet" type="text/css" href="assets/build/css/main.css%3Fid=e363eb510547c81027c5.css">
 
-        <link href='../fonts.googleapis.com/css%3Ffamily=Lato:100,300,300italic,400,400italic,500,500italic,700,700italic.css' rel='stylesheet' type='text/css'>
+        <link href="../fonts.googleapis.com/css%3Ffamily=Lato:100,300,300italic,400,400italic,500,500italic,700,700italic.css" rel="stylesheet" type="text/css">
 
-        <link rel="stylesheet" href="../cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.css" />
+        <link rel="stylesheet" href="../cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.css">
     </head>
 
     <body class="min-h-screen font-sans leading-tight">
         <main id="vue-app">
-            <div class="w-full bg-brown-lightest border-t-5 border-purple"></div>
+            
 
             <div class="pt-6 font-normal text-xl bg-brown-lightest">
     <header class="container-content px-4 sm:px-6">
     <nav class="flex justify-between items-center mb-8" aria-role="navigation">
         <div class="flex items-center">
-            <img src="assets/img/jigsaw-logo.svg" alt="Jigsaw logo"
-                class="logo-icon rounded-lg shadow border-2 border-white mr-2 sm:mr-3 w-10 sm:w-11" />
+            <img src="assets/img/jigsaw-logo.svg" alt="Jigsaw logo" class="logo-icon rounded-lg shadow border-2 border-white mr-2 sm:mr-3 w-10 sm:w-11">
 
             <h1 class="uppercase tracking-wide text-blue-darker text-xl sm:text-2xl font-normal">Jigsaw</h1>
         </div>
 
         <div class="tracking-wide flex items-center">
-            <a href="https://github.com/tightenco/jigsaw" title="Contribute to Jigsaw on GitHub"
-                class="mr-4 block text-sm text-blue-darker hover:text-purple-darker uppercase font-medium">
+            <a href="https://github.com/tightenco/jigsaw" title="Contribute to Jigsaw on GitHub" class="mr-4 block text-sm text-blue-darker hover:text-purple-darker uppercase font-medium">
                 <span class="hidden md:inline-block hover:underline">Contribute</span>
 
                 <img src="assets/img/GitHub.svg" alt="GitHub alien logo" class="md:hidden -mb-1">
             </a>
 
-            <a href="docs/installation.html" title="Read the Jigsaw documentation"
-                class="block text-sm py-2 px-4 md:py-3 md:px-4 bg-purple hover:bg-purple-dark rounded text-white uppercase font-medium shadow-md">Docs</a>
+            <a href="docs/installation.html" title="Read the Jigsaw documentation" class="block text-sm py-2 px-4 md:py-3 md:px-4 bg-purple hover:bg-purple-dark rounded text-white uppercase font-medium shadow-md">Docs</a>
         </div>
     </nav>
 </header>
 
     <div class="container-content px-4 sm:px-6 py-4 sm:py-8">
-        <div class="flex-col mb-0 sm:mb-8 pb-4">
+        <div class="flex-col mb-0 sm:mb-8 pb-4" style="margin-top: -1.5rem;">
             <h1 class="text-4xl md:text-5xl text-blue-darker leading-none">
-                Static sites for <br />
+                Static sites for <br>
                 modern developers
             </h1>
 
@@ -104,14 +101,14 @@
             <div class="editor-row">
                 <p class="line-number">8</p>
                 <div class="line-code ml-4">
-                    <span class="text-pink">&lt;h1&gt;</span>{{ $page->title }}<span class="text-pink">&lt;/h1&gt;</span>
+                    <span class="text-pink">&lt;h1&gt;</span>{{ $page-&gt;title }}<span class="text-pink">&lt;/h1&gt;</span>
                 </div>
             </div>
 
             <div class="editor-row">
                 <p class="line-number">9</p>
                 <div class="line-code ml-4">
-                    <span class="text-pink">&lt;p&gt;</span>Contact us at <br class="hidden md:block lg:hidden"> {{ $page->contact_email }}<span class="text-pink">&lt;/p&gt;</span>
+                    <span class="text-pink">&lt;p&gt;</span>Contact us at <br class="hidden md:block lg:hidden"> {{ $page-&gt;contact_email }}<span class="text-pink">&lt;/p&gt;</span>
                 </div>
             </div>
 
@@ -123,21 +120,18 @@
     </div>
 </div>
     </div>
-    <div
-        class="absolute hidden md:flex flex-col right-0 w-82 lg:w-112 h-70 lg:h-76 justify-center items-center select-none lg:-mt-12 mr-4"
-        style="background:url('assets/img/browser-illustration.svg') no-repeat center top; background-size: contain;"
-    >
+    <div class="absolute hidden md:flex flex-col right-0 w-82 lg:w-112 h-70 lg:h-76 justify-center items-center select-none lg:-mt-12 mr-4" style="background:url('assets/img/browser-illustration.svg') no-repeat center top; background-size: contain;">
         <h1 class="text-grey-darker text-2xl lg:text-4xl">Jigsaw is awesome!</h1>
 
         <p class="text-grey-darker text-base">
             Contact us at
-            <a href="mailto:hello@tighten.co?subject='Hello from Jigsaw'" class="text-blue-lighter">hello@tighten.co</a>
+            <a href="mailto:hello@tighten.co?subject='Hello%20from%20Jigsaw'" class="text-blue-lighter">hello@tighten.co</a>
         </p>
     </div>
 </section>
     <section class="bg-gradient-purple py-12 md:py-16 px-4 sm:px-6">
     <div class="container-content flex flex-col items-center text-center pt-32">
-        <h2 class="text-white text:2xl md:text-4xl font-normal mb-6">Getting started is easy</h2>
+        <a name="//apple_ref/cpp/Section/Top" class="dashAnchor"></a><h2 class="text-white text:2xl md:text-4xl font-normal mb-6 text-3xl">Getting started is easy</h2>
 
         <p class="text-pink-lighter text-lg mb-10">Just make a new project directory and install Jigsaw using Composer</p>
 
@@ -149,7 +143,7 @@
     <section class="flex flex-col items-center bg-white py-12 md:py-16">
     <div class="flex flex-col md:flex-row items-center container-content mb-8 px-4 sm:px-6">
         <div class="flex-col md:w-1/2 md:pr-10 lg:pr-20 pb-8 md:pb-0">
-            <h3 class="mb-5 text-blue-darker">
+            <a id="blade-templating-just-like-your-laravel-apps" name="//apple_ref/cpp/Section/Blade%20templating%2C%20just%20like%20your%20Laravel%20apps." class="dashAnchor"></a><h3 class="mb-5 text-blue-darker" style="font-size: 1.5rem;">
                 Blade templating, just like your Laravel apps.
             </h3>
 
@@ -191,7 +185,7 @@
 
     <div class="flex flex-col md:flex-row items-center container-content mt-6 px-4 sm:px-6">
         <div class="flex-col md:w-1/2 md:pr-10 lg:pr-20 pb-8 md:pb-0">
-            <h3 class="mb-5 text-blue-darker">
+            <a id="use-markdown-for-content-driven-pages" name="//apple_ref/cpp/Section/Use%20Markdown%20for%20content-driven%20pages." class="dashAnchor"></a><h3 class="mb-5 text-blue-darker" style="font-size: 1.5rem;">
                 Use Markdown for content-driven pages.
             </h3>
 
@@ -199,8 +193,7 @@
                 Markdown is a fantastic writing format for things like articles, blog posts, or documentation pages. Jigsaw makes it painless to create a layout in Blade, and fill it with content written in Markdown.
             </p>
 
-            <a href="docs/installation.html" title="Read the Jigsaw documentation"
-                class="text-purple hover:text-purple-darker text-base no-underline hover:underline">
+            <a href="docs/installation.html" title="Read the Jigsaw documentation" class="text-purple hover:text-purple-darker text-base no-underline hover:underline">
                 Learn more in the docs <img src="assets/img/icon-arrow.svg" class="inline-block w-4 -mb-1" alt="Learn more in the documentation">
             </a>
         </div>
@@ -252,7 +245,7 @@
     </div>
 </section>
     <section class="flex flex-col items-center bg-brown-lightest text-center px-4 sm:px-6 py-16">
-    <h3 class="text-blue-darker text-center text-3xl mb-6">Compile your assets using Laravel Mix.</h3>
+    <a id="compile-your-assets-using-laravel-mix" name="//apple_ref/cpp/Section/Compile%20your%20assets%20using%20Laravel%20Mix." class="dashAnchor"></a><h3 class="text-blue-darker text-center text-3xl mb-6" style="font-size: 1.5rem;">Compile your assets using Laravel Mix.</h3>
 
     <p class="max-w-md mx-auto text-center text-blue text-lg leading-normal mb-12">
         Jigsaw bakes in support for Laravel Mix so you can compile your CSS and Javascript assets the same way you're used to in Laravel.
@@ -274,41 +267,32 @@
     </div>
 </section>
     <section class="flex flex-col items-center bg-gradient-purple text-center px-4 sm:px-6 py-16">
-    <h2 class="text-white text-3xl font-normal mb-6">Need inspiration?</h2>
+    <a name="//apple_ref/cpp/Section/Top" class="dashAnchor"></a><h2 class="text-white text-3xl font-normal mb-6">Need inspiration?</h2>
 
     <p class="text-pink-lighter text-lg mb-8">Browse websites built with Jigsaw, find articles, or get featured.</p>
 
     <a href="https://builtwithjigsaw.com" title="Built with Jigsaw">
-        <img class="mb-6" src="assets/img/browsers-illustration.svg" alt="Built with Jigsaw by Tighten" />
+        <img class="mb-6" src="assets/img/browsers-illustration.svg" alt="Built with Jigsaw by Tighten">
     </a>
 
-    <a href="https://builtwithjigsaw.com" title="Showcase of websites built with Jigsaw"
-        class="hover:bg-grey-light text-grey-darker hover:text-purple-dark no-underline tracking-wide uppercase rounded-lg text-sm bg-grey-lightest shadow-md hover:shadow-lg py-4 px-6">
+    <a href="https://builtwithjigsaw.com" title="Showcase of websites built with Jigsaw" class="hover:bg-grey-light text-grey-darker hover:text-purple-dark no-underline tracking-wide uppercase rounded-lg text-sm bg-grey-lightest shadow-md hover:shadow-lg py-4 px-6">
         Built With Jigsaw
     </a>
 </section>
     <section class="flex flex-col items-center bg-blue-darker text-center px-4 sm:px-6 py-16">
-    <h4 class="text-white font-light text-3xl mb-6">Ready to get started?</h4>
+    <h4 class="text-white font-light text-3xl mb-6" style="margin-top: 2.5rem;">Ready to get started?</h4>
 
     <p class="text-teal-light text-lg font-light mb-10 leading-normal">
         Check out our installation instructions and you'll be up and running in no time.
     </p>
 
-    <a href="docs/installation.html" title="Start building your site with Jigsaw"
-        class="hover:bg-grey-light text-grey-darker hover:text-purple-dark no-underline tracking-wide uppercase rounded-lg text-sm bg-grey-lightest shadow-md hover:shadow-lg py-4 px-6">
+    <a href="docs/installation.html" title="Start building your site with Jigsaw" class="hover:bg-grey-light text-grey-darker hover:text-purple-dark no-underline tracking-wide uppercase rounded-lg text-sm bg-grey-lightest shadow-md hover:shadow-lg py-4 px-6">
         Build your site
     </a>
 </section>
 </div>
 
-<footer class="bg-blue-darkest py-8 flex flex-col sm:flex-row justify-center items-center text-center">
-    <p class="text-teal-light font-normal text-xs sm:text-sm my-1">Brought to you by the lovely humans at
-        <a href="https://tighten.co" class="text-white hover:text-purple-lighter font-normal no-underline sm:pr-4" title="Tighten | Product Development for Web + Mobile | Laravel + Vue.js">Tighten</a>
-    </p>
 
-    <a href="https://github.com/tightenco/jigsaw" class="sm:border-l border-teal-light sm:pl-4 text-white text-xs sm:text-sm hover:text-purple-lighter font-normal no-underline my-1"
-        title="Jigsaw on GitHub">Issues/Feature Requests</a>
-</footer>
         </main>
             </body>
 </html>

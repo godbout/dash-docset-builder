@@ -9,7 +9,7 @@
     <key>DocSetPlatformFamily</key>
     <string>jigsaw</string>
     <key>dashIndexFilePath</key>
-    <string>installation.html</string>
+    <string>jigsaw.tighten.co/docs/installation.html</string>
     <key>DashDocSetFallbackURL</key>
     <string>jigsaw.tighten.co</string>
     <key>DashDocSetPlayURL</key>
