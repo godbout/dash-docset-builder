@@ -6,6 +6,8 @@ use Illuminate\Support\Collection;
 
 interface Docset
 {
+    public function grab(): bool;
+
     public function code(): string;
 
     public function name(): string;
