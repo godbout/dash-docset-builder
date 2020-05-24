@@ -181,10 +181,6 @@ class Tiki extends BaseDocset
     {
         $this->updateTopPadding($crawler);
         $this->updateArticlePadding($crawler);
-
-        // $this->updateHeader($crawler);
-        // $this->updateContainerWidth($crawler);
-        // $this->updateBottomPadding($crawler);
     }
 
     protected function updateTopPadding(HtmlPageCrawler $crawler)

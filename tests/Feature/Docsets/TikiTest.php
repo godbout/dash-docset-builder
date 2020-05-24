@@ -11,7 +11,7 @@ use Illuminate\Support\Facades\Config;
 use Illuminate\Support\Facades\Artisan;
 use Illuminate\Support\Facades\Storage;
 
-/** @group tiki */
+/** @group@ tiki */
 class TikiTest extends TestCase
 {
     public function setUp(): void
@@ -43,140 +43,246 @@ class TikiTest extends TestCase
         $this->assertNotEquals(0, DB::table('searchIndex')->count());
     }
 
-    // /** @test */
-    // public function the_header_gets_removed_from_the_dash_docset_files()
-    // {
-    //     $header = '<header';
+    /** @test */
+    public function the_navbar_gets_removed_from_the_dash_docset_files()
+    {
+        $navbar = '<nav class="navbar';
 
-    //     $this->assertStringContainsString(
-    //         $header,
-    //         Storage::get($this->docset->downloadedIndex())
-    //     );
+        $this->assertStringContainsString(
+            $navbar,
+            Storage::get($this->docset->downloadedIndex())
+        );
 
-    //     $this->assertStringNotContainsString(
-    //         $header,
-    //         Storage::get($this->docset->innerIndex())
-    //     );
-    // }
+        $this->assertStringNotContainsString(
+            $navbar,
+            Storage::get($this->docset->innerIndex())
+        );
+    }
 
-    // /** @test */
-    // public function the_footer_gets_removed_from_the_dash_docset_files()
-    // {
-    //     $footer = '<footer';
+    /** @test */
+    public function the_left_sidebar_button_gets_removed_from_the_dash_docset_files()
+    {
+        $leftSidebarButton = 'side-col-toggle-container';
 
-    //     $this->assertStringContainsString(
-    //         $footer,
-    //         Storage::get($this->docset->downloadedIndex())
-    //     );
+        $this->assertStringContainsString(
+            $leftSidebarButton,
+            Storage::get($this->docset->downloadedIndex())
+        );
 
-    //     $this->assertStringNotContainsString(
-    //         $footer,
-    //         Storage::get($this->docset->innerIndex())
-    //     );
-    // }
+        $this->assertStringNotContainsString(
+            $leftSidebarButton,
+            Storage::get($this->docset->innerIndex())
+        );
+    }
 
-    // /** @test */
-    // public function the_top_padding_gets_updated_in_the_dash_docset_files()
-    // {
-    //     $crawler = HtmlPageCrawler::create(
-    //         Storage::get($this->docset->downloadedIndex())
-    //     );
+    /** @test */
+    public function the_fullscreen_button_gets_removed_from_the_dash_docset_files()
+    {
+        $fullscreenButton = 'id="fullscreenbutton"';
 
-    //     $this->assertTrue(
-    //         $crawler->filter('#vue-app > div > div > div')->hasClass('pt-4')
-    //     );
+        $this->assertStringContainsString(
+            $fullscreenButton,
+            Storage::get($this->docset->downloadedIndex())
+        );
+
+        $this->assertStringNotContainsString(
+            $fullscreenButton,
+            Storage::get($this->docset->innerIndex())
+        );
+    }
+
+    /** @test */
+    public function the_page_top_modules_gets_removed_from_the_dash_docset_files()
+    {
+        $pageTopModules = 'id="pagetop_modules"';
+
+        $this->assertStringContainsString(
+            $pageTopModules,
+            Storage::get($this->docset->downloadedIndex())
+        );
+
+        $this->assertStringNotContainsString(
+            $pageTopModules,
+            Storage::get($this->docset->innerIndex())
+        );
+    }
+
+    /** @test */
+    public function the_wiki_actions_wrapper_gets_removed_from_the_dash_docset_files()
+    {
+        $wikiActionsWrapper = '<div class="wikiactions_wrapper';
+
+        $this->assertStringContainsString(
+            $wikiActionsWrapper,
+            Storage::get($this->docset->downloadedIndex())
+        );
+
+        $this->assertStringNotContainsString(
+            $wikiActionsWrapper,
+            Storage::get($this->docset->innerIndex())
+        );
+    }
+
+    /** @test */
+    public function the_breadcrumb_gets_removed_from_the_dash_docset_files()
+    {
+        $breadcrumb = '<nav class="nav-breadcrumb';
+
+        $this->assertStringContainsString(
+            $breadcrumb,
+            Storage::get($this->docset->downloadedIndex())
+        );
+
+        $this->assertStringNotContainsString(
+            $breadcrumb,
+            Storage::get($this->docset->innerIndex())
+        );
+    }
+
+    /** @test */
+    public function the_topbar_gets_removed_from_the_dash_docset_files()
+    {
+        $topbar = 'id="topbar"';
+
+        $this->assertStringContainsString(
+            $topbar,
+            Storage::get($this->docset->downloadedIndex())
+        );
+
+        $this->assertStringNotContainsString(
+            $topbar,
+            Storage::get($this->docset->innerIndex())
+        );
+    }
+
+    /** @test */
+    public function the_left_sidebar_gets_removed_from_the_dash_docset_files()
+    {
+        $leftSidebar = 'id="col2';
+
+        $this->assertStringContainsString(
+            $leftSidebar,
+            Storage::get($this->docset->downloadedIndex())
+        );
+
+        $this->assertStringNotContainsString(
+            $leftSidebar,
+            Storage::get($this->docset->innerIndex())
+        );
+    }
+
+    /** @test */
+    public function the_right_sidebar_gets_removed_from_the_dash_docset_files()
+    {
+        $rightSidebar = 'autoToc.js';
+
+        $this->assertStringContainsString(
+            $rightSidebar,
+            Storage::get($this->docset->downloadedDirectory() . '/' . $this->docset->url() . '/PluginList-output-control-block.html')
+        );
+
+        $this->assertStringNotContainsString(
+            $rightSidebar,
+            Storage::get($this->docset->innerDirectory() . '/' . $this->docset->url() . '/PluginList-output-control-block.html')
+        );
+    }
+
+    /** @test */
+    public function the_pagebar_gets_removed_from_the_dash_docset_files()
+    {
+        $pagebar = 'id="page-bar"';
+
+        $this->assertStringContainsString(
+            $pagebar,
+            Storage::get($this->docset->downloadedIndex())
+        );
+
+        $this->assertStringNotContainsString(
+            $pagebar,
+            Storage::get($this->docset->innerIndex())
+        );
+    }
+
+    /** @test */
+    public function the_footer_gets_removed_from_the_dash_docset_files()
+    {
+        $footer = 'id="footer"';
+
+        $this->assertStringContainsString(
+            $footer,
+            Storage::get($this->docset->downloadedIndex())
+        );
+
+        $this->assertStringNotContainsString(
+            $footer,
+            Storage::get($this->docset->innerIndex())
+        );
+    }
+
+    /** @test */
+    public function the_unwanted_JavaScript_gets_removed_from_the_dash_docset_files()
+    {
+        $unwantedJavaScript = [
+            'autosave.js',
+            'googletagmanager.com',
+            '<noscript',
+            'piwik.tiki.org',
+            "gtag('js'",
+        ];
+
+        foreach ($unwantedJavaScript as $entry) {
+            $this->assertStringContainsString(
+                $entry,
+                Storage::get($this->docset->downloadedIndex())
+            );
+
+            $this->assertStringNotContainsString(
+                $entry,
+                Storage::get($this->docset->innerIndex())
+            );
+        }
+    }
+
+    /** @test */
+    public function the_top_padding_gets_updated_in_the_dash_docset_files()
+    {
+        $crawler = HtmlPageCrawler::create(
+            Storage::get($this->docset->downloadedIndex())
+        );
+
+        $this->assertTrue(
+            $crawler->filter('body')->hasClass('navbar-padding')
+        );
 
 
-    //     $crawler = HtmlPageCrawler::create(
-    //         $this->docset->innerIndex()
-    //     );
+        $crawler = HtmlPageCrawler::create(
+            $this->docset->innerIndex()
+        );
 
-    //     $this->assertFalse(
-    //         $crawler->filter('#vue-app > div > div > div')->hasClass('pb-16')
-    //     );
-    // }
+        $this->assertFalse(
+            $crawler->filter('body')->hasClass('hide_zone_left')
+        );
+    }
 
-    // /** @test */
-    // public function the_container_gets_updated_in_the_dash_docset_files()
-    // {
-    //     $crawler = HtmlPageCrawler::create(
-    //         Storage::get($this->docset->downloadedIndex())
-    //     );
+    /** @test */
+    public function the_article_padding_gets_updated_in_the_dash_docset_files()
+    {
+        $crawler = HtmlPageCrawler::create(
+            Storage::get($this->docset->downloadedDirectory() . '/' . $this->docset->url() . '/PluginList-output-control-block.html')
+        );
 
-    //     $this->assertTrue(
-    //         $crawler->filter('div.markdown')->hasClass('lg:max-w-md')
-    //     );
+        $this->assertNull(
+            $crawler->filter('article#top')->getStyle('padding-top')
+        );
 
 
-    //     $crawler = HtmlPageCrawler::create(
-    //         $this->docset->innerIndex()
-    //     );
+        $crawler = HtmlPageCrawler::create(
+            Storage::get($this->docset->innerDirectory() . '/' . $this->docset->url() . '/PluginList-output-control-block.html')
+        );
 
-    //     $this->assertFalse(
-    //         $crawler->filter('div.markdown')->hasClass('lg:max-w-md')
-    //     );
-    // }
-
-    // /** @test */
-    // public function the_text_size_gets_updated_in_the_dash_docset_files()
-    // {
-    //     $crawler = HtmlPageCrawler::create(
-    //         Storage::get($this->docset->downloadedIndex())
-    //     );
-
-    //     $this->assertFalse(
-    //         $crawler->filter('h2')->hasClass('text-3xl')
-    //     );
-
-    //     $crawler = HtmlPageCrawler::create(
-    //         Storage::get($this->docset->innerIndex())
-    //     );
-
-    //     $this->assertTrue(
-    //         $crawler->filter('h2')->hasClass('text-3xl')
-    //     );
-    // }
-
-    // /** @test */
-    // public function the_h4_padding_gets_updated_in_the_dash_docset_files()
-    // {
-    //     $crawler = HtmlPageCrawler::create(
-    //         Storage::get($this->docset->downloadedDirectory() . '/collections-pagination.html')
-    //     );
-
-    //     $this->assertFalse(
-    //         $crawler->filter('h4')->css('margin-top') === '2.5rem'
-    //     );
-
-    //     $crawler = HtmlPageCrawler::create(
-    //         Storage::get($this->docset->innerDirectory() . '/collections-pagination.html')
-    //     );
-
-    //     $this->assertTrue(
-    //         $crawler->filter('h4')->css('margin-top') === '2.5rem'
-    //     );
-    // }
-
-    // /** @test */
-    // public function the_JavaScript_tags_get_removed_from_the_dash_docset_files()
-    // {
-    //     $this->assertStringContainsString(
-    //         '<script',
-    //         Storage::get($this->docset->downloadedIndex())
-    //     );
-
-    //     $this->assertStringNotContainsString(
-    //         '<script',
-    //         $this->docset->innerIndex()
-    //     );
-    // }
-
-    // /** @test */
-    // public function it_inserts_dash_anchors_in_the_doc_files()
-    // {
-    //     $this->assertStringContainsString(
-    //         'name="//apple_ref/',
-    //         Storage::get($this->docset->innerIndex())
-    //     );
-    // }
+        $this->assertEquals(
+            '44px',
+            $crawler->filter('article#top')->getStyle('padding-top')
+        );
+    }
 }

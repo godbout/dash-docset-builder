@@ -22,7 +22,7 @@ class TikiTest extends TestCase
     public function it_can_generate_a_table_of_contents()
     {
         $toc = $this->docset->entries(
-            $this->docset->downloadedDirectory() . '/PluginList-filter-control-block.html'
+            $this->docset->downloadedDirectory() . '/' . $this->docset->url() . '/PluginList-filter-control-block.html'
         );
 
         $this->assertNotEmpty($toc);
