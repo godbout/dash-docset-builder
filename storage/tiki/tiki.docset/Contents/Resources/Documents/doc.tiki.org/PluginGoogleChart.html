@@ -331,7 +331,7 @@ textarea, .CodeMirror {
 				
 				Chart Google Analytics data in a page
 
-											</div>
+				<span class="cachedStatus">(Cached)</span>							</div>
 		 
 					<div class="wikiinfo float-left" id="pdfinfo" style="display:none">
 				<div class="alert alert-info" style="width:500px"><h4><span class="icon icon-information fas fa-info-circle fa-fw "></span> <span class="rboxtitle">Please wait</span></h4><div class="rboxcontent" style="display: inline"><span class="fas fa-circle-notch fa-spin" style="font-size:24px"></span> The PDF is being prepared, please wait...</div></div>
@@ -509,6 +509,7 @@ textarea, .CodeMirror {
 </p>
 <a id="aliases" name="//apple_ref/cpp/Section/Aliases" class="dashAnchor"></a><h2 class="showhide_heading" id="Aliases">Aliases<a href="PluginGoogleCharts.html#Aliases" class="heading-link"><span class="icon icon-link fas fa-link "></span></a></h2>
 <p><a href="Plugin-Google-Chart.html" class="wiki wiki_page alias">Plugin Google Chart</a> | <a href="Plugin-GoogleChart.html" class="wiki wiki_page alias">Plugin GoogleChart</a>  | <a href="http://doc.tiki.org/Google-Chart" class="wiki wiki_page alias">Google Chart</a> | <a href="http://doc.tiki.org/GoogleChart" class="wiki wiki_page alias">GoogleChart</a> | <a href="Plugin-Google-Charts.html" class="wiki wiki_page alias">Plugin Google Charts</a> | <a href="Plugin-GoogleCharts.html" class="wiki wiki_page alias">Plugin GoogleCharts</a>  | <a href="http://doc.tiki.org/Google-Charts" class="wiki wiki_page alias">Google Charts</a> | <a href="http://doc.tiki.org/GoogleCharts" class="wiki wiki_page alias">GoogleCharts</a> | <a href="PluginGoogleCharts.html" class="wiki wiki_page alias">PluginGoogleCharts</a></p>
+
 
 					</div>
 
@@ -692,7 +693,7 @@ textarea, .CodeMirror {
 <!--//--><![CDATA[//><!--
 // js 0 
 tiki_cookie_jar=new Object();
-setCookieBrowser('javascript_enabled', '1621789260000', '', new Date(1621789260000));
+setCookieBrowser('javascript_enabled', '1621938869000', '', new Date(1621938869000));
 $.lang = 'en';
 
 // JS Object to hold prefs for jq
@@ -739,6 +740,16 @@ if (getCookie('postitnote') != 'hidden') {
         }
     }
 }
+$(document).ready(function(){
+// jq_onready 0 
+$("article").fitVids();
+$("time.timeago").timeago(); jQuery.timeago.settings.allowFuture = true;
+$(".table-responsive").doubleScroll({resetOnWindowResize: true});
+$(".convert-mailto").removeClass("convert-mailto").each(function () {
+				var address = $(this).data("encode-name") + "@" + $(this).data("encode-domain");
+				$(this).attr("href", "mailto:" + address).text(address);
+			});
+}) /* end on ready */;
 					function submitSearch1() {
 						var $f = $('#search-module-form1');
 						if ($f.attr('action') !== "tiki-editpage.php" && $f.data('page_selected') === $("#search_mod_input_1").val()) {
@@ -826,10 +837,6 @@ $(document).ready(function(){
 $("article").fitVids();
 $("time.timeago").timeago(); jQuery.timeago.settings.allowFuture = true;
 $(".table-responsive").doubleScroll({resetOnWindowResize: true});
-$(".convert-mailto").removeClass("convert-mailto").each(function () {
-				var address = $(this).data("encode-name") + "@" + $(this).data("encode-domain");
-				$(this).attr("href", "mailto:" + address).text(address);
-			});
 $(".search_mod_magnifier").mouseover( function () {
 	$(".search_mod_buttons", $(this).parents(".module"))
 		.show('fast')
@@ -851,6 +858,10 @@ $("#search_mod_input_1").tiki("autocomplete", "pagename",{select: function(event
 						}, close: function(event, item) {
 						$(".search_mod_buttons", "#search-module-form1").show();
 						}});
+$(".convert-mailto").removeClass("convert-mailto").each(function () {
+				var address = $(this).data("encode-name") + "@" + $(this).data("encode-domain");
+				$(this).attr("href", "mailto:" + address).text(address);
+			});
 							$('#comment-toggle').comment_toggle();
 						
 $(document).ready(function () {

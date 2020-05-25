@@ -1,0 +1,884 @@
+<!DOCTYPE html>
+<html lang="en" id="page_3259">
+<head>
+	
+<!--Latest IE Compatibility-->
+<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta name="generator" content="Tiki Wiki CMS Groupware - https://tiki.org">
+
+<meta content="http://doc.tiki.org/" name="twitter:domain"> 
+
+
+			<link rel="canonical" href="Module-quick_edit.html">
+		<meta content="http://doc.tiki.org/Module-quick_edit" property="og:url">
+	
+	<meta name="keywords" content="documentation, tiki, tikiwiki, document, help, install, wiki syntax modules wiki edit create wiki  ">
+	<meta name="author" content="Tiki Community">
+
+		<meta name="description" content="Tiki Wiki CMS Groupware Official Documentation" property="og:description">
+	<meta name="twitter:description" content="Tiki Wiki CMS Groupware Official Documentation">
+	<meta name="revisit-after" content="15 days">
+
+<meta content="Documentation for Tiki Wiki CMS Groupware" property="og:site_name">
+<meta content="Documentation for Tiki Wiki CMS Groupware" name="twitter:site">
+
+
+
+<title>Module quick_edit | Documentation for Tiki Wiki CMS Groupware</title>
+
+
+<meta property="og:title" content="Module quick_edit | Documentation for Tiki Wiki CMS Groupware">
+
+<meta name="twitter:title" content="Module quick_edit | Documentation for Tiki Wiki CMS Groupware">
+
+			<meta content="website" property="og:type">
+	
+
+<meta name="twitter:card" content="summary">
+
+						
+
+	<link rel="alternate" type="application/rss+xml" title="Tiki RSS feed for the wiki pages" href="http://doc.tiki.org/tiki-wiki_rss.php?ver=2">
+	<link rel="alternate" type="application/rss+xml" title="Tiki RSS feed for articles" href="http://doc.tiki.org/tiki-articles_rss.php?ver=2">
+	<link rel="alternate" type="application/rss+xml" title="Tiki RSS feed for image galleries" href="http://doc.tiki.org/tiki-image_galleries_rss.php?ver=2">
+	<link rel="alternate" type="application/rss+xml" title="Tiki RSS feed for file galleries" href="http://doc.tiki.org/tiki-file_galleries_rss.php?ver=2">
+	<!--[if lt IE 9]>
+	<script src="vendor_bundled/vendor/afarkas/html5shiv/dist/html5shiv.min.js" type="text/javascript"></script>
+<![endif]-->
+		
+<meta name="msapplication-config" content="themes/base_files/favicons/browserconfig.xml">
+
+<link rel="icon" href="themes/base_files/favicons/favicon-16x16.png" sizes="16x16" type="image/png">
+<link rel="apple-touch-icon" href="themes/base_files/favicons/apple-touch-icon.png" sizes="180x180">
+<link rel="icon" href="themes/base_files/favicons/favicon-32x32.png" sizes="32x32" type="image/png">
+<link rel="manifest" href="themes/base_files/favicons/site.webmanifest.html">
+<link rel="shortcut icon" href="themes/base_files/favicons/favicon.ico">
+<link rel="mask-icon" href="themes/base_files/favicons/safari-pinned-tab.svg" color="#5bbad5">
+<link rel="stylesheet" href="temp/public/codemirror_modes.css" type="text/css">
+<link rel="stylesheet" href="themes/base_files/css/tiki_base.css" type="text/css">
+<link rel="stylesheet" href="vendor_bundled/vendor/bower-asset/fontawesome/css/all.css" type="text/css">
+<link rel="stylesheet" href="themes/fivealive-lite/css/fivealive-lite.css" type="text/css">
+<link rel="stylesheet" href="themes/fivealive-lite/options/kiwi/css/kiwi.css" type="text/css">
+<link rel="stylesheet" href="vendor_bundled/vendor/studio-42/elfinder/css/elfinder.full.css" type="text/css">
+<link rel="stylesheet" href="lib/openlayers/theme/default/style.css" type="text/css">
+<link rel="stylesheet" href="vendor_bundled/vendor/codemirror/codemirror/lib/codemirror.css" type="text/css">
+<link rel="stylesheet" href="themes/base_files/feature_css/codemirror_tiki.css" type="text/css">
+<link rel="stylesheet" href="vendor_bundled/vendor/components/jqueryui/themes/flick/jquery-ui.css" type="text/css">
+<link rel="stylesheet" href="vendor_bundled/vendor/jquery/jquery-timepicker-addon/dist/jquery-ui-timepicker-addon.css" type="text/css">
+<link rel="stylesheet" href="vendor_bundled/vendor/jquery-plugins/colorbox/example1/colorbox.css" type="text/css">
+<link rel="stylesheet" href="vendor_bundled/vendor/jquery-plugins/treetable/css/jquery.treetable.css" type="text/css">
+<link rel="stylesheet" href="themes/base_files/feature_css/svg-edit-draw.css" type="text/css">
+<style type="text/css"><!--
+/* css 0 */
+@media (min-width: 1200px) { .container { max-width:1240px; } }
+
+.img_zoom {
+	display:inline-block;
+}
+.img_zoom:after {
+	content:"";
+	display:block;
+	width:33px;
+	height:33px;
+	position:absolute;
+	top:0;
+	right:0;
+	background:url(vendor_bundled/vendor/jquery-plugins/zoom/icon.png);
+}
+.img_zoom img {
+	display:block;
+}
+
+.ui-autocomplete-loading { background: white url("img/spinner.gif") right center no-repeat; }
+div#outerToc {
+	top: 31px;
+}
+.sitelogo {
+	line-height: 46px; /* same as .sitetitle */
+}
+.navbar-fixed-top .sitelogo a img, .layout_fixed_top_modules #top_modules .sitelogo a img {
+	margin-right: 0;
+	margin-top: 0;
+}
+
+@media (max-width:991px) {
+  .navbar-brand {
+    font-size: 12px; 
+    width: 65%;
+    overflow-x: hidden;
+    white-space: nowrap;
+    text-overflow: "&hellip;"; }
+  }
+
+.ui-autocomplete-loading { background: white url("img/spinner.gif") right center no-repeat; }
+
+.wikitext .card {
+    margin-bottom: 1rem;
+}
+
+#module_75 .card-body,
+#module_25 .card-body { /* keywords module for Tiki 13 (jb) */
+    height: 20em;
+    overflow-y: scroll;
+    overflow-x: hidden;
+}
+
+#module_75 .card-body .nav > li > a { padding: 0 15px; }
+
+/* Display first paragraph of wiki pages as a leading text */
+#page-data > p:first-of-type, .wikipreview .wikitext > p:first-of-type {
+    font-size: 120%;
+    padding: 2rem;
+    background: #f0f0f0;
+    border-radius: .5rem;
+    box-shadow: rgba(50, 50, 50, .15) 0 3rem 3rem -2rem inset, rgba(50, 50, 50, 0.1) 0 -1rem 2rem -1rem inset;
+}
+#page-data > p:first-of-type > br:first-of-type, .wikipreview .wikitext > p:first-of-type > br:first-of-type {
+    display: none;
+}
+
+#page-data a {
+	font-weight: bold;
+}
+
+@-ms-viewport{
+	width: auto!important;
+}
+
+/* Reduce page-top vertical whitespace */
+#alternate_register_link_because_InterTiki > br,
+#doc-dev-crosslinks > br { display: none; }
+
+/* Responsive Youtube videos - video wrapper class */
+.video-wrapper {
+     position: relative;
+     padding-bottom: 56.25%;
+     padding-top: 10px;
+     overflow: hidden;
+ }
+ .video-wrapper iframe {
+     position: absolute;
+     width: 100%;
+     height: 100%;
+     top: 0;
+     left: 0;
+ }
+
+/* End Responsive Youtube videos - video wrapper class */
+
+/* test to make dropdowns visible in mobile views */
+.tiki .navbar-collapse.in { overflow-y: visible; }
+
+/* Fix bad contrast- check and fix in stylesheet - GC-L 8/18 */
+.tiki-edit_structure .structure-container .ui-state-default { background: inherit; }
+
+footer.help-block {  border-top: 1px solid #737373; padding: .7em 0; margin-bottom: 1.2em; }
+
+/* Added for Tiki 19 - will move to stylesheet if it's a general fix/improvement. */
+#bottom_modules .row { width: 100%; max-width: 100%; }
+#bottom_modules .icon-link-external { display: none; } 
+#bottom_modules h4 { font-size: 1.2rem; }
+#bottom_modules ul { list-style: none; padding-left: 0; }
+
+textarea, .CodeMirror {
+    font-family: monospace !important;
+}
+
+/* Added by Bsfez for the Video Tutorials pages */
+
+.row .videoTutorials {
+  margin-bottom: 1em;
+  border-bottom: 1px solid #ccc
+}
+
+.videoTitle h5 a.heading-link {display:none}
+/*
+.videoLevel-Beginner,
+.videoLevel-Intermediate,
+.videoLevel-PowerUser,
+.videoLevel-Developer,
+.videoRole,
+.videoTitle a.wiki.external,
+.videoTag {
+  font-size: small
+}*/
+
+.videoLevel-Beginner {color: #117485}
+.videoLevel-Intermediate {color: #a59705}
+.videoLevel-PowerUser {color: #a53723}
+.videoLevel-Developer {color: #a51e37}
+.videoRole {color: #888}
+
+.videoTitle h5 {margin-bottom:0.1em}
+.videoTitle p {margin-bottom:0.2em}
+
+.videoTitle a.wiki.external,
+.videoTitle a:hover.wiki.external {
+  word-break: normal;
+  letter-spacing: -0.05em;
+}
+
+.videoTitle a.wiki.external:before,
+.videoTitle a.wiki.external:after,
+.videoTitle a:hover.wiki.external:before,
+.videoTitle a:hover.wiki.external:after
+{display: none}
+
+.videoTitle a:hover.wiki.external {padding-left:0}
+
+.videoDescription {
+  overflow: hidden;
+  position: relative; 
+  line-height: 1.2em;
+  max-height: 6em; 
+  text-align: justify;
+}
+
+/* END - Added by Bsfez for the Video Tutorials pages */
+
+/* Added by Bsfez for the tooh joinus message */
+#mod-menutopbar1 > nav > div > ul > li:nth-child(8) > a {
+  font-weight: bold;
+  margin-left: 6em;
+  color: rgb(255, 248, 33);}
+/* END Added by Bsfez for the tooh joinus message */
+
+/* Make input labels inline on "Video-Tutorials" */
+.videoresourceTikiExperienceLevel input+br, .videoresourceTikiUserGroupRole input+br {display: none; }
+
+/* Limit height of video transcript */
+.transcript-container { max-height: 300px; overflow-y: auto; }
+
+/* temp fix - Gary */
+.tiki .col-lg-9 {
+    flex-basis: 75%;
+}
+
+/* was: liquid layout to display all of wide table */
+#page_5154 .field259 { width: 280px; } 
+/*#page_5154 .tiki .container {width: 100%; max-width: 100%; }
+#page_5154 .tiki #col1 .table-responsive {overflow: visible; width: inherit; border-right-color: transparent;}
+#page_5154 .tiki #col1 .table-responsive > .table { width: 1200px; }*/
+
+.modal-dialog {
+    width: 80%; /* responsive width */
+}
+
+@media (min-width: 1200px) { .container { width:1240px; max-width:1240px;} }
+.affix {top:44px;}
+-->
+</style>
+	<style type="text/css">#sitelogo img {margin-top: 0; position: relative; top: -12px;}</style>
+
+<link rel="stylesheet" href="../themes.tiki.org/tiki-index_raw.php%3Fpage=Tiki_org_family_customizations_CSS&amp;clean&amp;textonly&amp;download&amp;css.css" type="text/css">
+
+<link rel="stylesheet" href="../themes.tiki.org/tiki-index_raw.php%3Fpage=Tiki_org_family_headers_fix_CSS&amp;clean&amp;textonly&amp;download&amp;css.css" type="text/css">
+
+<meta name="google-site-verification" content="OKHyWtoBAnRUctKvFQmKl2x1cAPGnHf8y_h8zUu-aeo">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	
+	<style type="text/css">
+	
+	/* Prevent target anchors from being covered by fixed top navbar */
+	h1:target:before,
+	h2:target:before,
+	h3:target:before,
+	h4:target:before,
+	h5:target:before,
+	h6:target:before {
+		content: "";
+		display: block;
+		height: 44px; /* fixed header height*/
+		margin: -44px 0 0; /* negative fixed header height */
+	}
+	</style></head>
+<body class="tiki tiki-index tiki_wiki_page fixed_width layout_social en hide_zone_left" style="padding-top: 0;">
+	
+
+	
+
+
+
+	
+
+			<div id="ajaxLoading">Loading...</div>
+<div id="ajaxLoadingBG"> </div>
+<div id="ajaxDebug"></div>
+		<div class="middle_outer" id="middle_outer">
+					<div class="fixed-topbar"></div>
+				<div class="container container-std middle" id="middle">
+						
+						
+
+			<div class="row row-middle" id="row-middle">
+															
+									<div class="d-flex flex-row flex-wrap w-100">
+					<div class="col col1 col-md-12 col-lg-9 order-md-1 order-lg-2 pb-4" id="col1">
+													
+												
+
+<div id="tikifeedback">
+	</div>
+
+						
+			
+<div class="wikitopline clearfix" style="clear: both;">
+	<div class="content">
+					<div class="wikiinfo float-left">
+				
+				
+				
+
+											</div>
+		 
+					<div class="wikiinfo float-left" id="pdfinfo" style="display:none">
+				<div class="alert alert-info" style="width:500px"><h4><span class="icon icon-information fas fa-info-circle fa-fw "></span> <span class="rboxtitle">Please wait</span></h4><div class="rboxcontent" style="display: inline"><span class="fas fa-circle-notch fa-spin" style="font-size:24px"></span> The PDF is being prepared, please wait...</div></div>
+			</div>
+			</div> 
+</div> 
+
+	
+	
+						
+				
+		
+	
+						
+						
+			
+	
+				
+	
+				
+	<article id="top" class="wikitext clearfix nopagetitle" style="padding-top: 44px;">
+										<div class="freetaglist"><a class="tips btn btn-link btn-sm" title=":Browse Tags" href="http://doc.tiki.org/tiki-browse_freetags.php"><span class="icon icon-tags fas fa-tags "></span></a>
+												<a class="label label-default" href="http://doc.tiki.org/tiki-browse_freetags.php?tag=modules">modules</a>
+																			<a class="label label-default" href="http://doc.tiki.org/tiki-browse_freetags.php?tag=wiki">wiki</a>
+																			<a class="label label-default" href="http://doc.tiki.org/tiki-browse_freetags.php?tag=edit">edit</a>
+																			<a class="label label-default" href="http://doc.tiki.org/tiki-browse_freetags.php?tag=create">create</a>
+																			<a class="label label-default" href="http://doc.tiki.org/tiki-browse_freetags.php?tag=wiki">wiki</a>
+														(<a href="http://doc.tiki.org/tiki-freetag_translate.php?objType=wiki+page&amp;objId=Module+quick_edit">Translate tags</a>)
+			</div>
+			
+			
+							
+
+			
+												 
+
+		
+		<div id="page-data" class="clearfix">
+										<div class="card bg-light"><div class="card-body">This page <a href="http://doc.tiki.org/needs-review" title="A documentation status Tag" class="wiki wiki_page">needs review</a></div></div>
+<a name="//apple_ref/cpp/Section/Top" class="dashAnchor"></a><h1 class="showhide_heading" id="Quick_Edit_Module"> Quick Edit Module<a href="Module-quick_edit.html#Quick_Edit_Module" class="heading-link"><span class="icon icon-link fas fa-link "></span></a></h1>
+<p>This <a href="http://doc.tiki.org/Module" title="Introduction to modules" class="wiki wiki_page">Module</a> allows users (with <a href="http://doc.tiki.org/Permissions" title="Permissions" class="wiki wiki_page">permissions</a>), to create or edit wiki pages. Simply type the name of a wiki page and click <strong>Edit</strong>.
+</p>
+<ul><li> If the page exists, Tiki will open the Edit screen for the page.
+</li><li> If the page does not exist, Tiki will create the page.
+</li></ul><p>
+<br><strong>Note</strong>: The name of the wiki page must conform to the character link format, as defined on the <a href="http://doc.tiki.org/Module%20quick_edit#_Wiki_Link_Format">Wiki Link Formatting field</a>.
+</p>
+
+<a id="usage" name="//apple_ref/cpp/Section/Usage" class="dashAnchor"></a><h2 class="showhide_heading" id="Usage"> Usage<a href="Module-quick_edit.html#Usage" class="heading-link"><span class="icon icon-link fas fa-link "></span></a></h2>
+<p>You will see it listed at "Admin &gt; Modules &gt; Assign new module &gt; Module Name (drop down)" (<strong>tiki-admin_modules.php</strong>).
+</p>
+
+<p>You can assign a this <a href="http://doc.tiki.org/Module" title="Introduction to modules" class="wiki wiki_page">Module</a> to a lateral column (See <a href="Module-Admin.html" title="Module Admin" class="wiki wiki_page">Module Admin</a> page if needed), or you can include it within a wiki page, using the <a href="PluginModule.html" title="Display a module in a wiki page" class="wiki wiki_page">PluginModule</a>.
+</p>
+<pre class="codelisting" data-theme="off" data-wrap="1" dir="ltr" style="white-space:pre-wrap; overflow-wrap: break-word; word-wrap: break-word;" id="codebox1">{MODULE(module=quick_edit) /}</pre>
+<p>
+<br>The assigned module (with its default values) looks like this:
+</p>
+<div style="text-align: center;"> <div class="card bg-light"><div class="card-body"><div>
+
+
+
+
+
+<div id="module_wikiplugin_1" class="card box-quick_edit module">
+			<div class="card-header">
+							<h3 class="card-title clearfix">
+											<span class="moduletitle">Quick Edit a Wiki Page</span>
+														</h3>
+					</div>
+			<div id="mod-quick_edit_wp_1" style="display: block;" class="clearfix card-body">
+									<form method="post" action="http://doc.tiki.org/tiki-editpage.php">
+		<div>
+																		<div class="form-group row mx-0">
+				<input id="qe-1" class="form-control" type="text" name="page">
+											</div>
+			<input type="submit" class="btn btn-primary btn-sm" name="qedit" value="Create/Edit">
+		</div>
+	</form>
+				
+														</div>
+				
+								<div class="card-footer"></div> 
+			</div>
+			
+</div></div></div> </div>
+<p>
+<br>Valid parameters for this module include:
+</p>
+<div class="table-responsive"><div id="wpfancytable1-div" class="ts-wrapperdiv">	<table class="table table-striped table-hover normal" id="wpfancytable1">	<thead>		<tr>			<th>Parmeter </th>			<th> Value </th>			<th> Description </th>			<th> Default </th>			<th> Optional?</th>		</tr>	</thead>	<tbody>		<tr>			<td>templateId </td>			<td> numeric </td>			<td> Wiki template (ID) to use when creating the page. See note below on how to find the ID of a particular template. </td>			<td> None </td>			<td> Y</td>		</tr>		<tr>			<td>size </td>			<td> numeric </td>			<td> Size of the Create/Edit Page field </td>			<td> 15 </td>			<td> Y</td>		</tr>		<tr>			<td>categId </td>			<td> numeric </td>			<td> Category (ID) to assign to newly created page. </td>			<td> None </td>			<td> Y</td>		</tr>		<tr>			<td>mod_quickedit_heading </td>			<td> alphanumeric </td>			<td> Title of the module </td>			<td> None </td>			<td> Y</td>		</tr>		<tr>			<td>submit </td>			<td> string </td>			<td> Label of the submit button </td>			<td> Create/Edit </td>			<td> Y</td>		</tr>		<tr>			<td>action </td>			<td> URL </td>			<td> Target of the form </td>			<td> tiki-editpage.php </td>			<td> Y</td>		</tr>	</tbody></table></div></div>
+<p>
+<br>Tiki 6+ parameters
+</p>
+<div class="table-responsive"><div id="wpfancytable2-div" class="ts-wrapperdiv">	<table class="table table-striped table-hover normal" id="wpfancytable2">	<thead>		<tr>			<th>Parmeter </th>			<th> Value </th>			<th> Description </th>			<th> Default </th>			<th> Optional?</th>		</tr>	</thead>	<tbody>		<tr>			<td>addcategId </td>			<td> numeric </td>			<td> If set, pages created through the module have this category prechecked to be categorized in. Different from categId which gives no chance to add more categories </td>			<td> None </td>			<td> Y</td>		</tr>		<tr>			<td>customTip </td>			<td> text </td>			<td> Custom text to be shown as a tip at the top of the edit page that appears as a result of this quick edit </td>			<td> None </td>			<td> Y</td>		</tr>		<tr>			<td>customTipTitle </td>			<td> text </td>			<td> Title of the above tip shown </td>			<td> None </td>			<td> Y</td>		</tr>		<tr>			<td>headerwiki </td>			<td> text (wiki page name) </td>			<td> Wiki page of which the contents will be shown on top of the edit page (useful for instructions on how to edit etc... </td>			<td> None </td>			<td> Y</td>		</tr>		<tr>			<td>input field for copy/paste </td>			<td> text </td>			<td>Add a text area for copy/paste page content </td>			<td> None </td>			<td> Y</td>		</tr>		<tr>			<td>show description field </td>			<td> text </td>			<td>Add a text field to enter the page description (requires feature_wiki_description </td>			<td> None </td>			<td> Y</td>		</tr>		<tr>			<td>choose category </td>			<td> dropdown </td>			<td>Allows the user to choose a category instead of preselecting one </td>			<td> None </td>			<td> Y</td>		</tr>	</tbody></table></div></div>
+<p>
+<br>To find the ~templateID~ for a particular template, do:
+</p>
+<ul><li> Admin menu (usually on the  left) &gt; Content Templates
+</li><li> Locate the template you want, and click on the pen icon in that row (in Action column)
+</li><li> Look at the url, and find the ~templateID=nn~ part. This gives you the ID.
+</li></ul><p>
+<br>The module can be used to create an auto-complete page search by setting action to <em>tiki-index.php</em>.
+</p>
+
+<a id="related-pages" name="//apple_ref/cpp/Section/Related%20Pages" class="dashAnchor"></a><h2 class="showhide_heading" id="Related_Pages"> Related Pages<a href="Module-quick_edit.html#Related_Pages" class="heading-link"><span class="icon icon-link fas fa-link "></span></a></h2>
+<p>See these pages for information that applies for all modules:
+</p>
+<ul><li> <a href="http://doc.tiki.org/Module" title="Introduction to modules" class="wiki wiki_page">Module</a>--Overall introduction and overview
+</li><li> <a href="Module-Admin.html" title="Module Admin" class="wiki wiki_page">Module Admin</a>--Introduction to the module admin pages for site-wide and individual module settings
+<ul><li> <a href="http://doc.tiki.org/Assigning-Modules" title="How to select a module to configure it" class="wiki wiki_page">Assigning Modules</a>--How to select a module to configure it
+</li><li> <a href="Module-Settings-Interface.html" title="Interface for configuring individual module settings" class="wiki wiki_page">Module Settings Interface</a>--Interface for configuring individual module settings
+</li><li> <a href="Module-Parameters.html" title="Explanation of standard parameter settings for modules" class="wiki wiki_page">Module Settings Parameters</a>--Explanation of standard parameter settings for modules
+</li><li> <a href="http://doc.tiki.org/Creating-Custom-Modules" title="How to create user modules" class="wiki wiki_page">Creating Custom Modules</a>--How to create user modules
+</li></ul></li><li> <a href="http://doc.tiki.org/Index-of-Modules" title="Links to the documentation of individual modules" class="wiki wiki_page">Index of Modules</a>--Links to the documentation of individual modules
+</li><li> <a href="http://doc.tiki.org/User-Modules" title="User Modules" class="wiki wiki_page">User Modules</a>--how (if the feature is active) users can choose and place their modules
+</li><li> <a href="http://doc.tiki.org/Mods-Type-Modules" title="Mods Type Modules" class="wiki wiki_page">Mods Type Modules</a>--links to modules that are installed as components
+</li></ul><p></p>
+
+					</div>
+
+		
+			</article> 
+
+	
+	<footer class="form-text">
+		
+					<div class="wiki-authors">
+<hr>
+	Page last modified on Sunday 18 August, 2013 16:04:42 GMT-0000
+</div>		
+		
+			</footer>
+
+		
+							
+		
+	
+			
+	
+	
+
+<a id="attachments"></a>
+
+	<div id="attzone" class="w-100" style="display:block;">
+
+	
+
+	
+	
+
+	</div>
+<div id="comment-container"></div>
+			
+													<div class="content clearfix modules mt-3" id="pagebottom_modules">
+	
+
+
+
+
+			<div id="module_91" style="" class="module box-related_video">
+				<div id="mod-related_videopagebottom1">
+										
+<div id="related_video" style="display:block;">
+</div>
+
+													
+					</div>
+</div>
+
+	
+
+
+
+			<div id="module_92" style="" class="module box-menupage">
+				<div id="mod-menupagepagebottom2">
+													
+
+		
+													
+					</div>
+</div>
+
+
+</div>
+											</div>
+					
+				</div>
+				
+			</div> 
+		</div> 
+	</div> 
+			
+
+		
+	
+	
+
+<div id="bootstrap-modal" class="modal fade footer-modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+	<div class="modal-dialog">
+		<div class="modal-content">
+			
+			<div class="modal-header">
+				<h4 class="modal-title" id="myModalLabel"></h4>
+			</div>
+		</div>
+	</div>
+</div>
+<div id="bootstrap-modal-2" class="modal fade footer-modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+	<div class="modal-dialog">
+		<div class="modal-content">
+		</div>
+	</div>
+</div>
+<div id="bootstrap-modal-3" class="modal fade footer-modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+	<div class="modal-dialog">
+		<div class="modal-content">
+		</div>
+	</div>
+</div>
+				
+	
+
+
+	<!-- Global site tag (gtag.js) - Google Analytics -->
+
+
+<!-- Put JS at the end -->
+	
+	
+<script type="text/javascript" src="vendor_bundled/vendor/components/jquery/jquery.js"></script>
+<script type="text/javascript" src="vendor_bundled/vendor/components/jquery-migrate/jquery-migrate.js"></script>
+<script type="text/javascript" src="vendor_bundled/vendor/codemirror/codemirror/lib/codemirror.js"></script>
+<script type="text/javascript" src="vendor_bundled/vendor/components/jqueryui/jquery-ui.js"></script>
+<script type="text/javascript" src="temp/public/codemirror_modes.js"></script>
+<script type="text/javascript" src="vendor_bundled/vendor/npm-asset/popper.js/dist/umd/popper.js"></script>
+<script type="text/javascript" src="vendor_bundled/vendor/twbs/bootstrap/dist/js/bootstrap.js"></script>
+<script type="text/javascript" src="lib/jquery_tiki/tiki-bootstrapmodalfix.js"></script>
+<script type="text/javascript" src="lib/jquery_tiki/iconsets.js"></script>
+<script type="text/javascript" src="lib/tiki-js.js"></script>
+<script type="text/javascript" src="vendor_bundled/vendor/studio-42/elfinder/js/elfinder.full.js"></script>
+<script type="text/javascript" src="lib/jquery_tiki/elfinder/tiki-elfinder.js"></script>
+<script type="text/javascript" src="lib/jquery_tiki/tiki-jquery.js"></script>
+<script type="text/javascript" src="lib/jquery_tiki/tiki-maps.js"></script>
+<script type="text/javascript" src="vendor_bundled/vendor/jquery-plugins/jquery-json/src/jquery.json.js"></script>
+<script type="text/javascript" src="vendor_bundled/vendor/jquery-plugins/zoom/jquery.zoom.js"></script>
+<script type="text/javascript" src="vendor_bundled/vendor/codemirror/codemirror/addon/search/searchcursor.js"></script>
+<script type="text/javascript" src="vendor_bundled/vendor/codemirror/codemirror/addon/mode/overlay.js"></script>
+<script type="text/javascript" src="lib/codemirror_tiki/codemirror_tiki.js"></script>
+<script type="text/javascript" src="vendor_bundled/vendor/jquery-plugins/infinitecarousel/jquery.infinitecarousel3.js"></script>
+<script type="text/javascript" src="lib/jquery_tiki/tiki-confirm.js"></script>
+
+<script type="text/javascript" src="vendor_bundled/vendor/harvesthq/chosen/chosen.jquery.min.js"></script>
+<script type="text/javascript" src="vendor_bundled/vendor/jquery/jquery-timepicker-addon/dist/jquery-ui-timepicker-addon.js"></script>
+<script type="text/javascript" src="vendor_bundled/vendor/jquery-plugins/fitvidjs/jquery.fitvids.js"></script>
+<script type="text/javascript" src="vendor_bundled/vendor/jquery-plugins/superfish/dist/js/superfish.js"></script>
+<script type="text/javascript" src="vendor_bundled/vendor/jquery-plugins/superfish/dist/js/supersubs.js"></script>
+<script type="text/javascript" src="vendor_bundled/vendor/jquery-plugins/superfish/dist/js/hoverIntent.js"></script>
+<script type="text/javascript" src="vendor_bundled/vendor/jquery-plugins/reflection-jquery/js/reflection.js"></script>
+<script type="text/javascript" src="vendor_bundled/vendor/jquery-plugins/media/jquery.media.js"></script>
+<script type="text/javascript" src="vendor_bundled/vendor/mottie/tablesorter/js/jquery.tablesorter.combined.js"></script>
+<script type="text/javascript" src="vendor_bundled/vendor/mottie/tablesorter/js/parsers/parser-input-select.js"></script>
+<script type="text/javascript" src="vendor_bundled/vendor/mottie/tablesorter/js/widgets/widget-columnSelector.js"></script>
+<script type="text/javascript" src="vendor_bundled/vendor/mottie/tablesorter/js/widgets/widget-filter-formatter-jui.js"></script>
+<script type="text/javascript" src="vendor_bundled/vendor/mottie/tablesorter/js/widgets/widget-grouping.js"></script>
+<script type="text/javascript" src="vendor_bundled/vendor/mottie/tablesorter/js/widgets/widget-math.js"></script>
+<script type="text/javascript" src="vendor_bundled/vendor/mottie/tablesorter/js/widgets/widget-pager.js"></script>
+<script type="text/javascript" src="vendor_bundled/vendor/mottie/tablesorter/js/widgets/widget-sort2Hash.js"></script>
+<script type="text/javascript" src="lib/jquery_tiki/tablesorter.js"></script>
+<script type="text/javascript" src="vendor_bundled/vendor/jquery-plugins/tagcanvas/jquery.tagcanvas.js"></script>
+<script type="text/javascript" src="vendor_bundled/vendor/jquery-plugins/colorbox/jquery.colorbox.js"></script>
+<script type="text/javascript" src="vendor_bundled/vendor/bower-asset/swfobject/swfobject/swfobject.js"></script>
+<script type="text/javascript" src="vendor_bundled/vendor/rmm5t/jquery-timeago/jquery.timeago.js"></script>
+<script type="text/javascript" src="vendor_bundled/vendor/rmm5t/jquery-timeago/locales/jquery.timeago.en.js"></script>
+<script type="text/javascript" src="vendor_bundled/vendor/avianey/jqdoublescroll/jquery.doubleScroll.js"></script>
+<script type="text/javascript" src="vendor_bundled/vendor/jquery-plugins/jquery-validation/dist/jquery.validate.js"></script>
+<script type="text/javascript" src="lib/validators/validator_tiki.js"></script>
+<script type="text/javascript" src="vendor_bundled/vendor/jquery-plugins/async/jquery.async.js"></script>
+<script type="text/javascript" src="vendor_bundled/vendor/jquery-plugins/treetable/jquery.treetable.js"></script>
+<script type="text/javascript" src="vendor_bundled/vendor/cwspear/bootstrap-hover-dropdown/bootstrap-hover-dropdown.js"></script>
+<script type="text/javascript" src="lib/jquery_tiki/files.js"></script>
+<script type="text/javascript" src="lib/jquery_tiki/tiki-trackers.js"></script>
+<script type="text/javascript" src="vendor_bundled/vendor/svg-edit/svg-edit/embedapi.js"></script>
+<script type="text/javascript" src="lib/svg-edit_tiki/draw.js"></script>
+<script type="text/javascript" src="lib/jquery_tiki/inline_edit.js"></script>
+<script type="text/javascript" src="lib/jquery_tiki/tiki-tasks.js"></script>
+<script type="text/javascript" src="lib/jquery_tiki/pluginedit.js"></script>
+<script type="text/javascript" src="lib/jquery_tiki/pdf.js"></script>
+<script type="text/javascript" src="vendor_bundled/vendor/npm-asset/html2canvas/dist/html2canvas.min.js"></script>
+<script type="text/javascript" src="vendor_bundled/vendor/mrrio/jspdf/jspdf.min.js"></script>
+<script type="text/javascript" src="lib/jquery_tiki/fullcalendar_to_pdf.js"></script>
+<script type="text/javascript" src="lang/en/language.js"></script>
+<script type="text/javascript" src="lib/captcha/captchalib.js"></script>
+
+	
+<script type="text/javascript">
+<!--//--><![CDATA[//><!--
+// js 0 
+tiki_cookie_jar=new Object();
+setCookieBrowser('javascript_enabled', '1621938996000', '', new Date(1621938996000));
+$.lang = 'en';
+
+// JS Object to hold prefs for jq
+var jqueryTiki = {"ui":true,"ui_theme":"flick","tooltips":true,"autocomplete":true,"superfish":true,"reflection":true,"tablesorter":true,"colorbox":true,"cboxCurrent":"{current} / {total}","sheet":true,"carousel":true,"validate":true,"zoom":true,"effect":"","effect_direction":"vertical","effect_speed":"400","effect_tabs":"none","effect_tabs_direction":"vertical","effect_tabs_speed":"fast","home_file_gallery":"5","autosave":true,"sefurl":true,"ajax":true,"syntaxHighlighter":true,"chosen":true,"chosen_sortable":false,"mapTileSets":["openstreetmap"],"infoboxTypes":["trackeritem","activity"],"googleStreetView":false,"googleStreetViewOverlay":false,"googleMapsAPIKey":"ABQIAAAAQNyVqGjgbUkeBZjVGN43nBQm7qDLuUr6PD9lu03O3Na4Jgp-xBTEdlCs9LWoI9vHWo2xg50eOgmWKw","structurePageRepeat":false,"mobile":false,"no_cookie":false,"language":"en","useInlineComment":false,"useInlineAnnotations":false,"helpurl":"http://doc.tiki.org/","shortDateFormat":"yy-mm-dd","shortTimeFormat":"HH:mm","username":null,"userRealName":null,"userAvatar":"http://doc.tiki.org/img/noavatar.png?v=1581008146","autoToc_inline":false,"autoToc_pos":"right","autoToc_offset":"44","bingMapsAPIKey":"","nextzenAPIKey":"","numericFieldScroll":"none","securityTimeout":"1440","current_object":{"type":"wiki page","object":"Module quick_edit"},"firstDayofWeek":0}
+
+jqueryTiki.iconset = {"defaults":["500px","accessible-icon","accusoft","ad","address-book","address-card","adjust","adn","adversal","affiliatetheme","air-freshener","algolia","align-center","align-justify","align-left","align-right","alipay","allergies","amazon","amazon-pay","ambulance","american-sign-language-interpreting","amilia","anchor","android","angellist","angle-double-down","angle-double-left","angle-double-right","angle-double-up","angle-down","angle-left","angle-right","angle-up","angry","angrycreative","angular","ankh","app-store","app-store-ios","apper","apple","apple-alt","apple-pay","archive","archway","arrow-alt-circle-down","arrow-alt-circle-left","arrow-alt-circle-right","arrow-alt-circle-up","arrow-circle-down","arrow-circle-left","arrow-circle-right","arrow-circle-up","arrow-down","arrow-left","arrow-right","arrow-up","arrows-alt","arrows-alt-h","arrows-alt-v","assistive-listening-systems","asterisk","asymmetrik","at","atlas","atom","audible","audio-description","autoprefixer","avianex","aviato","award","aws","backspace","backward","balance-scale","ban","band-aid","bandcamp","barcode","bars","baseball-ball","basketball-ball","bath","battery-empty","battery-full","battery-half","battery-quarter","battery-three-quarters","bed","beer","behance","behance-square","bell","bell-slash","bezier-curve","bible","bicycle","bimobject","binoculars","birthday-cake","bitbucket","bitcoin","bity","black-tie","blackberry","blender","blind","blogger","blogger-b","bluetooth","bluetooth-b","bold","bolt","bomb","bone","bong","book","book-open","book-reader","bookmark","bowling-ball","box","box-open","boxes","braille","brain","briefcase","briefcase-medical","broadcast-tower","broom","brush","btc","bug","building","bullhorn","bullseye","burn","buromobelexperte","bus","bus-alt","business-time","buysellads","calculator","calendar","calendar-alt","calendar-check","calendar-minus","calendar-plus","calendar-times","camera","camera-retro","cannabis","capsules","car","car-alt","car-battery","car-crash","car-side","caret-down","caret-left","caret-right","caret-square-down","caret-square-left","caret-square-right","caret-square-up","caret-up","cart-arrow-down","cart-plus","cc-amazon-pay","cc-amex","cc-apple-pay","cc-diners-club","cc-discover","cc-jcb","cc-mastercard","cc-paypal","cc-stripe","cc-visa","centercode","certificate","chalkboard","chalkboard-teacher","charging-station","chart-area","chart-bar","chart-line","chart-pie","check","check-circle","check-double","check-square","chess","chess-bishop","chess-board","chess-king","chess-knight","chess-pawn","chess-queen","chess-rook","chevron-circle-down","chevron-circle-left","chevron-circle-right","chevron-circle-up","chevron-down","chevron-left","chevron-right","chevron-up","child","chrome","church","circle","circle-notch","city","clipboard","clipboard-check","clipboard-list","clock","clone","closed-captioning","cloud","cloud-download-alt","cloud-upload-alt","cloudscale","cloudsmith","cloudversify","cocktail","code","code-branch","codepen","codiepie","coffee","cog","cogs","coins","columns","comment","comment-alt","comment-dollar","comment-dots","comment-slash","comments","comments-dollar","compact-disc","compass","compress","concierge-bell","connectdevelop","contao","cookie","cookie-bite","copy","copyright","couch","cpanel","creative-commons","creative-commons-by","creative-commons-nc","creative-commons-nc-eu","creative-commons-nc-jp","creative-commons-nd","creative-commons-pd","creative-commons-pd-alt","creative-commons-remix","creative-commons-sa","creative-commons-sampling","creative-commons-sampling-plus","creative-commons-share","credit-card","crop","crop-alt","cross","crosshairs","crow","crown","css3","css3-alt","cube","cubes","cut","cuttlefish","d-and-d","dashcube","database","deaf","delicious","deploydog","deskpro","desktop","deviantart","dharmachakra","diagnoses","dice","dice-five","dice-four","dice-one","dice-six","dice-three","dice-two","digg","digital-ocean","digital-tachograph","directions","discord","discourse","divide","dizzy","dna","dochub","docker","dollar-sign","dolly","dolly-flatbed","donate","door-closed","door-open","dot-circle","dove","download","draft2digital","drafting-compass","draw-polygon","dribbble","dribbble-square","dropbox","drum","drum-steelpan","drupal","dumbbell","dyalog","earlybirds","ebay","edge","edit","eject","elementor","ellipsis-h","ellipsis-v","ello","ember","empire","envelope","envelope-open","envelope-open-text","envelope-square","envira","equals","eraser","erlang","ethereum","etsy","euro-sign","exchange-alt","exclamation","exclamation-circle","exclamation-triangle","expand","expand-arrows-alt","expeditedssl","external-link-alt","external-link-square-alt","eye","eye-dropper","eye-slash","facebook","facebook-f","facebook-messenger","facebook-square","fast-backward","fast-forward","fax","feather","feather-alt","female","fighter-jet","file","file-alt","file-archive","file-audio","file-code","file-contract","file-download","file-excel","file-export","file-image","file-import","file-invoice","file-invoice-dollar","file-medical","file-medical-alt","file-pdf","file-powerpoint","file-prescription","file-signature","file-upload","file-video","file-word","fill","fill-drip","film","filter","fingerprint","fire","fire-extinguisher","firefox","first-aid","first-order","first-order-alt","firstdraft","fish","flag","flag-checkered","flask","flickr","flipboard","flushed","fly","folder","folder-minus","folder-open","folder-plus","font","font-awesome","font-awesome-alt","font-awesome-flag","fonticons","fonticons-fi","football-ball","fort-awesome","fort-awesome-alt","forumbee","forward","foursquare","free-code-camp","freebsd","frog","frown","frown-open","fulcrum","funnel-dollar","futbol","galactic-republic","galactic-senate","gamepad","gas-pump","gavel","gem","genderless","get-pocket","gg","gg-circle","ghost","gift","gifts","git","git-square","github","github-alt","github-square","gitkraken","gitlab","gitter","glass-cheers","glass-martini","glass-martini-alt","glass-whiskey","glasses","glide","glide-g","globe","globe-africa","globe-americas","globe-asia","globe-europe","gofore","golf-ball","goodreads","goodreads-g","google","google-drive","google-play","google-plus","google-plus-g","google-plus-square","google-wallet","gopuram","graduation-cap","gratipay","grav","greater-than","greater-than-equal","grimace","grin","grin-alt","grin-beam","grin-beam-sweat","grin-hearts","grin-squint","grin-squint-tears","grin-stars","grin-tears","grin-tongue","grin-tongue-squint","grin-tongue-wink","grin-wink","grip-horizontal","grip-lines","grip-lines-vertical","grip-vertical","gripfire","grunt","guitar","gulp","h-square","hacker-news","hacker-news-square","hackerrank","hammer","hamsa","hand-holding","hand-holding-heart","hand-holding-usd","hand-lizard","hand-paper","hand-peace","hand-point-down","hand-point-left","hand-point-right","hand-point-up","hand-pointer","hand-rock","hand-scissors","hand-spock","hands","hands-helping","handshake","hanukiah","hashtag","hat-wizard","haykal","hdd","heading","headphones","headphones-alt","headset","heart","heart-broken","heartbeat","helicopter","highlighter","hiking","hippo","hips","hire-a-helper","history","hockey-puck","holly-berry","home","hooli","hornbill","horse","horse-head","hospital","hospital-alt","hospital-symbol","hot-tub","hotel","hotjar","hourglass","hourglass-end","hourglass-half","hourglass-start","house-damage","houzz","hryvnia","html5","hubspot","i-cursor","id-badge","id-card","id-card-alt","image","images","imdb","inbox","indent","industry","infinity","info","info-circle","instagram","internet-explorer","ioxhost","italic","itunes","itunes-note","java","jedi","jedi-order","jenkins","joget","joint","joomla","journal-whills","js","js-square","jsfiddle","kaaba","kaggle","key","keybase","keyboard","keycdn","khanda","kickstarter","kickstarter-k","kiss","kiss-beam","kiss-wink-heart","kiwi-bird","korvue","landmark","language","laptop","laptop-code","laravel","lastfm","lastfm-square","laugh","laugh-beam","laugh-squint","laugh-wink","layer-group","leaf","leanpub","lemon","less","less-than","less-than-equal","level-down-alt","level-up-alt","life-ring","lightbulb","line","link","linkedin","linkedin-in","linode","linux","lira-sign","list","list-alt","list-ol","list-ul","location-arrow","lock","lock-open","long-arrow-alt-down","long-arrow-alt-left","long-arrow-alt-right","long-arrow-alt-up","low-vision","luggage-cart","lyft","magento","magic","magnet","mail-bulk","mailchimp","male","mandalorian","map","map-marked","map-marked-alt","map-marker","map-marker-alt","map-pin","map-signs","markdown","marker","mars","mars-double","mars-stroke","mars-stroke-h","mars-stroke-v","mastodon","maxcdn","medal","medapps","medium","medium-m","medkit","medrt","meetup","megaport","meh","meh-blank","meh-rolling-eyes","memory","menorah","mercury","microchip","microphone","microphone-alt","microphone-alt-slash","microphone-slash","microscope","microsoft","minus","minus-circle","minus-square","mix","mixcloud","mizuni","mobile","mobile-alt","modx","monero","money-bill","money-bill-alt","money-bill-wave","money-bill-wave-alt","money-check","money-check-alt","monument","moon","mortar-pestle","mosque","motorcycle","mouse-pointer","music","napster","neos","neuter","newspaper","nimblr","nintendo-switch","node","node-js","not-equal","notes-medical","npm","ns8","nutritionix","object-group","object-ungroup","odnoklassniki","odnoklassniki-square","oil-can","old-republic","om","opencart","openid","opera","optin-monster","osi","outdent","page4","pagelines","paint-brush","paint-roller","palette","palfed","pallet","paper-plane","paperclip","parachute-box","paragraph","parking","passport","pastafarianism","paste","patreon","pause","pause-circle","paw","paypal","peace","pen","pen-alt","pen-fancy","pen-nib","pen-square","pencil-alt","pencil-ruler","people-carry","percent","percentage","periscope","phabricator","phoenix-framework","phoenix-squadron","phone","phone-slash","phone-square","phone-volume","php","pied-piper","pied-piper-alt","pied-piper-hat","pied-piper-pp","piggy-bank","pills","pinterest","pinterest-p","pinterest-square","place-of-worship","plane","plane-arrival","plane-departure","play","play-circle","playstation","plug","plus","plus-circle","plus-square","podcast","poll","poll-h","poo","poop","portrait","pound-sign","power-off","pray","praying-hands","prescription","prescription-bottle","prescription-bottle-alt","print","procedures","product-hunt","project-diagram","pushed","puzzle-piece","python","qq","qrcode","question","question-circle","quidditch","quinscape","quora","quote-left","quote-right","quran","r-project","radiation","radiation-alt","rainbow","random","raspberry-pi","ravelry","react","reacteurope","readme","rebel","receipt","recycle","red-river","reddit","reddit-alien","reddit-square","redhat","redo","redo-alt","registered","renren","reply","reply-all","replyd","republican","researchgate","resolving","restroom","retweet","rev","ribbon","ring","road","robot","rocket","rocketchat","rockrms","route","rss","rss-square","ruble-sign","ruler","ruler-combined","ruler-horizontal","ruler-vertical","running","rupee-sign","sad-cry","sad-tear","safari","sass","save","schlix","school","screwdriver","scribd","search","search-dollar","search-location","search-minus","search-plus","searchengin","seedling","sellcast","sellsy","server","servicestack","shapes","share","share-alt","share-alt-square","share-square","shekel-sign","shield-alt","ship","shipping-fast","shirtsinbulk","shoe-prints","shopping-bag","shopping-basket","shopping-cart","shopware","shower","shuttle-van","sign","sign-in-alt","sign-language","sign-out-alt","signal","signature","simplybuilt","sistrix","sitemap","sith","skull","skyatlas","skype","slack","slack-hash","sliders-h","slideshare","smile","smile-beam","smile-wink","smoking","smoking-ban","snapchat","snapchat-ghost","snapchat-square","snowflake","socks","solar-panel","sort","sort-alpha-down","sort-alpha-up","sort-amount-down","sort-amount-up","sort-down","sort-numeric-down","sort-numeric-up","sort-up","soundcloud","spa","space-shuttle","speakap","spinner","splotch","spotify","spray-can","square","square-full","square-root-alt","squarespace","stack-exchange","stack-overflow","stamp","star","star-and-crescent","star-half","star-half-alt","star-of-david","star-of-life","staylinked","steam","steam-square","steam-symbol","step-backward","step-forward","stethoscope","sticker-mule","sticky-note","stop","stop-circle","stopwatch","store","store-alt","strava","stream","street-view","strikethrough","stripe","stripe-s","stroopwafel","studiovinari","stumbleupon","stumbleupon-circle","subscript","subway","suitcase","suitcase-rolling","sun","superpowers","superscript","supple","surprise","swatchbook","swimmer","swimming-pool","synagogue","sync","sync-alt","syringe","table","table-tennis","tablet","tablet-alt","tablets","tachometer-alt","tag","tags","tape","tasks","taxi","teamspeak","teeth","teeth-open","telegram","telegram-plane","tencent-weibo","terminal","text-height","text-width","th","th-large","th-list","the-red-yeti","theater-masks","themeco","themeisle","thermometer","thermometer-empty","thermometer-full","thermometer-half","thermometer-quarter","thermometer-three-quarters","thumbs-down","thumbs-up","thumbtack","ticket-alt","times","times-circle","tint","tint-slash","tired","toggle-off","toggle-on","toolbox","tooth","torah","torii-gate","trade-federation","trademark","traffic-light","train","transgender","transgender-alt","trash","trash-alt","tree","trello","tripadvisor","trophy","truck","truck-loading","truck-monster","truck-moving","truck-pickup","tshirt","tty","tumblr","tumblr-square","tv","twitch","twitter","twitter-square","typo3","uber","uikit","umbrella","umbrella-beach","underline","undo","undo-alt","uniregistry","universal-access","university","unlink","unlock","unlock-alt","untappd","upload","usb","user","user-alt","user-alt-slash","user-astronaut","user-check","user-circle","user-clock","user-cog","user-edit","user-friends","user-graduate","user-lock","user-md","user-minus","user-ninja","user-plus","user-secret","user-shield","user-slash","user-tag","user-tie","user-times","users","users-cog","ussunnah","utensil-spoon","utensils","vaadin","vector-square","venus","venus-double","venus-mars","viacoin","viadeo","viadeo-square","vial","vials","viber","video","video-slash","vihara","vimeo","vimeo-square","vimeo-v","vine","vk","vnv","volleyball-ball","volume-down","volume-mute","volume-off","volume-up","vote-yea","vr-cardboard","vuejs","walking","wallet","warehouse","water","weebly","weibo","weight","weight-hanging","weixin","whatsapp","whatsapp-square","wheelchair","whmcs","wifi","wikipedia-w","wind","window-close","window-maximize","window-minimize","window-restore","windows","wine-bottle","wine-glass","wine-glass-alt","wix","wizards-of-the-coast","wolf-pack-battalion","won-sign","wordpress","wordpress-simple","wpbeginner","wpexplorer","wpforms","wpressr","wrench","x-ray","xbox","xing","xing-square","y-combinator","yahoo","yandex","yandex-international","yelp","yen-sign","yin-yang","yoast","youtube","youtube-square","zhihu"],"icons":{"actions":{"id":"play-circle"},"admin":{"id":"cog"},"add":{"id":"plus-circle"},"admin_ads":{"id":"film"},"admin_articles":{"id":"newspaper","prepend":"far fa-"},"admin_blogs":{"id":"bold"},"admin_calendar":{"id":"calendar-alt","prepend":"far fa-"},"admin_category":{"id":"sitemap fa-rotate-270"},"admin_comments":{"id":"comment"},"admin_community":{"id":"users"},"admin_connect":{"id":"link"},"admin_copyright":{"id":"copyright","prepend":"far fa-"},"admin_directory":{"id":"folder","prepend":"far fa-"},"admin_faqs":{"id":"question"},"admin_features":{"id":"power-off"},"admin_fgal":{"id":"folder-open"},"admin_forums":{"id":"comments"},"admin_freetags":{"id":"tags"},"admin_gal":{"id":"file-image","prepend":"far fa-"},"admin_general":{"id":"cog"},"admin_i18n":{"id":"language"},"admin_intertiki":{"id":"exchange-alt"},"admin_login":{"id":"sign-in-alt"},"admin_user":{"id":"user"},"admin_look":{"id":"image","prepend":"far fa-"},"admin_maps":{"id":"map-marker-alt"},"admin_messages":{"id":"envelope","prepend":"far fa-"},"admin_metatags":{"id":"tag"},"admin_module":{"id":"shapes"},"admin_payment":{"id":"credit-card","prepend":"far fa-"},"admin_performance":{"id":"tachometer-alt"},"admin_polls":{"id":"tasks"},"admin_profiles":{"id":"cube"},"admin_rating":{"id":"check-square"},"admin_rss":{"id":"rss"},"admin_score":{"id":"trophy"},"admin_search":{"id":"search"},"admin_semantic":{"id":"arrows-alt-h"},"admin_security":{"id":"lock"},"admin_sefurl":{"id":"search-plus"},"admin_share":{"id":"share-alt"},"admin_socialnetworks":{"id":"thumbs-up"},"admin_stats":{"id":"chart-bar","prepend":"far fa-"},"admin_textarea":{"id":"edit"},"admin_trackers":{"id":"database"},"admin_userfiles":{"id":"cog"},"admin_video":{"id":"video"},"admin_webmail":{"id":"inbox"},"admin_webservices":{"id":"cog"},"admin_wiki":{"id":"file-alt","prepend":"far fa-"},"admin_workspace":{"id":"desktop"},"admin_wysiwyg":{"id":"file-alt"},"admin_print":{"id":"print"},"admin_packages":{"id":"gift"},"admin_rtc":{"id":"bullhorn"},"adn":{"id":"adn","prepend":"fab fa-"},"amazon":{"id":"amazon","prepend":"fab fa-"},"android":{"id":"android","prepend":"fab fa-"},"angellist":{"id":"angellist","prepend":"fab fa-"},"apple":{"id":"apple","prepend":"fab fa-"},"area-chart":{"id":"chart-area"},"arrows":{"id":"arrows-alt"},"arrows-h":{"id":"arrows-alt-h"},"arrows-v":{"id":"arrows-alt-v"},"articles":{"id":"newspaper","prepend":"far fa-"},"attach":{"id":"paperclip"},"audio":{"id":"file-audio","prepend":"far fa-"},"back":{"id":"arrow-left"},"background-color":{"id":"paint-brush"},"backlink":{"id":"reply"},"backward_step":{"id":"step-backward"},"bar-chart":{"id":"chart-bar"},"behance":{"id":"behance","prepend":"fab fa-"},"behance-square":{"id":"behance-square","prepend":"fab fa-"},"bitbucket":{"id":"bitbucket","prepend":"fab fa-"},"black-tie":{"id":"black-tie","prepend":"fab fa-"},"bluetooth":{"id":"bluetooth","prepend":"fab fa-"},"bluetooth-b":{"id":"bluetooth-b","prepend":"fab fa-"},"box":{"id":"list-alt","prepend":"far fa-"},"btc":{"id":"btc","prepend":"fab fa-"},"buysellads":{"id":"buysellads","prepend":"fab fa-"},"cart":{"id":"shopping-cart"},"chart":{"id":"chart-area"},"cc-amex":{"id":"cc-amex","prepend":"fab fa-"},"cc-diners-club":{"id":"cc-diners-club","prepend":"fab fa-"},"cc-discover":{"id":"cc-discover","prepend":"fab fa-"},"cc-jcb":{"id":"cc-jcb","prepend":"fab fa-"},"cc-mastercard":{"id":"cc-mastercard","prepend":"fab fa-"},"cc-paypal":{"id":"cc-paypal","prepend":"fab fa-"},"cc-stripe":{"id":"cc-stripe","prepend":"fab fa-"},"cc-visa":{"id":"cc-visa","prepend":"fab fa-"},"chrome":{"id":"chrome","prepend":"fab fa-"},"close":{"id":"times"},"cloud-download":{"id":"cloud-download-alt"},"cloud-upload":{"id":"cloud-upload-alt"},"code_file":{"id":"file-code","prepend":"far fa-"},"code-fork":{"id":"code-branch"},"codepen":{"id":"codepen","prepend":"fab fa-"},"codiepie":{"id":"codiepie","prepend":"fab fa-"},"collapsed":{"id":"plus-square","prepend":"far fa-"},"comments":{"id":"comments","prepend":"far fa-"},"compose":{"id":"pencil-alt"},"computer":{"id":"desktop"},"contacts":{"id":"users"},"content-template":{"id":"file","prepend":"far fa-"},"create":{"id":"plus"},"creative-commons":{"id":"creative-commons","prepend":"fab fa-"},"css3":{"id":"css3","prepend":"fab fa-"},"dashboard":{"id":"tachometer-alt"},"dashcube":{"id":"dashcube","prepend":"fab fa-"},"delete":{"id":"times"},"delicious":{"id":"delicious","prepend":"fab fa-"},"deviantart":{"id":"deviantart","prepend":"fab fa-"},"difference":{"id":"strikethrough"},"disable":{"id":"minus-square"},"documentation":{"id":"book"},"down":{"id":"sort-down"},"dribbble":{"id":"dribbble","prepend":"fab fa-"},"dropbox":{"id":"dropbox","prepend":"fab fa-"},"drupal":{"id":"drupal","prepend":"fab fa-"},"edge":{"id":"edge","prepend":"fab fa-"},"education":{"id":"graduation-cap"},"empire":{"id":"empire","prepend":"fab fa-"},"envelope":{"id":"envelope","prepend":"far fa-"},"envira":{"id":"envira","prepend":"fab fa-"},"erase":{"id":"eraser"},"error":{"id":"exclamation-circle"},"excel":{"id":"file-excel","prepend":"far fa-"},"exchange":{"id":"exchange-alt"},"expanded":{"id":"minus-square","prepend":"far fa-"},"expeditedssl":{"id":"expeditedssl","prepend":"fab fa-"},"export":{"id":"download"},"facebook":{"id":"facebook","prepend":"fab fa-"},"facebook-f":{"id":"facebook-f","prepend":"fab fa-"},"file":{"id":"file","prepend":"far fa-"},"file-archive":{"id":"folder"},"file-archive-open":{"id":"folder-open"},"file-text":{"id":"file-alt"},"file-text-o":{"id":"file-alt","prepend":"far fa-"},"firefox":{"id":"firefox","prepend":"fab fa-"},"first-order":{"id":"first-order","prepend":"fab fa-"},"flickr":{"id":"flickr","prepend":"fab fa-"},"floppy":{"id":"save","prepend":"far fa-"},"font-awesome":{"id":"font-awesome","prepend":"fab fa-"},"font-color":{"id":"font","class":"text-danger"},"fonticons":{"id":"fonticons","prepend":"fab fa-"},"fort-awesome":{"id":"fort-awesome","prepend":"fab fa-"},"forumbee":{"id":"forumbee","prepend":"fab fa-"},"forward_step":{"id":"step-forward"},"foursquare":{"id":"foursquare","prepend":"fab fa-"},"fullscreen":{"id":"expand-arrows-alt"},"get-pocket":{"id":"get-pocket","prepend":"fab fa-"},"gg":{"id":"gg","prepend":"fab fa-"},"gg-circle":{"id":"gg-circle","prepend":"fab fa-"},"git":{"id":"git","prepend":"fab fa-"},"git-square":{"id":"git-square","prepend":"fab fa-"},"github":{"id":"github","prepend":"fab fa-"},"github-alt":{"id":"github-alt","prepend":"fab fa-"},"github-square":{"id":"github-square","prepend":"fab fa-"},"gitlab":{"id":"gitlab","prepend":"fab fa-"},"glide":{"id":"glide","prepend":"fab fa-"},"glide-g":{"id":"glide-g","prepend":"fab fa-"},"google":{"id":"google","prepend":"fab fa-"},"google-plus":{"id":"google-plus","prepend":"fab fa-"},"google-plus-g":{"id":"google-plus-g","prepend":"fab fa-"},"google-plus-square":{"id":"google-plus-square","prepend":"fab fa-"},"group":{"id":"users"},"h1":{"id":"heading"},"h2":{"id":"heading","size":".9"},"h3":{"id":"heading","size":".8"},"hacker-news":{"id":"hacker-news","prepend":"fab fa-"},"help":{"id":"question-circle"},"history":{"id":"clock","prepend":"far fa-"},"horizontal-rule":{"id":"minus"},"houzz":{"id":"houzz","prepend":"fab fa-"},"html":{"id":"html5","prepend":"fab fa-"},"image":{"id":"file-image","prepend":"far fa-"},"import":{"id":"upload"},"index":{"id":"spinner"},"information":{"id":"info-circle","prepend":null,"append":null},"instagram":{"id":"instagram","prepend":"fab fa-"},"internet-explorer":{"id":"internet-explorer","prepend":"fab fa-"},"ioxhost":{"id":"ioxhost","prepend":"fab fa-"},"java":{"id":"java","prepend":"fab fa-"},"joomla":{"id":"joomla","prepend":"fab fa-"},"js":{"id":"js","prepend":"fab fa-"},"jsfiddle":{"id":"jsfiddle","prepend":"fab fa-"},"keyboard":{"id":"keyboard","prepend":"far fa-"},"lastfm":{"id":"lastfm","prepend":"fab fa-"},"lastfm-square":{"id":"lastfm-square","prepend":"fab fa-"},"leanpub":{"id":"leanpub","prepend":"fab fa-"},"less":{"id":"less","prepend":"fab fa-"},"level-down":{"id":"level-down-alt"},"level-up":{"id":"level-up-alt"},"like":{"id":"thumbs-up"},"line-chart":{"id":"chart-line"},"link-external":{"id":"external-link-alt"},"link-external-alt":{"id":"external-link-square-alt"},"linkedin":{"id":"linkedin","prepend":"fab fa-"},"linkedin-in":{"id":"linkedin-in","prepend":"fab fa-"},"linux":{"id":"linux","prepend":"fab fa-"},"list-numbered":{"id":"list-ol"},"listgui_display":{"id":"desktop"},"listgui_filter":{"id":"filter"},"listgui_format":{"id":"indent"},"listgui_pagination":{"id":"book"},"listgui_output":{"id":"eye","prepend":"far fa-"},"listgui_column":{"id":"columns"},"listgui_tablesorter":{"id":"table"},"listgui_icon":{"id":"user"},"listgui_body":{"id":"align-justify"},"listgui_carousel":{"id":"slideshare","prepend":"fab fa-"},"listgui_sort":{"id":"sort-alpha-up"},"listgui_wikitext":{"id":"file-alt","prepend":"far fa-"},"listgui_caption":{"id":"align-center"},"log":{"id":"history"},"login":{"id":"sign-in-alt"},"logout":{"id":"sign-out-alt"},"long-arrow-down":{"id":"long-arrow-alt-down"},"long-arrow-left":{"id":"long-arrow-alt-left"},"long-arrow-right":{"id":"long-arrow-alt-right"},"long-arrow-up":{"id":"long-arrow-alt-up"},"mailbox":{"id":"inbox"},"magnifier":{"id":"search"},"maxcdn":{"id":"maxcdn","prepend":"fab fa-"},"medium":{"id":"medium","prepend":"fab fa-"},"menu":{"id":"bars"},"menu-extra":{"id":"chevron-down"},"menuitem":{"id":"angle-right"},"merge":{"id":"random"},"microsoft":{"id":"microsoft","prepend":"fab fa-"},"minimize":{"id":"compress"},"mixcloud":{"id":"mixcloud","prepend":"fab fa-"},"module":{"id":"square"},"modules":{"id":"shapes"},"modx":{"id":"modx","prepend":"fab fa-"},"money":{"id":"money-bill"},"more":{"id":"ellipsis-h"},"move":{"id":"exchange-alt"},"next":{"id":"arrow-right"},"notepad":{"id":"file-alt","prepend":"far fa-"},"notification":{"id":"bell","prepend":"far fa-"},"off":{"id":"power-off"},"ok":{"id":"check-circle"},"opencart":{"id":"opencart","prepend":"fab fa-"},"openid":{"id":"openid","prepend":"fab fa-"},"opera":{"id":"opera","prepend":"fab fa-"},"optin-monster":{"id":"optin-monster","prepend":"fab fa-"},"page-break":{"id":"cut"},"pagelines":{"id":"pagelines","prepend":"fab fa-"},"paypal":{"id":"paypal","prepend":"fab fa-"},"pdf":{"id":"file-pdf","prepend":"far fa-"},"pencil":{"id":"pencil-alt"},"permission":{"id":"key"},"pie-chart":{"id":"chart-pie"},"pied-piper":{"id":"pied-piper","prepend":"fab fa-"},"pied-piper-alt":{"id":"pied-piper-alt","prepend":"fab fa-"},"pied-piper-pp":{"id":"pied-piper-pp","prepend":"fab fa-"},"pinterest":{"id":"pinterest","prepend":"fab fa-"},"pinterest-p":{"id":"pinterest-p","prepend":"fab fa-"},"pinterest-square":{"id":"pinterest-square","prepend":"fab fa-"},"plugin":{"id":"puzzle-piece"},"popup":{"id":"list-alt","prepend":"far fa-"},"post":{"id":"pencil-alt"},"powerpoint":{"id":"file-powerpoint","prepend":"far fa-"},"previous":{"id":"arrow-left"},"qq":{"id":"qq","prepend":"fab fa-"},"quotes":{"id":"quote-left"},"ranking":{"id":"sort-numeric-down"},"reddit":{"id":"reddit","prepend":"fab fa-"},"reddit-alien":{"id":"reddit-alien","prepend":"fab fa-"},"reddit-square":{"id":"reddit-square","prepend":"fab fa-"},"refresh":{"id":"sync"},"remove":{"id":"times"},"renren":{"id":"renren","prepend":"fab fa-"},"repeat":{"id":"redo"},"safari":{"id":"safari","prepend":"fab fa-"},"sass":{"id":"sass","prepend":"fab fa-"},"scissors":{"id":"cut"},"scribd":{"id":"scribd","prepend":"fab fa-"},"screencapture":{"id":"camera"},"selectall":{"id":"file-alt"},"send":{"id":"paper-plane"},"settings":{"id":"wrench"},"sharethis":{"id":"share-alt"},"shorten":{"id":"crop"},"simplybuilt":{"id":"simplybuilt","prepend":"fab fa-"},"skyatlas":{"id":"skyatlas","prepend":"fab fa-"},"skype":{"id":"skype","prepend":"fab fa-"},"slack":{"id":"slack","prepend":"fab fa-"},"smile":{"id":"smile","prepend":"far fa-"},"snapchat":{"id":"snapchat","prepend":"fab fa-"},"snapchat-ghost":{"id":"snapchat-ghost","prepend":"fab fa-"},"snapchat-square":{"id":"snapchat-square","prepend":"fab fa-"},"sort-asc":{"id":"sort-up"},"sort-alpha-asc":{"id":"sort-alpha-up"},"sort-alpha-desc":{"id":"sort-alpha-down"},"sort-amount-asc":{"id":"sort-amount-up"},"sort-amount-desc":{"id":"sort-amount-down"},"sort-desc":{"id":"sort-down"},"sort-down":{"id":"sort-down"},"sort-numeric-asc":{"id":"sort-numeric-up"},"sort-numeric-desc":{"id":"sort-numeric-down"},"sort-up":{"id":"sort-up"},"soundcloud":{"id":"soundcloud","prepend":"fab fa-"},"spotify":{"id":"spotify","prepend":"fab fa-"},"stack-exchange":{"id":"stack-exchange","prepend":"fab fa-"},"stack-overflow":{"id":"stack-overflow","prepend":"fab fa-"},"star-empty":{"id":"star","prepend":"far fa-"},"star-empty-selected":{"id":"star","prepend":"far fa-","class":"text-success"},"star-half-rating":{"id":"star-half","prepend":"far fa-"},"star-half-selected":{"id":"star-half","prepend":"far fa-","class":"text-success"},"star-selected":{"id":"star","class":"text-success"},"status-open":{"id":"circle","style":"color:green"},"status-pending":{"id":"adjust","style":"color:orange"},"status-closed":{"id":"times-circle","prepend":"far fa-","style":"color:grey"},"steam":{"id":"steam","prepend":"fab fa-"},"steam-square":{"id":"steam-square","prepend":"fab fa-"},"stop-watching":{"id":"eye-slash","prepend":"far fa-"},"structure":{"id":"sitemap"},"stumbleupon":{"id":"stumbleupon","prepend":"fab fa-"},"success":{"id":"check"},"textfile":{"id":"file-alt","prepend":"far fa-"},"themeisle":{"id":"themeisle","prepend":"fab fa-"},"three-d":{"id":"cube"},"ticket":{"id":"ticket-alt"},"time":{"id":"clock","prepend":"far fa-"},"title":{"id":"text-width"},"toggle-left":{"id":"caret-square-left","prepend":"far fa-"},"toggle-off":{"id":"toggle-off"},"toggle-on":{"id":"toggle-on"},"toggle-right":{"id":"caret-square-right","prepend":"far fa-"},"trackers":{"id":"database"},"translate":{"id":"language"},"trash":{"id":"trash-alt","prepend":"far fa-"},"trello":{"id":"trello","prepend":"fab fa-"},"tripadvisor":{"id":"tripadvisor","prepend":"fab fa-"},"tumblr":{"id":"tumblr","prepend":"fab fa-"},"tumblr-square":{"id":"tumblr-square","prepend":"fab fa-"},"twitch":{"id":"twitch","prepend":"fab fa-"},"twitter":{"id":"twitter","prepend":"fab fa-"},"twitter-square":{"id":"twitter-square","prepend":"fab fa-"},"unlike":{"id":"thumbs-down"},"up":{"id":"sort-up"},"usb":{"id":"usb","prepend":"fab fa-"},"viacoin":{"id":"viacoin","prepend":"fab fa-"},"video":{"id":"file-video","prepend":"far fa-"},"video_file":{"id":"file-video","prepend":"far fa-"},"view":{"id":"search-plus"},"vimeo":{"id":"vimeo-square","prepend":"fab fa-"},"vine":{"id":"vine","prepend":"fab fa-"},"vk":{"id":"vk","prepend":"fab fa-"},"warning":{"id":"exclamation-triangle"},"watch":{"id":"eye","prepend":"far fa-"},"watch-group":{"id":"users"},"weibo":{"id":"weibo","prepend":"fab fa-"},"whatsapp":{"id":"whatsapp","prepend":"fab fa-"},"windows":{"id":"windows","prepend":"fab fa-"},"wiki":{"id":"file-alt","prepend":"far fa-"},"wizard":{"id":"magic"},"word":{"id":"file-word","prepend":"far fa-"},"wysiwyg":{"id":"file-alt"},"xbox":{"id":"xbox","prepend":"fab fa-"},"xing":{"id":"xing","prepend":"fab fa-"},"xing-square":{"id":"xing-square","prepend":"fab fa-"},"yahoo":{"id":"yahoo","prepend":"fab fa-"},"youtube":{"id":"youtube","prepend":"fab fa-"},"youtube-square":{"id":"youtube-square","prepend":"fab fa-"},"zip":{"id":"file-archive","prepend":"far fa-"}},"tag":"span","prepend":"fas fa-","append":" fa-fw","rotate":{"90":" fa-rotate-90","180":" fa-rotate-180","270":" fa-rotate-270","horizontal":" fa-flip-horizontal","vertical":" fa-flip-vertical"}}
+var zoomToFoundLocation = "street";
+
+var bootstrapButton;
+if (typeof $.fn.button.noConflict === "function") {
+	bootstrapButton = $.fn.button.noConflict() // return $.fn.button to previously assigned value
+	$.fn.bootstrapBtn = bootstrapButton            // give $().bootstrapBtn the Bootstrap functionality
+}
+
+/*
+if (getCookie('postitnote') != 'hidden') {
+  $('#postitnote').removeClass('hidden').hide().delay('500').fadeIn('slow');
+}
+*/
+
+/* 
+ * this section of the custom js amends the way that OpenLayers 'spaces out' 
+ * dot and dot/dash markings for paths etc - added by Geoff (eromneg) Aug '14
+*/
+ if ( typeof OpenLayers != "undefined") {
+ OpenLayers.Renderer.SVG.prototype.dashStyle = function(style, widthFactor) {
+        var w = style.strokeWidth * widthFactor;
+        var str = style.strokeDashstyle;
+        switch (str) {
+            case 'solid':
+                return 'none';
+            case 'dot':
+                return [1, 4 * w].join();
+            case 'dash':
+                return [4 * w, 2 * w].join();
+            case 'dashdot':
+                return [4 * w, 2 * w, 1, 2 * w].join();
+            case 'longdash':
+                return [8 * w, 2 * w].join();
+            case 'longdashdot':
+                return [8 * w, 2 * w, 1, 2 * w].join();
+            default:
+                return OpenLayers.String.trim(str).replace(/\s+/g, ",");
+        }
+    }
+}
+					function submitSearch1() {
+						var $f = $('#search-module-form1');
+						if ($f.attr('action') !== "tiki-editpage.php" && $f.data('page_selected') === $("#search_mod_input_1").val()) {
+							if ($f.find('input[name="find"]').length) {
+								$f.find('input[name="find"]').val($f.data('page_selected'));
+							} else {
+								$f.append($('<input name="find">').val($f.data('page_selected')));
+							}
+							$f.attr('action', 'tiki-listpages.php');
+						} else if ($f.attr('action') == "#") {
+							$f.attr('action', 'tiki-searchindex.php');
+						}
+						$exact = $f.find("input[name=exact_match]");
+						if ($exact.val() != "y") {
+							$exact.remove(); // seems exact_match is true even if empty
+						}
+						return true;
+					}
+				
+
+function capLock(e, el){
+	kc = e.keyCode ? e.keyCode : e.which;
+	sk = e.shiftKey ? e.shiftKey : (kc == 16 ? true : false);
+	if ((kc >= 65 && kc <= 90 && !sk) || (kc >= 97 && kc <= 122 && sk)) {
+		$('.divCapson', $(el).parents('div:first')).show();
+	} else {
+		$('.divCapson', $(el).parents('div:first')).hide();
+	}
+}
+
+// js 2 
+
+try {
+	var timezone = Intl.DateTimeFormat().resolvedOptions().timeZone;
+	setCookie("local_tz", timezone);
+} catch (e) {}
+
+// this is used by tiki-confirm.js checkTimeout, so needs to be always set
+var now = new Date();
+
+if (! timezone) {
+	function inArray(item, array) {
+		for (var i in array) {
+			if (array[i] === item) {
+				return i;
+			}
+		}
+		return false;
+	}
+	var allTimeZoneCodes = ["ACDT","ACST","ADDT","ADT","AEDT","AEST","AHDT","AHST","AKDT","AKST","AMT","APT","AST","AWDT","AWST","AWT","BDST","BDT","BMT","BOST","BST","CAST","CAT","CDDT","CDT","CEMT","CEST","CET","CMT","CPT","CST","CWT","CHST","DMT","EAT","EDDT","EDT","EEST","EET","EMT","EPT","EST","EWT","FFMT","FMT","GMT","GST","HDT","HKST","HKT","HMT","HST","IDDT","IDT","IMT","IST","JDT","JMT","JST","KDT","KMT","KST","LST","MDDT","MDST","MDT","MMT","MPT","MSD","MSK","MST","MWT","NDDT","NDT","NPT","NST","NWT","NZDT","NZMT","NZST","PDDT","PDT","PKST","PKT","PLMT","PMMT","PMT","PPMT","PPT","PST","PWT","QMT","RMT","SAST","SDMT","SET","SJMT","SMT","SST","TBMT","TMT","UCT","UTC","WAST","WAT","WEMT","WEST","WET","WIB","WITA","WIT","WMT","YDDT","YDT","YPT","YST","YWT","A","B","C","D","E","F","G","H","I","K","L","M","N","O","P","Q","R","S","T","U","V","W","X","Y","Z"];
+	var now_string = now.toString();
+	var offsethours = - now.getTimezoneOffset() / 60;
+	setCookie("local_tzoffset", offsethours);
+	var m = now_string.match(/[ \(]([A-Z]{3,6})[ \)]?[ \d]*$/);	// try three or more char tz first at the end or just before the year
+	if (!m) {
+		m = now_string.match(/[ \(]([A-Z]{1,6})[ \)]?[ \d]*$/);	// might be a "military" one if not
+	}
+	if (m) {
+		m = m[1];
+	} else {	// IE (sometimes) gives UTC +offset instead of the abbreviation
+		// sadly this workaround will fail for non-whole hour offsets
+		var hours = - now.getTimezoneOffset() / 60;
+		m = "GMT" + (hours > 0 ? "+" : "") + hours;
+	}
+	// Etc/GMT+ is equivalent to GMT-
+	if (m.substring(0,4) == "GMT+") {
+		m = "Etc/GMT-" + m.substring(4);
+		setCookie("local_tz", m);
+	}
+	if (m.substring(0,4) == "GMT-") {
+		m = "Etc/GMT+" + m.substring(4);
+		setCookie("local_tz", m);
+	}
+	if (inArray(m, allTimeZoneCodes)) {
+		setCookie("local_tz", m);
+	}
+}
+
+//--><!]]>
+</script>
+<script type="text/javascript">
+<!--//--><![CDATA[//><!--
+$(document).ready(function(){
+// jq_onready 0 
+$("article").fitVids();
+$("time.timeago").timeago(); jQuery.timeago.settings.allowFuture = true;
+$(".table-responsive").doubleScroll({resetOnWindowResize: true});
+			$("#qe-1").tiki("autocomplete", "pagename");
+		
+$(".convert-mailto").removeClass("convert-mailto").each(function () {
+				var address = $(this).data("encode-name") + "@" + $(this).data("encode-domain");
+				$(this).attr("href", "mailto:" + address).text(address);
+			});
+$(".search_mod_magnifier").mouseover( function () {
+	$(".search_mod_buttons", $(this).parents(".module"))
+		.show('fast')
+		.mouseleave( function () {
+			$(this).hide('fast');
+		});
+}).click( function () {
+	$(this).parents("form").submit();
+});
+$("#search_mod_input_1")
+.keydown( function () {
+	$(".search_mod_magnifier", $(this).parent()).mouseover();}
+);
+						
+$("#search_mod_input_1").tiki("autocomplete", "pagename",{select: function(event, item) {
+						$('#search-module-form1').data('page_selected', item.item.value).find("input[name=exact_match]").val("y");
+						}, open: function(event, item) {
+						$(".search_mod_buttons", "#search-module-form1").hide();
+						}, close: function(event, item) {
+						$(".search_mod_buttons", "#search-module-form1").show();
+						}});
+							$('#comment-toggle').comment_toggle();
+						
+$(document).ready(function () {
+  var resetCSS = {
+    transition: 'all .5s ease 0s',
+    top: '',
+    height: '',
+    minHeight: '',
+    opacity: '',
+    overflow: ''
+  };
+  $(window).on("scroll", function () {
+    if ($(window).scrollTop() > 200) {
+      $('.navbar.fixed-top, .navbar-fixed-top').css({
+          transition: 'all .75s ease 0s',
+          top: '-20px',
+          height: '25px',
+          minHeight: '5px',
+          opacity: '.75',
+          overflow: 'hidden'
+      });
+      $('html:not(#page_1) .topbar').css({
+          'box-shadow': '0 5px 10px 0px rgba(0,0,0,.25)',
+          position: 'fixed',
+          top: '6px',
+          width: '100%',
+          left: 0,
+          'z-index': 3
+      });
+    } else {
+      $('.navbar.fixed-top, .navbar-fixed-top').css(resetCSS);
+      $(".topbar").removeAttr('style');
+    }
+  });
+  $('.navbar.fixed-top, .navbar-fixed-top').on('mouseover', function () {
+    $(this).css(resetCSS);
+    $('html:not(#page_1) .topbar').css({
+      top: '46px'
+    });
+  });
+});
+
+$('.backtotop').hide();
+function backtotop(){
+    var scrolled = $(window).scrollTop();
+    if (scrolled > 0) {
+        $('.backtotop').fadeIn();
+    } else {
+        $('.backtotop').fadeOut().removeAttr('style');
+    }
+}
+$(window).scroll(function(e){
+    backtotop();
+});
+$('.backtotop a').click(function(event){
+    event.preventDefault();
+    $('html,body').animate({
+        scrollTop:$('body').offset().top
+    }, 1000);
+});
+
+$("#loginbox-1").submit( function () {
+	if ($("#login-user_1").val() && $("#login-pass_1").val()) {
+		return true;
+	} else {
+		$("#login-user_1").focus();
+		return false;
+	}
+});
+if (jqueryTiki.no_cookie) {
+	$('.box-login_box input').each(function(){
+		$(this).change(function() {
+			if (jqueryTiki.no_cookie && $(this).val()) {
+				alert(jqueryTiki.cookie_consent_alert);
+			}
+		});
+	});
+}
+
+if ($('#login-user_1:visible').length) {if ($("#login-user_1").offset().top < $(window).height()) {$('#login-user_1')[0].focus();} }
+});
+//--><!]]>
+</script>
+
+	
+		<!-- Piwik -->
+
+
+<!-- End Piwik Code -->
+</body>
+</html>
