@@ -47,14 +47,10 @@ class Stripe extends BaseDocset
         $toGet = implode('|', [
             '/docs',
             '\.css',
-            // '\.gif',
             '\.ico',
-            // '\.jpg',
             '\.js',
             '\.png',
             '\.woff2',
-            // '\.svg',
-            // '\.webmanifest'
         ]);
 
         system(
@@ -125,12 +121,12 @@ class Stripe extends BaseDocset
     {
         $crawler = HtmlPageCrawler::create($html);
 
-        $this->removeLeftSidebar($crawler);
-        $this->removeRightSidebar($crawler);
+        // $this->removeLeftSidebar($crawler);
+        // $this->removeRightSidebar($crawler);
         $this->removeHeader($crawler);
         $this->removeFooter($crawler);
         $this->removeUnwantedJavaScript($crawler);
-        $this->insertDashTableOfContents($crawler);
+        // $this->insertDashTableOfContents($crawler);
 
         return $crawler->saveHTML();
     }
