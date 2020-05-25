@@ -7,7 +7,7 @@
 </p>
 
 <p align="center">
-    Made that builder for myself and was not planning to release it but if you want to create a docset without bothering and you play with PHP, you might find it useful.
+    Made that Builder for myself and was not planning to release it but if you want to create a docset without bothering and you play with PHP, you might find it useful.
 </p>
 
 ___
@@ -20,7 +20,7 @@ When coding with Sublime + Chrome in Split View, [Dash](http://kapeli.com/) is t
 
 ## Your Docset Class
 
-Your Docset Class has to extend the [BaseDocset class](https://github.com/godbout/dash-docset-builder/blob/master/app/Docsets/BaseDocset.php) that implements the [Docset interface](https://github.com/godbout/dash-docset-builder/blob/master/app/Contracts/Docset.php). That allows the builder to make your Docset with just a little configuration.
+Your Docset Class has to extend the [BaseDocset class](https://github.com/godbout/dash-docset-builder/blob/master/app/Docsets/BaseDocset.php) that implements the [Docset interface](https://github.com/godbout/dash-docset-builder/blob/master/app/Contracts/Docset.php). That allows the Builder to make your Docset with just a little configuration.
 
 Your Docset Class has to define the following constants:
 
@@ -83,6 +83,31 @@ public function format(string $html): string
 }
 ```
 
+The Builder provides a generic way to download your Docset docs. It'll use a sitemap.xml if found, else it'll go through your Docset index. If you need to define your own way to download your docs, you can define a `grab()` method in your Docset. The Builder will catch it and use your custom method instead.
+
+```php
+public function grab(): bool
+    {
+        system(
+            "wget doc.tiki.org/All-the-Documentation \
+                --mirror \
+                -e robots=off \
+                --header 'Cookie: javascript_enabled_detect=true' \
+                --reject-regex='/Plugins-|Plugins\.html|fullscreen=|PDF\.js|tikiversion=|comzone=|structure=|wp_files_sort_mode[0-9]=|offset=|\?refresh|\?session_filters|\?sort_mode' \
+                --accept-regex='/Plugin|/LIST|Tiki_org_family|\.css|\.js|\.jpg|\.png|\.gif|\.svg|\.ico|\.webmanifest' \
+                --page-requisites \
+                --adjust-extension \
+                --convert-links \
+                --span-hosts \
+                --domains={$this->externalDomains()} \
+                --directory-prefix=storage/{$this->downloadedDirectory()}",
+            $result
+        );
+
+        return $result === 0;
+    }
+```
+
 ## Build your Docset
 
 Once your class is set up, run:
@@ -98,7 +123,7 @@ You can then add your docset into Dash for personal use, or [contribute it](http
 
 # DOCSETS INCLUDED
 
-Currently the following docsets are included with the builder:
+Currently the following docsets are included with the Builder:
 
 * [Laravel-Zero](https://laravel-zero.com)
 * [Jigsaw by Tighten](https://jigsaw.tighten.co)
