@@ -51,7 +51,6 @@ public const EXTERNAL_DOMAINS = [
     ];
 ```
 
-
 Then there are two mandatory methods to define:
 
 ```php
@@ -83,7 +82,6 @@ public function format(string $html): string
     return $this->modifyHtml($html);
 }
 ```
-
 
 The Builder provides a generic way to download your Docset docs. It'll use a sitemap.xml if found, else it'll go through your Docset index. If you need to define your own way of downloading your docs, you can define a `grab()` method in your Docset. The Builder will catch it and use your custom method instead.
 
