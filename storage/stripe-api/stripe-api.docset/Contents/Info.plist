@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+    <key>CFBundleIdentifier</key>
+    <string>stripe-api</string>
+    <key>CFBundleName</key>
+    <string>Stripe API</string>
+    <key>DocSetPlatformFamily</key>
+    <string>stripe-api</string>
+    <key>dashIndexFilePath</key>
+    <string>stripe.com/docs/api/</string>
+    <key>DashDocSetFallbackURL</key>
+    <string>stripe.com/docs/api</string>
+    <key>DashDocSetPlayURL</key>
+    <string></string>
+    <key>isJavaScriptEnabled</key>
+    <true/>
+    <key>isDashDocset</key>
+    <true/>
+    <key>DashDocSetFamily</key>
+    <string>dashtoc</string>
+</dict>
+</plist>
