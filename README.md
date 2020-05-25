@@ -51,9 +51,6 @@ public const EXTERNAL_DOMAINS = [
     ];
 ```
 
->**Note**: the base directory is the directory where the doc is downloaded, and the whole site is flattened (no folder), so you can just define your INDEX and ICONS just by their names.
-
-
 Then there are two mandatory methods to define:
 
 ```php
