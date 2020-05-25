@@ -98,5 +98,6 @@ Currently the following docsets are included with the builder:
 
 * [Laravel-Zero](https://laravel-zero.com)
 * [Jigsaw by Tighten](https://jigsaw.tighten.co)
-* [Tailwind CSS](http://tailwindcss.com)
+* [Tailwind CSS](https://tailwindcss.com)
+* [Tiki](https://http://tiki.org/)
 
