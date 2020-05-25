@@ -47,7 +47,6 @@ public const EXTERNAL_DOMAINS = [
         'code.jquery.com',
         'rsms.me',
         'googleapis.com',
-        // 'images.unsplash.com'
     ];
 ```
 
@@ -83,7 +82,7 @@ public function format(string $html): string
 }
 ```
 
-The Builder provides a generic way to download your Docset docs. It'll use a sitemap.xml if found, else it'll go through your Docset index. If you need to define your own way of downloading your docs, you can define a `grab()` method in your Docset. The Builder will catch it and use your custom method instead.
+The Builder provides a generic way to download your Docset docs. It'll use a sitemap.xml if found, else it'll go through your Docset index. If you need to provide your own way of downloading your docs, you can define a `grab()` method in your Docset. The Builder will catch it and use your custom method instead.
 
 ```php
 public function grab(): bool
