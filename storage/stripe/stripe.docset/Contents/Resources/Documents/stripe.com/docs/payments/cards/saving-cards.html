@@ -180,7 +180,7 @@
   <body class="">
     
       <div id="docs">
-        <div id="sidebar">
+        <div id="sidebar" style="display: none;">
             
   <div class="logo">
     <a href="../../recipes/switching-to-stripe.html" title="Stripe docs">
@@ -3008,7 +3008,7 @@
             <article id="content">
                 
   <header>
-  <h1 id="save-a-card-during-payment">Save a card during payment</h1>
+  <a name="//apple_ref/cpp/Section/Top" class="dashAnchor"></a><h1 id="save-a-card-during-payment">Save a card during payment</h1>
 
   <p>Learn how to save card details during a payment.</p>
 
@@ -3022,7 +3022,7 @@
         <a>Android</a>
   </nav>
   <div class="tabs-content">
-    <div class="tabs-tab" id="web"><h2 id="web-overview">Overview</h2>
+    <div class="tabs-tab" id="web"><a id="overview" name="//apple_ref/cpp/Section/Overview" class="dashAnchor"></a><h2 id="web-overview">Overview</h2>
 
 <p>Use the <a href="../../api/payment_intents.html">Payment Intents API</a> to save card details from a purchase. There are several use cases:</p>
 
@@ -3034,7 +3034,7 @@
 
 <div class="expando" aria-expanded="true">
   <a id="web-setup" href="saving-cards.html#web-setup" class="expando-trigger">
-    <h2 class="expando-title" data-no-anchor data-custom-toc-title="Set up Stripe">
+    <a id="1-set-up-stripe-server-side" name="//apple_ref/cpp/Section/1%20Set%20up%20Stripe%20Server-side" class="dashAnchor"></a><h2 class="expando-title" data-no-anchor data-custom-toc-title="Set up Stripe">
         <span class="expando-left-text">1</span>
       Set up Stripe
         <span class="tag optional">Server-side</span>
@@ -3281,7 +3281,7 @@ PM&gt; Install-Package Stripe.net</code></div></pre>
 
 <div class="expando" aria-expanded="true">
   <a id="web-create-a-customer" href="saving-cards.html#web-create-a-customer" class="expando-trigger">
-    <h2 class="expando-title" data-no-anchor data-custom-toc-title="Create a Customer before payment">
+    <a id="2-create-a-customer-before-payment-server-side" name="//apple_ref/cpp/Section/2%20Create%20a%20Customer%20before%20payment%20Server-side" class="dashAnchor"></a><h2 class="expando-title" data-no-anchor data-custom-toc-title="Create a Customer before payment">
         <span class="expando-left-text">2</span>
       Create a Customer before payment
         <span class="tag optional">Server-side</span>
@@ -3481,7 +3481,7 @@ var customer = service.Create(options);
 
 <div class="expando" aria-expanded="true">
   <a id="web-create-payment-intent" href="saving-cards.html#web-create-payment-intent" class="expando-trigger">
-    <h2 class="expando-title" data-no-anchor data-custom-toc-title="Create a PaymentIntent">
+    <a id="3-create-a-paymentintent-server-side" name="//apple_ref/cpp/Section/3%20Create%20a%20PaymentIntent%20Server-side" class="dashAnchor"></a><h2 class="expando-title" data-no-anchor data-custom-toc-title="Create a PaymentIntent">
         <span class="expando-left-text">3</span>
       Create a PaymentIntent
         <span class="tag optional">Server-side</span>
@@ -3710,7 +3710,7 @@ var paymentIntent = service.Create(options);
 
 <div class="expando" aria-expanded="true">
   <a id="web-collect-card-details" href="saving-cards.html#web-collect-card-details" class="expando-trigger">
-    <h2 class="expando-title" data-no-anchor data-custom-toc-title="Collect card details">
+    <a id="4-collect-card-details-client-side" name="//apple_ref/cpp/Section/4%20Collect%20card%20details%20Client-side" class="dashAnchor"></a><h2 class="expando-title" data-no-anchor data-custom-toc-title="Collect card details">
         <span class="expando-left-text">4</span>
       Collect card details
         <span class="tag optional">Client-side</span>
@@ -3886,7 +3886,7 @@ If you build your payment form with multi-input card Elements (<code>cardNumber<
 
 <div class="expando" aria-expanded="true">
   <a id="web-submit-payment" href="saving-cards.html#web-submit-payment" class="expando-trigger">
-    <h2 class="expando-title" data-no-anchor data-custom-toc-title="Submit the payment to Stripe">
+    <a id="5-submit-the-payment-to-stripe-client-side" name="//apple_ref/cpp/Section/5%20Submit%20the%20payment%20to%20Stripe%20Client-side" class="dashAnchor"></a><h2 class="expando-title" data-no-anchor data-custom-toc-title="Submit the payment to Stripe">
         <span class="expando-left-text">5</span>
       Submit the payment to Stripe
         <span class="tag optional">Client-side</span>
@@ -3954,7 +3954,7 @@ client.js
 
 <div class="expando" aria-expanded="true">
   <a id="web-create-payment-intent-off-session" href="saving-cards.html#web-create-payment-intent-off-session" class="expando-trigger">
-    <h2 class="expando-title" data-no-anchor data-custom-toc-title="Charge the saved card later">
+    <a id="6-charge-the-saved-card-later-server-side" name="//apple_ref/cpp/Section/6%20Charge%20the%20saved%20card%20later%20Server-side" class="dashAnchor"></a><h2 class="expando-title" data-no-anchor data-custom-toc-title="Charge the saved card later">
         <span class="expando-left-text">6</span>
       Charge the saved card later
         <span class="tag optional">Server-side</span>
@@ -4510,7 +4510,7 @@ stripe.confirmCardPayment(intent.client_secret, {
 
 <div class="expando" aria-expanded="true">
   <a id="web-test-integration" href="saving-cards.html#web-test-integration" class="expando-trigger">
-    <h2 class="expando-title" data-no-anchor data-custom-toc-title="Test the integration">
+    <a id="7-test-the-integration" name="//apple_ref/cpp/Section/7%20Test%20the%20integration" class="dashAnchor"></a><h2 class="expando-title" data-no-anchor data-custom-toc-title="Test the integration">
         <span class="expando-left-text">7</span>
       Test the integration
     </h2>
@@ -4561,7 +4561,7 @@ stripe.confirmCardPayment(intent.client_secret, {
 
   </div>
 </div></div>
-<div class="tabs-tab" id="ios"><h2 id="ios-overview">Overview</h2>
+<div class="tabs-tab" id="ios"><a id="overview" name="//apple_ref/cpp/Section/Overview" class="dashAnchor"></a><h2 id="ios-overview">Overview</h2>
 
 <p>Use the <a href="../../api/payment_intents.html">Payment Intents API</a> to save card details from a purchase. There are several use cases:</p>
 
@@ -4573,7 +4573,7 @@ stripe.confirmCardPayment(intent.client_secret, {
 
 <div class="expando" aria-expanded="true">
   <a id="ios-set-up-stripe" href="saving-cards.html#ios-set-up-stripe" class="expando-trigger">
-    <h2 class="expando-title" data-no-anchor data-custom-toc-title="Set up Stripe">
+    <a id="1-set-up-stripe-server-side-client-side" name="//apple_ref/cpp/Section/1%20Set%20up%20Stripe%20Server-side%20Client-side" class="dashAnchor"></a><h2 class="expando-title" data-no-anchor data-custom-toc-title="Set up Stripe">
         <span class="expando-left-text">1</span>
       Set up Stripe
         <span class="tag optional">Server-side</span>
@@ -5030,7 +5030,7 @@ AppDelegate.m
 
 <div class="expando" aria-expanded="true">
   <a id="ios-create-checkout-page" href="saving-cards.html#ios-create-checkout-page" class="expando-trigger">
-    <h2 class="expando-title" data-no-anchor data-custom-toc-title="Create your checkout page">
+    <a id="2-create-your-checkout-page-client-side" name="//apple_ref/cpp/Section/2%20Create%20your%20checkout%20page%20Client-side" class="dashAnchor"></a><h2 class="expando-title" data-no-anchor data-custom-toc-title="Create your checkout page">
         <span class="expando-left-text">2</span>
       Create your checkout page
         <span class="tag optional">Client-side</span>
@@ -5192,7 +5192,7 @@ CheckoutViewController.m
 
 <div class="expando" aria-expanded="true">
   <a id="ios-create-a-customer" href="saving-cards.html#ios-create-a-customer" class="expando-trigger">
-    <h2 class="expando-title" data-no-anchor data-custom-toc-title="Create a Customer before payment">
+    <a id="3-create-a-customer-before-payment-server-side" name="//apple_ref/cpp/Section/3%20Create%20a%20Customer%20before%20payment%20Server-side" class="dashAnchor"></a><h2 class="expando-title" data-no-anchor data-custom-toc-title="Create a Customer before payment">
         <span class="expando-left-text">3</span>
       Create a Customer before payment
         <span class="tag optional">Server-side</span>
@@ -5389,7 +5389,7 @@ var customer = service.Create(options);
 
 <div class="expando" aria-expanded="true">
   <a id="ios-create-payment-intent" href="saving-cards.html#ios-create-payment-intent" class="expando-trigger">
-    <h2 class="expando-title" data-no-anchor data-custom-toc-title="Create a PaymentIntent">
+    <a id="4-create-a-paymentintent-server-side-client-side" name="//apple_ref/cpp/Section/4%20Create%20a%20PaymentIntent%20Server-side%20Client-side" class="dashAnchor"></a><h2 class="expando-title" data-no-anchor data-custom-toc-title="Create a PaymentIntent">
         <span class="expando-left-text">4</span>
       Create a PaymentIntent
         <span class="tag optional">Server-side</span>
@@ -5707,7 +5707,7 @@ CheckoutViewController.m
 
 <div class="expando" aria-expanded="true">
   <a id="ios-submit-payment" href="saving-cards.html#ios-submit-payment" class="expando-trigger">
-    <h2 class="expando-title" data-no-anchor data-custom-toc-title="Submit the payment to Stripe">
+    <a id="5-submit-the-payment-to-stripe-client-side" name="//apple_ref/cpp/Section/5%20Submit%20the%20payment%20to%20Stripe%20Client-side" class="dashAnchor"></a><h2 class="expando-title" data-no-anchor data-custom-toc-title="Submit the payment to Stripe">
         <span class="expando-left-text">5</span>
       Submit the payment to Stripe
         <span class="tag optional">Client-side</span>
@@ -5914,7 +5914,7 @@ CheckoutViewController.m
 
 <div class="expando" aria-expanded="true">
   <a id="ios-create-payment-intent-off-session" href="saving-cards.html#ios-create-payment-intent-off-session" class="expando-trigger">
-    <h2 class="expando-title" data-no-anchor data-custom-toc-title="Charge the card off-session">
+    <a id="6-charge-the-card-off-session-server-side" name="//apple_ref/cpp/Section/6%20Charge%20the%20card%20off-session%20Server-side" class="dashAnchor"></a><h2 class="expando-title" data-no-anchor data-custom-toc-title="Charge the card off-session">
         <span class="expando-left-text">6</span>
       Charge the card off-session
         <span class="tag optional">Server-side</span>
@@ -6431,7 +6431,7 @@ catch (StripeException e)
 
 <div class="expando" aria-expanded="true">
   <a id="ios-check-status" href="saving-cards.html#ios-check-status" class="expando-trigger">
-    <h2 class="expando-title" data-no-anchor data-custom-toc-title="Handle declines or authentication requests">
+    <a id="7-handle-declines-or-authentication-requests" name="//apple_ref/cpp/Section/7%20Handle%20declines%20or%20authentication%20requests" class="dashAnchor"></a><h2 class="expando-title" data-no-anchor data-custom-toc-title="Handle declines or authentication requests">
         <span class="expando-left-text">7</span>
       Handle declines or authentication requests
     </h2>
@@ -6600,7 +6600,7 @@ RecoveryFlowViewController.m
 
 <div class="expando" aria-expanded="true">
   <a id="ios-test-integration" href="saving-cards.html#ios-test-integration" class="expando-trigger">
-    <h2 class="expando-title" data-no-anchor data-custom-toc-title="Test the integration">
+    <a id="8-test-the-integration" name="//apple_ref/cpp/Section/8%20Test%20the%20integration" class="dashAnchor"></a><h2 class="expando-title" data-no-anchor data-custom-toc-title="Test the integration">
         <span class="expando-left-text">8</span>
       Test the integration
     </h2>
@@ -6652,7 +6652,7 @@ RecoveryFlowViewController.m
   </div>
 </div>
 </div>
-<div class="tabs-tab" id="android"><h2 id="android-overview">Overview</h2>
+<div class="tabs-tab" id="android"><a id="overview" name="//apple_ref/cpp/Section/Overview" class="dashAnchor"></a><h2 id="android-overview">Overview</h2>
 
 <p>Use the <a href="../../api/payment_intents.html">Payment Intents API</a> to save card details from a purchase. There are several use cases:</p>
 
@@ -6664,7 +6664,7 @@ RecoveryFlowViewController.m
 
 <div class="expando" aria-expanded="true">
   <a id="android-set-up-stripe" href="saving-cards.html#android-set-up-stripe" class="expando-trigger">
-    <h2 class="expando-title" data-no-anchor data-custom-toc-title="Set up Stripe">
+    <a id="1-set-up-stripe-server-side-client-side" name="//apple_ref/cpp/Section/1%20Set%20up%20Stripe%20Server-side%20Client-side" class="dashAnchor"></a><h2 class="expando-title" data-no-anchor data-custom-toc-title="Set up Stripe">
         <span class="expando-left-text">1</span>
       Set up Stripe
         <span class="tag optional">Server-side</span>
@@ -7004,7 +7004,7 @@ public class MyApp extends Application {
 
 <div class="expando" aria-expanded="true">
   <a id="android-create-checkout-page" href="saving-cards.html#android-create-checkout-page" class="expando-trigger">
-    <h2 class="expando-title" data-no-anchor data-custom-toc-title="Create your checkout page">
+    <a id="2-create-your-checkout-page-client-side" name="//apple_ref/cpp/Section/2%20Create%20your%20checkout%20page%20Client-side" class="dashAnchor"></a><h2 class="expando-title" data-no-anchor data-custom-toc-title="Create your checkout page">
         <span class="expando-left-text">2</span>
       Create your checkout page
         <span class="tag optional">Client-side</span>
@@ -7086,7 +7086,7 @@ content_checkout.xml
 
 <div class="expando" aria-expanded="true">
   <a id="android-create-a-customer" href="saving-cards.html#android-create-a-customer" class="expando-trigger">
-    <h2 class="expando-title" data-no-anchor data-custom-toc-title="Create a Customer before payment">
+    <a id="3-create-a-customer-before-payment-server-side" name="//apple_ref/cpp/Section/3%20Create%20a%20Customer%20before%20payment%20Server-side" class="dashAnchor"></a><h2 class="expando-title" data-no-anchor data-custom-toc-title="Create a Customer before payment">
         <span class="expando-left-text">3</span>
       Create a Customer before payment
         <span class="tag optional">Server-side</span>
@@ -7283,7 +7283,7 @@ var customer = service.Create(options);
 
 <div class="expando" aria-expanded="true">
   <a id="android-create-payment-intent" href="saving-cards.html#android-create-payment-intent" class="expando-trigger">
-    <h2 class="expando-title" data-no-anchor data-custom-toc-title="Create a PaymentIntent">
+    <a id="4-create-a-paymentintent-server-side-client-side" name="//apple_ref/cpp/Section/4%20Create%20a%20PaymentIntent%20Server-side%20Client-side" class="dashAnchor"></a><h2 class="expando-title" data-no-anchor data-custom-toc-title="Create a PaymentIntent">
         <span class="expando-left-text">4</span>
       Create a PaymentIntent
         <span class="tag optional">Server-side</span>
@@ -7595,7 +7595,7 @@ CheckoutActivity.java
 
 <div class="expando" aria-expanded="true">
   <a id="android-submit-payment" href="saving-cards.html#android-submit-payment" class="expando-trigger">
-    <h2 class="expando-title" data-no-anchor data-custom-toc-title="Submit the payment to Stripe">
+    <a id="5-submit-the-payment-to-stripe-client-side" name="//apple_ref/cpp/Section/5%20Submit%20the%20payment%20to%20Stripe%20Client-side" class="dashAnchor"></a><h2 class="expando-title" data-no-anchor data-custom-toc-title="Submit the payment to Stripe">
         <span class="expando-left-text">5</span>
       Submit the payment to Stripe
         <span class="tag optional">Client-side</span>
@@ -7835,7 +7835,7 @@ CheckoutActivity.java
 
 <div class="expando" aria-expanded="true">
   <a id="android-create-payment-intent-off-session" href="saving-cards.html#android-create-payment-intent-off-session" class="expando-trigger">
-    <h2 class="expando-title" data-no-anchor data-custom-toc-title="Charge the card off-session">
+    <a id="6-charge-the-card-off-session-server-side" name="//apple_ref/cpp/Section/6%20Charge%20the%20card%20off-session%20Server-side" class="dashAnchor"></a><h2 class="expando-title" data-no-anchor data-custom-toc-title="Charge the card off-session">
         <span class="expando-left-text">6</span>
       Charge the card off-session
         <span class="tag optional">Server-side</span>
@@ -8352,7 +8352,7 @@ catch (StripeException e)
 
 <div class="expando" aria-expanded="true">
   <a id="android-check-status" href="saving-cards.html#android-check-status" class="expando-trigger">
-    <h2 class="expando-title" data-no-anchor data-custom-toc-title="Handle declines or authentication requests">
+    <a id="7-handle-declines-or-authentication-requests" name="//apple_ref/cpp/Section/7%20Handle%20declines%20or%20authentication%20requests" class="dashAnchor"></a><h2 class="expando-title" data-no-anchor data-custom-toc-title="Handle declines or authentication requests">
         <span class="expando-left-text">7</span>
       Handle declines or authentication requests
     </h2>
@@ -8548,7 +8548,7 @@ RecoveryFlowActivity.java
 
 <div class="expando" aria-expanded="true">
   <a id="android-test-integration" href="saving-cards.html#android-test-integration" class="expando-trigger">
-    <h2 class="expando-title" data-no-anchor data-custom-toc-title="Test the integration">
+    <a id="8-test-the-integration" name="//apple_ref/cpp/Section/8%20Test%20the%20integration" class="dashAnchor"></a><h2 class="expando-title" data-no-anchor data-custom-toc-title="Test the integration">
         <span class="expando-left-text">8</span>
       Test the integration
     </h2>
@@ -8603,7 +8603,7 @@ RecoveryFlowActivity.java
   </div>
 </div>
 
-  <h2 id="see-also">See also</h2>
+  <a id="see-also" name="//apple_ref/cpp/Section/See%20also" class="dashAnchor"></a><h2 id="see-also">See also</h2>
 
   <p>Now that you have a working integration, learn about handling post-payment events:</p>
 
@@ -8643,7 +8643,7 @@ RecoveryFlowActivity.java
 
 
             </article>
-            <div class="docs-aside">
+            <div class="docs-aside" style="display: none;">
               <div class="docs-toc empty">
                 <h4>On this page</h4>
                 <ul class="docs-toc-list">

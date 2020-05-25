@@ -180,7 +180,7 @@
   <body class="">
     
       <div id="docs">
-        <div id="sidebar">
+        <div id="sidebar" style="display: none;">
             
   <div class="logo">
     <a href="../recipes/switching-to-stripe.html" title="Stripe docs">
@@ -3008,7 +3008,7 @@
             <article id="content">
                 
   <header>
-  <h1>Multibanco payments with Sources <span class="tag beta">Public Beta</span></h1>
+  <a name="//apple_ref/cpp/Section/Top" class="dashAnchor"></a><h1>Multibanco payments with Sources <span class="tag beta">Public Beta</span></h1>
   <p>Use Sources to accept payments using Multibanco, the most popular payment method in Portugal.</p>
 </header>
 
@@ -3024,7 +3024,7 @@
 <p>Multibanco is a <a href="bitcoin.html#pull-or-push-of-funds">push</a>-based, <a href="bitcoin.html#single-use-or-reusable">single-use</a> and <a href="bitcoin.html#synchronous-or-asynchronous-confirmation">synchronous</a> method of payment. This means your customer takes action to send the amount to you through a <a href="bitcoin.html#flow-for-customer-action">receiver</a>.  The pushing of funds may take as little as a few minutes or at most seven days, since your customer must do this outside of your checkout flow.  Once the funds have been received the amount is immediately available to be charged. Upon charge, there is immediate confirmation about the success or failure of a payment.</p></section>
 
 <section>
-<h2 id="create-source"><span class="step">Step 1:</span> Create a Source object</h2>
+<a id="step-1-create-a-source-object" name="//apple_ref/cpp/Section/Step%201%3A%20Create%20a%20Source%20object" class="dashAnchor"></a><h2 id="create-source"><span class="step">Step 1:</span> Create a Source object</h2>
 
 <p>A <code>Source</code> object is either created client-side using <a href="../stripe-js.html">Stripe.js</a> or server-side using the <a href="../api/index.html#create_source">Source creation endpoint</a>, with the following parameters:</p>
 
@@ -3131,7 +3131,7 @@
 <p>If you&rsquo;re building an iOS or Android app, you can implement sources using our mobile SDKs. Refer to our sources documentation for <a href="../mobile/ios/sources.html">iOS</a> or <a href="../mobile/android/sources.html">Android</a> to learn more.</p>
 </section>
 <section>
-<h2 id="customer-action"><span class="step">Step 2:</span> Have the customer send the funds</h2>
+<a id="step-2-have-the-customer-send-the-funds" name="//apple_ref/cpp/Section/Step%202%3A%20Have%20the%20customer%20send%20the%20funds" class="dashAnchor"></a><h2 id="customer-action"><span class="step">Step 2:</span> Have the customer send the funds</h2>
 
 <p>When creating a source, its status is initially set to <code>pending</code> and cannot yet be used to make a charge request.  To pay with Multibanco, your customers will need to initiate a transfer of funds from their bank account using
 reference and entity numbers provided by you and either their computer, phone, or local ATM.</p>
@@ -3182,7 +3182,7 @@ reference and entity numbers provided by you and either their computer, phone, o
 <p>The URL returned in the <code>redirect[url]</code> field of takes you to a sample payment page.  Returning from this page takes you to the URL specified in <code>redirect[return_url]</code>.</p></section>
 
 <section>
-<h2 id="charge-request"><span class="step">Step 3:</span> Charge the Source</h2>
+<a id="step-3-charge-the-source" name="//apple_ref/cpp/Section/Step%203%3A%20Charge%20the%20Source" class="dashAnchor"></a><h2 id="charge-request"><span class="step">Step 3:</span> Charge the Source</h2>
 
 <aside class="note">
   <h3>Using webhooks</h3>
@@ -3359,7 +3359,7 @@ Charge charge = service.Create(options);
 <p>Multibanco Sources are <a href="bitcoin.html#single-use-or-reusable">single-use</a> and cannot be used for recurring or additional payments. Refer to our <a href="customers.html">Sources &amp; Customers</a> guide for more information on how single-use Sources interact with Customers.</p></section>
 
 <section>
-<h2 id="charge-confirmation"><span class="step">Step 4:</span> Confirm that the charge has succeeded</h2>
+<a id="step-4-confirm-that-the-charge-has-succeeded" name="//apple_ref/cpp/Section/Step%204%3A%20Confirm%20that%20the%20charge%20has%20succeeded" class="dashAnchor"></a><h2 id="charge-confirmation"><span class="step">Step 4:</span> Confirm that the charge has succeeded</h2>
 
 <p>Since Multibanco is a <a href="bitcoin.html#synchronous-or-asynchronous-confirmation">synchronous</a> payment method and the customer has already sent funds, unless there is an unexpected error, the <a href="../api/index.html#charge_object">Charge</a> will immediately succeed.</p>
 
@@ -3409,7 +3409,7 @@ Charge charge = service.Create(options);
 <p>Additionally, <code>pending</code> sources are canceled after seven days if they are not used to receive funds.  This ensures that all sources eventually transition out of their <code>pending</code> state to the <code>canceled</code> state if they are not used.</p></section>
 
 <section>
-<h2>Related resources</h2>
+<a id="related-resources" name="//apple_ref/cpp/Section/Related%20resources" class="dashAnchor"></a><h2>Related resources</h2>
 <ul class="next-steps">
     <li><a href="bitcoin.html"><span>Other supported payment methods</span></a></li>
     <li><a href="../api/index.html#sources"><span>Sources API Reference</span></a></li>
@@ -3449,7 +3449,7 @@ Charge charge = service.Create(options);
 
 
             </article>
-            <div class="docs-aside">
+            <div class="docs-aside" style="display: none;">
               <div class="docs-toc empty">
                 <h4>On this page</h4>
                 <ul class="docs-toc-list">

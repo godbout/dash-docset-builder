@@ -180,7 +180,7 @@
   <body class="">
     
       <div id="docs">
-        <div id="sidebar">
+        <div id="sidebar" style="display: none;">
             
   <div class="logo">
     <a href="../../recipes/switching-to-stripe.html" title="Stripe docs">
@@ -3008,12 +3008,12 @@
             <article id="content">
                 
   <header>
-  <h1 id="pending-updates-reference">Pending updates reference</h1>
+  <a name="//apple_ref/cpp/Section/Top" class="dashAnchor"></a><h1 id="pending-updates-reference">Pending updates reference</h1>
 
   <p>Learn more about the pending updates feature.</p>
 </header>
 
-<h2 id="supported-attributes">Supported attributes</h2>
+<a id="supported-attributes" name="//apple_ref/cpp/Section/Supported%20attributes" class="dashAnchor"></a><h2 id="supported-attributes">Supported attributes</h2>
 
 <p>Only certain attributes can be used to create a pending update. These attributes either control proration behavior or generate new invoices.</p>
 
@@ -3047,7 +3047,7 @@
   <li><code>quantity</code></li>
 </ul>
 
-<h2 id="lifecycle">Pending updates lifecycle</h2>
+<a id="pending-updates-lifecycle" name="//apple_ref/cpp/Section/Pending%20updates%20lifecycle" class="dashAnchor"></a><h2 id="lifecycle">Pending updates lifecycle</h2>
 
 <p>If payment succeeds, the invoice is updated to <code>paid</code> and the changes are applied to the subscription immediately. If payment fails, the updated values are added to the <code>pending_update</code> hash on the <code>Subscription</code> object. The <code>latest_invoice</code> for the subscription refers to an unpaid invoice in an <code>open</code> status. The subscription will continue to cycle as if no update request was made.</p>
 
@@ -3066,7 +3066,7 @@
   <li>A subscription schedule linked to the subscription transitions to a new phase.</li>
 </ul>
 
-<h2 id="events">Pending updates events</h2>
+<a id="pending-updates-events" name="//apple_ref/cpp/Section/Pending%20updates%20events" class="dashAnchor"></a><h2 id="events">Pending updates events</h2>
 
 <p>You can use webhooks to listen for the following events related to pending updates:</p>
 
@@ -3091,7 +3091,7 @@
   </tbody>
 </table>
 
-<h2 id="pending-sub-schedules">Pending updates and subscription schedules</h2>
+<a id="pending-updates-and-subscription-schedules" name="//apple_ref/cpp/Section/Pending%20updates%20and%20subscription%20schedules" class="dashAnchor"></a><h2 id="pending-sub-schedules">Pending updates and subscription schedules</h2>
 
 <p>Pending updates and <a href="subscription-schedules.html">subscription schedules</a> can both be used to manage subscriptions. If a pending update exists when a schedule changes phases, the pending update is discarded and the associated invoice is voided before the phase transition occurs. You can retry the update request after the phase transition if needed.</p>
   <section class="csat">
@@ -3126,7 +3126,7 @@
 
 
             </article>
-            <div class="docs-aside">
+            <div class="docs-aside" style="display: none;">
               <div class="docs-toc empty">
                 <h4>On this page</h4>
                 <ul class="docs-toc-list">

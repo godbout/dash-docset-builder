@@ -182,7 +182,7 @@
   <body class="">
     
       <div id="docs">
-        <div id="sidebar">
+        <div id="sidebar" style="display: none;">
             
   <div class="logo">
     <a href="../../recipes/switching-to-stripe.html" title="Stripe docs">
@@ -3010,7 +3010,7 @@
             <article id="content">
                 
   <header>
-  <h1 id="sca-migration-guide-for-billing">SCA migration guide for Billing</h1>
+  <a name="//apple_ref/cpp/Section/Top" class="dashAnchor"></a><h1 id="sca-migration-guide-for-billing">SCA migration guide for Billing</h1>
 
   <p>Update your Billing implementation to support new Strong Customer Authentication (SCA) requirements.</p>
 </header>
@@ -3024,7 +3024,7 @@
 
 <section>
 
-  <h2 id="what-is">Strong Customer Authentication</h2>
+  <a id="strong-customer-authentication" name="//apple_ref/cpp/Section/Strong%20Customer%20Authentication" class="dashAnchor"></a><h2 id="what-is">Strong Customer Authentication</h2>
 
   <p><a href="../../strong-customer-authentication.html">Strong Customer Authentication (SCA)</a>, a regulation that took effect on September 14, 2019, as part of PSD2 in Europe, requires changes to how your European customers authenticate online payments.
 This regulation <a href="../../strong-customer-authentication.html#impact">applies</a> to online payments where the customer&rsquo;s bank and the business are both in the <span class="tooltip-wrapper"><span class="tooltip-content definition"><a href="https://en.wikipedia.org/wiki/European_Economic_Area">European Economic Area</a></span><template class="tooltip"><span class="definition">The <em>European Economic Area</em> is a regional single market with free movement of labor, goods, and capital. It encompasses the European Union member states and three additional states that are part of the European Free Trade Association.</span></template></span> (EEA).</p>
@@ -3038,7 +3038,7 @@ This regulation <a href="../../strong-customer-authentication.html#impact">appli
 
 <section>
 
-  <h2 id="what-changes">Stripe Billing changes</h2>
+  <a id="stripe-billing-changes" name="//apple_ref/cpp/Section/Stripe%20Billing%20changes" class="dashAnchor"></a><h2 id="what-changes">Stripe Billing changes</h2>
 
   <p>Due to the increased payment friction caused by SCA, you can expect longer collection times and lower conversion rates.
 The changes to Stripe Billing allow you to maximize your revenue under these constraints. These changes include:</p>
@@ -3052,7 +3052,7 @@ The changes to Stripe Billing allow you to maximize your revenue under these con
     <li>A new set of <a href="strong-customer-authentication.html#dunning-emails">dunning emails</a> to help collect payment when SCA is required</li>
   </ul>
 
-  <h2 id="sca-impact">How SCA impacts Billing</h2>
+  <a id="how-sca-impacts-billing" name="//apple_ref/cpp/Section/How%20SCA%20impacts%20Billing" class="dashAnchor"></a><h2 id="sca-impact">How SCA impacts Billing</h2>
 
   <p>SCA impacts card charges between EEA businesses and EEA customers. This changes how <span class="tooltip-wrapper"><span class="tooltip-content definition">on-session</span><template class="tooltip"><span class="definition">A payment is described as <em>on-session</em> if it occurs while the customer is actively in your checkout flow and able to authenticate the payment method.</span></template></span> and <span class="tooltip-wrapper"><span class="tooltip-content definition"><a href="../../payments/save-and-reuse.html#web-create-payment-intent-off-session">off-session</a></span><template class="tooltip"><span class="definition">A payment is described as <em>off-session</em> if it occurs without the direct involvement of the customer, using previously-collected payment information.</span></template></span> payments are made.</p>
 
@@ -3081,7 +3081,7 @@ The changes to Stripe Billing allow you to maximize your revenue under these con
 </section>
 
 <section>
-  <h2 id="grandfathering">Grandfathered payments in Billing</h2>
+  <a id="grandfathered-payments-in-billing" name="//apple_ref/cpp/Section/Grandfathered%20payments%20in%20Billing" class="dashAnchor"></a><h2 id="grandfathering">Grandfathered payments in Billing</h2>
 
   <p>Off-session payments you collect using cards saved before September 14, 2019, are eligible for <a href="../../strong-customer-authentication/grandfathered-agreements.html">SCA grandfathering</a>.
 This means that, for the following scenarios, you don&rsquo;t have to save the cards again and re-authenticate these customers.</p>
@@ -3122,7 +3122,7 @@ This means that, for the following scenarios, you don&rsquo;t have to save the c
 
 <section>
 
-  <h2 id="upgrading-integration">Updating your Billing integration to support SCA</h2>
+  <a id="updating-your-billing-integration-to-support-sca" name="//apple_ref/cpp/Section/Updating%20your%20Billing%20integration%20to%20support%20SCA" class="dashAnchor"></a><h2 id="upgrading-integration">Updating your Billing integration to support SCA</h2>
 
   <p>The updates you need to make to your integration depend on how you use Stripe Billing. There are four possible scenarios you need to manage to support SCA. You need to evaluate your integration against these scenarios to find out which ones apply to you.</p>
 
@@ -3139,7 +3139,7 @@ This means that, for the following scenarios, you don&rsquo;t have to save the c
 
   <p>Regardless of the scenarios that apply to your integration, when you create subscriptions, you can <a href="../../api/expanding_objects.html">expand</a> the <a href="../../api/subscriptions/object.html#subscription_object-latest_invoice">latest_invoice.payment_intent</a> attribute to determine the outcome of a payment. You can also expand <a href="../../api/subscriptions/object.html#subscription_object-pending_setup_intent">pending_setup_intent</a> when handling subscriptions without an initial payment as shown in <a href="strong-customer-authentication.html#scenario-2">scenario 2</a>.</p>
 
-  <h2 id="scenario-1">Scenario 1: Charging customers on-session for their initial payment</h2>
+  <a id="scenario-1-charging-customers-on-session-for-their-initial-payment" name="//apple_ref/cpp/Section/Scenario%201%3A%20Charging%20customers%20on-session%20for%20their%20initial%20payment" class="dashAnchor"></a><h2 id="scenario-1">Scenario 1: Charging customers on-session for their initial payment</h2>
 
   <p>When charging immediately, your customers&rsquo; first charge for a subscription requires SCA.
 This means you need to add handling for authentication in your application checkout or signup flow.
@@ -3315,7 +3315,7 @@ var intent = service.Confirm("{{PAYMENT_INTENT_ID}}", options);
   <p>It&rsquo;s possible for customers to leave their browser before the <code>confirmCardPayment
 </code> callback executes, or before the <code>return_url</code> redirect occurs. In these cases, your application might not be aware that payment is complete, and the associated product might not be provisioned for your customer. You can avoid these situations by listening to the <a href="../../api/events/types.html#event_types-invoice.payment_succeeded">invoice.payment_succeeded</a> webhook to ensure consistency between Stripe&rsquo;s data and your own. The <a href="../subscriptions/payment.html#async-webhook-handling">subscription signup and payment flow</a> guide explains how to do this.</p>
 
-  <h2 id="scenario-2">Scenario 2: Charging customers off-session for their initial payment</h2>
+  <a id="scenario-2-charging-customers-off-session-for-their-initial-payment" name="//apple_ref/cpp/Section/Scenario%202%3A%20Charging%20customers%20off-session%20for%20their%20initial%20payment" class="dashAnchor"></a><h2 id="scenario-2">Scenario 2: Charging customers off-session for their initial payment</h2>
 
   <p>Creating subscriptions with <a href="../subscriptions/trials.html">free trials</a>, using <a href="../subscriptions/metered-billing.html">metered billing</a>, and invoices discounted through coupons or customer balances often result in non-payment invoices. This means the customer isn&rsquo;t immediately charged when the subscription is created. In these situations, you need to <a href="../../payments/save-and-reuse.html">save the customer&rsquo;s payment information</a> and authenticate their card while they&rsquo;re on-session so that you can charge them later.</p>
 
@@ -3340,7 +3340,7 @@ var intent = service.Confirm("{{PAYMENT_INTENT_ID}}", options);
 
   <p>You can also use SetupIntents to change the payment method on a customer or subscription. The <a href="../../payments/save-and-reuse.html">saving cards without payment</a> section explains how to do this at the customer level. At the subscription level, Stripe automatically updates the <code>pending_setup_intent</code> field on the subscription object if authentication is recommended on the updated default payment method.</p>
 
-  <h2 id="scenario-3">Scenario 3: Managing recurring charges after customers make their first payment</h2>
+  <a id="scenario-3-managing-recurring-charges-after-customers-make-their-first-payment" name="//apple_ref/cpp/Section/Scenario%203%3A%20Managing%20recurring%20charges%20after%20customers%20make%20their%20first%20payment" class="dashAnchor"></a><h2 id="scenario-3">Scenario 3: Managing recurring charges after customers make their first payment</h2>
 
   <p>Recurring charges usually occur when customers are off-session. If no <a href="strong-customer-authentication.html#sca-exemptions">exemptions</a> apply to the charge, and SCA is required, you need to bring your user on-session so they can complete the payment. To do this, you can use Stripe&rsquo;s prebuilt tools or create your own solution. The diagram below explains these options in more detail.</p>
 
@@ -3354,7 +3354,7 @@ var intent = service.Confirm("{{PAYMENT_INTENT_ID}}", options);
 
   <p>After the payment is authenticated and succeeds, the subscription status updates to <code>active</code> and the invoice status updates to <code>paid</code>.</p>
 
-  <h2 id="scenario-4">Scenario 4: One-off invoices</h2>
+  <a id="scenario-4-one-off-invoices" name="//apple_ref/cpp/Section/Scenario%204%3A%20One-off%20invoices" class="dashAnchor"></a><h2 id="scenario-4">Scenario 4: One-off invoices</h2>
 
   <p>One-off invoices can also be subject to SCA. The changes you need to make to manage one-off invoices depends on how you use Billing today. If you already use our Hosted Invoice Page, you get SCA support out of the box without making any changes. If you use <code>collection_method=charge_automatically</code>, you might need to bring the customer back on-session to complete SCA. You can do so with our Hosted Invoice Page, or through the custom handling described in the <a href="strong-customer-authentication.html#scenario-3">third scenario</a>.</p>
 
@@ -3364,7 +3364,7 @@ var intent = service.Confirm("{{PAYMENT_INTENT_ID}}", options);
 
 <section>
 
-  <h2 id="off-session-tools">Tools for collecting off-session payments</h2>
+  <a id="tools-for-collecting-off-session-payments" name="//apple_ref/cpp/Section/Tools%20for%20collecting%20off-session%20payments" class="dashAnchor"></a><h2 id="off-session-tools">Tools for collecting off-session payments</h2>
 
   <p>Stripe Billing offers a set of prebuilt tools that can automatically handle payments that require 3D Secure authentication.</p>
 
@@ -3448,11 +3448,11 @@ var intent = service.Confirm("{{PAYMENT_INTENT_ID}}", options);
 
   <p>The API actions for creating subscriptions, updating subscriptions, and paying invoices also have an <code>off_session</code> attribute that you can set manually. Setting this attribute to <code>true</code> indicates the payment is off-session, and <code>false</code> indicates the payment is on-session.</p>
 
-  <h2 id="dunning-emails">Emails and dunning</h2>
+  <a id="emails-and-dunning" name="//apple_ref/cpp/Section/Emails%20and%20dunning" class="dashAnchor"></a><h2 id="dunning-emails">Emails and dunning</h2>
 
   <p>Our suite of customer emails has been updated to include notifications for when 3D Secure authentication is required for off-session payments. This is in addition to support for sending invoices, receipts, failed payment notifications, and more.</p>
 
-  <h2 id="3ds-payment-settings">3D Secure payment settings</h2>
+  <a id="3d-secure-payment-settings" name="//apple_ref/cpp/Section/3D%20Secure%20payment%20settings" class="dashAnchor"></a><h2 id="3ds-payment-settings">3D Secure payment settings</h2>
 
   <p>You can schedule when to send 3D Secure emails and you can determine what effect non-payment has on subscriptions. Use the <a href="https://dashboard.stripe.com/settings/billing/automatic">Billing settings</a> in the Stripe Dashboard to configure these settings.</p>
 
@@ -3468,14 +3468,14 @@ var intent = service.Confirm("{{PAYMENT_INTENT_ID}}", options);
     <p><img src="../../../img/docs/billing/migration/sca/3ds-email.png" width="100%"></p>
   </div>
 
-  <h2 id="hip">Hosted Invoice Page</h2>
+  <a id="hosted-invoice-page" name="//apple_ref/cpp/Section/Hosted%20Invoice%20Page" class="dashAnchor"></a><h2 id="hip">Hosted Invoice Page</h2>
 
   <p>Stripe Billing provides a <a href="../invoices/hosted.html">Hosted Invoice Page</a> that supports all invoices.
 To support SCA requirements, this page can now manage <a href="https://stripe.com/guides/3d-secure-2">3D Secure</a> authentication.</p>
 
   <p>If an off-session payment requires the customer to complete 3D Secure authentication, you can send them a link to a hosted invoice page. On the hosted invoice page, the customer can confirm their payment or add a new payment method if one is needed. After confirming their payment, the customer can complete authentication with their bank using a 3D Secure 2 modal that is displayed.</p>
 
-  <h2 id="sca-exemptions">SCA exemptions</h2>
+  <a id="sca-exemptions" name="//apple_ref/cpp/Section/SCA%20exemptions" class="dashAnchor"></a><h2 id="sca-exemptions">SCA exemptions</h2>
 
   <p>The SCA regulation contains a <a href="https://stripe.com/guides/strong-customer-authentication#exemptions-to-strong-customer-authentication">set of exemptions</a>. These exemptions mean that your customers might not need to provide additional authentication to confirm some payments. Stripe&rsquo;s goal is to optimize your payment flow and attempt to automatically apply as many exemptions as possible in order to reduce the likelihood of your customers needing to authenticate.</p>
 
@@ -3483,7 +3483,7 @@ To support SCA requirements, this page can now manage <a href="https://stripe.co
 
 <section>
 
-  <h2 id="summary">Summary of API changes</h2>
+  <a id="summary-of-api-changes" name="//apple_ref/cpp/Section/Summary%20of%20API%20changes" class="dashAnchor"></a><h2 id="summary">Summary of API changes</h2>
 
   <p>The API contains several updates to help manage SCA requirements and the authentication flow.</p>
 
@@ -3521,7 +3521,7 @@ To support SCA requirements, this page can now manage <a href="https://stripe.co
 
 <section>
 
-  <h2 id="faq">Frequently asked questions (FAQ)</h2>
+  <a id="frequently-asked-questions-faq" name="//apple_ref/cpp/Section/Frequently%20asked%20questions%20%28FAQ%29" class="dashAnchor"></a><h2 id="faq">Frequently asked questions (FAQ)</h2>
 
   <dl>
     <dt><strong>Does SCA apply to my business?</strong></dt>
@@ -3589,7 +3589,7 @@ To support SCA requirements, this page can now manage <a href="https://stripe.co
 </section>
 
 <section>
-  <h2 id="sca-changelog">SCA Migration Guide changelog</h2>
+  <a id="sca-migration-guide-changelog" name="//apple_ref/cpp/Section/SCA%20Migration%20Guide%20changelog" class="dashAnchor"></a><h2 id="sca-changelog">SCA Migration Guide changelog</h2>
 
   <p>Below is a list of major revisions to this guide.</p>
 
@@ -3646,7 +3646,7 @@ To support SCA requirements, this page can now manage <a href="https://stripe.co
 
 
             </article>
-            <div class="docs-aside">
+            <div class="docs-aside" style="display: none;">
               <div class="docs-toc empty">
                 <h4>On this page</h4>
                 <ul class="docs-toc-list">

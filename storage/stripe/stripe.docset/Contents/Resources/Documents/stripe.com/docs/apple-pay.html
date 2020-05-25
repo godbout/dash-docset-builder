@@ -181,7 +181,7 @@
   <body class="">
     
       <div id="docs">
-        <div id="sidebar">
+        <div id="sidebar" style="display: none;">
             
   <div class="logo">
     <a href="recipes/switching-to-stripe.html" title="Stripe docs">
@@ -3009,7 +3009,7 @@
             <article id="content">
                 
   <header>
-  <h1>Apple Pay</h1>
+  <a name="//apple_ref/cpp/Section/Top" class="dashAnchor"></a><h1>Apple Pay</h1>
   <p>Allow customers to securely make payments using Apple Pay on their iPhone, iPad, and Apple Watch.</p>
 
 </header>
@@ -3028,7 +3028,7 @@
 </section>
 
 <section>
-  <h2 id="using-stripe-and-apple-pay-vs-in-app-purchases">Using Stripe and Apple Pay vs. in-app purchases</h2>
+  <a id="using-stripe-and-apple-pay-vs-in-app-purchases" name="//apple_ref/cpp/Section/Using%20Stripe%20and%20Apple%20Pay%20vs.%20in-app%20purchases" class="dashAnchor"></a><h2 id="using-stripe-and-apple-pay-vs-in-app-purchases">Using Stripe and Apple Pay vs. in-app purchases</h2>
 
   <p>Apple Pay doesn&rsquo;t replace Apple&rsquo;s <a href="https://developer.apple.com/in-app-purchase">In-App Purchase API</a>. You can use any of Stripe&rsquo;s supported payment methods and Apple Pay in your iOS app to sell physical goods (e.g., groceries and clothing) or for services your business provides (e.g., club memberships and hotel reservations). These payments are processed through Stripe and you only need to pay Stripe&rsquo;s <a href="https://stripe.com/pricing">processing fee</a>.</p>
 
@@ -3036,7 +3036,7 @@
 </section>
 
 <section>
-  <h2 id="native">Accept Apple Pay in your iOS app</h2>
+  <a id="accept-apple-pay-in-your-ios-app" name="//apple_ref/cpp/Section/Accept%20Apple%20Pay%20in%20your%20iOS%20app" class="dashAnchor"></a><h2 id="native">Accept Apple Pay in your iOS app</h2>
 
   <p>Stripe&rsquo;s <a href="https://github.com/stripe/stripe-ios" class="external" target="_blank">iOS SDK</a> makes it easy to accept both Apple Pay and regular credit card payments. Before you start, you&rsquo;ll need to be enrolled in the <a href="https://developer.apple.com/programs/">Apple Developer Program</a> and <a href="payments/payment-intents/quickstart.html#ios-setup">set up Stripe on your server and in your app</a>. Next, follow these steps:</p>
 
@@ -3749,7 +3749,7 @@ CheckoutViewController.m
 
 <section>
 
-  <h2 id="web">Accept Apple Pay on the web</h2>
+  <a id="accept-apple-pay-on-the-web" name="//apple_ref/cpp/Section/Accept%20Apple%20Pay%20on%20the%20web" class="dashAnchor"></a><h2 id="web">Accept Apple Pay on the web</h2>
 
   <p>You can start accepting Apple Pay payments on the web using
 <a href="checkout.html">Checkout</a> or <a href="stripe-js.html">Elements</a>. No
@@ -3766,19 +3766,19 @@ how to add Apple Pay to your site.</p>
 
 </section>
 <section>
-  <h2 id="recurring-payments">Recurring payments</h2>
+  <a id="recurring-payments" name="//apple_ref/cpp/Section/Recurring%20payments" class="dashAnchor"></a><h2 id="recurring-payments">Recurring payments</h2>
 
   <p>Apple Pay tokens can be used to create one-off payments or subscriptions. For repeat purchases that are not related to a subscription, we recommend you create single-use tokens. Your customer must authenticate with the Apple Pay payment sheet each time&mdash;attempting to reuse payment information for a non-subscription payment can result in it being declined.</p>
 </section>
 
 <section>
-  <h2 id="testing-apple-pay">Testing Apple Pay</h2>
+  <a id="testing-apple-pay" name="//apple_ref/cpp/Section/Testing%20Apple%20Pay" class="dashAnchor"></a><h2 id="testing-apple-pay">Testing Apple Pay</h2>
 
   <p>Stripe test card information cannot be saved to Wallet in iOS. Instead, Stripe recognizes when you are using your test <a href="keys.html">API keys</a> and returns a successful test card token for you to use. This allows you to make test payments using a live card without it being charged.</p>
 </section>
 
 <section>
-  <h2 id="next-steps">Next steps</h2>
+  <a id="next-steps" name="//apple_ref/cpp/Section/Next%20steps" class="dashAnchor"></a><h2 id="next-steps">Next steps</h2>
 
   <p>Congrats! You&rsquo;re now ready to implement Apple Pay. If you&rsquo;d like to read more about Apple Pay and its other configuration options, we recommend the <a href="http://nshipster.com/apple-pay/" class="external" target="_blank">NSHipster article on Apple Pay</a> and the <a href="https://developer.apple.com/videos/play/wwdc2015/702/" class="external" target="_blank">Apple Pay Within Apps</a> presentation from WWDC 2015.</p>
 
@@ -3823,7 +3823,7 @@ how to add Apple Pay to your site.</p>
 
 
             </article>
-            <div class="docs-aside">
+            <div class="docs-aside" style="display: none;">
               <div class="docs-toc empty">
                 <h4>On this page</h4>
                 <ul class="docs-toc-list">

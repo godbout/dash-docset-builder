@@ -180,7 +180,7 @@
   <body class="">
     
       <div id="docs">
-        <div id="sidebar">
+        <div id="sidebar" style="display: none;">
             
   <div class="logo">
     <a href="../../recipes/switching-to-stripe.html" title="Stripe docs">
@@ -3008,7 +3008,7 @@
             <article id="content">
                 
   <header>
-  <h1>Saving cards for online payments</h1>
+  <a name="//apple_ref/cpp/Section/Top" class="dashAnchor"></a><h1>Saving cards for online payments</h1>
   <p>Learn how to use your Stripe Terminal integration to create online payments.</p>
 </header>
 
@@ -3032,7 +3032,7 @@
 </aside></section>
 
 <section>
-<h2 id="saving-payment-intent-card">Saving a card from a PaymentIntent <span class="tag major">US Only</span></h2>
+<a id="saving-a-card-from-a-paymentintent-us-only" name="//apple_ref/cpp/Section/Saving%20a%20card%20from%20a%20PaymentIntent%20US%20Only" class="dashAnchor"></a><h2 id="saving-payment-intent-card">Saving a card from a PaymentIntent <span class="tag major">US Only</span></h2>
 
 <p>Save card details for online reuse from a customer&rsquo;s in-person transaction. When you successfully <a href="../payments.html#process">process a PaymentIntent</a>, the returned object contains a list of attempted <a href="../../api/payment_intents/object.html#payment_intent_object-charges">charges</a> in reverse chronological order&mdash;so the first is the successful one. This charge contains a <a href="../../api/charges/object.html#charge_object-payment_method_details-card_present-generated_card">generated_card</a> ID.</p>
 
@@ -3041,7 +3041,7 @@
 <p>The initial, in-person payment benefits from the liability shift and <a href="https://stripe.com/terminal#pricing">lower pricing</a> given to <a href="../payments.html">standard Terminal payments</a>, but subsequent payments happen online and are treated as card-not-present. For example, a gym customer pays for an initial session in person and begins a membership in the same transaction. Or a clothing store collects a customer&rsquo;s email address and payment method at the checkout counter, and the customer can log in later and easily use it again.</p></section>
 
 <section>
-<h2 id="read-reusable-card">Reading a reusable card <span class="tag major">US Only</span></h2>
+<a id="reading-a-reusable-card-us-only" name="//apple_ref/cpp/Section/Reading%20a%20reusable%20card%20US%20Only" class="dashAnchor"></a><h2 id="read-reusable-card">Reading a reusable card <span class="tag major">US Only</span></h2>
 
 <aside class="content note">
   <h3 id="sdk-reference">SDK Reference</h3>
@@ -3563,7 +3563,7 @@ service.Create(options);
 </div></section>
 
 <section>
-<h2 id="handling-display-events">Handling events in your app</h2>
+<a id="handling-events-in-your-app" name="//apple_ref/cpp/Section/Handling%20events%20in%20your%20app" class="dashAnchor"></a><h2 id="handling-display-events">Handling events in your app</h2>
 
 <aside class="content note">
   <h3 id="sdk-reference-handling-events">SDK Reference</h3>
@@ -3719,7 +3719,7 @@ override fun onRequestReaderDisplayMessage(message: ReaderDisplayMessage) {
 </div></section>
 
 <section>
-<h2 id="fingerprints">Tracking customer behavior with card fingerprints</h2>
+<a id="tracking-customer-behavior-with-card-fingerprints" name="//apple_ref/cpp/Section/Tracking%20customer%20behavior%20with%20card%20fingerprints" class="dashAnchor"></a><h2 id="fingerprints">Tracking customer behavior with card fingerprints</h2>
 
 <p>The Stripe API makes it easy to recognize repeat customers across online and retail channels by correlating transactions by the same card. Like <code>card</code> payment methods, each <code>card_present</code> payment method has a <a href="../../api/payment_methods/object.html#payment_method_object-card-fingerprint">fingerprint</a> attribute that uniquely identifies a particular card number. Note that cards from mobile wallets like Apple Pay or Google Pay do not share a fingerprint with cards used online.</p>
 
@@ -3758,7 +3758,7 @@ override fun onRequestReaderDisplayMessage(message: ReaderDisplayMessage) {
 
 
             </article>
-            <div class="docs-aside">
+            <div class="docs-aside" style="display: none;">
               <div class="docs-toc empty">
                 <h4>On this page</h4>
                 <ul class="docs-toc-list">

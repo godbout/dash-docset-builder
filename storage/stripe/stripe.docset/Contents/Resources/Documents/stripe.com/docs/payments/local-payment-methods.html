@@ -180,7 +180,7 @@
   <body class="">
     
       <div id="docs">
-        <div id="sidebar">
+        <div id="sidebar" style="display: none;">
             
   <div class="logo">
     <a href="../recipes/switching-to-stripe.html" title="Stripe docs">
@@ -3008,7 +3008,7 @@
             <article id="content">
                 
   <header>
-  <h1>Processing other payment methods</h1>
+  <a name="//apple_ref/cpp/Section/Top" class="dashAnchor"></a><h1>Processing other payment methods</h1>
   <p>Get started processing the different types of payment methods available on Stripe.</p>
 </header>
 
@@ -3026,7 +3026,7 @@
 
 <section>
 
-  <h2 id="payment-methods">The Payment Methods API</h2>
+  <a id="the-payment-methods-api" name="//apple_ref/cpp/Section/The%20Payment%20Methods%20API" class="dashAnchor"></a><h2 id="payment-methods">The Payment Methods API</h2>
 
   <p>The new <a href="../api/payment_methods.html">Payment Methods API</a> replaces the existing <a href="../api/tokens.html">Tokens</a> and <a href="../api/sources.html">Sources</a> APIs as the recommended way for integrations to collect and store payment information. It works with the <a href="payment-intents/creating-payment-intents.html">Payment Intents API</a> to create payments for a wide range of payment methods.</p>
 
@@ -3099,7 +3099,7 @@
 
 </section>
 <section>
-  <h2 id="the-sources-api">The Sources API</h2>
+  <a id="the-sources-api" name="//apple_ref/cpp/Section/The%20Sources%20API" class="dashAnchor"></a><h2 id="the-sources-api">The Sources API</h2>
 
   <p>Need to use a payment method that&rsquo;s not yet supported by the Payment Methods API? Use the <a href="../sources/bitcoin.html">Sources API</a> instead.
 The main difference between the Payment Methods API and the Sources API is that sources describe transaction state through the <a href="https://stripe.com/docs/api/sources/object#source_object-status">status</a> property, which means that each <code>Source</code> object must be transitioned to a chargeable state before it can be used for a payment.</p>
@@ -3107,7 +3107,7 @@ The main difference between the Payment Methods API and the Sources API is that 
 </section>
 
 <section>
-  <h2 id="testing">Testing</h2>
+  <a id="testing" name="//apple_ref/cpp/Section/Testing" class="dashAnchor"></a><h2 id="testing">Testing</h2>
 
   <p>When creating a test <a href="../api/index.html#source_object">Source</a> object that uses a <a href="../sources/bitcoin.html#flow-for-customer-action">redirect</a> flow (e.g., <a href="../sources/ideal.html">iDEAL</a>), you can follow the URL returned in the <code>redirect[url]</code> field. This leads to a Stripe page that displays information about the API request, and where you can either authorize or cancel the payment.</p>
 
@@ -3146,7 +3146,7 @@ The main difference between the Payment Methods API and the Sources API is that 
 
 
             </article>
-            <div class="docs-aside">
+            <div class="docs-aside" style="display: none;">
               <div class="docs-toc empty">
                 <h4>On this page</h4>
                 <ul class="docs-toc-list">

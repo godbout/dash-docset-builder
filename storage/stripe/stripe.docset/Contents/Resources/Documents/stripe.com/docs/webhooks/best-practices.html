@@ -180,7 +180,7 @@
   <body class="">
     
       <div id="docs">
-        <div id="sidebar">
+        <div id="sidebar" style="display: none;">
             
   <div class="logo">
     <a href="../recipes/switching-to-stripe.html" title="Stripe docs">
@@ -3008,7 +3008,7 @@
             <article id="content">
                 
   <header>
-  <h1>Best practices for using webhooks</h1>
+  <a name="//apple_ref/cpp/Section/Top" class="dashAnchor"></a><h1>Best practices for using webhooks</h1>
   <p>Implement these best practices when using webhooks.</p>
 </header>
 
@@ -3016,7 +3016,7 @@
 <p>Webhooks provide a powerful method to track the state of transactions and to take actions within your Stripe account. Review these best practices to ensure your webhooks remain secure and function seamlessly with your integration.</p></section>
 
 <section>
-<h2 id="api-versions">API versions</h2>
+<a id="api-versions" name="//apple_ref/cpp/Section/API%20versions" class="dashAnchor"></a><h2 id="api-versions">API versions</h2>
 
 <p>The structure of an <code>Event</code> object sent in a webhook is dictated by the API version in your account settings at the time of the event&rsquo;s occurrence. For example, if your account is set to an older API version, such as <strong>2015-02-16</strong>, and you change the API version for a specific request via <a href="../api/index.html#versioning">versioning</a>, the <code>Event</code> object generated and sent to your endpoint is still based upon the <strong>2015-02-16</strong> API version.</p>
 
@@ -3025,14 +3025,14 @@
 <p>You can set test webhook endpoints to either your default API version or the latest API version. The <code>Event</code> sent to the webhook URL is structured for the endpoint&rsquo;s specified version. You can also programmatically create endpoints with a specific <a href="../api/webhook_endpoints/create.html#create_webhook_endpoint-api_version">api_version</a>.</p></section>
 
 <section>
-<h2 id="event-types">Event types</h2>
+<a id="event-types" name="//apple_ref/cpp/Section/Event%20types" class="dashAnchor"></a><h2 id="event-types">Event types</h2>
 
 <p>Your webhook endpoints should be configured to receive only the types of events required by your integration. Listening for extra events (or all events) will put undue strain on your server and is not recommended.</p>
 
 <p>You can <a href="../api/webhook_endpoints/update.html#update_webhook_endpoint-enabled_events">change the events</a> a webhook endpoint will receive in the Dashboard or with the API.</p></section>
 
 <section>
-<h2 id="events-and-retries">Delivery attempts and retries</h2>
+<a id="delivery-attempts-and-retries" name="//apple_ref/cpp/Section/Delivery%20attempts%20and%20retries" class="dashAnchor"></a><h2 id="events-and-retries">Delivery attempts and retries</h2>
 
 <p>Understand how to view delivery attempts, event logs, and the retry logic when webhook events aren&rsquo;t acknowledged.</p>
 
@@ -3056,7 +3056,7 @@
 <p>In live and test mode, Stripe will attempt to notify you of a misconfigured endpoint via email if an endpoint has not responded with a <code>2xx</code> HTTP status code for multiple days in a row. The email also states when the endpoint will be automatically disabled.</p></section>
 
 <section>
-<h2 id="event-handling">Event handling</h2>
+<a id="event-handling" name="//apple_ref/cpp/Section/Event%20handling" class="dashAnchor"></a><h2 id="event-handling">Event handling</h2>
 
 <p>Handling webhook events correctly is crucial to making sure your integration&rsquo;s business logic works as expected.</p>
 
@@ -3078,7 +3078,7 @@
 <p>Your endpoint should not expect delivery of these events in this order and should handle this accordingly. You can also use the API to fetch any missing objects (e.g., you can fetch the invoice, charge, and subscription objects using the information from <code>invoice.payment_succeeded</code> if you happen to receive this event first).</p></section>
 
 <section>
-<h2 id="security">Security</h2>
+<a id="security" name="//apple_ref/cpp/Section/Security" class="dashAnchor"></a><h2 id="security">Security</h2>
 
 <p>Keeping your endpoints secure is critical to protecting your customers&rsquo; information. Stripe provides several ways for you to verify events are coming from Stripe in a secure manner.</p>
 
@@ -3144,7 +3144,7 @@ def webhook(request):
 <p><a href="signatures.html">Verify webhook signatures</a> to confirm that received events are sent from Stripe. Additionally, Stripe sends webhook events from a set list of IP addresses. Only trust events coming from these <a href="../ips.html">IP addresses</a>.</p></section>
 
 <section>
-  <h2 id="next_steps">More information</h2>
+  <a id="more-information" name="//apple_ref/cpp/Section/More%20information" class="dashAnchor"></a><h2 id="next_steps">More information</h2>
 <ul class="next-steps">
     <li><a href="go-live.html"><span>Take webhooks live</span></a></li>
     <li><a href="../api/index.html#event_types"><span>List of all event types</span></a></li>
@@ -3185,7 +3185,7 @@ def webhook(request):
 
 
             </article>
-            <div class="docs-aside">
+            <div class="docs-aside" style="display: none;">
               <div class="docs-toc empty">
                 <h4>On this page</h4>
                 <ul class="docs-toc-list">

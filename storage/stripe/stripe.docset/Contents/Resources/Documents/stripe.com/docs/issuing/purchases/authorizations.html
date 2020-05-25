@@ -180,7 +180,7 @@
   <body class="">
     
       <div id="docs">
-        <div id="sidebar">
+        <div id="sidebar" style="display: none;">
             
   <div class="logo">
     <a href="../../recipes/switching-to-stripe.html" title="Stripe docs">
@@ -3008,7 +3008,7 @@
             <article id="content">
                 
   <header>
-&nbsp; <h1>Authorizations</h1>
+&nbsp; <a name="//apple_ref/cpp/Section/Top" class="dashAnchor"></a><h1>Authorizations</h1>
 &nbsp; <p>Learn how to handle authorization requests.</p>
 </header>
 
@@ -3025,21 +3025,21 @@
 </ol></section>
 
 <section>
-<h2 id="authorization-updates">Authorization updates</h2>
+<a id="authorization-updates" name="//apple_ref/cpp/Section/Authorization%20updates" class="dashAnchor"></a><h2 id="authorization-updates">Authorization updates</h2>
 
 <p>Once an authorization request is approved, the status on the authorization is updated to <code>pending</code>, and the <code>issuing_authorization.updated</code> <a href="../../webhooks.html">webhook</a> event is sent. The <code>amount</code> is deducted from your Issuing balance and held in reserve until the authorization is either captured or voided. Once captured, a <a href="../transactions.html">transaction</a> is created, and the <code>status</code> of the authorization is set to <code>closed</code>.</p>
 
 <p>If the authorization request is declined, its status is immediately set to <code>closed</code>. If the authorization request is voided or not captured in a timely manner, its status is set to <code>reversed</code>.</p></section>
 
 <section>
-<h2 id="purchase-currency">Purchases in different currencies</h2>
+<a id="purchases-in-different-currencies" name="//apple_ref/cpp/Section/Purchases%20in%20different%20currencies" class="dashAnchor"></a><h2 id="purchase-currency">Purchases in different currencies</h2>
 
 <p>Cards can be used for purchases in any currency that the card network supports. Stripe automatically converts the currency of the purchase into the card&rsquo;s currency when holding funds, using the card network&rsquo;s daily rate.</p>
 
 <p>The <code>merchant_amount</code> represents the cost of the purchase in the local currency. The <code>amount</code> field represents the expected amount of the <code>Transaction</code> in the card&rsquo;s currency and is not final until the <code>Authorization</code> has been captured.</p></section>
 
 <section>
-<h2 id="handling-other-authorizations">Handling other authorizations</h2>
+<a id="handling-other-authorizations" name="//apple_ref/cpp/Section/Handling%20other%20authorizations" class="dashAnchor"></a><h2 id="handling-other-authorizations">Handling other authorizations</h2>
 
 <p>In addition to regular authorizations, there are a few other cases that you should be ready to handle.</p>
 
@@ -3127,7 +3127,7 @@
 
 
             </article>
-            <div class="docs-aside">
+            <div class="docs-aside" style="display: none;">
               <div class="docs-toc empty">
                 <h4>On this page</h4>
                 <ul class="docs-toc-list">

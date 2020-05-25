@@ -180,7 +180,7 @@
   <body class="">
     
       <div id="docs">
-        <div id="sidebar">
+        <div id="sidebar" style="display: none;">
             
   <div class="logo">
     <a href="recipes/switching-to-stripe.html" title="Stripe docs">
@@ -3008,7 +3008,7 @@
             <article id="content">
                 
   <header>
-  <h1>Email receipts</h1>
+  <a name="//apple_ref/cpp/Section/Top" class="dashAnchor"></a><h1>Email receipts</h1>
   <p>Send payment or refund receipts automatically.</p>
 </header>
 
@@ -3025,7 +3025,7 @@
 <p>The link to view the receipt in the browser is also available through the API on the <a href="api/charges/object.html#charge_object-receipt_url">Charge</a> object. Note that when you visit the link, the receipt will always show the latest status of that Charge&mdash;if it has been refunded, the receipt will accurately reflect this.</p>
 </section>
 <section>
-<h2 id="automatically-send-receipts-when-payments-are-successful">Automatically send receipts when payments are successful</h2>
+<a id="automatically-send-receipts-when-payments-are-successful" name="//apple_ref/cpp/Section/Automatically%20send%20receipts%20when%20payments%20are%20successful" class="dashAnchor"></a><h2 id="automatically-send-receipts-when-payments-are-successful">Automatically send receipts when payments are successful</h2>
 
 <div class="tabs tabs-regular  animated" data-save-url="true">
     
@@ -3192,7 +3192,7 @@ paymentIntents.Create(createOptions);
 </section>
 
 <section>
-<h2 id="receipts-with-billing">Receipts with Billing</h2>
+<a id="receipts-with-billing" name="//apple_ref/cpp/Section/Receipts%20with%20Billing" class="dashAnchor"></a><h2 id="receipts-with-billing">Receipts with Billing</h2>
 <p>Stripe creates receipts when a customer pays an invoice, or makes any subscription payment.
 Receipts for subscription and invoice payments are itemized to include line items, discounts, and taxes for the in the payment.</p>
 
@@ -3205,25 +3205,25 @@ Ensure that the option <strong>Send emails when payments fail</strong> is enable
 </section>
 
 <section>
-<h2 id="manually-send-receipts-from-the-dashboard">Manually send receipts from the Dashboard</h2>
+<a id="manually-send-receipts-from-the-dashboard" name="//apple_ref/cpp/Section/Manually%20send%20receipts%20from%20the%20Dashboard" class="dashAnchor"></a><h2 id="manually-send-receipts-from-the-dashboard">Manually send receipts from the Dashboard</h2>
 
 <p>You can send receipts in the <a href="https://dashboard.stripe.com">Dashboard</a> using the <strong>receipt history</strong> section of a payment&rsquo;s page, or the <strong>payments</strong> section of a customer&rsquo;s page. You can specify a different email address to resend an email receipt to, or a comma-separated list of addresses if you need to send it to multiple recipients. You can send receipts a maximum of 10 times per payment, and the payment&rsquo;s page displays a complete history of all receipts.</p></section>
 <section>
-<h2 id="refund-receipts">Refund receipts</h2>
+<a id="refund-receipts" name="//apple_ref/cpp/Section/Refund%20receipts" class="dashAnchor"></a><h2 id="refund-receipts">Refund receipts</h2>
 
 <p>When a payment is refunded, a receipt is automatically sent to the same email address that was provided in the original charge. You can also use the Dashboard to manually send a copy of the refund receipt.</p>
 
 <p>Similar to how email receipts work for <code>Customer</code> objects, receipts for refunds of customer-owned payments are only sent if the option <strong>Email customers for refunds</strong> is enabled in your <a href="https://dashboard.stripe.com/account/emails">email receipt settings</a>.</p></section>
 
 <section>
-<h2 id="failed-payment-alerts">Failed payment alerts</h2>
+<a id="failed-payment-alerts" name="//apple_ref/cpp/Section/Failed%20payment%20alerts" class="dashAnchor"></a><h2 id="failed-payment-alerts">Failed payment alerts</h2>
 
 <p>When a subscriptions charge fails, an email can be sent to your customers prompting them to update their payment information. These are sent to the email address associated with the <a href="api/index.html#customers">Customer</a> object. To enable, use the option <strong>Send emails when payments fail</strong> in your <a href="https://dashboard.stripe.com/test/settings/billing/automatic">Automatic collection settings</a>.</p>
 
 <p>Make sure to fill in the <strong>link for customers to update their payment information</strong> to give customers an effective call to action. You can also preview these emails in the same section.</p></section>
 
 <section>
-<h2 id="customizing-receipts">Customizing receipts</h2>
+<a id="customizing-receipts" name="//apple_ref/cpp/Section/Customizing%20receipts" class="dashAnchor"></a><h2 id="customizing-receipts">Customizing receipts</h2>
 
 <p>You can select which language to use for receipts in your <a href="https://dashboard.stripe.com/account/emails">email receipt settings</a> and upload a custom logo in the <a href="https://dashboard.stripe.com/account/branding">branding settings</a>. Receipts also include any public information that you have specified in your <a href="https://dashboard.stripe.com/account/emails">email receipt settings</a>, such as your phone number or website address.</p>
 
@@ -3242,7 +3242,7 @@ Ensure that the option <strong>Send emails when payments fail</strong> is enable
 
 <section>
 
-<h2 id="receipts-for-stripe-connect">Receipts for Stripe Connect</h2>
+<a id="receipts-for-stripe-connect" name="//apple_ref/cpp/Section/Receipts%20for%20Stripe%20Connect" class="dashAnchor"></a><h2 id="receipts-for-stripe-connect">Receipts for Stripe Connect</h2>
 
 <p>Stripe sends a receipt to the email address that&rsquo;s specified for <a href="api/payment_intents/object.html#payment_intent_object-receipt_email">receipt_email</a> in the <code>PaymentIntent</code> object depending on your account email settings.</p>
 
@@ -3291,7 +3291,7 @@ Ensure that the option <strong>Send emails when payments fail</strong> is enable
 
 
             </article>
-            <div class="docs-aside">
+            <div class="docs-aside" style="display: none;">
               <div class="docs-toc empty">
                 <h4>On this page</h4>
                 <ul class="docs-toc-list">

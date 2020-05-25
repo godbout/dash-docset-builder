@@ -180,7 +180,7 @@
   <body class="">
     
       <div id="docs">
-        <div id="sidebar">
+        <div id="sidebar" style="display: none;">
             
   <div class="logo">
     <a href="../../recipes/switching-to-stripe.html" title="Stripe docs">
@@ -3008,7 +3008,7 @@
             <article id="content">
                 
   <header>
-  <h1 id="subscription-schedules-api">Subscription Schedules API</h1>
+  <a name="//apple_ref/cpp/Section/Top" class="dashAnchor"></a><h1 id="subscription-schedules-api">Subscription Schedules API</h1>
 
   <p>Learn about the Subscription Schedules object and how to use it.</p>
 </header>
@@ -3031,7 +3031,7 @@
   </p>
 </aside>
 
-<h2 id="subscription-schedule-phases">Phases</h2>
+<a id="phases" name="//apple_ref/cpp/Section/Phases" class="dashAnchor"></a><h2 id="subscription-schedule-phases">Phases</h2>
 
 <p>When creating a subscription schedule, use the <a href="../../api/subscription_schedules/object.html#subscription_schedule_object-phases">phases</a> attribute to define when changes occur and what properties of the subscription to change. For example, you might offer a coupon for 50% off for the first three months of a subscription. In this scenario, you&rsquo;d create a subscription schedule where the first phase is three months long and contains the 50% off coupon. In the second phase, the subscription would be reverted to the normal cost and the coupon would be removed. Phases must be sequential, meaning only one phase can be active at a given time.</p>
 
@@ -3116,7 +3116,7 @@
   </tbody>
 </table>
 
-<h2 id="managing">Creating subscription schedules</h2>
+<a id="creating-subscription-schedules" name="//apple_ref/cpp/Section/Creating%20subscription%20schedules" class="dashAnchor"></a><h2 id="managing">Creating subscription schedules</h2>
 
 <p>The <a href="subscription-schedules/use-cases.html">use cases</a> page has more thorough examples but below is a basic example of creating a subscription schedule using a customer. Creating a schedule this way automatically creates the subscription as well.</p>
 
@@ -3566,7 +3566,7 @@ var schedule = service.Create(options);
 
 <p>Similar to other Stripe APIs, you can retrieve and update <a href="../../api/subscription_schedules.html">subscription schedules</a>. You can also cancel and release them. Cancelling a subscription schedule cancels the subscription as well. If you only want to remove a schedule from a subscription, use the <a href="../../api/subscription_schedules/release.html">release</a> call.</p>
 
-<h2 id="updating">Updating subscription schedules</h2>
+<a id="updating-subscription-schedules" name="//apple_ref/cpp/Section/Updating%20subscription%20schedules" class="dashAnchor"></a><h2 id="updating">Updating subscription schedules</h2>
 
 <p>You can only update the current and future phases on subscription schedules. When updating a subscription schedule, you need to pass in all current and future phases that you want to keep. You still receive information in the response about past phases.</p>
 
@@ -4493,7 +4493,7 @@ service.Update(
 </div>
 </div>
 
-<h2 id="next-steps">Next steps</h2>
+<a id="next-steps" name="//apple_ref/cpp/Section/Next%20steps" class="dashAnchor"></a><h2 id="next-steps">Next steps</h2>
 
 <p>Now that you understand how subscription schedules work, you can learn more about the use cases.</p>
 
@@ -4532,7 +4532,7 @@ service.Update(
 
 
             </article>
-            <div class="docs-aside">
+            <div class="docs-aside" style="display: none;">
               <div class="docs-toc empty">
                 <h4>On this page</h4>
                 <ul class="docs-toc-list">

@@ -180,7 +180,7 @@
   <body class="">
     
       <div id="docs">
-        <div id="sidebar">
+        <div id="sidebar" style="display: none;">
             
   <div class="logo">
     <a href="../recipes/switching-to-stripe.html" title="Stripe docs">
@@ -3008,7 +3008,7 @@
             <article id="content">
                 
   <header>
-  <h1>Stripe.js v2 Reference</h1>
+  <a name="//apple_ref/cpp/Section/Top" class="dashAnchor"></a><h1>Stripe.js v2 Reference</h1>
   <p>Stripe.js makes it easy to collect credit card&mdash;and other similarly sensitive&mdash;details without having the information touch your server. </p>
 </header>
 
@@ -3029,7 +3029,7 @@
 <p>Stripe.js includes supports source creation for use with <a href="../sources/bitcoin.html">Sources</a>&mdash;our standardized approach to creating payments using any of our supported payment methods. It also has built-in <a href="v2.html#bank-account-validation-helpers">validators</a> to check the format of credit card, CVC, bank account, and routing numbers, as well as a credit card&rsquo;s type and expiration.</p></section>
 
 <section>
-  <h2 id="including-stripejs">Including Stripe.js</h2>
+  <a id="including-stripejs" name="//apple_ref/cpp/Section/Including%20Stripe.js" class="dashAnchor"></a><h2 id="including-stripejs">Including Stripe.js</h2>
 
   <p>However you're using Stripe.js, you always begin by including the library and setting your API key. Add this <code>&lt;script&gt;</code> tag to your page to get started with Stripe.js:</p>
 
@@ -3052,7 +3052,7 @@
 </section>
 
 <section>
-  <h2 id="setting-publishable-key">Setting your publishable key</h2>
+  <a id="setting-your-publishable-key" name="//apple_ref/cpp/Section/Setting%20your%20publishable%20key" class="dashAnchor"></a><h2 id="setting-publishable-key">Setting your publishable key</h2>
 
   <p>Your publishable API key identifies your website to Stripe during communications. Set your publishable key with <code>setPublishableKey</code>, after including Stripe.js and before making any requests to Stripe.</p>
 
@@ -3068,7 +3068,7 @@
 
 
 <section>
-  <h2 id="collecting-card-details">Collecting card details</h2>
+  <a id="collecting-card-details" name="//apple_ref/cpp/Section/Collecting%20card%20details" class="dashAnchor"></a><h2 id="collecting-card-details">Collecting card details</h2>
 
   <aside class="important red"><p><strong>This method of using Stripe.js to collect card information has been deprecated</strong>. When creating a payment form to collect card information, use <a href="../stripe-js.html">Stripe.js and Elements</a>&mdash;our prebuilt UI components. Check out our <a href="elements/migrating.html">Elements migration guide</a> to learn how to migrate your checkout flow and maintain the simplest form of <a href="../security.html#validating-pci-compliance">PCI compliance</a>.</p></aside>
 
@@ -3217,7 +3217,7 @@
 </section>
 
 <section>
-  <h2 id="card-validation-helpers">Client-side validation helpers</h2>
+  <a id="client-side-validation-helpers" name="//apple_ref/cpp/Section/Client-side%20validation%20helpers" class="dashAnchor"></a><h2 id="card-validation-helpers">Client-side validation helpers</h2>
 
   <p>You can use the following methods to perform client-side validation before making a tokenization request.</p>
 
@@ -3277,7 +3277,7 @@ Stripe.card.cardType('1234')                // "Unknown"</code></div></pre>
 </section>
 
 <section>
-  <h2 id="passing-exp-dates">Passing expiration dates</h2>
+  <a id="passing-expiration-dates" name="//apple_ref/cpp/Section/Passing%20expiration%20dates" class="dashAnchor"></a><h2 id="passing-exp-dates">Passing expiration dates</h2>
 
   <p>Stripe.js allows you to flexibly pass expiration dates as either separate <code>exp_month</code> and <code>exp_year</code> values or as a single <code>exp</code> string. As a single string, the expiration can be a two- or four-digit year, and a one- or two-digit month, in either order, so long as the two are separated by a hyphen, slash, or space.</p>
 
@@ -3298,7 +3298,7 @@ Stripe.card.createToken({
 </section>
 
 <section>
-  <h2 id="collecting-bank-account-details">Collecting bank account details</h2>
+  <a id="collecting-bank-account-details" name="//apple_ref/cpp/Section/Collecting%20bank%20account%20details" class="dashAnchor"></a><h2 id="collecting-bank-account-details">Collecting bank account details</h2>
 
   <p>You can use these methods to validate and collect bank account details for when you want to <a href="../ach.html"> make ACH payments</a> or send payouts to <a href="../connect/payouts.html">bank accounts</a> attached to connected Stripe accounts.</p>
 
@@ -3419,7 +3419,7 @@ Stripe.card.createToken({
 </section>
 
 <section>
-  <h2 id="bank-account-validation-helpers">Client-side validation helpers</h2>
+  <a id="client-side-validation-helpers" name="//apple_ref/cpp/Section/Client-side%20validation%20helpers" class="dashAnchor"></a><h2 id="bank-account-validation-helpers">Client-side validation helpers</h2>
 
   <p>Bank account validation with Stripe.js currently supports U.S. bank account and routing numbers.</p><p>
   </p><h3 id="bank-account-validateRoutingNumber"><code>bankAccount.validateRoutingNumber</code></h3>
@@ -3458,7 +3458,7 @@ Stripe.bankAccount.validateAccountNumber('mistake', 'US')</code></div></pre>
 </section>
 
 <section>
-  <h2 id="collecting-pii-data">Collecting personally identifiable information (PII)</h2>
+  <a id="collecting-personally-identifiable-information-pii" name="//apple_ref/cpp/Section/Collecting%20personally%20identifiable%20information%20%28PII%29" class="dashAnchor"></a><h2 id="collecting-pii-data">Collecting personally identifiable information (PII)</h2>
   <aside class="important red"><p><strong>This method of using Stripe.js to collect PII data has been deprecated</strong>. Use <a href="reference.html#collecting-pii-data">Stripe.js v3</a> to collect personally identifiable information.</p></aside>
 
   <p>You can use <code>piiData.createToken</code> to collect PII data for <a href="../connect/identity-verification.html">Custom account identity verification</a>.</p>
@@ -3547,7 +3547,7 @@ Stripe.bankAccount.validateAccountNumber('mistake', 'US')</code></div></pre>
 </section>
 
 <section>
-  <h2 id="collecting-apple-pay-details">Collecting Apple Pay details</h2>
+  <a id="collecting-apple-pay-details" name="//apple_ref/cpp/Section/Collecting%20Apple%20Pay%20details" class="dashAnchor"></a><h2 id="collecting-apple-pay-details">Collecting Apple Pay details</h2>
 
   <p>Stripe.js supports Apple Pay payments. The full details are available in our <a href="../apple-pay/web/v2.html">integration guide</a>.</p>
 
@@ -3702,7 +3702,7 @@ Stripe.bankAccount.validateAccountNumber('mistake', 'US')</code></div></pre>
 </section>
 
 <section>
-<h2 id="sources">Sources</h2>
+<a id="sources" name="//apple_ref/cpp/Section/Sources" class="dashAnchor"></a><h2 id="sources">Sources</h2>
   <aside class="important red"><p><strong>This method of using Stripe.js has been deprecated</strong>. We strongly recommend using <a href="reference.html#stripe-create-source">Stripe.js v3</a> to create sources. This is also the version our <a href="../sources/bitcoin.html">Sources documentation</a> uses. If you're using sources to create card payments, use <a href="../stripe-js.html">Stripe.js and Elements</a>&mdash;our prebuilt UI components&mdash;to maintain the simplest form of <a href="../security.html#validating-pci-compliance">PCI compliance</a>.</p></aside>
 
 <p>You can use <code>source.create</code> when creating payments using <a href="../sources/bitcoin.html">Sources</a>.</p><h3 id="source-creation"><code>source.create</code></h3>
@@ -3725,7 +3725,7 @@ Stripe.bankAccount.validateAccountNumber('mistake', 'US')</code></div></pre>
 
 <p>See the <a href="../sources/bitcoin.html">Sources documentation</a> for more information and the supported payment methods you can use.</p></section>
 <section>
-  <h2 id="supported-browsers">Supported browsers</h2>
+  <a id="supported-browsers" name="//apple_ref/cpp/Section/Supported%20browsers" class="dashAnchor"></a><h2 id="supported-browsers">Supported browsers</h2>
   <p>Stripe.js strives to support all recent versions of major browsers. For the sake of security and providing the best experience to the majority of customers, we do not support browsers that are no longer receiving security updates and represent a small minority of traffic.</p>
 <ul>
   <li>We support Internet Explorer and Edge per <a href="https://support.microsoft.com/en-us/gp/microsoft-internet-explorer">Microsoft's lifecycle policy</a>. We currently support IE10 and above.
@@ -3771,7 +3771,7 @@ Stripe.bankAccount.validateAccountNumber('mistake', 'US')</code></div></pre>
 
 
             </article>
-            <div class="docs-aside">
+            <div class="docs-aside" style="display: none;">
               <div class="docs-toc empty">
                 <h4>On this page</h4>
                 <ul class="docs-toc-list">

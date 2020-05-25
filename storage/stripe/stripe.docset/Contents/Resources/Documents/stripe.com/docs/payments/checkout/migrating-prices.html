@@ -180,7 +180,7 @@
   <body class="">
     
       <div id="docs">
-        <div id="sidebar">
+        <div id="sidebar" style="display: none;">
             
   <div class="logo">
     <a href="../../recipes/switching-to-stripe.html" title="Stripe docs">
@@ -3008,7 +3008,7 @@
             <article id="content">
                 
   <header>
-  <h1 id="checkout-prices-migration-guide">Checkout prices migration guide</h1>
+  <a name="//apple_ref/cpp/Section/Top" class="dashAnchor"></a><h1 id="checkout-prices-migration-guide">Checkout prices migration guide</h1>
 
   <p>Learn how to update your integration to use prices with <a href="../../checkout.html">Checkout</a>.</p>
 </header>
@@ -3031,7 +3031,7 @@ catalog to use with Checkout.</li>
 <p>Don&rsquo;t want to migrate? You can continue to <a href="https://support.stripe.com/questions/prices-api-and-existing-checkout-integrations">use your current
 integration</a>. If you use plans, you can create recurring prices and use them in place of plans.</p>
 <section>
-<h2 id="product-price-overview">Products and prices overview</h2>
+<a id="products-and-prices-overview" name="//apple_ref/cpp/Section/Products%20and%20prices%20overview" class="dashAnchor"></a><h2 id="product-price-overview">Products and prices overview</h2>
 
 <p><span class="tooltip-wrapper"><span class="tooltip-content definition"><a href="../../api/prices.html">Prices</a></span><template class="tooltip"><span class="definition"><em>Prices</em> define how much and how often to charge for products. This includes how much the product costs, what currency to use, and the interval if the price is for subscriptions.</span></template></span> are a new, core entity within Stripe that works with subscriptions, invoices, and Checkout. Each price is tied to a single <span class="tooltip-wrapper"><span class="tooltip-content definition"><a href="../../api/products.html">Product</a></span><template class="tooltip"><span class="definition"><em>Products</em> represent what your business offers &mdash; whether that&rsquo;s a good or a service.</span></template></span>, and each product
 can have multiple prices. Different physical goods or levels of service should be represented by products. Pricing of that product should be represented by Price.</p>
@@ -3044,7 +3044,7 @@ API</a> or through <a href="https://dashboard.stripe.com/products">the Stripe Da
 
 <div class="expando" aria-expanded="true">
   <a id="one-time-payments-changes" href="migrating-prices.html#one-time-payments-changes" class="expando-trigger">
-    <h2 class="expando-title" data-no-anchor data-custom-toc-title="One-time payments">
+    <a id="one-time-payments" name="//apple_ref/cpp/Section/One-time%20payments" class="dashAnchor"></a><h2 class="expando-title" data-no-anchor data-custom-toc-title="One-time payments">
       One-time payments
     </h2>
   </a>
@@ -3309,7 +3309,7 @@ the SKU&rsquo;s <code>attributes.name</code>.</li>
 
 <div class="expando" aria-expanded="true">
   <a id="subscriptions-changes" href="migrating-prices.html#subscriptions-changes" class="expando-trigger">
-    <h2 class="expando-title" data-no-anchor data-custom-toc-title="Subscriptions">
+    <a id="subscriptions" name="//apple_ref/cpp/Section/Subscriptions" class="dashAnchor"></a><h2 class="expando-title" data-no-anchor data-custom-toc-title="Subscriptions">
       Subscriptions
     </h2>
   </a>
@@ -3517,7 +3517,7 @@ You will need the price ID to create the Checkout session:</p>
 
 
 <section>
-<h2 id="response-object-changes">Response object changes</h2>
+<a id="response-object-changes" name="//apple_ref/cpp/Section/Response%20object%20changes" class="dashAnchor"></a><h2 id="response-object-changes">Response object changes</h2>
 
 <p>Instead of listing items with <code>display_items</code>, the Checkout Session object uses <code>line_items</code>. The <code>line_items</code> field does not render by default as <code>display_items</code> did, but you can include it using <a href="../../api/expanding_objects.html">expand</a> when creating a Checkout Session:</p>
 
@@ -3555,7 +3555,7 @@ You will need the price ID to create the Checkout session:</p>
   </div>
 </div>
 
-<h2 id="webhook-changes">Webhook changes</h2>
+<a id="webhook-changes" name="//apple_ref/cpp/Section/Webhook%20changes" class="dashAnchor"></a><h2 id="webhook-changes">Webhook changes</h2>
 
 <p>Since <code>line_items</code> is includable, the <code>checkout.session.completed</code> webhook reponse no longer list items by default. The smaller response object enables you to receive your Checkout webhooks faster. You can retrieve items with the new line_items endpoint:</p>
 
@@ -3615,7 +3615,7 @@ You will need the price ID to create the Checkout session:</p>
 
 
             </article>
-            <div class="docs-aside">
+            <div class="docs-aside" style="display: none;">
               <div class="docs-toc empty">
                 <h4>On this page</h4>
                 <ul class="docs-toc-list">

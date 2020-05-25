@@ -182,7 +182,7 @@
   <body class="">
     
       <div id="docs">
-        <div id="sidebar">
+        <div id="sidebar" style="display: none;">
             
   <div class="logo">
     <a href="../recipes/switching-to-stripe.html" title="Stripe docs">
@@ -3010,7 +3010,7 @@
             <article id="content">
                 
   <header>
-  <h1>Connect Onboarding for Custom accounts</h1>
+  <a name="//apple_ref/cpp/Section/Top" class="dashAnchor"></a><h1>Connect Onboarding for Custom accounts</h1>
   <p>Let Stripe collect identity verification information for your Custom connected accounts.</p>
 </header>
 
@@ -3035,7 +3035,7 @@
 </section>
 
 <section>
-  <h2 id="how-to-use-connect-onboarding-for-custom-accounts">How to use Connect Onboarding for Custom Accounts</h2>
+  <a id="how-to-use-connect-onboarding-for-custom-accounts" name="//apple_ref/cpp/Section/How%20to%20use%20Connect%20Onboarding%20for%20Custom%20Accounts" class="dashAnchor"></a><h2 id="how-to-use-connect-onboarding-for-custom-accounts">How to use Connect Onboarding for Custom Accounts</h2>
 
   <ol>
     <li>Go to your <a href="https://dashboard.stripe.com/account/applications/settings">Connect settings page</a> to customize the visual appearance of the form: you can provide the name, color, and icon of your brand. You must provide this information for Connect Onboarding to work.</li>
@@ -3057,7 +3057,7 @@
 </section>
 
 <section>
-  <h2 id="info-to-collect"><span class="step">Step 1:</span> Determine the information to collect</h2>
+  <a id="step-1-determine-the-information-to-collect" name="//apple_ref/cpp/Section/Step%201%3A%20Determine%20the%20information%20to%20collect" class="dashAnchor"></a><h2 id="info-to-collect"><span class="step">Step 1:</span> Determine the information to collect</h2>
   <p>Connect Onboarding for Custom Accounts supports upfront or incremental onboarding. Upfront onboarding collects the <code>eventually_due</code> requirements for the account, while incremental onboarding means collects the <code>currently_due</code> requirements. For the advantages and disadvantages of each, see <a href="identity-verification.html#onboarding-flows">the onboarding flows documentation</a>.</p>
 
   <p>The <code>currently_due</code> requirements request only the user information needed for verification at this specific point in time; the <code>eventually_due</code> requirements include a more complete set of questions that we&rsquo;ll eventually need to collect.</p>
@@ -3229,14 +3229,14 @@ var accountLink = service.Create(options);
 </div>
 -->
 
-  <h2 id="redirect"><span class="step">Step 2:</span> Redirect your user to the Account Link URL</h2>
+  <a id="step-2-redirect-your-user-to-the-account-link-url" name="//apple_ref/cpp/Section/Step%202%3A%20Redirect%20your%20user%20to%20the%20Account%20Link%20URL" class="dashAnchor"></a><h2 id="redirect"><span class="step">Step 2:</span> Redirect your user to the Account Link URL</h2>
   <p>The response to your <a href="../api/account_links.html">Account Links</a> request includes a value for the key <code>url</code>. Redirect your user to this link to send them into the flow. Account Link URLs are short-lived and can be used only once because they grant access to the account holder&rsquo;s personal information. Be sure to authenticate the user in your application before redirecting them to this URL.</p>
 
   <aside class="important red">
     <p>Do not email, text, or otherwise send Account Link URLs directly to your user. Instead, redirect an authenticated user to the Account Link URL from within your platform&rsquo;s application.</p>
   </aside>
 
-  <h2 id="return"><span class="step">Step 3:</span> Handle the user returning to your platform</h2>
+  <a id="step-3-handle-the-user-returning-to-your-platform" name="//apple_ref/cpp/Section/Step%203%3A%20Handle%20the%20user%20returning%20to%20your%20platform" class="dashAnchor"></a><h2 id="return"><span class="step">Step 3:</span> Handle the user returning to your platform</h2>
   <p>Connect Onboarding requires you to pass both a <code>success_url</code> and <code>failure_url</code> to handle all cases in which the user will be redirected back to your platform. It&rsquo;s important that you implement these correctly to provide the best experience for your user.</p>
 
   <aside class="important neutral">
@@ -3258,7 +3258,7 @@ var accountLink = service.Create(options);
 
   <p>Your <code>failure_url</code> should trigger a method on your server to call <a href="../api/account_links.html">Account Links</a> again, with the same parameters, and redirect the user back into the Connect Onboarding flow to create a seamless experience.</p>
 
-  <h2 id="new-reqs-due"><span class="step">Step 4:</span> Handle the case of new requirements becoming due</h2>
+  <a id="step-4-handle-the-case-of-new-requirements-becoming-due" name="//apple_ref/cpp/Section/Step%204%3A%20Handle%20the%20case%20of%20new%20requirements%20becoming%20due" class="dashAnchor"></a><h2 id="new-reqs-due"><span class="step">Step 4:</span> Handle the case of new requirements becoming due</h2>
   <p>Set up your integration to listen for changes to account requirements, if you haven&rsquo;t already done so. We recommend <a href="identity-verification-api.html#verification-process">using webhooks to do so</a>. You can test handling new requirements (and how they may disable charges and payouts) with our <a href="testing.html#trigger-cards">test mode trigger cards</a>.</p>
 
   <p>Based on the verification needs of your application, send the user back into Connect Onboarding as necessary to satisfy <code>currently_due</code> or <code>eventually_due</code> requirements as described in step 1. You can use this as a signal of <em>when</em> to send your user back into the flow. Keep in mind that using Connect Onboarding means you don&rsquo;t really need to worry about <em>what</em> the requirements are &ndash; sending the user back into Connect Onboarding means it will collect the right information.
@@ -3270,7 +3270,7 @@ For example, if your user mistypes their information and cannot be verified, the
     <p>Connect Onboarding for Custom Accounts does not collect the <code>external_account</code> requirement. To collect <code>external_account</code>, use <a href="../stripe-js.html">Stripe Elements</a> or consider upgrading to <a href="express-accounts.html">Express accounts</a>. <a href="mailto://support@stripe.com">Contact us to learn more</a>.</p>
   </aside>
 
-  <h2 id="user-updates"><span class="step">Step 5:</span> Handle the case of user-initated updates</h2>
+  <a id="step-5-handle-the-case-of-user-initated-updates" name="//apple_ref/cpp/Section/Step%205%3A%20Handle%20the%20case%20of%20user-initated%20updates" class="dashAnchor"></a><h2 id="user-updates"><span class="step">Step 5:</span> Handle the case of user-initated updates</h2>
   <p>Most Connect Onboarding usage discussed thus far has been about prompting the user to provide new information. Connect Onboarding also supports user-initated updates to the information they&rsquo;ve already provided via the <code>type</code> parameter of the <a href="../api/account_links.html">Account Link</a>. <code>type</code> accepts one of two values: <code>custom_account_verification</code> or <code>custom_account_update</code>.</p>
 
   <h4 id="customaccountverification">custom_account_verification</h4>
@@ -3281,7 +3281,7 @@ For example, if your user mistypes their information and cannot be verified, the
   <p>This value for <code>type</code> displays the fields that are already populated on the account object, and allows your user to edit previously provided information. Provide an access point in your platform&rsquo;s dashboard to a <code>type=custom_account_update</code> Account Link, for users to initiate updates themselves (e.g., when their address changes). Consider framing this as &ldquo;edit my profile&rdquo; or &ldquo;update my verification information&rdquo;.</p>
 </section>
 <section>
-  <h2>More information</h2>
+  <a id="more-information" name="//apple_ref/cpp/Section/More%20information" class="dashAnchor"></a><h2>More information</h2>
   <ul class="next-steps">
     <li><a href="identity-verification.html"><span>Identity Verification</span></a></li>
 </ul>
@@ -3318,7 +3318,7 @@ For example, if your user mistypes their information and cannot be verified, the
 
 
             </article>
-            <div class="docs-aside">
+            <div class="docs-aside" style="display: none;">
               <div class="docs-toc empty">
                 <h4>On this page</h4>
                 <ul class="docs-toc-list">

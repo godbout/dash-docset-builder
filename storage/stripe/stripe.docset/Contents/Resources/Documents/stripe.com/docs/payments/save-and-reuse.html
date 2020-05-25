@@ -180,7 +180,7 @@
   <body class="">
     
       <div id="docs">
-        <div id="sidebar">
+        <div id="sidebar" style="display: none;">
             
   <div class="logo">
     <a href="../recipes/switching-to-stripe.html" title="Stripe docs">
@@ -3008,7 +3008,7 @@
             <article id="content">
                 
   <header>
-  <h1 id="set-up-future-payments">Set up future payments</h1>
+  <a name="//apple_ref/cpp/Section/Top" class="dashAnchor"></a><h1 id="set-up-future-payments">Set up future payments</h1>
 
   <p>Learn how to save card details and charge your customers later.</p>
 
@@ -3024,7 +3024,7 @@
         <a>Android</a>
   </nav>
   <div class="tabs-content">
-    <div class="tabs-tab" id="web"><h2 id="web-overview">Overview</h2>
+    <div class="tabs-tab" id="web"><a id="overview" name="//apple_ref/cpp/Section/Overview" class="dashAnchor"></a><h2 id="web-overview">Overview</h2>
 
 <p>The <a href="../api/setup_intents.html">Setup Intents API</a> lets you save a customer&rsquo;s card without an initial payment. This is helpful if you want to onboard customers now, set them up for payments, and charge them in the future&mdash;when they&rsquo;re offline.</p>
 
@@ -3032,7 +3032,7 @@
 
 <div class="expando" aria-expanded="true">
   <a id="web-setup" href="save-and-reuse.html#web-setup" class="expando-trigger">
-    <h2 class="expando-title" data-no-anchor data-custom-toc-title="Set up Stripe">
+    <a id="1-set-up-stripe-server-side" name="//apple_ref/cpp/Section/1%20Set%20up%20Stripe%20Server-side" class="dashAnchor"></a><h2 class="expando-title" data-no-anchor data-custom-toc-title="Set up Stripe">
         <span class="expando-left-text">1</span>
       Set up Stripe
         <span class="tag optional">Server-side</span>
@@ -3279,7 +3279,7 @@ PM&gt; Install-Package Stripe.net</code></div></pre>
 
 <div class="expando" aria-expanded="true">
   <a id="web-create-customer" href="save-and-reuse.html#web-create-customer" class="expando-trigger">
-    <h2 class="expando-title" data-no-anchor data-custom-toc-title="Create a Customer before setup">
+    <a id="2-create-a-customer-before-setup-server-side" name="//apple_ref/cpp/Section/2%20Create%20a%20Customer%20before%20setup%20Server-side" class="dashAnchor"></a><h2 class="expando-title" data-no-anchor data-custom-toc-title="Create a Customer before setup">
         <span class="expando-left-text">2</span>
       Create a Customer before setup
         <span class="tag optional">Server-side</span>
@@ -3481,7 +3481,7 @@ var customer = service.Create(options);
 
 <div class="expando" aria-expanded="true">
   <a id="web-create-setup-intent" href="save-and-reuse.html#web-create-setup-intent" class="expando-trigger">
-    <h2 class="expando-title" data-no-anchor data-custom-toc-title="Create a SetupIntent">
+    <a id="3-create-a-setupintent-server-side" name="//apple_ref/cpp/Section/3%20Create%20a%20SetupIntent%20Server-side" class="dashAnchor"></a><h2 class="expando-title" data-no-anchor data-custom-toc-title="Create a SetupIntent">
         <span class="expando-left-text">3</span>
       Create a SetupIntent
         <span class="tag optional">Server-side</span>
@@ -3920,7 +3920,7 @@ namespace StripeExampleApi.Controllers
 
 <div class="expando" aria-expanded="true">
   <a id="web-collect-card-details" href="save-and-reuse.html#web-collect-card-details" class="expando-trigger">
-    <h2 class="expando-title" data-no-anchor data-custom-toc-title="Collect card details">
+    <a id="4-collect-card-details-client-side" name="//apple_ref/cpp/Section/4%20Collect%20card%20details%20Client-side" class="dashAnchor"></a><h2 class="expando-title" data-no-anchor data-custom-toc-title="Collect card details">
         <span class="expando-left-text">4</span>
       Collect card details
         <span class="tag optional">Client-side</span>
@@ -4512,7 +4512,7 @@ export default function InjectedCardSetupForm() {
 
 <div class="expando" aria-expanded="true">
   <a id="web-create-payment-intent-off-session" href="save-and-reuse.html#web-create-payment-intent-off-session" class="expando-trigger">
-    <h2 class="expando-title" data-no-anchor data-custom-toc-title="Charge the saved card later">
+    <a id="5-charge-the-saved-card-later-server-side" name="//apple_ref/cpp/Section/5%20Charge%20the%20saved%20card%20later%20Server-side" class="dashAnchor"></a><h2 class="expando-title" data-no-anchor data-custom-toc-title="Charge the saved card later">
         <span class="expando-left-text">5</span>
       Charge the saved card later
         <span class="tag optional">Server-side</span>
@@ -5068,7 +5068,7 @@ stripe.confirmCardPayment(intent.client_secret, {
 
 <div class="expando" aria-expanded="true">
   <a id="web-test-integration" href="save-and-reuse.html#web-test-integration" class="expando-trigger">
-    <h2 class="expando-title" data-no-anchor data-custom-toc-title="Test the integration">
+    <a id="6-test-the-integration" name="//apple_ref/cpp/Section/6%20Test%20the%20integration" class="dashAnchor"></a><h2 class="expando-title" data-no-anchor data-custom-toc-title="Test the integration">
         <span class="expando-left-text">6</span>
       Test the integration
     </h2>
@@ -5118,7 +5118,7 @@ stripe.confirmCardPayment(intent.client_secret, {
 <p>For the full list of test cards see our guide on <a href="../testing.html">testing</a>. </p>
   </div>
 </div></div>
-<div class="tabs-tab" id="ios"><h2 id="ios-overview">Overview</h2>
+<div class="tabs-tab" id="ios"><a id="overview" name="//apple_ref/cpp/Section/Overview" class="dashAnchor"></a><h2 id="ios-overview">Overview</h2>
 
 <p>The <a href="../api/setup_intents.html">Setup Intents API</a> lets you save a customer&rsquo;s card without an initial payment. This is helpful if you want to onboard customers now, set them up for payments, and charge them in the future&mdash;when they&rsquo;re offline.</p>
 
@@ -5130,7 +5130,7 @@ stripe.confirmCardPayment(intent.client_secret, {
 
 <div class="expando" aria-expanded="true">
   <a id="ios-setup" href="save-and-reuse.html#ios-setup" class="expando-trigger">
-    <h2 class="expando-title" data-no-anchor data-custom-toc-title="Set up Stripe">
+    <a id="1-set-up-stripe-client-side-server-side" name="//apple_ref/cpp/Section/1%20Set%20up%20Stripe%20Client-side%20Server-side" class="dashAnchor"></a><h2 class="expando-title" data-no-anchor data-custom-toc-title="Set up Stripe">
         <span class="expando-left-text">1</span>
       Set up Stripe
         <span class="tag optional">Client-side</span>
@@ -5585,7 +5585,7 @@ AppDelegate.m
 
 <div class="expando" aria-expanded="true">
   <a id="ios-create-customer" href="save-and-reuse.html#ios-create-customer" class="expando-trigger">
-    <h2 class="expando-title" data-no-anchor data-custom-toc-title="Create a Customer before setup">
+    <a id="2-create-a-customer-before-setup-server-side" name="//apple_ref/cpp/Section/2%20Create%20a%20Customer%20before%20setup%20Server-side" class="dashAnchor"></a><h2 class="expando-title" data-no-anchor data-custom-toc-title="Create a Customer before setup">
         <span class="expando-left-text">2</span>
       Create a Customer before setup
         <span class="tag optional">Server-side</span>
@@ -5784,7 +5784,7 @@ var customer = service.Create(options);
 
 <div class="expando" aria-expanded="true">
   <a id="ios-create-setup-intent" href="save-and-reuse.html#ios-create-setup-intent" class="expando-trigger">
-    <h2 class="expando-title" data-no-anchor data-custom-toc-title="Create a SetupIntent">
+    <a id="3-create-a-setupintent-server-side" name="//apple_ref/cpp/Section/3%20Create%20a%20SetupIntent%20Server-side" class="dashAnchor"></a><h2 class="expando-title" data-no-anchor data-custom-toc-title="Create a SetupIntent">
         <span class="expando-left-text">3</span>
       Create a SetupIntent
         <span class="tag optional">Server-side</span>
@@ -6151,7 +6151,7 @@ CheckoutViewController.m
 
 <div class="expando" aria-expanded="true">
   <a id="ios-collect-card-details" href="save-and-reuse.html#ios-collect-card-details" class="expando-trigger">
-    <h2 class="expando-title" data-no-anchor data-custom-toc-title="Collect card details">
+    <a id="4-collect-card-details-client-side" name="//apple_ref/cpp/Section/4%20Collect%20card%20details%20Client-side" class="dashAnchor"></a><h2 class="expando-title" data-no-anchor data-custom-toc-title="Collect card details">
         <span class="expando-left-text">4</span>
       Collect card details
         <span class="tag optional">Client-side</span>
@@ -6384,7 +6384,7 @@ MyCheckoutViewController.m
 
 <div class="expando" aria-expanded="true">
   <a id="ios-create-payment-intent-off-session" href="save-and-reuse.html#ios-create-payment-intent-off-session" class="expando-trigger">
-    <h2 class="expando-title" data-no-anchor data-custom-toc-title="Charge the saved card later">
+    <a id="5-charge-the-saved-card-later-server-side" name="//apple_ref/cpp/Section/5%20Charge%20the%20saved%20card%20later%20Server-side" class="dashAnchor"></a><h2 class="expando-title" data-no-anchor data-custom-toc-title="Charge the saved card later">
         <span class="expando-left-text">5</span>
       Charge the saved card later
         <span class="tag optional">Server-side</span>
@@ -7057,7 +7057,7 @@ RecoveryFlowViewController.m
 
 <div class="expando" aria-expanded="true">
   <a id="ios-test-integration" href="save-and-reuse.html#ios-test-integration" class="expando-trigger">
-    <h2 class="expando-title" data-no-anchor data-custom-toc-title="Test the integration">
+    <a id="6-test-the-integration" name="//apple_ref/cpp/Section/6%20Test%20the%20integration" class="dashAnchor"></a><h2 class="expando-title" data-no-anchor data-custom-toc-title="Test the integration">
         <span class="expando-left-text">6</span>
       Test the integration
     </h2>
@@ -7107,7 +7107,7 @@ RecoveryFlowViewController.m
 <p>For the full list of test cards see our guide on <a href="../testing.html">testing</a>. </p>
   </div>
 </div></div>
-<div class="tabs-tab" id="android"><h2 id="android-overview">Overview</h2>
+<div class="tabs-tab" id="android"><a id="overview" name="//apple_ref/cpp/Section/Overview" class="dashAnchor"></a><h2 id="android-overview">Overview</h2>
 
 <p>The <a href="../api/setup_intents.html">Setup Intents API</a> lets you save a customer&rsquo;s card without an initial payment. This is helpful if you want to onboard customers now, set them up for payments, and charge them in the future&mdash;when they&rsquo;re offline.</p>
 
@@ -7119,7 +7119,7 @@ RecoveryFlowViewController.m
 
 <div class="expando" aria-expanded="true">
   <a id="android-setup" href="save-and-reuse.html#android-setup" class="expando-trigger">
-    <h2 class="expando-title" data-no-anchor data-custom-toc-title="Set up Stripe">
+    <a id="1-set-up-stripe-client-side-server-side" name="//apple_ref/cpp/Section/1%20Set%20up%20Stripe%20Client-side%20Server-side" class="dashAnchor"></a><h2 class="expando-title" data-no-anchor data-custom-toc-title="Set up Stripe">
         <span class="expando-left-text">1</span>
       Set up Stripe
         <span class="tag optional">Client-side</span>
@@ -7455,7 +7455,7 @@ public class MyApp extends Application {
 
 <div class="expando" aria-expanded="true">
   <a id="android-create-customer" href="save-and-reuse.html#android-create-customer" class="expando-trigger">
-    <h2 class="expando-title" data-no-anchor data-custom-toc-title="Create a Customer before setup">
+    <a id="2-create-a-customer-before-setup-server-side" name="//apple_ref/cpp/Section/2%20Create%20a%20Customer%20before%20setup%20Server-side" class="dashAnchor"></a><h2 class="expando-title" data-no-anchor data-custom-toc-title="Create a Customer before setup">
         <span class="expando-left-text">2</span>
       Create a Customer before setup
         <span class="tag optional">Server-side</span>
@@ -7654,7 +7654,7 @@ var customer = service.Create(options);
 
 <div class="expando" aria-expanded="true">
   <a id="android-create-setup-intent" href="save-and-reuse.html#android-create-setup-intent" class="expando-trigger">
-    <h2 class="expando-title" data-no-anchor data-custom-toc-title="Create a SetupIntent">
+    <a id="3-create-a-setupintent-server-side" name="//apple_ref/cpp/Section/3%20Create%20a%20SetupIntent%20Server-side" class="dashAnchor"></a><h2 class="expando-title" data-no-anchor data-custom-toc-title="Create a SetupIntent">
         <span class="expando-left-text">3</span>
       Create a SetupIntent
         <span class="tag optional">Server-side</span>
@@ -8012,7 +8012,7 @@ CheckoutActivity.java
 
 <div class="expando" aria-expanded="true">
   <a id="android-collect-card-details" href="save-and-reuse.html#android-collect-card-details" class="expando-trigger">
-    <h2 class="expando-title" data-no-anchor data-custom-toc-title="Collect card details">
+    <a id="4-collect-card-details-client-side" name="//apple_ref/cpp/Section/4%20Collect%20card%20details%20Client-side" class="dashAnchor"></a><h2 class="expando-title" data-no-anchor data-custom-toc-title="Collect card details">
         <span class="expando-left-text">4</span>
       Collect card details
         <span class="tag optional">Client-side</span>
@@ -8223,7 +8223,7 @@ protected void onActivityResult(int requestCode, int resultCode, @Nullable Inten
 
 <div class="expando" aria-expanded="true">
   <a id="android-create-payment-intent-off-session" href="save-and-reuse.html#android-create-payment-intent-off-session" class="expando-trigger">
-    <h2 class="expando-title" data-no-anchor data-custom-toc-title="Charge the saved card later">
+    <a id="5-charge-the-saved-card-later-server-side" name="//apple_ref/cpp/Section/5%20Charge%20the%20saved%20card%20later%20Server-side" class="dashAnchor"></a><h2 class="expando-title" data-no-anchor data-custom-toc-title="Charge the saved card later">
         <span class="expando-left-text">5</span>
       Charge the saved card later
         <span class="tag optional">Server-side</span>
@@ -8923,7 +8923,7 @@ RecoveryFlowActivity.java
 
 <div class="expando" aria-expanded="true">
   <a id="android-test-integration" href="save-and-reuse.html#android-test-integration" class="expando-trigger">
-    <h2 class="expando-title" data-no-anchor data-custom-toc-title="Test the integration">
+    <a id="6-test-the-integration" name="//apple_ref/cpp/Section/6%20Test%20the%20integration" class="dashAnchor"></a><h2 class="expando-title" data-no-anchor data-custom-toc-title="Test the integration">
         <span class="expando-left-text">6</span>
       Test the integration
     </h2>
@@ -9009,7 +9009,7 @@ RecoveryFlowActivity.java
 
 
             </article>
-            <div class="docs-aside">
+            <div class="docs-aside" style="display: none;">
               <div class="docs-toc empty">
                 <h4>On this page</h4>
                 <ul class="docs-toc-list">

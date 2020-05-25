@@ -191,7 +191,7 @@
   <body class="">
     
       <div id="docs">
-        <div id="sidebar">
+        <div id="sidebar" style="display: none;">
             
   <div class="logo">
     <a href="../recipes/switching-to-stripe.html" title="Stripe docs">
@@ -3019,7 +3019,7 @@
             <article id="content">
                 
   <header>
-  <h1>Card payments with Sources <span class="warning tag">Deprecated</span></h1>
+  <a name="//apple_ref/cpp/Section/Top" class="dashAnchor"></a><h1>Card payments with Sources <span class="warning tag">Deprecated</span></h1>
   <p>Use Sources to accept card payments from around the world.</p>
 
 <aside class="important red">
@@ -3047,20 +3047,20 @@
 <p>Within the scope of Sources, cards are a <a href="bitcoin.html#pull-or-push-of-funds">pull</a>-based, <a href="bitcoin.html#single-use-or-reusable">reusable</a> and <a href="bitcoin.html#synchronous-or-asynchronous-confirmation">synchronous</a> method of payment. This means that, after capturing the customer&rsquo;s card details, you can debit arbitrary amounts from the customer&rsquo;s card without them having to take any additional action and there is immediate confirmation about the success or failure of a payment.</p></section>
 
 <section>
-<h2 id="handling-card-information">Handling card information</h2>
+<a id="handling-card-information" name="//apple_ref/cpp/Section/Handling%20card%20information" class="dashAnchor"></a><h2 id="handling-card-information">Handling card information</h2>
 
 <p>Card information is sensitive by nature. Card sources must be created client-side using <a href="../stripe-js.html">Stripe.js and Elements</a>. This ensures that no sensitive card data passes through your server so your integration can operate in a <a href="../security.html#pci-dss-guidelines">PCI compliant</a> way.</p>
 
 <p>When your customer submits their card information using your payment form, it is sent directly to Stripe, and a representative <a href="../api/index.html#sources">Source</a> object is returned for you to use. The process is similar to the creation of <a href="../api/tokens.html">tokens</a>. If you&rsquo;re already using Elements to tokenize card information, switching to Sources is only a small change.</p></section>
 
 <section>
-<h2 id="considerations"><span class="step">Prerequisite:</span> Consider a flexible checkout flow if you want to accept additional payment methods</h2>
+<a id="prerequisite-consider-a-flexible-checkout-flow-if-you-want-to-accept-additional-payment-methods" name="//apple_ref/cpp/Section/Prerequisite%3A%20Consider%20a%20flexible%20checkout%20flow%20if%20you%20want%20to%20accept%20additional%20payment%20methods" class="dashAnchor"></a><h2 id="considerations"><span class="step">Prerequisite:</span> Consider a flexible checkout flow if you want to accept additional payment methods</h2>
 <p>Card payments with Sources has fewer steps and requirements than other payment methods. As it&rsquo;s a synchronous method and there is no additional customer action to take, the use of <a href="../webhooks.html">webhooks</a> isn&rsquo;t necessary. If you only want to accept card payments, you can simply follow the steps within this documentation to begin accepting cards with Sources.</p>
 
 <p>However, accepting other methods of payment through Sources (e.g., <a href="ideal.html">iDEAL</a>, <a href="sepa-debit.html">SEPA Direct Debit</a>, etc.) requires additional steps, making the use of webhooks necessary. You can refer to our <a href="best-practices.html">best practices</a> for developing a flexible checkout flow that supports different payment methods.</p></section>
 
 <section>
-<h2 id="create-source"><span class="step">Step 1:</span> Create a Source object</h2>
+<a id="step-1-create-a-source-object" name="//apple_ref/cpp/Section/Step%201%3A%20Create%20a%20Source%20object" class="dashAnchor"></a><h2 id="create-source"><span class="step">Step 1:</span> Create a Source object</h2>
 
 <aside class="note">
   <h3>Stripe.js reference</h3>
@@ -3255,7 +3255,7 @@ form.addEventListener('submit', async (event) =&gt; {
 <p>If you&rsquo;re building an iOS or Android app, you can implement sources using our mobile SDKs. Refer to our sources documentation for <a href="../mobile/ios/sources.html">iOS</a> or <a href="../mobile/android/sources.html">Android</a> to learn more.</p></section>
 
 <section>
-<h2 id="charge-request"><span class="step">Step 2:</span> Charge the Source</h2>
+<a id="step-2-charge-the-source" name="//apple_ref/cpp/Section/Step%202%3A%20Charge%20the%20Source" class="dashAnchor"></a><h2 id="charge-request"><span class="step">Step 2:</span> Charge the Source</h2>
 <p>After creating a card Source, and before creating a charge request to complete the payment, attach it to a <a href="../api/index.html#customers">Customer</a> for later reuse.</p>
 
 <h3 id="attaching-the-source-to-a-customer">Attaching the Source to a Customer</h3>
@@ -3529,7 +3529,7 @@ Charge charge = service.Create(options);
 <p>Although the status of the source is <code>chargeable</code>, this does not mean that the payment is going to be successful. A charge request can still fail if the customer&rsquo;s card issuer <a href="../declines.html">declines</a> the payment.</p></section>
 
 <section>
-<h2 id="charge-confirmation"><span class="step">Step 3:</span> Confirm that the charge has succeeded</h2>
+<a id="step-3-confirm-that-the-charge-has-succeeded" name="//apple_ref/cpp/Section/Step%203%3A%20Confirm%20that%20the%20charge%20has%20succeeded" class="dashAnchor"></a><h2 id="charge-confirmation"><span class="step">Step 3:</span> Confirm that the charge has succeeded</h2>
 <p>Card payments are a <a href="bitcoin.html#synchronous-or-asynchronous-confirmation">synchronous</a> method so confirmation of the charge&rsquo;s status happens in real-time.</p>
 
 <p>Your integration immediately receives the result of the charge request&mdash;either a <a href="../api/index.html#charges">Charge</a> object upon success or an exception upon failure. Once the charge has been confirmed as successful, the payment has been successfully completed and you can notify your customer and fulfill the order.</p>
@@ -3677,7 +3677,7 @@ const source = await stripe.sources.update(
 </section>
 
 <section>
-<h2>Related resources</h2>
+<a id="related-resources" name="//apple_ref/cpp/Section/Related%20resources" class="dashAnchor"></a><h2>Related resources</h2>
 <ul class="next-steps">
     <li><a href="../declines.html"><span>Declines &amp; failed payments</span></a></li>
     <li><a href="bitcoin.html"><span>Other supported payment methods</span></a></li>
@@ -3718,7 +3718,7 @@ const source = await stripe.sources.update(
 
 
             </article>
-            <div class="docs-aside">
+            <div class="docs-aside" style="display: none;">
               <div class="docs-toc empty">
                 <h4>On this page</h4>
                 <ul class="docs-toc-list">

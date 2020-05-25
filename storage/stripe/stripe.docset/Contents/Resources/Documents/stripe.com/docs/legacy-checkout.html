@@ -182,7 +182,7 @@
   <body class="">
     
       <div id="docs">
-        <div id="sidebar">
+        <div id="sidebar" style="display: none;">
             
   <div class="logo">
     <a href="recipes/switching-to-stripe.html" title="Stripe docs">
@@ -3010,7 +3010,7 @@
             <article id="content">
                 
   <header>
-  <h1>Checkout Reference (legacy)</h1>
+  <a name="//apple_ref/cpp/Section/Top" class="dashAnchor"></a><h1>Checkout Reference (legacy)</h1>
 
 <aside class="important red">
 <p><strong>This page is for the legacy version of Checkout</strong></p>
@@ -3040,7 +3040,7 @@ modal payments form using Elements on <a href="https://github.com/stripe-samples
 </ul>
 </section>
 <section>
-  <h2 id="tokens">Generating and using tokens</h2>
+  <a id="generating-and-using-tokens" name="//apple_ref/cpp/Section/Generating%20and%20using%20tokens" class="dashAnchor"></a><h2 id="tokens">Generating and using tokens</h2>
 
   <p>With Stripe, sensitive cardholder data does not hit your server, greatly minimizing your PCI compliance burden. Stripe takes care of the hardest parts of PCI compliance, like redacting logs and encrypting card details. Just enable <a href="legacy-checkout.html#does-checkout-require-https">HTTPS</a> on your checkout page, and we'll take over from there.</p>
 
@@ -3062,7 +3062,7 @@ modal payments form using Elements on <a href="https://github.com/stripe-samples
 
 </section>
 <section>
-  <h2 id="integration">Integrating Checkout</h2>
+  <a id="integrating-checkout" name="//apple_ref/cpp/Section/Integrating%20Checkout" class="dashAnchor"></a><h2 id="integration">Integrating Checkout</h2>
 
   <aside class="note">
     <h3>Example integrations</h3>
@@ -3479,7 +3479,7 @@ window.addEventListener('popstate', function() {
   </table>
 </section>
 <section>
-  <h2 id="supported-languages">Supported languages</h2>
+  <a id="supported-languages" name="//apple_ref/cpp/Section/Supported%20languages" class="dashAnchor"></a><h2 id="supported-languages">Supported languages</h2>
   <p>In addition to English, Checkout supports the following languages:</p>
 
   <ul>
@@ -3502,13 +3502,13 @@ window.addEventListener('popstate', function() {
   <p>Checkout also uses the locale to format numbers and currencies. For example, when loading Checkout with currency set to <strong>EUR</strong> and locale set to <strong>auto</strong>, a browser configured to use English (en) could see <strong>&euro;25.00</strong> while one configured for Hungarian (hu) would see <strong>25,00 &euro;</strong>. If you provide a specific locale, Checkout will use that locale for number and currency formatting.</p>
 </section>
 <section>
-  <h2 id="does-checkout-require-https">HTTPS requirements</h2>
+  <a id="https-requirements" name="//apple_ref/cpp/Section/HTTPS%20requirements" class="dashAnchor"></a><h2 id="does-checkout-require-https">HTTPS requirements</h2>
     <p>All submissions of payment info using Checkout are made via a secure HTTPS connection. However, in order to protect yourself from certain forms of man-in-the-middle attacks, you must serve the page containing the payment form over HTTPS as well. In short, the address of the page containing Checkout must start with <strong>https://</strong> rather than just <strong>http://</strong>.</p>
 
     <p>If you are not familiar with the process of buying SSL certificates and integrating them with your server to enable a secure HTTPS connection, check out our <a href="security.html">security</a> documentation for more information.</p>
 </section>
 <section>
-  <h2 id="what-browsers-does-checkout-support">Supported browsers</h2>
+  <a id="supported-browsers" name="//apple_ref/cpp/Section/Supported%20browsers" class="dashAnchor"></a><h2 id="what-browsers-does-checkout-support">Supported browsers</h2>
 
     <p>Checkout strives to support all recent versions of major browsers. For the sake of security and providing the best experience to the majority of customers, we do not support browsers that are no longer receiving security updates and represent a small minority of traffic.</p>
 <ul>
@@ -3522,7 +3522,7 @@ window.addEventListener('popstate', function() {
 
 </section>
 <section>
-  <h2 id="how-do-i-prevent-the-checkout-popup-from-being-blocked">Preventing Checkout from being blocked</h2>
+  <a id="preventing-checkout-from-being-blocked" name="//apple_ref/cpp/Section/Preventing%20Checkout%20from%20being%20blocked" class="dashAnchor"></a><h2 id="how-do-i-prevent-the-checkout-popup-from-being-blocked">Preventing Checkout from being blocked</h2>
     <p id="integration-more-runloop">You can prevent Checkout's popup from being blocked by calling <code>handler.open</code> when the user clicks on an element on the page. Do not call <code>handler.open</code>  in a callback. This design indicates to the browser that the user is explicitly requesting the popup. Otherwise, mobile devices and some versions of Internet Explorer will block the popup and prevent users from checking out. This only applies to custom integrations.</p>
 
 <div class="code" data-language="javascript">
@@ -3584,7 +3584,7 @@ document.getElementById("failbutton").addEventListener("click", function() {
 
 
             </article>
-            <div class="docs-aside">
+            <div class="docs-aside" style="display: none;">
               <div class="docs-toc empty">
                 <h4>On this page</h4>
                 <ul class="docs-toc-list">

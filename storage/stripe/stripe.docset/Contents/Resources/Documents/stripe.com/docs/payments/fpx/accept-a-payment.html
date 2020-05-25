@@ -181,7 +181,7 @@
   <body class="">
     
       <div id="docs">
-        <div id="sidebar">
+        <div id="sidebar" style="display: none;">
             
   <div class="logo">
     <a href="../../recipes/switching-to-stripe.html" title="Stripe docs">
@@ -3009,7 +3009,7 @@
             <article id="content">
                 
   <header>
-  <h1>FPX payments</h1>
+  <a name="//apple_ref/cpp/Section/Top" class="dashAnchor"></a><h1>FPX payments</h1>
   <p>
     Use the Payment Intents and Payment Methods APIs to accept FPX, a common payment method in Malaysia.
   </p>
@@ -3029,7 +3029,7 @@
         <a>Android</a>
   </nav>
   <div class="tabs-content">
-    <div class="tabs-tab" id="web">      <h2 id="web-overview">Overview</h2>
+    <div class="tabs-tab" id="web">      <a id="overview" name="//apple_ref/cpp/Section/Overview" class="dashAnchor"></a><h2 id="web-overview">Overview</h2>
 <p>FPX is a <a href="../payment-methods.html#usage">single-use</a> payment method.
   Customers pay with FPX by redirecting from your website, sending you payment, then returning to your website where
   you get <a href="../payment-methods.html#payment-notification">immediate notification</a> on whether the payment succeeded or failed.</p>
@@ -3090,7 +3090,7 @@ Account</a>.</p>
 
 <div class="expando" aria-expanded="true">
   <a id="set-up-stripe" href="accept-a-payment.html#set-up-stripe" class="expando-trigger">
-    <h2 class="expando-title" data-no-anchor data-custom-toc-title="Set up Stripe">
+    <a id="1-set-up-stripe-server-side" name="//apple_ref/cpp/Section/1%20Set%20up%20Stripe%20Server-side" class="dashAnchor"></a><h2 class="expando-title" data-no-anchor data-custom-toc-title="Set up Stripe">
         <span class="expando-left-text">1</span>
       Set up Stripe
         <span class="tag optional">Server-side</span>
@@ -3337,7 +3337,7 @@ PM&gt; Install-Package Stripe.net</code></div></pre>
 
 <div class="expando" aria-expanded="true">
   <a id="create-payment-intent" href="accept-a-payment.html#create-payment-intent" class="expando-trigger">
-    <h2 class="expando-title" data-no-anchor data-custom-toc-title="Create a PaymentIntent">
+    <a id="2-create-a-paymentintent-server-side" name="//apple_ref/cpp/Section/2%20Create%20a%20PaymentIntent%20Server-side" class="dashAnchor"></a><h2 class="expando-title" data-no-anchor data-custom-toc-title="Create a PaymentIntent">
         <span class="expando-left-text">2</span>
       Create a PaymentIntent
         <span class="tag optional">Server-side</span>
@@ -3612,7 +3612,7 @@ var intent = service.Update("pi_1DRuHnHgsMRlo4MtwuIAUe6u", options);
 
 <div class="expando" aria-expanded="true">
   <a id="collect-payment-method-details" href="accept-a-payment.html#collect-payment-method-details" class="expando-trigger">
-    <h2 class="expando-title" data-no-anchor data-custom-toc-title="Collect payment method details using FPX Bank Element">
+    <a id="3-collect-payment-method-details-using-fpx-bank-element-client-side" name="//apple_ref/cpp/Section/3%20Collect%20payment%20method%20details%20using%20FPX%20Bank%20Element%20Client-side" class="dashAnchor"></a><h2 class="expando-title" data-no-anchor data-custom-toc-title="Collect payment method details using FPX Bank Element">
         <span class="expando-left-text">3</span>
       Collect payment method details using FPX Bank Element
         <span class="tag optional">Client-side</span>
@@ -3776,7 +3776,7 @@ fpxBank.mount('#fpx-bank-element');</code></div></pre>
 
 <div class="expando" aria-expanded="true">
   <a id="submit-payment" href="accept-a-payment.html#submit-payment" class="expando-trigger">
-    <h2 class="expando-title" data-no-anchor data-custom-toc-title="Submit the payment to Stripe">
+    <a id="4-submit-the-payment-to-stripe-client-side" name="//apple_ref/cpp/Section/4%20Submit%20the%20payment%20to%20Stripe%20Client-side" class="dashAnchor"></a><h2 class="expando-title" data-no-anchor data-custom-toc-title="Submit the payment to Stripe">
         <span class="expando-left-text">4</span>
       Submit the payment to Stripe
         <span class="tag optional">Client-side</span>
@@ -3898,7 +3898,7 @@ form.addEventListener('submit', async function(event) {
 
 <div class="expando" aria-expanded="true">
   <a id="order-fulfillment" href="accept-a-payment.html#order-fulfillment" class="expando-trigger">
-    <h2 class="expando-title" data-no-anchor data-custom-toc-title="Fulfill the order">
+    <a id="5-fulfill-the-order-server-side" name="//apple_ref/cpp/Section/5%20Fulfill%20the%20order%20Server-side" class="dashAnchor"></a><h2 class="expando-title" data-no-anchor data-custom-toc-title="Fulfill the order">
         <span class="expando-left-text">5</span>
       Fulfill the order
         <span class="tag optional">Server-side</span>
@@ -3917,7 +3917,7 @@ event and return to a status of <code>requires_payment_method</code>.</p>
 
 <div class="expando" aria-expanded="true">
   <a id="handle-bank-element" href="accept-a-payment.html#handle-bank-element" class="expando-trigger">
-    <h2 class="expando-title" data-no-anchor data-custom-toc-title="Handle FPX bank element events">
+    <a id="optional-handle-fpx-bank-element-events" name="//apple_ref/cpp/Section/Optional%20Handle%20FPX%20bank%20element%20events" class="dashAnchor"></a><h2 class="expando-title" data-no-anchor data-custom-toc-title="Handle FPX bank element events">
         <span class="expando-left-text">Optional</span>
       Handle FPX bank element events
     </h2>
@@ -3990,7 +3990,7 @@ event and return to a status of <code>requires_payment_method</code>.</p>
 
 <div class="expando" aria-expanded="true">
   <a id="handle-redirect" href="accept-a-payment.html#handle-redirect" class="expando-trigger">
-    <h2 class="expando-title" data-no-anchor data-custom-toc-title="Handle FPX redirect manually">
+    <a id="optional-handle-fpx-redirect-manually" name="//apple_ref/cpp/Section/Optional%20Handle%20FPX%20redirect%20manually" class="dashAnchor"></a><h2 class="expando-title" data-no-anchor data-custom-toc-title="Handle FPX redirect manually">
         <span class="expando-left-text">Optional</span>
       Handle FPX redirect manually
     </h2>
@@ -4223,7 +4223,7 @@ if (action &amp;&amp; action.type === 'redirect_to_url') {
 
 <div class="expando" aria-expanded="true">
   <a id="fpx-requirements" href="accept-a-payment.html#fpx-requirements" class="expando-trigger">
-    <h2 class="expando-title" data-no-anchor data-custom-toc-title="FPX requirements">
+    <a id="fpx-requirements" name="//apple_ref/cpp/Section/FPX%20requirements" class="dashAnchor"></a><h2 class="expando-title" data-no-anchor data-custom-toc-title="FPX requirements">
       FPX requirements
     </h2>
   </a>
@@ -4296,7 +4296,7 @@ if (action &amp;&amp; action.type === 'redirect_to_url') {
 
 <div class="expando" aria-expanded="true">
   <a id="bank-reference" href="accept-a-payment.html#bank-reference" class="expando-trigger">
-    <h2 class="expando-title" data-no-anchor data-custom-toc-title="Bank reference">
+    <a id="bank-reference" name="//apple_ref/cpp/Section/Bank%20reference" class="dashAnchor"></a><h2 class="expando-title" data-no-anchor data-custom-toc-title="Bank reference">
       Bank reference
     </h2>
   </a>
@@ -4389,7 +4389,7 @@ if (action &amp;&amp; action.type === 'redirect_to_url') {
 
 <div class="expando" aria-expanded="true">
   <a id="error-codes" href="accept-a-payment.html#error-codes" class="expando-trigger">
-    <h2 class="expando-title" data-no-anchor data-custom-toc-title="Error codes">
+    <a id="error-codes" name="//apple_ref/cpp/Section/Error%20codes" class="dashAnchor"></a><h2 class="expando-title" data-no-anchor data-custom-toc-title="Error codes">
       Error codes
     </h2>
   </a>
@@ -4435,7 +4435,7 @@ if (action &amp;&amp; action.type === 'redirect_to_url') {
 
 <div class="expando" aria-expanded="true">
   <a id="fpx-balance" href="accept-a-payment.html#fpx-balance" class="expando-trigger">
-    <h2 class="expando-title" data-no-anchor data-custom-toc-title="Payouts and Transfers from your FPX balance">
+    <a id="payouts-and-transfers-from-your-fpx-balance" name="//apple_ref/cpp/Section/Payouts%20and%20Transfers%20from%20your%20FPX%20balance" class="dashAnchor"></a><h2 class="expando-title" data-no-anchor data-custom-toc-title="Payouts and Transfers from your FPX balance">
       Payouts and Transfers from your FPX balance
     </h2>
   </a>
@@ -4586,7 +4586,7 @@ var payout = service.Create(options);
 </div>
 
 
-</div><div class="tabs-tab" id="ios">      <h2 id="ios-overview">Overview</h2>
+</div><div class="tabs-tab" id="ios">      <a id="overview" name="//apple_ref/cpp/Section/Overview" class="dashAnchor"></a><h2 id="ios-overview">Overview</h2>
 <p>The iOS SDK provides UI for accepting payments with FPX. You can integrate the iOS SDK with your app in two ways:</p>
 
 <ul>
@@ -4607,7 +4607,7 @@ and accept the FPX terms of service. Doing so requires an <a href="../../account
 Account</a>.</p>
 
 <section>
-  <h2 id="basic-integration">Basic Integration</h2>
+  <a id="basic-integration" name="//apple_ref/cpp/Section/Basic%20Integration" class="dashAnchor"></a><h2 id="basic-integration">Basic Integration</h2>
 
 <p>The <a href="https://github.com/stripe/stripe-ios/tree/master/Example/Basic%20Integration#readme">Basic integration</a> example app provides a demonstration of FPX support. To activate it, tap <strong>Settings</strong> at the top left, then enable FPX in the <strong>Additional Payment Options</strong> section.</p>
 
@@ -4638,7 +4638,7 @@ config.additionalPaymentOptions = STPPaymentOptionTypeFPX;</code></div></pre>
 </section>
 
 <section>
-  <h2 id="custom-integration">Custom integration</h2>
+  <a id="custom-integration" name="//apple_ref/cpp/Section/Custom%20integration" class="dashAnchor"></a><h2 id="custom-integration">Custom integration</h2>
 
 <p>The <a href="https://github.com/stripe/stripe-ios" class="external" target="_blank">iOS SDK</a> is open source, <a href="https://stripe.dev/stripe-ios/docs/index.html" class="external" target="_blank">fully documented</a>, and compatible with apps supporting iOS 10 or above.</p>
 
@@ -4847,7 +4847,7 @@ AppDelegate.m
 <p>To integrate FPX into your own custom payment UI, follow the steps below.</p></section>
 
 <section>
-  <h2 id="create-payment-intent">
+  <a id="step-1-create-a-paymentintent-on-the-server" name="//apple_ref/cpp/Section/Step%201%3A%20Create%20a%20PaymentIntent%20on%20the%20server" class="dashAnchor"></a><h2 id="create-payment-intent">
     <span class="step">Step 1:</span> Create a PaymentIntent on the server
   </h2>
 
@@ -5133,7 +5133,7 @@ var intent = service.Update("pi_1DRuHnHgsMRlo4MtwuIAUe6u", options);
 
 
 <section>
-  <h2 id="passing-to-client"><span class="step">Step 2:</span> Pass the PaymentIntent&rsquo;s client secret to the client</h2>
+  <a id="step-2-pass-the-paymentintents-client-secret-to-the-client" name="//apple_ref/cpp/Section/Step%202%3A%20Pass%20the%20PaymentIntent%E2%80%99s%20client%20secret%20to%20the%20client" class="dashAnchor"></a><h2 id="passing-to-client"><span class="step">Step 2:</span> Pass the PaymentIntent&rsquo;s client secret to the client</h2>
 
   <p>The PaymentIntent object contains a <a href="../../api/payment_intents/object.html#payment_intent_object-client_secret">client secret</a>, a unique key that you pass to your app to create a charge. This sample code assumes <code>createPaymentIntent</code> calls the server endpoint that you set up in Step 1 to create a PaymentIntent.</p>
 
@@ -5199,7 +5199,7 @@ MyCheckoutViewController.m
 </section>
 
 <section>
-  <h2 id="present-bank-selector"><span class="step">Step 3:</span> Present the bank selection UI</h2>
+  <a id="step-3-present-the-bank-selection-ui" name="//apple_ref/cpp/Section/Step%203%3A%20Present%20the%20bank%20selection%20UI" class="dashAnchor"></a><h2 id="present-bank-selector"><span class="step">Step 3:</span> Present the bank selection UI</h2>
   <p>Initialize and present an <a href="https://stripe.dev/stripe-ios/docs/Classes/STPBankSelectionViewController.html"><code>STPBankSelectionViewController</code></a>. This returns an <code>STPPaymentMethodParams</code> object based on the user&rsquo;s selection, which can be used to confirm the PaymentIntent.</p>
 
 <div class="tabs tabs-code animated" data-callback="codeTabsChanged">
@@ -5244,7 +5244,7 @@ func bankSelectionViewController(_ bankViewController: STPBankSelectionViewContr
 </section>
 
 <section>
-  <h2 id="handle-card-payment"><span class="step">Step 4:</span> Confirm the PaymentIntent</h2>
+  <a id="step-4-confirm-the-paymentintent" name="//apple_ref/cpp/Section/Step%204%3A%20Confirm%20the%20PaymentIntent" class="dashAnchor"></a><h2 id="handle-card-payment"><span class="step">Step 4:</span> Confirm the PaymentIntent</h2>
 
   <p>To initiate payment collection, you must <span class="tooltip-wrapper"><span class="tooltip-content definition">confirm</span><template class="tooltip"><span class="definition"><em>Confirming</em> a PaymentIntent indicates that the customer intends to pay with the current or provided payment method. Upon confirmation, the PaymentIntent attempts to initiate a payment.</span></template></span> that your customer intends to pay with the provided payment details.</p>
 
@@ -5332,7 +5332,7 @@ paymentManager.confirmPayment(withParams: paymentIntentParams, authenticationCon
 </section>
 
 <section>
-  <h2 id="fulfillment"><span class="step">Step 5:</span> Asynchronously fulfill the customer&rsquo;s order</h2>
+  <a id="step-5-asynchronously-fulfill-the-customers-order" name="//apple_ref/cpp/Section/Step%205%3A%20Asynchronously%20fulfill%20the%20customer%E2%80%99s%20order" class="dashAnchor"></a><h2 id="fulfillment"><span class="step">Step 5:</span> Asynchronously fulfill the customer&rsquo;s order</h2>
 
   <p>You can use the status returned by <code>STPPaymentHandler</code> to provide immediate feedback to your customers when the payment completes on the client. However, don&rsquo;t attempt to handle order fulfillment on the client side because customers may leave the app after payment is complete but before the fulfillment process initiates. Instead, make sure you can handle asynchronous events and receive notifications so that you can fulfill orders when payment succeeds.</p>
 
@@ -5483,7 +5483,7 @@ STPPaymentMethodParams *paymentMethodParams = [STPPaymentMethodParams paramsWith
 </section>
 <div class="expando" aria-expanded="true">
   <a id="fpx-requirements" href="accept-a-payment.html#fpx-requirements" class="expando-trigger">
-    <h2 class="expando-title" data-no-anchor data-custom-toc-title="FPX requirements">
+    <a id="fpx-requirements" name="//apple_ref/cpp/Section/FPX%20requirements" class="dashAnchor"></a><h2 class="expando-title" data-no-anchor data-custom-toc-title="FPX requirements">
       FPX requirements
     </h2>
   </a>
@@ -5556,7 +5556,7 @@ STPPaymentMethodParams *paymentMethodParams = [STPPaymentMethodParams paramsWith
 
 <div class="expando" aria-expanded="true">
   <a id="bank-reference" href="accept-a-payment.html#bank-reference" class="expando-trigger">
-    <h2 class="expando-title" data-no-anchor data-custom-toc-title="Bank reference">
+    <a id="bank-reference" name="//apple_ref/cpp/Section/Bank%20reference" class="dashAnchor"></a><h2 class="expando-title" data-no-anchor data-custom-toc-title="Bank reference">
       Bank reference
     </h2>
   </a>
@@ -5649,7 +5649,7 @@ STPPaymentMethodParams *paymentMethodParams = [STPPaymentMethodParams paramsWith
 
 <div class="expando" aria-expanded="true">
   <a id="error-codes" href="accept-a-payment.html#error-codes" class="expando-trigger">
-    <h2 class="expando-title" data-no-anchor data-custom-toc-title="Error codes">
+    <a id="error-codes" name="//apple_ref/cpp/Section/Error%20codes" class="dashAnchor"></a><h2 class="expando-title" data-no-anchor data-custom-toc-title="Error codes">
       Error codes
     </h2>
   </a>
@@ -5694,7 +5694,7 @@ STPPaymentMethodParams *paymentMethodParams = [STPPaymentMethodParams paramsWith
 </div>
 
 
-</div><div class="tabs-tab" id="android">     <h2 id="android-overview">Overview</h2>
+</div><div class="tabs-tab" id="android">     <a id="overview" name="//apple_ref/cpp/Section/Overview" class="dashAnchor"></a><h2 id="android-overview">Overview</h2>
 <p>The Android SDK provides a UI for accepting payments with FPX. You can integrate the Android SDK with your app in two ways:</p>
 
 <ul>
@@ -5715,7 +5715,7 @@ and accept the FPX terms of service. Doing so requires an <a href="../../account
 Account</a>.</p>
 
 <section>
-  <h2 id="basic-integration">Basic integration</h2>
+  <a id="basic-integration" name="//apple_ref/cpp/Section/Basic%20integration" class="dashAnchor"></a><h2 id="basic-integration">Basic integration</h2>
 
 <p>The <a href="https://github.com/stripe/stripe-android/tree/master/example#readme">example app</a> provides a demonstration of FPX support. &#8203;&#8203;You can access the FPX demonstration by launching the app and tapping <strong>FPX Payment Example</strong>.</p>
 
@@ -5811,7 +5811,7 @@ FpxPaymentActivity.kt
 </section>
 
 <section>
-  <h2 id="custom-integration">Custom integration</h2>
+  <a id="custom-integration" name="//apple_ref/cpp/Section/Custom%20integration" class="dashAnchor"></a><h2 id="custom-integration">Custom integration</h2>
 
 <p>The <a href="https://github.com/stripe/stripe-android" class="external" target="_blank">Android SDK</a> is open source and <a href="https://stripe.dev/stripe-android/" class="external" target="_blank">fully documented</a>.</p>
 
@@ -5901,7 +5901,7 @@ public class MyApp extends Application {
 <p>To integrate FPX into your own custom payment UI, follow the steps below.</p></section>
 
 <section>
-  <h2 id="create-payment-intent">
+  <a id="step-1-create-a-paymentintent-on-the-server" name="//apple_ref/cpp/Section/Step%201%3A%20Create%20a%20PaymentIntent%20on%20the%20server" class="dashAnchor"></a><h2 id="create-payment-intent">
     <span class="step">Step 1:</span> Create a PaymentIntent on the server
   </h2>
 
@@ -6187,7 +6187,7 @@ var intent = service.Update("pi_1DRuHnHgsMRlo4MtwuIAUe6u", options);
 
 
 <section>
-  <h2 id="passing-to-client"><span class="step">Step 2:</span> Pass the PaymentIntent&rsquo;s client secret to the client</h2>
+  <a id="step-2-pass-the-paymentintents-client-secret-to-the-client" name="//apple_ref/cpp/Section/Step%202%3A%20Pass%20the%20PaymentIntent%E2%80%99s%20client%20secret%20to%20the%20client" class="dashAnchor"></a><h2 id="passing-to-client"><span class="step">Step 2:</span> Pass the PaymentIntent&rsquo;s client secret to the client</h2>
 
   <p>The PaymentIntent object contains a <a href="../../api/payment_intents/object.html#payment_intent_object-client_secret">client secret</a>, a unique key that you pass to your app to create a charge. This sample code assumes <code>createPaymentIntent</code> calls the server endpoint that you set up in Step 1 to create a PaymentIntent.</p>
 
@@ -6268,7 +6268,7 @@ FpxPaymentActivity.kt
 </section>
 
 <section>
-  <h2 id="present-bank-selector"><span class="step">Step 3:</span> Present the bank selection UI</h2>
+  <a id="step-3-present-the-bank-selection-ui" name="//apple_ref/cpp/Section/Step%203%3A%20Present%20the%20bank%20selection%20UI" class="dashAnchor"></a><h2 id="present-bank-selector"><span class="step">Step 3:</span> Present the bank selection UI</h2>
   <p>Use <code>AddPaymentMethodActivityStarter</code> to present <code>AddPaymentMethodActivity</code>. If the user created a Payment Method, you can use <code>AddPaymentMethodActivityStarter.Result.fromIntent(data)</code> to obtain it in your Activity#onActivityResult(). Use the PaymentMethod to confirm the PaymentIntent.</p>
 
 <div class="tabs tabs-code animated" data-callback="codeTabsChanged">
@@ -6387,7 +6387,7 @@ FpxPaymentActivity.kt
 </section>
 
 <section>
-  <h2 id="handle-card-payment"><span class="step">Step 4:</span> Confirm the PaymentIntent</h2>
+  <a id="step-4-confirm-the-paymentintent" name="//apple_ref/cpp/Section/Step%204%3A%20Confirm%20the%20PaymentIntent" class="dashAnchor"></a><h2 id="handle-card-payment"><span class="step">Step 4:</span> Confirm the PaymentIntent</h2>
 
   <p>To initiate payment collection, you must <span class="tooltip-wrapper"><span class="tooltip-content definition">confirm</span><template class="tooltip"><span class="definition"><em>Confirming</em> a PaymentIntent indicates that the customer intends to pay with the current or provided payment method. Upon confirmation, the PaymentIntent attempts to initiate a payment.</span></template></span> that your customer intends to pay with the provided payment details.</p>
 
@@ -6549,7 +6549,7 @@ FpxPaymentActivity.kt
 </section>
 
 <section>
-  <h2 id="fulfillment"><span class="step">Step 5:</span> Asynchronously fulfill the customer&rsquo;s order</h2>
+  <a id="step-5-asynchronously-fulfill-the-customers-order" name="//apple_ref/cpp/Section/Step%205%3A%20Asynchronously%20fulfill%20the%20customer%E2%80%99s%20order" class="dashAnchor"></a><h2 id="fulfillment"><span class="step">Step 5:</span> Asynchronously fulfill the customer&rsquo;s order</h2>
 
   <p>You can use the status returned in Step 4 to provide immediate feedback to your customers when the payment completes on the client. &#8203;&#8203;However, don&rsquo;t attempt to handle order fulfillment on the client side because customers may leave the app after payment is complete but before the fulfillment process initiates. Instead, make sure you can handle asynchronous events and receive notifications so that you can fulfill orders when payment succeeds.</p>
 
@@ -6723,7 +6723,7 @@ FpxPaymentActivity.kt
 </section>
 <div class="expando" aria-expanded="true">
   <a id="fpx-requirements" href="accept-a-payment.html#fpx-requirements" class="expando-trigger">
-    <h2 class="expando-title" data-no-anchor data-custom-toc-title="FPX requirements">
+    <a id="fpx-requirements" name="//apple_ref/cpp/Section/FPX%20requirements" class="dashAnchor"></a><h2 class="expando-title" data-no-anchor data-custom-toc-title="FPX requirements">
       FPX requirements
     </h2>
   </a>
@@ -6796,7 +6796,7 @@ FpxPaymentActivity.kt
 
 <div class="expando" aria-expanded="true">
   <a id="bank-reference" href="accept-a-payment.html#bank-reference" class="expando-trigger">
-    <h2 class="expando-title" data-no-anchor data-custom-toc-title="Bank reference">
+    <a id="bank-reference" name="//apple_ref/cpp/Section/Bank%20reference" class="dashAnchor"></a><h2 class="expando-title" data-no-anchor data-custom-toc-title="Bank reference">
       Bank reference
     </h2>
   </a>
@@ -6889,7 +6889,7 @@ FpxPaymentActivity.kt
 
 <div class="expando" aria-expanded="true">
   <a id="error-codes" href="accept-a-payment.html#error-codes" class="expando-trigger">
-    <h2 class="expando-title" data-no-anchor data-custom-toc-title="Error codes">
+    <a id="error-codes" name="//apple_ref/cpp/Section/Error%20codes" class="dashAnchor"></a><h2 class="expando-title" data-no-anchor data-custom-toc-title="Error codes">
       Error codes
     </h2>
   </a>
@@ -6969,7 +6969,7 @@ FpxPaymentActivity.kt
 
 
             </article>
-            <div class="docs-aside">
+            <div class="docs-aside" style="display: none;">
               <div class="docs-toc empty">
                 <h4>On this page</h4>
                 <ul class="docs-toc-list">

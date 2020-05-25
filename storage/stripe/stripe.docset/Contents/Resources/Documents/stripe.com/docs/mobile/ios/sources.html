@@ -180,7 +180,7 @@
   <body class="">
     
       <div id="docs">
-        <div id="sidebar">
+        <div id="sidebar" style="display: none;">
             
   <div class="logo">
     <a href="../../recipes/switching-to-stripe.html" title="Stripe docs">
@@ -3008,7 +3008,7 @@
             <article id="content">
                 
   <header>
-  <h1>Getting started with Sources in the iOS SDK</h1>
+  <a name="//apple_ref/cpp/Section/Top" class="dashAnchor"></a><h1>Getting started with Sources in the iOS SDK</h1>
   <p>Learn how to use Sources in your iOS application.</p>
 
 
@@ -3034,7 +3034,7 @@
 </section>
 
 <section>
-  <h2 id="create-an-stpsource-object"><span class="step">Step 1:</span> Create an <code>STPSource</code> object</h2>
+  <a id="step-1-create-an-stpsource-object" name="//apple_ref/cpp/Section/Step%201%3A%20Create%20an%20STPSource%20object" class="dashAnchor"></a><h2 id="create-an-stpsource-object"><span class="step">Step 1:</span> Create an <code>STPSource</code> object</h2>
   <aside class="content note">
     <h3>SDK Reference</h3>
     <p>We also publish a <a href="http://stripe.github.io/stripe-ios">full SDK reference</a> that documents every method and property of the classes described here.</p>
@@ -3074,7 +3074,7 @@ STPAPIClient.shared().createSource(with: sourceParams, completion: completionBlo
 </section>
 
 <section>
-  <h2 id="check-if-further-action-is-required"><span class="step">Step 2:</span> Check if further action is required from your customer</h2>
+  <a id="step-2-check-if-further-action-is-required-from-your-customer" name="//apple_ref/cpp/Section/Step%202%3A%20Check%20if%20further%20action%20is%20required%20from%20your%20customer" class="dashAnchor"></a><h2 id="check-if-further-action-is-required"><span class="step">Step 2:</span> Check if further action is required from your customer</h2>
 <p>To determine whether further action is required from your customer, check the <code>flow</code> property on the newly created <code>STPSource</code> object. If <code>flow</code> is <code>STPSourceFlowNone</code>, no further action is required. For example, if you create a source for a card payment, its status is immediately set to <code>STPSourceStatusChargeable</code>. No additional customer action is needed, so you can tell your backend to create a charge with the source right away.</p>
 <div class="tabs tabs-code animated" data-callback="codeTabsChanged">
 <nav class="nav-languages has-copy-btn">
@@ -3153,7 +3153,7 @@ STPSourceParams *sourceParams = [STPSourceParams cardParamsWithCard:cardParams];
 <p>If the source requires further action from your customer, your iOS app should <em>not</em> tell your backend to create a charge request. Instead, your backend should listen for the <code>source.chargeable</code> webhook event to charge the source. This ensures that the source is charged even if the user never returns to your app after taking the required action. You can refer to our <a href="../../sources/best-practices.html">best practices</a> for more information on supporting different payment methods using webhooks.</p></section>
 
 <section>
-  <h2 id="redirecting-your-customer">Redirecting your customer to authorize a source</h2>
+  <a id="redirecting-your-customer-to-authorize-a-source" name="//apple_ref/cpp/Section/Redirecting%20your%20customer%20to%20authorize%20a%20source" class="dashAnchor"></a><h2 id="redirecting-your-customer">Redirecting your customer to authorize a source</h2>
 <p>For sources that require redirecting your customer to authorize the payment, you need to specify a return URL when you create the source. This allows your customer to be redirected back to your app after they authorize the payment. For this return URL, you can either use a custom URL scheme or a universal link supported by your app. For more information on registering and handling URLs in your app, refer to the Apple documentation:</p>
 
 <ul>
@@ -3240,7 +3240,7 @@ func application(_ application: UIApplication, continue userActivity: NSUserActi
 <p><code>STPRedirectContext</code>&rsquo;s completion block will be called after your customer returns to your app. At this point, the user may or may not have completed the authorization process. You can use webhooks on your own server to receive notification of a change in status of the source&rsquo;s chargeable state. See our <a href="../../sources/best-practices.html">best practices</a> guide for more information on how to build a confirmation screen when using sources.</p></section>
 
 <section>
-  <h2>More information</h2>
+  <a id="more-information" name="//apple_ref/cpp/Section/More%20information" class="dashAnchor"></a><h2>More information</h2>
 
   <p>If you'd like more help, check out our <a href="https://github.com/stripe/stripe-ios/tree/master/Example/Non-Card%20Payment%20Examples">example app</a> that demonstrates creating a payment using several different payment methods. In addition, here's some documentation you might want to read next:</p>
 
@@ -3282,7 +3282,7 @@ func application(_ application: UIApplication, continue userActivity: NSUserActi
 
 
             </article>
-            <div class="docs-aside">
+            <div class="docs-aside" style="display: none;">
               <div class="docs-toc empty">
                 <h4>On this page</h4>
                 <ul class="docs-toc-list">

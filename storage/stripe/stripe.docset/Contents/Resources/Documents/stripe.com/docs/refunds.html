@@ -180,7 +180,7 @@
   <body class="">
     
       <div id="docs">
-        <div id="sidebar">
+        <div id="sidebar" style="display: none;">
             
   <div class="logo">
     <a href="recipes/switching-to-stripe.html" title="Stripe docs">
@@ -3008,7 +3008,7 @@
             <article id="content">
                 
   <header>
-  <h1 id="refunding-and-canceling-payments">Refunding and canceling payments</h1>
+  <a name="//apple_ref/cpp/Section/Top" class="dashAnchor"></a><h1 id="refunding-and-canceling-payments">Refunding and canceling payments</h1>
 
   <p>Learn how to refund or cancel a payment.</p>
 </header>
@@ -3031,7 +3031,7 @@
 
 <p>Some refunds&mdash;those issued shortly after the original charge&mdash;appear in the form of a <em>reversal</em> instead of a refund. In the case of a reversal, the original charge drops off the customer&rsquo;s statement, and a separate credit is not issued.</p></section>
 <section>
-<h2 id="issuing">Issuing refunds</h2>
+<a id="issuing-refunds" name="//apple_ref/cpp/Section/Issuing%20refunds" class="dashAnchor"></a><h2 id="issuing">Issuing refunds</h2>
 
 <p>Refunds can be issued via the <a href="api/index.html">API</a> or the <a href="https://dashboard.stripe.com/test/dashboard">Dashboard</a> and are processed immediately. Once issued, a refund cannot be canceled.</p>
 
@@ -3039,7 +3039,7 @@
 
 
 <section>
-<h2 id="api">Using the API</h2>
+<a id="using-the-api" name="//apple_ref/cpp/Section/Using%20the%20API" class="dashAnchor"></a><h2 id="api">Using the API</h2>
 
 <p>To refund a payment via the API, create a <a href="api/index.html#create_refund">Refund</a> and provide the ID of the charge to be refunded.</p>
 <p>When you use a PaymentIntent to collect payment from a customer, Stripe creates a <a href="api/charges/object.html">charge</a> behind the scenes. To refund the customer&rsquo;s payment after the PaymentIntent has succeeded, <a href="api/index.html#create_refund">create a refund</a> using the PaymentIntent, which is equivalent to refunding the underlying charge. You can also optionally refund part of their payment by specifying an amount. You can perform refunds <a href="payments/cards/refunds.html#api">with the API</a> or <a href="payments/cards/refunds.html#dashboard">through the Dashboard</a>.</p>
@@ -3403,7 +3403,7 @@ var intent = service.Cancel("pi_HdnFpHL2nRdsRd5o3HCa", options);
 
 
 <section>
-<h2 id="dashboard">Using the Dashboard</h2>
+<a id="using-the-dashboard" name="//apple_ref/cpp/Section/Using%20the%20Dashboard" class="dashAnchor"></a><h2 id="dashboard">Using the Dashboard</h2>
 
 <p>To refund a payment via the Dashboard:</p>
 
@@ -3418,7 +3418,7 @@ var intent = service.Cancel("pi_HdnFpHL2nRdsRd5o3HCa", options);
 <p>Alternatively, you can go to the Dashboard page for the specific payment, and click <strong>Refund</strong> there. (Again, you&rsquo;ll be given the choice of a full or partial refund and prompted to pick a reason.)</p></section>
 
 <section>
-<h2 id="destination">Refund destinations</h2>
+<a id="refund-destinations" name="//apple_ref/cpp/Section/Refund%20destinations" class="dashAnchor"></a><h2 id="destination">Refund destinations</h2>
 
 <p>Refunds can be sent back only to the original payment method used in a charge. It&rsquo;s not possible to send a refund to a different destination (e.g., another card or bank account).</p>
 
@@ -3431,7 +3431,7 @@ var intent = service.Cancel("pi_HdnFpHL2nRdsRd5o3HCa", options);
 <p>For additional payment methods (<a href="ach.html">ACH</a>, <a href="sources/ideal.html">iDEAL</a>, etc.), refund handling can vary from bank to bank. If a customer has closed their method of payment, the bank may return the refund to us&mdash;at which point it is marked as <a href="payments/cards/refunds.html#failed-refunds">failed</a>.</p></section>
 
 <section>
-<h2 id="failed-refunds">Handling failed refunds</h2>
+<a id="handling-failed-refunds" name="//apple_ref/cpp/Section/Handling%20failed%20refunds" class="dashAnchor"></a><h2 id="failed-refunds">Handling failed refunds</h2>
 
 <p>A refund can fail if the customer&rsquo;s bank or card issuer has been unable to process it correctly (e.g., a closed bank account or a problem with the card). The bank returns the refunded amount to us and we add it back to your Stripe account balance. This process can take up to 30 days from the post date.</p>
 
@@ -3448,7 +3448,7 @@ var intent = service.Cancel("pi_HdnFpHL2nRdsRd5o3HCa", options);
 
 
 <section>
-<h2 id="tracing-refunds">Tracing a refund</h2>
+<a id="tracing-a-refund" name="//apple_ref/cpp/Section/Tracing%20a%20refund" class="dashAnchor"></a><h2 id="tracing-refunds">Tracing a refund</h2>
 
 <p>Once you initiate a refund, Stripe submits refund requests to your customer&rsquo;s bank or card issuer. Your customer sees the refund as a credit approximately 5-10 business days later, depending upon the bank.</p>
 
@@ -3506,7 +3506,7 @@ var intent = service.Cancel("pi_HdnFpHL2nRdsRd5o3HCa", options);
 
 
             </article>
-            <div class="docs-aside">
+            <div class="docs-aside" style="display: none;">
               <div class="docs-toc empty">
                 <h4>On this page</h4>
                 <ul class="docs-toc-list">

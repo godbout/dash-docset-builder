@@ -180,7 +180,7 @@
   <body class="">
     
       <div id="docs">
-        <div id="sidebar">
+        <div id="sidebar" style="display: none;">
             
   <div class="logo">
     <a href="../../recipes/switching-to-stripe.html" title="Stripe docs">
@@ -3008,7 +3008,7 @@
             <article id="content">
                 
   <header>
-  <h1>API access to reports</h1>
+  <a name="//apple_ref/cpp/Section/Top" class="dashAnchor"></a><h1>API access to reports</h1>
   <p>Access Stripe's reports for finance/accounting tasks via API.</p>
 </header>
 
@@ -3025,7 +3025,7 @@
 </ul></section>
 
 <section>
-<h2 id="report-types">Report types</h2>
+<a id="report-types" name="//apple_ref/cpp/Section/Report%20types" class="dashAnchor"></a><h2 id="report-types">Report types</h2>
 
 <p>Of the reports available from the Dashboard <a href="https://dashboard.stripe.com/reports/balance">financial reports pages</a>:</p>
 
@@ -3145,7 +3145,7 @@ that explicitly selects to receive <code>reporting.report_type.updated</code> ev
 receive such an event, you can then request report runs accordingly. For details, see our <a href="api.html#integration-pattern">recommended integration pattern</a>.</p></section>
 
 <section>
-<h2 id="report-runs">Creating and accessing report runs</h2>
+<a id="creating-and-accessing-report-runs" name="//apple_ref/cpp/Section/Creating%20and%20accessing%20report%20runs" class="dashAnchor"></a><h2 id="report-runs">Creating and accessing report runs</h2>
 
 <p>The <code>ReportRun</code> API object represents an instance of a <code>ReportType</code> generated with specific parameters. (Required and optional parameters for each report type are documented in the <a href="api.html#reports-reference">Reports reference</a>.) For example, you can <a href="../../api/index.html#create_reporting_report_run">create</a> a <strong>Balance Change From Activity Summary</strong> report for April 2018 as follows:</p>
 
@@ -3377,7 +3377,7 @@ var reportRun = service.Create(options);
 </ol></section>
 
 <section>
-<h2 id="reports-reference">Reports reference</h2>
+<a id="reports-reference" name="//apple_ref/cpp/Section/Reports%20reference" class="dashAnchor"></a><h2 id="reports-reference">Reports reference</h2>
 
 <p>This section lists the report types available via API. To see the results schema and example data, visit the Dashboard pages linked in the descriptions below.</p>
 
@@ -4299,7 +4299,7 @@ var reportRun = service.Create(options);
 
 
             </article>
-            <div class="docs-aside">
+            <div class="docs-aside" style="display: none;">
               <div class="docs-toc empty">
                 <h4>On this page</h4>
                 <ul class="docs-toc-list">

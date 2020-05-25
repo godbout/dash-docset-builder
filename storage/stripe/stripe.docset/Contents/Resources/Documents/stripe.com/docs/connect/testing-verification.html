@@ -180,7 +180,7 @@
   <body class="">
     
       <div id="docs">
-        <div id="sidebar">
+        <div id="sidebar" style="display: none;">
             
   <div class="logo">
     <a href="../recipes/switching-to-stripe.html" title="Stripe docs">
@@ -3008,7 +3008,7 @@
             <article id="content">
                 
   <header>
-  <h1>Testing Custom Account Verification </h1>
+  <a name="//apple_ref/cpp/Section/Top" class="dashAnchor"></a><h1>Testing Custom Account Verification </h1>
   <p>A walk-through of testing different verification states for <a href="https://stripe.com/connect">Connect</a> Custom accounts using your test API key.</p>
 </header>
 
@@ -3027,7 +3027,7 @@ The content on this page applies only to Express and Custom accounts.
 </section>
 
 <section>
-<h2 id="initial-requirements">Testing initial requirements</h2>
+<a id="testing-initial-requirements" name="//apple_ref/cpp/Section/Testing%20initial%20requirements" class="dashAnchor"></a><h2 id="initial-requirements">Testing initial requirements</h2>
 
 <p>Let&rsquo;s start by creating a new Custom account in test mode, adding a bank account, and showing that the account holder accepted the Stripe Services Agreement. Explicit Services Agreement acceptance is <a href="updating-accounts.html#tos-acceptance">required for making payouts</a>. For this example, the <code>business_type</code> is set to <code>company</code> to illustrate a more complex scenario.</p>
 <div class="code" data-language="curl">
@@ -3202,7 +3202,7 @@ The content on this page applies only to Express and Custom accounts.
 <p>At this stage, all required information is collected and charges are enabled for the account. You should make sure you received an <code>account.updated</code> webhook and that  <code>charges_enabled=true</code> and <code>requirements[currently_due]=nil</code>.</p></section>
 
 <section>
-<h2 id="testing-thresholds">Testing thresholds</h2>
+<a id="testing-thresholds" name="//apple_ref/cpp/Section/Testing%20thresholds" class="dashAnchor"></a><h2 id="testing-thresholds">Testing thresholds</h2>
 
 <p>Whether you use <span class="tooltip-wrapper"><span class="tooltip-content definition">upfront</span><template class="tooltip"><span class="definition"><em>Upfront onboarding</em> is an onboarding experience that enables you to gradually collect required verification information from your users. There&rsquo;s a minimum amount at sign-up and you collect more information as the connected account earns more revenue.</span></template></span> or <span class="tooltip-wrapper"><span class="tooltip-content definition">incremental onboarding</span><template class="tooltip"><span class="definition"><em>Incremental onboarding</em> is an onboarding experience that enables you to collect all required verification information from your users at sign-up.</span></template></span>, Stripe might request more information about connected accounts as different thresholds are reached. Sometimes these thresholds are triggered by verification failures or <a href="https://www.treasury.gov/about/organizational-structure/offices/Pages/Office-of-Foreign-Assets-Control.aspx">OFAC</a> checks. Other times they&rsquo;re triggered by a processing or time component. For example, more information might be required after $1,500 in charges or 30 days after an account is created (whichever comes first). To find out what information is required and by when, you can check the <code>requirements[eventually_due]</code> array and the <code>requirements[current_deadline]</code> timestamp.</p>
 
@@ -3277,7 +3277,7 @@ The content on this page applies only to Express and Custom accounts.
 
 
             </article>
-            <div class="docs-aside">
+            <div class="docs-aside" style="display: none;">
               <div class="docs-toc empty">
                 <h4>On this page</h4>
                 <ul class="docs-toc-list">

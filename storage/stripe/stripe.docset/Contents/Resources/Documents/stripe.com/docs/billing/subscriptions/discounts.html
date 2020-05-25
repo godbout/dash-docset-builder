@@ -180,7 +180,7 @@
   <body class="">
     
       <div id="docs">
-        <div id="sidebar">
+        <div id="sidebar" style="display: none;">
             
   <div class="logo">
     <a href="../../recipes/switching-to-stripe.html" title="Stripe docs">
@@ -3008,7 +3008,7 @@
             <article id="content">
                 
   <header>
-  <h1>Applying discounts to subscriptions</h1>
+  <a name="//apple_ref/cpp/Section/Top" class="dashAnchor"></a><h1>Applying discounts to subscriptions</h1>
   <p>Reduce the amount charged to a customer by discounting their subscription with a coupon.</p>
 </header>
 
@@ -3024,7 +3024,7 @@
 <p>You can even define a coupon that must be redeemed by a certain date or is limited to a set number of redemptions (across all of your customers).</p></section>
 
 <section>
-  <h2 id="creating-coupons">Creating coupons</h2>
+  <a id="creating-coupons" name="//apple_ref/cpp/Section/Creating%20coupons" class="dashAnchor"></a><h2 id="creating-coupons">Creating coupons</h2>
   <aside class="note">
     <h3>Coupon durations</h3>
     <p>A coupon's duration applies on a per-customer or per-subscription basis, starting when the coupon is applied to the customer or subscription. For example, a coupon with a four month duration applies to the first four months of a customer's monthly subscription. If the subscription is yearly, the coupon is applied to the full invoice for the first year. And for a weekly subscription, a four month coupon applies to every invoice in the first four months.</p>
@@ -3180,7 +3180,7 @@ Coupon coupon = service.Create(options);
 </section>
 
 <section>
-  <h2 id="discounting-subscriptions">Discounting subscriptions</h2>
+  <a id="discounting-subscriptions" name="//apple_ref/cpp/Section/Discounting%20subscriptions" class="dashAnchor"></a><h2 id="discounting-subscriptions">Discounting subscriptions</h2>
 <p>Once you&rsquo;ve created a coupon, create a discount by applying the coupon to a subscription. You can do this when creating the subscription, as in the following code, or by <a href="../../api/index.html#update_subscription">updating an existing subscription</a>.</p>
 <div class="tabs tabs-code animated" data-callback="codeTabsChanged" data-platform="server">
 <nav class="nav-languages has-copy-btn">
@@ -3324,7 +3324,7 @@ Subscription subscription = service.Create(options);
 </section>
 
 <section>
-  <h2 id="discounting-customers">Discounting customers</h2>
+  <a id="discounting-customers" name="//apple_ref/cpp/Section/Discounting%20customers" class="dashAnchor"></a><h2 id="discounting-customers">Discounting customers</h2>
   <aside class="note">
     <h3>Discount priority</h3>
     <p>Only one coupon can apply to an invoice; it's not possible to stack two or more coupons. A coupon attached to a subscription takes priority over a coupon attached to a customer.</p>
@@ -3335,15 +3335,15 @@ Subscription subscription = service.Create(options);
 <p>Attach a coupon to a customer when the <a href="../../api/index.html#create_customer">customer is created</a>, or by <a href="../../api/index.html#update_customer">updating the customer</a>.</p></section>
 
 <section>
-  <h2 id="other">Negative invoice items and customer balances</h2>
+  <a id="negative-invoice-items-and-customer-balances" name="//apple_ref/cpp/Section/Negative%20invoice%20items%20and%20customer%20balances" class="dashAnchor"></a><h2 id="other">Negative invoice items and customer balances</h2>
 <p>Although coupons are the most common way to discount a subscription, you can also do so via negative <a href="../../subscriptions/invoices.html#adding-draft-invoice-items">invoice items</a> or by adding a negative <a href="../../api/index.html#customer_object-balance">customer balance</a> to the customer. Of the two options, we recommend using invoice items, which provide a better paper trail as to what discount was created, when, and why.</p></section>
 
 <section>
-  <h2 id="deleting">Deleting coupons</h2>
+  <a id="deleting-coupons" name="//apple_ref/cpp/Section/Deleting%20coupons" class="dashAnchor"></a><h2 id="deleting">Deleting coupons</h2>
 <p>You can delete coupons via the Dashboard or the API. However, deleting a coupon does not remove the applicable discount from any subscription or customer. Deleting a coupon does prevent it from being applied to future subscriptions or customers, though.</p></section>
 
 <section>
-  <h2>Next steps</h2>
+  <a id="next-steps" name="//apple_ref/cpp/Section/Next%20steps" class="dashAnchor"></a><h2>Next steps</h2>
   <p>Now that you understand how to use coupons to create discounts, you may want to check out:</p>
 <ul class="next-steps">
     <li><a href="../../subscriptions/changing.html"><span>Changing Subscriptions</span></a></li>
@@ -3384,7 +3384,7 @@ Subscription subscription = service.Create(options);
 
 
             </article>
-            <div class="docs-aside">
+            <div class="docs-aside" style="display: none;">
               <div class="docs-toc empty">
                 <h4>On this page</h4>
                 <ul class="docs-toc-list">

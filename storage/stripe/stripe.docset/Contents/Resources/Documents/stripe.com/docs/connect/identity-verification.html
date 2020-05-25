@@ -180,7 +180,7 @@
   <body class="">
     
       <div id="docs">
-        <div id="sidebar">
+        <div id="sidebar" style="display: none;">
             
   <div class="logo">
     <a href="../recipes/switching-to-stripe.html" title="Stripe docs">
@@ -3008,7 +3008,7 @@
             <article id="content">
                 
   <header>
-  <h1>Identity verification for Custom accounts </h1>
+  <a name="//apple_ref/cpp/Section/Top" class="dashAnchor"></a><h1>Identity verification for Custom accounts </h1>
   <p>Identity verification of Stripe accounts you manage is an important&mdash;and required&mdash;step toward reducing risk on your platform when using <a href="https://stripe.com/connect">Connect</a>.</p>
 </header>
 
@@ -3039,7 +3039,7 @@ The content on this page applies only to Custom accounts.
 </section>
 
 <section>
-<h2 id="verification-requirements">Verification requirements</h2>
+<a id="verification-requirements" name="//apple_ref/cpp/Section/Verification%20requirements" class="dashAnchor"></a><h2 id="verification-requirements">Verification requirements</h2>
 
 <p>Verification requirements vary depending on:</p>
 
@@ -3064,7 +3064,7 @@ The content on this page applies only to Custom accounts.
   <li>A scan of an ID document</li>
 </ul>
 
-<h2 id="onboarding-flows">Onboarding flows</h2>
+<a id="onboarding-flows" name="//apple_ref/cpp/Section/Onboarding%20flows" class="dashAnchor"></a><h2 id="onboarding-flows">Onboarding flows</h2>
 
 <p>As the platform, you need to decide if you want to collect the required information from your connected accounts upfront or incrementally (incremental onboarding). Some pros and cons for each method are listed below.</p>
   <table>
@@ -3108,7 +3108,7 @@ The content on this page applies only to Custom accounts.
 </section>
 
 <section>
-<h2 id="business-type">Business type</h2>
+<a id="business-type" name="//apple_ref/cpp/Section/Business%20type" class="dashAnchor"></a><h2 id="business-type">Business type</h2>
 
 <p>The specific KYC information required depends on the <a href="../api/accounts/object.html#account_object-business_type">type of business entity</a> involved. They are:</p>
 
@@ -3122,7 +3122,7 @@ The content on this page applies only to Custom accounts.
 <p>See <a href="required-verification-information.html">Required verification information</a> for a list of requirements for different business types by country. When you know what information to collect, you can read more about <a href="identity-verification-api.html">handling identity verification with the API</a>.</p>  </section>
 
   <section>
-<h2 id="business-structure">Business structure <span class="optional tag">U.S. only</span></h2>
+<a id="business-structure-us-only" name="//apple_ref/cpp/Section/Business%20structure%20U.S.%20only" class="dashAnchor"></a><h2 id="business-structure">Business structure <span class="optional tag">U.S. only</span></h2>
 
 <p>For all business types other than <code>individual</code>, you can further classify your user&rsquo;s business by identifying its legal (business) structure. A business structure describes the details of a business entity such as day-to-day operations, tax burdens, liability, and organizational schema. You can classify by using <a href="../api/accounts/create.html#create_account-company-structure">company[structure]</a> in the <code>Account</code> object.</p>
 
@@ -3273,7 +3273,7 @@ The content on this page applies only to Custom accounts.
   </section>
 
 <section>
-<h2 id="internationalization-and-localization">Internationalization and localization</h2>
+<a id="internationalization-and-localization" name="//apple_ref/cpp/Section/Internationalization%20and%20localization" class="dashAnchor"></a><h2 id="internationalization-and-localization">Internationalization and localization</h2>
 
 <p>If you support users in multiple countries, you&rsquo;ll need to consider internationalization and localization when asking for information. Creating an interface that uses not only the user&rsquo;s preferred language but also the proper localized terminology results in a smoother onboarding experience.</p>
 
@@ -3288,7 +3288,7 @@ The content on this page applies only to Custom accounts.
 <p>You can find recommended country-specific labels along with the other <a href="required-verification-information.html">required verification information</a>.</p></section>
 
 <section>
-  <h2>Further reading</h2>
+  <a id="further-reading" name="//apple_ref/cpp/Section/Further%20reading" class="dashAnchor"></a><h2>Further reading</h2>
   <p>Now that you've learned the basics of identity verification, you may want to read:</p>
 <ul class="next-steps">
     <li><a href="updating-accounts.html"><span>Updating Accounts</span></a></li>
@@ -3332,7 +3332,7 @@ The content on this page applies only to Custom accounts.
 
 
             </article>
-            <div class="docs-aside">
+            <div class="docs-aside" style="display: none;">
               <div class="docs-toc empty">
                 <h4>On this page</h4>
                 <ul class="docs-toc-list">

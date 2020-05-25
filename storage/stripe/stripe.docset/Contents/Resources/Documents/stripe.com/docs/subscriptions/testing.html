@@ -180,7 +180,7 @@
   <body class="">
     
       <div id="docs">
-        <div id="sidebar">
+        <div id="sidebar" style="display: none;">
             
   <div class="logo">
     <a href="../recipes/switching-to-stripe.html" title="Stripe docs">
@@ -3008,7 +3008,7 @@
             <article id="content">
                 
   <header>
-  <h1>Testing Stripe Billing</h1>
+  <a name="//apple_ref/cpp/Section/Top" class="dashAnchor"></a><h1>Testing Stripe Billing</h1>
   <p>Learn how to test your billing integration.</p>
 </header>
 
@@ -3016,13 +3016,13 @@
 <p>Check out some common scenarios to help you thoroughly test your billing integration before taking it live. You should also use our <a href="../testing.html">general testing doc</a>, specifically its list of <a href="../testing.html#cards">test credit card numbers</a>.</p></section>
 
 <section>
-  <h2 id="trials">Testing subscription trial periods</h2>
+  <a id="testing-subscription-trial-periods" name="//apple_ref/cpp/Section/Testing%20subscription%20trial%20periods" class="dashAnchor"></a><h2 id="trials">Testing subscription trial periods</h2>
 <p>A common need is to test how your integration handles trial periods without waiting a full trial period to see the results. One solution is to create a new subscription with a <code>trial_end</code> value only a few minutes in the future.</p>
 
 <p>Using this approach, you won&rsquo;t see a <code>customer.subscription.trial_will_end</code> event notification (which occurs three days before a trial ends), but in all other ways the logic is the same as a subscription with a longer trial period.</p></section>
 
 <section>
-  <h2 id="webhooks">Testing subscription webhook notifications</h2>
+  <a id="testing-subscription-webhook-notifications" name="//apple_ref/cpp/Section/Testing%20subscription%20webhook%20notifications" class="dashAnchor"></a><h2 id="webhooks">Testing subscription webhook notifications</h2>
 <p>Proper use of subscriptions relies heavily on using <a href="../webhooks.html">webhooks</a>. You can test webhooks by either creating actual test subscriptions or by triggering event notifications with the <a href="../stripe-cli.html">Stripe CLI</a> or via the <a href="https://dashboard.stripe.com/test/account/webhooks">Dashboard</a>.</p>
 
 <p>After you set up the Stripe CLI and link to your Stripe account, you can trigger events from the <a href="../billing/subscriptions.html">Subscription Lifecycle</a> to test your webhook integration. By using the Stripe CLI instead of the Dashboard to trigger events, you can see event notifications on your server as they are received. This means you can check your webhook integration directly without additional complicating factors such as network tunnels or firewalls.</p>
@@ -3030,7 +3030,7 @@
 <p>When you use either the Stripe CLI or the Dashboard to trigger events, the event your webhook receives contains fake data that doesn&rsquo;t correlate to subscription information. The most reliable way to test webhook notifications is to create actual test subscriptions and handle the corresponding events.</p></section>
 
 <section>
-  <h2 id="payment-failures">Testing payment failures</h2>
+  <a id="testing-payment-failures" name="//apple_ref/cpp/Section/Testing%20payment%20failures" class="dashAnchor"></a><h2 id="payment-failures">Testing payment failures</h2>
 <p>Use specific <a href="../testing.html#cards">test credit card numbers</a> to trigger payment failures for subscriptions and invoices.</p>
 
 <p>Some subscription updates cause Stripe to invoice the subscription and attempt payment immediately (this synchronous payment attempt can occur on the initial invoice, or on certain invoice updates.)
@@ -3042,7 +3042,7 @@ If this attempt fails, the subscription is created in an <code>incomplete</code>
 If required, you can use that period to update the customer&rsquo;s payment method to a working test card to see what happens for a successful retry.</p></section>
 
 <section>
-  <h2 id="payment-failures">Testing payments that require 3D Secure</h2>
+  <a id="testing-payments-that-require-3d-secure" name="//apple_ref/cpp/Section/Testing%20payments%20that%20require%203D%20Secure" class="dashAnchor"></a><h2 id="payment-failures">Testing payments that require 3D Secure</h2>
 <p>Use the <a href="../testing.html#three-ds-cards"><strong>4000 0000 0000 3063</strong></a> card to simulate 3D Secure triggering for subscriptions and invoices.
 You can also write <a href="https://dashboard.stripe.com/test/radar/rules">custom Radar rules in testmode</a> to trigger authentication.</p>
 
@@ -3052,7 +3052,7 @@ If the invoice belongs to a subscription in an <code>incomplete</code> status, t
 When a payment attempt fails, the authentication attempt is unsuccessful and the invoice remains <code>open</code>.</p></section>
 
 <section>
-  <h2 id="ach-credit-transfer">Testing ACH credit transfer payments for invoices</h2>
+  <a id="testing-ach-credit-transfer-payments-for-invoices" name="//apple_ref/cpp/Section/Testing%20ACH%20credit%20transfer%20payments%20for%20invoices" class="dashAnchor"></a><h2 id="ach-credit-transfer">Testing ACH credit transfer payments for invoices</h2>
 <p>To test manual payments on invoices via ACH credit transfers:</p>
 
 <ol>
@@ -3191,7 +3191,7 @@ Source source = service.Update("src_19Q3AILlRB0eXbMt81RVDnM9", options);
 </section>
 
 <section>
-  <h2 id="customer-tax-id-verfication">Testing customer tax ID verification</h2>
+  <a id="testing-customer-tax-id-verification" name="//apple_ref/cpp/Section/Testing%20customer%20tax%20ID%20verification" class="dashAnchor"></a><h2 id="customer-tax-id-verfication">Testing customer tax ID verification</h2>
 <p>Use these magic tax IDs to trigger certain verification conditions in test mode. The tax ID type should be either the EU VAT Number or Australian Business Number (ABN).</p>
 <table>
   <thead>
@@ -3237,7 +3237,7 @@ Source source = service.Update("src_19Q3AILlRB0eXbMt81RVDnM9", options);
 
 
             </article>
-            <div class="docs-aside">
+            <div class="docs-aside" style="display: none;">
               <div class="docs-toc empty">
                 <h4>On this page</h4>
                 <ul class="docs-toc-list">

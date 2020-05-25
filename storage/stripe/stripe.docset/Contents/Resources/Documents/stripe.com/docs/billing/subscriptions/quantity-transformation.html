@@ -180,7 +180,7 @@
   <body class="">
     
       <div id="docs">
-        <div id="sidebar">
+        <div id="sidebar" style="display: none;">
             
   <div class="logo">
     <a href="../../recipes/switching-to-stripe.html" title="Stripe docs">
@@ -3008,7 +3008,7 @@
             <article id="content">
                 
   <header>
-  <h1 id="quantity-transformation">Quantity transformation</h1>
+  <a name="//apple_ref/cpp/Section/Top" class="dashAnchor"></a><h1 id="quantity-transformation">Quantity transformation</h1>
 
   <p>Modifying usage before calculating total cost.</p>
 </header>
@@ -3106,13 +3106,13 @@
 
 </section>
 <section>
-  <h2 id="rounding">Rounding</h2>
+  <a id="rounding" name="//apple_ref/cpp/Section/Rounding" class="dashAnchor"></a><h2 id="rounding">Rounding</h2>
 
   <p>The previous example showed a subscription that charges for every 5 users rounding up, i.e. 6 divided by 5 results in a quantity of 2. For use cases where you do not want to charge for a portion of usage, like charging for every full gigabyte of usage of a broadband internet service, you can also pass <code>down</code> as the value of <code>round</code>.</p>
 
 </section>
 <section>
-  <h2 id="metered-usage">Metered usage</h2>
+  <a id="metered-usage" name="//apple_ref/cpp/Section/Metered%20usage" class="dashAnchor"></a><h2 id="metered-usage">Metered usage</h2>
 
   <p>You can also apply <code>transform_quantity</code> in conjunction with metered billing. This transformation applies to prices with <code>recurring[usage_type]=metered</code> at the end of a billing period in the same way it applies to <code>quantity</code> for prices with <code>recurring[usage_type]=licensed</code>.</p>
 
@@ -3197,7 +3197,7 @@
 
 
             </article>
-            <div class="docs-aside">
+            <div class="docs-aside" style="display: none;">
               <div class="docs-toc empty">
                 <h4>On this page</h4>
                 <ul class="docs-toc-list">

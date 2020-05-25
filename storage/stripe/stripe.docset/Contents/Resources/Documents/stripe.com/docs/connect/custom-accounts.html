@@ -180,7 +180,7 @@
   <body class="">
     
       <div id="docs">
-        <div id="sidebar">
+        <div id="sidebar" style="display: none;">
             
   <div class="logo">
     <a href="../recipes/switching-to-stripe.html" title="Stripe docs">
@@ -3008,7 +3008,7 @@
             <article id="content">
                 
   <header>
-  <h1>Using Connect with Custom accounts </h1>
+  <a name="//apple_ref/cpp/Section/Top" class="dashAnchor"></a><h1>Using Connect with Custom accounts </h1>
   <p>Use Custom accounts with <a href="https://stripe.com/connect">Connect</a> to control your users' entire  experience.</p>
 </header>
 
@@ -3036,7 +3036,7 @@
 </aside></section>
 
 <section id="requirements-for-creating-managed-accounts">
-<h2 id="requirements">Requirements for creating Custom accounts</h2>
+<a id="requirements-for-creating-custom-accounts" name="//apple_ref/cpp/Section/Requirements%20for%20creating%20Custom%20accounts" class="dashAnchor"></a><h2 id="requirements">Requirements for creating Custom accounts</h2>
 
 <p>To use Custom accounts, you must meet all of these requirements:</p>
 
@@ -3058,7 +3058,7 @@
 <p>Note there&rsquo;s an <a href="https://stripe.com/connect/pricing">additional cost</a> for active Custom accounts. A Custom account is considered active if it has received at least one successful payout in a given month.</p></section>
 
 <section>
-  <h2 id="country"><span class="step">Step 1:</span> Identify the country to use</h2>
+  <a id="step-1-identify-the-country-to-use" name="//apple_ref/cpp/Section/Step%201%3A%20Identify%20the%20country%20to%20use" class="dashAnchor"></a><h2 id="country"><span class="step">Step 1:</span> Identify the country to use</h2>
 <p>The only piece of information you need to create a Custom account is the country the individual or business will primarily operate in. Everything else can be collected and updated at a later time.</p>
 
 <p>For example, if you are in the United States and the business or user you&rsquo;re creating an account for is legally represented in Canada, use <code>CA</code> as the country for the account being created.</p>
@@ -3066,7 +3066,7 @@
 <p>The country value also determines the <a href="required-verification-information.html">required verification information</a> for the connected account.</p></section>
 
 <section id="creating-a-managed-account">
-  <h2 id="create"><span class="step">Step 2:</span> Create a Custom account</h2>
+  <a id="step-2-create-a-custom-account" name="//apple_ref/cpp/Section/Step%202%3A%20Create%20a%20Custom%20account" class="dashAnchor"></a><h2 id="create"><span class="step">Step 2:</span> Create a Custom account</h2>
 
 <p>At the bare minimum, to create and connect a Custom account, set <code>type</code> to <code>custom</code> in the account creation request and provide a country and the <a href="capabilities-overview.html#capabilities-list">appropriate capabilities</a>.</p>
 <div class="tabs tabs-code animated" data-callback="codeTabsChanged" data-platform="server">
@@ -3226,7 +3226,7 @@ var account = service.Create(options);
 </section>
 
 <section>
-  <h2 id="identity-verification"><span class="step">Step 3:</span> Start the identity verification process</h2>
+  <a id="step-3-start-the-identity-verification-process" name="//apple_ref/cpp/Section/Step%203%3A%20Start%20the%20identity%20verification%20process" class="dashAnchor"></a><h2 id="identity-verification"><span class="step">Step 3:</span> Start the identity verification process</h2>
 <p>An account created with only a country is fairly limited: it can only receive a small amount of funds. If you wish to enable payouts and keep the account in good standing, you need to <a href="identity-verification.html">provide more information</a> about the account holder. The <a href="required-verification-information.html">required verification information</a> page lists the minimum and likely identity verification requirements.</p>
 
 <p>The easiest way to collect this information is to integrate <a href="connect-onboarding.html">Connect Onboarding</a>, which lets Stripe take care of the verification complexity. Otherwise, you must not only write your own API calls for initial integration, but also continue to check for changing onboarding requirements because of changing regulations around the world.</p>
@@ -3240,12 +3240,12 @@ var account = service.Create(options);
 </aside></section>
 
 <section>
-<h2 id="webhooks">Webhooks</h2>
+<a id="webhooks" name="//apple_ref/cpp/Section/Webhooks" class="dashAnchor"></a><h2 id="webhooks">Webhooks</h2>
 
 <p>After an account is created, all notifications about changes to the account are sent to your <a href="webhooks.html">webhooks</a> as <code>account.updated</code> events. Provide your Connect webhook URL in your <a href="https://dashboard.stripe.com/account/webhooks">account settings</a> and then watch for these events and respond to them as needed.</p></section>
 
 <section>
-  <h2>Next steps</h2>
+  <a id="next-steps" name="//apple_ref/cpp/Section/Next%20steps" class="dashAnchor"></a><h2>Next steps</h2>
   <p>Congrats! You've created a Custom account. Now learn more about working with Custom accounts.</p>
 <ul class="next-steps">
     <li><a href="updating-accounts.html"><span>Updating Accounts</span></a></li>
@@ -3288,7 +3288,7 @@ var account = service.Create(options);
 
 
             </article>
-            <div class="docs-aside">
+            <div class="docs-aside" style="display: none;">
               <div class="docs-toc empty">
                 <h4>On this page</h4>
                 <ul class="docs-toc-list">

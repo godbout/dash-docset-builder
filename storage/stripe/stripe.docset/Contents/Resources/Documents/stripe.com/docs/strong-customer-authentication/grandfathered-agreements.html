@@ -180,7 +180,7 @@
   <body class="">
     
       <div id="docs">
-        <div id="sidebar">
+        <div id="sidebar" style="display: none;">
             
   <div class="logo">
     <a href="../recipes/switching-to-stripe.html" title="Stripe docs">
@@ -3008,7 +3008,7 @@
             <article id="content">
                 
   <header>
-  <h1 id="sca-grandfathering">SCA Grandfathering</h1>
+  <a name="//apple_ref/cpp/Section/Top" class="dashAnchor"></a><h1 id="sca-grandfathering">SCA Grandfathering</h1>
 
   <p>Learn which types of payments are eligible for grandfathering.</p>
 
@@ -3020,7 +3020,7 @@
     <p>If you&rsquo;re affected by SCA, <a href="../strong-customer-authentication.html#preparing">update your Stripe integration</a> now, regardless of grandfathering eligibility. Grandfathering only applies to a small subset of payments scenarios. Stripe provides <a href="migration.html">migration guides</a> to help.</p>
   </aside>
 
-  <h2 id="eligibility">Grandfathering eligibility</h2>
+  <a id="grandfathering-eligibility" name="//apple_ref/cpp/Section/Grandfathering%20eligibility" class="dashAnchor"></a><h2 id="eligibility">Grandfathering eligibility</h2>
 
   <p><a href="../strong-customer-authentication.html">Strong Customer Authentication (SCA)</a> requires an additional step of customer authentication, but sometimes you collect payments when your customer isn&rsquo;t actively using your application. Even if they authenticated in the past, SCA may require your customer to come back online and re-authenticate. To reduce friction in these <span class="tooltip-wrapper"><span class="tooltip-content definition"><a href="../payments/save-and-reuse.html#web-create-payment-intent-off-session">off-session</a></span><template class="tooltip"><span class="definition">A payment is described as <em>off-session</em> if it occurs without the direct involvement of the customer, using previously-collected payment information.</span></template></span>  payments, Stripe built APIs that enable upfront authentication&mdash;so you can authenticate your customer <span class="tooltip-wrapper"><span class="tooltip-content definition">on-session</span><template class="tooltip"><span class="definition">A payment is described as <em>on-session</em> if it occurs while the customer is actively in your checkout flow and able to authenticate the payment method.</span></template></span> once and reuse the card off-session repeatedly. Since September 14, 2019, you need to use these APIs to reduce the chance of failed payments when <a href="../payments/save-and-reuse.html">reusing cards</a> or <a href="../billing/migration/strong-customer-authentication.html">creating subscriptions and invoices</a>.</p>
 
@@ -3029,7 +3029,7 @@
 </section>
 
 <section>
-  <h2 id="how-grandfathering-works">How SCA grandfathering works</h2>
+  <a id="how-sca-grandfathering-works" name="//apple_ref/cpp/Section/How%20SCA%20grandfathering%20works" class="dashAnchor"></a><h2 id="how-grandfathering-works">How SCA grandfathering works</h2>
 
   <p>All off-session payments that meet both of these conditions are eligible for grandfathering, regardless of payment amount and frequency:</p>
 
@@ -3045,14 +3045,14 @@
 </section>
 
 <section>
-  <h2 id="after-sca">Saving cards after September 14, 2019</h2>
+  <a id="saving-cards-after-september-14-2019" name="//apple_ref/cpp/Section/Saving%20cards%20after%20September%2014%2C%202019" class="dashAnchor"></a><h2 id="after-sca">Saving cards after September 14, 2019</h2>
 
   <p>Now that SCA has taken effect, <a href="../payments/save-and-reuse.html">save and reuse cards</a> with the Payment Intents and Setup Intents APIs to qualify for off-session exemptions. You can also save cards using <a href="../payments/checkout/collecting.html">Stripe Checkout</a>.</p>
 
 </section>
 
 <section>
-  <h2 id="preparing">Preparing your saved cards for SCA</h2>
+  <a id="preparing-your-saved-cards-for-sca" name="//apple_ref/cpp/Section/Preparing%20your%20saved%20cards%20for%20SCA" class="dashAnchor"></a><h2 id="preparing">Preparing your saved cards for SCA</h2>
 
   <p>The following off-session payments are eligible for grandfathering. Regardless of how you saved the card, use PaymentIntents and tell Stripe the payment is off-session.</p>
 
@@ -3076,7 +3076,7 @@
 </section>
 
 <section>
-  <h2 id="next-steps">Next steps</h2>
+  <a id="next-steps" name="//apple_ref/cpp/Section/Next%20steps" class="dashAnchor"></a><h2 id="next-steps">Next steps</h2>
 
 <ul class="next-steps">
     <li><a href="../payments/payment-intents/creating-payment-intents.html"><span>Payment Intents Overview</span></a></li>
@@ -3115,7 +3115,7 @@
 
 
             </article>
-            <div class="docs-aside">
+            <div class="docs-aside" style="display: none;">
               <div class="docs-toc empty">
                 <h4>On this page</h4>
                 <ul class="docs-toc-list">

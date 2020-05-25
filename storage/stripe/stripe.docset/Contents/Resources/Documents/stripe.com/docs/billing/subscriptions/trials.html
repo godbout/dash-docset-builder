@@ -180,7 +180,7 @@
   <body class="">
     
       <div id="docs">
-        <div id="sidebar">
+        <div id="sidebar" style="display: none;">
             
   <div class="logo">
     <a href="../../recipes/switching-to-stripe.html" title="Stripe docs">
@@ -3008,7 +3008,7 @@
             <article id="content">
                 
   <header>
-  <h1 id="using-trial-periods-on-subscriptions">Using trial periods on subscriptions</h1>
+  <a name="//apple_ref/cpp/Section/Top" class="dashAnchor"></a><h1 id="using-trial-periods-on-subscriptions">Using trial periods on subscriptions</h1>
 
   <p>Delay payments on active subscriptions using trial periods.</p>
 </header>
@@ -3304,7 +3304,7 @@ Subscription subscription = service.Update("sub_49ty4767H20z6a", options);
 </section>
 
 <section>
-  <h2 id="combine-trial-anchor">Combining trials with billing cycle anchor</h2>
+  <a id="combining-trials-with-billing-cycle-anchor" name="//apple_ref/cpp/Section/Combining%20trials%20with%20billing%20cycle%20anchor" class="dashAnchor"></a><h2 id="combine-trial-anchor">Combining trials with billing cycle anchor</h2>
 
   <p>As of API version <a href="../../upgrades.html#2018-02-05"><code>2018-02-05</code></a>, you can also combine trials with <code>billing_cycle_anchor</code>, resulting in a free period followed by a prorated period, leading into a fixed billing cycle.</p>
 
@@ -3461,18 +3461,18 @@ Subscription subscription = service.Create(options);
 </section>
 
 <section>
-  <h2 id="combining-trials-with-metered-billing">Combining trials with metered billing</h2>
+  <a id="combining-trials-with-metered-billing" name="//apple_ref/cpp/Section/Combining%20trials%20with%20metered%20billing" class="dashAnchor"></a><h2 id="combining-trials-with-metered-billing">Combining trials with metered billing</h2>
 
   <p>Trial periods for subscriptions with <a href="metered-billing.html">metered billing</a> is also supported. During the trial period, usage accrued on doesn&rsquo;t count towards the total charged to the customer at the end of the billing cycle. If the aggregation mode is set to <code>last_ever</code>, Stripe bills for that quantity once the trial has ended.</p>
 </section>
 
 <section>
-  <h2 id="combine-trial-add-invoice-items">Combining trials with add_invoice_items</h2>
+  <a id="combining-trials-with-add-invoice-items" name="//apple_ref/cpp/Section/Combining%20trials%20with%20add_invoice_items" class="dashAnchor"></a><h2 id="combine-trial-add-invoice-items">Combining trials with add_invoice_items</h2>
 
   <p>Trial periods for subscriptions can be combined with one time prices and <code>add_invoice_items</code>. This may happen if you want to charge a one time fee or add on at the same time as starting a trial. Note that doing this will cause an invoice to be cut immediately for the amount of the one time item at the beginning of the trial.</p>
 </section>
 
-<h2 id="compliance">Compliance requirements for trials and promotions</h2>
+<a id="compliance-requirements-for-trials-and-promotions" name="//apple_ref/cpp/Section/Compliance%20requirements%20for%20trials%20and%20promotions" class="dashAnchor"></a><h2 id="compliance">Compliance requirements for trials and promotions</h2>
 
 <p>You must comply with card network <a href="https://support.stripe.com/questions/2020-visa-trial-subscription-requirement-changes-guide">requirements</a> when offering trials, whether they&rsquo;re free or not. This includes scenarios like free trials or charging customers a reduced price for the first few months and then automatically charging them your normal rate. When using our trials features, you can enable <a href="https://dashboard.stripe.com/test/settings/billing/automatic">messaging settings</a> in the Stripe Dashboard to help you meet the requirements:</p>
 
@@ -3510,7 +3510,7 @@ Subscription subscription = service.Create(options);
 <p>You need to update the latest invoice within an hour of its creation while it&rsquo;s still in draft status.</p>
 
 <section>
-  <h2 id="next-steps">Next steps</h2>
+  <a id="next-steps" name="//apple_ref/cpp/Section/Next%20steps" class="dashAnchor"></a><h2 id="next-steps">Next steps</h2>
 
   <p>Now that you understand how to use trial periods, you may want to check out:</p>
 
@@ -3553,7 +3553,7 @@ Subscription subscription = service.Create(options);
 
 
             </article>
-            <div class="docs-aside">
+            <div class="docs-aside" style="display: none;">
               <div class="docs-toc empty">
                 <h4>On this page</h4>
                 <ul class="docs-toc-list">

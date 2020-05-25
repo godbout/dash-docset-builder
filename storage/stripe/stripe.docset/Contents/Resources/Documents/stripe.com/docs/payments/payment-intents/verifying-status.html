@@ -180,7 +180,7 @@
   <body class="">
     
       <div id="docs">
-        <div id="sidebar">
+        <div id="sidebar" style="display: none;">
             
   <div class="logo">
     <a href="../../recipes/switching-to-stripe.html" title="Stripe docs">
@@ -3008,18 +3008,18 @@
             <article id="content">
                 
   <header>
-  <h1 id="payment-status-updates">Payment status updates</h1>
+  <a name="//apple_ref/cpp/Section/Top" class="dashAnchor"></a><h1 id="payment-status-updates">Payment status updates</h1>
 
   <p>Monitor and verify payment status, so that you can respond to successful and failing payments.</p>
 </header>
 <section>
-  <h2 id="overview">Overview</h2>
+  <a id="overview" name="//apple_ref/cpp/Section/Overview" class="dashAnchor"></a><h2 id="overview">Overview</h2>
 
   <p><span class="tooltip-wrapper"><span class="tooltip-content definition"><a href="creating-payment-intents.html">PaymentIntents</a></span><template class="tooltip"><span class="definition">The <em>Payment Intents API</em> is a new way to build dynamic payment flows. It tracks the lifecycle of a customer checkout flow and triggers additional authentication steps when required by regulatory mandates, custom Radar fraud rules, or redirect-based payment methods.</span></template></span> update in response to actions taken by the customer or payment method. Your integration can inspect the PaymentIntent to determine the status of the payment process, so that you can take business actions or respond to states that require further intervention.</p>
 
 </section>
 <section>
-  <h2 id="checking-status">Check PaymentIntent status on the client</h2>
+  <a id="check-paymentintent-status-on-the-client" name="//apple_ref/cpp/Section/Check%20PaymentIntent%20status%20on%20the%20client" class="dashAnchor"></a><h2 id="checking-status">Check PaymentIntent status on the client</h2>
 
   <p>When completing a payment on the client with the <a href="../../stripe-js/reference.html#stripe-confirm-card-payment">confirmCardPayment</a> function, you can inspect the returned PaymentIntent to determine its current status:</p>
 
@@ -3131,7 +3131,7 @@
 
 </section>
 <section>
-  <h2 id="webhooks">Monitor a PaymentIntent with webhooks</h2>
+  <a id="monitor-a-paymentintent-with-webhooks" name="//apple_ref/cpp/Section/Monitor%20a%20PaymentIntent%20with%20webhooks" class="dashAnchor"></a><h2 id="webhooks">Monitor a PaymentIntent with webhooks</h2>
 
   <p>Stripe can send <a href="../../webhooks.html">webhook</a> events to your server to notify you when the status of a PaymentIntent changes. This is useful for purposes like determining when to fulfill the goods and services purchased by the customer.</p>
 
@@ -3580,7 +3580,7 @@ Ready! Your webhook signing secret is '{{WEBHOOK_SIGNING_SECRET}}' (^C to quit)
 
 </section>
 <section>
-  <h2 id="identifying-charges">Identifying charges on a PaymentIntent</h2>
+  <a id="identifying-charges-on-a-paymentintent" name="//apple_ref/cpp/Section/Identifying%20charges%20on%20a%20PaymentIntent" class="dashAnchor"></a><h2 id="identifying-charges">Identifying charges on a PaymentIntent</h2>
 
   <p>When you attempt to collect payment from a customer, the PaymentIntent creates a <a href="../../api/charges.html">Charge</a>. You can inspect the PaymentIntent&rsquo;s <a href="../../api/payment_intents/object.html#payment_intent_object-charges-data">charges.data</a> property to obtain the latest charge:</p>
 
@@ -3687,7 +3687,7 @@ var charges = intent.Charges.Data;
 
 </section>
 <section>
-  <h2 id="next-actions">Handling next actions</h2>
+  <a id="handling-next-actions" name="//apple_ref/cpp/Section/Handling%20next%20actions" class="dashAnchor"></a><h2 id="next-actions">Handling next actions</h2>
 
   <p>Some payment methods require additional steps, such as authentication, in order to complete the payment process. The Stripe.js <code>confirmCardPayment</code> function handles these automatically, but some advanced integrations may wish to handle these manually.</p>
 
@@ -3755,7 +3755,7 @@ var charges = intent.Charges.Data;
 
 
             </article>
-            <div class="docs-aside">
+            <div class="docs-aside" style="display: none;">
               <div class="docs-toc empty">
                 <h4>On this page</h4>
                 <ul class="docs-toc-list">

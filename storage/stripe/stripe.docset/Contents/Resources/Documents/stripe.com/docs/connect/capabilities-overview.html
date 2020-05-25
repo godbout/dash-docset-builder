@@ -180,7 +180,7 @@
   <body class="">
     
       <div id="docs">
-        <div id="sidebar">
+        <div id="sidebar" style="display: none;">
             
   <div class="logo">
     <a href="../recipes/switching-to-stripe.html" title="Stripe docs">
@@ -3008,7 +3008,7 @@
             <article id="content">
                 
   <header>
-  <h1 id="capabilities-framework">Capabilities framework</h1>
+  <a name="//apple_ref/cpp/Section/Top" class="dashAnchor"></a><h1 id="capabilities-framework">Capabilities framework</h1>
 
   <p>Capabilities describe what a connected account can do (e.g., which payment methods it can process) and the associated information requirements that need to be satisfied.</p>
 </header>
@@ -3020,7 +3020,7 @@
 <p><!-- Capabilities framework--></p>
 
 <section>
-  <h2 id="supported-capabilities">Supported capabilities</h2>
+  <a id="supported-capabilities" name="//apple_ref/cpp/Section/Supported%20capabilities" class="dashAnchor"></a><h2 id="supported-capabilities">Supported capabilities</h2>
 
   <p>The following is a list of available capabilities. Click on the items to get more information about them:</p>
 
@@ -3223,7 +3223,7 @@
 
 <section>
 
-  <h2 id="multiple-capabilities">Multiple capabilities</h2>
+  <a id="multiple-capabilities" name="//apple_ref/cpp/Section/Multiple%20capabilities" class="dashAnchor"></a><h2 id="multiple-capabilities">Multiple capabilities</h2>
 
   <p>Requesting multiple capabilities for a connected account is common but consider the following if you do this:</p>
 
@@ -3237,7 +3237,7 @@
 
 </section>
 <section>
-  <h2 id="creating">Create an account with capabilities</h2>
+  <a id="create-an-account-with-capabilities" name="//apple_ref/cpp/Section/Create%20an%20account%20with%20capabilities" class="dashAnchor"></a><h2 id="creating">Create an account with capabilities</h2>
 
   <p>Capabilities are set on the <a href="../api/accounts/object.html">Account</a> object. To find the list of available capabilities, use the <a href="../api/capabilities/list%3Flang=curl.html">list_capabilities</a> endpoint. Account creation differs by account type. You can read more about creating <a href="standard-accounts.html">Standard</a>, <a href="express-accounts.html">Express</a>, and <a href="custom-accounts.html">Custom</a> accounts in their respective sections.</p>
 
@@ -3255,7 +3255,7 @@
   <p>In the response, check the <code>requirements</code> hash to see what information is needed. The values for <code>payouts_enabled</code> and <code>charges_enabled</code> indicate whether payouts and charges can be made for the account.</p>
 </section>
 <section>
-  <h2 id="more-about-capabilities">More about capabilities</h2>
+  <a id="more-about-capabilities" name="//apple_ref/cpp/Section/More%20about%20capabilities" class="dashAnchor"></a><h2 id="more-about-capabilities">More about capabilities</h2>
 
   <p>The basics of account creation are covered above. However, there can be instances where you&rsquo;ll want to preview information requirements or manage capabilities on existing accounts. The following sections describe how to perform these actions using the <a href="../api/capabilities.html">Capabilities API</a>.</p>
 
@@ -3323,7 +3323,7 @@
   <p>You can also unrequest capabilities for an account, just use the same API call but set <code>requested</code> to <code>false</code> instead.</p>
 </section>
 <section>
-  <h2 id="see-also">See also</h2>
+  <a id="see-also" name="//apple_ref/cpp/Section/See%20also" class="dashAnchor"></a><h2 id="see-also">See also</h2>
 
   <ul class="next-steps">
     <li><a href="charges.html"><span>Creating charges</span></a></li>
@@ -3361,7 +3361,7 @@
 
 
             </article>
-            <div class="docs-aside">
+            <div class="docs-aside" style="display: none;">
               <div class="docs-toc empty">
                 <h4>On this page</h4>
                 <ul class="docs-toc-list">

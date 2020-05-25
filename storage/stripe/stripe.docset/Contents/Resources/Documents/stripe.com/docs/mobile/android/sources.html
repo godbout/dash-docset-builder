@@ -180,7 +180,7 @@
   <body class="">
     
       <div id="docs">
-        <div id="sidebar">
+        <div id="sidebar" style="display: none;">
             
   <div class="logo">
     <a href="../../recipes/switching-to-stripe.html" title="Stripe docs">
@@ -3008,7 +3008,7 @@
             <article id="content">
                 
   <header>
-  <h1 id="getting-started-with-sources-in-the-android-sdk">Getting started with Sources in the Android SDK</h1>
+  <a name="//apple_ref/cpp/Section/Top" class="dashAnchor"></a><h1 id="getting-started-with-sources-in-the-android-sdk">Getting started with Sources in the Android SDK</h1>
 
   <p>Make use of Sources with the Android SDK.</p>
 
@@ -3043,7 +3043,7 @@
 </section>
 
 <section>
-  <h2 id="create-source-object">Create a <code>Source</code> object</h2>
+  <a id="create-a-source-object" name="//apple_ref/cpp/Section/Create%20a%20Source%20object" class="dashAnchor"></a><h2 id="create-source-object">Create a <code>Source</code> object</h2>
 
   <p>To create a <code>Source</code> object, use the appropriate creation method for your Source type.</p>
 
@@ -3132,7 +3132,7 @@ val source = stripe.createSourceSynchronous(cardSourceParams)</code></div></pre>
 </section>
 
 <section>
-  <h2 id="check-if-further-action-is-required">Check if further action is required from your customer</h2>
+  <a id="check-if-further-action-is-required-from-your-customer" name="//apple_ref/cpp/Section/Check%20if%20further%20action%20is%20required%20from%20your%20customer" class="dashAnchor"></a><h2 id="check-if-further-action-is-required">Check if further action is required from your customer</h2>
 
   <p>Some payment methods require your customer to complete a certain action before the source can be used in a charge request. For instance, customers using <a href="../../sources/giropay.html">giropay</a> must be <a href="sources.html#redirecting-your-customer">redirected</a> to their online banking service to authorize the payment.</p>
 
@@ -3188,7 +3188,7 @@ if (Source.REDIRECT.equals(giropaySource.getFlow())) {
 </section>
 
 <section>
-  <h2 id="redirecting-your-customer">Redirecting your customer to authorize a source</h2>
+  <a id="redirecting-your-customer-to-authorize-a-source" name="//apple_ref/cpp/Section/Redirecting%20your%20customer%20to%20authorize%20a%20source" class="dashAnchor"></a><h2 id="redirecting-your-customer">Redirecting your customer to authorize a source</h2>
 
   <p>For sources that require your customer to complete an action (e.g., verify using 3D Secure), redirect the customer out of your application to complete this step.</p>
 
@@ -3325,7 +3325,7 @@ protected void onNewIntent(Intent intent) {
 </section>
 
 <section>
-  <h2 id="more-information">More information</h2>
+  <a id="more-information" name="//apple_ref/cpp/Section/More%20information" class="dashAnchor"></a><h2 id="more-information">More information</h2>
 
   <p>If you&rsquo;d like more help, check out our <a href="https://github.com/stripe/stripe-android/tree/master/example" class="external">example app</a> on Github that demonstrates creating a payment using several different payment methods. In addition, here&rsquo;s some documentation you might want to read next:</p>
 
@@ -3366,7 +3366,7 @@ protected void onNewIntent(Intent intent) {
 
 
             </article>
-            <div class="docs-aside">
+            <div class="docs-aside" style="display: none;">
               <div class="docs-toc empty">
                 <h4>On this page</h4>
                 <ul class="docs-toc-list">

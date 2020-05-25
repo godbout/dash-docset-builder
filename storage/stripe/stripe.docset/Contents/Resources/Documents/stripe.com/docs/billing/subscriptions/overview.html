@@ -180,7 +180,7 @@
   <body class="">
     
       <div id="docs">
-        <div id="sidebar">
+        <div id="sidebar" style="display: none;">
             
   <div class="logo">
     <a href="../../recipes/switching-to-stripe.html" title="Stripe docs">
@@ -3008,7 +3008,7 @@
             <article id="content">
                 
   <header>
-  <h1>How subscriptions work</h1>
+  <a name="//apple_ref/cpp/Section/Top" class="dashAnchor"></a><h1>How subscriptions work</h1>
 
   <p>Learn more about the lifecycles of Stripe Billing&rsquo;s subscriptions and invoices.</p>
 </header>
@@ -3027,7 +3027,7 @@
 </section>
 
 <section>
-  <h2 id="subscription-lifecycle">The subscription lifecycle</h2>
+  <a id="the-subscription-lifecycle" name="//apple_ref/cpp/Section/The%20subscription%20lifecycle" class="dashAnchor"></a><h2 id="subscription-lifecycle">The subscription lifecycle</h2>
 
   <p>Stripe has an event associated with every activity that happens with a subscription or invoice. The exact events sent depend on the type of subscription. A subscription paid automatically via credit, for example, has different events than a subscription paid manually by sending an invoice to the customer every billing cycle.</p>
 
@@ -3064,7 +3064,7 @@
 </section>
 
 <section>
-  <h2 id="invoice-lifecycle">The invoice lifecycle</h2>
+  <a id="the-invoice-lifecycle" name="//apple_ref/cpp/Section/The%20invoice%20lifecycle" class="dashAnchor"></a><h2 id="invoice-lifecycle">The invoice lifecycle</h2>
 
   <p>Automatically paid invoices, and emailed invoices, each have their own lifecycle.</p>
 
@@ -3105,7 +3105,7 @@
 </section>
 
 <section>
-  <h2 id="subscription-states">Subscription states</h2>
+  <a id="subscription-states" name="//apple_ref/cpp/Section/Subscription%20states" class="dashAnchor"></a><h2 id="subscription-states">Subscription states</h2>
 
   <p>The <a href="../../api/index.html#subscription_object">Subscription</a> object has a <code>status</code> property that reflects the subscription&rsquo;s current state. Its possible values are:</p>
 
@@ -3258,7 +3258,7 @@
 </section>
 
 <section>
-  <h2 id="invoice-states">Invoice states and properties</h2>
+  <a id="invoice-states-and-properties" name="//apple_ref/cpp/Section/Invoice%20states%20and%20properties" class="dashAnchor"></a><h2 id="invoice-states">Invoice states and properties</h2>
 
   <p>The <a href="../../api/index.html#invoice_object">Invoice</a> has its own <code>status</code> property that reflects the invoice&rsquo;s current state. Its possible values are:</p>
 
@@ -3296,7 +3296,7 @@
 </section>
 
 <section>
-  <h2 id="settings">Subscription settings and recovery</h2>
+  <a id="subscription-settings-and-recovery" name="//apple_ref/cpp/Section/Subscription%20settings%20and%20recovery" class="dashAnchor"></a><h2 id="settings">Subscription settings and recovery</h2>
 
   <p>Your <a href="https://dashboard.stripe.com/settings/billing/automatic">subscription settings</a> dictate how Stripe responds when an invoice payment fails or becomes past due. The settings for automatic payment and manual payment are configured independently.</p>
 
@@ -3387,7 +3387,7 @@ sending up to three reminders, from from one to seven days after the payment was
 </section>
 
 <section>
-  <h2 id="other-events">Other events</h2>
+  <a id="other-events" name="//apple_ref/cpp/Section/Other%20events" class="dashAnchor"></a><h2 id="other-events">Other events</h2>
 
   <p>You might need to handle certain other events, depending upon your use of subscriptions and invoices.</p>
 
@@ -3416,7 +3416,7 @@ sending up to three reminders, from from one to seven days after the payment was
 </section>
 
 <section>
-  <h2>Next steps</h2>
+  <a id="next-steps" name="//apple_ref/cpp/Section/Next%20steps" class="dashAnchor"></a><h2>Next steps</h2>
   <p>Congratulations! You&rsquo;ve learned about the subscription lifecycle at Stripe. Next, you might want to read about:</p>
   <ul class="next-steps">
     <li><a href="../webhooks.html"><span>Subscription webhooks</span></a></li>
@@ -3457,7 +3457,7 @@ sending up to three reminders, from from one to seven days after the payment was
 
 
             </article>
-            <div class="docs-aside">
+            <div class="docs-aside" style="display: none;">
               <div class="docs-toc empty">
                 <h4>On this page</h4>
                 <ul class="docs-toc-list">

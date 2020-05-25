@@ -180,7 +180,7 @@
   <body class="">
     
       <div id="docs">
-        <div id="sidebar">
+        <div id="sidebar" style="display: none;">
             
   <div class="logo">
     <a href="../../recipes/switching-to-stripe.html" title="Stripe docs">
@@ -3008,7 +3008,7 @@
             <article id="content">
                 
   <header>
-  <h1>Rules reference</h1>
+  <a name="//apple_ref/cpp/Section/Top" class="dashAnchor"></a><h1>Rules reference</h1>
   <p>Learn more about the order in which rules are processed, and how they are structured.</p>
 </header>
 
@@ -3020,7 +3020,7 @@
 
 <p>Before creating a rule, it&rsquo;s important to know the order in which rules are processed, and what payment attributes are available for use when specifying criteria to evaluate. Stripe&rsquo;s machine-learning fraud systems are able to block many fraudulent payments for you, but if you need to create rules using information that&rsquo;s unique to your business, there are many supported <a href="reference.html#supported-attributes">payment attributes</a> you can make use of.</p>
 </section>
-<h2 id="rule-processing-and-ordering">Rule processing and ordering</h2>
+<a id="rule-processing-and-ordering" name="//apple_ref/cpp/Section/Rule%20processing%20and%20ordering" class="dashAnchor"></a><h2 id="rule-processing-and-ordering">Rule processing and ordering</h2>
 
 <p>When creating a rule, the action it&rsquo;s going to take determines the order in which it is processed. Each payment is evaluated against the rules you have created and performed in a specific order:</p>
 
@@ -3043,7 +3043,7 @@
 
 <p>Using the rules above, all payments less than $10 would be processed, regardless of their risk level or where the card used was issued. This is because the first rule allows the payment, so no further rules are evaluated. Similarly, a $1,500 payment made within the U.S. with a normal risk level would also be allowed, despite the rule to block payments over $1,000. This is because of the second rule in the list, allowing payments made within the U.S. and a normal risk level. Once a particular rule is triggered, no further rules are evaluated.</p>
 
-<h2 id="rule-structure">Rule structure</h2>
+<a id="rule-structure" name="//apple_ref/cpp/Section/Rule%20structure" class="dashAnchor"></a><h2 id="rule-structure">Rule structure</h2>
 
 <p>Rules are constructed using two components: the <em>action</em> it should take and the <em>condition</em> to evaluate:</p>
 
@@ -3968,7 +3968,7 @@ For example, you can write a rule that places a payment in review if the <code>I
 
 
             </article>
-            <div class="docs-aside">
+            <div class="docs-aside" style="display: none;">
               <div class="docs-toc empty">
                 <h4>On this page</h4>
                 <ul class="docs-toc-list">

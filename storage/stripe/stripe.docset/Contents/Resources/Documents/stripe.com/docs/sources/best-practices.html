@@ -180,7 +180,7 @@
   <body class="">
     
       <div id="docs">
-        <div id="sidebar">
+        <div id="sidebar" style="display: none;">
             
   <div class="logo">
     <a href="../recipes/switching-to-stripe.html" title="Stripe docs">
@@ -3008,7 +3008,7 @@
             <article id="content">
                 
   <header>
-<h1>Best practices for using Sources</h1>
+<a name="//apple_ref/cpp/Section/Top" class="dashAnchor"></a><h1>Best practices for using Sources</h1>
 <p>Best practices to accept a variety of payment methods through a single integration.</p>
 
 
@@ -3017,11 +3017,11 @@
 <section>
 <p>By taking into consideration the flexibility of the Sources API when designing your checkout flow, you can minimize any changes required to support additional payment methods as you add them.</p></section>
 <section>
-<h2 id="typical-flow-for-card-payments">Typical flow for card payments</h2>
+<a id="typical-flow-for-card-payments" name="//apple_ref/cpp/Section/Typical%20flow%20for%20card%20payments" class="dashAnchor"></a><h2 id="typical-flow-for-card-payments">Typical flow for card payments</h2>
 
 <p>In a typical checkout flow for <a href="cards.html">card payments</a> (excluding 3D Secure), your integration collects the card information and creates a source, then immediately uses it to make a charge request. As there is no additional action for the customer to take, and card payments provide synchronous confirmation, we can immediately confirm if the payment is successful and that the funds are guaranteed&mdash;the use of webhooks isn&rsquo;t necessary.</p></section>
 <section>
-<h2 id="the-required-use-of-webhooks">The required use of webhooks</h2>
+<a id="the-required-use-of-webhooks" name="//apple_ref/cpp/Section/The%20required%20use%20of%20webhooks" class="dashAnchor"></a><h2 id="the-required-use-of-webhooks">The required use of webhooks</h2>
 
 <p>Other payment methods may require your customer to take <a href="bitcoin.html#flow-for-customer-action">additional action</a> (e.g., a redirect) before a source becomes <code>chargeable</code> and is ready to be used to make a charge request (e.g., <a href="ideal.html">iDEAL</a>). This transition generally happens asynchronously and may even occur after the customer has left your website. For these reasons it is essential that your integration rely on webhooks to determine when a source becomes chargeable in order to create a charge.</p>
 
@@ -3085,7 +3085,7 @@
   </tbody>
 </table></section>
 <section>
-<h2 id="building-a-flexible-integration">Building a flexible integration</h2>
+<a id="building-a-flexible-integration" name="//apple_ref/cpp/Section/Building%20a%20flexible%20integration" class="dashAnchor"></a><h2 id="building-a-flexible-integration">Building a flexible integration</h2>
 
 <p>To ensure that your checkout process is flexible and ready to support multiple payment methods, we recommend the following approach:</p>
 
@@ -3267,7 +3267,7 @@ you can show based on the Source&rsquo;s status.</p>
 <p>For each of these events, we recommend that you contact your customer to let them know that their order failed and maybe invite them to re-engage in your payment flow.</p></section>
 
 <section>
-<h2>Related resources</h2>
+<a id="related-resources" name="//apple_ref/cpp/Section/Related%20resources" class="dashAnchor"></a><h2>Related resources</h2>
 <ul class="next-steps">
     <li><a href="bitcoin.html"><span>Supported payment methods</span></a></li>
     <li><a href="../api/index.html#sources"><span>Sources API Reference</span></a></li>
@@ -3307,7 +3307,7 @@ you can show based on the Source&rsquo;s status.</p>
 
 
             </article>
-            <div class="docs-aside">
+            <div class="docs-aside" style="display: none;">
               <div class="docs-toc empty">
                 <h4>On this page</h4>
                 <ul class="docs-toc-list">

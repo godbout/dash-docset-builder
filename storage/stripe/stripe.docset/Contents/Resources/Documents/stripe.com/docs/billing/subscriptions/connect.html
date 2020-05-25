@@ -180,7 +180,7 @@
   <body class="">
     
       <div id="docs">
-        <div id="sidebar">
+        <div id="sidebar" style="display: none;">
             
   <div class="logo">
     <a href="../../recipes/switching-to-stripe.html" title="Stripe docs">
@@ -3008,7 +3008,7 @@
             <article id="content">
                 
   <header>
-  <h1>Creating subscriptions</h1>
+  <a name="//apple_ref/cpp/Section/Top" class="dashAnchor"></a><h1>Creating subscriptions</h1>
   <p>With <a href="https://stripe.com/connect">Connect</a>, you can create subscriptions for connected accounts, optionally taking application fees in the process.</p>
 </header>
 
@@ -3040,7 +3040,7 @@
 </ul></section>
 
 <section>
-<h2 id="create-subscriptions">Creating subscriptions</h2>
+<a id="creating-subscriptions" name="//apple_ref/cpp/Section/Creating%20subscriptions" class="dashAnchor"></a><h2 id="create-subscriptions">Creating subscriptions</h2>
 
 <p>Create a subscription on a connected account by performing a standard <a href="../../api/index.html#create_subscription">create subscription</a> call while <a href="../../connect/authentication.html#authentication-via-the-stripe-account-header">authenticated</a> as the connected account. Again, both the customer and the price must be defined on the connected account for this to work.</p>
 <div class="tabs tabs-code animated" data-callback="codeTabsChanged" data-platform="server">
@@ -3216,7 +3216,7 @@ var subscription = service.Create(options, requestOptions);
 <p>As with <a href="../../connect/direct-charges.html">creating direct charges</a> on a connected account, you can create a customer on a connected account using a token created with either the platform&rsquo;s or the connected account&rsquo;s publishable key. You can also create a token using <a href="../../connect/cloning-saved-payment-methods.html">shared customers</a>.</p></section>
 
 <section>
-<h2 id="collecting-fees">Collecting fees on subscriptions</h2>
+<a id="collecting-fees-on-subscriptions" name="//apple_ref/cpp/Section/Collecting%20fees%20on%20subscriptions" class="dashAnchor"></a><h2 id="collecting-fees">Collecting fees on subscriptions</h2>
 
 <p>When creating or updating a subscription, you can specify an <code>application_fee_percent</code> parameter as a non-negative decimal between 0 and 100, with at most two decimal places. Each billing period, Stripe takes that percentage off the final invoice amount&mdash;including any bundled invoice items, discounts, or account balance adjustments&mdash;as a fee for the platform (before any Stripe fees are charged).</p>
 <div class="tabs tabs-code animated" data-callback="codeTabsChanged" data-platform="server">
@@ -3413,7 +3413,7 @@ var subscription = service.Create(options, requestOptions);
 <p>The <code>application_fee_percent</code> does not apply to invoices created outside of a subscription billing period. For example, it does not apply to proration invoice items that are immediately invoiced. In these cases, you should directly set an <code>application_fee</code> on the invoice for the amount you&rsquo;d like to charge.</p></section>
 
 <section>
-<h2 id="invoices">Working with invoices</h2>
+<a id="working-with-invoices" name="//apple_ref/cpp/Section/Working%20with%20invoices" class="dashAnchor"></a><h2 id="invoices">Working with invoices</h2>
 
 <p>To charge a flat or dynamic fee, or any fee that can&rsquo;t be automatically calculated with <code>application_fee_percent</code>, add an <code>application_fee</code> directly on an invoice:</p>
 <div class="tabs tabs-code animated" data-callback="codeTabsChanged" data-platform="server">
@@ -3545,7 +3545,7 @@ var invoice = service.Update("{INVOICE_ID}", options, requestOptions);
 <p>The <code>application_fee</code> set directly on an invoice overrides any application fee amount calculated with <code>application_fee_percent</code>, and is capped at the invoice&rsquo;s final charge amount.</p></section>
 
 <section>
-  <h2>Further reading</h2>
+  <a id="further-reading" name="//apple_ref/cpp/Section/Further%20reading" class="dashAnchor"></a><h2>Further reading</h2>
   <p>Discover what other Connect functionality is available:</p>
 <ul class="next-steps">
     <li><a href="../../connect/charges.html"><span>Creating Charges</span></a></li>
@@ -3588,7 +3588,7 @@ var invoice = service.Update("{INVOICE_ID}", options, requestOptions);
 
 
             </article>
-            <div class="docs-aside">
+            <div class="docs-aside" style="display: none;">
               <div class="docs-toc empty">
                 <h4>On this page</h4>
                 <ul class="docs-toc-list">

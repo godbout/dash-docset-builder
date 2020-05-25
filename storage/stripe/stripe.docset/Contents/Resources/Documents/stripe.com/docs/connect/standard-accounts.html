@@ -181,7 +181,7 @@
   <body class="">
     
       <div id="docs">
-        <div id="sidebar">
+        <div id="sidebar" style="display: none;">
             
   <div class="logo">
     <a href="../recipes/switching-to-stripe.html" title="Stripe docs">
@@ -3010,7 +3010,7 @@
                 
   
 <header>
-  <h1>Using Connect with Standard accounts</h1>
+  <a name="//apple_ref/cpp/Section/Top" class="dashAnchor"></a><h1>Using Connect with Standard accounts</h1>
   <p>Integrating with Standard accounts is the fastest and easiest way to get started using <a href="https://stripe.com/connect">Connect</a>, since you'll be offloading the majority of the user experience and user communication to Stripe.</p>
 </header>
 
@@ -3028,11 +3028,11 @@
   <p>Stripe offers a private beta of a new user onboarding experience. It includes design updates to assist with conversion rates, customization options for platform cobranding, prefillable form fields for better usability, and is mobile-friendly. If you&rsquo;re interested, <a href="mailto:connect-betas@stripe.com?subject=Request%20for%20Connect%20onboarding%20for%20Standard">request an invite</a> to test the beta. </p>
 </aside></section>
 
-<h2 id="get-started">Get started</h2>
+<a id="get-started" name="//apple_ref/cpp/Section/Get%20started" class="dashAnchor"></a><h2 id="get-started">Get started</h2>
 
 <p>If you&rsquo;re new to Connect, start with a guide to use Standard accounts to <a href="enable-payment-acceptance-guide.html">enable other businesses to accept payments directly</a>.</p>
   <section>
-<h2 id="oauth-flow">The OAuth connection flow</h2>
+<a id="the-oauth-connection-flow" name="//apple_ref/cpp/Section/The%20OAuth%20connection%20flow" class="dashAnchor"></a><h2 id="oauth-flow">The OAuth connection flow</h2>
 
 <p>A user connects to your platform using the following OAuth connection flow:</p>
 
@@ -3051,7 +3051,7 @@
 
 
 <section>
-  <h2 id="integrating-oauth"><span class="step">Step 1:</span> Create the OAuth link</h2>
+  <a id="step-1-create-the-oauth-link" name="//apple_ref/cpp/Section/Step%201%3A%20Create%20the%20OAuth%20link" class="dashAnchor"></a><h2 id="integrating-oauth"><span class="step">Step 1:</span> Create the OAuth link</h2>
 <p>To get started with your integration, you need two pieces of information from your <a href="https://dashboard.stripe.com/account/applications/settings">platform settings</a>:</p>
 
 <ul>
@@ -3085,7 +3085,7 @@
 <p><a href="https://connect.stripe.com/oauth/authorize?response_type=code&amp;client_id=ca_32D88BD1qLklliziD7gYQvctJIhWBSQ7&amp;scope=read_write" class="connect-button"><span>Connect with Stripe</span></a></p></section>
 
 <section>
-  <h2 id="connect-users"><span class="step">Step 2:</span> User creates or connects their account</h2>
+  <a id="step-2-user-creates-or-connects-their-account" name="//apple_ref/cpp/Section/Step%202%3A%20User%20creates%20or%20connects%20their%20account" class="dashAnchor"></a><h2 id="connect-users"><span class="step">Step 2:</span> User creates or connects their account</h2>
 
   <p>After the user clicks the link on your site, they'll be taken to Stripe's website where they'll be prompted to allow or deny the connection to your platform.</p>
 
@@ -3105,7 +3105,7 @@
 </section>
 
 <section>
-  <h2 id="redirected"><span class="step">Step 3:</span> User is redirected back to your site</h2>
+  <a id="step-3-user-is-redirected-back-to-your-site" name="//apple_ref/cpp/Section/Step%203%3A%20User%20is%20redirected%20back%20to%20your%20site" class="dashAnchor"></a><h2 id="redirected"><span class="step">Step 3:</span> User is redirected back to your site</h2>
 <p>After the user connects their existing or newly created account to your platform, they are redirected back to your site, to the URL established as your platform&rsquo;s <code>redirect_uri</code>.</p>
 
 <p>For successful connections, we&rsquo;ll pass along in the URL:</p>
@@ -3133,7 +3133,7 @@
 </section>
 
 <section>
-  <h2 id="token-request"><span class="step">Step 4:</span> Platform completes the Standard account connection</h2>
+  <a id="step-4-platform-completes-the-standard-account-connection" name="//apple_ref/cpp/Section/Step%204%3A%20Platform%20completes%20the%20Standard%20account%20connection" class="dashAnchor"></a><h2 id="token-request"><span class="step">Step 4:</span> Platform completes the Standard account connection</h2>
 <p>Include the provided authorization <code>code</code> in a POST request to Stripe&rsquo;s token endpoint to complete the connection and fetch the user&rsquo;s account ID:</p>
 <div class="tabs tabs-code animated" data-callback="codeTabsChanged" data-platform="server">
 <nav class="nav-languages has-copy-btn">
@@ -3313,7 +3313,7 @@ connected_account_id = response.StripeUserId
 </section>
 
 <section>
-<h2 id="revoked-access">Revoked and revoking access</h2>
+<a id="revoked-and-revoking-access" name="//apple_ref/cpp/Section/Revoked%20and%20revoking%20access" class="dashAnchor"></a><h2 id="revoked-access">Revoked and revoking access</h2>
 
 <p>An <code>account.application.deauthorized</code> <a href="../api/index.html#list_events">event</a> occurs when a user disconnects your platform from
 their account. By watching for this event via <a href="webhooks.html">webhooks</a>, you can perform any necessary cleanup on your
@@ -3443,7 +3443,7 @@ service.Deauthorize(options);
 </section>
 
 <section>
-  <h2>Next steps</h2>
+  <a id="next-steps" name="//apple_ref/cpp/Section/Next%20steps" class="dashAnchor"></a><h2>Next steps</h2>
   <p>Now you can use the API on your user's behalf to accept payments, set up recurring billing, fetch account data, and more:</p>
 <ul class="next-steps">
     <li><a href="charges.html"><span>Creating Charges</span></a></li>
@@ -3488,7 +3488,7 @@ service.Deauthorize(options);
 
 
             </article>
-            <div class="docs-aside">
+            <div class="docs-aside" style="display: none;">
               <div class="docs-toc empty">
                 <h4>On this page</h4>
                 <ul class="docs-toc-list">

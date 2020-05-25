@@ -180,7 +180,7 @@
   <body class="">
     
       <div id="docs">
-        <div id="sidebar">
+        <div id="sidebar" style="display: none;">
             
   <div class="logo">
     <a href="recipes/switching-to-stripe.html" title="Stripe docs">
@@ -3008,7 +3008,7 @@
             <article id="content">
                 
   <header>
-  <h1 id="error-handling">Error handling</h1>
+  <a name="//apple_ref/cpp/Section/Top" class="dashAnchor"></a><h1 id="error-handling">Error handling</h1>
 
   <p>Learn how to handle and recover from errors received from the Stripe API.</p>
 </header>
@@ -3030,7 +3030,7 @@
 
   <p>The right approach and idempotency semantics to use for handling errors depend on the type of error being handled.</p>
 
-  <h2 id="safely-retrying-requests-with-idempotency">Safely retrying requests with idempotency</h2>
+  <a id="safely-retrying-requests-with-idempotency" name="//apple_ref/cpp/Section/Safely%20retrying%20requests%20with%20idempotency" class="dashAnchor"></a><h2 id="safely-retrying-requests-with-idempotency">Safely retrying requests with idempotency</h2>
 
   <p>A key part of web API design is the idea of <a href="https://stripe.com/blog/idempotency">idempotency</a>, defined as being able to apply the same operation multiple times without changing the result beyond the first try. Because a certain amount of intermittent failure is to be expected, clients need a way of reconciling failed requests with a server, and idempotency provides a mechanism for that.</p>
 
@@ -3042,7 +3042,7 @@
     <p>Retrying requests using an idempotency key won&rsquo;t change the original result of a request that&rsquo;s completed execution, and is most useful for recovering from <a href="error-handling.html#network-errors">network errors</a>.</p>
   </aside>
 
-  <h2 id="sending-idempotency-keys">Sending idempotency keys</h2>
+  <a id="sending-idempotency-keys" name="//apple_ref/cpp/Section/Sending%20idempotency%20keys" class="dashAnchor"></a><h2 id="sending-idempotency-keys">Sending idempotency keys</h2>
 
   <p>Idempotency keys are sent in the <code>Idempotency-Key</code> header, and you should use them for all <code>POST</code> requests to Stripe&rsquo;s API. Most official client libraries can send them automatically as long as they&rsquo;re configured to send retries. See <a href="error-handling.html#network-errors">network errors</a> below.</p>
 
@@ -3059,13 +3059,13 @@
 
   <p>A response that&rsquo;s being replayed from the server because it had already executed previously can be identified by the header <code>Idempotent-Replayed: true</code>.</p>
 
-  <h2 id="content-errors">Content errors</h2>
+  <a id="content-errors" name="//apple_ref/cpp/Section/Content%20errors" class="dashAnchor"></a><h2 id="content-errors">Content errors</h2>
 
   <p>Content errors are the result of the contents of an API request being invalid and return a <code>4xx</code> <a href="api/errors.html#errors-code">error code</a>. Integrations should correct the original request, and try again.  Depending on the type of user error (e.g., a card being declined), it may be possible to handle the problem programmatically. In these cases, include a <code>code</code> field to help an integration react appropriately. See <a href="error-codes.html">error codes</a> for more details.</p>
 
   <p>For a <code>POST</code> operation using an idempotency key, as long as an API method began execution, Stripe&rsquo;s API servers will cache the results of the request regardless of what they were. A request that returns a <code>400</code> will send back the same <code>400</code> if followed by a new request with the same idempotency key. A fresh idempotency key should be generated when modifying the original request to get a successful result. This operation does contain some caveats. For example, a request that&rsquo;s rate limited with a <code>429</code> can produce a different result with the same idempotency key because rate limiters run before the API&rsquo;s idempotency layer. The same goes for a <code>401</code> that omitted an API key, or most <code>400</code>s that sent invalid parameters. Even so, the safest strategy where <code>4xx</code> errors are concerned is to always generate a new idempotency key.</p>
 
-  <h2 id="network-errors">Network errors</h2>
+  <a id="network-errors" name="//apple_ref/cpp/Section/Network%20errors" class="dashAnchor"></a><h2 id="network-errors">Network errors</h2>
 
   <p>Network errors are the result of connectivity problems between client and server and tend to manifest as low-level errors like socket or timeout exceptions.</p>
 
@@ -3144,7 +3144,7 @@ sc.Init("sk_test_...", &amp;stripe.Backends{
 </div>
 </div>
 
-  <h2 id="server-errors">Server errors</h2>
+  <a id="server-errors" name="//apple_ref/cpp/Section/Server%20errors" class="dashAnchor"></a><h2 id="server-errors">Server errors</h2>
 
   <p>Server errors are the result of a server-side problem and return a <code>5xx</code> error code. These errors are the most difficult to handle, so we try to ensure that they happen as infrequently as possible.</p>
 
@@ -3160,7 +3160,7 @@ sc.Init("sk_test_...", &amp;stripe.Backends{
 
   <p>Integrations that want to maximize robustness must configure webhook handlers that are capable of receiving event objects that have never been seen in an API response. One technique for cross-referencing these new objects with the data from an integration&rsquo;s local state is to send a local identifier in with the <a href="api/metadata.html">metadata</a> when creating new resources with the API. That identifier will appear in the <code>metadata</code> field of an object going out through a webhook, even if the webhook is generated later as part of reconciliation.</p>
 
-  <h2 id="the-stripe-should-retry-header">The <code>Stripe-Should-Retry</code> header</h2>
+  <a id="the-stripe-should-retry-header" name="//apple_ref/cpp/Section/The%20Stripe-Should-Retry%20header" class="dashAnchor"></a><h2 id="the-stripe-should-retry-header">The <code>Stripe-Should-Retry</code> header</h2>
 
   <p>A client library can&rsquo;t always determine with certainty if it should retry based solely on a status code or content in the response body. To assist clients in making decisions in cases where the API has additional information about whether a request is retryable, it will tell them explicitly by responding with the header <code>Stripe-Should-Retry</code>.</p>
 
@@ -3205,7 +3205,7 @@ sc.Init("sk_test_...", &amp;stripe.Backends{
 
 
             </article>
-            <div class="docs-aside">
+            <div class="docs-aside" style="display: none;">
               <div class="docs-toc empty">
                 <h4>On this page</h4>
                 <ul class="docs-toc-list">

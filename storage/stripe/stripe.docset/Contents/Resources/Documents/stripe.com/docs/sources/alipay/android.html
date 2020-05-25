@@ -188,7 +188,7 @@
   <body class="">
     
       <div id="docs">
-        <div id="sidebar">
+        <div id="sidebar" style="display: none;">
             
   <div class="logo">
     <a href="../../recipes/switching-to-stripe.html" title="Stripe docs">
@@ -3017,7 +3017,7 @@
                 
   
 <header>
-  <h1 id="using-alipay-in-the-android-sdk">Using Alipay in the Android SDK</h1>
+  <a name="//apple_ref/cpp/Section/Top" class="dashAnchor"></a><h1 id="using-alipay-in-the-android-sdk">Using Alipay in the Android SDK</h1>
 
   <p>Allow customers to pay using Alipay&rsquo;s Android tools.</p>
 </header>
@@ -3031,7 +3031,7 @@
 </section>
 
 <section>
-  <h2 id="install-alipay">Download and integrate the Alipay API</h2>
+  <a id="download-and-integrate-the-alipay-api" name="//apple_ref/cpp/Section/Download%20and%20integrate%20the%20Alipay%20API" class="dashAnchor"></a><h2 id="install-alipay">Download and integrate the Alipay API</h2>
 
   <p>To do in-app payments using Alipay&rsquo;s app-to-app redirect flow, you must first download the <a href="https://doc.open.alipay.com/doc2/detail.htm?treeId=54&amp;articleId=104509&amp;docType=1" class="external">Alipay SDK</a>.</p>
 
@@ -3058,7 +3058,7 @@ build.gradle
 </section>
 
 <section>
-  <h2 id="set-up-manifest">Prepare your activity for redirects</h2>
+  <a id="prepare-your-activity-for-redirects" name="//apple_ref/cpp/Section/Prepare%20your%20activity%20for%20redirects" class="dashAnchor"></a><h2 id="set-up-manifest">Prepare your activity for redirects</h2>
 
   <p>Before adding code to generate Alipay sources and work with the Alipay application and web endpoints, first prepare the application manifest for redirects. This allows Alipay to return users to your application when verification is complete. This is done via an intent filter in the application manifest entry for the activity that users should go back to.</p>
 
@@ -3095,7 +3095,7 @@ AndroidManifest.xml
 </section>
 
 <section>
-  <h2 id="create-stripe-source">Create the Stripe Alipay source</h2>
+  <a id="create-the-stripe-alipay-source" name="//apple_ref/cpp/Section/Create%20the%20Stripe%20Alipay%20source" class="dashAnchor"></a><h2 id="create-stripe-source">Create the Stripe Alipay source</h2>
 
   <p>In the activity code itself, first generate a Stripe source using the Stripe Android SDK. There are two types of Alipay sources: one-time and reusable. Factory-style functions are provided for both types.</p>
 
@@ -3150,7 +3150,7 @@ MyAlipayActivity.java
 </section>
 
 <section>
-  <h2 id="send-to-alipay">Use the Source fields with Alipay</h2>
+  <a id="use-the-source-fields-with-alipay" name="//apple_ref/cpp/Section/Use%20the%20Source%20fields%20with%20Alipay" class="dashAnchor"></a><h2 id="send-to-alipay">Use the Source fields with Alipay</h2>
 
   <p>The returned Stripe <code>Source</code> object contains fields to give to the Alipay SDK to complete the transaction. Which field to use depends on the desired Alipay functionality and whether the source is a one-time source or reusable.</p>
 
@@ -3349,7 +3349,7 @@ MyAlipayActivity.java
 
 
             </article>
-            <div class="docs-aside">
+            <div class="docs-aside" style="display: none;">
               <div class="docs-toc empty">
                 <h4>On this page</h4>
                 <ul class="docs-toc-list">

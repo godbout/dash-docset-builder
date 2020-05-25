@@ -180,7 +180,7 @@
   <body class="">
     
       <div id="docs">
-        <div id="sidebar">
+        <div id="sidebar" style="display: none;">
             
   <div class="logo">
     <a href="../recipes/switching-to-stripe.html" title="Stripe docs">
@@ -3008,7 +3008,7 @@
             <article id="content">
                 
   <header>
-  <h1>Creating destination charges on your platform</h1>
+  <a name="//apple_ref/cpp/Section/Top" class="dashAnchor"></a><h1>Creating destination charges on your platform</h1>
   <p>With <a href="https://stripe.com/connect">Connect</a>, you can create charges on your platform account, take fees, and then transfer remaining funds to your connected accounts.</p>
 
   
@@ -3018,10 +3018,10 @@
 
 <p>Destination charges are recommended for <a href="express-accounts.html">Express</a> or <a href="custom-accounts.html">Custom</a> accounts. Destination charges are created on the platform, but as part of the charge operation, funds are transferred to the connected account specified in the <code>transfer_data[destination]</code> parameter of the charge. The platform is responsible for the cost of the Stripe fees, refunds, and chargebacks. For more information about the different types of Connect charges, see <a href="charges.html#choosing-approach">the documentation on choosing an approach</a>.</p>
 
-<h2>Get started</h2>
+<a id="get-started" name="//apple_ref/cpp/Section/Get%20started" class="dashAnchor"></a><h2>Get started</h2>
 <p>If you&rsquo;re new to Connect, start with a guide to use destination charges to <a href="collect-then-transfer-guide/payments.html">collect payments and then pay out</a>.</p>
 
-<h2>Create a charge</h2>
+<a id="create-a-charge" name="//apple_ref/cpp/Section/Create%20a%20charge" class="dashAnchor"></a><h2>Create a charge</h2>
 <p>To create a destination charge, specify the ID of the connected account that should receive the funds as the value of the <code>transfer_data[destination]</code> parameter:</p>
 
 <div class="tabs tabs-code animated" data-callback="codeTabsChanged" data-platform="server">
@@ -3185,7 +3185,7 @@ service.Create(createOptions);
 <p>For the complete flow, see the documentation on how to <a href="../payments/payment-intents/quickstart.html">Accept a payment</a>.</p></section>
 
 <section>
-<h2 id="settlement-merchant">Specifying the settlement merchant</h2>
+<a id="specifying-the-settlement-merchant" name="//apple_ref/cpp/Section/Specifying%20the%20settlement%20merchant" class="dashAnchor"></a><h2 id="settlement-merchant">Specifying the settlement merchant</h2>
 
 <p>The settlement merchant is dependent on the <a href="capabilities-overview.html">capabilities</a> set on an account and how a charge is created. The settlement merchant determines whose information is used to make the charge. This includes the statement descriptor (either the platform&rsquo;s or the connected account&rsquo;s) that&rsquo;s displayed on the customer&rsquo;s credit card or bank statement for that charge. When using destination charges, you have some flexibility for specifying the settlement merchant.</p>
 
@@ -3198,7 +3198,7 @@ service.Create(createOptions);
 <p>Specifying the settlement merchant allows you to be more explicit about who charges are created for. For example, some platforms prefer to be the settlement merchant because the end customer interacts directly with their platform (e.g., on-demand platforms). However, some platforms have connected accounts that interact directly with end customers instead (e.g., a storefront on an e-commerce platform). In these scenarios, it makes more sense for the connected account to be the settlement merchant.</p></section>
 
 <section>
-<h2 id="application-fee">Collecting fees with <code>application_fee_amount</code></h2>
+<a id="collecting-fees-with-application-fee-amount" name="//apple_ref/cpp/Section/Collecting%20fees%20with%20application_fee_amount" class="dashAnchor"></a><h2 id="application-fee">Collecting fees with <code>application_fee_amount</code></h2>
 
 <p>When creating charges with an <code>application_fee_amount</code>, the full charge amount is immediately transferred from the platform to the <code>transfer_data[destination]</code> account after the charge is captured. The <code>application_fee_amount</code> (capped at the full amount of the charge) is then transferred back to the platform.</p>
 <div class="tabs tabs-code animated" data-callback="codeTabsChanged" data-platform="server">
@@ -3391,7 +3391,7 @@ service.Create(createOptions);
 </section>
 
 <section>
-<h2 id="transfer-amount">Collecting fees with <code>transfer_data[amount]</code></h2>
+<a id="collecting-fees-with-transfer-dataamount" name="//apple_ref/cpp/Section/Collecting%20fees%20with%20transfer_data%5Bamount%5D" class="dashAnchor"></a><h2 id="transfer-amount">Collecting fees with <code>transfer_data[amount]</code></h2>
 
 <p>You can also take a fee by using <a href="../api/payment_intents/object.html#payment_intent_object-transfer_data-amount">transfer_data[amount]</a>.</p>
 
@@ -3588,7 +3588,7 @@ service.Create(createOptions);
 </aside></section>
 
 <section>
-<h2 id="differences">Differences between <code>transfer_data[destination]</code> and <code>destination[account]</code></h2>
+<a id="differences-between-transfer-datadestination-and-destinationaccount" name="//apple_ref/cpp/Section/Differences%20between%20transfer_data%5Bdestination%5D%20and%20destination%5Baccount%5D" class="dashAnchor"></a><h2 id="differences">Differences between <code>transfer_data[destination]</code> and <code>destination[account]</code></h2>
 
 <p>The <code>destination[account]</code> parameter is deprecated, and replaced with <code>transfer_data[destination]</code>. You should be aware of the following differences:</p>
 
@@ -3599,7 +3599,7 @@ service.Create(createOptions);
 </ul></section>
 
 <section>
-<h2 id="issuing-refunds">Issuing refunds</h2>
+<a id="issuing-refunds" name="//apple_ref/cpp/Section/Issuing%20refunds" class="dashAnchor"></a><h2 id="issuing-refunds">Issuing refunds</h2>
 
 <p>If you are using the Payment Intents API, refunds should be issued against <a href="../payments/payment-intents/verifying-status.html#identifying-charges">the most recent charge that is created</a>.</p>
 
@@ -3854,7 +3854,7 @@ var refund = service.Create(options);
 <p>Alternatively, you can provide a <code>refund_application_fee</code> value of <strong>false</strong> and refund the application fee separately <a href="../api/index.html#create_fee_refund">through the API</a>.</p></section>
 
 <section>
-  <h2>Further reading</h2>
+  <a id="further-reading" name="//apple_ref/cpp/Section/Further%20reading" class="dashAnchor"></a><h2>Further reading</h2>
   <p>Discover what other Connect functionality is available.</p>
 <ul class="next-steps">
     <li><a href="charges.html"><span>Creating Charges</span></a></li>
@@ -3898,7 +3898,7 @@ var refund = service.Create(options);
 
 
             </article>
-            <div class="docs-aside">
+            <div class="docs-aside" style="display: none;">
               <div class="docs-toc empty">
                 <h4>On this page</h4>
                 <ul class="docs-toc-list">

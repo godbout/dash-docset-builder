@@ -180,7 +180,7 @@
   <body class="">
     
       <div id="docs">
-        <div id="sidebar">
+        <div id="sidebar" style="display: none;">
             
   <div class="logo">
     <a href="../../recipes/switching-to-stripe.html" title="Stripe docs">
@@ -3008,7 +3008,7 @@
             <article id="content">
                 
   <header>
-  <h1 id="migrating-to-payment-intents">Migrating to Payment Intents</h1>
+  <a name="//apple_ref/cpp/Section/Top" class="dashAnchor"></a><h1 id="migrating-to-payment-intents">Migrating to Payment Intents</h1>
 
   <p>Learn how to migrate your existing cards and Charges API integration.</p>
 
@@ -3018,7 +3018,7 @@
 </header>
 
 <section>
-  <h2 id="strategy">Strategy for migration</h2>
+  <a id="strategy-for-migration" name="//apple_ref/cpp/Section/Strategy%20for%20migration" class="dashAnchor"></a><h2 id="strategy">Strategy for migration</h2>
 
   <p>Migrating your payment flow can be daunting. It is safe to incrementally adopt the Payment Intents API and use it in parallel with the Charges API. To this end, you can split up the migration into the following steps:</p>
 
@@ -3032,7 +3032,7 @@
 </section>
 
 <section>
-  <h2 id="api-version">Update your API version and your client library</h2>
+  <a id="update-your-api-version-and-your-client-library" name="//apple_ref/cpp/Section/Update%20your%20API%20version%20and%20your%20client%20library" class="dashAnchor"></a><h2 id="api-version">Update your API version and your client library</h2>
 
   <p>While the Payment Intents API works on all API versions, we recommend that you <a href="../../upgrades.html#how-can-i-upgrade-my-api">upgrade to the latest API version</a>. If you decide to use an API version older than <a href="../../upgrades.html#2019-02-11">2019-02-11</a>, note the following two changes as you go through the code examples:</p>
 
@@ -3045,7 +3045,7 @@
 </section>
 <section>
 
-<h2 id="web">Migrate your one-time payment flows</h2>
+<a id="migrate-your-one-time-payment-flows" name="//apple_ref/cpp/Section/Migrate%20your%20one-time%20payment%20flows" class="dashAnchor"></a><h2 id="web">Migrate your one-time payment flows</h2>
 
 
 <div class="tabs tabs-regular  animated persists" data-save-url="true" data-group="web_migration">
@@ -4577,7 +4577,7 @@ Charge charge = service.Create(options);</code></div></pre>
 </section>
 
 <section>
-<h2 id="saved-cards">Migrate your integration that saves cards on Customer objects</h2>
+<a id="migrate-your-integration-that-saves-cards-on-customer-objects" name="//apple_ref/cpp/Section/Migrate%20your%20integration%20that%20saves%20cards%20on%20Customer%20objects" class="dashAnchor"></a><h2 id="saved-cards">Migrate your integration that saves cards on Customer objects</h2>
 
 <div class="tabs tabs-regular  animated persists" data-save-url="true" data-group="charges_cards_migration">
     
@@ -6409,7 +6409,7 @@ var paymentMethod = service.Attach("{{PAYMENT_METHOD_ID}}", options);</code></di
 </section>
 
 <section>
-<h2 id="access-payment-methods">Access saved payment methods</h2>
+<a id="access-saved-payment-methods" name="//apple_ref/cpp/Section/Access%20saved%20payment%20methods" class="dashAnchor"></a><h2 id="access-payment-methods">Access saved payment methods</h2>
 
 <p>To display the customer&rsquo;s previously saved Cards, Sources, and PaymentMethods, <a href="../../api/payment_methods/list.html">list the payment methods</a> instead of reading the <a href="../../api/customers/object.html#customer_object-sources">sources</a> property of the customer object. This is required because new PaymentMethods added to a customer will not be duplicated in the sources property of the customer object.</p>
   <div class="tabs tabs-code animated before-after-table">
@@ -6726,7 +6726,7 @@ var paymentMethods = service.List(options);
 </section>
 
 <section>
-  <h2 id="testing">Test the integration</h2>
+  <a id="test-the-integration" name="//apple_ref/cpp/Section/Test%20the%20integration" class="dashAnchor"></a><h2 id="testing">Test the integration</h2>
 
   <p>It&rsquo;s important to thoroughly test your integration to make sure you&rsquo;re correctly handling cards that require additional authentication and cards that don&rsquo;t. Use these card numbers in <a href="../../keys.html#test-live-modes">test mode</a> with any expiration date in the future and any three digit CVC code to validate your integration when authentication is required and when it&rsquo;s not required.</p>
 
@@ -6775,7 +6775,7 @@ var paymentMethods = service.List(options);
 </section>
 
 <section>
-<h2 id="next-steps">Next steps</h2>
+<a id="next-steps" name="//apple_ref/cpp/Section/Next%20steps" class="dashAnchor"></a><h2 id="next-steps">Next steps</h2>
 
 <p>Now you have all the information you need to begin migrating an existing Stripe integration to the Payment Intents API with automatic confirmation. To learn more, continue reading:</p>
 
@@ -6817,7 +6817,7 @@ var paymentMethods = service.List(options);
 
 
             </article>
-            <div class="docs-aside">
+            <div class="docs-aside" style="display: none;">
               <div class="docs-toc empty">
                 <h4>On this page</h4>
                 <ul class="docs-toc-list">

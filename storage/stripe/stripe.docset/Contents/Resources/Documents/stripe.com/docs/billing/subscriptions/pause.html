@@ -180,7 +180,7 @@
   <body class="">
     
       <div id="docs">
-        <div id="sidebar">
+        <div id="sidebar" style="display: none;">
             
   <div class="logo">
     <a href="../../recipes/switching-to-stripe.html" title="Stripe docs">
@@ -3008,7 +3008,7 @@
             <article id="content">
                 
   <header>
-  <h1 id="pause-payment-collection">Pause payment collection</h1>
+  <a name="//apple_ref/cpp/Section/Top" class="dashAnchor"></a><h1 id="pause-payment-collection">Pause payment collection</h1>
 
   <p>Learn how to pause payment collection on subscriptions.</p>
 </header>
@@ -3047,7 +3047,7 @@
 
   <p>If these options don&rsquo;t fit your use case, you might want to consider <a href="canceling.html">canceling subscriptions</a> instead.</p>
 
-  <h2 id="free">Offer services for free</h2>
+  <a id="offer-services-for-free" name="//apple_ref/cpp/Section/Offer%20services%20for%20free" class="dashAnchor"></a><h2 id="free">Offer services for free</h2>
 
   <p>If you want to offer your services for free, <a href="../../api/subscriptions/update.html">update</a> the subscription&rsquo;s <code>pause_collection[behavior]</code> to <code>mark_uncollectible</code>. If you know when you want to resume collection, pass a timestamp for <code>resumes_at</code> as well.</p>
 
@@ -3201,7 +3201,7 @@ service.Update("sub_GTbTiykEwMRog0", options);
 
   <p>If you don&rsquo;t set a <code>resumes_at</code> date, the subscription remains paused until you unset <code>pause_collection</code>.</p>
 
-  <h2 id="collect-payment-later">Temporarily offer services for free and collect payment later</h2>
+  <a id="temporarily-offer-services-for-free-and-collect-payment-later" name="//apple_ref/cpp/Section/Temporarily%20offer%20services%20for%20free%20and%20collect%20payment%20later" class="dashAnchor"></a><h2 id="collect-payment-later">Temporarily offer services for free and collect payment later</h2>
 
   <p>If you want to temporarily offer your services for free and collect payments later, set <code>pause_collection[behavior]=keep_as_draft</code>. If you know when you want to resume collection, pass a timestamp for <code>resumes_at</code> as well.</p>
 
@@ -3486,7 +3486,7 @@ service.Update("in_1EcesDCZ6qsJgndJnyYCH9KG", options);
 </div>
 </div>
 
-  <h2 id="unable-provide-services">Unable to provide services</h2>
+  <a id="unable-to-provide-services" name="//apple_ref/cpp/Section/Unable%20to%20provide%20services" class="dashAnchor"></a><h2 id="unable-provide-services">Unable to provide services</h2>
 
   <p>If you can&rsquo;t provide your services for a certain period of time, you can void invoices that are created by your subscriptions so that your customers aren&rsquo;t charged. Use the subscription ID to update <code>pause_collection[behavior]</code> to <code>void</code> and <code>pause_collection[behavior][resumes_at]</code> to the date you want to start collecting payments again.</p>
 
@@ -3640,7 +3640,7 @@ service.Update("sub_GTbTiykEwMRog0", options);
 
   <p>If you don&rsquo;t set a <code>resumes_at</code> date, the subscription remains paused until you unset <code>pause_collection</code>.</p>
 
-  <h2 id="unpausing">Manually unpausing</h2>
+  <a id="manually-unpausing" name="//apple_ref/cpp/Section/Manually%20unpausing" class="dashAnchor"></a><h2 id="unpausing">Manually unpausing</h2>
 
   <p>To resume collecting payments at any time, you can update the subscription and unset <code>pause_collection</code>:</p>
 
@@ -3773,7 +3773,7 @@ service.Update("sub_GTbTiykEwMRog0", options);
 
   <p>Resuming collection this way only affects future invoices.</p>
 
-  <h2 id="pausing-subscription-schedules">Pausing and subscription schedules</h2>
+  <a id="pausing-and-subscription-schedules" name="//apple_ref/cpp/Section/Pausing%20and%20subscription%20schedules" class="dashAnchor"></a><h2 id="pausing-subscription-schedules">Pausing and subscription schedules</h2>
 
   <p>If you pause a subscription on a <a href="subscription-schedules.html">subscription schedule</a>, the scheduled updates still take effect. However, payment is not collected while the subscription is paused. When you want to collect payment again, you need to <a href="pause.html#unpausing">manually unpause</a> the subscription. You also need to update <code>auto_advance</code> to <code>true</code> on any invoices with <code>status=draft</code> that you want to collect payment on.</p>
 
@@ -3810,7 +3810,7 @@ service.Update("sub_GTbTiykEwMRog0", options);
 
 
             </article>
-            <div class="docs-aside">
+            <div class="docs-aside" style="display: none;">
               <div class="docs-toc empty">
                 <h4>On this page</h4>
                 <ul class="docs-toc-list">

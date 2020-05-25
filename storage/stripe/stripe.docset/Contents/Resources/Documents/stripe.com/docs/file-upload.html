@@ -180,7 +180,7 @@
   <body class="">
     
       <div id="docs">
-        <div id="sidebar">
+        <div id="sidebar" style="display: none;">
             
   <div class="logo">
     <a href="recipes/switching-to-stripe.html" title="Stripe docs">
@@ -3008,7 +3008,7 @@
             <article id="content">
                 
   <header>
-  <h1>File upload guide</h1>
+  <a name="//apple_ref/cpp/Section/Top" class="dashAnchor"></a><h1>File upload guide</h1>
   <p>Use the File Upload API to securely send dispute evidence, identification documents, and more to Stripe.</p>
 </header>
 
@@ -3023,7 +3023,7 @@
 </section>
 
 <section>
-<h2 id="uploading-a-file">Uploading a file</h2>
+<a id="uploading-a-file" name="//apple_ref/cpp/Section/Uploading%20a%20file" class="dashAnchor"></a><h2 id="uploading-a-file">Uploading a file</h2>
 
 <p>To upload a file, send a <code>multipart/form-data</code> request to <strong>https://files.stripe.com/v1/files</strong>. Note that the subdomain <strong>files.stripe.com</strong> is different than most of Stripe&rsquo;s API endpoints. The request should specify a <code>purpose</code> and a <code>file</code>. The following example uploads a file located at <strong>/path/to/a/file.jpg</strong> on your local file system with the purpose <code>dispute_evidence</code>:</p>
 <div class="tabs tabs-code animated" data-callback="codeTabsChanged">
@@ -3364,7 +3364,7 @@ CheckoutActivity.java
 <p>A successful request returns a <a href="api/index.html#file_upload_object">file_upload</a> object.</p></section>
 
 <section>
-<h2 id="retrieving-a-file-api-resource">Retrieving a File API resource</h2>
+<a id="retrieving-a-file-api-resource" name="//apple_ref/cpp/Section/Retrieving%20a%20File%20API%20resource" class="dashAnchor"></a><h2 id="retrieving-a-file-api-resource">Retrieving a File API resource</h2>
 
 <p>To retrieve the API resource for a File, make a GET request to the <strong>/v1/files</strong> endpoint of the <strong>files.stripe.com</strong> subdomain providing the file upload ID:</p>
 <div class="tabs tabs-code animated" data-callback="codeTabsChanged">
@@ -3471,7 +3471,7 @@ var upload = service.Get("file_kJbjqCaOxNr8JV8e08Bc");
 </section>
 
 <section>
-<h2 id="download-file-contents">Downloading File Contents</h2>
+<a id="downloading-file-contents" name="//apple_ref/cpp/Section/Downloading%20File%20Contents" class="dashAnchor"></a><h2 id="download-file-contents">Downloading File Contents</h2>
 
 <p>If the file purpose allows downloading the file contents, then the <a href="api/index.html#file_upload_object">file_upload</a> includes a non-null <code>url</code> field indicating how to access the contents. This url requires authentication with your Stripe API keys.</p>
 <div class="code" data-language="curl">
@@ -3610,7 +3610,7 @@ var fileLink = service.Create(options);
 
 
 <section>
-<h2 id="using-a-file-token">Using a file</h2>
+<a id="using-a-file" name="//apple_ref/cpp/Section/Using%20a%20file" class="dashAnchor"></a><h2 id="using-a-file-token">Using a file</h2>
 
 <p>After a file is uploaded, the file upload ID can be used in other API requests. For example, to attach an uploaded file to a particular dispute as evidence:</p>
 <div class="tabs tabs-code animated" data-callback="codeTabsChanged">
@@ -3766,7 +3766,7 @@ var dispute = service.Update("dp_tI62uhjTDd7ZkAflN69b", options);
 </section>
 
 <section>
-<h2 id="handling-upload-errors">Handling Upload Errors</h2>
+<a id="handling-upload-errors" name="//apple_ref/cpp/Section/Handling%20Upload%20Errors" class="dashAnchor"></a><h2 id="handling-upload-errors">Handling Upload Errors</h2>
 
 <p>When you use the File API to upload a PDF document, we run it through a series of checks to validate that it is correctly formatted and meets PDF specifications. We return an error for uploads that fail any of our checks.</p>
 
@@ -3815,7 +3815,7 @@ var dispute = service.Update("dp_tI62uhjTDd7ZkAflN69b", options);
 
 
             </article>
-            <div class="docs-aside">
+            <div class="docs-aside" style="display: none;">
               <div class="docs-toc empty">
                 <h4>On this page</h4>
                 <ul class="docs-toc-list">

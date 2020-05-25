@@ -180,7 +180,7 @@
   <body class="">
     
       <div id="docs">
-        <div id="sidebar">
+        <div id="sidebar" style="display: none;">
             
   <div class="logo">
     <a href="../../recipes/switching-to-stripe.html" title="Stripe docs">
@@ -3008,7 +3008,7 @@
             <article id="content">
                 
   <header>
-  <h1 id="send-invoices-to-customers">Send invoices to customers</h1>
+  <a name="//apple_ref/cpp/Section/Top" class="dashAnchor"></a><h1 id="send-invoices-to-customers">Send invoices to customers</h1>
 
   <p>Send invoices to your customers via email.</p>
 </header>
@@ -3032,7 +3032,7 @@ These email invoices can be used for both subscriptions and one-off invoices, an
 </section>
 
 <section>
-  <h2 id="one-off">Sending one-off invoices</h2>
+  <a id="sending-one-off-invoices" name="//apple_ref/cpp/Section/Sending%20one-off%20invoices" class="dashAnchor"></a><h2 id="one-off">Sending one-off invoices</h2>
 
   <p>Send one time invoices to the email address specified in <code>customer.email</code>.
 First, <a href="customizing.html">configure</a> your invoices.
@@ -3390,7 +3390,7 @@ Invoice invoice = service.SendInvoice("in_18jwqyLlRB0eXbMtrUQ97YBw", sendOptions
 
 <section>
 
-  <h2 id="subscription">Sending invoices with a subscription</h2>
+  <a id="sending-invoices-with-a-subscription" name="//apple_ref/cpp/Section/Sending%20invoices%20with%20a%20subscription" class="dashAnchor"></a><h2 id="subscription">Sending invoices with a subscription</h2>
 
   <p>If you sell to other businesses, automatically charging a card on file isn&rsquo;t always the norm.
 Instead, customers might ask that you send them an invoice, which they&rsquo;ll pay on their own schedule.
@@ -3553,7 +3553,7 @@ The due date is the number of <code>days_until_due</code> after the invoice&rsqu
 </section>
 
 <section>
-  <h2 id="dunning">Sending email reminders</h2>
+  <a id="sending-email-reminders" name="//apple_ref/cpp/Section/Sending%20email%20reminders" class="dashAnchor"></a><h2 id="dunning">Sending email reminders</h2>
 
   <p>When sending invoices to your customers, Stripe sends your customers payment reminders on a pre-defined schedule specified in <a href="https://dashboard.stripe.com/settings/billing/automatic">your email reminders settings</a>.</p>
 
@@ -3663,7 +3663,7 @@ var invoice = service.SendInvoice("in_18jwqyLlRB0eXbMtrUQ97YBw", options);
 </section>
 
 <section>
-  <h2 id="overdue">Overdue payments</h2>
+  <a id="overdue-payments" name="//apple_ref/cpp/Section/Overdue%20payments" class="dashAnchor"></a><h2 id="overdue">Overdue payments</h2>
 
   <p>An invoice is considered overdue when its due date has passed and the invoice hasn&rsquo;t been paid.
 Stripe will normally continue to remind your customer to pay the invoice even after the due date.
@@ -3674,7 +3674,7 @@ Depending on your <a href="https://dashboard.stripe.com/settings/billing/automat
 </section>
 
 <section>
-  <h2 id="custom-emails">Building your own email templates</h2>
+  <a id="building-your-own-email-templates" name="//apple_ref/cpp/Section/Building%20your%20own%20email%20templates" class="dashAnchor"></a><h2 id="custom-emails">Building your own email templates</h2>
 
   <p>You can implement your own custom-designed email templates to replace Stripe&rsquo;s built-in Billing emails. Doing&nbsp;so is straightforward with our comprehensive set of <a href="../../webhooks.html">webhook events</a>.</p>
 
@@ -3716,7 +3716,7 @@ Depending on your <a href="https://dashboard.stripe.com/settings/billing/automat
 
 
             </article>
-            <div class="docs-aside">
+            <div class="docs-aside" style="display: none;">
               <div class="docs-toc empty">
                 <h4>On this page</h4>
                 <ul class="docs-toc-list">

@@ -180,7 +180,7 @@
   <body class="">
     
       <div id="docs">
-        <div id="sidebar">
+        <div id="sidebar" style="display: none;">
             
   <div class="logo">
     <a href="../../recipes/switching-to-stripe.html" title="Stripe docs">
@@ -3008,7 +3008,7 @@
             <article id="content">
                 
   <header>
-  <h1 id="billing-examples">Billing examples</h1>
+  <a name="//apple_ref/cpp/Section/Top" class="dashAnchor"></a><h1 id="billing-examples">Billing examples</h1>
 
   <p>This page explores some common billing use cases and demonstrates how to model them with products and prices. The following examples follow a fictional company, SqueakyCar, that&rsquo;s offering a car wash service. Washers come to the customer&rsquo;s home to wash their cars.</p>
 </header>
@@ -3020,7 +3020,7 @@
 </aside>
 
 <section>
-  <h2 id="simple-monthly-billing">Simple monthly billing</h2>
+  <a id="simple-monthly-billing" name="//apple_ref/cpp/Section/Simple%20monthly%20billing" class="dashAnchor"></a><h2 id="simple-monthly-billing">Simple monthly billing</h2>
 
   <p>Many businesses begin with a simple monthly rate or &ldquo;per-seat&rdquo; pricing. This is modeled by specifying the <code>unit_amount</code> on a <a href="../../api/index.html#prices">Price</a>. Specify a <code>quantity</code> when creating a subscription to charge for multiple seats or licenses.</p>
 
@@ -3480,7 +3480,7 @@ var subscription = service.Create(options);
 </section>
 
 <section>
-  <h2 id="varying-pricing">Varying pricing</h2>
+  <a id="varying-pricing" name="//apple_ref/cpp/Section/Varying%20pricing" class="dashAnchor"></a><h2 id="varying-pricing">Varying pricing</h2>
 
   <p>Products can use multiple prices to define different pricing options. The product description is shared between prices and appears the same on the customer&rsquo;s receipt and invoice&mdash;only the pricing differs.</p>
 
@@ -4174,7 +4174,7 @@ var price = service.Create(options);
 </section>
 
 <section>
-  <h2 id="flat-fee">Flat fee</h2>
+  <a id="flat-fee" name="//apple_ref/cpp/Section/Flat%20fee" class="dashAnchor"></a><h2 id="flat-fee">Flat fee</h2>
 
   <p>You can subscribe the customer to two separate products to model a pricing structure that includes both a base fee and additional per-seat pricing. One product serves as the flat base price and the other product represents the variable per-seat pricing.</p>
 
@@ -4717,7 +4717,7 @@ var subscription = service.Create(options);
 </section>
 
 <section>
-  <h2 id="usage-based-pricing">Usage-based pricing</h2>
+  <a id="usage-based-pricing" name="//apple_ref/cpp/Section/Usage-based%20pricing" class="dashAnchor"></a><h2 id="usage-based-pricing">Usage-based pricing</h2>
 
   <p><a href="metered-billing.html">Metered billing</a> is useful in cases where you want to charge your customers a granular amount based on their consumption of your service during the billing cycle, instead of explicitly setting quantities. For example, SqueakyCar can use metered billing to offer a service where they wash their customer&rsquo;s cars as needed, and charge at the end of the month for the total number of washes.</p>
 
@@ -5075,7 +5075,7 @@ var price = service.Create(options);
 </section>
 
 <section>
-  <h2 id="pricing-tiers">Pricing tiers</h2>
+  <a id="pricing-tiers" name="//apple_ref/cpp/Section/Pricing%20tiers" class="dashAnchor"></a><h2 id="pricing-tiers">Pricing tiers</h2>
 
   <p>Prices can represent tiers, allowing the unit cost to change with quantity or usage. SqueakyCar might, for example, want to offer lower rates for customers who use more washes per month. The following examples show two different ways to adjust pricing as usage increases: volume-based pricing and graduated pricing. To demonstrate these approaches to tiered pricing, we will use the following tiers:</p>
 
@@ -5102,7 +5102,7 @@ var price = service.Create(options);
     </tbody>
   </table>
 
-  <h2 id="volume-based-pricing">Volume-based pricing</h2>
+  <a id="volume-based-pricing" name="//apple_ref/cpp/Section/Volume-based%20pricing" class="dashAnchor"></a><h2 id="volume-based-pricing">Volume-based pricing</h2>
 
   <p>With volume-based pricing, the subscription item is billed at the tier corresponding to the amount of usage at the end of the period. To implement volume-based billing tiers, set <code>volume</code> as the value of <code>tiers_mode</code>:</p>
 
@@ -5400,7 +5400,7 @@ var price = priceService.Create(priceOptions);
 
   <p>Under volume-based pricing, a customer with 5 car washes is charged $35 at the end of the period: $7 for each of the 5 washes. However, if they accumulate 6 washes the following month, then all washes are billed at the <code>6-10</code> rate. That month, they are charged $39 ($6.50 &times; 6).</p>
 
-  <h2 id="graduated-pricing">Graduated pricing</h2>
+  <a id="graduated-pricing" name="//apple_ref/cpp/Section/Graduated%20pricing" class="dashAnchor"></a><h2 id="graduated-pricing">Graduated pricing</h2>
 
   <p>While similar to volume pricing, graduated pricing charges for the usage in each tier instead of applying a single price to all usage. Set the value of <code>tiers_mode</code> to <code>graduated</code> to use graduated tiers:</p>
 
@@ -5701,7 +5701,7 @@ var price = priceService.Create(priceOptions);
 </section>
 
 <section>
-  <h2 id="transforming-usage">Transforming usage</h2>
+  <a id="transforming-usage" name="//apple_ref/cpp/Section/Transforming%20usage" class="dashAnchor"></a><h2 id="transforming-usage">Transforming usage</h2>
 
   <p>Use the <code>transform_usage</code> option to aggregate usage before multiplying by unit cost. This is useful if you want to report a different quantity or usage before totaling price.</p>
 
@@ -6083,7 +6083,7 @@ var price = priceService.Create(priceOptions);
 
 
             </article>
-            <div class="docs-aside">
+            <div class="docs-aside" style="display: none;">
               <div class="docs-toc empty">
                 <h4>On this page</h4>
                 <ul class="docs-toc-list">

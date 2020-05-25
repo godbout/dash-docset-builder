@@ -181,7 +181,7 @@
   <body class="">
     
       <div id="docs">
-        <div id="sidebar">
+        <div id="sidebar" style="display: none;">
             
   <div class="logo">
     <a href="../recipes/switching-to-stripe.html" title="Stripe docs">
@@ -3010,7 +3010,7 @@
                 
   
 <header>
-  <h1>Using Connect with Express accounts</h1>
+  <a name="//apple_ref/cpp/Section/Top" class="dashAnchor"></a><h1>Using Connect with Express accounts</h1>
   <p>Express enables your platform to manage payout schedules, customize the flow of funds, and control branding. Stripe will handle onboarding, account management, and identity verification for your platform.</p>
 </header>
 
@@ -3026,7 +3026,7 @@
 
 <section>
 
-  <h2 id="get-started">Get started</h2>
+  <a id="get-started" name="//apple_ref/cpp/Section/Get%20started" class="dashAnchor"></a><h2 id="get-started">Get started</h2>
 
   <p>If you&rsquo;re new to Connect, start with one of our guides to use Express accounts with your application:</p>
 
@@ -3035,7 +3035,7 @@
     <li><a href="add-and-pay-out-guide.html">Pay out money</a>, if you&rsquo;ll add money from a bank account to pay out</li>
   </ul>
 
-  <h2 id="express-demo">Express demo</h2>
+  <a id="express-demo" name="//apple_ref/cpp/Section/Express%20demo" class="dashAnchor"></a><h2 id="express-demo">Express demo</h2>
 
   <p>To see the complete Express onboarding flow in action, Stripe recommends trying our <a href="https://rocketrides.io/">sample end-to-end Express integration</a> before you start building your own. This demo includes an example of a user onboarding experience and account management for Rocket Rides, an on-demand marketplace.</p>
 
@@ -3047,7 +3047,7 @@
 </section>
 
 <section>
-  <h2 id="prerequisites-for-using-express">Prerequisites for using Express</h2>
+  <a id="prerequisites-for-using-express" name="//apple_ref/cpp/Section/Prerequisites%20for%20using%20Express" class="dashAnchor"></a><h2 id="prerequisites-for-using-express">Prerequisites for using Express</h2>
 
   <p>To create Express accounts, you must meet all of these requirements:</p>
 
@@ -3061,7 +3061,7 @@
 </section>
 
 <section>
-  <h2 id="onboarding-express-accounts-outside-of-your-platforms-country">Onboarding Express Accounts outside of your platform&rsquo;s country</h2>
+  <a id="onboarding-express-accounts-outside-of-your-platforms-country" name="//apple_ref/cpp/Section/Onboarding%20Express%20Accounts%20outside%20of%20your%20platform%E2%80%99s%20country" class="dashAnchor"></a><h2 id="onboarding-express-accounts-outside-of-your-platforms-country">Onboarding Express Accounts outside of your platform&rsquo;s country</h2>
 
   <p>You can enable onboarding on a per-country basis in the <a href="https://dashboard.stripe.com/account/applications/settings">Connect Settings</a> section of your dashboard.</p>
 
@@ -3079,7 +3079,7 @@
 <section>
 
   <section>
-    <h2 id="oauth-flow">The OAuth connection flow</h2>
+    <a id="the-oauth-connection-flow" name="//apple_ref/cpp/Section/The%20OAuth%20connection%20flow" class="dashAnchor"></a><h2 id="oauth-flow">The OAuth connection flow</h2>
 
     <p>A user connects to your platform using the following OAuth connection flow:</p>
 
@@ -3100,7 +3100,7 @@
 </section>
 
 <section>
-  <h2 id="integrating-oauth">Step 1: Create the OAuth link</h2>
+  <a id="step-1-create-the-oauth-link" name="//apple_ref/cpp/Section/Step%201%3A%20Create%20the%20OAuth%20link" class="dashAnchor"></a><h2 id="integrating-oauth">Step 1: Create the OAuth link</h2>
 
   <p>To start your integration, you need two pieces of information from your <a href="https://dashboard.stripe.com/account/applications/settings">platform settings</a>:</p>
 
@@ -3177,7 +3177,7 @@
 </section>
 
 <section>
-  <h2 id="connect-users">Step 2: User creates or connects their account</h2>
+  <a id="step-2-user-creates-or-connects-their-account" name="//apple_ref/cpp/Section/Step%202%3A%20User%20creates%20or%20connects%20their%20account" class="dashAnchor"></a><h2 id="connect-users">Step 2: User creates or connects their account</h2>
 
   <p>After the user clicks the link on your site, they are taken to Stripe&rsquo;s website where they are prompted to provide contact and payout information.</p>
 
@@ -3192,7 +3192,7 @@
 </section>
 
 <section>
-  <h2 id="redirected">Step 3: User is redirected back to your site</h2>
+  <a id="step-3-user-is-redirected-back-to-your-site" name="//apple_ref/cpp/Section/Step%203%3A%20User%20is%20redirected%20back%20to%20your%20site" class="dashAnchor"></a><h2 id="redirected">Step 3: User is redirected back to your site</h2>
 
   <p>After the user completes the onboarding process, they are redirected back to your site using the URL defined as your platform&rsquo;s <code>redirect_uri</code>.</p>
 
@@ -3213,7 +3213,7 @@
 </section>
 
 <section>
-  <h2 id="token-request">Step 4: Platform completes the Express account connection</h2>
+  <a id="step-4-platform-completes-the-express-account-connection" name="//apple_ref/cpp/Section/Step%204%3A%20Platform%20completes%20the%20Express%20account%20connection" class="dashAnchor"></a><h2 id="token-request">Step 4: Platform completes the Express account connection</h2>
 
   <p>Include the provided authorization <code>code</code> in a POST request to Stripe&rsquo;s token endpoint to complete the connection and fetch the user&rsquo;s account ID:</p>
 
@@ -3592,14 +3592,14 @@ var token = service.Create(options);
 </section>
 
 <section>
-  <h2 id="webhooks">Webhooks</h2>
+  <a id="webhooks" name="//apple_ref/cpp/Section/Webhooks" class="dashAnchor"></a><h2 id="webhooks">Webhooks</h2>
 
   <p>After an account is created, all account change notifications can be delivered to your <a href="webhooks.html">webhooks</a> as <code>account.updated</code> events. You set your Connect webhook URL in your <a href="https://dashboard.stripe.com/account/webhooks">account settings</a>. These events let you track connected account onboarding and verification status, which can be useful for providing user support and displaying relevant notices in your platform&rsquo;s user interface. This isn&rsquo;t necessary, though, because Stripe takes your users through the steps of the onboarding and verification process and handles any issues that arise. Your platform doesn&rsquo;t need to do any additional work.</p>
 
 </section>
 
 <section>
-  <h2 id="next-steps">Next steps</h2>
+  <a id="next-steps" name="//apple_ref/cpp/Section/Next%20steps" class="dashAnchor"></a><h2 id="next-steps">Next steps</h2>
 
   <ul class="next-steps">
     <li><a href="express-dashboard.html"><span>Integrating with the Express Dashboard</span></a></li>
@@ -3640,7 +3640,7 @@ var token = service.Create(options);
 
 
             </article>
-            <div class="docs-aside">
+            <div class="docs-aside" style="display: none;">
               <div class="docs-toc empty">
                 <h4>On this page</h4>
                 <ul class="docs-toc-list">

@@ -197,7 +197,7 @@
   <body class="">
     
       <div id="docs">
-        <div id="sidebar">
+        <div id="sidebar" style="display: none;">
             
   <div class="logo">
     <a href="../../recipes/switching-to-stripe.html" title="Stripe docs">
@@ -3025,7 +3025,7 @@
             <article id="content">
                 
   <header>
-  <h1 id="payment-request-button-element">Payment Request Button</h1>
+  <a name="//apple_ref/cpp/Section/Top" class="dashAnchor"></a><h1 id="payment-request-button-element">Payment Request Button</h1>
 
   <p>Collect payment and address information from customers who use Apple Pay, Google Pay, Microsoft Pay, and the Payment Request API.</p>
 
@@ -3043,7 +3043,7 @@
     <div class="tabs-tab" id="html-js">
     <section>
 
-  <h2 id="html-js-overview">Overview</h2>
+  <a id="overview" name="//apple_ref/cpp/Section/Overview" class="dashAnchor"></a><h2 id="html-js-overview">Overview</h2>
 
   <p>The Payment Request Button Element gives you a single integration
 for <a href="../../apple-pay.html">Apple Pay</a>, <a href="../../google-pay.html">Google Pay</a>, <a href="../../microsoft-pay.html">Microsoft
@@ -3073,7 +3073,7 @@ but compatible devices automatically support browser-saved cards, Google Pay, an
 
 <div class="expando" aria-expanded="true">
   <a id="html-js-prerequisites" href="payment-request-button.html#html-js-prerequisites" class="expando-trigger">
-    <h2 class="expando-title" data-no-anchor data-custom-toc-title="Prerequisites">
+    <a id="prerequisites" name="//apple_ref/cpp/Section/Prerequisites" class="dashAnchor"></a><h2 class="expando-title" data-no-anchor data-custom-toc-title="Prerequisites">
       Prerequisites
     </h2>
   </a>
@@ -3231,7 +3231,7 @@ var domain = service.Create(options);</code></div></pre>
 </div>
 <div class="expando" aria-expanded="true">
   <a id="html-js-set-up-stripe-elements" href="payment-request-button.html#html-js-set-up-stripe-elements" class="expando-trigger">
-    <h2 class="expando-title" data-no-anchor data-custom-toc-title="Set up Stripe Elements">
+    <a id="1-set-up-stripe-elements-client-side" name="//apple_ref/cpp/Section/1%20Set%20up%20Stripe%20Elements%20Client-side" class="dashAnchor"></a><h2 class="expando-title" data-no-anchor data-custom-toc-title="Set up Stripe Elements">
         <span class="expando-left-text">1</span>
       Set up Stripe Elements
         <span class="tag optional">Client-side</span>
@@ -3283,7 +3283,7 @@ as it identifies your website to Stripe:</p>
 
 <div class="expando" aria-expanded="true">
   <a id="html-js-create-payment-request-instance" href="payment-request-button.html#html-js-create-payment-request-instance" class="expando-trigger">
-    <h2 class="expando-title" data-no-anchor data-custom-toc-title="Create a paymentRequest instance">
+    <a id="2-create-a-paymentrequest-instance-client-side" name="//apple_ref/cpp/Section/2%20Create%20a%20paymentRequest%20instance%20Client-side" class="dashAnchor"></a><h2 class="expando-title" data-no-anchor data-custom-toc-title="Create a paymentRequest instance">
         <span class="expando-left-text">2</span>
       Create a paymentRequest instance
         <span class="tag optional">Client-side</span>
@@ -3351,7 +3351,7 @@ methods, the billing address is automatically collected when available.</p>
 
 <div class="expando" aria-expanded="true">
   <a id="html-js-mount-element" href="payment-request-button.html#html-js-mount-element" class="expando-trigger">
-    <h2 class="expando-title" data-no-anchor data-custom-toc-title="Create and mount the paymentRequestButton">
+    <a id="3-create-and-mount-the-paymentrequestbutton-client-side" name="//apple_ref/cpp/Section/3%20Create%20and%20mount%20the%20paymentRequestButton%20Client-side" class="dashAnchor"></a><h2 class="expando-title" data-no-anchor data-custom-toc-title="Create and mount the paymentRequestButton">
         <span class="expando-left-text">3</span>
       Create and mount the paymentRequestButton
         <span class="tag optional">Client-side</span>
@@ -3419,7 +3419,7 @@ const prButton = elements.create('paymentRequestButton', {
 
 <div class="expando" aria-expanded="true">
   <a id="html-js-create-payment" href="payment-request-button.html#html-js-create-payment" class="expando-trigger">
-    <h2 class="expando-title" data-no-anchor data-custom-toc-title="Create a PaymentIntent">
+    <a id="4-create-a-paymentintent-server-side" name="//apple_ref/cpp/Section/4%20Create%20a%20PaymentIntent%20Server-side" class="dashAnchor"></a><h2 class="expando-title" data-no-anchor data-custom-toc-title="Create a PaymentIntent">
         <span class="expando-left-text">4</span>
       Create a PaymentIntent
         <span class="tag optional">Server-side</span>
@@ -3666,7 +3666,7 @@ var paymentIntent = service.Create(options);
 
 <div class="expando" aria-expanded="true">
   <a id="html-js-complete-payment" href="payment-request-button.html#html-js-complete-payment" class="expando-trigger">
-    <h2 class="expando-title" data-no-anchor data-custom-toc-title="Complete the payment">
+    <a id="5-complete-the-payment-client-side" name="//apple_ref/cpp/Section/5%20Complete%20the%20payment%20Client-side" class="dashAnchor"></a><h2 class="expando-title" data-no-anchor data-custom-toc-title="Complete the payment">
         <span class="expando-left-text">5</span>
       Complete the payment
         <span class="tag optional">Client-side</span>
@@ -3766,7 +3766,7 @@ make sure you also refund the payment that you just created.</p>
 
 <div class="expando" aria-expanded="true">
   <a id="html-js-testing" href="payment-request-button.html#html-js-testing" class="expando-trigger">
-    <h2 class="expando-title" data-no-anchor data-custom-toc-title="Test your integration">
+    <a id="6-test-your-integration" name="//apple_ref/cpp/Section/6%20Test%20your%20integration" class="dashAnchor"></a><h2 class="expando-title" data-no-anchor data-custom-toc-title="Test your integration">
         <span class="expando-left-text">6</span>
       Test your integration
     </h2>
@@ -3846,7 +3846,7 @@ If you are using the <code>paymentRequestButton</code> Element within an iframe,
 </div>
 
 <section>
-<h2 id="html-js-collecting-shipping-info">Collect shipping information</h2>
+<a id="collect-shipping-information" name="//apple_ref/cpp/Section/Collect%20shipping%20information" class="dashAnchor"></a><h2 id="html-js-collecting-shipping-info">Collect shipping information</h2>
 
 <p>To collect shipping information, begin by including <code>requestShipping: true</code> when creating the payment request.</p>
 
@@ -3988,7 +3988,7 @@ to proceed in the flow.</p>
 </section>
 
 <section>
-<h2 id="html-js-styling-the-element">Style the button</h2>
+<a id="style-the-button" name="//apple_ref/cpp/Section/Style%20the%20button" class="dashAnchor"></a><h2 id="html-js-styling-the-element">Style the button</h2>
 
 <p>Use the following parameters to customize the Element:</p>
 
@@ -4058,7 +4058,7 @@ Then, use <a href="../reference.html#payment-request-show">paymentRequest.show()
 <p>When building your own button, follow Apple Pay&rsquo;s <a href="https://developer.apple.com/apple-pay/web-human-interface-guidelines/" target="_blank">Human Interface Guidelines</a>.</p></section>
 
 <section>
-<h2 id="html-js-using-with-connect">Use the Payment Request Button with Stripe Connect</h2>
+<a id="use-the-payment-request-button-with-stripe-connect" name="//apple_ref/cpp/Section/Use%20the%20Payment%20Request%20Button%20with%20Stripe%20Connect" class="dashAnchor"></a><h2 id="html-js-using-with-connect">Use the Payment Request Button with Stripe Connect</h2>
 
 <p><a href="../../connect.html">Connect platforms</a> that either create direct charges or add the token to a Customer on
 the connected account must take some additional steps when using the Payment Request Button.</p>
@@ -4223,7 +4223,7 @@ var domain = service.Create(options, requestOptions);</code></div></pre>
 <div class="tabs-tab" id="react">
     <section>
 
-  <h2 id="react-overview">Overview</h2>
+  <a id="overview" name="//apple_ref/cpp/Section/Overview" class="dashAnchor"></a><h2 id="react-overview">Overview</h2>
 
   <p>The Payment Request Button Element gives you a single integration
 for <a href="../../apple-pay.html">Apple Pay</a>, <a href="../../google-pay.html">Google Pay</a>, <a href="../../microsoft-pay.html">Microsoft
@@ -4253,7 +4253,7 @@ but compatible devices automatically support browser-saved cards, Google Pay, an
 
 <div class="expando" aria-expanded="true">
   <a id="react-prerequisites" href="payment-request-button.html#react-prerequisites" class="expando-trigger">
-    <h2 class="expando-title" data-no-anchor data-custom-toc-title="Prerequisites">
+    <a id="prerequisites" name="//apple_ref/cpp/Section/Prerequisites" class="dashAnchor"></a><h2 class="expando-title" data-no-anchor data-custom-toc-title="Prerequisites">
       Prerequisites
     </h2>
   </a>
@@ -4407,7 +4407,7 @@ var domain = service.Create(options);</code></div></pre>
 </div>
 <div class="expando" aria-expanded="true">
   <a id="react-set-up-stripe-elements" href="payment-request-button.html#react-set-up-stripe-elements" class="expando-trigger">
-    <h2 class="expando-title" data-no-anchor data-custom-toc-title="Set up Stripe Elements">
+    <a id="1-set-up-stripe-elements" name="//apple_ref/cpp/Section/1%20Set%20up%20Stripe%20Elements" class="dashAnchor"></a><h2 class="expando-title" data-no-anchor data-custom-toc-title="Set up Stripe Elements">
         <span class="expando-left-text">1</span>
       Set up Stripe Elements
     </h2>
@@ -4507,7 +4507,7 @@ ReactDOM.render(&lt;App /&gt;, document.getElementById('root'));
 
 <div class="expando" aria-expanded="true">
   <a id="react-create-payment-request-instance" href="payment-request-button.html#react-create-payment-request-instance" class="expando-trigger">
-    <h2 class="expando-title" data-no-anchor data-custom-toc-title="Create a paymentRequest instance">
+    <a id="2-create-a-paymentrequest-instance-client-side" name="//apple_ref/cpp/Section/2%20Create%20a%20paymentRequest%20instance%20Client-side" class="dashAnchor"></a><h2 class="expando-title" data-no-anchor data-custom-toc-title="Create a paymentRequest instance">
         <span class="expando-left-text">2</span>
       Create a paymentRequest instance
         <span class="tag optional">Client-side</span>
@@ -4557,7 +4557,7 @@ const CheckoutForm = () =&gt; {
 
 <div class="expando" aria-expanded="true">
   <a id="react-mount-element" href="payment-request-button.html#react-mount-element" class="expando-trigger">
-    <h2 class="expando-title" data-no-anchor data-custom-toc-title="Render the Payment Request Button Element">
+    <a id="3-render-the-payment-request-button-element-client-side" name="//apple_ref/cpp/Section/3%20Render%20the%20Payment%20Request%20Button%20Element%20Client-side" class="dashAnchor"></a><h2 class="expando-title" data-no-anchor data-custom-toc-title="Render the Payment Request Button Element">
         <span class="expando-left-text">3</span>
       Render the Payment Request Button Element
         <span class="tag optional">Client-side</span>
@@ -4615,7 +4615,7 @@ const CheckoutForm = () =&gt; {
 
 <div class="expando" aria-expanded="true">
   <a id="react-create-payment" href="payment-request-button.html#react-create-payment" class="expando-trigger">
-    <h2 class="expando-title" data-no-anchor data-custom-toc-title="Create a PaymentIntent">
+    <a id="4-create-a-paymentintent-server-side" name="//apple_ref/cpp/Section/4%20Create%20a%20PaymentIntent%20Server-side" class="dashAnchor"></a><h2 class="expando-title" data-no-anchor data-custom-toc-title="Create a PaymentIntent">
         <span class="expando-left-text">4</span>
       Create a PaymentIntent
         <span class="tag optional">Server-side</span>
@@ -4862,7 +4862,7 @@ var paymentIntent = service.Create(options);
 
 <div class="expando" aria-expanded="true">
   <a id="react-complete-payment" href="payment-request-button.html#react-complete-payment" class="expando-trigger">
-    <h2 class="expando-title" data-no-anchor data-custom-toc-title="Complete the payment">
+    <a id="5-complete-the-payment-client-side" name="//apple_ref/cpp/Section/5%20Complete%20the%20payment%20Client-side" class="dashAnchor"></a><h2 class="expando-title" data-no-anchor data-custom-toc-title="Complete the payment">
         <span class="expando-left-text">5</span>
       Complete the payment
         <span class="tag optional">Client-side</span>
@@ -4918,7 +4918,7 @@ make sure you also refund the payment that you just created.</p>
 
 <div class="expando" aria-expanded="true">
   <a id="react-testing" href="payment-request-button.html#react-testing" class="expando-trigger">
-    <h2 class="expando-title" data-no-anchor data-custom-toc-title="Test your integration">
+    <a id="6-test-your-integration" name="//apple_ref/cpp/Section/6%20Test%20your%20integration" class="dashAnchor"></a><h2 class="expando-title" data-no-anchor data-custom-toc-title="Test your integration">
         <span class="expando-left-text">6</span>
       Test your integration
     </h2>
@@ -4998,7 +4998,7 @@ If you are using the <code>paymentRequestButton</code> Element within an iframe,
 </div>
 
 <section>
-<h2 id="react-collecting-shipping-info">Collect shipping information</h2>
+<a id="collect-shipping-information" name="//apple_ref/cpp/Section/Collect%20shipping%20information" class="dashAnchor"></a><h2 id="react-collecting-shipping-info">Collect shipping information</h2>
 
 <p>To collect shipping information, begin by including <code>requestShipping: true</code> when creating the payment request.</p>
 
@@ -5140,7 +5140,7 @@ to proceed in the flow.</p>
 </section>
 
 <section>
-<h2 id="react-styling-the-element">Style the button</h2>
+<a id="style-the-button" name="//apple_ref/cpp/Section/Style%20the%20button" class="dashAnchor"></a><h2 id="react-styling-the-element">Style the button</h2>
 
 <p>Use the following parameters to customize the Element:</p>
 
@@ -5178,7 +5178,7 @@ Then, use <a href="../reference.html#payment-request-show">paymentRequest.show()
 <p>When building your own button, follow Apple Pay&rsquo;s <a href="https://developer.apple.com/apple-pay/web-human-interface-guidelines/" target="_blank">Human Interface Guidelines</a>.</p></section>
 
 <section>
-<h2 id="react-using-with-connect">Use the Payment Request Button with Stripe Connect</h2>
+<a id="use-the-payment-request-button-with-stripe-connect" name="//apple_ref/cpp/Section/Use%20the%20Payment%20Request%20Button%20with%20Stripe%20Connect" class="dashAnchor"></a><h2 id="react-using-with-connect">Use the Payment Request Button with Stripe Connect</h2>
 
 <p><a href="../../connect.html">Connect platforms</a> that either create direct charges or add the token to a Customer on
 the connected account must take some additional steps when using the Payment Request Button.</p>
@@ -5242,7 +5242,7 @@ the connected account must take some additional steps when using the Payment Req
 </div>
 
 <section>
-  <h2 id="see-also">See also</h2>
+  <a id="see-also" name="//apple_ref/cpp/Section/See%20also" class="dashAnchor"></a><h2 id="see-also">See also</h2>
 
   <ul class="next-steps">
     <li><a href="../../apple-pay.html"><span>Learn about Apple Pay</span></a></li>
@@ -5288,7 +5288,7 @@ Use of Apple Pay on the web is subject to the <a href="https://stripe.com/apple-
 
 
             </article>
-            <div class="docs-aside">
+            <div class="docs-aside" style="display: none;">
               <div class="docs-toc empty">
                 <h4>On this page</h4>
                 <ul class="docs-toc-list">

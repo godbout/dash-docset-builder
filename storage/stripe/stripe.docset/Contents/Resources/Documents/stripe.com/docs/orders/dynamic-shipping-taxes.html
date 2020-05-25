@@ -180,7 +180,7 @@
   <body class="">
     
       <div id="docs">
-        <div id="sidebar">
+        <div id="sidebar" style="display: none;">
             
   <div class="logo">
     <a href="../recipes/switching-to-stripe.html" title="Stripe docs">
@@ -3008,7 +3008,7 @@
             <article id="content">
                 
   <header>
-  <h1>Dynamic shipping and tax calculation <span class="warning tag">Deprecated</span></h1>
+  <a name="//apple_ref/cpp/Section/Top" class="dashAnchor"></a><h1>Dynamic shipping and tax calculation <span class="warning tag">Deprecated</span></h1>
   <p>When using Relay to sell products through apps, use callback-based shipping and tax calculation to provide accurate costs.</p>
   
   <aside class="important red">
@@ -3042,7 +3042,7 @@
 <p>If you select <code>callback</code>, create a page on your server that computes and returns the appropriate costs on demand. To know how the page should respond, you should first understand the information it will receive.</p></section>
 
 <section>
-<h2 id="order-creation-event">Order creation event</h2>
+<a id="order-creation-event" name="//apple_ref/cpp/Section/Order%20creation%20event" class="dashAnchor"></a><h2 id="order-creation-event">Order creation event</h2>
 
 <p>When an order is created, Stripe will issue a <code>POST</code> HTTP request to the specified endpoint with the details of the unpaid, created <code>order</code>. A sample <code>POST</code> body is:</p>
 <div class="code" data-language="json">
@@ -3108,7 +3108,7 @@
 <p>For example, your page may calculate the tax due based upon the order amount and the customer&rsquo;s address, both of which are in the received <code>order</code> object. As another example, shipping may be calculated based upon the total package size, total package weight, and the customer&rsquo;s address. In this case, the page would need to look up the package&rsquo;s dimensions, either from a previous store (in your database) or through the Stripe API.</p></section>
 
 <section>
-<h2 id="your-endpoint-response">Your endpoint response</h2>
+<a id="your-endpoint-response" name="//apple_ref/cpp/Section/Your%20endpoint%20response" class="dashAnchor"></a><h2 id="your-endpoint-response">Your endpoint response</h2>
 
 <p>Your endpoint must return a 200 status code, along with a JSON response. The JSON needs a top-level <code>order_update</code> object containing the following properties:</p>
 
@@ -3174,7 +3174,7 @@
 <p>Note that if your shipping costs are taxable, you must return a set of tax line items for them as well, nested under the <code>"tax_items"</code> property for each method. The one important difference between the top-level tax line items and those that apply to shipping methods is that the <code>"parent"</code> field is set to the <code>"id"</code> of the shipping method. For example, the $0.49 sales tax line item on priority shipping has the parent field <code>"priority_shipping"</code>. If no taxes apply to your shipping methods, you can omit the <code>"tax_items"</code> array.</p></section>
 
 <section>
-<h2 id="indicating-an-error">Indicating an error</h2>
+<a id="indicating-an-error" name="//apple_ref/cpp/Section/Indicating%20an%20error" class="dashAnchor"></a><h2 id="indicating-an-error">Indicating an error</h2>
 
 <p>Any non-<code>200</code> responses will be considered an error, which results in the order creation being rejected. This also means that if your endpoint is broken (e.g., due to a syntax error), orders cannot be created.</p>
 
@@ -3296,7 +3296,7 @@
 </section>
 
 <section>
-  <h2>Next steps</h2>
+  <a id="next-steps" name="//apple_ref/cpp/Section/Next%20steps" class="dashAnchor"></a><h2>Next steps</h2>
   <p>Congrats! You've gone through how to use callback-based shipping and tax calculations in the Orders API. Some things you might want to see next:</p>
 <ul class="next-steps">
     <li><a href="../orders.html"><span>Orders API Guide</span></a></li>
@@ -3339,7 +3339,7 @@
 
 
             </article>
-            <div class="docs-aside">
+            <div class="docs-aside" style="display: none;">
               <div class="docs-toc empty">
                 <h4>On this page</h4>
                 <ul class="docs-toc-list">

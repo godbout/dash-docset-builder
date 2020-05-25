@@ -187,7 +187,7 @@
   <body class="">
     
       <div id="docs">
-        <div id="sidebar">
+        <div id="sidebar" style="display: none;">
             
   <div class="logo">
     <a href="../recipes/switching-to-stripe.html" title="Stripe docs">
@@ -3015,7 +3015,7 @@
             <article id="content">
                 
   <header>
-  <h1 id="sca-migration-guide-for-connect-platforms">SCA migration guide for Connect platforms</h1>
+  <a name="//apple_ref/cpp/Section/Top" class="dashAnchor"></a><h1 id="sca-migration-guide-for-connect-platforms">SCA migration guide for Connect platforms</h1>
 
   <p>Learn how to update your Connect platform for <a href="../strong-customer-authentication.html">Strong Customer Authentication</a> (SCA).</p>
 
@@ -3046,7 +3046,7 @@
 </section>
 
 <section>
-  <h2 id="step-1"><span class="step">Step 1:</span> Choose an SCA-ready integration</h2>
+  <a id="step-1-choose-an-sca-ready-integration" name="//apple_ref/cpp/Section/Step%201%3A%20Choose%20an%20SCA-ready%20integration" class="dashAnchor"></a><h2 id="step-1"><span class="step">Step 1:</span> Choose an SCA-ready integration</h2>
 
   <p>You need to update your Stripe integration to meet SCA requirements. For example, SCA requires <span class="tooltip-wrapper"><span class="tooltip-content definition"><a href="../payments/save-and-reuse.html#web-create-payment-intent-off-session">off-session payments</a></span><template class="tooltip"><span class="definition">A payment is described as <em>off-session</em> if it occurs without the direct involvement of the customer, using previously-collected payment information.</span></template></span> to be authenticated when customers enter payment details, and subsequent off-session payments may require notifying the customer to return to the application to re-authenticate. Refer to the <a href="migration.html#step-1">SCA migration guide</a> to review the integration paths for the new version of Stripe Checkout, Stripe Billing, and the Payment Intents API.</p>
 
@@ -3056,7 +3056,7 @@
 </section>
 
 <section>
-  <h2 id="step-2"><span class="step">Step 2:</span> Examine Connect-specific changes</h2>
+  <a id="step-2-examine-connect-specific-changes" name="//apple_ref/cpp/Section/Step%202%3A%20Examine%20Connect-specific%20changes" class="dashAnchor"></a><h2 id="step-2"><span class="step">Step 2:</span> Examine Connect-specific changes</h2>
 
   <h3 id="update-account-creation">Update account creation requests</h3>
 
@@ -3113,7 +3113,7 @@
 </section>
 
 <section>
-  <h2 id="step-3"><span class="step">Step 3:</span> Determine whether connected accounts need to make changes</h2>
+  <a id="step-3-determine-whether-connected-accounts-need-to-make-changes" name="//apple_ref/cpp/Section/Step%203%3A%20Determine%20whether%20connected%20accounts%20need%20to%20make%20changes" class="dashAnchor"></a><h2 id="step-3"><span class="step">Step 3:</span> Determine whether connected accounts need to make changes</h2>
 
   <p>In most cases, once you update your payments integration for SCA, your connected accounts don&rsquo;t have to do any additional work.</p>
 
@@ -3122,7 +3122,7 @@
 </section>
 
 <section>
-  <h2 id="step-4"><span class="step">Step 4:</span> Implement and test the new integration path</h2>
+  <a id="step-4-implement-and-test-the-new-integration-path" name="//apple_ref/cpp/Section/Step%204%3A%20Implement%20and%20test%20the%20new%20integration%20path" class="dashAnchor"></a><h2 id="step-4"><span class="step">Step 4:</span> Implement and test the new integration path</h2>
 
   <p>After you have identified your integration path and determined if your connected accounts need to make changes, follow the relevant migration guides for the <a href="../payments/checkout/migration.html">new version of Checkout</a>, <a href="../billing/migration/strong-customer-authentication.html">Stripe Billing</a>, or <a href="../payments/payment-intents/migration.html">Payment Intents API</a>.</p>
 
@@ -3131,7 +3131,7 @@
 </section>
 
 <section>
-  <h2 id="step-5"><span class="step">Step 5:</span> Educate your connected accounts</h2>
+  <a id="step-5-educate-your-connected-accounts" name="//apple_ref/cpp/Section/Step%205%3A%20Educate%20your%20connected%20accounts" class="dashAnchor"></a><h2 id="step-5"><span class="step">Step 5:</span> Educate your connected accounts</h2>
 
   <p>Finally, inform your connected accounts about how SCA can affect them and when your platform will be SCA-ready, regardless of whether they need to <a href="connect-platforms.html#step-4">make any changes</a>.</p>
 
@@ -3184,7 +3184,7 @@
 
 
             </article>
-            <div class="docs-aside">
+            <div class="docs-aside" style="display: none;">
               <div class="docs-toc empty">
                 <h4>On this page</h4>
                 <ul class="docs-toc-list">

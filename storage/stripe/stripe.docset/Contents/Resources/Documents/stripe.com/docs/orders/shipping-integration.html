@@ -180,7 +180,7 @@
   <body class="">
     
       <div id="docs">
-        <div id="sidebar">
+        <div id="sidebar" style="display: none;">
             
   <div class="logo">
     <a href="../recipes/switching-to-stripe.html" title="Stripe docs">
@@ -3008,7 +3008,7 @@
             <article id="content">
                 
   <header>
-  <h1>Automated shipping calculations <span class="warning tag">Deprecated</span></h1>
+  <a name="//apple_ref/cpp/Section/Top" class="dashAnchor"></a><h1>Automated shipping calculations <span class="warning tag">Deprecated</span></h1>
   <p>Use a shipping provider to automatically calculate shipping rates on your Stripe orders.</p>
   
   <aside class="important red">
@@ -3024,12 +3024,12 @@
 <p>To enable dynamic shipping rates for your orders, follow our guides to get started with <a href="easypost.html">EasyPost</a> or <a href="shippo.html">Shippo</a>. You can optionally read on below to learn how the integration works.</p></section>
 
 <section>
-<h2 id="how-it-works">How the integration works</h2>
+<a id="how-the-integration-works" name="//apple_ref/cpp/Section/How%20the%20integration%20works" class="dashAnchor"></a><h2 id="how-it-works">How the integration works</h2>
 
 <p>Stripe&rsquo;s shipping integrations automatically manage everything necessary to calculate shipping costs for your orders. To help explain how the integration functions, read the high-level and technical overviews below. (The latter is intended for developers.)</p></section>
 
 <section>
-<h2 id="high-level-overview">High-level overview</h2>
+<a id="high-level-overview" name="//apple_ref/cpp/Section/High-level%20overview" class="dashAnchor"></a><h2 id="high-level-overview">High-level overview</h2>
 
 <p>When you create an order via Stripe, Stripe programmatically sends the following details to your shipping provider:</p>
 
@@ -3202,7 +3202,7 @@ Product product = service.Update("pr_1GmdJZ2eZvKYlo2CrOxull9p", options);
 <p>This shipping cost calculation service is usually provided free of charge by the shipping provider, so using a shipping integration with Stripe in most cases does not cost you anything. In addition to getting shipping rates, some providers let you purchase and print shipping labels online. This process varies between providers, and we encourage you to read the specific guides for <a href="easypost.html">EasyPost</a> and <a href="shippo.html">Shippo</a> to learn how label generation is supported.</p></section>
 
 <section>
-<h2 id="technical-overview">Technical overview</h2>
+<a id="technical-overview" name="//apple_ref/cpp/Section/Technical%20overview" class="dashAnchor"></a><h2 id="technical-overview">Technical overview</h2>
 
 <p>Once you set up your shipping integration, you should automatically see multiple shipping methods show up in your order&rsquo;s <code>shipping_methods</code> array. For example, the following request creates an order shippable to a U.S. address:</p>
 <div class="tabs tabs-code animated" data-callback="codeTabsChanged" data-platform="server">
@@ -3534,7 +3534,7 @@ Order order = service.Create(options);
 
 
             </article>
-            <div class="docs-aside">
+            <div class="docs-aside" style="display: none;">
               <div class="docs-toc empty">
                 <h4>On this page</h4>
                 <ul class="docs-toc-list">

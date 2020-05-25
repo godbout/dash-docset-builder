@@ -180,7 +180,7 @@
   <body class="">
     
       <div id="docs">
-        <div id="sidebar">
+        <div id="sidebar" style="display: none;">
             
   <div class="logo">
     <a href="../../recipes/switching-to-stripe.html" title="Stripe docs">
@@ -3008,7 +3008,7 @@
             <article id="content">
                 
   <header>
-  <h1>Recurring SOFORT Payments with Sources <span class="tag beta">Public Beta</span></h1>
+  <a name="//apple_ref/cpp/Section/Top" class="dashAnchor"></a><h1>Recurring SOFORT Payments with Sources <span class="tag beta">Public Beta</span></h1>
   <p>Use SEPA Direct Debit to perform recurring payments with bank account information from a SOFORT source.</p>
 </header>
 
@@ -3025,7 +3025,7 @@ customer or plan to process a high volume of transactions, please <a href="https
 
 
 <section>
-<h2 id="prerequisite"><span class="step">Prerequisite:</span> Collect mandate acceptance</h2>
+<a id="prerequisite-collect-mandate-acceptance" name="//apple_ref/cpp/Section/Prerequisite%3A%20Collect%20mandate%20acceptance" class="dashAnchor"></a><h2 id="prerequisite"><span class="step">Prerequisite:</span> Collect mandate acceptance</h2>
 
 <p>Before a source can be created, your customer must accept the <a href="https://www.europeanpaymentscouncil.eu/what-we-do/sepa-direct-debit/sdd-mandate">SEPA Direct Debit mandate</a>. Their acceptance authorizes you to collect payments for the specified amount from their bank account using SEPA Direct Debit.</p>
 
@@ -3043,7 +3043,7 @@ customer or plan to process a high volume of transactions, please <a href="https
 <p>The details of the accepted mandate is generated as part of the <code>Source</code> object creation. A URL to view the mandate is returned as the value for <code>sepa_debit[mandate_url]</code>. Since this is the mandate that the customer has implicitly signed when accepting the terms suggested above, it must be communicated to them, either on the payment confirmation page or by email.</p></section>
 
 <section>
-  <h2 id="create-source"><span class="step">Step 1:</span> Create a SEPA Direct Debit Source object</h2>
+  <a id="step-1-create-a-sepa-direct-debit-source-object" name="//apple_ref/cpp/Section/Step%201%3A%20Create%20a%20SEPA%20Direct%20Debit%20Source%20object" class="dashAnchor"></a><h2 id="create-source"><span class="step">Step 1:</span> Create a SEPA Direct Debit Source object</h2>
 <aside class="note">
   <h3>Stripe.js reference</h3>
   <p>This guide supplements our <a href="../../stripe-js.html">Stripe.js and Elements</a> documentation with specific usage for Sources.</p>
@@ -3288,7 +3288,7 @@ const source = await stripe.sources.create({
 </section>
 
 <section>
-<h2 id="charge-request"><span class="step">Step 2:</span> Charge the source</h2>
+<a id="step-2-charge-the-source" name="//apple_ref/cpp/Section/Step%202%3A%20Charge%20the%20source" class="dashAnchor"></a><h2 id="charge-request"><span class="step">Step 2:</span> Charge the source</h2>
 
 <p>Unlike most other payment methods, SEPA Direct Debit payments do not require any customer action after the source has been created. Once the customer has provided their IBAN details and accepted the mandate, no further action is needed and the resulting source is directly <code>chargeable</code>.</p>
 
@@ -3568,7 +3568,7 @@ Charge charge = service.Create(options);
 
 
 <section>
-<h2 id="charge-confirmation"><span class="step">Step 3:</span> Confirm that the charge has succeeded</h2>
+<a id="step-3-confirm-that-the-charge-has-succeeded" name="//apple_ref/cpp/Section/Step%203%3A%20Confirm%20that%20the%20charge%20has%20succeeded" class="dashAnchor"></a><h2 id="charge-confirmation"><span class="step">Step 3:</span> Confirm that the charge has succeeded</h2>
 
 <aside class="note">
   <h3>Using webhooks</h3>
@@ -3605,7 +3605,7 @@ Charge charge = service.Create(options);
 
 
 <section>
-<h2 id="handling-failed-charges">Handling failed charges</h2>
+<a id="handling-failed-charges" name="//apple_ref/cpp/Section/Handling%20failed%20charges" class="dashAnchor"></a><h2 id="handling-failed-charges">Handling failed charges</h2>
 
 <p>If a charge is not confirmed, its status automatically transitions from <code>pending</code> to <code>failed</code>. Should a charge fail, notify your customer immediately upon receipt of the <code>charge.failed</code> event. When using SEPA Direct Debit, you may prefer not to fulfill orders until the <code>charge.succeeded</code> webhook has been received.</p>
 
@@ -3616,7 +3616,7 @@ Charge charge = service.Create(options);
 </section>
 
 <section>
-<h2 id="testing-charge-success-and-failure">Testing charge success and failure</h2>
+<a id="testing-charge-success-and-failure" name="//apple_ref/cpp/Section/Testing%20charge%20success%20and%20failure" class="dashAnchor"></a><h2 id="testing-charge-success-and-failure">Testing charge success and failure</h2>
 
 <p>You can mimic a successful or failed charge by first creating a test source with one of the following test IBAN account numbers. Use the resulting source in a charge request to create a test charge that is either successful or failed.</p>
 
@@ -3631,7 +3631,7 @@ Charge charge = service.Create(options);
 <p>Webhook events are triggered when using test sources and charges. The <code>charge.pending</code> event is first triggered, followed by either the <code>charge.succeeded</code> or <code>charge.failed</code> event immediately after.</p></section>
 
 <section>
-<h2 id="notifying-customers-of-recurring-payments">Notifying customers of recurring payments</h2>
+<a id="notifying-customers-of-recurring-payments" name="//apple_ref/cpp/Section/Notifying%20customers%20of%20recurring%20payments" class="dashAnchor"></a><h2 id="notifying-customers-of-recurring-payments">Notifying customers of recurring payments</h2>
 
 <p>The <a href="http://www.europeanpaymentscouncil.eu/index.cfm/sepa-direct-debit/sepa-direct-debit-core-scheme-sdd-core">SEPA Direct Debit rulebook</a> requires that you notify your customer each time a debit is to be made on their account. You can send these notifications separately or together with other documents (e.g., an invoice).</p>
 
@@ -3689,7 +3689,7 @@ Charge charge = service.Create(options);
 <p>If you have trouble obtaining your creditor identifier, <a href="https://support.stripe.com/contact">let us know</a>.</p></section>
 
 <section>
-<h2 id="disputed-payments">Disputed payments</h2>
+<a id="disputed-payments" name="//apple_ref/cpp/Section/Disputed%20payments" class="dashAnchor"></a><h2 id="disputed-payments">Disputed payments</h2>
 
 <aside class="note">
   <h3 id="additional-information">Additional information</h3>
@@ -3750,7 +3750,7 @@ Charge charge = service.Create(options);
 <p>In general, each dispute includes the reason for its creation, though this can vary from country to country. For instance, disputed payments in Germany do not provide additional information for privacy reasons.</p></section>
 
 <section>
-<h2 id="refunds">Refunds</h2><aside class="note">
+<a id="refunds" name="//apple_ref/cpp/Section/Refunds" class="dashAnchor"></a><h2 id="refunds">Refunds</h2><aside class="note">
   <h3>Creating partial refunds</h3>
   <p>Partial refunds on SEPA Direct Debit payments are not supported in the Dashboard. Instead, you can use the API to <a href="../../api/index.html#create_refund">create a partial refund</a>.
 </p>
@@ -3767,7 +3767,7 @@ Charge charge = service.Create(options);
 <p>When issuing a refund, it&rsquo;s important that you immediately inform your customer that it may take up to five business days for the refund to arrive in their bank account.</p></section>
 
 <section>
-<h2>Related resources</h2>
+<a id="related-resources" name="//apple_ref/cpp/Section/Related%20resources" class="dashAnchor"></a><h2>Related resources</h2>
 <ul class="next-steps">
     <li><a href="../bitcoin.html"><span>Other supported payment methods</span></a></li>
     <li><a href="../../api/index.html#sources"><span>Sources API Reference</span></a></li>
@@ -3809,7 +3809,7 @@ Charge charge = service.Create(options);
 
 
             </article>
-            <div class="docs-aside">
+            <div class="docs-aside" style="display: none;">
               <div class="docs-toc empty">
                 <h4>On this page</h4>
                 <ul class="docs-toc-list">

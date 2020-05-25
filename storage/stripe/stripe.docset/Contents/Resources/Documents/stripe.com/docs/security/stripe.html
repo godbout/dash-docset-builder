@@ -180,7 +180,7 @@
   <body class="">
     
       <div id="docs">
-        <div id="sidebar">
+        <div id="sidebar" style="display: none;">
             
   <div class="logo">
     <a href="../recipes/switching-to-stripe.html" title="Stripe docs">
@@ -3008,7 +3008,7 @@
             <article id="content">
                 
   <header>
-  <h1>Security at Stripe</h1>
+  <a name="//apple_ref/cpp/Section/Top" class="dashAnchor"></a><h1>Security at Stripe</h1>
   <p>Security is one of the biggest considerations in everything we do. If you have any questions after reading this, or encounter any issues, please <a href="https://support.stripe.com/contact">let us know</a>.</p>
 </header>
 
@@ -3021,7 +3021,7 @@
 <p>Stripe has been audited by a PCI-certified auditor and is certified to <a href="http://www.visa.com/splisting/searchGrsp.do?companyNameCriteria=stripe">PCI Service Provider Level 1</a>. This is the most stringent level of certification available in the payments industry. To accomplish this, we make use of best-in-class security tools and practices to maintain a high level of security at Stripe.</p></section>
 
 <section>
-<h2 id="ssl">HTTPS and HSTS for secure connections</h2>
+<a id="https-and-hsts-for-secure-connections" name="//apple_ref/cpp/Section/HTTPS%20and%20HSTS%20for%20secure%20connections" class="dashAnchor"></a><h2 id="ssl">HTTPS and HSTS for secure connections</h2>
 
 <p>Stripe forces HTTPS for all services using TLS (SSL), including our public website and the <a href="https://dashboard.stripe.com">Dashboard</a>.</p>
 
@@ -3034,7 +3034,7 @@
 <a href="http://src.chromium.org/viewvc/chrome?view=rev&amp;revision=84125">Google Chrome</a> and <a href="https://hg.mozilla.org/mozilla-central/file/289ce72324ce/security/manager/boot/src/nsSTSPreloadList.inc">Mozilla Firefox</a>.</p></section>
 
 <section>
-<h2 id="encryption">Encryption of sensitive data and communication</h2>
+<a id="encryption-of-sensitive-data-and-communication" name="//apple_ref/cpp/Section/Encryption%20of%20sensitive%20data%20and%20communication" class="dashAnchor"></a><h2 id="encryption">Encryption of sensitive data and communication</h2>
 
 <p>All card numbers are encrypted at rest with AES-256. Decryption keys are stored on separate machines. None of Stripe&rsquo;s internal servers and daemons are able to obtain plaintext card numbers; instead, they can just request that cards be sent to a service provider on a static whitelist. Stripe&rsquo;s infrastructure for storing, decrypting, and transmitting card numbers runs in separate hosting infrastructure, and doesn&rsquo;t share any credentials with Stripe&rsquo;s primary services (API, website, etc.).</p>
 
@@ -3050,7 +3050,7 @@
 <p>If you&rsquo;re unfamiliar with PGP, check out <a href="http://gnupg.org">GPG</a>, and start by <a href="http://www.gnupg.org/gph/en/manual.html#AEN84">importing a public key</a>.</p></section>
 
 <section>
-<h2 id="disclosure-and-reward-program">Vulnerability disclosure and reward program</h2>
+<a id="vulnerability-disclosure-and-reward-program" name="//apple_ref/cpp/Section/Vulnerability%20disclosure%20and%20reward%20program" class="dashAnchor"></a><h2 id="disclosure-and-reward-program">Vulnerability disclosure and reward program</h2>
 
 <p>Our security team rapidly investigates all reported security issues. If you believe you&rsquo;ve discovered a bug in Stripe&rsquo;s security, please get in touch at <a href="mailto:security@stripe.com">security@stripe.com</a> (optionally using our <a href="pgp-key.html">general PGP key</a>). We will respond as quickly as possible to your report. We request that you not publicly disclose the issue until it has been addressed by Stripe.</p>
 
@@ -3102,7 +3102,7 @@
 
 
             </article>
-            <div class="docs-aside">
+            <div class="docs-aside" style="display: none;">
               <div class="docs-toc empty">
                 <h4>On this page</h4>
                 <ul class="docs-toc-list">

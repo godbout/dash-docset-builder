@@ -180,7 +180,7 @@
   <body class="">
     
       <div id="docs">
-        <div id="sidebar">
+        <div id="sidebar" style="display: none;">
             
   <div class="logo">
     <a href="../../recipes/switching-to-stripe.html" title="Stripe docs">
@@ -3008,7 +3008,7 @@
             <article id="content">
                 
   <header>
-  <h1 id="tax-rates-on-invoices">Tax rates on invoices</h1>
+  <a name="//apple_ref/cpp/Section/Top" class="dashAnchor"></a><h1 id="tax-rates-on-invoices">Tax rates on invoices</h1>
 
   <p>Assign tax rates to draft invoices to have Stripe calculate tax amounts for you.</p>
 </header>
@@ -3024,7 +3024,7 @@
 
   <p>You need to create tax rates before you can use them on invoices. See our <a href="../taxes/tax-rates.html#creating-tax-rates">creating tax rates</a> documentation for instructions.</p>
 
-  <h2 id="setting-tax-rates-on-individual-items"><span class="step">Recommended:</span> Setting Tax Rates on individual items</h2>
+  <a id="recommended-setting-tax-rates-on-individual-items" name="//apple_ref/cpp/Section/Recommended%3A%20Setting%20Tax%20Rates%20on%20individual%20items" class="dashAnchor"></a><h2 id="setting-tax-rates-on-individual-items"><span class="step">Recommended:</span> Setting Tax Rates on individual items</h2>
 
   <p>If creating an invoice through <a href="https://dashboard.stripe.com/invoices/create">the Dashboard</a>, simply assign tax rates to individual line items.</p>
 
@@ -3186,7 +3186,7 @@ Pass the <code>id</code> field that starts with <code>sli_</code>.</p>
 
   <p>For lines of <a href="../../api/invoices/line_item.html#invoice_line_item_object-type">type</a> <code>subscription</code> or <code>invoiceitem</code>, use <a href="../../api/invoices/line_item.html">the line item id</a>. For lines of <code>type=invoiceitem</code>, you can also use the value of the <a href="../../api/invoices/line_item.html#invoice_line_item_object-invoice_item"><code>invoice_item</code></a> field.</p>
 
-  <h2 id="setting-default-tax-rates-for-the-entire-invoice">Setting default tax rates for the entire invoice</h2>
+  <a id="setting-default-tax-rates-for-the-entire-invoice" name="//apple_ref/cpp/Section/Setting%20default%20tax%20rates%20for%20the%20entire%20invoice" class="dashAnchor"></a><h2 id="setting-default-tax-rates-for-the-entire-invoice">Setting default tax rates for the entire invoice</h2>
 
   <p>If you sell one type of product, or have simple tax needs, you can set a default tax rate on the invoice.
 Default tax rates apply to all line items on the invoice.
@@ -3374,7 +3374,7 @@ var invoice = service.Update("in_18jwqyLlRB0eXbMtrUQ97YBw", options);
 
 
             </article>
-            <div class="docs-aside">
+            <div class="docs-aside" style="display: none;">
               <div class="docs-toc empty">
                 <h4>On this page</h4>
                 <ul class="docs-toc-list">

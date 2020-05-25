@@ -180,7 +180,7 @@
   <body class="">
     
       <div id="docs">
-        <div id="sidebar">
+        <div id="sidebar" style="display: none;">
             
   <div class="logo">
     <a href="recipes/switching-to-stripe.html" title="Stripe docs">
@@ -3008,7 +3008,7 @@
             <article id="content">
                 
   <header>
-  <h1>Statement descriptors</h1>
+  <a name="//apple_ref/cpp/Section/Top" class="dashAnchor"></a><h1>Statement descriptors</h1>
   <p>Learn how statement descriptors work.</p>
 </header>
 
@@ -3028,7 +3028,7 @@
 </section>
 
 <section>
-  <h2 id="requirements">Statement descriptor requirements</h2>
+  <a id="statement-descriptor-requirements" name="//apple_ref/cpp/Section/Statement%20descriptor%20requirements" class="dashAnchor"></a><h2 id="requirements">Statement descriptor requirements</h2>
 
   <p>A complete statement descriptor &ndash; either a single static descriptor or the combination of a prefix and suffix &ndash; must meet the following requirements:</p>
 
@@ -3045,7 +3045,7 @@
 </section>
 
 <section>
-  <h2 id="static">Set the static component</h2>
+  <a id="set-the-static-component" name="//apple_ref/cpp/Section/Set%20the%20static%20component" class="dashAnchor"></a><h2 id="static">Set the static component</h2>
 
   <p>You set a static statement descriptor or the shortened descriptor (prefix) in the <a href="https://dashboard.stripe.com/account">Dashboard</a>. This value then appears on all customer statements for charges or payments.</p>
 
@@ -3072,7 +3072,7 @@
 </section>
 
 <section>
-  <h2 id="dynamic">Set a dynamic suffix</h2>
+  <a id="set-a-dynamic-suffix" name="//apple_ref/cpp/Section/Set%20a%20dynamic%20suffix" class="dashAnchor"></a><h2 id="dynamic">Set a dynamic suffix</h2>
 
   <p>Dynamic suffixes are supported only for card charges. The suffix should specify details about the transaction so your customer can understand it clearly on their statement. The suffix is concatenated with the prefix, the * symbol, and a space to form the complete statement descriptor that your customer sees.</p>
 
@@ -3230,7 +3230,7 @@ var intent = service.Create(options);
 </section>
 
 <section>
-  <h2 id="set-the-statement-descriptor-on-non-card-charges">Set the statement descriptor on non-card charges</h2>
+  <a id="set-the-statement-descriptor-on-non-card-charges" name="//apple_ref/cpp/Section/Set%20the%20statement%20descriptor%20on%20non-card%20charges" class="dashAnchor"></a><h2 id="set-the-statement-descriptor-on-non-card-charges">Set the statement descriptor on non-card charges</h2>
 
   <p>Only card charges require the <code>statement_descriptor_suffix</code> value for a dynamic statement descriptor. For non-card charges, you can set the complete statement descriptor on the charge with the <code>statement_descriptor</code> value.</p>
 
@@ -3267,7 +3267,7 @@ var intent = service.Create(options);
 
 
             </article>
-            <div class="docs-aside">
+            <div class="docs-aside" style="display: none;">
               <div class="docs-toc empty">
                 <h4>On this page</h4>
                 <ul class="docs-toc-list">

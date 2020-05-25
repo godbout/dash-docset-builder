@@ -180,7 +180,7 @@
   <body class="">
     
       <div id="docs">
-        <div id="sidebar">
+        <div id="sidebar" style="display: none;">
             
   <div class="logo">
     <a href="../../recipes/switching-to-stripe.html" title="Stripe docs">
@@ -3008,7 +3008,7 @@
             <article id="content">
                 
   <header>
-<h1 id="migrate-your-basic-card-integration-span-classoptional-tagpayment-intents-apispan">Migrate your basic card integration <span class="optional tag">Payment Intents API</span></h1>
+<a name="//apple_ref/cpp/Section/Top" class="dashAnchor"></a><h1 id="migrate-your-basic-card-integration-span-classoptional-tagpayment-intents-apispan">Migrate your basic card integration <span class="optional tag">Payment Intents API</span></h1>
 
 <p>Migrate to an integration that can handle bank requests for card authentication</p></header>
 
@@ -3022,7 +3022,7 @@
         <a>Android</a>
   </nav>
   <div class="tabs-content">
-    <div class="tabs-tab" id="web"><h2 id="overview">Overview</h2>
+    <div class="tabs-tab" id="web"><a id="overview" name="//apple_ref/cpp/Section/Overview" class="dashAnchor"></a><h2 id="overview">Overview</h2>
 
 <p>If you followed the <a href="../without-card-authentication.html">Card payments without bank authentication</a> guide,
 your integration creates payments that decline when a bank asks the customer to authenticate the purchase.</p>
@@ -3034,7 +3034,7 @@ your integration creates payments that decline when a bank asks the customer to 
 <p>This guide will walk you through upgrading the integration you built in the previous guide to add server and client code that will prompt the customer to authenticate the payment by displaying a modal. You can see a <a href="https://github.com/stripe-samples/accept-a-card-payment/tree/master/without-webhooks">full sample</a> of the final integration on GitHub.</p>
 <div class="expando" aria-expanded="true">
   <a id="update-server" href="upgrade-to-handle-actions.html#update-server" class="expando-trigger">
-    <h2 class="expando-title" data-no-anchor data-custom-toc-title="Check if the payment requires authentication">
+    <a id="1-check-if-the-payment-requires-authentication-server-side" name="//apple_ref/cpp/Section/1%20Check%20if%20the%20payment%20requires%20authentication%20Server-side" class="dashAnchor"></a><h2 class="expando-title" data-no-anchor data-custom-toc-title="Check if the payment requires authentication">
         <span class="expando-left-text">1</span>
       Check if the payment requires authentication
         <span class="tag optional">Server-side</span>
@@ -3534,7 +3534,7 @@ public class CreatePaymentIntentController : Controller
 
 <div class="expando" aria-expanded="true">
   <a id="update-client" href="upgrade-to-handle-actions.html#update-client" class="expando-trigger">
-    <h2 class="expando-title" data-no-anchor data-custom-toc-title="Ask the customer to authenticate">
+    <a id="2-ask-the-customer-to-authenticate-client-side" name="//apple_ref/cpp/Section/2%20Ask%20the%20customer%20to%20authenticate%20Client-side" class="dashAnchor"></a><h2 class="expando-title" data-no-anchor data-custom-toc-title="Ask the customer to authenticate">
         <span class="expando-left-text">2</span>
       Ask the customer to authenticate
         <span class="tag optional">Client-side</span>
@@ -3622,7 +3622,7 @@ public class CreatePaymentIntentController : Controller
 
 <div class="expando" aria-expanded="true">
   <a id="update-server-second-confirm" href="upgrade-to-handle-actions.html#update-server-second-confirm" class="expando-trigger">
-    <h2 class="expando-title" data-no-anchor data-custom-toc-title="Confirm the PaymentIntent again">
+    <a id="3-confirm-the-paymentintent-again-server-side" name="//apple_ref/cpp/Section/3%20Confirm%20the%20PaymentIntent%20again%20Server-side" class="dashAnchor"></a><h2 class="expando-title" data-no-anchor data-custom-toc-title="Confirm the PaymentIntent again">
         <span class="expando-left-text">3</span>
       Confirm the PaymentIntent again
         <span class="tag optional">Server-side</span>
@@ -4000,7 +4000,7 @@ Controllers.cs
 
 <div class="expando" aria-expanded="true">
   <a id="test-manual" href="upgrade-to-handle-actions.html#test-manual" class="expando-trigger">
-    <h2 class="expando-title" data-no-anchor data-custom-toc-title="Test the integration">
+    <a id="4-test-the-integration" name="//apple_ref/cpp/Section/4%20Test%20the%20integration" class="dashAnchor"></a><h2 class="expando-title" data-no-anchor data-custom-toc-title="Test the integration">
         <span class="expando-left-text">4</span>
       Test the integration
     </h2>
@@ -4036,7 +4036,7 @@ In live mode the bank controls the UI of what is displayed inside the modal.</p>
 </div>
 
 </div>
-<div class="tabs-tab" id="ios"><h2 id="overview">Overview</h2>
+<div class="tabs-tab" id="ios"><a id="overview" name="//apple_ref/cpp/Section/Overview" class="dashAnchor"></a><h2 id="overview">Overview</h2>
 
 <p>If you followed the <a href="../without-card-authentication.html">Card payments without bank authentication</a> guide,
 your integration creates payments that decline when a bank asks the customer to authenticate the purchase.</p>
@@ -4048,7 +4048,7 @@ your integration creates payments that decline when a bank asks the customer to 
 <p>This guide will walk you through upgrading the integration you built in the previous guide to add server and client code that will prompt the customer to authenticate the payment by displaying a modal. You can see a <a href="https://github.com/stripe-samples/accept-a-card-payment/tree/master/without-webhooks">full sample</a> of the final integration on GitHub.</p>
 <div class="expando" aria-expanded="true">
   <a id="update-server" href="upgrade-to-handle-actions.html#update-server" class="expando-trigger">
-    <h2 class="expando-title" data-no-anchor data-custom-toc-title="Check if the payment requires authentication">
+    <a id="1-check-if-the-payment-requires-authentication-server-side" name="//apple_ref/cpp/Section/1%20Check%20if%20the%20payment%20requires%20authentication%20Server-side" class="dashAnchor"></a><h2 class="expando-title" data-no-anchor data-custom-toc-title="Check if the payment requires authentication">
         <span class="expando-left-text">1</span>
       Check if the payment requires authentication
         <span class="tag optional">Server-side</span>
@@ -4564,7 +4564,7 @@ public class CreatePaymentIntentController : Controller
 
 <div class="expando" aria-expanded="true">
   <a id="update-client" href="upgrade-to-handle-actions.html#update-client" class="expando-trigger">
-    <h2 class="expando-title" data-no-anchor data-custom-toc-title="Ask the customer to authenticate">
+    <a id="2-ask-the-customer-to-authenticate-client-side" name="//apple_ref/cpp/Section/2%20Ask%20the%20customer%20to%20authenticate%20Client-side" class="dashAnchor"></a><h2 class="expando-title" data-no-anchor data-custom-toc-title="Ask the customer to authenticate">
         <span class="expando-left-text">2</span>
       Ask the customer to authenticate
         <span class="tag optional">Client-side</span>
@@ -4672,7 +4672,7 @@ func authenticationPresentingViewController() -&gt; UIViewController {
 
 <div class="expando" aria-expanded="true">
   <a id="update-server-second-confirm" href="upgrade-to-handle-actions.html#update-server-second-confirm" class="expando-trigger">
-    <h2 class="expando-title" data-no-anchor data-custom-toc-title="Confirm the PaymentIntent again">
+    <a id="3-confirm-the-paymentintent-again-server-side" name="//apple_ref/cpp/Section/3%20Confirm%20the%20PaymentIntent%20again%20Server-side" class="dashAnchor"></a><h2 class="expando-title" data-no-anchor data-custom-toc-title="Confirm the PaymentIntent again">
         <span class="expando-left-text">3</span>
       Confirm the PaymentIntent again
         <span class="tag optional">Server-side</span>
@@ -5050,7 +5050,7 @@ Controllers.cs
 
 <div class="expando" aria-expanded="true">
   <a id="test-manual" href="upgrade-to-handle-actions.html#test-manual" class="expando-trigger">
-    <h2 class="expando-title" data-no-anchor data-custom-toc-title="Test the integration">
+    <a id="4-test-the-integration" name="//apple_ref/cpp/Section/4%20Test%20the%20integration" class="dashAnchor"></a><h2 class="expando-title" data-no-anchor data-custom-toc-title="Test the integration">
         <span class="expando-left-text">4</span>
       Test the integration
     </h2>
@@ -5086,7 +5086,7 @@ In live mode the bank controls the UI of what is displayed inside the modal.</p>
 </div>
 
 </div>
-<div class="tabs-tab" id="android"><h2 id="overview">Overview</h2>
+<div class="tabs-tab" id="android"><a id="overview" name="//apple_ref/cpp/Section/Overview" class="dashAnchor"></a><h2 id="overview">Overview</h2>
 
 <p>If you followed the <a href="../without-card-authentication.html">Card payments without bank authentication</a> guide,
 your integration creates payments that decline when a bank asks the customer to authenticate the purchase.</p>
@@ -5098,7 +5098,7 @@ your integration creates payments that decline when a bank asks the customer to 
 <p>This guide will walk you through upgrading the integration you built in the previous guide to add server and client code that will prompt the customer to authenticate the payment by displaying a modal. You can see a <a href="https://github.com/stripe-samples/accept-a-card-payment/tree/master/without-webhooks">full sample</a> of the final integration on GitHub.</p>
 <div class="expando" aria-expanded="true">
   <a id="update-server" href="upgrade-to-handle-actions.html#update-server" class="expando-trigger">
-    <h2 class="expando-title" data-no-anchor data-custom-toc-title="Check if the payment requires authentication">
+    <a id="1-check-if-the-payment-requires-authentication-server-side" name="//apple_ref/cpp/Section/1%20Check%20if%20the%20payment%20requires%20authentication%20Server-side" class="dashAnchor"></a><h2 class="expando-title" data-no-anchor data-custom-toc-title="Check if the payment requires authentication">
         <span class="expando-left-text">1</span>
       Check if the payment requires authentication
         <span class="tag optional">Server-side</span>
@@ -5614,7 +5614,7 @@ public class CreatePaymentIntentController : Controller
 
 <div class="expando" aria-expanded="true">
   <a id="update-client" href="upgrade-to-handle-actions.html#update-client" class="expando-trigger">
-    <h2 class="expando-title" data-no-anchor data-custom-toc-title="Ask the customer to authenticate">
+    <a id="2-ask-the-customer-to-authenticate-client-side" name="//apple_ref/cpp/Section/2%20Ask%20the%20customer%20to%20authenticate%20Client-side" class="dashAnchor"></a><h2 class="expando-title" data-no-anchor data-custom-toc-title="Ask the customer to authenticate">
         <span class="expando-left-text">2</span>
       Ask the customer to authenticate
         <span class="tag optional">Client-side</span>
@@ -5755,7 +5755,7 @@ public class CreatePaymentIntentController : Controller
 
 <div class="expando" aria-expanded="true">
   <a id="update-server-second-confirm" href="upgrade-to-handle-actions.html#update-server-second-confirm" class="expando-trigger">
-    <h2 class="expando-title" data-no-anchor data-custom-toc-title="Confirm the PaymentIntent again">
+    <a id="3-confirm-the-paymentintent-again-server-side" name="//apple_ref/cpp/Section/3%20Confirm%20the%20PaymentIntent%20again%20Server-side" class="dashAnchor"></a><h2 class="expando-title" data-no-anchor data-custom-toc-title="Confirm the PaymentIntent again">
         <span class="expando-left-text">3</span>
       Confirm the PaymentIntent again
         <span class="tag optional">Server-side</span>
@@ -6133,7 +6133,7 @@ Controllers.cs
 
 <div class="expando" aria-expanded="true">
   <a id="test-manual" href="upgrade-to-handle-actions.html#test-manual" class="expando-trigger">
-    <h2 class="expando-title" data-no-anchor data-custom-toc-title="Test the integration">
+    <a id="4-test-the-integration" name="//apple_ref/cpp/Section/4%20Test%20the%20integration" class="dashAnchor"></a><h2 class="expando-title" data-no-anchor data-custom-toc-title="Test the integration">
         <span class="expando-left-text">4</span>
       Test the integration
     </h2>
@@ -6204,7 +6204,7 @@ In live mode the bank controls the UI of what is displayed inside the modal.</p>
 
 
             </article>
-            <div class="docs-aside">
+            <div class="docs-aside" style="display: none;">
               <div class="docs-toc empty">
                 <h4>On this page</h4>
                 <ul class="docs-toc-list">

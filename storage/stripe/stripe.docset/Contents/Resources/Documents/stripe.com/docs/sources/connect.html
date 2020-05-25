@@ -180,7 +180,7 @@
   <body class="">
     
       <div id="docs">
-        <div id="sidebar">
+        <div id="sidebar" style="display: none;">
             
   <div class="logo">
     <a href="../recipes/switching-to-stripe.html" title="Stripe docs">
@@ -3008,7 +3008,7 @@
             <article id="content">
                 
   <header>
-<h1>Connect platforms using the Sources API</h1>
+<a name="//apple_ref/cpp/Section/Top" class="dashAnchor"></a><h1>Connect platforms using the Sources API</h1>
 <p>Considerations for Stripe Connect platforms adding support for new payment methods using the Sources API.</p>
 
 
@@ -3017,13 +3017,13 @@
 <section>
 <p><a href="../connect.html">Stripe Connect</a> platform owners can make use of additional payment methods supported with Sources. To learn more about creating payments for connected users, and which approach is best for you, refer to our Connect <a href="../connect/charges.html">payments and fees documentation</a>.</p></section>
 <section>
-<h2 id="creating-destination-charges">Creating destination charges</h2>
+<a id="creating-destination-charges" name="//apple_ref/cpp/Section/Creating%20destination%20charges" class="dashAnchor"></a><h2 id="creating-destination-charges">Creating destination charges</h2>
 
 <p>If you opt for <a href="../connect/destination-charges.html">destination charges</a>, you should create Sources on your platform directly and create Charges using the appropriate destination parameter. Customers are charged by your platform, which then transfers the necessary amount to the destination account.</p>
 
 <p>With destination charges that use cards, your platform name appears on statement descriptors and the charge is attributed to the connected account. With destination charges that use alternative payment methods (APMs), your platform name appears on statement descriptors but the charge is attributed to your platform.</p></section>
 <section>
-<h2 id="creating-direct-charges">Creating direct charges</h2>
+<a id="creating-direct-charges" name="//apple_ref/cpp/Section/Creating%20direct%20charges" class="dashAnchor"></a><h2 id="creating-direct-charges">Creating direct charges</h2>
 
 <p>If you opt for direct charges, you will need to make sure that the connected account is onboarded on the payment method you intend to use (see below). Direct charges require creating sources on connected accounts. You can do so by passing <code>source.stripeAccount</code> with a value of a connected account&rsquo;s ID when using Stripe.js.</p>
 
@@ -3188,7 +3188,7 @@ s, err := source.New(params)
 <p>If you are creating reusable card Sources on your connected account, you should make sure to attach them to Customers before charging them. Please refer to <a href="customers.html">Sources and Customers</a> for more details on how to attach and manage Sources on Customers.</p></section>
 
 <section>
-<h2>Related resources</h2>
+<a id="related-resources" name="//apple_ref/cpp/Section/Related%20resources" class="dashAnchor"></a><h2>Related resources</h2>
 <ul class="next-steps">
     <li><a href="bitcoin.html"><span>Supported Payment Methods</span></a></li>
     <li><a href="../api/index.html#sources"><span>Sources API Reference</span></a></li>
@@ -3228,7 +3228,7 @@ s, err := source.New(params)
 
 
             </article>
-            <div class="docs-aside">
+            <div class="docs-aside" style="display: none;">
               <div class="docs-toc empty">
                 <h4>On this page</h4>
                 <ul class="docs-toc-list">

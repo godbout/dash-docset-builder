@@ -180,7 +180,7 @@
   <body class="">
     
       <div id="docs">
-        <div id="sidebar">
+        <div id="sidebar" style="display: none;">
             
   <div class="logo">
     <a href="recipes/switching-to-stripe.html" title="Stripe docs">
@@ -3008,7 +3008,7 @@
             <article id="content">
                 
   <header>
-  <h1 id="visa-checkout-guide">Visa Checkout Guide</h1>
+  <a name="//apple_ref/cpp/Section/Top" class="dashAnchor"></a><h1 id="visa-checkout-guide">Visa Checkout Guide</h1>
 
   <p>Accept payments via <a href="https://usa.visa.com/pay-with-visa/visa-checkout.html">Visa Checkout</a> in your existing Stripe integration.</p>
 </header>
@@ -3024,7 +3024,7 @@
 </section>
 
 <section>
-  <h2 id="integrating">Integrating the Visa Checkout button</h2>
+  <a id="integrating-the-visa-checkout-button" name="//apple_ref/cpp/Section/Integrating%20the%20Visa%20Checkout%20button" class="dashAnchor"></a><h2 id="integrating">Integrating the Visa Checkout button</h2>
 
   <p>To get started, generate your <strong>Visa Checkout API key</strong> in the <a href="https://dashboard.stripe.com/account/payments/settings">Dashboard</a>. There are two keys, a sandbox key that you can use in test mode, and a production key that works in live mode.</p>
 
@@ -3116,7 +3116,7 @@
 </section>
 
 <section>
-  <h2 id="completing-the-payment">Completing the payment</h2>
+  <a id="completing-the-payment" name="//apple_ref/cpp/Section/Completing%20the%20payment" class="dashAnchor"></a><h2 id="completing-the-payment">Completing the payment</h2>
 
   <p>When the user clicks the Visa Checkout button on your checkout page, it opens a lightbox where they can select an existing payment method from their account or input a new one. When the user completes the process, the Visa Checkout JavaScript SDK in the browser emits a <code>payment.success</code> event with a unique ID that your application can use to complete the transaction.</p>
 
@@ -3148,7 +3148,7 @@ V.on('payment.success', async (payment) =&gt; {
 </section>
 
 <section>
-  <h2 id="testing-visa-checkout">Testing Visa Checkout</h2>
+  <a id="testing-visa-checkout" name="//apple_ref/cpp/Section/Testing%20Visa%20Checkout" class="dashAnchor"></a><h2 id="testing-visa-checkout">Testing Visa Checkout</h2>
 
   <p>To test your integration against Visa Checkout&rsquo;s sandbox, create a new Visa Checkout user account during the checkout process on your website. Configure the account to use the test card number <strong>4242 4242 4242 4242</strong>, a random three-digit CVC number, and any expiration date in the future. Complete the checkout process as normal. If everything worked correctly, Visa Checkout will redirect you back to your application, which should create the charge as expected.</p>
 </section>
@@ -3184,7 +3184,7 @@ V.on('payment.success', async (payment) =&gt; {
 
 
             </article>
-            <div class="docs-aside">
+            <div class="docs-aside" style="display: none;">
               <div class="docs-toc empty">
                 <h4>On this page</h4>
                 <ul class="docs-toc-list">

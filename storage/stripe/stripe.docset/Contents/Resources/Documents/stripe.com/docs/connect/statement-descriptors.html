@@ -180,7 +180,7 @@
   <body class="">
     
       <div id="docs">
-        <div id="sidebar">
+        <div id="sidebar" style="display: none;">
             
   <div class="logo">
     <a href="../recipes/switching-to-stripe.html" title="Stripe docs">
@@ -3008,7 +3008,7 @@
             <article id="content">
                 
   <header>
-  <h1>Statement descriptors with Connect</h1>
+  <a name="//apple_ref/cpp/Section/Top" class="dashAnchor"></a><h1>Statement descriptors with Connect</h1>
   <p>Learn how statement descriptors work for charges with <a href="https://stripe.com/connect">Connect</a>.</p>
 </header>
 
@@ -3018,7 +3018,7 @@
 </section>
 
 <section>
-  <h2 id="set-a-connected-accounts-static-components">Set a connected account&rsquo;s static components</h2>
+  <a id="set-a-connected-accounts-static-components" name="//apple_ref/cpp/Section/Set%20a%20connected%20account%E2%80%99s%20static%20components" class="dashAnchor"></a><h2 id="set-a-connected-accounts-static-components">Set a connected account&rsquo;s static components</h2>
 
   <p>A standard account provides its own statement descriptor. The platform sets the statement descriptor for Express or Custom connected accounts with the <code>settings[payments][statement_descriptor]</code> argument on the Account object:</p>
 
@@ -3075,7 +3075,7 @@ If you want your user to provide this information instead, suggest you migrate t
 </section>
 
 <section>
-  <h2 id="dynamic-descriptors">Set a dynamic suffix for connected account charges</h2>
+  <a id="set-a-dynamic-suffix-for-connected-account-charges" name="//apple_ref/cpp/Section/Set%20a%20dynamic%20suffix%20for%20connected%20account%20charges" class="dashAnchor"></a><h2 id="dynamic-descriptors">Set a dynamic suffix for connected account charges</h2>
 
   <p>Dynamic suffixes are supported only for card charges. When you create a dynamic suffix on a charge for a connected account, the API call is the same as for any other charge, with the addition of the <code>Stripe-Account</code> header with a value of the ID for the connected account:</p>
 
@@ -3265,7 +3265,7 @@ service.Create(createOptions, requestOptions);
 
 
             </article>
-            <div class="docs-aside">
+            <div class="docs-aside" style="display: none;">
               <div class="docs-toc empty">
                 <h4>On this page</h4>
                 <ul class="docs-toc-list">

@@ -180,7 +180,7 @@
   <body class="">
     
       <div id="docs">
-        <div id="sidebar">
+        <div id="sidebar" style="display: none;">
             
   <div class="logo">
     <a href="../../recipes/switching-to-stripe.html" title="Stripe docs">
@@ -3008,7 +3008,7 @@
             <article id="content">
                 
   <header>
-  <h1 id="credit-notes">Credit notes</h1>
+  <a name="//apple_ref/cpp/Section/Top" class="dashAnchor"></a><h1 id="credit-notes">Credit notes</h1>
 
   <p>Learn how to adjust or refund finalized invoices with credit notes.</p>
 </header>
@@ -3037,7 +3037,7 @@ Use a credit note to refund your customer for the 2 items they didn&rsquo;t rece
 
 <section>
 
-  <h2 id="issuing">Issuing credit notes</h2>
+  <a id="issuing-credit-notes" name="//apple_ref/cpp/Section/Issuing%20credit%20notes" class="dashAnchor"></a><h2 id="issuing">Issuing credit notes</h2>
 
   <p>You can issue a credit note for <a href="workflow.html#workflow-overview">open and paid</a> invoices.
 When you issue a credit note for an open invoice, it decreases the amount due on the invoice.
@@ -4057,7 +4057,7 @@ var creditNote = service.Create(options);
 </section>
 <section>
 
-  <h2 id="customer-balances-discounts">Invoices with customer balances or discounts</h2>
+  <a id="invoices-with-customer-balances-or-discounts" name="//apple_ref/cpp/Section/Invoices%20with%20customer%20balances%20or%20discounts" class="dashAnchor"></a><h2 id="customer-balances-discounts">Invoices with customer balances or discounts</h2>
 
   <p>Credit notes issued for invoices with a <a href="../customer/balance.html">customer balance</a> applied to them sometimes result in funds being credited to the customer&rsquo;s balance instead of their bank account. For example, if a customer balance of 150 USD is applied to an invoice for 200 USD, then the finalized invoice is for 50 USD. If you issue a credit note for 50 USD or less, the funds are deposited into the customer&rsquo;s bank account. Anything above 50 USD is added to the customer&rsquo;s balance and is applied to the next invoice.</p>
 
@@ -4068,7 +4068,7 @@ var creditNote = service.Create(options);
 </section>
 <section>
 
-  <h2 id="voiding">Voiding credit notes</h2>
+  <a id="voiding-credit-notes" name="//apple_ref/cpp/Section/Voiding%20credit%20notes" class="dashAnchor"></a><h2 id="voiding">Voiding credit notes</h2>
 
   <p>You can only void a credit note on open invoices. Voiding a credit note reverses its adjustment, effectively restoring the amount due on the invoice to its pre-credit-note amount.</p>
 
@@ -4203,7 +4203,7 @@ var creditNote = service.VoidCreditNote("cn_w82laPzlw48z", options);
 
 
             </article>
-            <div class="docs-aside">
+            <div class="docs-aside" style="display: none;">
               <div class="docs-toc empty">
                 <h4>On this page</h4>
                 <ul class="docs-toc-list">

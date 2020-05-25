@@ -180,7 +180,7 @@
   <body class="">
     
       <div id="docs">
-        <div id="sidebar">
+        <div id="sidebar" style="display: none;">
             
   <div class="logo">
     <a href="../../recipes/switching-to-stripe.html" title="Stripe docs">
@@ -3008,7 +3008,7 @@
             <article id="content">
                 
   <header>
-  <h1 id="tiered-pricing">Tiered pricing</h1>
+  <a name="//apple_ref/cpp/Section/Top" class="dashAnchor"></a><h1 id="tiered-pricing">Tiered pricing</h1>
 
   <p>Learn how to use tiered pricing.</p>
 </header>
@@ -3088,7 +3088,7 @@
 
 </section>
 <section>
-  <h2 id="volume">Volume</h2>
+  <a id="volume" name="//apple_ref/cpp/Section/Volume" class="dashAnchor"></a><h2 id="volume">Volume</h2>
 
   <p>When calculating the total cost using <code>tiers_mode=volume</code>, the <code>quantity</code> or <code>usage</code> at the end of the period is used to select a tier. The entire <code>quantity</code> or <code>usage</code> is multiplied by the appropriate unit cost.</p>
 
@@ -3126,7 +3126,7 @@
   <p>As you can see, because the tier price is applied to the entire <code>quantity</code> or <code>usage</code>, the total can actually go down when calculating the final cost.</p>
 </section>
 <section>
-  <h2 id="graduated">Graduated</h2>
+  <a id="graduated" name="//apple_ref/cpp/Section/Graduated" class="dashAnchor"></a><h2 id="graduated">Graduated</h2>
 
   <p>When calculating the total cost using <code>tiers_mode=graduated</code>, the <code>quantity</code> or <code>usage</code> at each tier is multiplied by the usage that falls into that tier. Then, the total is summed. For example, the total cost for a usage of 6 is $29: $25 for the 5 <code>quantity</code> or <code>usage</code> that fall into the 1 - 5 tier, plus $4 for the single <code>quantity</code> or <code>Usage</code> that falls into the 6 - 10 tier.</p>
 
@@ -3164,7 +3164,7 @@
 </section>
 
 <section>
-  <h2 id="using-flat-fees">Using Flat Fees</h2>
+  <a id="using-flat-fees" name="//apple_ref/cpp/Section/Using%20Flat%20Fees" class="dashAnchor"></a><h2 id="using-flat-fees">Using Flat Fees</h2>
 
   <p>In addition to specifying a unit cost per tier (<code>unit_amount</code>), you can also specify a flat fee (<code>flat_amount</code>) to be added to the invoice. This works for both <code>tiers_mode=volume</code> and <code>tiers_mode=graduated</code>. For example, you can have a flat fee that increases when certain usage thresholds are met:</p>
 
@@ -3240,7 +3240,7 @@ If the <code>quantity</code> is <code>12</code> and the <code>tiers_mode=graduat
 
 
             </article>
-            <div class="docs-aside">
+            <div class="docs-aside" style="display: none;">
               <div class="docs-toc empty">
                 <h4>On this page</h4>
                 <ul class="docs-toc-list">

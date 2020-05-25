@@ -180,7 +180,7 @@
   <body class="">
     
       <div id="docs">
-        <div id="sidebar">
+        <div id="sidebar" style="display: none;">
             
   <div class="logo">
     <a href="../recipes/switching-to-stripe.html" title="Stripe docs">
@@ -3008,7 +3008,7 @@
             <article id="content">
                 
   <header>
-  <h1>Creating separate charges and transfers <span class="tag beta">Public Beta</span></h1>
+  <a name="//apple_ref/cpp/Section/Top" class="dashAnchor"></a><h1>Creating separate charges and transfers <span class="tag beta">Public Beta</span></h1>
   <p>With <a href="https://stripe.com/connect">Connect</a>, you can make charges on your platform account on behalf of connected accounts, perform transfers separately, and retain funds in the process.</p>
 
   
@@ -3322,7 +3322,7 @@ var secondTransfer = transferService.Create(secondTransferOptions);
 <p>You can group together multiple charges with a single transfer or multiple transfers with a single charge. You can also perform transfers and charges in any order.</p></section>
 
 <section>
-<h2 id="collecting-fees">Collecting fees</h2>
+<a id="collecting-fees" name="//apple_ref/cpp/Section/Collecting%20fees" class="dashAnchor"></a><h2 id="collecting-fees">Collecting fees</h2>
 
 <p>When creating charges on your platform and separately creating a transfer, the platform can earn money by allocating less of the charge amount to the destination Stripe account, as in the above code example. Assuming that represents a delivery service transaction, with a charge to the customer of $100, a transfer of $20 to the delivery person, and a transfer of $70 to the restaurant:</p>
 
@@ -3339,7 +3339,7 @@ var secondTransfer = transferService.Create(secondTransferOptions);
 </section>
 
 <section>
-  <h2 id="issuing-refunds">Refunding charges</h2>
+  <a id="refunding-charges" name="//apple_ref/cpp/Section/Refunding%20charges" class="dashAnchor"></a><h2 id="issuing-refunds">Refunding charges</h2>
 
   <p>Charges created on your platform can be refunded using your platform's secret key. However, refunding a charge has no impact on any associated transfers. It's up to your platform to reconcile any amount owed back to your platform by reducing subsequent transfer amounts or by <a href="charges-transfers.html#reversing-transfers">reversing transfers</a> (as explained next).</p>
 
@@ -3453,7 +3453,7 @@ var refund = service.Create(options);
 </section>
 
 <section>
-<h2 id="reversing-transfers">Reversing transfers</h2>
+<a id="reversing-transfers" name="//apple_ref/cpp/Section/Reversing%20transfers" class="dashAnchor"></a><h2 id="reversing-transfers">Reversing transfers</h2>
 
 <p>Connect supports the ability to <a href="../api/index.html#create_transfer_reversal">reverse transfers</a> made to connected accounts, either entirely or partially (by setting an <code>amount</code> value):</p>
 <div class="tabs tabs-code animated" data-callback="codeTabsChanged" data-platform="server">
@@ -3584,7 +3584,7 @@ var reversal = service.Create("{TRANSFER_ID}", options);
 <p>Transfer reversals add the specified (or entire) amount back to the platform&rsquo;s available balance, reducing the connected account&rsquo;s available balance accordingly. It is only possible to reverse a transfer if the connected account&rsquo;s available balance is greater than the reversal amount or has <a href="account-balances.html#understanding-connected-reserve-balances">connected reserves</a> enabled.</p></section>
 
 <section>
-<h2 id="on-behalf-of">Using on_behalf_of</h2>
+<a id="using-on-behalf-of" name="//apple_ref/cpp/Section/Using%20on_behalf_of" class="dashAnchor"></a><h2 id="on-behalf-of">Using on_behalf_of</h2>
 
 <p>With separate charges and transfers, by default:</p>
 
@@ -3744,7 +3744,7 @@ service.Create(createOptions);
 </section>
 
 <section>
-<h2 id="transfer-availability">Transfer availability</h2>
+<a id="transfer-availability" name="//apple_ref/cpp/Section/Transfer%20availability" class="dashAnchor"></a><h2 id="transfer-availability">Transfer availability</h2>
 
 <p>When creating separate charges and transfers, your platform can inadvertently attempt a transfer without having a sufficient available balance. Doing so raises an error and the transfer attempt fails. If you&rsquo;re commonly experiencing this problem, you can use the <code>source_transaction</code> parameter to tie a transfer to an existing charge. By using <code>source_transaction</code>, the transfer request succeeds regardless of your available balance and the transfer itself only occurs once the charge&rsquo;s funds become available.</p>
 <div class="tabs tabs-code animated" data-callback="codeTabsChanged" data-platform="server">
@@ -3897,7 +3897,7 @@ destination Stripe account receives from the transfer also becomes available in 
 <p>When a payment used as a <code>source_transaction</code> fails, funds from your platform&rsquo;s account balance are transferred to the connected account to cover the payment. To recover these funds, <a href="charges-transfers.html#reversing-transfers">reverse</a> the transfer associated with the failed <code>source_transaction</code>.</p></section>
 
 <section>
-  <h2>Further reading</h2>
+  <a id="further-reading" name="//apple_ref/cpp/Section/Further%20reading" class="dashAnchor"></a><h2>Further reading</h2>
   <p>Discover what other Connect functionality is available.</p>
 <ul class="next-steps">
     <li><a href="charges.html"><span>Creating Charges</span></a></li>
@@ -3942,7 +3942,7 @@ destination Stripe account receives from the transfer also becomes available in 
 
 
             </article>
-            <div class="docs-aside">
+            <div class="docs-aside" style="display: none;">
               <div class="docs-toc empty">
                 <h4>On this page</h4>
                 <ul class="docs-toc-list">

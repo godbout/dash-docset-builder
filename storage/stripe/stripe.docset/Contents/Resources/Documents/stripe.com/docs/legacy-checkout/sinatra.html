@@ -182,7 +182,7 @@
   <body class="">
     
       <div id="docs">
-        <div id="sidebar">
+        <div id="sidebar" style="display: none;">
             
   <div class="logo">
     <a href="../recipes/switching-to-stripe.html" title="Stripe docs">
@@ -3010,7 +3010,7 @@
             <article id="content">
                 
   <header>
-  <h1>Using Checkout and Sinatra (legacy)</h1>
+  <a name="//apple_ref/cpp/Section/Top" class="dashAnchor"></a><h1>Using Checkout and Sinatra (legacy)</h1>
 
 <aside class="important red">
 <p><strong>This page is for the legacy version of Checkout</strong></p>
@@ -3109,7 +3109,7 @@ end</code></div></pre>
 </section>
 
 <section>
-<h2 id="templates">Templates</h2>
+<a id="templates" name="//apple_ref/cpp/Section/Templates" class="dashAnchor"></a><h2 id="templates">Templates</h2>
 
 <p>Sinatra lets you <a href="http://www.sinatrarb.com/intro.html#Inline%20Templates">inline templates</a> into Ruby files using a neat little Ruby trick, the <code>__END__</code> keyword.</p>
 
@@ -3173,7 +3173,7 @@ Terminal
 <p>Now, if we navigate to <a href="http://localhost:4567">http://localhost:4567</a>, we should see our payment form ready to use. If you&rsquo;re using Stripe&rsquo;s test keys, then we can test it with some dummy data. Enter the test number <strong>4242 4242 4242 4242</strong>, a three digit CVC and any expiry date in the future. Submitting the form should bring up our successful charge page.</p></section>
 
 <section>
-<h2 id="deploying-to-heroku">Deploying to Heroku</h2>
+<a id="deploying-to-heroku" name="//apple_ref/cpp/Section/Deploying%20to%20Heroku" class="dashAnchor"></a><h2 id="deploying-to-heroku">Deploying to Heroku</h2>
 
 <p>So now we&rsquo;ve created our basic payment page, let&rsquo;s get it deployed somewhere so people can use it! Heroku is an awesome way to do this, and integrates seamlessly with Sinatra and Rack. Firstly, get a <a href="https://www.heroku.com/">Heroku</a> account, and install the <a href="https://toolbelt.heroku.com">Heroku Toolbelt</a>. We then need to setup a few things, so Heroku knows what gems we&rsquo;re using. Firstly, we&rsquo;ll to create a <code>Gemfile</code> for <a href="http://gembundler.com/">Bundler</a>:</p>
 <div class="code" data-language="ruby">
@@ -3248,7 +3248,7 @@ heroku open</code></div></pre>
 
 
             </article>
-            <div class="docs-aside">
+            <div class="docs-aside" style="display: none;">
               <div class="docs-toc empty">
                 <h4>On this page</h4>
                 <ul class="docs-toc-list">

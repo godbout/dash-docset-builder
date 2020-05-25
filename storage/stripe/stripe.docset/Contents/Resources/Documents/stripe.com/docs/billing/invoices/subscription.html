@@ -180,7 +180,7 @@
   <body class="">
     
       <div id="docs">
-        <div id="sidebar">
+        <div id="sidebar" style="display: none;">
             
   <div class="logo">
     <a href="../../recipes/switching-to-stripe.html" title="Stripe docs">
@@ -3008,7 +3008,7 @@
             <article id="content">
                 
   <header>
-  <h1 id="subscription-invoices">Subscription invoices</h1>
+  <a name="//apple_ref/cpp/Section/Top" class="dashAnchor"></a><h1 id="subscription-invoices">Subscription invoices</h1>
 
   <p>Learn how to manipulate subscription invoices, the basis for recurring charges.</p>
 </header>
@@ -3019,7 +3019,7 @@
 </section>
 
 <section>
-  <h2 id="new-subscription-invoices">New subscription invoices</h2>
+  <a id="new-subscription-invoices" name="//apple_ref/cpp/Section/New%20subscription%20invoices" class="dashAnchor"></a><h2 id="new-subscription-invoices">New subscription invoices</h2>
 
   <p>When you subscribe a customer, Stripe:</p>
 
@@ -3041,7 +3041,7 @@ For guidance on how to handle payment failures for new subscription invoices, re
 </section>
 
 <section>
-  <h2 id="subscription-renewal">Subscription renewal invoices</h2>
+  <a id="subscription-renewal-invoices" name="//apple_ref/cpp/Section/Subscription%20renewal%20invoices" class="dashAnchor"></a><h2 id="subscription-renewal">Subscription renewal invoices</h2>
 
   <p>When subscriptions renew, Stripe:</p>
 
@@ -3057,7 +3057,7 @@ This time, the invoice&rsquo;s <a href="../../api/invoices/object.html#invoice_o
 </section>
 
 <section>
-  <h2 id="adding-upcoming-invoice-items">Adding extra invoice items to a future invoice</h2>
+  <a id="adding-extra-invoice-items-to-a-future-invoice" name="//apple_ref/cpp/Section/Adding%20extra%20invoice%20items%20to%20a%20future%20invoice" class="dashAnchor"></a><h2 id="adding-upcoming-invoice-items">Adding extra invoice items to a future invoice</h2>
 
   <p>To <a href="../../api/invoiceitems/create.html">add extra invoice items</a> to the next invoice in the cycle:</p>
 
@@ -3233,7 +3233,7 @@ To make sure this is added to a specific subscription, use the optional <code>su
 </section>
 
 <section>
-  <h2 id="adding-draft-invoice-items">Adding invoice items to a draft subscription invoice</h2>
+  <a id="adding-invoice-items-to-a-draft-subscription-invoice" name="//apple_ref/cpp/Section/Adding%20invoice%20items%20to%20a%20draft%20subscription%20invoice" class="dashAnchor"></a><h2 id="adding-draft-invoice-items">Adding invoice items to a draft subscription invoice</h2>
 
   <p>When a subscription renews and creates an invoice, Stripe sends the <code>invoice.created</code> <a href="../../webhooks.html">webhook</a> event.
 Stripe <a href="../webhooks.html#understand">waits approximately one hour</a> before finalizing the invoice and attempting payment or sending an email.</p>
@@ -3253,7 +3253,7 @@ Be certain to provide the <a href="../../api/invoiceitems/create.html#create_inv
 </section>
 
 <section>
-  <h2 id="previewing">Previewing upcoming invoices</h2>
+  <a id="previewing-upcoming-invoices" name="//apple_ref/cpp/Section/Previewing%20upcoming%20invoices" class="dashAnchor"></a><h2 id="previewing">Previewing upcoming invoices</h2>
 
   <p>The <a href="../../api/index.html#retrieve_invoice">Retrieve an invoice</a> API call provides a mechanism for viewing an existing invoice, but Stripe also provides an endpoint for <a href="../../api/index.html#upcoming_invoice">previewing the next upcoming invoice</a>.
 This preview reflects the base price, pending invoice items, discounts, and any existing customer balance.</p>
@@ -3270,7 +3270,7 @@ This preview reflects the base price, pending invoice items, discounts, and any 
 </section>
 
 <section>
-  <h2 id="generating-invoices">Generating an invoice for subscription items outside the billing cycle</h2>
+  <a id="generating-an-invoice-for-subscription-items-outside-the-billing-cycle" name="//apple_ref/cpp/Section/Generating%20an%20invoice%20for%20subscription%20items%20outside%20the%20billing%20cycle" class="dashAnchor"></a><h2 id="generating-invoices">Generating an invoice for subscription items outside the billing cycle</h2>
 
   <p>You can invoice pending invoice items outside of the regular billing cycle by <a href="one-off.html">generating a one-off invoice</a>.
 Generating a one-off invoice pulls in any pending invoice items that would have been added to the regularly scheduled invoice.</p>
@@ -3285,7 +3285,7 @@ Generating a one-off invoice pulls in any pending invoice items that would have 
 </section>
 
 <section>
-  <h2 id="holding-review">Pausing a subscription invoice for review</h2>
+  <a id="pausing-a-subscription-invoice-for-review" name="//apple_ref/cpp/Section/Pausing%20a%20subscription%20invoice%20for%20review" class="dashAnchor"></a><h2 id="holding-review">Pausing a subscription invoice for review</h2>
 
   <p>Rather than automatically attempting payment at the end of a billing period, you can pause the invoice for review or corrections.
 To pause an invoice:</p>
@@ -3329,7 +3329,7 @@ To pause an invoice:</p>
 
 
             </article>
-            <div class="docs-aside">
+            <div class="docs-aside" style="display: none;">
               <div class="docs-toc empty">
                 <h4>On this page</h4>
                 <ul class="docs-toc-list">

@@ -180,7 +180,7 @@
   <body class="">
     
       <div id="docs">
-        <div id="sidebar">
+        <div id="sidebar" style="display: none;">
             
   <div class="logo">
     <a href="../../recipes/switching-to-stripe.html" title="Stripe docs">
@@ -3008,7 +3008,7 @@
             <article id="content">
                 
   <header>
-  <h1 id="auto-reconciliation-with-invoices">Auto-reconciliation with invoices</h1>
+  <a name="//apple_ref/cpp/Section/Top" class="dashAnchor"></a><h1 id="auto-reconciliation-with-invoices">Auto-reconciliation with invoices</h1>
 
   <p>Allow customers to pay invoices using push payment methods, while Stripe handles the cash reconciliation.</p>
 </header>
@@ -3041,7 +3041,7 @@ By contrast, a <em>push</em> payments involve money being pushed into Stripe; ex
 
 <section>
 
-  <h2 id="creating">Creating subscriptions for payment via an invoice</h2>
+  <a id="creating-subscriptions-for-payment-via-an-invoice" name="//apple_ref/cpp/Section/Creating%20subscriptions%20for%20payment%20via%20an%20invoice" class="dashAnchor"></a><h2 id="creating">Creating subscriptions for payment via an invoice</h2>
 
   <p>To create a subscription that emails invoices to a customer so that it can be paid via ACH credit transfers, perform a <a href="../../api/index.html#create_subscription">create subscription</a> request, providing two additional arguments:</p>
 
@@ -3061,7 +3061,7 @@ By contrast, a <em>push</em> payments involve money being pushed into Stripe; ex
 </section>
 
 <section>
-  <h2 id="paying">Paying an invoice</h2>
+  <a id="paying-an-invoice" name="//apple_ref/cpp/Section/Paying%20an%20invoice" class="dashAnchor"></a><h2 id="paying">Paying an invoice</h2>
 
   <aside class="important amber">
     <p>ACH credit transfers are only supported in USD.</p>
@@ -3249,7 +3249,7 @@ Invoice invoice = service.Pay("in_18jwqyLlRB0eXbMtrUQ97YBw", payOptions);
 </section>
 
 <section>
-  <h2 id="handling-exceptions">Handling exceptions</h2>
+  <a id="handling-exceptions" name="//apple_ref/cpp/Section/Handling%20exceptions" class="dashAnchor"></a><h2 id="handling-exceptions">Handling exceptions</h2>
 
   <p>If the amount your customer has paid does not match an invoice amount, the funds are not charged and remain in the <code>Source</code> object. If you wish to use these funds to fulfill your invoice, you have a few options:</p>
 
@@ -3273,7 +3273,7 @@ Invoice invoice = service.Pay("in_18jwqyLlRB0eXbMtrUQ97YBw", payOptions);
 </section>
 
 <section>
-  <h2 id="refunding-payments">Refunding payments</h2>
+  <a id="refunding-payments" name="//apple_ref/cpp/Section/Refunding%20payments" class="dashAnchor"></a><h2 id="refunding-payments">Refunding payments</h2>
 
   <p>ACH credit transfer and Check payments can be refunded through either the <a href="https://dashboard.stripe.com/payments">Dashboard</a> or the <a href="../../api/index.html#create_refund">API</a>. However, the customer must specify the account to which the funds should be returned. Stripe automatically contacts the customer at the email address provided. Once the customer provides us with their account information, we process the refund automatically.</p>
 
@@ -3281,7 +3281,7 @@ Invoice invoice = service.Pay("in_18jwqyLlRB0eXbMtrUQ97YBw", payOptions);
 </section>
 
 <section>
-  <h2 id="testing-payment">Testing payment</h2>
+  <a id="testing-payment" name="//apple_ref/cpp/Section/Testing%20payment" class="dashAnchor"></a><h2 id="testing-payment">Testing payment</h2>
 
   <p>If you are in test mode, you can simulate pushing money into the receiver by updating the owner email on the source to <code>amount_XXXX@any_domain.com</code>, where <code>XXXX</code> is the amount of money you want to simulate pushing. Note that the payment will not be associated with the invoice unless the invoice has been frozen from editing. This happens either one hour after webhooks have been delivered, or when an email for the invoice has been sent to the customer. In the Dashboard, you can initiate immediately sending an email by clicking the invoice&rsquo;s <strong>Send invoice</strong> button.</p>
 
@@ -3558,7 +3558,7 @@ Source source = service.Get("src_19Q3AILlRB0eXbMt81RVDnM9");
 </section>
 
 <section>
-  <h2>Next steps</h2>
+  <a id="next-steps" name="//apple_ref/cpp/Section/Next%20steps" class="dashAnchor"></a><h2>Next steps</h2>
   <p>Congratulations! You&rsquo;ve learned how Stripe reconciles invoices. You might also want to read about:</p>
 
   <ul class="next-steps">
@@ -3598,7 +3598,7 @@ Source source = service.Get("src_19Q3AILlRB0eXbMt81RVDnM9");
 
 
             </article>
-            <div class="docs-aside">
+            <div class="docs-aside" style="display: none;">
               <div class="docs-toc empty">
                 <h4>On this page</h4>
                 <ul class="docs-toc-list">

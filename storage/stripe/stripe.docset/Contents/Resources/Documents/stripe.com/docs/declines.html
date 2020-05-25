@@ -182,7 +182,7 @@
   <body class="">
     
       <div id="docs">
-        <div id="sidebar">
+        <div id="sidebar" style="display: none;">
             
   <div class="logo">
     <a href="recipes/switching-to-stripe.html" title="Stripe docs">
@@ -3011,7 +3011,7 @@
                 
   
 <header>
-<h1 id="understanding-declines">Understanding declines and failed payments </h1>
+<a name="//apple_ref/cpp/Section/Top" class="dashAnchor"></a><h1 id="understanding-declines">Understanding declines and failed payments </h1>
 
 <p>Learn why some payments fail and what you can do to decrease your decline rate.</p>
 </header>
@@ -3035,7 +3035,7 @@
 </section>
 
 <section>
-<h2 id="issuer-declines">Payments declined by card issuers </h2>
+<a id="payments-declined-by-card-issuers" name="//apple_ref/cpp/Section/Payments%20declined%20by%20card%20issuers" class="dashAnchor"></a><h2 id="issuer-declines">Payments declined by card issuers </h2>
 
 <p>When a charge is submitted to the issuer of your customer&rsquo;s card, they have automated systems and models that determine whether or not to authorize it. These systems analyze various signals, such as your customer&rsquo;s spending habits, account balance, and card information such as the expiration date, address information and CVC.</p>
 
@@ -3090,7 +3090,7 @@ outcome: {
 </section>
 
 <section>
-<h2 id="blocked-payments">Blocked payments </h2>
+<a id="blocked-payments" name="//apple_ref/cpp/Section/Blocked%20payments" class="dashAnchor"></a><h2 id="blocked-payments">Blocked payments </h2>
 
 <p>Stripe&rsquo;s automated fraud prevention toolset, <a href="radar.html">Radar</a>, blocks any payments that we identify as being high-risk. Radar can help you most effectively combat fraud, with features such as rules that <a href="disputes/prevention.html#best-practices-for-preventing-fraud">block payments if the CVC or  doesn&rsquo;t match</a> the information on file with your customer&rsquo;s card issuer.</p>
 <div class="image"><a class="zoomable" href="../img/docs/radar/payment-high-risk-allow-list.png" data-width="1024" data-height="624">
@@ -3119,7 +3119,7 @@ outcome: {
 </aside></section>
 
 <section>
-<h2 id="invalid-api-calls">Invalid API calls </h2>
+<a id="invalid-api-calls" name="//apple_ref/cpp/Section/Invalid%20API%20calls" class="dashAnchor"></a><h2 id="invalid-api-calls">Invalid API calls </h2>
 
 <p>As you develop your Stripe integration, good testing should identify any potential bugs that would lead to invalid API calls. Consequently these failures should be rare in production. Invalid API calls typically don&rsquo;t result in a payment appearing in your Dashboard. However, in a few edge cases you may see the payment appear.</p>
 <div class="code" data-language="json"><pre class="language-json numbered"><div class="file-content-wrapper"><code>...
@@ -3132,7 +3132,7 @@ outcome: {
 </div></section>
 
 <section>
-<h2 id="responding-to-failures-api">Managing payment failures programmatically </h2>
+<a id="managing-payment-failures-programmatically" name="//apple_ref/cpp/Section/Managing%20payment%20failures%20programmatically" class="dashAnchor"></a><h2 id="responding-to-failures-api">Managing payment failures programmatically </h2>
 
 <div class="tabs tabs-regular animated persists syncs" data-save-url="true" data-group="paymentAPI">
     
@@ -3180,7 +3180,7 @@ outcome: {
 </aside></section>
 
 <section>
-<h2 id="retrying-issuer-declines">Retrying card issuer declines </h2>
+<a id="retrying-card-issuer-declines" name="//apple_ref/cpp/Section/Retrying%20card%20issuer%20declines" class="dashAnchor"></a><h2 id="retrying-issuer-declines">Retrying card issuer declines </h2>
 
 <p>If your integration has retry logic in place to retry declined charges, be aware that card networks have rules in place for how many times you can reattempt a single charge. We recommend you not retry charges more than four times. Creating additional retries may be seen by issuers as potential fraud and could result in legitimate charges being declined more frequently.</p>
 
@@ -3188,7 +3188,7 @@ outcome: {
 </section>
 
 <section>
-<h2 id="next-steps">Next steps </h2>
+<a id="next-steps" name="//apple_ref/cpp/Section/Next%20steps" class="dashAnchor"></a><h2 id="next-steps">Next steps </h2>
 
 <p>Congrats! You&rsquo;ve now learned why some payments may fail or be declined. You may want to learn more about the reasons card issuers decline payments:</p>
 
@@ -3231,7 +3231,7 @@ outcome: {
 
 
             </article>
-            <div class="docs-aside">
+            <div class="docs-aside" style="display: none;">
               <div class="docs-toc empty">
                 <h4>On this page</h4>
                 <ul class="docs-toc-list">

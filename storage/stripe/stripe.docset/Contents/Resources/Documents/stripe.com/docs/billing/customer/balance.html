@@ -180,7 +180,7 @@
   <body class="">
     
       <div id="docs">
-        <div id="sidebar">
+        <div id="sidebar" style="display: none;">
             
   <div class="logo">
     <a href="../../recipes/switching-to-stripe.html" title="Stripe docs">
@@ -3008,7 +3008,7 @@
             <article id="content">
                 
   <header>
-  <h1 id="customer-balance">Customer Balance</h1>
+  <a name="//apple_ref/cpp/Section/Top" class="dashAnchor"></a><h1 id="customer-balance">Customer Balance</h1>
 
   <p>How to use the customer balance ledger</p>
 </header>
@@ -3019,7 +3019,7 @@
 
   <p>Because the customer balance is computed from a ledger&mdash;an immutable list of debit and credit transactions&mdash;it provides an audit trail of transactions for the customer. These <a href="../../api/customer_balance_transactions/object.html">Customer Balance Transactions</a> can contain useful metadata, which object created the balance adjustment (such as a <a href="../invoices/credit-notes.html">Credit Note</a>), or which object used the balance (such as applying it to an <a href="../invoices.html">Invoice</a>).</p>
 
-  <h2 id="examples">Examples</h2>
+  <a id="examples" name="//apple_ref/cpp/Section/Examples" class="dashAnchor"></a><h2 id="examples">Examples</h2>
 
   <p>Customer Balances are used in many ways, some common use cases include:</p>
 
@@ -3028,7 +3028,7 @@
     <li>Rather than refunding money back to the customer&rsquo;s payment method, <a href="../invoices/credit-notes.html#issuing">issue a Credit Note</a> to create a customer balance credit that you can use to reduce the amount due on their next invoice.</li>
   </ul>
 
-  <h2 id="good-to-know">Good to know</h2>
+  <a id="good-to-know" name="//apple_ref/cpp/Section/Good%20to%20know" class="dashAnchor"></a><h2 id="good-to-know">Good to know</h2>
 
   <ul>
     <li>The customer balance is applied to the amount due on their next invoice.</li>
@@ -3041,13 +3041,13 @@
 
 <section>
 
-  <h2 id="debits-and-credits">Debits and Credits</h2>
+  <a id="debits-and-credits" name="//apple_ref/cpp/Section/Debits%20and%20Credits" class="dashAnchor"></a><h2 id="debits-and-credits">Debits and Credits</h2>
 
   <p><strong>Negative values</strong> are treated as a <strong>credit</strong> (a reduction in the amount owed by the customer) which can be applied to the customer&rsquo;s next invoice.</p>
 
   <p><strong>Positive values</strong> are treated as a <strong>debit</strong> (an increase in the amount owed by the customer to you) which can be applied to the customer&rsquo;s next invoice.</p>
 
-  <h2 id="transactions">Understanding Transactions</h2>
+  <a id="understanding-transactions" name="//apple_ref/cpp/Section/Understanding%20Transactions" class="dashAnchor"></a><h2 id="transactions">Understanding Transactions</h2>
 
   <p>All modifications to the customer balance are recorded as immutable <a href="../../api/customer_balance_transactions/object.html">Customer Balance Transactions</a>.
 Once created, you may only update its <code>description</code> or <code>metadata</code>&ndash;you cannot edit other properties or delete a transaction. You can only undo it by creating a corresponding, reversing transaction.
@@ -3102,7 +3102,7 @@ For instance, if you credit the customer $10 you would have to debit the custome
 
 <section>
 
-  <h2 id="modifying">Modifying the Customer Balance</h2>
+  <a id="modifying-the-customer-balance" name="//apple_ref/cpp/Section/Modifying%20the%20Customer%20Balance" class="dashAnchor"></a><h2 id="modifying">Modifying the Customer Balance</h2>
 
   <p>You can modify a customer&rsquo;s balance through the Dashboard by creating a new <a href="../../api/customer_balance_transactions/object.html">Customer Balance Transaction</a> adjustment from the <strong>Customer&rsquo;s detail page</strong>.</p>
 
@@ -3251,7 +3251,7 @@ var transaction = service.Create(options);
 </div>
 </div>
 
-  <h2 id="auditing">Customer Balance Transaction history</h2>
+  <a id="customer-balance-transaction-history" name="//apple_ref/cpp/Section/Customer%20Balance%20Transaction%20history" class="dashAnchor"></a><h2 id="auditing">Customer Balance Transaction history</h2>
 
   <p>Audit a Customer&rsquo;s balance adjustments in the Dashboard by navigating to a <strong>Customer&rsquo;s detail page</strong> and scrolling to the <strong>Customer balance</strong> panel.</p>
 
@@ -3397,7 +3397,7 @@ var transactions = service.List("cus_4fdAW5ftNQow1a", options);
 
 
             </article>
-            <div class="docs-aside">
+            <div class="docs-aside" style="display: none;">
               <div class="docs-toc empty">
                 <h4>On this page</h4>
                 <ul class="docs-toc-list">

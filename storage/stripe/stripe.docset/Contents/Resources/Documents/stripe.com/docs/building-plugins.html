@@ -180,7 +180,7 @@
   <body class="">
     
       <div id="docs">
-        <div id="sidebar">
+        <div id="sidebar" style="display: none;">
             
   <div class="logo">
     <a href="recipes/switching-to-stripe.html" title="Stripe docs">
@@ -3008,7 +3008,7 @@
             <article id="content">
                 
   <header>
-  <h1>Building Stripe plugins</h1>
+  <a name="//apple_ref/cpp/Section/Top" class="dashAnchor"></a><h1>Building Stripe plugins</h1>
 <p>When you&rsquo;re developing Stripe plugins for open-source or self-hosted platforms, you should follow these best practices to safely process on Stripe. If you have questions along the way, you can reach out to <a href="mailto:plugins@stripe.com">plugins@stripe.com</a>.</p>
   <aside class="important check">
     <p>
@@ -3036,7 +3036,7 @@
   </ul>
 </section>
 <section>
-<h2 id="setappinfo">Identifying your plugin</h2>
+<a id="identifying-your-plugin" name="//apple_ref/cpp/Section/Identifying%20your%20plugin" class="dashAnchor"></a><h2 id="setappinfo">Identifying your plugin</h2>
 <p>You must provide some basic identifying information so that we can contact you about future issues or critical updates to the API. To do this, use <code>setAppInfo</code> with a hash containing the following options:</p>
 
 <ul>
@@ -3132,7 +3132,7 @@
 <p>If your plugin is designed for a particular platform, please include that platform in the <code>appName</code> field (e.g., <strong>WordPress MyStripePlugin</strong> or <strong>WooCommerce MyStripePlugin</strong>).</p>  </aside>
 </section>
 <section>
-<h2 id="set-api-version">Setting the API version</h2>
+<a id="setting-the-api-version" name="//apple_ref/cpp/Section/Setting%20the%20API%20version" class="dashAnchor"></a><h2 id="set-api-version">Setting the API version</h2>
 
 <p>Your plugin should use the <code>setApiVersion</code> function, which will set the <code>Stripe-Version</code> HTTP header on all requests. Your users will use their own API keys to access Stripe, but this header will be included with every request. We recommend that you use the most recently published version of the API. The current API version and details on our <a href="api/index.html#versioning">versioning policy</a> can be found in the API reference.</p>
 <div class="tabs tabs-code animated" data-callback="codeTabsChanged">
@@ -3193,11 +3193,11 @@ stripe.setApiVersion('2017-06-05');</code></div></pre>
 <p><strong>API versions can&rsquo;t be downgraded.</strong> You should regularly release new versions of your plugin to correctly handle any changes to JSON responses.</p>  </aside>
 </section>
 <section>
-<h2 id="subscribe">Subscribing to our mailing list for updates</h2>
+<a id="subscribing-to-our-mailing-list-for-updates" name="//apple_ref/cpp/Section/Subscribing%20to%20our%20mailing%20list%20for%20updates" class="dashAnchor"></a><h2 id="subscribe">Subscribing to our mailing list for updates</h2>
 
 <p>We regularly release new versions of the Stripe API that bring new features and bug fixes. You can subscribe to the <a href="https://groups.google.com/a/lists.stripe.com/forum/#!forum/plugins-announce">plugins-announce</a> mailing list to be notified of updates that may affect users of your plugin.</p></section>
 <section>
-<h2 id="tokenization">Securely collecting payment details</h2>
+<a id="securely-collecting-payment-details" name="//apple_ref/cpp/Section/Securely%20collecting%20payment%20details" class="dashAnchor"></a><h2 id="tokenization">Securely collecting payment details</h2>
 
 <p>Stripe users are subject to <a href="security.html#pci-dss-guidelines">PCI compliance</a>, which specifies how credit card data should be securely stored, processed, and transmitted. Their businesses could face stiff penalties for noncompliance or potential breaches, so it&rsquo;s important to help them safely process on Stripe.</p>
 
@@ -3214,7 +3214,7 @@ stripe.setApiVersion('2017-06-05');</code></div></pre>
 
 <p>If your plugin only operates in a backend environment, please include a note in your plugin&rsquo;s documentation asking users to tokenize payment details using Elements or Checkout. Tokenization helps Stripe users process as safely as possible on our platform.</p></section>
 <section>
-<h2 id="payment-request-button">Add the Payment Request Button</h2>
+<a id="add-the-payment-request-button" name="//apple_ref/cpp/Section/Add%20the%20Payment%20Request%20Button" class="dashAnchor"></a><h2 id="payment-request-button">Add the Payment Request Button</h2>
 
 <p>The Payment Request Button is a single Element that enables
 <a href="apple-pay.html">Apple Pay</a>, <a href="google-pay.html">Google Pay</a>, and the <a href="payment-request-api.html">Payment Request
@@ -3226,13 +3226,13 @@ depending on which device and browser the customer uses.
 You can see an example in
 <a href="stripe-js/elements/payment-request-button.html">our documentation</a>.</p></section>
 <section>
-<h2 id="apms">Enabling multiple payment methods</h2>
+<a id="enabling-multiple-payment-methods" name="//apple_ref/cpp/Section/Enabling%20multiple%20payment%20methods" class="dashAnchor"></a><h2 id="apms">Enabling multiple payment methods</h2>
 
 <p>Stripe supports multiple payment methods, aside from credit cards. We&rsquo;ve published a <a href="https://stripe.com/payments/payment-methods-guide">guide to payment methods</a> that introduces terminology, key considerations, and how we support each method on our platform.</p>
 
 <p>The <a href="sources/bitcoin.html">Sources API</a> enables your users to collect payments using additional payment methods (e.g. Alipay, iDEAL, SOFORT). These <a href="sources/bitcoin.html#supported-payment-methods">payment methods</a> can be quickly added using one integration path. For more information, you can read about <a href="sources/best-practices.html">best practices</a> to consider when using Sources.</p></section>
 <section>
-<h2 id="https">Verifying that HTTPS is enabled</h2>
+<a id="verifying-that-https-is-enabled" name="//apple_ref/cpp/Section/Verifying%20that%20HTTPS%20is%20enabled" class="dashAnchor"></a><h2 id="https">Verifying that HTTPS is enabled</h2>
 <p>If your plugin presents a payment form in a web browser, it should check if the form is being served via HTTPS. We require our users to enable HTTPS: you should present a clear error to your user if they&rsquo;re not properly secured.</p>
 
 <p>Here are a few examples to verify whether your users have HTTPS enabled:</p><div class="tabs tabs-code animated" data-callback="codeTabsChanged">
@@ -3428,7 +3428,7 @@ if (window.location.protocol !== "https:") {
 
 
             </article>
-            <div class="docs-aside">
+            <div class="docs-aside" style="display: none;">
               <div class="docs-toc empty">
                 <h4>On this page</h4>
                 <ul class="docs-toc-list">

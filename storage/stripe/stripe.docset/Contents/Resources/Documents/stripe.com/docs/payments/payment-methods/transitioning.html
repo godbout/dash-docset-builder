@@ -191,7 +191,7 @@
   <body class="">
     
       <div id="docs">
-        <div id="sidebar">
+        <div id="sidebar" style="display: none;">
             
   <div class="logo">
     <a href="../../recipes/switching-to-stripe.html" title="Stripe docs">
@@ -3019,17 +3019,17 @@
             <article id="content">
                 
   <header>
-  <h1 id="transitioning-to-the-payment-methods-api">Transitioning to the Payment Methods API</h1>
+  <a name="//apple_ref/cpp/Section/Top" class="dashAnchor"></a><h1 id="transitioning-to-the-payment-methods-api">Transitioning to the Payment Methods API</h1>
 
   <p>Learn about the differences compared to Sources and Tokens.</p>
 </header>
 
 <section>
-  <h2 id="overview">Overview</h2>
+  <a id="overview" name="//apple_ref/cpp/Section/Overview" class="dashAnchor"></a><h2 id="overview">Overview</h2>
 
   <p>The <a href="../../api/payment_methods.html">Payment Methods API</a> replaces the existing <a href="../../api/tokens.html">Tokens</a> and <a href="../../api/sources.html">Sources</a> APIs as the recommended way for integrations to collect and store payment information. It works with the <a href="../payment-intents/creating-payment-intents.html">Payment Intents API</a> to create payments for a wide range of payment methods.</p>
 
-  <h2 id="transitioning">Transitioning to the Payment Methods API</h2>
+  <a id="transitioning-to-the-payment-methods-api" name="//apple_ref/cpp/Section/Transitioning%20to%20the%20Payment%20Methods%20API" class="dashAnchor"></a><h2 id="transitioning">Transitioning to the Payment Methods API</h2>
 
   <p>The main difference between the Payment Methods and Sources APIs is that Sources describes transaction state through the <a href="https://stripe.com/docs/api/sources/object#source_object-status">status</a> property, which means that each <code>Source</code> object must be transitioned to a chargeable state before it can be used for a payment. In contrast, a <code>PaymentMethod</code> is stateless, relying on the <span class="tooltip-wrapper"><span class="tooltip-content definition"><a href="../payment-intents/creating-payment-intents.html">PaymentIntent</a></span><template class="tooltip"><span class="definition">The <em>Payment Intents API</em> is a new way to build dynamic payment flows. It tracks the lifecycle of a customer checkout flow and triggers additional authentication steps when required by regulatory mandates, custom Radar fraud rules, or redirect-based payment methods.</span></template></span> object to represent payment state.</p>
 
@@ -3138,7 +3138,7 @@ Activation is generally instantaneous and does not require additional contracts 
 
 <section>
 
-  <h2 id="compatibility">Compatibility with Sources and cards</h2>
+  <a id="compatibility-with-sources-and-cards" name="//apple_ref/cpp/Section/Compatibility%20with%20Sources%20and%20cards" class="dashAnchor"></a><h2 id="compatibility">Compatibility with Sources and cards</h2>
 
   <p>If you previously collected customer payment details with Stripe using <a href="../../saving-cards.html">cards</a> or <a href="../../sources/bitcoin.html">Sources</a>, you can start using the Payment Methods API immediately without migrating any payment information for payment types that are available on the Payment Methods API.</p>
 
@@ -3608,7 +3608,7 @@ For example, updates to a compatible payment instrument through the Payment Meth
 </section>
 
 <section>
-  <h2 id="see-also">See also</h2>
+  <a id="see-also" name="//apple_ref/cpp/Section/See%20also" class="dashAnchor"></a><h2 id="see-also">See also</h2>
   <ul class="next-steps">
     <li><a href="https://stripe.com/payments/payment-methods-guide"><span>Guide to Payment Methods</span></a></li>
     <li><a href="connect.html"><span>Connect Platforms Using the Payment Methods API</span></a></li>
@@ -3648,7 +3648,7 @@ For example, updates to a compatible payment instrument through the Payment Meth
 
 
             </article>
-            <div class="docs-aside">
+            <div class="docs-aside" style="display: none;">
               <div class="docs-toc empty">
                 <h4>On this page</h4>
                 <ul class="docs-toc-list">

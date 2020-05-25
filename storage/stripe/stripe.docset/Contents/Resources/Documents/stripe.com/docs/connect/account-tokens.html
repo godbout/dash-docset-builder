@@ -180,7 +180,7 @@
   <body class="">
     
       <div id="docs">
-        <div id="sidebar">
+        <div id="sidebar" style="display: none;">
             
   <div class="logo">
     <a href="../recipes/switching-to-stripe.html" title="Stripe docs">
@@ -3008,7 +3008,7 @@
             <article id="content">
                 
   <header>
-  <h1>Using tokens to securely transmit account data</h1>
+  <a name="//apple_ref/cpp/Section/Top" class="dashAnchor"></a><h1>Using tokens to securely transmit account data</h1>
   <p><a href="https://stripe.com/connect">Connect</a> platforms can use <a href="../stripe-js/reference.html">Stripe.js</a> to securely collect account details for their connected users.</p>
 </header>
 
@@ -3046,7 +3046,7 @@ The content on this page applies only to Custom accounts.
 </section>
 
 <section>
-<h2 id="workflow">Creating and using tokens</h2>
+<a id="creating-and-using-tokens" name="//apple_ref/cpp/Section/Creating%20and%20using%20tokens" class="dashAnchor"></a><h2 id="workflow">Creating and using tokens</h2>
 
 <p>Tokens require both client-side and server-side code:</p>
 
@@ -3515,7 +3515,7 @@ var person = service.Create(
 </section>
 
 <section>
-<h2 id="mobile-tokens">Creating account tokens with the mobile SDKs</h2>
+<a id="creating-account-tokens-with-the-mobile-sdks" name="//apple_ref/cpp/Section/Creating%20account%20tokens%20with%20the%20mobile%20SDKs" class="dashAnchor"></a><h2 id="mobile-tokens">Creating account tokens with the mobile SDKs</h2>
 
 <p>You can also create an account token with our Android or iOS SDKs. Note that currently only account tokens are supported on mobile. This is sufficient for creating an individual account, but you must use Stripe.js to create the person token that you need for a company account. Support for person tokens in the mobile SDKs will be available in a future release.</p>
   
@@ -3676,7 +3676,7 @@ stripe.createAccountToken(accountParams,
 </section>
 
 <section>
-<h2 id="file-upload">Handling a file upload</h2>
+<a id="handling-a-file-upload" name="//apple_ref/cpp/Section/Handling%20a%20file%20upload" class="dashAnchor"></a><h2 id="file-upload">Handling a file upload</h2>
 
 <p>When a connected user needs to provide Stripe with a <a href="identity-verification-api.html#handling-identity-verification">scan of an identity document</a> (e.g., a passport), this can also be done through an account token. However, the JavaScript required is a bit more complicated as the file must be sent to Stripe via an XHR request. In this flow, the JavaScript:</p>
 
@@ -3736,7 +3736,7 @@ const fileData = await fileResult.json();
 </section>
 
 <section id="updating-removing">
-<h2 id="updating">Updating legal entity and person details</h2>
+<a id="updating-legal-entity-and-person-details" name="//apple_ref/cpp/Section/Updating%20legal%20entity%20and%20person%20details" class="dashAnchor"></a><h2 id="updating">Updating legal entity and person details</h2>
 
 <p>Tokens can be used to securely update an existing account&rsquo;s legal entity and person information as well. Simply create the tokens you need using the same combination of HTML and JavaScript as above, and then perform an <a href="../api/index.html#update_account">update account</a> or <a href="../api/persons/update.html">update person</a> call providing the new token ID.</p>
 
@@ -3890,14 +3890,14 @@ service.Update("{{CONNECTED_STRIPE_ACCOUNT_ID}}", options);
 <p>For example, if an account is created with a token containing only a name and date of birth, you&rsquo;d create a subsequent token containing only the address information and then perform an update account call to add the address details to the account.</p></section>
 
 <section>
-<h2 id="removing">Removing legal entity and person details</h2>
+<a id="removing-legal-entity-and-person-details" name="//apple_ref/cpp/Section/Removing%20legal%20entity%20and%20person%20details" class="dashAnchor"></a><h2 id="removing">Removing legal entity and person details</h2>
 
 <p>If you need to clear any legal entity or person details or explicitly set a value as <code>null</code>, you can only do so by providing empty strings as values in an <a href="../api/index.html#update_account">update account</a> or <a href="../api/persons/update.html">update person</a> call. This is true whether a token was originally used or not. When removing information, you can only remove optional data (e.g., the second line of an address). All other information can only be updated, never removed.</p>
 
 <p>It is sometimes necessary to explicitly set an entity or person value as empty, such as when <code>company[address][line2]</code> needs to be set to <code>null</code> because the address doesn&rsquo;t have an apartment, suite, or building number. In this case, you should also pass the <code>null</code> value using an <a href="../api/index.html#update_account">update account</a> call rather than using an account token.</p></section>
 
 <section>
-  <h2>Next steps</h2>
+  <a id="next-steps" name="//apple_ref/cpp/Section/Next%20steps" class="dashAnchor"></a><h2>Next steps</h2>
   <p>Now that you know how to create and use tokens, you may want to read:</p>
 <ul class="next-steps">
     <li><a href="identity-verification.html"><span>Identity Verification</span></a></li>
@@ -3938,7 +3938,7 @@ service.Update("{{CONNECTED_STRIPE_ACCOUNT_ID}}", options);
 
 
             </article>
-            <div class="docs-aside">
+            <div class="docs-aside" style="display: none;">
               <div class="docs-toc empty">
                 <h4>On this page</h4>
                 <ul class="docs-toc-list">

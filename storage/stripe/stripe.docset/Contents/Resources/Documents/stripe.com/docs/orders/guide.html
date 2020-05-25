@@ -180,7 +180,7 @@
   <body class="">
     
       <div id="docs">
-        <div id="sidebar">
+        <div id="sidebar" style="display: none;">
             
   <div class="logo">
     <a href="../recipes/switching-to-stripe.html" title="Stripe docs">
@@ -3008,7 +3008,7 @@
             <article id="content">
                 
   <header>
-  <h1>Orders guide <span class="warning tag">Deprecated</span></h1>
+  <a name="//apple_ref/cpp/Section/Top" class="dashAnchor"></a><h1>Orders guide <span class="warning tag">Deprecated</span></h1>
   <p>This guide is an in-depth walkthrough of using orders and products in Stripe. You can also get a <a href="../orders.html">quick intro</a> or check out the <a href="../api/index.html#orders">Orders API reference</a>.</p>
 
   <aside class="important red">
@@ -3017,7 +3017,7 @@
 </header>
 
 <section>
-<h2 id="managing-products-orders">Managing products and orders</h2>
+<a id="managing-products-and-orders" name="//apple_ref/cpp/Section/Managing%20products%20and%20orders" class="dashAnchor"></a><h2 id="managing-products-orders">Managing products and orders</h2>
 <p>If you sell products&mdash;whether physical or digital&mdash;you use Stripe&rsquo;s Orders API to keep track of inventory, calculate tax and shipping, apply discounts, store tracking information, and handle returns.</p>
 
 <p>Stripe lets you define <em>products</em> with images and attributes like color and size and <em>SKUs</em> representing specific items to purchase (like a red shirt in size M) along with price and inventory information. You use SKUs to construct <em>orders</em> on behalf of your customers.</p>
@@ -3468,7 +3468,7 @@ ord, _ := order.Return("or_1Ce6vg2eZvKYlo2CcQtHtXdu", nil)
 <p>You can check on previous imports by clicking <strong>Manage feed</strong> on the products page. Here you can see how many products Stripe has imported and inspect any errors that occurred while parsing. If the contents of your feed changed and you want to import the new feed immediately, you can click <strong>Import now</strong> to import right away.</p></section>
 
 <section>
-<h2 id="best-practices">Best practices</h2>
+<a id="best-practices" name="//apple_ref/cpp/Section/Best%20practices" class="dashAnchor"></a><h2 id="best-practices">Best practices</h2>
 
 <p>This section contains some recommendations to help you define and manage products effectively.</p>
 
@@ -3502,7 +3502,7 @@ ord, _ := order.Return("or_1Ce6vg2eZvKYlo2CcQtHtXdu", nil)
 </ul></section>
 
 <section>
-  <h2>Next steps</h2>
+  <a id="next-steps" name="//apple_ref/cpp/Section/Next%20steps" class="dashAnchor"></a><h2>Next steps</h2>
   <p>Congrats! You've gone through how to use the Orders API with products, SKUs and orders. Some things you might want to see next:</p>
 <ul class="next-steps">
     <li><a href="../api/index.html#products"><span>Products API docs</span></a></li>
@@ -3544,7 +3544,7 @@ ord, _ := order.Return("or_1Ce6vg2eZvKYlo2CcQtHtXdu", nil)
 
 
             </article>
-            <div class="docs-aside">
+            <div class="docs-aside" style="display: none;">
               <div class="docs-toc empty">
                 <h4>On this page</h4>
                 <ul class="docs-toc-list">

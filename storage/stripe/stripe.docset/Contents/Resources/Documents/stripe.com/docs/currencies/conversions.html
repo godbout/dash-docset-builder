@@ -180,7 +180,7 @@
   <body class="">
     
       <div id="docs">
-        <div id="sidebar">
+        <div id="sidebar" style="display: none;">
             
   <div class="logo">
     <a href="../recipes/switching-to-stripe.html" title="Stripe docs">
@@ -3008,7 +3008,7 @@
             <article id="content">
                 
   <header>
-  <h1>Currency conversions</h1>
+  <a name="//apple_ref/cpp/Section/Top" class="dashAnchor"></a><h1>Currency conversions</h1>
   <p>Learn more about how Stripe handles currency conversions for you.</p>
 </header>
 
@@ -3026,14 +3026,14 @@
 <p>When the <em>presentment</em> currency differs from your <em>settlement</em> currency&mdash;that accepted by any of your bank accounts or debit cards&mdash;we&rsquo;ll automatically convert the payment to your default settlement currency before transferring the funds.</p></section>
 
 <section>
-<h2 id="calculating-foreign-exchange-rates">Calculating foreign exchange rates</h2>
+<a id="calculating-foreign-exchange-rates" name="//apple_ref/cpp/Section/Calculating%20foreign%20exchange%20rates" class="dashAnchor"></a><h2 id="calculating-foreign-exchange-rates">Calculating foreign exchange rates</h2>
 
 <p>As currency prices constantly vary, it&rsquo;s not possible to know in advance the FX rate you&rsquo;ll pay. The rate displayed online at various sites such as <a href="https://openexchangerates.org/">Open Exchange Rates</a> is the <em>mid-market rate</em>: the average between the prices at which people are buying and selling the currency. The actual exchange rate includes markups from financial institutions. When Stripe performs a currency conversion, funds are usually converted for a small fee above the daily mid-market rate. You can see more details about pricing for currency conversion and international payments on <a href="https://stripe.com/pricing">our pricing page</a>.</p>
 
 <p>You can see the actual conversion for any particular charge in your <a href="https://dashboard.stripe.com/test/payments">Dashboard</a>.</p></section>
 
 <section>
-<h2 id="avoiding-currency-conversions">Avoiding currency conversions</h2>
+<a id="avoiding-currency-conversions" name="//apple_ref/cpp/Section/Avoiding%20currency%20conversions" class="dashAnchor"></a><h2 id="avoiding-currency-conversions">Avoiding currency conversions</h2>
 
 <p>Currency conversions occur at the time the charge is made.</p>
 
@@ -3046,7 +3046,7 @@
 <p>If you regularly charge in multiple currencies, you may be able to define <a href="../payouts.html#supported-accounts-and-settlement-currencies">multiple bank accounts</a> to support multiple settlement currencies and avoid conversions. Otherwise, you can only avoid currency conversions by charging in your default currency, although that could have a negative impact on your sales.</p></section>
 
 <section>
-<h2 id="conversions-on-disputes-and-refunds">Conversions on disputes and refunds</h2>
+<a id="conversions-on-disputes-and-refunds" name="//apple_ref/cpp/Section/Conversions%20on%20disputes%20and%20refunds" class="dashAnchor"></a><h2 id="conversions-on-disputes-and-refunds">Conversions on disputes and refunds</h2>
 
 <p>If a currency-converted payment is disputed or refunded, the amount you received is converted back to the presentment currency at the current rate. This fluctuates on a daily basis, so the rate used when a charge is converted often differs from the rate used when a dispute or refund occurs. The returned amount can be less&mdash;or more&mdash;than what the payment provided. Ultimately, a customer is always refunded the exact amount they paid and in the currency they paid in, regardless of the rate and cost to the Stripe user.</p>
 
@@ -3054,7 +3054,7 @@
 
 
 <section>
-  <h2>Further reading</h2>
+  <a id="further-reading" name="//apple_ref/cpp/Section/Further%20reading" class="dashAnchor"></a><h2>Further reading</h2>
   <p>Now that you've read about currency conversions at Stripe, you may want to check out:</p>
 <ul class="next-steps">
     <li><a href="../payouts.html"><span>Getting Paid</span></a></li>
@@ -3093,7 +3093,7 @@
 
 
             </article>
-            <div class="docs-aside">
+            <div class="docs-aside" style="display: none;">
               <div class="docs-toc empty">
                 <h4>On this page</h4>
                 <ul class="docs-toc-list">

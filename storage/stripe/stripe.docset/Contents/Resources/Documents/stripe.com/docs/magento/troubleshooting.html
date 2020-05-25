@@ -180,7 +180,7 @@
   <body class="">
     
       <div id="docs">
-        <div id="sidebar">
+        <div id="sidebar" style="display: none;">
             
   <div class="logo">
     <a href="../recipes/switching-to-stripe.html" title="Stripe docs">
@@ -3008,7 +3008,7 @@
             <article id="content">
                 
   <header>
-  <h1>Troubleshooting Magento</h1>
+  <a name="//apple_ref/cpp/Section/Top" class="dashAnchor"></a><h1>Troubleshooting Magento</h1>
   <p>Learn how to troubleshoot the Stripe <a href="../plugins/magento.html">Magento modules</a>.</p>
 </header>
 
@@ -3021,11 +3021,11 @@
   </nav>
   <div class="tabs-content">
     <div class="tabs-tab" id="magento2"><section>
-<h2 id="switching-to-developer-mode">Switching to developer mode</h2>
+<a id="switching-to-developer-mode" name="//apple_ref/cpp/Section/Switching%20to%20developer%20mode" class="dashAnchor"></a><h2 id="switching-to-developer-mode">Switching to developer mode</h2>
 
 <p>Before debugging any Magento 2 issue, you should <a href="https://devdocs.magento.com/guides/v2.0/config-guide/cli/config-cli-subcommands-mode.html">enable Magento&rsquo;s developer mode</a>, as it&rsquo;s hard to debug Magento 2 errors while in production mode.</p>
 
-<h2 id="error-logging">Error logging and server-side errors (HTTP 500)</h2>
+<a id="error-logging-and-server-side-errors-http-500" name="//apple_ref/cpp/Section/Error%20logging%20and%20server-side%20errors%20%28HTTP%20500%29" class="dashAnchor"></a><h2 id="error-logging">Error logging and server-side errors (HTTP 500)</h2>
 
 <p>Magento logs any errors and exceptions it encounters during application runtime in the <code>/var/log</code> directory. You can find these errors in the following two files:</p>
 
@@ -3074,7 +3074,7 @@ Terminal
 
 <p>If you don&rsquo;t have shell access, you can download this file and search for Stripe errors with a text editor.</p></section>
 <section>
-<h2 id="upgrades-and-caching-issues">Upgrades and caching issues</h2>
+<a id="upgrades-and-caching-issues" name="//apple_ref/cpp/Section/Upgrades%20and%20caching%20issues" class="dashAnchor"></a><h2 id="upgrades-and-caching-issues">Upgrades and caching issues</h2>
 
 <p>If you have upgraded the module but for some reason you don&rsquo;t see the new changes, you can manually clear the Magento 2 cache by deleting a set of directories. The official Magento documentation describes which directories to delete for <a href="https://devdocs.magento.com/guides/v2.2/howdoi/php/php_clear-dirs.html">Magento 2.2</a> and <a href="https://devdocs.magento.com/guides/v2.3/howdoi/php/php_clear-dirs.html">Magento 2.3</a>.</p>
 
@@ -3118,7 +3118,7 @@ Terminal
 
 <p>If you&rsquo;re running Varnish, you must also restart Varnish after deleting the var/cache/* files. Some browsers also cache Magento 2 requests; if you still have caching issues, try a different browser.</p></section>
 <section>
-<h2 id="unable-to-use-stripejs">Unable to use Stripe.js</h2>
+<a id="unable-to-use-stripejs" name="//apple_ref/cpp/Section/Unable%20to%20use%20Stripe.js" class="dashAnchor"></a><h2 id="unable-to-use-stripejs">Unable to use Stripe.js</h2>
 
 <p>This error message indicates that Stripe.js is not working correctly on the page that displayed this error. The most common reason for this error is another module that creates JavaScript errors; you should check for any other errors in the developer console of your browser.</p>
 
@@ -3144,7 +3144,7 @@ php bin/magento cache:clean
 
 <p>If the problem persists after attempting the steps above, please contact <a href="mailto:magento@stripe.com">magento@stripe.com</a> for further guidance.</p></section>
 <section>
-<h2 id="stuck-loading-a-spinner-on-the-checkout-page">Stuck loading a spinner on the checkout page</h2>
+<a id="stuck-loading-a-spinner-on-the-checkout-page" name="//apple_ref/cpp/Section/Stuck%20loading%20a%20spinner%20on%20the%20checkout%20page" class="dashAnchor"></a><h2 id="stuck-loading-a-spinner-on-the-checkout-page">Stuck loading a spinner on the checkout page</h2>
 <p>This usually occurs due to a server-side error. Server-side errors are included in the Magento log files under <code>/var/log</code> (see <a href="troubleshooting.html#error-logging">how to enable error logging</a>). If you enabled error logging and still can&rsquo;t see the error, you may find one the log files of your web server. If you&rsquo;re using a variant of <a href="https://php-fpm.org/">PHP-FPM</a>, make sure to also check the log files of your FastCGI backend.</p>
 
 <p>If the error is not logged in any of the above places, using the developer console of your browser. Under the <strong>Network</strong>  tab of the developer console you will see a red network request as shown in the screenshot below indicating a 500 error:</p>
@@ -3161,11 +3161,11 @@ php bin/magento cache:clean
 
 <p>The error may indicate the origin of the error, usually an incompatibility with another module that overrides some part of  the checkout process. You can disable modules by moving their XML configuration file from <code>/app/etc/modules/</code> into a different directory. Don&rsquo;t try to disable conflicting modules from the Magento Admin Panel, as it won&rsquo;t work.</p></section>
 <section>
-<h2 id="composer-authentication-required-repomagentocom">Composer authentication required (repo.magento.com)</h2>
+<a id="composer-authentication-required-repomagentocom" name="//apple_ref/cpp/Section/Composer%20authentication%20required%20%28repo.magento.com%29" class="dashAnchor"></a><h2 id="composer-authentication-required-repomagentocom">Composer authentication required (repo.magento.com)</h2>
 
 <p>If you are installing Composer for the first time, you may see this message in your console before installing the Stripe PHP library. You must provide your <a href="http://devdocs.magento.com/guides/v2.1/install-gde/prereq/connect-auth.html">Magento 2 marketplace keys</a>.</p></section>
 <section>
-<h2 id="failed-partial-and-corrupted-installations">Failed, partial, and corrupted installations</h2>
+<a id="failed-partial-and-corrupted-installations" name="//apple_ref/cpp/Section/Failed%2C%20partial%2C%20and%20corrupted%20installations" class="dashAnchor"></a><h2 id="failed-partial-and-corrupted-installations">Failed, partial, and corrupted installations</h2>
 
 <p>Some crashes at the checkout page or the Magento Admin Panel may be caused by a partial or corrupted installation, often the result of incorrect filesystem write permissions. To fix a corrupted installation:</p>
 
@@ -3207,7 +3207,7 @@ Terminal
   <li>Carefully follow the <a href="../plugins/magento/install.html">installation instructions</a>.</li>
 </ol></section>
 <section>
-<h2 id="the-apple-pay-button-does-not-appear">The Apple Pay button does not appear</h2>
+<a id="the-apple-pay-button-does-not-appear" name="//apple_ref/cpp/Section/The%20Apple%20Pay%20button%20does%20not%20appear" class="dashAnchor"></a><h2 id="the-apple-pay-button-does-not-appear">The Apple Pay button does not appear</h2>
 
 <p>Make sure you&rsquo;ve followed all steps in the <a href="../plugins/magento/configuration.html#payment-request-checklist">Apple Pay configuration checklist</a>. Some possible reasons for not seeing the Payment Request Button include:</p>
 
@@ -3245,11 +3245,11 @@ php bin/magento cache:clean
 
 </div></section>
 <section>
-<h2 id="order-stuck-with-the-pending-status">Order stuck with the <em>Pending</em> status</h2>
+<a id="order-stuck-with-the-pending-status" name="//apple_ref/cpp/Section/Order%20stuck%20with%20the%20Pending%20status" class="dashAnchor"></a><h2 id="order-stuck-with-the-pending-status">Order stuck with the <em>Pending</em> status</h2>
 
 <p>When an order is initially created, it will have a status of <em>Pending</em>, which indicates that the authorization of the payment by the customer&rsquo;s bank is still pending. For all redirect-based payment methods, when an authorization occurs, Stripe notifies your website using <a href="../webhooks.html">webhooks</a>. If your orders do not change from <em>Pending</em> to <em>Processing</em>, this may indicate that webhooks need to be <a href="../plugins/magento/configuration.html#webhooks">configured for your website</a>.</p></section>
 </div><div class="tabs-tab" id="magento1"><section>
-<h2 id="error-logging">Error logging and server-side errors (HTTP 500)</h2>
+<a id="error-logging-and-server-side-errors-http-500" name="//apple_ref/cpp/Section/Error%20logging%20and%20server-side%20errors%20%28HTTP%20500%29" class="dashAnchor"></a><h2 id="error-logging">Error logging and server-side errors (HTTP 500)</h2>
 
 <p>The module logs any problems during checkout in Magento&rsquo;s System Log file. To use this feature, enable logging from <strong>System &gt; Configuration &gt; Developer &gt; Log Settings</strong>.</p>
 
@@ -3311,7 +3311,7 @@ Terminal
 
 </div></section>
 <section>
-<h2 id="unable-to-use-stripejs">Unable to use Stripe.js</h2>
+<a id="unable-to-use-stripejs" name="//apple_ref/cpp/Section/Unable%20to%20use%20Stripe.js" class="dashAnchor"></a><h2 id="unable-to-use-stripejs">Unable to use Stripe.js</h2>
 
 <p>This error indicates that Stripe.js isn&rsquo;t working correctly on your checkout page. There are usually two common causes for this error:</p>
 
@@ -3320,7 +3320,7 @@ Terminal
   <li><strong>One Step Checkout modules:</strong> The Stripe Magento 1 module works with many OSC modules with no additional configuration required. Some OSC modules do require some extra steps to integrate.</li>
 </ol></section>
 <section>
-<h2 id="order-stuck-with-the-pending-status">Order stuck with the <em>Pending</em> status</h2>
+<a id="order-stuck-with-the-pending-status" name="//apple_ref/cpp/Section/Order%20stuck%20with%20the%20Pending%20status" class="dashAnchor"></a><h2 id="order-stuck-with-the-pending-status">Order stuck with the <em>Pending</em> status</h2>
 
 <p>Orders may get stuck with a <em>Pending</em> status (even if the payment was received) for a number of reasons:</p>
 
@@ -3369,7 +3369,7 @@ Terminal
 
 
             </article>
-            <div class="docs-aside">
+            <div class="docs-aside" style="display: none;">
               <div class="docs-toc empty">
                 <h4>On this page</h4>
                 <ul class="docs-toc-list">

@@ -180,7 +180,7 @@
   <body class="">
     
       <div id="docs">
-        <div id="sidebar">
+        <div id="sidebar" style="display: none;">
             
   <div class="logo">
     <a href="../recipes/switching-to-stripe.html" title="Stripe docs">
@@ -3008,7 +3008,7 @@
             <article id="content">
                 
   <header>
-  <h1>Connect OAuth reference</h1>
+  <a name="//apple_ref/cpp/Section/Top" class="dashAnchor"></a><h1>Connect OAuth reference</h1>
   <p>This reference lists available public methods for our OAuth endpoints for <a href="https://stripe.com/connect">Connect</a>.</p>
 </header>
 
@@ -3029,7 +3029,7 @@ The content on this page applies only to Standard and Express accounts.
   <p>As a platform, remember that&nbsp;data&nbsp;you create for a Standard account&nbsp;(i.e., charges, customers, invoices, etc.)&nbsp;will&nbsp;be visible on their Stripe account. This also means if they connect other platforms, those platforms will have access to&nbsp;that&nbsp;data too.</p>
 </aside>
 
-<h2 id="common-examples">Common examples</h2>
+<a id="common-examples" name="//apple_ref/cpp/Section/Common%20examples" class="dashAnchor"></a><h2 id="common-examples">Common examples</h2>
 
 <h3 id="prefill-fields">Prefill fields</h3>
 
@@ -3059,7 +3059,7 @@ The content on this page applies only to Standard and Express accounts.
 </section>
 
 <section>
-  <h2 id="get-authorize">Authorize the account</h2>
+  <a id="authorize-the-account" name="//apple_ref/cpp/Section/Authorize%20the%20account" class="dashAnchor"></a><h2 id="get-authorize">Authorize the account</h2>
 
   <p>For Standard accounts: GET https://connect.stripe.com/oauth/authorize</p>
 
@@ -3427,7 +3427,7 @@ The content on this page applies only to Standard and Express accounts.
 </section>
 
 <section>
-  <h2 id="post-token">Complete the connection and get the account ID</h2>
+  <a id="complete-the-connection-and-get-the-account-id" name="//apple_ref/cpp/Section/Complete%20the%20connection%20and%20get%20the%20account%20ID" class="dashAnchor"></a><h2 id="post-token">Complete the connection and get the account ID</h2>
 
   <p>POST https://connect.stripe.com/oauth/token</p>
 
@@ -3743,7 +3743,7 @@ connected_account_id = response.StripeUserId
 </section>
 
 <section>
-  <h2 id="post-deauthorize">Revoke the account's access</h2>
+  <a id="revoke-the-accounts-access" name="//apple_ref/cpp/Section/Revoke%20the%20account%27s%20access" class="dashAnchor"></a><h2 id="post-deauthorize">Revoke the account's access</h2>
 
   <p>POST https://connect.stripe.com/oauth/deauthorize</p>
 
@@ -3998,7 +3998,7 @@ service.Deauthorize(options);
 
 
             </article>
-            <div class="docs-aside">
+            <div class="docs-aside" style="display: none;">
               <div class="docs-toc empty">
                 <h4>On this page</h4>
                 <ul class="docs-toc-list">

@@ -209,7 +209,7 @@
   <body class="">
     
       <div id="docs">
-        <div id="sidebar">
+        <div id="sidebar" style="display: none;">
             
   <div class="logo">
     <a href="../../recipes/switching-to-stripe.html" title="Stripe docs">
@@ -3039,7 +3039,7 @@
   
 <header>
 
-  <h1 id="tax-rates">Tax rates</h1>
+  <a name="//apple_ref/cpp/Section/Top" class="dashAnchor"></a><h1 id="tax-rates">Tax rates</h1>
 
   <p>Learn how to collect and report taxes with <a href="../../api/tax_rates.html">Tax Rates</a>.</p>
 
@@ -3053,7 +3053,7 @@
 
 <section>
 
-  <h2 id="creating-tax-rates">Creating tax rates</h2>
+  <a id="creating-tax-rates" name="//apple_ref/cpp/Section/Creating%20tax%20rates" class="dashAnchor"></a><h2 id="creating-tax-rates">Creating tax rates</h2>
 
   <p>If you&rsquo;re working with a small number of tax rates, it&rsquo;s often simpler to use the <a href="https://dashboard.stripe.com/test/billing/tax-rates">Dashboard</a> to create and manage them. After creating tax rates, you can apply them to <a href="../invoices/tax-rates.html">invoices</a> and <a href="../subscriptions/taxes.html">subscriptions</a>.</p>
 
@@ -3219,7 +3219,7 @@ They are not exposed to your customers.</p>
 
 <section>
 
-  <h2 id="inclusive-vs-exclusive-tax">Inclusive vs exclusive Tax</h2>
+  <a id="inclusive-vs-exclusive-tax" name="//apple_ref/cpp/Section/Inclusive%20vs%20exclusive%20Tax" class="dashAnchor"></a><h2 id="inclusive-vs-exclusive-tax">Inclusive vs exclusive Tax</h2>
 
   <p>Tax rates can either be exclusive or inclusive.
 An <em>exclusive</em> tax is not included in the invoice subtotal, whereas an <em>inclusive</em> tax is.</p>
@@ -3251,7 +3251,7 @@ An <em>exclusive</em> tax is not included in the invoice subtotal, whereas an <e
     </tbody>
   </table>
 
-  <h2 id="tax-exempt-and-reverse-charge">Tax Exempt and Reverse Charge</h2>
+  <a id="tax-exempt-and-reverse-charge" name="//apple_ref/cpp/Section/Tax%20Exempt%20and%20Reverse%20Charge" class="dashAnchor"></a><h2 id="tax-exempt-and-reverse-charge">Tax Exempt and Reverse Charge</h2>
 
   <p>A Customer&rsquo;s <a href="../../api/customers/object.html#customer_object-tax_exempt">exemption status</a> can be set to either <code>exempt</code> or <code>reverse</code>.</p>
 
@@ -3269,7 +3269,7 @@ An <em>exclusive</em> tax is not included in the invoice subtotal, whereas an <e
 
 <section>
 
-  <h2 id="using-multiple-tax-rates">Using multiple tax rates</h2>
+  <a id="using-multiple-tax-rates" name="//apple_ref/cpp/Section/Using%20multiple%20tax%20rates" class="dashAnchor"></a><h2 id="using-multiple-tax-rates">Using multiple tax rates</h2>
 
   <p>Tax rates can be applied to line items, or set as a default for all line items within an invoice.
 Up to five tax rates can be set per line item.
@@ -3312,7 +3312,7 @@ When tax rates are set on both a line item and the invoice, the invoice&rsquo;s 
 
 <section>
 
-  <h2 id="tax-amounts">Tax amounts</h2>
+  <a id="tax-amounts" name="//apple_ref/cpp/Section/Tax%20amounts" class="dashAnchor"></a><h2 id="tax-amounts">Tax amounts</h2>
 
   <p>When tax rates are applied to an invoice, they are aggregated into the <a href="../../api/invoices/object.html#invoice_object-total_tax_amounts">total_tax_amounts</a> attribute.
 This attribute represents the sum of all tax amounts, per tax rate, over the entire invoice.</p>
@@ -3373,7 +3373,7 @@ This attribute represents the sum of all tax amounts, per tax rate, over the ent
 
 <section>
 
-  <h2 id="rounding">Rounding</h2>
+  <a id="rounding" name="//apple_ref/cpp/Section/Rounding" class="dashAnchor"></a><h2 id="rounding">Rounding</h2>
 
   <p>When determining tax amounts, Stripe rounds at the invoice item level to the <a href="../../currencies.html#zero-decimal">smallest currency unit</a> before summing across the entire invoice.</p>
 
@@ -3446,7 +3446,7 @@ This attribute represents the sum of all tax amounts, per tax rate, over the ent
 
 <section>
 
-  <h2 id="discounts">Discounts</h2>
+  <a id="discounts" name="//apple_ref/cpp/Section/Discounts" class="dashAnchor"></a><h2 id="discounts">Discounts</h2>
 
   <p>Discounts are usually applied before tax.
 However, this is occasionally not the case.</p>
@@ -3688,7 +3688,7 @@ This reduction has the side effect of reducing the tax amount due.</p>
 
 <section>
 
-  <h2 id="remittance">Tax reporting and remittance</h2>
+  <a id="tax-reporting-and-remittance" name="//apple_ref/cpp/Section/Tax%20reporting%20and%20remittance" class="dashAnchor"></a><h2 id="remittance">Tax reporting and remittance</h2>
 
   <p>Any business collecting taxes will ultimately need to remit tax to the appropriate government.</p>
 
@@ -3741,7 +3741,7 @@ To factor in any refunds you will also need to pivot against the Invoice export.
 
 
             </article>
-            <div class="docs-aside">
+            <div class="docs-aside" style="display: none;">
               <div class="docs-toc empty">
                 <h4>On this page</h4>
                 <ul class="docs-toc-list">

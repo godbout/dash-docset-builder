@@ -181,7 +181,7 @@
   <body class="">
     
       <div id="docs">
-        <div id="sidebar">
+        <div id="sidebar" style="display: none;">
             
   <div class="logo">
     <a href="../recipes/switching-to-stripe.html" title="Stripe docs">
@@ -3012,7 +3012,7 @@
 
 
 <header>
-  <h1>Triggering actions with webhooks</h1>
+  <a name="//apple_ref/cpp/Section/Top" class="dashAnchor"></a><h1>Triggering actions with webhooks</h1>
   <p>How to use webhooks to respond to offline payment events.</p>
 </header>
 
@@ -3028,12 +3028,12 @@
 
 <p>While the Dashboard is great to use for one-off actions like refunding a payment or updating a customer&rsquo;s information, webhooks are essential when it comes to scaling your payments integration by helping you process large volumes of business-critical events.</p>
 
-<h2 id="build-your-own-webhook">Build your own webhook</h2>
+<a id="build-your-own-webhook" name="//apple_ref/cpp/Section/Build%20your%20own%20webhook" class="dashAnchor"></a><h2 id="build-your-own-webhook">Build your own webhook</h2>
 
 <p style="margin-bottom: 17px;">You can build a webhook handler on your own server to manage all your offline payment flows. Start by exposing an endpoint that can receive requests from Stripe and use the CLI to locally test your integration. Each request from Stripe contains an <a href="../api/events/object.html">Event</a> object with a reference to the object on Stripe that was modified.</p>
 <div class="expando" aria-expanded="true">
   <a id="create-webhook" href="handling-payment-events.html#create-webhook" class="expando-trigger">
-    <h2 class="expando-title" data-no-anchor data-custom-toc-title="Create a webhook endpoint">
+    <a id="1-create-a-webhook-endpoint" name="//apple_ref/cpp/Section/1%20Create%20a%20webhook%20endpoint" class="dashAnchor"></a><h2 class="expando-title" data-no-anchor data-custom-toc-title="Create a webhook endpoint">
         <span class="expando-left-text">1</span>
       Create a webhook endpoint
     </h2>
@@ -3409,7 +3409,7 @@ namespace workspace.Controllers
 
 <div class="expando" aria-expanded="true">
   <a id="install-cli" href="handling-payment-events.html#install-cli" class="expando-trigger">
-    <h2 class="expando-title" data-no-anchor data-custom-toc-title="Install and set up the Stripe CLI">
+    <a id="2-install-and-set-up-the-stripe-cli" name="//apple_ref/cpp/Section/2%20Install%20and%20set%20up%20the%20Stripe%20CLI" class="dashAnchor"></a><h2 class="expando-title" data-no-anchor data-custom-toc-title="Install and set up the Stripe CLI">
         <span class="expando-left-text">2</span>
       Install and set up the Stripe CLI
     </h2>
@@ -3682,7 +3682,7 @@ Press Enter to open up the browser (^C to quit)
 </div>
 <div class="expando" aria-expanded="true">
   <a id="use-cli" href="handling-payment-events.html#use-cli" class="expando-trigger">
-    <h2 class="expando-title" data-no-anchor data-custom-toc-title="Test your webhook locally">
+    <a id="3-test-your-webhook-locally" name="//apple_ref/cpp/Section/3%20Test%20your%20webhook%20locally" class="dashAnchor"></a><h2 class="expando-title" data-no-anchor data-custom-toc-title="Test your webhook locally">
         <span class="expando-left-text">3</span>
       Test your webhook locally
     </h2>
@@ -3750,7 +3750,7 @@ Terminal
 
 <div class="expando" aria-expanded="true">
   <a id="signature-checking" href="handling-payment-events.html#signature-checking" class="expando-trigger">
-    <h2 class="expando-title" data-no-anchor data-custom-toc-title="Check webhook signature">
+    <a id="optional-check-webhook-signature" name="//apple_ref/cpp/Section/Optional%20Check%20webhook%20signature" class="dashAnchor"></a><h2 class="expando-title" data-no-anchor data-custom-toc-title="Check webhook signature">
         <span class="expando-left-text">Optional</span>
       Check webhook signature
     </h2>
@@ -4201,7 +4201,7 @@ namespace workspace.Controllers
 
 <div class="expando" aria-expanded="true">
   <a id="deploy-endpoint" href="handling-payment-events.html#deploy-endpoint" class="expando-trigger">
-    <h2 class="expando-title" data-no-anchor data-custom-toc-title="Deploy your webhook endpoint">
+    <a id="4-deploy-your-webhook-endpoint" name="//apple_ref/cpp/Section/4%20Deploy%20your%20webhook%20endpoint" class="dashAnchor"></a><h2 class="expando-title" data-no-anchor data-custom-toc-title="Deploy your webhook endpoint">
         <span class="expando-left-text">4</span>
       Deploy your webhook endpoint
     </h2>
@@ -4292,7 +4292,7 @@ namespace workspace.Controllers
 
 
             </article>
-            <div class="docs-aside">
+            <div class="docs-aside" style="display: none;">
               <div class="docs-toc empty">
                 <h4>On this page</h4>
                 <ul class="docs-toc-list">

@@ -180,7 +180,7 @@
   <body class="">
     
       <div id="docs">
-        <div id="sidebar">
+        <div id="sidebar" style="display: none;">
             
   <div class="logo">
     <a href="../../recipes/switching-to-stripe.html" title="Stripe docs">
@@ -3008,7 +3008,7 @@
             <article id="content">
                 
   <header>
-  <h1>Advanced fraud detection</h1>
+  <a name="//apple_ref/cpp/Section/Top" class="dashAnchor"></a><h1>Advanced fraud detection</h1>
   <p>Learn how to maximize Stripe's ability to protect you against disputes and fraudulent payments.</p>
 </header>
 
@@ -3023,7 +3023,7 @@
 </section>
 
 <section>
-<h2 id="types-of-signals">Types of signals</h2>
+<a id="types-of-signals" name="//apple_ref/cpp/Section/Types%20of%20signals" class="dashAnchor"></a><h2 id="types-of-signals">Types of signals</h2>
 
 <h3 id="device-characteristics">Device characteristics</h3>
 <p>Device characteristics are signals about a customer&rsquo;s browser, screen, or device. They help Stripe identify configurations consistent with anomalous browsing behavior, as well as compare this behavior to similar patterns observed across other businesses on Stripe&rsquo;s network. Combinations of these parameters that are rare or unlikely to reflect a real user&rsquo;s computing environment can expose fraudulent transactions.</p>
@@ -3034,7 +3034,7 @@
 <p>Stripe doesn&rsquo;t gather any data about the contents of the page outside of Stripe Elements (e.g., credit card input fields). Signals corresponding to user activity are scoped to a single shopping session on a single site or app and are not linked across different shopping sessions, sites, or apps.</p></section>
 
 <section>
-<h2 id="when-signals-are-collected">When signals are collected</h2>
+<a id="when-signals-are-collected" name="//apple_ref/cpp/Section/When%20signals%20are%20collected" class="dashAnchor"></a><h2 id="when-signals-are-collected">When signals are collected</h2>
 <p>The more activity Stripe&rsquo;s fraud engines can observe, the better Stripe&rsquo;s fraud prevention will be. Stripe therefore encourages including Stripe.js on every page of the shopping experience, not just the checkout page. This level of Stripe.js coverage gives Stripe the richest possible set of such signals to distinguish fraudulent purchasers from real customers.</p>
 
 <p>If Stripe.js isn&rsquo;t used at all, the business must take on the full responsibility of PCI compliance, and additional fraud risk.</p>
@@ -3042,13 +3042,13 @@
 <p>The iOS and Android SDK collect advanced fraud detection signals for an app when the SDK object is instantiated. The data is only transmitted to Stripe during a tokenization request.</p></section>
 
 <section>
-<h2 id="data-privacy">Data privacy</h2>
+<a id="data-privacy" name="//apple_ref/cpp/Section/Data%20privacy" class="dashAnchor"></a><h2 id="data-privacy">Data privacy</h2>
 <p>This advanced fraud detection signal data is never used for advertising and won&rsquo;t be rented, sold, or given to advertisers, as outlined in our <a href="https://stripe.com/privacy">privacy policy</a>. Stripe only uses this data for fraud detection and security purposes, and retains it for as long as it&rsquo;s useful for the purposes of fraud detection and security.</p>
 
 <p>Internally, this data is subject to strict access control policies enforced by Stripe, and restricted to a small number of Stripe employees working on fraud prevention and security.</p></section>
 
 <section>
-<h2 id="disabling-advanced-fraud-detection">Disabling advanced fraud detection</h2>
+<a id="disabling-advanced-fraud-detection" name="//apple_ref/cpp/Section/Disabling%20advanced%20fraud%20detection" class="dashAnchor"></a><h2 id="disabling-advanced-fraud-detection">Disabling advanced fraud detection</h2>
 <p>Stripe users can decide to disable the collection of advanced fraud detection signals on their own websites and apps. Doing so increases their risk of fraud, especially <a href="../../card-testing.html">card testing</a>. Stripe will continue to collect fraud detection signals on Stripe domains, like on <a href="../../checkout.html">Stripe Checkout</a> payment pages.</p>
 
 <p>Additionally, disabling advanced fraud detection doesn&rsquo;t affect the collection of events logged when a customer interacts with Stripe-managed fields in your checkout page (we use these events to prevent fraud and make sure Stripe Elements is working) nor basic device information collected during 3D Secure 2 authentication (we&rsquo;re required to send this information to the issuing bank for their risk analysis).</p>
@@ -3202,7 +3202,7 @@ Stripe.setAdvancedFraudSignalsEnabled(false)
 
 
             </article>
-            <div class="docs-aside">
+            <div class="docs-aside" style="display: none;">
               <div class="docs-toc empty">
                 <h4>On this page</h4>
                 <ul class="docs-toc-list">

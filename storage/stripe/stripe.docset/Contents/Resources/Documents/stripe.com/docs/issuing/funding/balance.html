@@ -180,7 +180,7 @@
   <body class="">
     
       <div id="docs">
-        <div id="sidebar">
+        <div id="sidebar" style="display: none;">
             
   <div class="logo">
     <a href="../../recipes/switching-to-stripe.html" title="Stripe docs">
@@ -3008,7 +3008,7 @@
             <article id="content">
                 
   <header>
-  <h1>Issuing balance</h1>
+  <a name="//apple_ref/cpp/Section/Top" class="dashAnchor"></a><h1>Issuing balance</h1>
   <p>Learn how to make funds available to your cards.</p>
 </header>
 
@@ -3016,7 +3016,7 @@
 <p>To spend money using cards, add funds to the Issuing balance on your account. This balance represents funds reserved for Issuing, and is safely separated from your earnings, payouts, and funds from other Stripe products.</p></section>
 
 <section>
-<h2 id="top-up-from-the-dashboard">Top up from the dashboard</h2>
+<a id="top-up-from-the-dashboard" name="//apple_ref/cpp/Section/Top%20up%20from%20the%20dashboard" class="dashAnchor"></a><h2 id="top-up-from-the-dashboard">Top up from the dashboard</h2>
 
 <p>Fund your Issuing balance from your <a href="https://dashboard.stripe.com/balance/overview#issuing-summary">Dashboard</a> with the <strong>Top up Issuing balance</strong> button.</p>
 
@@ -3026,7 +3026,7 @@
   </a></p>
 </div>
 
-<h2 id="top-up-from-the-api">Top up from the API</h2>
+<a id="top-up-from-the-api" name="//apple_ref/cpp/Section/Top%20up%20from%20the%20API" class="dashAnchor"></a><h2 id="top-up-from-the-api">Top up from the API</h2>
 <p>To create a new top-up, use the <a href="../../api/topups/create.html">create top-up</a> endpoint.</p>
 <div class="tabs tabs-code animated" data-callback="codeTabsChanged">
 <nav class="nav-languages has-copy-btn">
@@ -3184,7 +3184,7 @@ service.Create(options);
 <p>Top-ups debit your bank account and take a few days to become available. While they&rsquo;re pending, they won&rsquo;t be added to your Issuing Balance.</p></section>
 
 <section>
-<h2 id="track-your-issuing-balance">Track your Issuing Balance</h2>
+<a id="track-your-issuing-balance" name="//apple_ref/cpp/Section/Track%20your%20Issuing%20Balance" class="dashAnchor"></a><h2 id="track-your-issuing-balance">Track your Issuing Balance</h2>
 
 <p>View your Issuing funds from your <a href="https://dashboard.stripe.com/balance/overview#issuing-summary">balances dashboard</a>.</p>
 
@@ -3330,7 +3330,7 @@ Balance balance = service.Get();
 </section>
 
 <section>
-<h2 id="pay-out-your-issuing-balance">Pay out your Issuing Balance</h2>
+<a id="pay-out-your-issuing-balance" name="//apple_ref/cpp/Section/Pay%20out%20your%20Issuing%20Balance" class="dashAnchor"></a><h2 id="pay-out-your-issuing-balance">Pay out your Issuing Balance</h2>
 
 <p>To pay out your available Issuing funds, use the <a href="../../api/payouts/create.html">create payout</a> endpoint and set the <code>source_balance</code> of the payout to <code>issuing</code>.</p>
 <div class="tabs tabs-code animated" data-callback="codeTabsChanged">
@@ -3503,7 +3503,7 @@ var payout = service.Create(options);
 
 
             </article>
-            <div class="docs-aside">
+            <div class="docs-aside" style="display: none;">
               <div class="docs-toc empty">
                 <h4>On this page</h4>
                 <ul class="docs-toc-list">

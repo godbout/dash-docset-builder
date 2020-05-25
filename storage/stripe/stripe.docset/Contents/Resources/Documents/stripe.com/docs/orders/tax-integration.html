@@ -180,7 +180,7 @@
   <body class="">
     
       <div id="docs">
-        <div id="sidebar">
+        <div id="sidebar" style="display: none;">
             
   <div class="logo">
     <a href="../recipes/switching-to-stripe.html" title="Stripe docs">
@@ -3008,7 +3008,7 @@
             <article id="content">
                 
   <header>
-  <h1>Automated tax calculations <span class="warning tag">Deprecated</span></h1>
+  <a name="//apple_ref/cpp/Section/Top" class="dashAnchor"></a><h1>Automated tax calculations <span class="warning tag">Deprecated</span></h1>
   <p>Use a tax provider to automatically calculate the taxes due on your Stripe orders.</p>
 
   <aside class="important red">
@@ -3024,12 +3024,12 @@
 <p>To enable dynamic tax calculations for your orders, follow our guides to get started with <a href="avalara.html">Avalara</a>, <a href="taxjar.html">TaxJar</a>, or <a href="taxamo.html">Taxamo</a>. You can optionally read on below to learn <a href="tax-integration.html#how-it-works">how the integration works</a>. If you sell a range of products with different tax implications, see how to use <a href="tax-integration.html#tax-codes">tax codes</a>. If you also sell directly to businesses and need to factor in value-added tax (VAT), Stripe <a href="tax-integration.html#vat">supports that, too</a>.</p></section>
 
 <section>
-<h2 id="how-it-works">How the integration works</h2>
+<a id="how-the-integration-works" name="//apple_ref/cpp/Section/How%20the%20integration%20works" class="dashAnchor"></a><h2 id="how-it-works">How the integration works</h2>
 
 <p>The Orders API tax provider integrations automatically manage everything necessary to compute and commit tax quotes for your orders. To help explain how the integration functions, read the high-level and technical overviews below. (The latter is intended for developers.)</p></section>
 
 <section>
-<h2 id="high-level-overview">High-level overview</h2>
+<a id="high-level-overview" name="//apple_ref/cpp/Section/High-level%20overview" class="dashAnchor"></a><h2 id="high-level-overview">High-level overview</h2>
 
 <p>When you create an order using the Orders API, Stripe programmatically sends the details to your preferred tax provider:</p>
 
@@ -3046,7 +3046,7 @@
 <p>Should an order later be returned or canceled, Stripe automatically voids the transactions with the provider to help you keep your tax reports accurate. The integration works seamlessly both when an order is fully or partially returned.</p></section>
 
 <section>
-<h2 id="technical-overview">Technical overview</h2>
+<a id="technical-overview" name="//apple_ref/cpp/Section/Technical%20overview" class="dashAnchor"></a><h2 id="technical-overview">Technical overview</h2>
 
 <p>Looking at the process from a more technical perspective, once you set up your tax provider integration, you should automatically see <code>tax</code> items in your order&rsquo;s <code>items</code> array. For example, the following request creates an order shippable to a U.S. address:</p>
 <div class="tabs tabs-code animated" data-callback="codeTabsChanged" data-platform="server">
@@ -3338,7 +3338,7 @@ Order order = service.Create(options);
 </section>
 
 <section>
-<h2 id="tax-codes">Setting up product tax codes</h2>
+<a id="setting-up-product-tax-codes" name="//apple_ref/cpp/Section/Setting%20up%20product%20tax%20codes" class="dashAnchor"></a><h2 id="tax-codes">Setting up product tax codes</h2>
 
 <p>Some jurisdictions apply different tax policies to different product types, such as food and clothing. With Stripe&rsquo;s tax provider integration, appropriate taxes can be calculated on your products that have exclusions or varying tax rates.</p>
 
@@ -3474,7 +3474,7 @@ var product = service.Update("pr_1GmdJb2eZvKYlo2C3PBlBdod", options);
 </section>
 
 <section>
-<h2 id="vat">Including VAT</h2>
+<a id="including-vat" name="//apple_ref/cpp/Section/Including%20VAT" class="dashAnchor"></a><h2 id="vat">Including VAT</h2>
 
 <p>The Orders API also supports VAT for business-to-business transactions. Merely set a VAT ID on the Stripe <code>Customer</code> object and then use that customer for an order. This request adds a VAT ID to an existing customer:</p>
 <div class="tabs tabs-code animated" data-callback="codeTabsChanged" data-platform="server">
@@ -3626,7 +3626,7 @@ Customer customer = service.Update("cu_1Gmcij2eZvKYlo2CaUgwDUsi", options);
 
 
             </article>
-            <div class="docs-aside">
+            <div class="docs-aside" style="display: none;">
               <div class="docs-toc empty">
                 <h4>On this page</h4>
                 <ul class="docs-toc-list">

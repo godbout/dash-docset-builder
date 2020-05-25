@@ -180,7 +180,7 @@
   <body class="">
     
       <div id="docs">
-        <div id="sidebar">
+        <div id="sidebar" style="display: none;">
             
   <div class="logo">
     <a href="../../recipes/switching-to-stripe.html" title="Stripe docs">
@@ -3008,7 +3008,7 @@
             <article id="content">
                 
   <header>
-  <h1 id="stripe-connect-and-the-charges-api">Stripe Connect and the Charges API</h1>
+  <a name="//apple_ref/cpp/Section/Top" class="dashAnchor"></a><h1 id="stripe-connect-and-the-charges-api">Stripe Connect and the Charges API</h1>
 
   <p>Learn how <a href="../../connect.html">Connect</a> lets you make charges and issue transfers for connected accounts. Stripe fees are determined by how you configure these options.</p>
 
@@ -3027,7 +3027,7 @@
 
 <section>
 
-  <h2 id="direct-charges">Direct charges</h2>
+  <a id="direct-charges" name="//apple_ref/cpp/Section/Direct%20charges" class="dashAnchor"></a><h2 id="direct-charges">Direct charges</h2>
 
   <p>To create a direct charge on the connected account, create a Charge object and add the <code>Stripe-Account</code> header with a value of the connected account ID:</p>
 
@@ -3327,7 +3327,7 @@ service.Create(createOptions, requestOptions);
 
 <section>
 
-  <h2 id="destination-charges">Destination charges</h2>
+  <a id="destination-charges" name="//apple_ref/cpp/Section/Destination%20charges" class="dashAnchor"></a><h2 id="destination-charges">Destination charges</h2>
 
   <p>To create a destination charge, specify the ID of the connected account that should receive the funds as the value of the <code>transfer_data[destination]</code> parameter:</p>
 
@@ -3818,7 +3818,7 @@ service.Create(createOptions);
 
 <section>
 
-  <h2 id="separate-charges-and-transfers">Separate charges and transfers</h2>
+  <a id="separate-charges-and-transfers" name="//apple_ref/cpp/Section/Separate%20charges%20and%20transfers" class="dashAnchor"></a><h2 id="separate-charges-and-transfers">Separate charges and transfers</h2>
 
   <aside class="important amber">
     <p>Separate charges and transfers are supported only if both your platform and the connected account are in the same region: for example, both in Europe or both in the U.S.</p>
@@ -4297,7 +4297,7 @@ service.Create(createOptions);
 
 
             </article>
-            <div class="docs-aside">
+            <div class="docs-aside" style="display: none;">
               <div class="docs-toc empty">
                 <h4>On this page</h4>
                 <ul class="docs-toc-list">

@@ -180,7 +180,7 @@
   <body class="">
     
       <div id="docs">
-        <div id="sidebar">
+        <div id="sidebar" style="display: none;">
             
   <div class="logo">
     <a href="../recipes/switching-to-stripe.html" title="Stripe docs">
@@ -3008,7 +3008,7 @@
             <article id="content">
                 
   <header>
-  <h1>Working with multiple currencies</h1>
+  <a name="//apple_ref/cpp/Section/Top" class="dashAnchor"></a><h1>Working with multiple currencies</h1>
   <p>Better understand working with multiple currencies when using <a href="https://stripe.com/connect">Connect</a>.</p>
 </header>
 
@@ -3034,7 +3034,7 @@
 <p>Supported <em>settlement</em> currencies can be found in our <a href="payouts.html#supported-settlement">payouts</a> documentation. Supported <em>presentment</em> currencies can be found in the <a href="../currencies.html">currencies</a> documentation.</p></section>
 
 <section>
-<h2 id="currency-conversions">Currency conversions</h2>  <aside class="note">
+<a id="currency-conversions" name="//apple_ref/cpp/Section/Currency%20conversions" class="dashAnchor"></a><h2 id="currency-conversions">Currency conversions</h2>  <aside class="note">
     <h3>Using on_behalf_of</h3>
     <p>Another way to avoid currency conversions when performing separate charges and transfers is to use the <a href="charges-transfers.html#on-behalf-of">on_behalf_of</a> parameter.</p>
   </aside>
@@ -3053,7 +3053,7 @@
 <p><a href="../currencies/conversions.html">Currency conversions</a> always use the current exchange rates provided by our banking partners, with an additional conversion fee also applied by Stripe. There are a number of online resources for conversion calculation, such as <a href="https://openexchangerates.org/">Open Exchange Rates</a>, that can help you estimate current market rates. However, these numbers can fluctuate and they may not reflect Stripe&rsquo;s rates at the time a payment is processed.</p></section>
 
 <section>
-<h2 id="application-fees">Application fees</h2>
+<a id="application-fees" name="//apple_ref/cpp/Section/Application%20fees" class="dashAnchor"></a><h2 id="application-fees">Application fees</h2>
 
 <p>Connect supports taking <a href="../api/index.html#application_fees">application fees</a> on <a href="direct-charges.html">direct charges</a>. Although the connected account controls the charge itself (and the currency used), the application fee has its own behavior:</p>
 
@@ -3067,7 +3067,7 @@
 <p>If your platform doesn&rsquo;t use application fees but retains a portion of its charges instead, those funds are paid out and converted, or not converted, exactly the same way as any other charge on the platform account.</p></section>
 
 <section>
-<h2 id="converting-balances">Converting balances</h2>
+<a id="converting-balances" name="//apple_ref/cpp/Section/Converting%20balances" class="dashAnchor"></a><h2 id="converting-balances">Converting balances</h2>
 
 <p>When using <a href="destination-charges.html">destination charges</a>, application fees are not converted; your platform always receives application fees in the connected account&rsquo;s <em>settlement</em> currency. However, we recommend that platforms not use application fees for destination charges but rather transfer less of the charge amount to the connected account using the <code>destination[amount]</code> parameter.</p>
 
@@ -3202,7 +3202,7 @@ currency, Stripe automatically converts the funds to the default
 bank account&rsquo;s currency.</p></section>
 
 <section>
-<h2 id="example-scenarios">Example scenarios</h2>
+<a id="example-scenarios" name="//apple_ref/cpp/Section/Example%20scenarios" class="dashAnchor"></a><h2 id="example-scenarios">Example scenarios</h2>
 
 <p>To better understand working with multiple currencies in Connect, consider the following three scenarios:</p>
   <dl>
@@ -3234,7 +3234,7 @@ bank account&rsquo;s currency.</p></section>
 </section>
 
 <section>
-  <h2>Further reading</h2>
+  <a id="further-reading" name="//apple_ref/cpp/Section/Further%20reading" class="dashAnchor"></a><h2>Further reading</h2>
   <p>Discover what other Connect functionality is available!</p>
 <ul class="next-steps">
     <li><a href="charges.html"><span>Creating Charges</span></a></li>
@@ -3276,7 +3276,7 @@ bank account&rsquo;s currency.</p></section>
 
 
             </article>
-            <div class="docs-aside">
+            <div class="docs-aside" style="display: none;">
               <div class="docs-toc empty">
                 <h4>On this page</h4>
                 <ul class="docs-toc-list">

@@ -180,7 +180,7 @@
   <body class="">
     
       <div id="docs">
-        <div id="sidebar">
+        <div id="sidebar" style="display: none;">
             
   <div class="logo">
     <a href="../recipes/switching-to-stripe.html" title="Stripe docs">
@@ -3008,7 +3008,7 @@
             <article id="content">
                 
   <header>
-  <h1>Build a webhook endpoint</h1>
+  <a name="//apple_ref/cpp/Section/Top" class="dashAnchor"></a><h1>Build a webhook endpoint</h1>
   <p>Write the code that properly handles webhook notifications.</p>
 </header>
 
@@ -3017,7 +3017,7 @@
 
 <p>Before looking at the code, there are several key considerations regardless of the technology involved. You should also review the <a href="best-practices.html">best practices for using webhooks</a>.</p>
 
-<h2 id="key-considerations">Key considerations</h2>
+<a id="key-considerations" name="//apple_ref/cpp/Section/Key%20considerations" class="dashAnchor"></a><h2 id="key-considerations">Key considerations</h2>
 
 <p>For each event occurrence, Stripe POSTs the webhook data to your endpoint in JSON format. The full event details are included and can be used directly after parsing the JSON into an <code>Event</code> object. Thus, at minimum, the webhook endpoint needs to expect data through a POST request and confirm successful receipt of that data. Beyond those two concepts, you should also&hellip;</p>
 
@@ -3049,7 +3049,7 @@
   <p>The majority of webhook issues result in <code>4xx</code> and <code>5xx</code> HTTP status codes. <code>4xx</code> indicates Stripe was able to contact your server, but the endpoint was not valid. Double-check that the endpoint URL is correct and able to receive POST requests. <code>5xx</code> usually indicates an exception on your server was not handled properly.</p>
 </aside>
 
-<h2 id="example-code">Example code</h2>
+<a id="example-code" name="//apple_ref/cpp/Section/Example%20code" class="dashAnchor"></a><h2 id="example-code">Example code</h2>
 <div class="tabs tabs-code animated" data-callback="codeTabsChanged">
 <nav class="nav-languages has-copy-btn">
 <div>
@@ -3382,7 +3382,7 @@ namespace workspace.Controllers
 </section>
 
 <section>
-  <h2 id="next_steps">Next steps</h2>
+  <a id="next-steps" name="//apple_ref/cpp/Section/Next%20steps" class="dashAnchor"></a><h2 id="next_steps">Next steps</h2>
 <ul class="next-steps">
     <li><a href="test.html"><span>Test a webhook endpoint</span></a></li>
     <li><a href="signatures.html"><span>Check the webhook signatures</span></a></li>
@@ -3421,7 +3421,7 @@ namespace workspace.Controllers
 
 
             </article>
-            <div class="docs-aside">
+            <div class="docs-aside" style="display: none;">
               <div class="docs-toc empty">
                 <h4>On this page</h4>
                 <ul class="docs-toc-list">

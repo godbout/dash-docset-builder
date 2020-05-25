@@ -180,7 +180,7 @@
   <body class="">
     
       <div id="docs">
-        <div id="sidebar">
+        <div id="sidebar" style="display: none;">
             
   <div class="logo">
     <a href="../../recipes/switching-to-stripe.html" title="Stripe docs">
@@ -3008,7 +3008,7 @@
             <article id="content">
                 
   <header>
-  <h1 id="setting-the-subscription-billing-cycle-date">Setting the subscription billing cycle date</h1>
+  <a name="//apple_ref/cpp/Section/Top" class="dashAnchor"></a><h1 id="setting-the-subscription-billing-cycle-date">Setting the subscription billing cycle date</h1>
 
   <p>Subscriptions are billed on a cycle, learn how to set the billing date.</p>
 </header>
@@ -3028,7 +3028,7 @@ For example, a subscription starting on January 31 bills on February 28 (or Febr
 </section>
 
 <section>
-  <h2 id="new-subscriptions">Specifying the billing cycle anchor when creating new subscriptions</h2>
+  <a id="specifying-the-billing-cycle-anchor-when-creating-new-subscriptions" name="//apple_ref/cpp/Section/Specifying%20the%20billing%20cycle%20anchor%20when%20creating%20new%20subscriptions" class="dashAnchor"></a><h2 id="new-subscriptions">Specifying the billing cycle anchor when creating new subscriptions</h2>
 
   <p>When creating new subscriptions, you can configure their billing cycle anchor to fixed dates (for example, the 1st of the next month).</p>
 
@@ -3196,7 +3196,7 @@ Unlike a trial, there is no $0 invoice.</p>
 </section>
 
 <section>
-  <h2 id="changing">Changing the billing cycle on pre-existing subscriptions</h2>
+  <a id="changing-the-billing-cycle-on-pre-existing-subscriptions" name="//apple_ref/cpp/Section/Changing%20the%20billing%20cycle%20on%20pre-existing%20subscriptions" class="dashAnchor"></a><h2 id="changing">Changing the billing cycle on pre-existing subscriptions</h2>
 
   <p>There are two ways to change when an existing subscription is billed:</p>
 
@@ -3368,7 +3368,7 @@ Subscription subscription = service.Update("sub_49ty4767H20z6a", options);
 </section>
 
 <section>
-  <h2 id="using-a-trial-to-change-the-billing-cycle">Using a trial to change the billing cycle</h2>
+  <a id="using-a-trial-to-change-the-billing-cycle" name="//apple_ref/cpp/Section/Using%20a%20trial%20to%20change%20the%20billing%20cycle" class="dashAnchor"></a><h2 id="using-a-trial-to-change-the-billing-cycle">Using a trial to change the billing cycle</h2>
 
   <p>By introducing a non-prorated trial period to a subscription, you can configure the billing cycle to be any date.</p>
 
@@ -3382,7 +3382,7 @@ Subscription subscription = service.Update("sub_49ty4767H20z6a", options);
 </section>
 
 <section>
-  <h2 id="api-trials">Changing the billing cycle via the API</h2>
+  <a id="changing-the-billing-cycle-via-the-api" name="//apple_ref/cpp/Section/Changing%20the%20billing%20cycle%20via%20the%20API" class="dashAnchor"></a><h2 id="api-trials">Changing the billing cycle via the API</h2>
 
   <p>To add a trial period to an existing subscription, perform an <a href="../../api/index.html#update_subscription">update subscription</a> call, providing a <code>trial_end</code> value:</p>
 
@@ -3514,7 +3514,7 @@ Subscription subscription = service.Update("sub_49ty4767H20z6a", options);
 </section>
 
 <section>
-  <h2 id="thresholds">Thresholds</h2>
+  <a id="thresholds" name="//apple_ref/cpp/Section/Thresholds" class="dashAnchor"></a><h2 id="thresholds">Thresholds</h2>
   <p>In addition to the regular cycle, subscriptions may be configured to bill whenever the amount due reaches a <a href="metered-billing/thresholds.html">threshold</a>.
 If configured to invoice this way, hitting the threshold <a href="metered-billing/thresholds.html#bca">can optionally reset the subscription cycle</a>.</p>
 
@@ -3522,7 +3522,7 @@ If configured to invoice this way, hitting the threshold <a href="metered-billin
 </section>
 
 <section>
-  <h2 id="dashboard">Changing the billing cycle with a trial via the Dashboard</h2>
+  <a id="changing-the-billing-cycle-with-a-trial-via-the-dashboard" name="//apple_ref/cpp/Section/Changing%20the%20billing%20cycle%20with%20a%20trial%20via%20the%20Dashboard" class="dashAnchor"></a><h2 id="dashboard">Changing the billing cycle with a trial via the Dashboard</h2>
 
   <p>To add a trial period to an existing subscription via the <a href="https://dashboard.stripe.com/test/subscriptions">Dashboard</a>:</p>
 
@@ -3537,13 +3537,13 @@ If configured to invoice this way, hitting the threshold <a href="metered-billin
 </section>
 
 <section>
-  <h2 id="metered-billing">Metered billing</h2>
+  <a id="metered-billing" name="//apple_ref/cpp/Section/Metered%20billing" class="dashAnchor"></a><h2 id="metered-billing">Metered billing</h2>
 
   <p>With <a href="metered-billing.html">metered billing</a>, the price paid by the customer varies based on consumption during the billing cycle. When changing the billing cycle results in ending a subscription interval early, the customer is charged for the usage accrued during the shortened billing period.</p>
 </section>
 
 <section>
-  <h2 id="next-steps">Next steps</h2>
+  <a id="next-steps" name="//apple_ref/cpp/Section/Next%20steps" class="dashAnchor"></a><h2 id="next-steps">Next steps</h2>
 
   <p>Congrats! You know how to change a subscription&rsquo;s billing cycle. Some resources you might want to see next:</p>
 
@@ -3584,7 +3584,7 @@ If configured to invoice this way, hitting the threshold <a href="metered-billin
 
 
             </article>
-            <div class="docs-aside">
+            <div class="docs-aside" style="display: none;">
               <div class="docs-toc empty">
                 <h4>On this page</h4>
                 <ul class="docs-toc-list">

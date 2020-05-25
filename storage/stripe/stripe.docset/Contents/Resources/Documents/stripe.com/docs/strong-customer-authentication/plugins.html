@@ -180,7 +180,7 @@
   <body class="">
     
       <div id="docs">
-        <div id="sidebar">
+        <div id="sidebar" style="display: none;">
             
   <div class="logo">
     <a href="../recipes/switching-to-stripe.html" title="Stripe docs">
@@ -3008,7 +3008,7 @@
             <article id="content">
                 
   <header>
-  <h1 id="sca-migration-guide-for-plugins-and-developer-libraries">SCA Migration Guide for Plugins and Developer Libraries</h1>
+  <a name="//apple_ref/cpp/Section/Top" class="dashAnchor"></a><h1 id="sca-migration-guide-for-plugins-and-developer-libraries">SCA Migration Guide for Plugins and Developer Libraries</h1>
 
   <p>Learn how to update your Stripe plugin or developer library to support <a href="../strong-customer-authentication.html">Strong Customer Authentication</a> (SCA).</p>
 
@@ -3017,19 +3017,19 @@
   </aside>
 </header>
 <section>
-  <h2 id="supporting-sca">Do I need to support SCA for my users?</h2>
+  <a id="do-i-need-to-support-sca-for-my-users" name="//apple_ref/cpp/Section/Do%20I%20need%20to%20support%20SCA%20for%20my%20users%3F" class="dashAnchor"></a><h2 id="supporting-sca">Do I need to support SCA for my users?</h2>
 
   <p>Businesses in the <span class="tooltip-wrapper"><span class="tooltip-content definition"><a href="https://en.wikipedia.org/wiki/European_Economic_Area">European Economic Area</a></span><template class="tooltip"><span class="definition">The <em>European Economic Area</em> is a regional single market with free movement of labor, goods, and capital. It encompasses the European Union member states and three additional states that are part of the European Free Trade Association.</span></template></span> (EEA) accepting online payments from customers in the EEA require a different user experience, namely <span class="tooltip-wrapper"><span class="tooltip-content definition"><a href="../payments/3d-secure.html">3D Secure</a></span><template class="tooltip"><span class="definition"><em>3D Secure</em> provides an additional layer of authentication for credit card transactions that protects merchants from liability for fraudulent card payments.</span></template></span>. Transactions that don&rsquo;t follow the new authentication guidelines may be declined by a customer&rsquo;s bank, as of <strong>September 14th, 2019</strong>. This additional layer of authentication requires migrating to SCA-ready solutions like the new version of <a href="https://stripe.com/checkout">Checkout</a> or the <span class="tooltip-wrapper"><span class="tooltip-content definition"><a href="../payments/payment-intents/creating-payment-intents.html">Payment Intents API</a></span><template class="tooltip"><span class="definition">The <em>Payment Intents API</em> is a new way to build dynamic payment flows. It tracks the lifecycle of a customer checkout flow and triggers additional authentication steps when required by regulatory mandates, custom Radar fraud rules, or redirect-based payment methods.</span></template></span>, described in Step 2.</p>
 </section>
 <section>
-  <h2 id="identify-plugin"><span class="step">Step 1:</span> Identify your plugin on our platform</h2>
+  <a id="step-1-identify-your-plugin-on-our-platform" name="//apple_ref/cpp/Section/Step%201%3A%20Identify%20your%20plugin%20on%20our%20platform" class="dashAnchor"></a><h2 id="identify-plugin"><span class="step">Step 1:</span> Identify your plugin on our platform</h2>
 
   <p>Plugins and third-party libraries should include identifying information so we can contact you about future changes or critical updates to the API. Use the <a href="../building-plugins.html#setappinfo">setAppInfo function</a> to provide those details in your Stripe integration.</p>
 
   <p>We encourage you to join the <a href="https://stripe.com/partner-program?utm_campaign=partnerprogram&amp;utm_source=sca-plugins-guide">Stripe Partner Program</a>, which includes <a href="https://stripe.com/partner-program?utm_campaign=partnerprogram&amp;utm_source=sca-plugins-guide&amp;utm_medium=join#stripe-partner-program">free registration</a> and more resources for developers building plugins. Learn more about <a href="../building-plugins.html">suggested best practices</a>.</p>
 </section>
 <section>
-  <h2 id="determine-integration"><span class="step">Step 2:</span> Determine your integration path</h2>
+  <a id="step-2-determine-your-integration-path" name="//apple_ref/cpp/Section/Step%202%3A%20Determine%20your%20integration%20path" class="dashAnchor"></a><h2 id="determine-integration"><span class="step">Step 2:</span> Determine your integration path</h2>
 
   <p>Refer to the <a href="migration.html">SCA migration guide</a> to review the integration paths for the new version of <a href="https://stripe.com/checkout">Stripe Checkout</a>, the <a href="../payments/payment-intents/creating-payment-intents.html">Payment Intents API</a>, the <a href="../payments/save-and-reuse.html">Setup Intents API</a>, Stripe Billing, and iOS or Android. For developers of plugins or libraries:</p>
 
@@ -3042,12 +3042,12 @@
   <p>If none of these options work for your integration, please <a href="mailto:plugins+sca@stripe.com">let us know</a>.</p>
 </section>
 <section>
-  <h2 id="test-dynamic-auth"><span class="step">Step 3:</span> Test dynamic authentication</h2>
+  <a id="step-3-test-dynamic-authentication" name="//apple_ref/cpp/Section/Step%203%3A%20Test%20dynamic%20authentication" class="dashAnchor"></a><h2 id="test-dynamic-auth"><span class="step">Step 3:</span> Test dynamic authentication</h2>
 
   <p>After you have finished implementing the new integration path, configure your <a href="../payments/3d-secure.html#three-ds-radar">Dynamic 3D Secure Radar rules</a> to test your integration using <a href="../payments/3d-secure.html#three-ds-cards">3D Secure test cards</a>. Make sure to test both successful and unsuccessful authentication cases.</p>
 </section>
 <section>
-  <h2 id="notify-users"><span class="step">Step 4:</span> Notify your users and Stripe</h2>
+  <a id="step-4-notify-your-users-and-stripe" name="//apple_ref/cpp/Section/Step%204%3A%20Notify%20your%20users%20and%20Stripe" class="dashAnchor"></a><h2 id="notify-users"><span class="step">Step 4:</span> Notify your users and Stripe</h2>
 
   <p>We recommend releasing an update for your users to let them know your payments solution is SCA-ready. You can share the <a href="https://stripe.com/guides/strong-customer-authentication">guide to Strong Customer Authentication</a> with your users to help them understand these regulatory changes. When you&rsquo;ve released an SCA-ready update, please <a href="mailto:plugins+sca@stripe.com">let us know</a> as well.</p>
 
@@ -3057,7 +3057,7 @@
 </section>
 
 <section>
-  <h2 id="next-steps">Next steps</h2>
+  <a id="next-steps" name="//apple_ref/cpp/Section/Next%20steps" class="dashAnchor"></a><h2 id="next-steps">Next steps</h2>
 
 <ul class="next-steps">
     <li><a href="../checkout.html"><span>Checkout Overview</span></a></li>
@@ -3098,7 +3098,7 @@
 
 
             </article>
-            <div class="docs-aside">
+            <div class="docs-aside" style="display: none;">
               <div class="docs-toc empty">
                 <h4>On this page</h4>
                 <ul class="docs-toc-list">

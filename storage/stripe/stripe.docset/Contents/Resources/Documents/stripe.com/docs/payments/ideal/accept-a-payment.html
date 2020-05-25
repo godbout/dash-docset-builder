@@ -182,7 +182,7 @@
   <body class="">
     
       <div id="docs">
-        <div id="sidebar">
+        <div id="sidebar" style="display: none;">
             
   <div class="logo">
     <a href="../../recipes/switching-to-stripe.html" title="Stripe docs">
@@ -3010,7 +3010,7 @@
             <article id="content">
                 
   <header>
-<h1>Accept an iDEAL payment</h1>
+<a name="//apple_ref/cpp/Section/Top" class="dashAnchor"></a><h1>Accept an iDEAL payment</h1>
 <p>Learn how to accept iDEAL, a common payment method in the Netherlands.</p>
 </header>
 
@@ -3036,7 +3036,7 @@
 
 <div class="expando" aria-expanded="true">
   <a id="web-set-up-stripe" href="accept-a-payment.html#web-set-up-stripe" class="expando-trigger">
-    <h2 class="expando-title" data-no-anchor data-custom-toc-title="Set up Stripe">
+    <a id="1-set-up-stripe-server-side" name="//apple_ref/cpp/Section/1%20Set%20up%20Stripe%20Server-side" class="dashAnchor"></a><h2 class="expando-title" data-no-anchor data-custom-toc-title="Set up Stripe">
         <span class="expando-left-text">1</span>
       Set up Stripe
         <span class="tag optional">Server-side</span>
@@ -3281,7 +3281,7 @@ PM&gt; Install-Package Stripe.net</code></div></pre>
 
 <div class="expando" aria-expanded="true">
   <a id="web-create-payment-intent" href="accept-a-payment.html#web-create-payment-intent" class="expando-trigger">
-    <h2 class="expando-title" data-no-anchor data-custom-toc-title="Create a PaymentIntent">
+    <a id="2-create-a-paymentintent-server-side" name="//apple_ref/cpp/Section/2%20Create%20a%20PaymentIntent%20Server-side" class="dashAnchor"></a><h2 class="expando-title" data-no-anchor data-custom-toc-title="Create a PaymentIntent">
         <span class="expando-left-text">2</span>
       Create a PaymentIntent
         <span class="tag optional">Server-side</span>
@@ -3435,7 +3435,7 @@ var intent = service.Create(options);
 
 <div class="expando" aria-expanded="true">
   <a id="web-collect-payment-method-details" href="accept-a-payment.html#web-collect-payment-method-details" class="expando-trigger">
-    <h2 class="expando-title" data-no-anchor data-custom-toc-title="Collect payment method details">
+    <a id="3-collect-payment-method-details-client-side" name="//apple_ref/cpp/Section/3%20Collect%20payment%20method%20details%20Client-side" class="dashAnchor"></a><h2 class="expando-title" data-no-anchor data-custom-toc-title="Collect payment method details">
         <span class="expando-left-text">3</span>
       Collect payment method details
         <span class="tag optional">Client-side</span>
@@ -3883,7 +3883,7 @@ It&rsquo;s also possible to style various input states, for example when the Ele
 
 <div class="expando" aria-expanded="true">
   <a id="web-submit-payment" href="accept-a-payment.html#web-submit-payment" class="expando-trigger">
-    <h2 class="expando-title" data-no-anchor data-custom-toc-title="Submit the payment to Stripe">
+    <a id="4-submit-the-payment-to-stripe-client-side" name="//apple_ref/cpp/Section/4%20Submit%20the%20payment%20to%20Stripe%20Client-side" class="dashAnchor"></a><h2 class="expando-title" data-no-anchor data-custom-toc-title="Submit the payment to Stripe">
         <span class="expando-left-text">4</span>
       Submit the payment to Stripe
         <span class="tag optional">Client-side</span>
@@ -4265,7 +4265,7 @@ export default function InjectedCheckoutForm() {
 
 <div class="expando" aria-expanded="true">
   <a id="web-fulfillment" href="accept-a-payment.html#web-fulfillment" class="expando-trigger">
-    <h2 class="expando-title" data-no-anchor data-custom-toc-title="Handle post-payment events">
+    <a id="optional-handle-post-payment-events" name="//apple_ref/cpp/Section/Optional%20Handle%20post-payment%20events" class="dashAnchor"></a><h2 class="expando-title" data-no-anchor data-custom-toc-title="Handle post-payment events">
         <span class="expando-left-text">Optional</span>
       Handle post-payment events
     </h2>
@@ -4307,7 +4307,7 @@ export default function InjectedCheckoutForm() {
 
 <div class="expando" aria-expanded="true">
   <a id="web-handle-bank-element" href="accept-a-payment.html#web-handle-bank-element" class="expando-trigger">
-    <h2 class="expando-title" data-no-anchor data-custom-toc-title="Handle iDEAL Bank Element changes">
+    <a id="optional-handle-ideal-bank-element-changes" name="//apple_ref/cpp/Section/Optional%20Handle%20iDEAL%20Bank%20Element%20changes" class="dashAnchor"></a><h2 class="expando-title" data-no-anchor data-custom-toc-title="Handle iDEAL Bank Element changes">
         <span class="expando-left-text">Optional</span>
       Handle iDEAL Bank Element changes
     </h2>
@@ -4369,7 +4369,7 @@ export default function InjectedCheckoutForm() {
 
 <div class="expando" aria-expanded="true">
   <a id="web-handle-redirect" href="accept-a-payment.html#web-handle-redirect" class="expando-trigger">
-    <h2 class="expando-title" data-no-anchor data-custom-toc-title="Handle the iDEAL redirect manually">
+    <a id="optional-handle-the-ideal-redirect-manually" name="//apple_ref/cpp/Section/Optional%20Handle%20the%20iDEAL%20redirect%20manually" class="dashAnchor"></a><h2 class="expando-title" data-no-anchor data-custom-toc-title="Handle the iDEAL redirect manually">
         <span class="expando-left-text">Optional</span>
       Handle the iDEAL redirect manually
     </h2>
@@ -4612,7 +4612,7 @@ if (action &amp;&amp; action.type === 'redirect_to_url') {
 
 <div class="expando" aria-expanded="true">
   <a id="web-customer-bank-preferences" href="accept-a-payment.html#web-customer-bank-preferences" class="expando-trigger">
-    <h2 class="expando-title" data-no-anchor data-custom-toc-title="Storing customer bank preferences">
+    <a id="optional-storing-customer-bank-preferences" name="//apple_ref/cpp/Section/Optional%20Storing%20customer%20bank%20preferences" class="dashAnchor"></a><h2 class="expando-title" data-no-anchor data-custom-toc-title="Storing customer bank preferences">
         <span class="expando-left-text">Optional</span>
       Storing customer bank preferences
     </h2>
@@ -4727,7 +4727,7 @@ idealBank.mount('#ideal-bank-element');</code></div></pre>
 
 <div class="expando" aria-expanded="true">
   <a id="ios-setup" href="accept-a-payment.html#ios-setup" class="expando-trigger">
-    <h2 class="expando-title" data-no-anchor data-custom-toc-title="Set up Stripe">
+    <a id="1-set-up-stripe-server-side-client-side" name="//apple_ref/cpp/Section/1%20Set%20up%20Stripe%20Server-side%20Client-side" class="dashAnchor"></a><h2 class="expando-title" data-no-anchor data-custom-toc-title="Set up Stripe">
         <span class="expando-left-text">1</span>
       Set up Stripe
         <span class="tag optional">Server-side</span>
@@ -5184,7 +5184,7 @@ AppDelegate.m
 
 <div class="expando" aria-expanded="true">
   <a id="ios-create-payment-intent" href="accept-a-payment.html#ios-create-payment-intent" class="expando-trigger">
-    <h2 class="expando-title" data-no-anchor data-custom-toc-title="Create a PaymentIntent">
+    <a id="2-create-a-paymentintent-server-side-client-side" name="//apple_ref/cpp/Section/2%20Create%20a%20PaymentIntent%20Server-side%20Client-side" class="dashAnchor"></a><h2 class="expando-title" data-no-anchor data-custom-toc-title="Create a PaymentIntent">
         <span class="expando-left-text">2</span>
       Create a PaymentIntent
         <span class="tag optional">Server-side</span>
@@ -5413,7 +5413,7 @@ CheckoutViewController.m
 
 <div class="expando" aria-expanded="true">
   <a id="ios-collect-payment-method-details" href="accept-a-payment.html#ios-collect-payment-method-details" class="expando-trigger">
-    <h2 class="expando-title" data-no-anchor data-custom-toc-title="Collect payment method details">
+    <a id="3-collect-payment-method-details-client-side" name="//apple_ref/cpp/Section/3%20Collect%20payment%20method%20details%20Client-side" class="dashAnchor"></a><h2 class="expando-title" data-no-anchor data-custom-toc-title="Collect payment method details">
         <span class="expando-left-text">3</span>
       Collect payment method details
         <span class="tag optional">Client-side</span>
@@ -5458,7 +5458,7 @@ billingDetails.name = @"Jane Doe";</code></div></pre>
 
 <div class="expando" aria-expanded="true">
   <a id="ios-submit-payment" href="accept-a-payment.html#ios-submit-payment" class="expando-trigger">
-    <h2 class="expando-title" data-no-anchor data-custom-toc-title="Submit the payment to Stripe">
+    <a id="4-submit-the-payment-to-stripe-client-side" name="//apple_ref/cpp/Section/4%20Submit%20the%20payment%20to%20Stripe%20Client-side" class="dashAnchor"></a><h2 class="expando-title" data-no-anchor data-custom-toc-title="Submit the payment to Stripe">
         <span class="expando-left-text">4</span>
       Submit the payment to Stripe
         <span class="tag optional">Client-side</span>
@@ -5532,7 +5532,7 @@ paymentIntentParams.paymentMethodParams = [STPPaymentMethodParams paramsWithiDEA
 
 <div class="expando" aria-expanded="true">
   <a id="ios-fulfillment" href="accept-a-payment.html#ios-fulfillment" class="expando-trigger">
-    <h2 class="expando-title" data-no-anchor data-custom-toc-title="Handle post-payment events">
+    <a id="optional-handle-post-payment-events" name="//apple_ref/cpp/Section/Optional%20Handle%20post-payment%20events" class="dashAnchor"></a><h2 class="expando-title" data-no-anchor data-custom-toc-title="Handle post-payment events">
         <span class="expando-left-text">Optional</span>
       Handle post-payment events
     </h2>
@@ -5608,7 +5608,7 @@ paymentIntentParams.paymentMethodParams = [STPPaymentMethodParams paramsWithiDEA
 
 
             </article>
-            <div class="docs-aside">
+            <div class="docs-aside" style="display: none;">
               <div class="docs-toc empty">
                 <h4>On this page</h4>
                 <ul class="docs-toc-list">

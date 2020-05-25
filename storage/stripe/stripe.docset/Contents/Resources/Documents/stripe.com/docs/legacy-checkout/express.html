@@ -182,7 +182,7 @@
   <body class="">
     
       <div id="docs">
-        <div id="sidebar">
+        <div id="sidebar" style="display: none;">
             
   <div class="logo">
     <a href="../recipes/switching-to-stripe.html" title="Stripe docs">
@@ -3010,7 +3010,7 @@
             <article id="content">
                 
   <header>
-  <h1>Using Checkout and Express (legacy)</h1>
+  <a name="//apple_ref/cpp/Section/Top" class="dashAnchor"></a><h1>Using Checkout and Express (legacy)</h1>
 
 <aside class="important red">
 <p><strong>This page is for the legacy version of Checkout</strong></p>
@@ -3037,7 +3037,7 @@ modal payments form using Elements on <a href="https://github.com/stripe-samples
 </ol></section>
 
 <section>
-  <h2 id="step-1-install-dependencies"><span class="step">Step 1:</span> Install and configure dependencies</h2>
+  <a id="step-1-install-and-configure-dependencies" name="//apple_ref/cpp/Section/Step%201%3A%20Install%20and%20configure%20dependencies" class="dashAnchor"></a><h2 id="step-1-install-dependencies"><span class="step">Step 1:</span> Install and configure dependencies</h2>
 
 <p>To follow along, you need a Node.js environment with version 6.x or higher. Use <a href="https://www.npmjs.com/">npm</a> to install Express and the Stripe library:</p>
 <div class="code" data-language="bash">
@@ -3073,7 +3073,7 @@ app.use(require("body-parser").urlencoded({extended: false}));</code></div></pre
 <p>After you set up the constants, import the Stripe and Express modules. The Stripe module accepts a single parameter, the secret key associated with your account. Next, configure Express to use <a href="http://pugjs.org">Pug</a> as the view engine and add the <code>body-parser</code> module, which makes it possible for your <strong>POST</strong> route to receive parameters from Checkout.</p></section>
 
 <section>
-  <h2 id="step-2-create-express-routes"><span class="step">Step 2:</span> Create Express routes</h2>
+  <a id="step-2-create-express-routes" name="//apple_ref/cpp/Section/Step%202%3A%20Create%20Express%20routes" class="dashAnchor"></a><h2 id="step-2-create-express-routes"><span class="step">Step 2:</span> Create Express routes</h2>
 
 <p>The Express back end exposes two routes:</p>
 
@@ -3115,7 +3115,7 @@ app.listen(4567);</code></div></pre>
 <p>In this example, the application charges the user $5. Stripe expects the developer to describe charges in cents, so compute the value of the <code>amount</code> parameter by multiplying the desired number of dollars by one hundred. Stripe charges also take an optional <code>description</code> parameter, which is &ldquo;Sample Charge&rdquo; in this case.</p></section>
 
 <section>
-  <h2 id="step-3-create-the-view-templates"><span class="step">Step 3:</span> Create the view templates</h2>
+  <a id="step-3-create-the-view-templates" name="//apple_ref/cpp/Section/Step%203%3A%20Create%20the%20view%20templates" class="dashAnchor"></a><h2 id="step-3-create-the-view-templates"><span class="step">Step 3:</span> Create the view templates</h2>
 
 <p>Express supports several different template engines for generating HTML content. This tutorial uses Pug, but you could just as easily use EJS or another compatible engine if you prefer.
 Create a file named <strong>views/index.pug</strong> for the index template:</p>
@@ -3146,7 +3146,7 @@ Create a file named <strong>views/index.pug</strong> for the index template:</p>
 <p>That&rsquo;s it, a complete Stripe and Express integration in about 60 lines of JavaScript and HTML.</p></section>
 
 <section>
-  <h2 id="step-4-run-the-application"><span class="step">Step 4:</span> Run the application</h2>
+  <a id="step-4-run-the-application" name="//apple_ref/cpp/Section/Step%204%3A%20Run%20the%20application" class="dashAnchor"></a><h2 id="step-4-run-the-application"><span class="step">Step 4:</span> Run the application</h2>
 
 <p>Run the application from the command line:</p>
 <div class="code" data-language="bash">
@@ -3200,7 +3200,7 @@ Terminal
 
 
             </article>
-            <div class="docs-aside">
+            <div class="docs-aside" style="display: none;">
               <div class="docs-toc empty">
                 <h4>On this page</h4>
                 <ul class="docs-toc-list">

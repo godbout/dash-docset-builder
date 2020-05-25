@@ -180,7 +180,7 @@
   <body class="">
     
       <div id="docs">
-        <div id="sidebar">
+        <div id="sidebar" style="display: none;">
             
   <div class="logo">
     <a href="../recipes/switching-to-stripe.html" title="Stripe docs">
@@ -3008,7 +3008,7 @@
             <article id="content">
                 
   <header>
-  <h1>Testing Stripe Connect</h1>
+  <a name="//apple_ref/cpp/Section/Top" class="dashAnchor"></a><h1>Testing Stripe Connect</h1>
   <p>Before going live, use the following information to test your <a href="https://stripe.com/connect">Connect</a> integration.</p>
 </header>
 
@@ -3030,7 +3030,7 @@
 </section>
 
 <section>
-  <h2 id="payouts">Testing payouts</h2>
+  <a id="testing-payouts" name="//apple_ref/cpp/Section/Testing%20payouts" class="dashAnchor"></a><h2 id="payouts">Testing payouts</h2>
 
   <p>For Express and Custom accounts, use the following test bank and debit card numbers to trigger certain events during testing of <a href="payouts.html">payouts</a>. These values can only be used when creating or updating Custom accounts via the API in test mode or with Express in test mode.</p>
 
@@ -3653,7 +3653,7 @@
 </section>
 
 <section>
-<h2 id="creating-accounts">Creating accounts</h2>
+<a id="creating-accounts" name="//apple_ref/cpp/Section/Creating%20accounts" class="dashAnchor"></a><h2 id="creating-accounts">Creating accounts</h2>
 
 <p>You can create any type of test account you need: Standard, Express, or Custom. You can also create multiple test accounts, e.g., representing multiple countries.</p>
 
@@ -3668,7 +3668,7 @@
 <p>You can create Custom test accounts using the code on the <a href="custom-accounts.html#country">Custom Accounts</a> page. The account does not need to be activated because it can&rsquo;t be used for live charges.</p></section>
 
 <section>
-<h2 id="using-oauth">Using OAuth</h2>
+<a id="using-oauth" name="//apple_ref/cpp/Section/Using%20OAuth" class="dashAnchor"></a><h2 id="using-oauth">Using OAuth</h2>
 
 <p>To easily test an OAuth integration, the development <code>client_id</code> allows you to:</p>
 
@@ -3682,7 +3682,7 @@
 <p>You&rsquo;ll be able to find your development <code>client_id</code> in your <a href="https://dashboard.stripe.com/account/applications/settings">connect settings</a>.</p></section>
 
 <section>
-<h2 id="testing-top-ups">Testing Top-ups</h2>
+<a id="testing-top-ups" name="//apple_ref/cpp/Section/Testing%20Top-ups" class="dashAnchor"></a><h2 id="testing-top-ups">Testing Top-ups</h2>
 
 <p>To test adding funds in the Dashboard, enable test mode and select the desired test bank account in the drop-down menu within the top-up dialog. You can simulate success or failure due to insufficient funds.</p>
 
@@ -3724,7 +3724,7 @@
 </table></section>
 
 <section>
-<h2 id="test-keys-for-livemode-applications">Generating test keys for live applications</h2>
+<a id="generating-test-keys-for-live-applications" name="//apple_ref/cpp/Section/Generating%20test%20keys%20for%20live%20applications" class="dashAnchor"></a><h2 id="test-keys-for-livemode-applications">Generating test keys for live applications</h2>
 
 <p>When using an <code>access_token</code> derived via the <a href="standard-accounts.html">OAuth</a> flow, you can only generate test access tokens using a development <code>client_id</code>, but may generate either live or test access tokens using a production <code>client_id</code>.</p>
 
@@ -3744,7 +3744,7 @@
 <p>Note that it&rsquo;s still preferable to <a href="authentication.html">authenticate</a> using the <code>Stripe-Account</code> header, not an access token.</p></section>
 
 <section>
-<h2 id="verification">Identity and address verification</h2>
+<a id="identity-and-address-verification" name="//apple_ref/cpp/Section/Identity%20and%20address%20verification" class="dashAnchor"></a><h2 id="verification">Identity and address verification</h2>
 
 <aside class="note">
   <h3>Testing verification guide</h3>
@@ -3899,7 +3899,7 @@ Alternatively, for testing Custom accounts only, Stripe created two sample image
 </table></section>
 
 <section>
-<h2 id="address-validation">Business address validation</h2>
+<a id="business-address-validation" name="//apple_ref/cpp/Section/Business%20address%20validation" class="dashAnchor"></a><h2 id="address-validation">Business address validation</h2>
 <p>In some countries, the business address associated with your connected account must be validated before charges, payouts, or both can be enabled on the connected account. Stripe provides business address tokens so you can test for this user onboarding requirement.</p>
 
 <aside class="important neutral">
@@ -3965,7 +3965,7 @@ Alternatively, for testing Custom accounts only, Stripe created two sample image
 
 
             </article>
-            <div class="docs-aside">
+            <div class="docs-aside" style="display: none;">
               <div class="docs-toc empty">
                 <h4>On this page</h4>
                 <ul class="docs-toc-list">

@@ -180,7 +180,7 @@
   <body class="">
     
       <div id="docs">
-        <div id="sidebar">
+        <div id="sidebar" style="display: none;">
             
   <div class="logo">
     <a href="../recipes/switching-to-stripe.html" title="Stripe docs">
@@ -3008,7 +3008,7 @@
             <article id="content">
                 
   <header>
-  <h1>Automated shipping calculations using Shippo <span class="warning tag">Deprecated</span></h1>
+  <a name="//apple_ref/cpp/Section/Top" class="dashAnchor"></a><h1>Automated shipping calculations using Shippo <span class="warning tag">Deprecated</span></h1>
   <p>Set up our <a href="https://goshippo.com">Shippo</a> integration to add automatic shipping rate calculations to your Stripe orders.</p>
   
   <aside class="important red">
@@ -3029,7 +3029,7 @@
 <p>After completing those two steps, you may want to learn how <a href="shipping-integration.html#how-it-works">Orders shipping integrations</a> work or some of the <a href="shippo.html#integration-details">Shippo integration details</a>.</p></section>
 
 <section>
-<h2 id="set-up">Step 1: Create your Shippo account</h2>
+<a id="step-1-create-your-shippo-account" name="//apple_ref/cpp/Section/Step%201%3A%20Create%20your%20Shippo%20account" class="dashAnchor"></a><h2 id="set-up">Step 1: Create your Shippo account</h2>
 
 <p>To create your Shippo account follow these steps:</p>
 
@@ -3045,7 +3045,7 @@
 <p>A recommended, but optional step is to add different the flat-rate options you use for shipping. On the navigation bar in your Shippo dashboard, click on <strong>Settings</strong>, and add your boxes sizes by clicking <strong>Add Package</strong>.  Adding a default box size allows Shippo to use this as a fallback for calculating shipping costs in case no other rates are available.</p></section>
 
 <section>
-<h2 id="activate">Step 2: Activate Shippo in Stripe</h2>
+<a id="step-2-activate-shippo-in-stripe" name="//apple_ref/cpp/Section/Step%202%3A%20Activate%20Shippo%20in%20Stripe" class="dashAnchor"></a><h2 id="activate">Step 2: Activate Shippo in Stripe</h2>
 
 <p>To activate Shippo in your Stripe account:</p>
 
@@ -3065,7 +3065,7 @@
 <p>After completing these two steps, Stripe will automatically use your Shippo credentials to calculate shipping costs for orders you place through the Orders API.</p></section>
 
 <section>
-<h2 id="integration-details">Integration details</h2>
+<a id="integration-details" name="//apple_ref/cpp/Section/Integration%20details" class="dashAnchor"></a><h2 id="integration-details">Integration details</h2>
 
 <p>Shippo does not attempt to calculate any kind of &ldquo;optimal box&rdquo; for an order with multiple SKUs. Instead Shippo allows you to set a default box in the Shippo dashboard. Setting a default shipping box size lets you control how carriers calculate rates without explicitly sending item sizes with each call. Shippo will use the length, width and height of this default package to retrieve ratings from the carriers. If you don&rsquo;t have a default package set, Shippo will use a 10&rdquo;x10&rdquo;x10&rdquo; in box.</p>
 
@@ -3105,7 +3105,7 @@
 
 
             </article>
-            <div class="docs-aside">
+            <div class="docs-aside" style="display: none;">
               <div class="docs-toc empty">
                 <h4>On this page</h4>
                 <ul class="docs-toc-list">

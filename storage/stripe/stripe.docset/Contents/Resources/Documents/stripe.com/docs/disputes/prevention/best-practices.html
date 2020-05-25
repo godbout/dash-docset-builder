@@ -180,7 +180,7 @@
   <body class="">
     
       <div id="docs">
-        <div id="sidebar">
+        <div id="sidebar" style="display: none;">
             
   <div class="logo">
     <a href="../../recipes/switching-to-stripe.html" title="Stripe docs">
@@ -3008,7 +3008,7 @@
             <article id="content">
                 
   <header>
-  <h1>Best practices for preventing fraud</h1>
+  <a name="//apple_ref/cpp/Section/Top" class="dashAnchor"></a><h1>Best practices for preventing fraud</h1>
   <p>Learn how to use best practices to protect against disputes and fraudulent payments.</p>
 </header>
 
@@ -3023,20 +3023,20 @@
 </section>
 
 <section>
-<h2 id="contact-customers-to-confirm-their-order">Contact customers to confirm their order</h2>
+<a id="contact-customers-to-confirm-their-order" name="//apple_ref/cpp/Section/Contact%20customers%20to%20confirm%20their%20order" class="dashAnchor"></a><h2 id="contact-customers-to-confirm-their-order">Contact customers to confirm their order</h2>
 <p>Contacting customers by phone or email to confirm their details before fulfilling an order can give you time to verify if a payment is legitimate. Contact information that doesn&rsquo;t belong to the customer or fails to work may indicate a fraudulent payment. A nonsensical or evasive answer is also a typically a good indication of potentially fraudulent behavior.
 Keep in mind that even phone or email responses cannot guarantee that the person responding is the true cardholder.</p></section>
 
 <section>
-<h2 id="verify-your-customers-identity">Verify your customer&rsquo;s identity</h2>
+<a id="verify-your-customers-identity" name="//apple_ref/cpp/Section/Verify%20your%20customer%E2%80%99s%20identity" class="dashAnchor"></a><h2 id="verify-your-customers-identity">Verify your customer&rsquo;s identity</h2>
 <p>For some, verifying the identity of customers can be beneficial. Asking your customers to connect their <a href="https://developers.facebook.com/docs/facebook-login/overview/">Facebook</a> or <a href="https://developer.linkedin.com/docs/oauth2">LinkedIn</a> accounts, for example, can serve as further proof of their identity. Connecting a social networking account doesn&rsquo;t prove who a person is, but it&rsquo;s an extra step that a fraudster might not take. Of course, some legitimate customers may not want to go through this additional process, and your conversion rate may suffer as a result.</p></section>
 
 <section>
-<h2 id="refund-suspicious-payments-immediately">Refund suspicious payments immediately</h2>
+<a id="refund-suspicious-payments-immediately" name="//apple_ref/cpp/Section/Refund%20suspicious%20payments%20immediately" class="dashAnchor"></a><h2 id="refund-suspicious-payments-immediately">Refund suspicious payments immediately</h2>
 <p>Refund any payments you suspect are fraudulent as soon as possible. In the <a href="https://dashboard.stripe.com/payments">Dashboard</a>, select the payment and click <strong>Refund as fraud</strong>. This refunds the payment and reports it to us so that we can further improve our fraud detection.</p></section>
 
 <section>
-<h2 id="manually-review-payments">Manually review payments</h2>
+<a id="manually-review-payments" name="//apple_ref/cpp/Section/Manually%20review%20payments" class="dashAnchor"></a><h2 id="manually-review-payments">Manually review payments</h2>
 
 <p>Radar for Fraud Teams includes a <a href="../../radar/reviews.html">review</a> process that allows you to place certain payments into review&mdash;though keep in mind that these payments are still processed and the credit card charged. These payments are placed into the <a href="https://dashboard.stripe.com/radar">review queue</a> for you to take a closer look at. If you suspect the payment is fraudulent, you can refund it.</p>
 
@@ -3056,7 +3056,7 @@ Keep in mind that even phone or email responses cannot guarantee that the person
 <p>If you&rsquo;re unsure about a payment when you&rsquo;re reviewing it, you should always contact the customer by phone or email. If a payment&rsquo;s billing and shipping address don&rsquo;t match, look into the shipping address using <a href="https://www.google.com/maps/streetview">Google Maps &amp; Street View</a> to find out more. A common tactic that fraudsters use is to have orders shipped to a freight or mail forwarding service or storage facility that forwards the goods to their actual location.</p></section>
 
 <section>
-<h2 id="use-auth-and-capture-when-creating-payments">Use auth and capture when creating payments</h2>
+<a id="use-auth-and-capture-when-creating-payments" name="//apple_ref/cpp/Section/Use%20auth%20and%20capture%20when%20creating%20payments" class="dashAnchor"></a><h2 id="use-auth-and-capture-when-creating-payments">Use auth and capture when creating payments</h2>
 
 <p>Credit card charge attempts are processed in two parts. The charge is first <em>authorized</em> by requesting authorization for the amount to charge from the card issuer.  After a charge is approved, it&rsquo;s then <em>captured</em> immediately afterwards and the amount deducted from the card.</p>
 
@@ -3065,13 +3065,13 @@ Keep in mind that even phone or email responses cannot guarantee that the person
 <p>Similar to delayed shipping, this method can allow enough time for potential fraud to come to light, giving you the option to carefully review the transaction.</p></section>
 
 <section>
-<h2 id="set-a-custom-statement-descriptor-for-each-payment">Set a custom statement descriptor for each payment</h2>
+<a id="set-a-custom-statement-descriptor-for-each-payment" name="//apple_ref/cpp/Section/Set%20a%20custom%20statement%20descriptor%20for%20each%20payment" class="dashAnchor"></a><h2 id="set-a-custom-statement-descriptor-for-each-payment">Set a custom statement descriptor for each payment</h2>
 <p>The statement descriptor is the line that appears on customers&rsquo; card statements with information about the company that&rsquo;s associated with a payment. One way to use a statement descriptor is to insert a short, random code that your customer then has to verify. When you suspect a transaction might be fraudulent, you can contact your customer and ask them to give you the code that is shown on their online statement.</p>
 
 <p>You can use either edit your <a href="https://dashboard.stripe.com/account">default statement descriptor</a> within the Dashboard or set a <a href="../../statement-descriptors.html#dynamic">dynamic statement descriptor</a> whenever a payment is created through the API. While this method cannot help against a fraudster that may have access to a cardholder&rsquo;s online card issuer or credit account, this is extremely rare. Using the statement descriptor in this manner can provide reassurance that the customer is likely to be genuine.</p></section>
 
 <section>
-<h2 id="country-and-card-type-limiting">Country and card type limiting</h2>
+<a id="country-and-card-type-limiting" name="//apple_ref/cpp/Section/Country%20and%20card%20type%20limiting" class="dashAnchor"></a><h2 id="country-and-card-type-limiting">Country and card type limiting</h2>
 <p>If you&rsquo;re experiencing increased fraud coming from certain countries, you can set up rules to block payments from any country you do not want to accept payments from, using the <code>:ip_country:</code> and <code>:card_country:</code> rule attributes. For example, you can create the following rule to block all payments and cards originating from Canada:
 <code>Block if <span class="rules attribute">:ip_country:</span> = <span class="rules string-value">ca</span> and <span class="rules attribute">:card_country:</span> = <span class="rules string-value">'ca'</span></code>
 Similarly, if your business only supports the country it operates in, you can create a rule that blocks any payments from all other countries. For example, a rule to block payments that don&rsquo;t originate from Australia is:
@@ -3083,7 +3083,7 @@ To block payments from all Visa-issued debit cards, an example rule would be:
 
 
 <section>
-<h2 id="delay-shipping-orders">Delay shipping orders</h2>
+<a id="delay-shipping-orders" name="//apple_ref/cpp/Section/Delay%20shipping%20orders" class="dashAnchor"></a><h2 id="delay-shipping-orders">Delay shipping orders</h2>
 <p>If you&rsquo;re shipping physical goods, consider delaying the shipment of goods by 24-48 hours. This time gives cardholders a chance to spot any fraud on their accounts. However, not all cardholders check their statements on a daily basis, and their card issuer may not proactively contact them about the transaction.</p>
 
 <p>Customers that request overnight or expedited shipping should be considered higher risk, as the increased cost of such services is of no consequence to fraudsters. One tactic you can use to identify these types of payments is to offer same day or overnight shipping at a very high cost&ndash;many times more expensive than any other shipping option you provide.</p>
@@ -3091,7 +3091,7 @@ To block payments from all Visa-issued debit cards, an example rule would be:
 <p>It&rsquo;s far less likely that any legitimate customer would pay such a high cost, but a fraudster would want the goods to be shipped as soon as possible and have no regard for the additional cost. You can then manually screen any customers that opt for the expensive shipping option and scrutinize the order to determine if it looks genuine.</p></section>
 
 <section>
-<h2 id="ship-to-a-verified-address">Ship to a verified address</h2>
+<a id="ship-to-a-verified-address" name="//apple_ref/cpp/Section/Ship%20to%20a%20verified%20address" class="dashAnchor"></a><h2 id="ship-to-a-verified-address">Ship to a verified address</h2>
 <p>Shipping to a verified billing address which has passed ZIP code and street address checks is always the safest option. When using an address that has not been verified, you cannot prove that the order was shipped to the legitimate cardholder if the payment is later disputed.</p>
 
 <p>This doesn&rsquo;t prevent you shipping to a different address, though you should do all you can to mitigate the risks involved. For instance, you may only want to ship orders to a different address for returning customers you already know to be legitimate, or who provide a fully verifiable billing address. In addition, any of the following could indicate the payment is suspicious:</p>
@@ -3107,16 +3107,16 @@ To block payments from all Visa-issued debit cards, an example rule would be:
 <p>Reviewing the order and the shipping address information can help you determine whether or not the order presents an unacceptable risk to you.</p></section>
 
 <section>
-<h2 id="create-rules-to-manage-incoming-payments">Create rules to manage incoming payments</h2>
+<a id="create-rules-to-manage-incoming-payments" name="//apple_ref/cpp/Section/Create%20rules%20to%20manage%20incoming%20payments" class="dashAnchor"></a><h2 id="create-rules-to-manage-incoming-payments">Create rules to manage incoming payments</h2>
 <p>Using <a href="../../radar.html">Radar for Fraud Teams</a>, you can create <a href="../../radar/rules.html">rules</a> to manage how your business handles incoming payments, blocking any that you would consider suspicious or placing them in <a href="../../radar/reviews.html">review</a>. There are also additional methods you can implement that work alongside any features of Radar for Fraud Teams that you use. You should also be aware of <a href="fraud-types.html">common types of fraud</a> and make sure your business is best able to <a href="identifying-fraud.html">identify fraudulent payments</a>.</p></section>
 
 <section>
-<h2 id="use-rules-to-automatically-block-payments-or-place-them-in-review">Use rules to automatically block payments or place them in review</h2>
+<a id="use-rules-to-automatically-block-payments-or-place-them-in-review" name="//apple_ref/cpp/Section/Use%20rules%20to%20automatically%20block%20payments%20or%20place%20them%20in%20review" class="dashAnchor"></a><h2 id="use-rules-to-automatically-block-payments-or-place-them-in-review">Use rules to automatically block payments or place them in review</h2>
 <p>Our fraud prevention toolset, <a href="https://stripe.com/radar">Radar for Fraud Teams</a>, is built directly into the payment flow and combines a customizable rules engine with powerful machine learning algorithms. It can detect patterns across payments from every business processing payments with Stripe, assessing the risk of each one. You can use Radar for Fraud Teams to create a highly effective fraud prevention strategy.
 Using <a href="../../radar/rules.html">rules</a>, you can adopt methods that evaluate payments based upon your specific criteria and take the appropriate action automatically. You can also create rules that make use of multiple criteria, allowing you to allow or block payments that  meet multiple conditions. The following recommendations for rules can help prevent many common attempts at fraud.</p></section>
 
 <section>
-<h2 id="benchmarking-your-dispute-rate">Benchmarking your dispute rate</h2>
+<a id="benchmarking-your-dispute-rate" name="//apple_ref/cpp/Section/Benchmarking%20your%20dispute%20rate" class="dashAnchor"></a><h2 id="benchmarking-your-dispute-rate">Benchmarking your dispute rate</h2>
 <p>Your account&rsquo;s <a href="../measuring.html#dispute-rate-usage">dispute rate</a> is an important metric to use when reviewing the efficiency of your disputes and fraud prevention methods. You should also consider it a trade-off, estimating an acceptable percentage of disputes you&rsquo;re willing to accept, compared to the revenue you might lose by blocking risky payments. A dispute rate of 0.3% may be acceptable if working to reduce it further would risk blocking a substantial amount of legitimate revenue.
 For example, you may create <a href="../../radar/rules.html">rules</a> that block payments from a certain country which prevents $100 of fraudulent payments&mdash;but also results in $2,000 of genuine payments also being blocked. In this case, the loss from disputes is much less significant than the revenue from legitimate customers that would be lost.
 Your disputes and fraud prevention strategy should work to maximize your revenue while keeping your dispute rate as low as is acceptable.</p></section>
@@ -3126,7 +3126,7 @@ Your disputes and fraud prevention strategy should work to maximize your revenue
 
 <p>It&rsquo;s important that you regularly evaluate your strategies to make sure they&rsquo;re effective and keep up with different ways fraudsters may try to commit fraud. Working together, Stripe&rsquo;s tools and your vigilance can work best to avoid disputes and fraud.</p></section>
 <section>
-  <h2>Next steps</h2>
+  <a id="next-steps" name="//apple_ref/cpp/Section/Next%20steps" class="dashAnchor"></a><h2>Next steps</h2>
   <p>
  Now that you have learned some of the best practices for preventing fraud, you may want to learn about dispute measuring, or move on to related subjects:
 
@@ -3174,7 +3174,7 @@ Your disputes and fraud prevention strategy should work to maximize your revenue
 
 
             </article>
-            <div class="docs-aside">
+            <div class="docs-aside" style="display: none;">
               <div class="docs-toc empty">
                 <h4>On this page</h4>
                 <ul class="docs-toc-list">

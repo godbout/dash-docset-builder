@@ -180,7 +180,7 @@
   <body class="">
     
       <div id="docs">
-        <div id="sidebar">
+        <div id="sidebar" style="display: none;">
             
   <div class="logo">
     <a href="../recipes/switching-to-stripe.html" title="Stripe docs">
@@ -3008,12 +3008,12 @@
             <article id="content">
                 
   <header>
-  <h1 id="the-setup-intents-api">The Setup Intents API</h1>
+  <a name="//apple_ref/cpp/Section/Top" class="dashAnchor"></a><h1 id="the-setup-intents-api">The Setup Intents API</h1>
 
   <p>Learn more about the Setup Intents API for saving payment methods.</p>
 </header>
 <section>
-  <h2 id="overview">Overview</h2>
+  <a id="overview" name="//apple_ref/cpp/Section/Overview" class="dashAnchor"></a><h2 id="overview">Overview</h2>
 
   <p>Use the <a href="../api/setup_intents.html">Setup Intents API</a> to set up a payment method for future payments. It&rsquo;s similar to a payment, but no charge is created. <a href="save-and-reuse.html">Set up a payment method for future payments now</a>.</p>
 
@@ -3027,7 +3027,7 @@
 </section>
 
 <section>
-  <h2 id="saving-and-reusing-payment-methods">Saving and reusing payment methods</h2>
+  <a id="saving-and-reusing-payment-methods" name="//apple_ref/cpp/Section/Saving%20and%20reusing%20payment%20methods" class="dashAnchor"></a><h2 id="saving-and-reusing-payment-methods">Saving and reusing payment methods</h2>
 
   <p>The Setup Intents API is useful for businesses that onboard customers but don&rsquo;t charge them right away:</p>
 
@@ -3051,7 +3051,7 @@
 </section>
 
 <section>
-  <h2 id="mandates">Getting permission to save a payment method</h2>
+  <a id="getting-permission-to-save-a-payment-method" name="//apple_ref/cpp/Section/Getting%20permission%20to%20save%20a%20payment%20method" class="dashAnchor"></a><h2 id="mandates">Getting permission to save a payment method</h2>
 
   <p>If you set up a payment method for future <span class="tooltip-wrapper"><span class="tooltip-content definition"><a href="save-and-reuse.html#web-create-payment-intent-off-session">off-session</a></span><template class="tooltip"><span class="definition">A payment is described as <em>off-session</em> if it occurs without the direct involvement of the customer, using previously-collected payment information.</span></template></span> payments, you need permission. Creating an agreement (sometimes called a <em>mandate</em>) up front allows you to charge the customer when they&rsquo;re not actively using your website or app.</p>
 
@@ -3069,7 +3069,7 @@
 </section>
 
 <section>
-  <h2 id="increasing-success-rate-by-specifying-usage">Increasing success rate by specifying usage</h2>
+  <a id="increasing-success-rate-by-specifying-usage" name="//apple_ref/cpp/Section/Increasing%20success%20rate%20by%20specifying%20usage" class="dashAnchor"></a><h2 id="increasing-success-rate-by-specifying-usage">Increasing success rate by specifying usage</h2>
 
   <p>The <a href="../api/setup_intents/object.html#setup_intent_object-usage">usage</a> parameter tells Stripe how you plan to use payment method details later. For some payment methods, Stripe can use your <code>usage</code> setting to pick the most frictionless flow for the customer. This optimization is designed to increase the number of successful payments.</p>
 
@@ -3264,7 +3264,7 @@ var setupIntent = service.Create(options);
 
 
             </article>
-            <div class="docs-aside">
+            <div class="docs-aside" style="display: none;">
               <div class="docs-toc empty">
                 <h4>On this page</h4>
                 <ul class="docs-toc-list">

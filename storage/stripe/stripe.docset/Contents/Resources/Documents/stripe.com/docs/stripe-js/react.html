@@ -190,7 +190,7 @@
   <body class="">
     
       <div id="docs">
-        <div id="sidebar">
+        <div id="sidebar" style="display: none;">
             
   <div class="logo">
     <a href="../recipes/switching-to-stripe.html" title="Stripe docs">
@@ -3019,7 +3019,7 @@
                 
   
 <header>
-  <h1>React Stripe.js reference</h1>
+  <a name="//apple_ref/cpp/Section/Top" class="dashAnchor"></a><h1>React Stripe.js reference</h1>
   <p>React components for Stripe.js and Stripe Elements</p>
 </header>
 
@@ -3042,7 +3042,7 @@ If you are new to React, we recommend that you take a look at the <a href="https
 <hr>
 
 <section>
-<h2 id="setup">Setup</h2>  
+<a id="setup" name="//apple_ref/cpp/Section/Setup" class="dashAnchor"></a><h2 id="setup">Setup</h2>  
 <div class="tabs tabs-regular  animated">
     
       <nav class="nav-tabs">
@@ -3090,7 +3090,7 @@ Terminal
 </section>
 
 <section>
-<h2 id="elements-provider">Elements provider</h2>
+<a id="elements-provider" name="//apple_ref/cpp/Section/Elements%20provider" class="dashAnchor"></a><h2 id="elements-provider">Elements provider</h2>
 <p>The <code>Elements</code> provider allows you to use <a href="react.html#element-components">Element components</a> and access the <a href="../js/initializing.html">Stripe object</a> in any nested component.
 Render an <code>Elements</code> provider at the root of your React app so that it is available everywhere you need it.</p>
 
@@ -3154,7 +3154,7 @@ const App = () =&gt; {
 <p>Optional Elements configuration options. <a href="../js/elements_object/create.html#stripe_elements-options">See available options</a>. Once the <code>stripe</code> prop has been set, these options cannot be changed.</p>
 </section>
 <section>
-<h2 id="element-components">Element components</h2>
+<a id="element-components" name="//apple_ref/cpp/Section/Element%20components" class="dashAnchor"></a><h2 id="element-components">Element components</h2>
 
 <p>Element components provide a flexible way to securely collect payment information in your React app.</p>
 <p>You can mount individual Element components inside of your <code>Elements</code> tree. Note that you can only mount one of each type of Element.</p>
@@ -3338,7 +3338,7 @@ Card-Minimal.js
 <p>Triggered when the Element is fully rendered and can accept imperative <code>element.focus()</code> calls. Called with a reference to the underlying Element instance.</p></section>
 
 <section>
-<h2 id="useelements-hook">useElements hook</h2>
+<a id="useelements-hook" name="//apple_ref/cpp/Section/useElements%20hook" class="dashAnchor"></a><h2 id="useelements-hook">useElements hook</h2>
 <h4>
   <code>
     useElements(): <span class="token method-or-object">Elements</span> | null
@@ -3409,7 +3409,7 @@ const CheckoutForm = () =&gt; {
 </section>
 
 <section>
-<h2 id="usestripe-hook">useStripe hook</h2>
+<a id="usestripe-hook" name="//apple_ref/cpp/Section/useStripe%20hook" class="dashAnchor"></a><h2 id="usestripe-hook">useStripe hook</h2>
 <h4>
   <code>
     useStripe(): <span class="token method-or-object">Stripe</span> | null
@@ -3480,7 +3480,7 @@ const CheckoutForm = () =&gt; {
 </section>
 
 <section>
-<h2 id="elements-consumer">ElementsConsumer</h2>
+<a id="elementsconsumer" name="//apple_ref/cpp/Section/ElementsConsumer" class="dashAnchor"></a><h2 id="elements-consumer">ElementsConsumer</h2>
 
 <p>To safely pass the payment information collected by an Element to the Stripe API, access the component&rsquo;s underlying <a href="../js/element.html">Element instance</a> so that you can use it with other Stripe.js methods. If you need to access the Stripe object or an Element from a class component, then <code>ElementsConsumer</code> provides an alternative to the <a href="react.html#useElements-hook">useElements</a> and <a href="react.html#useStripe-hook">useStripe</a> hooks.</p>
 <div class="code" data-language="jsx">
@@ -3568,7 +3568,7 @@ const InjectedCheckoutForm = () =&gt; {
 
 <section>
 
-<h2 id="customization-and-styling">Customization and styling</h2>  <aside class="note">
+<a id="customization-and-styling" name="//apple_ref/cpp/Section/Customization%20and%20styling" class="dashAnchor"></a><h2 id="customization-and-styling">Customization and styling</h2>  <aside class="note">
 <h3 id="why-iframes">Why iframes?</h3>
 <p>We recognize that the use of iframes makes styling an Element more difficult, but they shift the burden of securely handling payment data to Stripe and provide an easy way to keep your site <a href="../security.html#validating-pci-compliance">compliant with industry regulation</a>.</p>  </aside>
 
@@ -4159,7 +4159,7 @@ const CardField = ({onChange}) =&gt; (
 <p>The <a href="https://github.com/stripe/react-stripe-js/blob/90b7992c5232de7312d0fcc226541b62db95017b/examples/hooks/1-Card-Detailed.js">full source code</a> for the above example <a href="https://github.com/stripe/react-stripe-js/tree/master/examples">and others</a> are available on GitHub.</p></section>
 
 <section>
-<h2 id="next-steps">Next steps</h2>
+<a id="next-steps" name="//apple_ref/cpp/Section/Next%20steps" class="dashAnchor"></a><h2 id="next-steps">Next steps</h2>
 
 <p>Build an integration with React Stripe.js and Elements.</p><ul class="next-steps">
     <li><a href="../payments/payment-intents/quickstart.html#web"><span>Accept a payment</span></a></li>
@@ -4200,7 +4200,7 @@ const CardField = ({onChange}) =&gt; (
 
 
             </article>
-            <div class="docs-aside">
+            <div class="docs-aside" style="display: none;">
               <div class="docs-toc empty">
                 <h4>On this page</h4>
                 <ul class="docs-toc-list">

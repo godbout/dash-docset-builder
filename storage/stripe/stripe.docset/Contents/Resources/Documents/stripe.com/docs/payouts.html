@@ -180,7 +180,7 @@
   <body class="">
     
       <div id="docs">
-        <div id="sidebar">
+        <div id="sidebar" style="display: none;">
             
   <div class="logo">
     <a href="recipes/switching-to-stripe.html" title="Stripe docs">
@@ -3008,7 +3008,7 @@
             <article id="content">
                 
   <header>
-  <h1>Receiving payouts</h1>
+  <a name="//apple_ref/cpp/Section/Top" class="dashAnchor"></a><h1>Receiving payouts</h1>
   <p>Set up your bank account to receive payouts.</p>
 </header>
 
@@ -3022,7 +3022,7 @@
   <p>Connect platforms can refer to our <a href="connect/payouts.html">Connect payouts</a> documentation for information about paying out to connected accounts.</p>
 </section>
 <section>
-<h2 id="adding-bank-account-information">Adding your bank account information</h2>  <aside class="note">
+<a id="adding-your-bank-account-information" name="//apple_ref/cpp/Section/Adding%20your%20bank%20account%20information" class="dashAnchor"></a><h2 id="adding-bank-account-information">Adding your bank account information</h2>  <aside class="note">
     <h3>Supported bank account types</h3>
     <p>Provide a standard bank account with a financial institution (e.g., checking). Other types of bank accounts (e.g., savings) or those with a virtual bank account provider (e.g., N26, Revolut, Transferwise, etc.) are supported, but may see higher payout failures than standard bank accounts.</p>
   </aside>
@@ -4909,7 +4909,7 @@
 <p>For example, a Stripe user in the United Kingdom is using GBP and USD bank accounts, with GBP chosen as the default settlement currency. USD payments (where USD is the presentment currency) are automatically paid out to the USD bank account without conversion, whereas payments in all other currencies are converted into GBP.</p></section>
 <section>
 
-<h2 id="payout-schedule">Payout schedule</h2>  <aside class="note">
+<a id="payout-schedule" name="//apple_ref/cpp/Section/Payout%20schedule" class="dashAnchor"></a><h2 id="payout-schedule">Payout schedule</h2>  <aside class="note">
     <h3>Time zone difference</h3>
     <p>All payments and payouts are processed according to <a href="https://en.wikipedia.org/wiki/Coordinated_Universal_Time">UTC</a> time. As a result, the processed date may not be the same as your local time zone.</p>
   </aside>
@@ -4919,7 +4919,7 @@
 
 <p>Most banks deposit payouts into your bank account as soon as they receive them, though some may take a few extra days to make them available.</p>
 
-<h2 id="standard-payout-timing">Standard payout timing</h2>
+<a id="standard-payout-timing" name="//apple_ref/cpp/Section/Standard%20payout%20timing" class="dashAnchor"></a><h2 id="standard-payout-timing">Standard payout timing</h2>
 <ul>
   <li>
     <h3 id="2-day">2 business day</h3>
@@ -4981,7 +4981,7 @@
   </li>
 </ul>
 
-<h2 id="alternative-schedules">Alternative payout schedules</h2>
+<a id="alternative-payout-schedules" name="//apple_ref/cpp/Section/Alternative%20payout%20schedules" class="dashAnchor"></a><h2 id="alternative-schedules">Alternative payout schedules</h2>
 
 <p>If you prefer payouts on a fixed schedule, you can choose to receive them weekly or monthly in your account&rsquo;s <a href="https://dashboard.stripe.com/account/payouts">payout settings</a>.</p>
 
@@ -4992,7 +4992,7 @@
 <p>Selecting either of these doesn&rsquo;t change how long it takes your pending balance to become available. If your account was operating on a two business day daily payout schedule, it still takes two business days for your pending balance to become available. For example, if a Stripe account changes from two business day rolling to weekly on Fridays, the available balance includes payments made in the last week before Wednesday.</p></section>
 
 <section>
-<h2 id="manual-payouts">Manual payouts</h2>
+<a id="manual-payouts" name="//apple_ref/cpp/Section/Manual%20payouts" class="dashAnchor"></a><h2 id="manual-payouts">Manual payouts</h2>
 
 <p>If you turn off <a href="https://dashboard.stripe.com/account/payouts">automatic payouts</a> in the Dashboard, you must manually send funds to your bank account. Manual payouts are available in all regions except Brazil, where payouts are always automatic. You can do this either in the <a href="https://dashboard.stripe.com/test/payouts">Payouts</a> section of the Dashboard or by <a href="api/index.html#create_payout">creating payouts</a> using the API.</p>
 <div class="tabs tabs-code animated" data-callback="codeTabsChanged">
@@ -5125,7 +5125,7 @@ var payout = service.Create(options);
 
 </section>
 <section>
-<h2 id="instant-payouts">Instant Payouts</h2>
+<a id="instant-payouts" name="//apple_ref/cpp/Section/Instant%20Payouts" class="dashAnchor"></a><h2 id="instant-payouts">Instant Payouts</h2>
 
 <p>With Instant Payouts, you can instantly send funds to a <a href="payouts/instant-payouts-banks.html">supported debit card</a>. You can request Instant Payouts 24/7, including weekends and holidays, and funds typically appear in the associated bank account within 30 minutes.</p>
 
@@ -5303,7 +5303,7 @@ Payout payout = service.Create(options);
 </div>
 </section>
 <section>
-<h2 id="minimum-payout-amounts">Minimum payout amounts</h2>
+<a id="minimum-payout-amounts" name="//apple_ref/cpp/Section/Minimum%20payout%20amounts" class="dashAnchor"></a><h2 id="minimum-payout-amounts">Minimum payout amounts</h2>
 
 <p>For most Stripe users, there is no minimum payout amount. However, there are a some exceptions:</p>
 
@@ -5323,13 +5323,13 @@ Payout payout = service.Create(options);
 
 <p>If your available account balance is less than the minimum payout amount, it remains in your Stripe account until your balance increases.</p></section>
 <section>
-<h2 id="negative-payouts">Negative payouts</h2>
+<a id="negative-payouts" name="//apple_ref/cpp/Section/Negative%20payouts" class="dashAnchor"></a><h2 id="negative-payouts">Negative payouts</h2>
 
 <p>Each payout reflects your available account balance at the time it was created. In some cases, you may have a negative account balance. For example, if you receive 100 USD in payments but refund 200 USD of prior payments, your account balance would be -100 USD. If you don&rsquo;t receive further payments to balance out the negative amount, Stripe creates a payout that <em>debits</em> your bank account.</p>
 
 <p>Your bank account must support both credit and debit transactions so that Stripe can perform any required payouts.</p></section>
 <section>
-<h2 id="payout-failures">Payout failures</h2>
+<a id="payout-failures" name="//apple_ref/cpp/Section/Payout%20failures" class="dashAnchor"></a><h2 id="payout-failures">Payout failures</h2>
 
 <p>If your bank account can&rsquo;t receive a payout for any reason, your bank sends the funds back to us. This returns an error with the <a href="api/payouts/failures.html">reason for the failure</a>. It can take up to five additional business days for your bank to return the payout and inform us that it has failed. If this happens, you&rsquo;re notified by email and in the <a href="https://dashboard.stripe.com/test/payouts">Dashboard</a>. To ensure that your bank account details are correct, you need to re-enter them if a payout fails. After you re-enter your bank account details, Stripe attempts to perform the payout again at the next scheduled payout interval.</p>
 
@@ -5372,7 +5372,7 @@ Payout payout = service.Create(options);
 
 
             </article>
-            <div class="docs-aside">
+            <div class="docs-aside" style="display: none;">
               <div class="docs-toc empty">
                 <h4>On this page</h4>
                 <ul class="docs-toc-list">

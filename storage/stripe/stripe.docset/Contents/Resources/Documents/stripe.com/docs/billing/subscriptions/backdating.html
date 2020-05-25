@@ -180,7 +180,7 @@
   <body class="">
     
       <div id="docs">
-        <div id="sidebar">
+        <div id="sidebar" style="display: none;">
             
   <div class="logo">
     <a href="../../recipes/switching-to-stripe.html" title="Stripe docs">
@@ -3008,7 +3008,7 @@
             <article id="content">
                 
   <header>
-  <h1 id="backdating-subscriptions">Backdating subscriptions</h1>
+  <a name="//apple_ref/cpp/Section/Top" class="dashAnchor"></a><h1 id="backdating-subscriptions">Backdating subscriptions</h1>
 
   <p>Learn about backdating subscriptions.</p>
 </header>
@@ -3229,7 +3229,7 @@ var subscription = service.Create(options);
 <h3 id="backdating-no-charge">Backdating without charging users</h3>
 <p>If you&rsquo;re migrating to Stripe, you might want to backdate your subscriptions without charging your customers. You can do this by passing <code>prorate=false</code> when you create the subscriptions. This sets the <code>start_date</code> so that it matches the <code>backdate_start_date</code>, but it doesn&rsquo;t charge the customer for backdated time.</p>
 
-<h2 id="backdating-billing-cycle">Backdating and setting the billing cycle anchor</h2>
+<a id="backdating-and-setting-the-billing-cycle-anchor" name="//apple_ref/cpp/Section/Backdating%20and%20setting%20the%20billing%20cycle%20anchor" class="dashAnchor"></a><h2 id="backdating-billing-cycle">Backdating and setting the billing cycle anchor</h2>
 <p>You can combine <code>backdate_start_date</code> with <code>billing_cycle_anchor</code> to backdate a subscription and set the billing cycle anchor to a date in the future. This creates a prorated item on the next invoice for the time between the backdated start date and the billing cycle anchor. This is useful if you&rsquo;re migrating to Stripe and need to carry over the next billing date for your subscriptions. It also allows you to bill customers for elapsed time and to carry over the start dates for your subscriptions from your previous integration.</p>
 
 <p>For example, let&rsquo;s say it&rsquo;s October 15th and you&rsquo;re migrating to Stripe. You have a subscription that started on September 1st and the next billing date is November 1st. To migrate this subscription, you&rsquo;d create a new subscription and set backdate_start_date to September 1st and <code>billing_cycle_anchor</code> to November 1st.</p>
@@ -3480,7 +3480,7 @@ Subscription subscription = service.Create(options);
 
 
             </article>
-            <div class="docs-aside">
+            <div class="docs-aside" style="display: none;">
               <div class="docs-toc empty">
                 <h4>On this page</h4>
                 <ul class="docs-toc-list">

@@ -180,7 +180,7 @@
   <body class="">
     
       <div id="docs">
-        <div id="sidebar">
+        <div id="sidebar" style="display: none;">
             
   <div class="logo">
     <a href="../../recipes/switching-to-stripe.html" title="Stripe docs">
@@ -3008,7 +3008,7 @@
             <article id="content">
                 
   <header>
-  <h1>Migrating to Stripe Elements</h1>
+  <a name="//apple_ref/cpp/Section/Top" class="dashAnchor"></a><h1>Migrating to Stripe Elements</h1>
   <p>Learn how to migrate your existing Stripe.js v2 checkout flow to Stripe Elements.</p>
 
   
@@ -3031,7 +3031,7 @@
 </ol></section>
 
 <section>
-  <h2 id="setup"><span class="step">Step 1:</span> Initial setup of Elements</h2>
+  <a id="step-1-initial-setup-of-elements" name="//apple_ref/cpp/Section/Step%201%3A%20Initial%20setup%20of%20Elements" class="dashAnchor"></a><h2 id="setup"><span class="step">Step 1:</span> Initial setup of Elements</h2>
 
   <p>Include the following script in the head section on every page on your site. This script must always load directly from <strong>js.stripe.com</strong> to remain <a href="../../security.html#validating-pci-compliance">PCI compliant</a>. You can&rsquo;t include the script in a bundle or host a copy of it yourself.</p>
 <div class="code" data-language="html">
@@ -3051,7 +3051,7 @@
 </section>
 
 <section>
-  <h2 id="ui-markup"><span class="step">Step 2:</span> Convert your existing payment form</h2>
+  <a id="step-2-convert-your-existing-payment-form" name="//apple_ref/cpp/Section/Step%202%3A%20Convert%20your%20existing%20payment%20form" class="dashAnchor"></a><h2 id="ui-markup"><span class="step">Step 2:</span> Convert your existing payment form</h2>
 
 <p>At the moment, your existing payment form might look something like this:</p>
 <div class="code" data-language="html">
@@ -3137,7 +3137,7 @@ card.mount('#card-element');</code></div></pre>
 </section>
 
 <section>
-  <h2 id="securely-collect-card-details"><span class="step">Step 3:</span> Securely collect card details</h2>
+  <a id="step-3-securely-collect-card-details" name="//apple_ref/cpp/Section/Step%203%3A%20Securely%20collect%20card%20details" class="dashAnchor"></a><h2 id="securely-collect-card-details"><span class="step">Step 3:</span> Securely collect card details</h2>
 
 <p>Using Elements to collect payment information is very similar to your current approach. The difference is that you&rsquo;re passing a Stripe Element to the appropriate method, rather than a form or set of input fields.</p>
 
@@ -3220,7 +3220,7 @@ form.addEventListener('submit', function(e) {
 </section>
 
 <section>
-  <h2 id="events-error-handling"><span class="step">Step 4:</span> Handle events and errors</h2>
+  <a id="step-4-handle-events-and-errors" name="//apple_ref/cpp/Section/Step%204%3A%20Handle%20events%20and%20errors" class="dashAnchor"></a><h2 id="events-error-handling"><span class="step">Step 4:</span> Handle events and errors</h2>
 
 <p>Elements includes real-time input validation that helps facilitate your users&rsquo; checkout flow, increasing conversion. If you&rsquo;re not doing any validation today, you can just rely on the default visual validation indicators of Elements to alert users of errors.</p>
 
@@ -3241,7 +3241,7 @@ form.addEventListener('submit', function(e) {
 </section>
 
 <section>
-  <h2 id="formatting-customization"><span class="step">Step 5:</span> Customize style and formatting</h2>
+  <a id="step-5-customize-style-and-formatting" name="//apple_ref/cpp/Section/Step%205%3A%20Customize%20style%20and%20formatting" class="dashAnchor"></a><h2 id="formatting-customization"><span class="step">Step 5:</span> Customize style and formatting</h2>
 
 <p>Elements comes with built-in formatting and masking for all inputs. If you have been using Stripe&rsquo;s <code>jquery.payment</code> library or something that you have built in-house, you should be able to safely remove these from your integration.</p>
 
@@ -3272,7 +3272,7 @@ card.mount('#card-element');</code></div></pre>
 <p>You can find a full list of supported CSS properties that can be used as <code>style</code> parameters in our <a href="../../js/appendix/style.html">Stripe.js reference</a> documentation.</p></section>
 
 <section>
-  <h2 id="elements-demo">Elements demo</h2>
+  <a id="elements-demo" name="//apple_ref/cpp/Section/Elements%20demo" class="dashAnchor"></a><h2 id="elements-demo">Elements demo</h2>
 
 <p>This is a live demo of a payment form created using Elements and custom styling. Try it out, using some of our <a href="../../testing.html">test card information</a>, a random three-digit CVC number, and any expiration date in the future. Upon tokenization, the contents of the form are validated before being sent to the server.</p>
 
@@ -3832,7 +3832,7 @@ document.querySelector('form').addEventListener('submit', function(e) {
 </section>
 
 <section>
-<h2 id="next-steps">Next steps</h2>
+<a id="next-steps" name="//apple_ref/cpp/Section/Next%20steps" class="dashAnchor"></a><h2 id="next-steps">Next steps</h2>
 
 <p>Now you have all the information you need to migrate from Stripe.js v2 to Stripe Elements. To learn more, continue reading:</p><ul class="next-steps">
     <li><a href="../../payments/accept-a-payment-charges.html#web"><span>Card Elements Quickstart</span></a></li>
@@ -3873,7 +3873,7 @@ document.querySelector('form').addEventListener('submit', function(e) {
 
 
             </article>
-            <div class="docs-aside">
+            <div class="docs-aside" style="display: none;">
               <div class="docs-toc empty">
                 <h4>On this page</h4>
                 <ul class="docs-toc-list">

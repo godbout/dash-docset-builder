@@ -180,7 +180,7 @@
   <body class="">
     
       <div id="docs">
-        <div id="sidebar">
+        <div id="sidebar" style="display: none;">
             
   <div class="logo">
     <a href="../recipes/switching-to-stripe.html" title="Stripe docs">
@@ -3008,7 +3008,7 @@
             <article id="content">
                 
   <header>
-  <h1>Testing</h1>
+  <a name="//apple_ref/cpp/Section/Top" class="dashAnchor"></a><h1>Testing</h1>
   <p>Learn how to test your integration and simulate purchases.</p>
 </header>
 
@@ -3037,11 +3037,11 @@ You can only use these cards for testing within your Stripe account and not for 
   </nav>
   <div class="tabs-content">
     <div class="tabs-tab" id="without-code"><section>
-<h2 id="overview">Overview</h2>
+<a id="overview" name="//apple_ref/cpp/Section/Overview" class="dashAnchor"></a><h2 id="overview">Overview</h2>
 
 <p>You can simulate a card purchase by specifying authorization details in the Dashboard.</p><div class="expando" aria-expanded="true">
   <a id="create-a-card" href="testing.html#create-a-card" class="expando-trigger">
-    <h2 class="expando-title" data-no-anchor data-custom-toc-title="Create a card">
+    <a id="1-create-a-card-dashboard" name="//apple_ref/cpp/Section/1%20Create%20a%20card%20Dashboard" class="dashAnchor"></a><h2 class="expando-title" data-no-anchor data-custom-toc-title="Create a card">
         <span class="expando-left-text">1</span>
       Create a card
         <span class="tag optional">Dashboard</span>
@@ -3054,7 +3054,7 @@ You can only use these cards for testing within your Stripe account and not for 
 
 <div class="expando" aria-expanded="true">
   <a id="create-a-test-authorization" href="testing.html#create-a-test-authorization" class="expando-trigger">
-    <h2 class="expando-title" data-no-anchor data-custom-toc-title="Create a test authorization">
+    <a id="2-create-a-test-authorization-dashboard" name="//apple_ref/cpp/Section/2%20Create%20a%20test%20authorization%20Dashboard" class="dashAnchor"></a><h2 class="expando-title" data-no-anchor data-custom-toc-title="Create a test authorization">
         <span class="expando-left-text">2</span>
       Create a test authorization
         <span class="tag optional">Dashboard</span>
@@ -3080,7 +3080,7 @@ The browser will redirect to the details page for the newly-created authorizatio
 
 <div class="expando" aria-expanded="true">
   <a id="viewing-transaction-details" href="testing.html#viewing-transaction-details" class="expando-trigger">
-    <h2 class="expando-title" data-no-anchor data-custom-toc-title="Viewing transaction details">
+    <a id="3-viewing-transaction-details-dashboard" name="//apple_ref/cpp/Section/3%20Viewing%20transaction%20details%20Dashboard" class="dashAnchor"></a><h2 class="expando-title" data-no-anchor data-custom-toc-title="Viewing transaction details">
         <span class="expando-left-text">3</span>
       Viewing transaction details
         <span class="tag optional">Dashboard</span>
@@ -3097,7 +3097,7 @@ The browser will redirect to the details page for the newly-created authorizatio
 </div>
 </section>
 </div><div class="tabs-tab" id="with-code"><section>
-<h2 id="overview">Overview</h2>
+<a id="overview" name="//apple_ref/cpp/Section/Overview" class="dashAnchor"></a><h2 id="overview">Overview</h2>
 
 <p>You can simulate a card purchase using your test <a href="../keys.html">API keys</a> with the following process:</p>
 
@@ -3110,7 +3110,7 @@ The browser will redirect to the details page for the newly-created authorizatio
   <li><a href="testing.html#create-charge">Create</a> an uncaptured charge using the source</li>
 </ol><div class="expando" aria-expanded="true">
   <a id="fund-your-issuing-balance" href="testing.html#fund-your-issuing-balance" class="expando-trigger">
-    <h2 class="expando-title" data-no-anchor data-custom-toc-title="Fund your issuing balance">
+    <a id="1-fund-your-issuing-balance" name="//apple_ref/cpp/Section/1%20Fund%20your%20issuing%20balance" class="dashAnchor"></a><h2 class="expando-title" data-no-anchor data-custom-toc-title="Fund your issuing balance">
         <span class="expando-left-text">1</span>
       Fund your issuing balance
     </h2>
@@ -3122,7 +3122,7 @@ The browser will redirect to the details page for the newly-created authorizatio
 
 <div class="expando" aria-expanded="true">
   <a id="create-cardholder" href="testing.html#create-cardholder" class="expando-trigger">
-    <h2 class="expando-title" data-no-anchor data-custom-toc-title="Create a cardholder">
+    <a id="2-create-a-cardholder-server-side" name="//apple_ref/cpp/Section/2%20Create%20a%20cardholder%20Server-side" class="dashAnchor"></a><h2 class="expando-title" data-no-anchor data-custom-toc-title="Create a cardholder">
         <span class="expando-left-text">2</span>
       Create a cardholder
         <span class="tag optional">Server-side</span>
@@ -3358,7 +3358,7 @@ var cardholder = service.Create(options);
 </div>
 <div class="expando" aria-expanded="true">
   <a id="create-card" href="testing.html#create-card" class="expando-trigger">
-    <h2 class="expando-title" data-no-anchor data-custom-toc-title="Create a card">
+    <a id="3-create-a-card-server-side" name="//apple_ref/cpp/Section/3%20Create%20a%20card%20Server-side" class="dashAnchor"></a><h2 class="expando-title" data-no-anchor data-custom-toc-title="Create a card">
         <span class="expando-left-text">3</span>
       Create a card
         <span class="tag optional">Server-side</span>
@@ -3516,7 +3516,7 @@ var card = service.Create(options);
 
 <div class="expando" aria-expanded="true">
   <a id="retrieve-card-details" href="testing.html#retrieve-card-details" class="expando-trigger">
-    <h2 class="expando-title" data-no-anchor data-custom-toc-title="Retrieve card details">
+    <a id="4-retrieve-card-details-server-side" name="//apple_ref/cpp/Section/4%20Retrieve%20card%20details%20Server-side" class="dashAnchor"></a><h2 class="expando-title" data-no-anchor data-custom-toc-title="Retrieve card details">
         <span class="expando-left-text">4</span>
       Retrieve card details
         <span class="tag optional">Server-side</span>
@@ -3654,7 +3654,7 @@ var details = service.Get("ic_1CoYuRKEl2ztzE5GIEDjQiUI", options);
 
 <div class="expando" aria-expanded="true">
   <a id="create-source" href="testing.html#create-source" class="expando-trigger">
-    <h2 class="expando-title" data-no-anchor data-custom-toc-title="Create source">
+    <a id="5-create-source-server-side" name="//apple_ref/cpp/Section/5%20Create%20source%20Server-side" class="dashAnchor"></a><h2 class="expando-title" data-no-anchor data-custom-toc-title="Create source">
         <span class="expando-left-text">5</span>
       Create source
         <span class="tag optional">Server-side</span>
@@ -3828,7 +3828,7 @@ var source = service.Create(options);
 
 <div class="expando" aria-expanded="true">
   <a id="create-charge" href="testing.html#create-charge" class="expando-trigger">
-    <h2 class="expando-title" data-no-anchor data-custom-toc-title="Create an uncaptured charge">
+    <a id="6-create-an-uncaptured-charge-server-side" name="//apple_ref/cpp/Section/6%20Create%20an%20uncaptured%20charge%20Server-side" class="dashAnchor"></a><h2 class="expando-title" data-no-anchor data-custom-toc-title="Create an uncaptured charge">
         <span class="expando-left-text">6</span>
       Create an uncaptured charge
         <span class="tag optional">Server-side</span>
@@ -3987,7 +3987,7 @@ var charge = service.Create(options);
 </section>
 
 <section>
-<h2 id="managing-purchases-with-the-api">Managing purchases with the API</h2>
+<a id="managing-purchases-with-the-api" name="//apple_ref/cpp/Section/Managing%20purchases%20with%20the%20API" class="dashAnchor"></a><h2 id="managing-purchases-with-the-api">Managing purchases with the API</h2>
 
 <p>You can test how your integration handles changes to authorizations by replicating the possible actions that can occur.</p>
 
@@ -4639,7 +4639,7 @@ var source = service.Create(options);
 
 
             </article>
-            <div class="docs-aside">
+            <div class="docs-aside" style="display: none;">
               <div class="docs-toc empty">
                 <h4>On this page</h4>
                 <ul class="docs-toc-list">

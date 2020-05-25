@@ -180,7 +180,7 @@
   <body class="">
     
       <div id="docs">
-        <div id="sidebar">
+        <div id="sidebar" style="display: none;">
             
   <div class="logo">
     <a href="recipes/switching-to-stripe.html" title="Stripe docs">
@@ -3008,7 +3008,7 @@
             <article id="content">
                 
   <header>
-  <h1 id="secure-remote-commerce-program-guide">Secure Remote Commerce Program Guide</h1>
+  <a name="//apple_ref/cpp/Section/Top" class="dashAnchor"></a><h1 id="secure-remote-commerce-program-guide">Secure Remote Commerce Program Guide</h1>
 
   <p>Accept payments via <a href="https://www.mastercard.us/en-us/merchants/grow-your-business/find-solutions-by-need/improve-checkout/secure-digital-checkout.html">Secure Remote Commerce</a> in your existing Stripe integration.</p>
 </header>
@@ -3025,7 +3025,7 @@ Note that Mastercard offers SRC through its Masterpass platform, and SRC is curr
 </section>
 
 <section>
-  <h2 id="integrating">Integrating the Secure Remote Commerce button</h2>
+  <a id="integrating-the-secure-remote-commerce-button" name="//apple_ref/cpp/Section/Integrating%20the%20Secure%20Remote%20Commerce%20button" class="dashAnchor"></a><h2 id="integrating">Integrating the Secure Remote Commerce button</h2>
 
   <p>To get started, generate your Masterpass <strong>Checkout ID</strong> in the <a href="https://dashboard.stripe.com/account/payments/settings">Dashboard</a> and configure your sandbox and production callback URLs.
 Note that Mastercard is offering SRC as an update to their Masterpass service, so you will see references to Masterpass within the documentation and code.</p>
@@ -3172,7 +3172,7 @@ button.addEventListener('click', (ev) =&gt;
 </section>
 
 <section>
-  <h2 id="completing-the-payment">Completing the payment</h2>
+  <a id="completing-the-payment" name="//apple_ref/cpp/Section/Completing%20the%20payment" class="dashAnchor"></a><h2 id="completing-the-payment">Completing the payment</h2>
 
   <p>When the user clicks the Masterpass button on your checkout page, it takes them to the Masterpass website where they can select an existing payment method from their account or input a new one.
 When the user completes the process, Masterpass redirects them to the callback URL that you configured when activating Masterpass, or to the specified callback URL when invoking <code>masterpass.checkout</code> function.
@@ -3211,7 +3211,7 @@ When creating the source, be sure to use the same unique value for the <code>car
 </section>
 
 <section>
-  <h2 id="testing-secure-remote-commerce">Testing Secure Remote Commerce</h2>
+  <a id="testing-secure-remote-commerce" name="//apple_ref/cpp/Section/Testing%20Secure%20Remote%20Commerce" class="dashAnchor"></a><h2 id="testing-secure-remote-commerce">Testing Secure Remote Commerce</h2>
 
   <p>To test your SRC integration against Mastercard&rsquo;s sandbox, create a new SRC user account during the checkout process on your website.
 Configure the account to use one of the <a href="https://developer.mastercard.com/page/masterpass-sandbox-testing-guidelines#new-web-experience">test cards</a> from the Masterpass documentation.
@@ -3250,7 +3250,7 @@ If everything works correctly, Mastercard redirects you back to your application
 
 
             </article>
-            <div class="docs-aside">
+            <div class="docs-aside" style="display: none;">
               <div class="docs-toc empty">
                 <h4>On this page</h4>
                 <ul class="docs-toc-list">

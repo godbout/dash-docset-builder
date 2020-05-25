@@ -180,7 +180,7 @@
   <body class="">
     
       <div id="docs">
-        <div id="sidebar">
+        <div id="sidebar" style="display: none;">
             
   <div class="logo">
     <a href="../recipes/switching-to-stripe.html" title="Stripe docs">
@@ -3008,7 +3008,7 @@
             <article id="content">
                 
   <header>
-  <h1>Making API calls for connected accounts</h1>
+  <a name="//apple_ref/cpp/Section/Top" class="dashAnchor"></a><h1>Making API calls for connected accounts</h1>
   <p>Learn how to add the right information to your API calls so you can make calls for your connected accounts.</p>
 </header>
 
@@ -3031,7 +3031,7 @@
 </ul></section>
 
 <section id="authentication-via-the-stripe-account-header">
-<h2 id="stripe-account-header">Adding the Stripe-Account header server-side</h2>
+<a id="adding-the-stripe-account-header-server-side" name="//apple_ref/cpp/Section/Adding%20the%20Stripe-Account%20header%20server-side" class="dashAnchor"></a><h2 id="stripe-account-header">Adding the Stripe-Account header server-side</h2>
 
 <p>Server-side API calls should include the platform account secret key and pass a <code>Stripe-Account</code> header with the ID of the connected account the call is for. This curl request performs a refund of a charge on a connected account:</p>
   <div class="code" data-language="curl">
@@ -3169,7 +3169,7 @@ Account account = accountService.Get("{{CONNECTED_STRIPE_ACCOUNT_ID}}");
 </section>
 
 <section id="mobile-auth">
-<h2 id="adding-the-connected-account-id-to-a-client-side-application">Adding the connected account ID to a client-side application</h2>
+<a id="adding-the-connected-account-id-to-a-client-side-application" name="//apple_ref/cpp/Section/Adding%20the%20connected%20account%20ID%20to%20a%20client-side%20application" class="dashAnchor"></a><h2 id="adding-the-connected-account-id-to-a-client-side-application">Adding the connected account ID to a client-side application</h2>
 
 <p>Client-side libraries set the connected account ID as an argument to the client application:</p>
   
@@ -3296,7 +3296,7 @@ class MyActivity: Activity() {
 </section>
 
 <section id="authentication-via-api-keys">
-<h2 id="api-keys">Adding API keys</h2>
+<a id="adding-api-keys" name="//apple_ref/cpp/Section/Adding%20API%20keys" class="dashAnchor"></a><h2 id="api-keys">Adding API keys</h2>
 
 <aside class="note">
   <h3>Saving API keys</h3>
@@ -3472,7 +3472,7 @@ var customer = service.Create(options);
 </section>
 
 <section>
-  <h2>Next steps</h2>
+  <a id="next-steps" name="//apple_ref/cpp/Section/Next%20steps" class="dashAnchor"></a><h2>Next steps</h2>
   <p>Learn about the API calls you can make for your connected accounts:</p>
 <ul class="next-steps">
     <li><a href="charges.html"><span>Creating Charges</span></a></li>
@@ -3514,7 +3514,7 @@ var customer = service.Create(options);
 
 
             </article>
-            <div class="docs-aside">
+            <div class="docs-aside" style="display: none;">
               <div class="docs-toc empty">
                 <h4>On this page</h4>
                 <ul class="docs-toc-list">

@@ -180,7 +180,7 @@
   <body class="">
     
       <div id="docs">
-        <div id="sidebar">
+        <div id="sidebar" style="display: none;">
             
   <div class="logo">
     <a href="../../recipes/switching-to-stripe.html" title="Stripe docs">
@@ -3008,7 +3008,7 @@
             <article id="content">
                 
   <header>
-  <h1 id="working-with-multiple-products-per-subscription">Working with multiple products per subscription</h1>
+  <a name="//apple_ref/cpp/Section/Top" class="dashAnchor"></a><h1 id="working-with-multiple-products-per-subscription">Working with multiple products per subscription</h1>
 
   <p>Create subscriptions with multiple products, all billed in a single invoice.</p>
 </header>
@@ -3026,7 +3026,7 @@ Only a single payment for that invoice is required, reducing your costs and the 
 </section>
 
 <section>
-  <h2 id="creating">Creating multiple-product subscriptions</h2>
+  <a id="creating-multiple-product-subscriptions" name="//apple_ref/cpp/Section/Creating%20multiple-product%20subscriptions" class="dashAnchor"></a><h2 id="creating">Creating multiple-product subscriptions</h2>
 
   <p>Create multiple-product subscriptions on a customer using the <code>items</code> parameter. Provide the <code>price</code> and, optionally, a <code>quantity</code> (when using a value other than 1), for each product:</p>
 
@@ -3307,7 +3307,7 @@ Subscription subscription = service.Create(options);
 </section>
 
 <section>
-  <h2 id="billing-periods-with-multiple-prices">Billing periods with multiple prices</h2>
+  <a id="billing-periods-with-multiple-prices" name="//apple_ref/cpp/Section/Billing%20periods%20with%20multiple%20prices" class="dashAnchor"></a><h2 id="billing-periods-with-multiple-prices">Billing periods with multiple prices</h2>
 
   <p>Conventional prices that charge a fixed amount on an interval are billed at the start of each <a href="billing-cycle.html">billing cycle</a>. With each invoice, the customer effectively pays for the next interval of service. With <a href="metered-billing.html">metered billing</a>, the amount paid by the customer varies based on consumption during the billing cycle, so the customer pays for their usage at the end.</p>
 
@@ -3315,7 +3315,7 @@ Subscription subscription = service.Create(options);
 </section>
 
 <section>
-  <h2 id="restrictions">Restrictions</h2>
+  <a id="restrictions" name="//apple_ref/cpp/Section/Restrictions" class="dashAnchor"></a><h2 id="restrictions">Restrictions</h2>
 
   <aside class="note">
     <h3 id="multiple-subscriptions">Multiple subscriptions</h3>
@@ -3327,7 +3327,7 @@ Subscription subscription = service.Create(options);
 </section>
 
 <section>
-  <h2 id="discounts-taxes-trial-periods">Discounts, taxes, and trial periods</h2>
+  <a id="discounts-taxes-and-trial-periods" name="//apple_ref/cpp/Section/Discounts%2C%20taxes%2C%20and%20trial%20periods" class="dashAnchor"></a><h2 id="discounts-taxes-trial-periods">Discounts, taxes, and trial periods</h2>
 
   <p>When using multiple products, you can also create discounts, charge taxes, and use trial periods as you would with a single-product subscription.
 Provide these as top-level arguments to the create or update subscription call, as they apply to the subscription at large:</p>
@@ -3544,7 +3544,7 @@ Subscription subscription = service.Create(options);
 </section>
 
 <section>
-  <h2 id="next-steps">Next steps</h2>
+  <a id="next-steps" name="//apple_ref/cpp/Section/Next%20steps" class="dashAnchor"></a><h2 id="next-steps">Next steps</h2>
 
   <p>Now that you understand how to use multiple prices on a single subscription, you may want to check out:</p>
 
@@ -3586,7 +3586,7 @@ Subscription subscription = service.Create(options);
 
 
             </article>
-            <div class="docs-aside">
+            <div class="docs-aside" style="display: none;">
               <div class="docs-toc empty">
                 <h4>On this page</h4>
                 <ul class="docs-toc-list">

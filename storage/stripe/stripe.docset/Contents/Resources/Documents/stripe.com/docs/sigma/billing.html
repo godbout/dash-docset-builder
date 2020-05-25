@@ -180,7 +180,7 @@
   <body class="">
     
       <div id="docs">
-        <div id="sidebar">
+        <div id="sidebar" style="display: none;">
             
   <div class="logo">
     <a href="../recipes/switching-to-stripe.html" title="Stripe docs">
@@ -3008,7 +3008,7 @@
             <article id="content">
                 
   <header>
-  <h1>Querying Billing</h1>
+  <a name="//apple_ref/cpp/Section/Top" class="dashAnchor"></a><h1>Querying Billing</h1>
   <p>Use Stripe Sigma to retrieve information about Billing.</p>
 </header>
 
@@ -3018,7 +3018,7 @@
 <p>To explore billing data further, you can make use of the additional tables that represent the components of subscriptions and invoices, such as <code>plans</code>, <code>products</code>, or <code>coupons</code>. In addition, the <code>customers</code> table is a fundamental part of billing, and contains data you may need to report on.</p></section>
 
 <section>
-<h2 id="subscriptions">Subscriptions</h2>
+<a id="subscriptions" name="//apple_ref/cpp/Section/Subscriptions" class="dashAnchor"></a><h2 id="subscriptions">Subscriptions</h2>
 
 <p>Each row within the <code>subscriptions</code> table represents data about an individual <a href="../api/index.html#subscription_object">Subscription</a> object&mdash;the same information that can be retrieved through the API or available in the <a href="https://dashboard.stripe.com/test/subscriptions">Dashboard</a>. Every subscription that has been created on your account can be reported on.</p>
 
@@ -3075,7 +3075,7 @@ limit 5</code></div></pre>
 </section>
 
 <section>
-<h2 id="customers">Customers</h2>
+<a id="customers" name="//apple_ref/cpp/Section/Customers" class="dashAnchor"></a><h2 id="customers">Customers</h2>
 
 <p>Data about <a href="../api/index.html#customers">Customer</a> objects is contained in the <code>customers</code> table (this is not part of the Billing Tables group). It is commonly used as part of billing-based reports and can be joined to a number of tables. It&rsquo;s also useful if you&rsquo;re creating <a href="transactions.html#charges">charges</a> with saved payment information.</p>  <div class="image full">
     <a href="../../img/docs/sigma/customers.png" class="zoomable" data-width="1696" data-height="994"><img src="../../img/docs/sigma/customers.png" width="100%"></a>
@@ -3129,7 +3129,7 @@ limit 5</code></div></pre>
 </section>
 
 <section>
-<h2 id="products-amp-plans">Products &amp; Plans</h2>
+<a id="products-plans" name="//apple_ref/cpp/Section/Products%20%26%20Plans" class="dashAnchor"></a><h2 id="products-amp-plans">Products &amp; Plans</h2>
 
 <p>Products describe items that your customers can purchase with a subscription. Plans are tied to products and set out the cost, billing interval, and currency.
 When viewing data from the <code>subscriptions</code> table, <code>subscriptions.plan_id</code> can be joined to <code>plans.id</code>, and <code>plans.product_id</code> can be joined to <code>products.id</code>.
@@ -3185,7 +3185,7 @@ limit 10</code></div></pre>
 </section>
 
 <section>
-<h2 id="invoices">Invoices</h2>  <aside class="note">
+<a id="invoices" name="//apple_ref/cpp/Section/Invoices" class="dashAnchor"></a><h2 id="invoices">Invoices</h2>  <aside class="note">
     <h3>Working with invoices</h3>
     <p>Refer to our <a href="../billing/invoices.html">invoices</a> documentation to learn more about invoices, invoice items, and invoice line items.</p>
   </aside>
@@ -3260,7 +3260,7 @@ where subscription_id = 'sub_ALJXL9gBYtv6GJ'</code></div></pre>
 <p>The <code>period_start</code> and <code>period_end</code> values of an invoice represents when invoice items may have been created&ndash;it is not always indicative of the period of service that the customer is being billed for. For example, if a customer is billed on the 1st of each month and exceeds their monthly allowance on the 15th, you might create an invoice item for any additional costs that the customer should be charged for. This invoice item is then included in the next invoice, which is created on the 1st of the next month. When the next invoice is generated, the <code>period_start</code> date would be 15th of the previous month: the date the additional line item was first created.</p></section>
 
 <section>
-<h2 id="coupons-and-discounts">Coupons and discounts</h2>
+<a id="coupons-and-discounts" name="//apple_ref/cpp/Section/Coupons%20and%20discounts" class="dashAnchor"></a><h2 id="coupons-and-discounts">Coupons and discounts</h2>
 
 <p>A <a href="../billing/subscriptions/discounts.html">Coupon</a> object represents an amount or percentage-off discount that can be applied to subscriptions or customers. A discount is the application of a coupon, represented by a <a href="../api/index.html#discounts">Discount</a> object.</p>
 
@@ -3343,7 +3343,7 @@ limit 5</code></div></pre>
 
 
             </article>
-            <div class="docs-aside">
+            <div class="docs-aside" style="display: none;">
               <div class="docs-toc empty">
                 <h4>On this page</h4>
                 <ul class="docs-toc-list">

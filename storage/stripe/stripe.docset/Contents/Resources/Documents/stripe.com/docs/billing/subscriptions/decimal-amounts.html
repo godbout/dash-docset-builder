@@ -180,7 +180,7 @@
   <body class="">
     
       <div id="docs">
-        <div id="sidebar">
+        <div id="sidebar" style="display: none;">
             
   <div class="logo">
     <a href="../../recipes/switching-to-stripe.html" title="Stripe docs">
@@ -3008,7 +3008,7 @@
             <article id="content">
                 
   <header>
-  <h1>Decimal amounts for pricing</h1>
+  <a name="//apple_ref/cpp/Section/Top" class="dashAnchor"></a><h1>Decimal amounts for pricing</h1>
   <p>Learn how to create prices and invoice items with decimal amounts.</p>
 </header>
 
@@ -3017,7 +3017,7 @@
 </section>
 
 <section>
-  <h2 id="creating-objects">Creating objects with decimal amounts</h2>
+  <a id="creating-objects-with-decimal-amounts" name="//apple_ref/cpp/Section/Creating%20objects%20with%20decimal%20amounts" class="dashAnchor"></a><h2 id="creating-objects">Creating objects with decimal amounts</h2>
 
   <p>To <a href="../../api/index.html#create_price">create prices</a> with decimal amounts, specify <code>unit_amount_decimal</code> instead of <code>unit_amount</code>. <code>unit_amount_decimal</code> allows you to set the amount in the minor unit of the currency you are charging in. For example, you can set <code>unit_amount_decimal = 105.5</code> in USD to represent 105.5 cents, or $1.055. <code>unit_amount_decimal</code> accepts decimals up to 12 decimal places.</p>
 
@@ -3032,7 +3032,7 @@
 </section>
 
 <section>
-  <h2 id="rounding">Rounding</h2>
+  <a id="rounding" name="//apple_ref/cpp/Section/Rounding" class="dashAnchor"></a><h2 id="rounding">Rounding</h2>
   <p>Rounding occurs on the line item level of your invoices. For example, if you create a price with <code>unit_amount_decimal = 0.05</code> and a monthly subscription for that [price] with <code>quantity = 30</code>, rounding occurs after the quantity is multiplied by the decimal amount. In this case, the calculated amount for the line item would be <code>0.05 * 30 = 1.5</code>, which is then rounded up to 2 cents. If you have multiple line items, each will be rounded before summing up the total amount for the invoice. This ensures that customers are still charged an integer minor unit amount, as decimal amounts only apply for pricing.</p>
 </section>
   <section class="csat">
@@ -3067,7 +3067,7 @@
 
 
             </article>
-            <div class="docs-aside">
+            <div class="docs-aside" style="display: none;">
               <div class="docs-toc empty">
                 <h4>On this page</h4>
                 <ul class="docs-toc-list">

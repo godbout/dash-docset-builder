@@ -180,7 +180,7 @@
   <body class="">
     
       <div id="docs">
-        <div id="sidebar">
+        <div id="sidebar" style="display: none;">
             
   <div class="logo">
     <a href="recipes/switching-to-stripe.html" title="Stripe docs">
@@ -3008,7 +3008,7 @@
             <article id="content">
                 
   <header>
-<h1>SOFORT payments with Sources</h1>
+<a name="//apple_ref/cpp/Section/Top" class="dashAnchor"></a><h1>SOFORT payments with Sources</h1>
 <p>Use Sources to accept payments using SOFORT, a popular payment method in Europe.</p>
 </header>
 
@@ -3033,7 +3033,7 @@
 <p>SOFORT is a <a href="sources/bitcoin.html#pull-or-push-of-funds">push</a>-based, <a href="sources/bitcoin.html#single-use-or-reusable">single-use</a>, and <a href="sources/bitcoin.html#synchronous-or-asynchronous-confirmation">asynchronous</a> method of payment. This means your customer takes action to send the amount to you through a <a href="sources/bitcoin.html#flow-for-customer-action">redirect</a> and it typically takes 2 business days but can take up to 14 days to confirm the success or failure of a payment.</p></section>
 
 <section>
-<h2 id="create-source"><span class="step">Step 1:</span> Create a Source object</h2>
+<a id="step-1-create-a-source-object" name="//apple_ref/cpp/Section/Step%201%3A%20Create%20a%20Source%20object" class="dashAnchor"></a><h2 id="create-source"><span class="step">Step 1:</span> Create a Source object</h2>
 
 <p>A <code>Source</code> object is either created client-side using <a href="stripe-js.html">Stripe.js</a> or server-side using the <a href="api/index.html#create_source">Source creation endpoint</a>, with the following parameters:</p>
 
@@ -3198,7 +3198,7 @@
 </table></section>
 
 <section>
-<h2 id="customer-action"><span class="step">Step 2:</span> Have the customer authorize the payment</h2>
+<a id="step-2-have-the-customer-authorize-the-payment" name="//apple_ref/cpp/Section/Step%202%3A%20Have%20the%20customer%20authorize%20the%20payment" class="dashAnchor"></a><h2 id="customer-action"><span class="step">Step 2:</span> Have the customer authorize the payment</h2>
 
 <p>When creating a source, its status is initially set to <code>pending</code> and cannot yet be used to create a charge. Your customer must authorize a SOFORT payment to make the source chargeable. To allow your customer to authorize the payment, redirect them to the URL provided within the <code>redirect[url]</code> attribute of the <code>Source</code> object.</p>
 
@@ -3241,7 +3241,7 @@ of your choice (these patterns are significant only in testmode):</p>
 </table></section>
 
 <section>
-<h2 id="charge-request"><span class="step">Step 3:</span> Charge the Source</h2>
+<a id="step-3-charge-the-source" name="//apple_ref/cpp/Section/Step%203%3A%20Charge%20the%20Source" class="dashAnchor"></a><h2 id="charge-request"><span class="step">Step 3:</span> Charge the Source</h2>
 
 <aside class="note">
   <h3>Using webhooks</h3>
@@ -3420,7 +3420,7 @@ Charge charge = service.Create(options);
 <p>Refer to our <a href="sources/customers.html">Sources &amp; Customers</a> guide for more information on how single-use Sources interact with Customers.</p></section>
 
 <section>
-<h2 id="charge-confirmation"><span class="step">Step 4:</span> Confirm that the charge has succeeded</h2>
+<a id="step-4-confirm-that-the-charge-has-succeeded" name="//apple_ref/cpp/Section/Step%204%3A%20Confirm%20that%20the%20charge%20has%20succeeded" class="dashAnchor"></a><h2 id="charge-confirmation"><span class="step">Step 4:</span> Confirm that the charge has succeeded</h2>
 
 <p>Since SOFORT is an <a href="sources/bitcoin.html#synchronous-or-asynchronous-confirmation">asynchronous</a> payment method, the <a href="api/index.html#charge_object">Charge</a> object&rsquo;s status remains in a pending state for up to 14 days from its creation (also known as the cut-off date). Once the charge is confirmed&mdash;and the funds guaranteed&mdash;its status is updated to <code>succeeded</code>. Either of the following events are sent when the charge&rsquo;s status is updated:</p>
 
@@ -3484,7 +3484,7 @@ Charge charge = service.Create(options);
 <p>When creating a test charge with this source, the charge&rsquo;s status is initially set to <code>pending</code> before being automatically transitioned. Webhook events are also triggered when using test sources and charges. The <code>charge.pending</code> event is first triggered, followed by either the <code>charge.succeeded</code> or <code>charge.failed</code> event immediately after.</p></section>
 
 <section>
-<h2>Related resources</h2>
+<a id="related-resources" name="//apple_ref/cpp/Section/Related%20resources" class="dashAnchor"></a><h2>Related resources</h2>
 <ul class="next-steps">
     <li><a href="sources/sofort/recurring.html"><span>Recurring SOFORT Payments with Sources</span></a></li>
     <li><a href="sources/bitcoin.html"><span>Other supported payment methods</span></a></li>
@@ -3525,7 +3525,7 @@ Charge charge = service.Create(options);
 
 
             </article>
-            <div class="docs-aside">
+            <div class="docs-aside" style="display: none;">
               <div class="docs-toc empty">
                 <h4>On this page</h4>
                 <ul class="docs-toc-list">

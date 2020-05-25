@@ -180,7 +180,7 @@
   <body class="">
     
       <div id="docs">
-        <div id="sidebar">
+        <div id="sidebar" style="display: none;">
             
   <div class="logo">
     <a href="../recipes/switching-to-stripe.html" title="Stripe docs">
@@ -3008,7 +3008,7 @@
             <article id="content">
                 
   <header>
-   <h1>Share customers across accounts</h1>
+   <a name="//apple_ref/cpp/Section/Top" class="dashAnchor"></a><h1>Share customers across accounts</h1>
   <p>With <a href="https://stripe.com/connect">Connect</a>, you can clone your customers' payment information across multiple connected accounts for reuse.</p>
 </header>
 
@@ -3030,7 +3030,7 @@
 </ol></section>
 
 <section>
-  <h2 id="storing-customers"><span class="step">Step 1:</span> Storing customers</h2>
+  <a id="step-1-storing-customers" name="//apple_ref/cpp/Section/Step%201%3A%20Storing%20customers" class="dashAnchor"></a><h2 id="storing-customers"><span class="step">Step 1:</span> Storing customers</h2>
   <aside class="note">
     <h3>Note</h3>
     <p>Cloning saved payment methods is only relevant when <a href="direct-charges.html">creating direct charges on connected accounts</a>. It's not necessary when making charges on your platform account.</p>
@@ -3167,7 +3167,7 @@ var customer = service.Create(options);
 </section>
 
 <section>
-  <h2 id="making-tokens"><span class="step">Step 2:</span> Making tokens</h2>
+  <a id="step-2-making-tokens" name="//apple_ref/cpp/Section/Step%202%3A%20Making%20tokens" class="dashAnchor"></a><h2 id="making-tokens"><span class="step">Step 2:</span> Making tokens</h2>
 <p>When you&rsquo;re ready to create a charge on a connected account using a customer saved on your platform account, <a href="../api/index.html#create_card_token">create a new token</a> for that purpose. You&rsquo;ll need:</p>
 
 <ul>
@@ -3320,7 +3320,7 @@ var token = service.Create(options, requestOptions);
 </section>
 
 <section>
-  <h2 id="making-a-charge"><span class="step">Step 3:</span> Creating charges</h2>
+  <a id="step-3-creating-charges" name="//apple_ref/cpp/Section/Step%203%3A%20Creating%20charges" class="dashAnchor"></a><h2 id="making-a-charge"><span class="step">Step 3:</span> Creating charges</h2>
 
   <p>Like a regular token or source created by Stripe.js or Checkout, the one generated in the previous step acts as a credit card number. You can use the source or token to create a one-time payment as shown below.</p>
 
@@ -3811,7 +3811,7 @@ var paymentIntent = service.Create(options, requestOptions);
 </section>
 
 <section>
-  <h2 id="next-steps">Further reading</h2>
+  <a id="further-reading" name="//apple_ref/cpp/Section/Further%20reading" class="dashAnchor"></a><h2 id="next-steps">Further reading</h2>
   <p>Discover what other Connect functionality is available!</p>
 <ul class="next-steps">
     <li><a href="direct-charges.html"><span>Creating Charges</span></a></li>
@@ -3852,7 +3852,7 @@ var paymentIntent = service.Create(options, requestOptions);
 
 
             </article>
-            <div class="docs-aside">
+            <div class="docs-aside" style="display: none;">
               <div class="docs-toc empty">
                 <h4>On this page</h4>
                 <ul class="docs-toc-list">

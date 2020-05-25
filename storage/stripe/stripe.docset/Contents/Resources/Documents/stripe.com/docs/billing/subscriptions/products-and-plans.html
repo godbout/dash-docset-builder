@@ -191,7 +191,7 @@
   <body class="">
     
       <div id="docs">
-        <div id="sidebar">
+        <div id="sidebar" style="display: none;">
             
   <div class="logo">
     <a href="../../recipes/switching-to-stripe.html" title="Stripe docs">
@@ -3019,7 +3019,7 @@
             <article id="content">
                 
   <header>
-  <h1>Products and Prices</h1>
+  <a name="//apple_ref/cpp/Section/Top" class="dashAnchor"></a><h1>Products and Prices</h1>
 
   <p>Learn how to create and use products and prices.</p>
 </header>
@@ -3041,7 +3041,7 @@
 
 <div class="expando" aria-expanded="true">
   <a id="create-product" href="products-and-plans.html#create-product" class="expando-trigger">
-    <h2 class="expando-title" data-no-anchor data-custom-toc-title="Create a product">
+    <a id="1-create-a-product" name="//apple_ref/cpp/Section/1%20Create%20a%20product" class="dashAnchor"></a><h2 class="expando-title" data-no-anchor data-custom-toc-title="Create a product">
         <span class="expando-left-text">1</span>
       Create a product
     </h2>
@@ -3297,7 +3297,7 @@ var product = service.Create(options);
 
 <div class="expando" aria-expanded="true">
   <a id="create-prices" href="products-and-plans.html#create-prices" class="expando-trigger">
-    <h2 class="expando-title" data-no-anchor data-custom-toc-title="Create prices">
+    <a id="2-create-prices" name="//apple_ref/cpp/Section/2%20Create%20prices" class="dashAnchor"></a><h2 class="expando-title" data-no-anchor data-custom-toc-title="Create prices">
         <span class="expando-left-text">2</span>
       Create prices
     </h2>
@@ -3617,7 +3617,7 @@ var price = service.Create(options);
 
 <div class="expando" aria-expanded="true">
   <a id="create-customer" href="products-and-plans.html#create-customer" class="expando-trigger">
-    <h2 class="expando-title" data-no-anchor data-custom-toc-title="Create a customer">
+    <a id="3-create-a-customer" name="//apple_ref/cpp/Section/3%20Create%20a%20customer" class="dashAnchor"></a><h2 class="expando-title" data-no-anchor data-custom-toc-title="Create a customer">
         <span class="expando-left-text">3</span>
       Create a customer
     </h2>
@@ -3782,7 +3782,7 @@ var customer = service.Create(options);
 
 <div class="expando" aria-expanded="true">
   <a id="bill-customer" href="products-and-plans.html#bill-customer" class="expando-trigger">
-    <h2 class="expando-title" data-no-anchor data-custom-toc-title="Bill the customer">
+    <a id="4-bill-the-customer" name="//apple_ref/cpp/Section/4%20Bill%20the%20customer" class="dashAnchor"></a><h2 class="expando-title" data-no-anchor data-custom-toc-title="Bill the customer">
         <span class="expando-left-text">4</span>
       Bill the customer
     </h2>
@@ -3790,7 +3790,7 @@ var customer = service.Create(options);
   <div class="expando-content" tabindex="-1">
     <p>You can bill customers using invoices, subscriptions, or <a href="../../checkout.html">Checkout</a>. Examples for each of these methods is explained below.</p>
 
-<h2 id="invoices">Using invoices</h2>
+<a id="using-invoices" name="//apple_ref/cpp/Section/Using%20invoices" class="dashAnchor"></a><h2 id="invoices">Using invoices</h2>
 
 <p>If you need to invoice a customer for a one-time charge like your setup fee, create an <a href="../../api/index.html#invoiceitems">invoice item</a> by passing the customer ID, currency, and price:</p>
 
@@ -4672,7 +4672,7 @@ var session = service.Create(options);
 
 <p>To read more about how to use Checkout to collect payment methods and bill your customers, read the <a href="../../checkout.html">Checkout guide</a>.</p>
 
-<h2 id="ad-hoc">Ad-hoc prices</h2>
+<a id="ad-hoc-prices" name="//apple_ref/cpp/Section/Ad-hoc%20prices" class="dashAnchor"></a><h2 id="ad-hoc">Ad-hoc prices</h2>
 
 <p>In some cases, you might want to use a custom price that has not been preconfigured. For example, donation sites often allow customers to specify the amount they want to donate. In this case, you&rsquo;re offering a limited time promotion to &ldquo;choose what you pay&rdquo; for your analytics dashboard. You can pass in <code>price_data</code> instead of a price ID. For example, subscribing a customer to a monthly subscription with a custom price might look like this:</p>
 
@@ -4893,7 +4893,7 @@ var subscription = service.Create(options);
 
 <div class="expando" aria-expanded="true">
   <a id="managing-prices" href="products-and-plans.html#managing-prices" class="expando-trigger">
-    <h2 class="expando-title" data-no-anchor data-custom-toc-title="Managing prices">
+    <a id="optional-managing-prices" name="//apple_ref/cpp/Section/Optional%20Managing%20prices" class="dashAnchor"></a><h2 class="expando-title" data-no-anchor data-custom-toc-title="Managing prices">
         <span class="expando-left-text">Optional</span>
       Managing prices
     </h2>
@@ -5430,7 +5430,7 @@ var price = service.Create(options);
 
 
             </article>
-            <div class="docs-aside">
+            <div class="docs-aside" style="display: none;">
               <div class="docs-toc empty">
                 <h4>On this page</h4>
                 <ul class="docs-toc-list">

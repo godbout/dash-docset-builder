@@ -180,7 +180,7 @@
   <body class="">
     
       <div id="docs">
-        <div id="sidebar">
+        <div id="sidebar" style="display: none;">
             
   <div class="logo">
     <a href="../recipes/switching-to-stripe.html" title="Stripe docs">
@@ -3008,7 +3008,7 @@
             <article id="content">
                 
   <header>
-  <h1>Understanding Connect account balances</h1>
+  <a name="//apple_ref/cpp/Section/Top" class="dashAnchor"></a><h1>Understanding Connect account balances</h1>
   <p>Learn how Stripe account balances work when using <a href="https://stripe.com/connect">Connect</a>.</p>
 </header>
 
@@ -3036,7 +3036,7 @@
 
 <section>
 
-  <h2 id="accounting-for-negative-balances">Accounting for negative balances</h2>
+  <a id="accounting-for-negative-balances" name="//apple_ref/cpp/Section/Accounting%20for%20negative%20balances" class="dashAnchor"></a><h2 id="accounting-for-negative-balances">Accounting for negative balances</h2>
   <aside class="note">
     <h3>Validating connected banks</h3>
     <p>To reduce the risk of financial loss, we recommended you ensure each connected account has a valid <a href="payouts.html">bank account</a>.</p>
@@ -3163,7 +3163,7 @@ Balance balance = service.Get(requestOptions);
 </section>
 
 <section>
-<h2 id="understanding-connected-reserve-balances">Understanding connected reserve balances</h2>
+<a id="understanding-connected-reserve-balances" name="//apple_ref/cpp/Section/Understanding%20connected%20reserve%20balances" class="dashAnchor"></a><h2 id="understanding-connected-reserve-balances">Understanding connected reserve balances</h2>
 
 <p>To ensure funds can be covered, Stripe holds a reserve on your platform account&rsquo;s <code>available</code> balance to cover any negative <code>available</code> balances across your Custom accounts. Depending on the country that the Custom account is in, Stripe will initiate a bank withdrawal on the Custom account&rsquo;s bank account to cover the <a href="https://support.stripe.com/questions/negative-balances-in-stripe-handling-by-country">negative balance</a>. Although the <code>available</code> balance for the Custom account zeroes out as soon as the withdrawal is posted, the platform reserve for that account is held for an additional 3 business days. You&rsquo;ll see this reserve reflected in the <a href="https://dashboard.stripe.com/test/balance/overview">Dashboard</a> and exported reports (as a <strong>reserve transaction</strong>).</p>
 
@@ -3185,7 +3185,7 @@ Balance balance = service.Get(requestOptions);
 </section>
 
 <section>
-<h2 id="holding-funds">Holding funds</h2>
+<a id="holding-funds" name="//apple_ref/cpp/Section/Holding%20funds" class="dashAnchor"></a><h2 id="holding-funds">Holding funds</h2>
 
 <p>If your platform needs more granular control over your payout schedule, you can take one of the following approaches:</p>
 
@@ -3201,7 +3201,7 @@ Balance balance = service.Get(requestOptions);
 <p>For compliance reasons, funds can be held in a reserve for up to 90 days from charge creation to payout. The exception to this limitation is the U.S., where funds can be held in reserve for up to two years.</p></section>
 
 <section>
-  <h2>Further reading</h2>
+  <a id="further-reading" name="//apple_ref/cpp/Section/Further%20reading" class="dashAnchor"></a><h2>Further reading</h2>
   <p>Discover what other Connect functionality is available!</p>
 <ul class="next-steps">
     <li><a href="direct-charges.html"><span>Creating Direct Charges</span></a></li>
@@ -3242,7 +3242,7 @@ Balance balance = service.Get(requestOptions);
 
 
             </article>
-            <div class="docs-aside">
+            <div class="docs-aside" style="display: none;">
               <div class="docs-toc empty">
                 <h4>On this page</h4>
                 <ul class="docs-toc-list">

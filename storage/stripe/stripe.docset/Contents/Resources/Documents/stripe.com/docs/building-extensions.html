@@ -181,7 +181,7 @@
   <body class="">
     
       <div id="docs">
-        <div id="sidebar">
+        <div id="sidebar" style="display: none;">
             
   <div class="logo">
     <a href="recipes/switching-to-stripe.html" title="Stripe docs">
@@ -3010,7 +3010,7 @@
                 
   
 <header>
-  <h1>Building extensions</h1>
+  <a name="//apple_ref/cpp/Section/Top" class="dashAnchor"></a><h1>Building extensions</h1>
   <p>Learn how to build Stripe extensions. To see what others have built, check out the <a href="https://stripe.com/works-with">Works with Stripe gallery</a>.</p>
 
 </header>
@@ -3034,7 +3034,7 @@
 </section>
 
 <section>
-  <h2 id="register-platform"><span class="step">Step 1:</span> Register your platform</h2>
+  <a id="step-1-register-your-platform" name="//apple_ref/cpp/Section/Step%201%3A%20Register%20your%20platform" class="dashAnchor"></a><h2 id="register-platform"><span class="step">Step 1:</span> Register your platform</h2>
 
 <p>To register your application, fill out the <a href="https://dashboard.stripe.com/account/applications/settings">Standard account form</a> in your Dashboard:</p>
 
@@ -3047,7 +3047,7 @@
 <p>Stripe provides a unique identifier for your platform called a <code>client_id</code>. The <code>redirect_uri</code> is set by you, and is the page to which users are directed after connecting their accounts. The development and production versions of these values make <a href="connect/testing.html#using-oauth">testing</a> easier. Take note of these values now so you can complete the next step.</p></section>
 
 <section>
-  <h2 id="connect-accounts"><span class="step">Step 2:</span> Connect accounts using OAuth</h2>
+  <a id="step-2-connect-accounts-using-oauth" name="//apple_ref/cpp/Section/Step%202%3A%20Connect%20accounts%20using%20OAuth" class="dashAnchor"></a><h2 id="connect-accounts"><span class="step">Step 2:</span> Connect accounts using OAuth</h2>
 
 <aside class="note">
   <h3>OAuth 2.0</h3>
@@ -3086,7 +3086,7 @@
 <p>You need to store the <code>stripe_user_id</code> so you can identify user accounts.</p></section>
 
 <section>
-  <h2 id="use-api"><span class="step">Step 3:</span> Use the API on behalf of connected accounts</h2>
+  <a id="step-3-use-the-api-on-behalf-of-connected-accounts" name="//apple_ref/cpp/Section/Step%203%3A%20Use%20the%20API%20on%20behalf%20of%20connected%20accounts" class="dashAnchor"></a><h2 id="use-api"><span class="step">Step 3:</span> Use the API on behalf of connected accounts</h2>
 
 <p>After users link their Stripe accounts to your application, you can make <a href="api/index.html">API requests</a> on their behalf. To perform API requests, you need your platform account&rsquo;s secret key, and a <code>Stripe-Account</code> header that identifies the account for which you&rsquo;re making the request. All Stripe libraries support this style of authentication on a per-request basis.</p>
 
@@ -3268,21 +3268,21 @@ var intents = service.List(options, requestOptions);
 </section>
 
 <section>
-<h2 id="charging-for-application">Charging for your application</h2>
+<a id="charging-for-your-application" name="//apple_ref/cpp/Section/Charging%20for%20your%20application" class="dashAnchor"></a><h2 id="charging-for-application">Charging for your application</h2>
 
 <p>Your platform&rsquo;s Stripe account can process its own charges, so you can still charge for your application with <code>read_only</code> access. After customers connect their Stripe accounts, ask for their payment details and then <a href="api/subscriptions/create.html">create a subscription</a> for them in your Stripe account. Make sure to store the created customer ID with the associated Stripe account ID, so that you can track which users are paid and active, and which ones are not.</p>
 
 <p>If you create subscriptions, you can also specify an <code>application_fee_percent</code> as a fee for your application. This is charged on top of any Stripe fees. Read the <a href="connect/subscriptions.html">Subscriptions</a> documentation to learn more.</p></section>
 
 <section>
-<h2 id="disconnected-accounts">Disconnected accounts</h2>
+<a id="disconnected-accounts" name="//apple_ref/cpp/Section/Disconnected%20accounts" class="dashAnchor"></a><h2 id="disconnected-accounts">Disconnected accounts</h2>
 
 <p>Users can disconnect their accounts from your integration at any time. When this happens, an <code>account.application.deauthorized</code> webhook event is sent. You can use this notification to trigger cleanup on your end, such as disabling the user&rsquo;s account on your site or removing their data.</p>
 
 <p>You can also disconnect accounts from your integration, by making a request to the <a href="connect/oauth-reference.html#post-deauthorize">OAuth deauthorization</a> endpoint.</p></section>
 
 <section>
-<h2 id="submitting-integration">Submitting your extension to our gallery</h2>
+<a id="submitting-your-extension-to-our-gallery" name="//apple_ref/cpp/Section/Submitting%20your%20extension%20to%20our%20gallery" class="dashAnchor"></a><h2 id="submitting-integration">Submitting your extension to our gallery</h2>
 
 <p>The <a href="https://stripe.com/works-with">Works with Stripe gallery</a> showcases hundreds of applications and services already integrated with Stripe. To get your extension listed there&mdash;and reach more customers&mdash;join the <a href="https://stripe.com/partner-program">Stripe Partner Program</a>, and become a Stripe Verified Partner.</p></section>
 
@@ -3318,7 +3318,7 @@ var intents = service.List(options, requestOptions);
 
 
             </article>
-            <div class="docs-aside">
+            <div class="docs-aside" style="display: none;">
               <div class="docs-toc empty">
                 <h4>On this page</h4>
                 <ul class="docs-toc-list">

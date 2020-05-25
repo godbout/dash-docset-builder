@@ -217,7 +217,7 @@
   <body class="">
     
       <div id="docs">
-        <div id="sidebar">
+        <div id="sidebar" style="display: none;">
             
   <div class="logo">
     <a href="../recipes/switching-to-stripe.html" title="Stripe docs">
@@ -3045,7 +3045,7 @@
             <article id="content">
                 
   <header>
-  <h1>The Sources API</h1>
+  <a name="//apple_ref/cpp/Section/Top" class="dashAnchor"></a><h1>The Sources API</h1>
   <p>Learn about the different payment methods and mechanisms available through the Sources API.</p>
 
 
@@ -3069,7 +3069,7 @@
 </section>
 
 <section>
-<h2 id="supported-payment-methods">Supported payment methods</h2>
+<a id="supported-payment-methods" name="//apple_ref/cpp/Section/Supported%20payment%20methods" class="dashAnchor"></a><h2 id="supported-payment-methods">Supported payment methods</h2>
 <p>You can enable any payment method available to you within the <a href="https://dashboard.stripe.com/account/payments/settings">Dashboard</a>. Activation is generally instantaneous, and does not require additional contracts nor include a lengthy process. For a detailed listing, take a look at the available payment methods and their <a href="https://stripe.com/payments/payment-methods-guide#payment-method-fact-sheets">supported geographical regions</a>.</p>
 
 <p>The following table maps the aforementioned key characteristics to the supported payment methods:</p>  <br>
@@ -3162,7 +3162,7 @@
 
 
 <section>
-<h2 id="pull-or-push-of-funds">Pull or push of funds</h2>
+<a id="pull-or-push-of-funds" name="//apple_ref/cpp/Section/Pull%20or%20push%20of%20funds" class="dashAnchor"></a><h2 id="pull-or-push-of-funds">Pull or push of funds</h2>
 
 <p>Each method of payment is categorized as either pull or push, depending on how funds are transferred from the customer&rsquo;s payment method.</p>
 
@@ -3172,7 +3172,7 @@
 </ul></section>
 
 <section>
-<h2 id="flow-for-customer-action">Flow for customer action</h2>
+<a id="flow-for-customer-action" name="//apple_ref/cpp/Section/Flow%20for%20customer%20action" class="dashAnchor"></a><h2 id="flow-for-customer-action">Flow for customer action</h2>
 <div class="image full">
   <a id="flow-link" href="../../img/docs/sources/01-overview.svg" class="zoomable" data-width="2055" data-height="1685">
     <img id="flow" src="../../img/docs/sources/01-overview.svg" width="100%">
@@ -3195,7 +3195,7 @@
 <p>Once the required flow has been completed and a source becomes chargeable, the source must be used to make a charge request for the payment to be completed. If not, the source is canceled and the customer&rsquo;s authenticated payment is refunded automatically&mdash;no money is moved into your account.</p></section>
 
 <section>
-<h2 id="single-use-or-reusable">Single-use or reusable</h2>
+<a id="single-use-or-reusable" name="//apple_ref/cpp/Section/Single-use%20or%20reusable" class="dashAnchor"></a><h2 id="single-use-or-reusable">Single-use or reusable</h2>
 
 <p>Certain payment methods allow for the creation of sources that can be reused for additional payments without your customer needing to complete the payment process again. Sources that can be reused have their <code>usage</code> parameter set to <code>reusable</code>.</p>
 
@@ -3204,7 +3204,7 @@
 <p>Reusable sources must be attached to a <a href="../api/index.html#customers">Customer</a> in order to be reused. (If charged directly, their status will change to <code>consumed</code>.) To learn how to attach Sources to Customers, and to manage a Customer&rsquo;s sources list, refer to the <a href="customers.html">Sources and Customers</a> guide.</p></section>
 
 <section>
-<h2 id="synchronous-or-asynchronous-confirmation">Synchronous or asynchronous confirmation</h2>
+<a id="synchronous-or-asynchronous-confirmation" name="//apple_ref/cpp/Section/Synchronous%20or%20asynchronous%20confirmation" class="dashAnchor"></a><h2 id="synchronous-or-asynchronous-confirmation">Synchronous or asynchronous confirmation</h2>
 <p>Once you use a payment method to create a <a href="../api/index.html#charges">Charge</a> object, that charge&rsquo;s status can be confirmed either immediately (synchronously), or after a certain amount of time (asynchronously).</p>
 
 <ul>
@@ -3219,7 +3219,7 @@
 <p>Stripe sends a <a href="../webhooks.html">webhook</a> event once a charge&rsquo;s status has changed. When accepting any payment method that is asynchronous, your integration must be able to receive webhooks, so that it can receive this notification and confirm whether the customer&rsquo;s payment was successful or has failed.</p></section>
 
 <section>
-<h2>Related resources</h2>
+<a id="related-resources" name="//apple_ref/cpp/Section/Related%20resources" class="dashAnchor"></a><h2>Related resources</h2>
 <ul class="next-steps">
     <li><a href="../api/index.html#sources"><span>Sources API Reference</span></a></li>
     <li><a href="best-practices.html"><span>Best Practices Using Sources</span></a></li>
@@ -3261,7 +3261,7 @@
 
 
             </article>
-            <div class="docs-aside">
+            <div class="docs-aside" style="display: none;">
               <div class="docs-toc empty">
                 <h4>On this page</h4>
                 <ul class="docs-toc-list">

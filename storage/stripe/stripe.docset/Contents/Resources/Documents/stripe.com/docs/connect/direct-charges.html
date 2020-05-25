@@ -180,7 +180,7 @@
   <body class="">
     
       <div id="docs">
-        <div id="sidebar">
+        <div id="sidebar" style="display: none;">
             
   <div class="logo">
     <a href="../recipes/switching-to-stripe.html" title="Stripe docs">
@@ -3008,7 +3008,7 @@
             <article id="content">
                 
   <header>
-  <h1>Creating direct charges</h1>
+  <a name="//apple_ref/cpp/Section/Top" class="dashAnchor"></a><h1>Creating direct charges</h1>
   <p>With <a href="https://stripe.com/connect">Connect</a>, you can make charges directly on the connected account and take fees in the process.</p>
 </header>
 
@@ -3019,10 +3019,10 @@
   <p>Direct charges are supported only for connected accounts with the <a href="capabilities-overview.html#card-payments">card_payments</a> capability.</p>
 </aside>
 
-<h2 id="get-started">Get started</h2>
+<a id="get-started" name="//apple_ref/cpp/Section/Get%20started" class="dashAnchor"></a><h2 id="get-started">Get started</h2>
 <p>If you&rsquo;re new to Connect, start with a guide to use direct charges to <a href="enable-payment-acceptance-guide.html">enable other businesses to accept payments directly</a>.</p>
 
-<h2 id="create-a-charge">Create a charge</h2>
+<a id="create-a-charge" name="//apple_ref/cpp/Section/Create%20a%20charge" class="dashAnchor"></a><h2 id="create-a-charge">Create a charge</h2>
 
 <p>To create a direct charge on the connected account, create a PaymentIntent object and add the <code>Stripe-Account</code> header with a value of the connected account ID:</p><div class="tabs tabs-code animated" data-callback="codeTabsChanged" data-platform="server">
 <nav class="nav-languages has-copy-btn">
@@ -3201,7 +3201,7 @@ const stripe = Stripe('pk_test_TYooMQauvdEDq54NiTphI7jx', {
 <p>Charges created directly on the connected account are reported only on that account; they aren&rsquo;t shown in your platform&rsquo;s Dashboard, exports, or other reporting, although you can always retrieve this information with a call to the API.</p></section>
 
 <section>
-<h2 id="collecting-fees">Collect application fees</h2>
+<a id="collect-application-fees" name="//apple_ref/cpp/Section/Collect%20application%20fees" class="dashAnchor"></a><h2 id="collecting-fees">Collect application fees</h2>
 
 <p>With Connect, your platform can take an application fee on direct charges. To assess an application fee on a charge, pass an optional <code>application_fee_amount</code> value as a positive integer:</p>
 <div class="tabs tabs-code animated" data-callback="codeTabsChanged" data-platform="server">
@@ -3368,7 +3368,7 @@ service.Create(createOptions, requestOptions);
 <p>Earned application fees are added to your available account balance on the same schedule as funds from regular Stripe charges. Application fees are viewable in the <a href="https://dashboard.stripe.com/connect/application_fees">Collected Fees</a> section of the Dashboard.</p></section>
 
 <section>
-<h2 id="flow-of-funds-with-fees">Flow of funds with fees</h2>
+<a id="flow-of-funds-with-fees" name="//apple_ref/cpp/Section/Flow%20of%20funds%20with%20fees" class="dashAnchor"></a><h2 id="flow-of-funds-with-fees">Flow of funds with fees</h2>
 
 <p>When you specify an application fee on a charge, the fee amount is transferred to your platform&rsquo;s Stripe account. When processing a charge directly on the connected account, the charge amount&mdash;less the Stripe fees and application fee&mdash;is deposited into the connected account. For example, if a charge of $10 with a $1.23 application fee is made (as in the example above), $1.23 is transferred to your platform account, and $8.18 ($10 - $0.59 - $1.23) is netted in the connected account (assuming standard U.S. Stripe fees).</p>
   <div class="image full">
@@ -3378,7 +3378,7 @@ service.Create(createOptions, requestOptions);
 <p>If you process payments in multiple currencies, you should also read <a href="currencies.html">how that is handled</a> in Connect.</p></section>
 
 <section>
-<h2 id="issuing-refunds">Issue refunds</h2>
+<a id="issue-refunds" name="//apple_ref/cpp/Section/Issue%20refunds" class="dashAnchor"></a><h2 id="issuing-refunds">Issue refunds</h2>
 
 <p>Just as platforms can create charges on connected accounts, they can also create refunds of charges on connected accounts. To refund a charge on a connected account, perform a standard <a href="../api/index.html#create_refund">create refund</a> request using your platform&rsquo;s secret key while <a href="authentication.html#authentication-via-the-stripe-account-header">authenticated</a> as the connected account.</p>
 
@@ -3519,7 +3519,7 @@ var refund = service.Create(options, requestOptions);
 <p>Alternatively, you can provide a <code>refund_application_fee</code> value of <strong>false</strong> and refund the application fee separately <a href="../api/index.html#create_fee_refund">through the API</a>.</p></section>
 
 <section>
-  <h2>Further reading</h2>
+  <a id="further-reading" name="//apple_ref/cpp/Section/Further%20reading" class="dashAnchor"></a><h2>Further reading</h2>
   <p>Discover what other Connect functionality is available.</p>
 <ul class="next-steps">
     <li><a href="charges.html"><span>Creating Charges</span></a></li>
@@ -3563,7 +3563,7 @@ var refund = service.Create(options, requestOptions);
 
 
             </article>
-            <div class="docs-aside">
+            <div class="docs-aside" style="display: none;">
               <div class="docs-toc empty">
                 <h4>On this page</h4>
                 <ul class="docs-toc-list">

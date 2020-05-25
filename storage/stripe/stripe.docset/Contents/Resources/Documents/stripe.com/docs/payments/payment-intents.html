@@ -180,7 +180,7 @@
   <body class="">
     
       <div id="docs">
-        <div id="sidebar">
+        <div id="sidebar" style="display: none;">
             
   <div class="logo">
     <a href="../recipes/switching-to-stripe.html" title="Stripe docs">
@@ -3008,13 +3008,13 @@
             <article id="content">
                 
   <header>
-  <h1 id="the-payment-intents-api">The Payment Intents API</h1>
+  <a name="//apple_ref/cpp/Section/Top" class="dashAnchor"></a><h1 id="the-payment-intents-api">The Payment Intents API</h1>
 
   <p>Learn more about the Payment Intents API that powers Stripe payments.</p>
 </header>
 
 <section>
-  <h2 id="overview">Overview</h2>
+  <a id="overview" name="//apple_ref/cpp/Section/Overview" class="dashAnchor"></a><h2 id="overview">Overview</h2>
 
   <p>Use the Payment Intents API to build a payments integration that can handle complexity. This API tracks a payment, from initial creation through the entire checkout process, and triggers additional authentication steps when required.</p>
 
@@ -3035,7 +3035,7 @@
 
 <section>
 
-  <h2 id="apis">A complete set of APIs</h2>
+  <a id="a-complete-set-of-apis" name="//apple_ref/cpp/Section/A%20complete%20set%20of%20APIs" class="dashAnchor"></a><h2 id="apis">A complete set of APIs</h2>
 
   <p>Use the <a href="../api/payment_intents.html">Payment Intents</a> API together with the <a href="../api/setup_intents.html">Setup Intents</a> and <a href="../api/payment_methods.html">Payment Methods</a> APIs.</p>
 
@@ -3048,7 +3048,7 @@
 </section>
 
 <section>
-  <h2 id="creating-a-paymentintent">Creating a PaymentIntent</h2>
+  <a id="creating-a-paymentintent" name="//apple_ref/cpp/Section/Creating%20a%20PaymentIntent" class="dashAnchor"></a><h2 id="creating-a-paymentintent">Creating a PaymentIntent</h2>
 
   <p>To get started, <a href="payment-intents/quickstart.html#web">accept a payment</a>.</p>
 
@@ -3206,7 +3206,7 @@ var intent = service.Create(options);
 </section>
 
 <section>
-  <h2 id="passing-to-client">Passing the client secret to the client side</h2>
+  <a id="passing-the-client-secret-to-the-client-side" name="//apple_ref/cpp/Section/Passing%20the%20client%20secret%20to%20the%20client%20side" class="dashAnchor"></a><h2 id="passing-to-client">Passing the client secret to the client side</h2>
 
   <p>The PaymentIntent contains a <a href="../api/payment_intents/object.html#payment_intent_object-client_secret">client secret</a>, a key that is unique to the individual PaymentIntent. On the client side of your application, the client secret is used as a parameter when invoking Stripe.js functions (such as <a href="../stripe-js/reference.html#stripe-confirm-card-payment">stripe.confirmCardPayment</a> or <a href="../stripe-js/reference.html#stripe-handle-card-action">stripe.handleCardAction</a>) to complete the payment.</p>
 
@@ -3791,7 +3791,7 @@ namespace StripeExampleApi.Controllers
 </section>
 
 <section>
-  <h2 id="future-usage">Optimizing cards for future payments</h2>
+  <a id="optimizing-cards-for-future-payments" name="//apple_ref/cpp/Section/Optimizing%20cards%20for%20future%20payments" class="dashAnchor"></a><h2 id="future-usage">Optimizing cards for future payments</h2>
 
   <p>The <a href="../api/payment_intents/object.html#payment_intent_object-setup_future_usage">setup_future_usage</a> parameter saves payment methods to use again in the
 future. For cards, it also optimizes authorization rates in compliance with regional legislation and network rules, such as
@@ -3962,7 +3962,7 @@ var paymentIntent = service.Create(options);
 </section>
 
 <section>
-  <h2 id="dynamic-statement-descriptor">Dynamic statement descriptor</h2>
+  <a id="dynamic-statement-descriptor" name="//apple_ref/cpp/Section/Dynamic%20statement%20descriptor" class="dashAnchor"></a><h2 id="dynamic-statement-descriptor">Dynamic statement descriptor</h2>
 
   <p>By default, your Stripe account&rsquo;s <a href="../account.html#public-business-information">statement descriptor</a> appears on customer statements whenever you charge their card. To provide a different description on a per-payment basis, include the <code>statement_descriptor</code> parameter.</p>
 
@@ -4117,7 +4117,7 @@ var intent = service.Create(options);
 </section>
 
 <section>
-  <h2 id="storing-information-in-metadata">Storing information in metadata</h2>
+  <a id="storing-information-in-metadata" name="//apple_ref/cpp/Section/Storing%20information%20in%20metadata" class="dashAnchor"></a><h2 id="storing-information-in-metadata">Storing information in metadata</h2>
 
   <p>Stripe supports adding <a href="../api/index.html#metadata">metadata</a> to the most common requests you make, such as processing payments.
 Metadata isn&rsquo;t shown to customers or factored into whether or not a payment is declined or blocked by our fraud prevention system.</p>
@@ -4300,7 +4300,7 @@ var intent = service.Create(options);
 </section>
 
 <section>
-  <h2 id="next-steps">Next steps</h2>
+  <a id="next-steps" name="//apple_ref/cpp/Section/Next%20steps" class="dashAnchor"></a><h2 id="next-steps">Next steps</h2>
 
   <ul class="next-steps">
     <li><a href="payment-intents/quickstart.html#web"><span>Collecting One-time Payments</span></a></li>
@@ -4343,7 +4343,7 @@ var intent = service.Create(options);
 
 
             </article>
-            <div class="docs-aside">
+            <div class="docs-aside" style="display: none;">
               <div class="docs-toc empty">
                 <h4>On this page</h4>
                 <ul class="docs-toc-list">

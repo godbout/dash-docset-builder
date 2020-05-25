@@ -180,7 +180,7 @@
   <body class="">
     
       <div id="docs">
-        <div id="sidebar">
+        <div id="sidebar" style="display: none;">
             
   <div class="logo">
     <a href="recipes/switching-to-stripe.html" title="Stripe docs">
@@ -3008,13 +3008,13 @@
             <article id="content">
                 
   <header>
-  <h1>Testing</h1>
+  <a name="//apple_ref/cpp/Section/Top" class="dashAnchor"></a><h1>Testing</h1>
   <p>Learn about the different methods to test your integration before going live.</p>
 
 </header>
 
 <section id="what-should-i-test-as-i-integrate-stripe">
-<h2>Overview</h2>
+<a id="overview" name="//apple_ref/cpp/Section/Overview" class="dashAnchor"></a><h2>Overview</h2>
 <aside class="note">
   <h3>Not a developer?</h3>
 <p>Hire a <a href="https://stripe.com/partners/expert-services">Stripe certified expert</a> or use a <a href="https://stripe.com/partners/apps-and-extensions">prebuilt solution</a> created by one of our verified partners (no code required).
@@ -3062,7 +3062,7 @@ integration works as planned. Use it to trigger different flows in your integrat
 </section>
 
 <section>
-  <h2 id="cards">Basic test card numbers</h2>
+  <a id="basic-test-card-numbers" name="//apple_ref/cpp/Section/Basic%20test%20card%20numbers" class="dashAnchor"></a><h2 id="cards">Basic test card numbers</h2>
 
   <p>Genuine card information cannot be used in test mode. Instead, use any of the following test card numbers, a valid expiration date in the future, and any random CVC number, to create a successful payment.</p>
 
@@ -3279,7 +3279,7 @@ integration works as planned. Use it to trigger different flows in your integrat
   </div>
 </div>
 
-  <h2 id="international-cards">International test card numbers</h2>
+  <a id="international-test-card-numbers" name="//apple_ref/cpp/Section/International%20test%20card%20numbers" class="dashAnchor"></a><h2 id="international-cards">International test card numbers</h2>
   <a name="how-do-i-test-cards-from-non-us-countries"></a>
     <p>You can use any of the following test cards to simulate a successful payment for different billing countries.</p>
 
@@ -3628,7 +3628,7 @@ integration works as planned. Use it to trigger different flows in your integrat
   </div>
 </div>
 
-  <h2 id="regulatory-cards">Regulatory (3D Secure) test card numbers</h2>
+  <a id="regulatory-3d-secure-test-card-numbers" name="//apple_ref/cpp/Section/Regulatory%20%283D%20Secure%29%20test%20card%20numbers" class="dashAnchor"></a><h2 id="regulatory-cards">Regulatory (3D Secure) test card numbers</h2>
 
   <p>The following card information tests payments affected by regional regulations such as <a href="strong-customer-authentication.html">Strong Customer Authentication</a> (SCA). Use it to test saving cards with the Setup Intents API.</p>
 
@@ -3983,7 +3983,7 @@ integration works as planned. Use it to trigger different flows in your integrat
 
   <p>All other Visa and Mastercard test cards do not require authentication from the customer's card issuer.</p>
 
-  <h2 id="cards-responses">Testing for specific responses and errors</h2>
+  <a id="testing-for-specific-responses-and-errors" name="//apple_ref/cpp/Section/Testing%20for%20specific%20responses%20and%20errors" class="dashAnchor"></a><h2 id="cards-responses">Testing for specific responses and errors</h2>
 
   <p>The following test cards can be used to create payments that produce specific responses&mdash;useful for testing different scenarios and error codes. Verification checks only run when the required information is provided (e.g., for <code>cvc_check</code> to be set to <strong>fail</strong>, a CVC code must be provided).</p>
 
@@ -4282,7 +4282,7 @@ integration works as planned. Use it to trigger different flows in your integrat
 </section>
 
 <section>
-  <h2 id="disputes">Disputes</h2>
+  <a id="disputes" name="//apple_ref/cpp/Section/Disputes" class="dashAnchor"></a><h2 id="disputes">Disputes</h2>
   <a name="how-do-i-test-disputes"></a>
   <p>In test mode, you can use the test cards below to simulate a disputed transaction:</p>
 
@@ -4394,7 +4394,7 @@ integration works as planned. Use it to trigger different flows in your integrat
 </section>
 
 <section>
-  <h2 id="rate-limits">Rate limits</h2>
+  <a id="rate-limits" name="//apple_ref/cpp/Section/Rate%20limits" class="dashAnchor"></a><h2 id="rate-limits">Rate limits</h2>
   <p>It is extremely unlikely for users to experience any rate limits with normal usage of the API, even at high volume. The most common causes for a user to experience rate limits are bugs, bulk data fetches, or extreme load testing.</p>
 
   <p>Should your requests begin to receive <code>429</code> HTTP errors, reduce the frequency of your requests. Each failed request is perfectly safe to retry as rate limiting takes place before any other action and prevents the request from being processed. When reducing your request frequency, we recommend an exponential backoff by first waiting one second before trying again. If your request continues to receive the same response, wait two seconds, then four seconds, etc.</p>
@@ -4403,7 +4403,7 @@ integration works as planned. Use it to trigger different flows in your integrat
 </section>
 
 <section>
-  <h2 id="sources">Sources</h2>
+  <a id="sources" name="//apple_ref/cpp/Section/Sources" class="dashAnchor"></a><h2 id="sources">Sources</h2>
 <p>Use the following information when testing payments using <a href="sources/bitcoin.html">Sources</a>.</p>
 
 <h3 id="redirect-sources">Redirect sources</h3>
@@ -5099,7 +5099,7 @@ integration works as planned. Use it to trigger different flows in your integrat
 </section>
 
 <section>
-  <h2 id="webhooks">Webhooks</h2>
+  <a id="webhooks" name="//apple_ref/cpp/Section/Webhooks" class="dashAnchor"></a><h2 id="webhooks">Webhooks</h2>
   <a name="how-do-i-test-stripe-webhooks"></a>
 
   <aside class="note">
@@ -5144,7 +5144,7 @@ integration works as planned. Use it to trigger different flows in your integrat
 
 
             </article>
-            <div class="docs-aside">
+            <div class="docs-aside" style="display: none;">
               <div class="docs-toc empty">
                 <h4>On this page</h4>
                 <ul class="docs-toc-list">

@@ -180,7 +180,7 @@
   <body class="">
     
       <div id="docs">
-        <div id="sidebar">
+        <div id="sidebar" style="display: none;">
             
   <div class="logo">
     <a href="recipes/switching-to-stripe.html" title="Stripe docs">
@@ -3008,7 +3008,7 @@
             <article id="content">
                 
   <header>
-  <h1>Tax, shipping, and inventory  <span class="warning tag">Deprecated</span></h1>
+  <a name="//apple_ref/cpp/Section/Top" class="dashAnchor"></a><h1>Tax, shipping, and inventory  <span class="warning tag">Deprecated</span></h1>
   <p>Use the Orders API to sell and organize your products through Stripe.</p>
 
   <aside class="important red">
@@ -3030,7 +3030,7 @@
 <p>This guide focuses on developer usage of the Orders API. See the <a href="orders/guide.html">Orders API manual</a> for additional information, including <a href="orders/guide.html#best-practices">best practices</a> and <a href="orders/guide.html#using-webhooks">using webhooks</a>.</p></section>
 
 <section>
-<h2 id="when-to-use-orders">When to use orders</h2>
+<a id="when-to-use-orders" name="//apple_ref/cpp/Section/When%20to%20use%20orders" class="dashAnchor"></a><h2 id="when-to-use-orders">When to use orders</h2>
 
 <p>Orders integrate nicely with other parts of the Stripe API that you might already be familiar with. For example, <a href="api/index.html#pay_order">paying</a> an order creates a <a href="api/index.html#charge_object"><code>Charge</code></a> object. Similarly, <a href="api/index.html#return_order">returning</a> an order will create a refund for all or part of that charge. Orders support additional features beyond basic charges that you might find helpful:</p>
 
@@ -3057,7 +3057,7 @@
 </ul></section>
 
 <section>
-<h2 id="define-products-skus">Define products and SKUs</h2>
+<a id="define-products-and-skus" name="//apple_ref/cpp/Section/Define%20products%20and%20SKUs" class="dashAnchor"></a><h2 id="define-products-skus">Define products and SKUs</h2>
 
 <p>You can start out by creating your products and SKUs <a href="https://dashboard.stripe.com/test/products/create">in the Dashboard</a>. There are two kinds of products: goods and services. Goods can be physical things you ship or digital things that your customers download. A service is an amenity that is provided on an ongoing basis for a recurring fee. Goods are intended for use with the Orders API while services are for <a href="billing/quickstart.html">subscriptions</a>. See the <a href="orders/guide.html#best-practices">best practices</a> for examples and additional tips.</p>
 
@@ -3501,7 +3501,7 @@ Sku sku2 = service.Create(skuOptions2);
 <p>The above code creates two different SKUs&mdash;variants on a product, differentiated by size and price. You normally have exponentially more SKUs than products. If the <em>Limited Edition T-shirt</em> came in three sizes&mdash;small, medium, and large&mdash;and in two colors&mdash;cyan and magenta, there would be at least six SKUs representing it.</p></section>
 
 <section>
-<h2 id="shipping-and-taxes">Configure shipping and tax handling</h2>
+<a id="configure-shipping-and-tax-handling" name="//apple_ref/cpp/Section/Configure%20shipping%20and%20tax%20handling" class="dashAnchor"></a><h2 id="shipping-and-taxes">Configure shipping and tax handling</h2>
 
 <p>Real-world orders involve not only the cost of the items being purchased, but also shipping costs and taxes. Stripe can automatically and dynamically add these costs to your orders.</p>
 
@@ -3528,7 +3528,7 @@ Sku sku2 = service.Create(skuOptions2);
 <p><strong>Shipping</strong> and <strong>Taxes</strong> each offer a <code>callback</code> option. If you wish to <a href="orders/dynamic-shipping-taxes.html">calculate shipping and taxes yourself</a>, provide an endpoint on your own server that Stripe will hit, in real time, to retrieve these costs. This can be helpful if you want to use the Orders API but have an existing system for shipping and taxes, or if you want to sell through an application or mobile app.</p></section>
 
 <section>
-<h2 id="create-pay-orders">Create and pay for orders</h2>
+<a id="create-and-pay-for-orders" name="//apple_ref/cpp/Section/Create%20and%20pay%20for%20orders" class="dashAnchor"></a><h2 id="create-pay-orders">Create and pay for orders</h2>
   <aside class="content note">
     <h3>Leaving notes for yourself</h3>
     <p>Each Orders API object&mdash;<code>Product</code>, <code>SKU</code>, and <code>Order</code>&mdash;has a <code>metadata</code> attribute. Values stored in metadata will never be seen by customers, but can be used to store additional information for your own benefit.</p>
@@ -3992,7 +3992,7 @@ Order order = service.Pay("or_1Ce6vg2eZvKYlo2CcQtHtXdu", options);
 
 
 <section>
-  <h2>Next steps</h2>
+  <a id="next-steps" name="//apple_ref/cpp/Section/Next%20steps" class="dashAnchor"></a><h2>Next steps</h2>
   <p>Congrats! You've gone through how to use the APIs for products, SKUs and orders. Some things you might want to see next:</p>
 <ul class="next-steps">
     <li><a href="orders/guide.html"><span>Orders API Guide</span></a></li>
@@ -4035,7 +4035,7 @@ Order order = service.Pay("or_1Ce6vg2eZvKYlo2CcQtHtXdu", options);
 
 
             </article>
-            <div class="docs-aside">
+            <div class="docs-aside" style="display: none;">
               <div class="docs-toc empty">
                 <h4>On this page</h4>
                 <ul class="docs-toc-list">

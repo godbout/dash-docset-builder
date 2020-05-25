@@ -180,7 +180,7 @@
   <body class="">
     
       <div id="docs">
-        <div id="sidebar">
+        <div id="sidebar" style="display: none;">
             
   <div class="logo">
     <a href="../../recipes/switching-to-stripe.html" title="Stripe docs">
@@ -3008,14 +3008,14 @@
             <article id="content">
                 
   <header>
-  <h1>Create fixed-price subscriptions with Elements</h1>
+  <a name="//apple_ref/cpp/Section/Top" class="dashAnchor"></a><h1>Create fixed-price subscriptions with Elements</h1>
 
   <p>Learn how to offer multiple pricing options to your customers and charge them a fixed amount each month.</p>
 </header>
 
 <p>This guide walks you through how to create fixed-price subscriptions for a photo hosting service. It uses Stripe Elements to create a custom payment form you embed in your application. You can find the complete code <a href="https://github.com/stripe-samples/subscription-with-fixed-price">on GitHub</a>.</p>
 
-<h2 id="what-youll-build">What you&rsquo;ll build</h2>
+<a id="what-youll-build" name="//apple_ref/cpp/Section/What%20you%E2%80%99ll%20build" class="dashAnchor"></a><h2 id="what-youll-build">What you&rsquo;ll build</h2>
 
 <p>This guide shows you how to:</p>
 
@@ -3033,7 +3033,7 @@
   <p>Example application</p>
 </div>
 
-<h2 id="how-to-model-it-on-stripe">How to model it on Stripe</h2>
+<a id="how-to-model-it-on-stripe" name="//apple_ref/cpp/Section/How%20to%20model%20it%20on%20Stripe" class="dashAnchor"></a><h2 id="how-to-model-it-on-stripe">How to model it on Stripe</h2>
 
 <div class="image">
   <p><img src="../../../img/docs/billing/subscriptions/subscription_objects.svg" width="100%"></p>
@@ -3093,7 +3093,7 @@
   </dl>
 <div class="expando" aria-expanded="true">
   <a id="install-setup" href="fixed-price.html#install-setup" class="expando-trigger">
-    <h2 class="expando-title" data-no-anchor data-custom-toc-title="Install Stripe libraries and tools">
+    <a id="1-install-stripe-libraries-and-tools" name="//apple_ref/cpp/Section/1%20Install%20Stripe%20libraries%20and%20tools" class="dashAnchor"></a><h2 class="expando-title" data-no-anchor data-custom-toc-title="Install Stripe libraries and tools">
         <span class="expando-left-text">1</span>
       Install Stripe libraries and tools
     </h2>
@@ -3504,7 +3504,7 @@ Terminal
 
 <div class="expando" aria-expanded="true">
   <a id="create-business-model" href="fixed-price.html#create-business-model" class="expando-trigger">
-    <h2 class="expando-title" data-no-anchor data-custom-toc-title="Create the business model">
+    <a id="2-create-the-business-model-stripe-cli-or-dashboard" name="//apple_ref/cpp/Section/2%20Create%20the%20business%20model%20Stripe%20CLI%20or%20Dashboard" class="dashAnchor"></a><h2 class="expando-title" data-no-anchor data-custom-toc-title="Create the business model">
         <span class="expando-left-text">2</span>
       Create the business model
         <span class="tag optional">Stripe CLI or Dashboard</span>
@@ -3646,7 +3646,7 @@ Terminal
 
 <div class="expando" aria-expanded="true">
   <a id="create-customer" href="fixed-price.html#create-customer" class="expando-trigger">
-    <h2 class="expando-title" data-no-anchor data-custom-toc-title="Create the Stripe customer">
+    <a id="3-create-the-stripe-customer-client-and-server" name="//apple_ref/cpp/Section/3%20Create%20the%20Stripe%20customer%20Client%20and%20Server" class="dashAnchor"></a><h2 class="expando-title" data-no-anchor data-custom-toc-title="Create the Stripe customer">
         <span class="expando-left-text">3</span>
       Create the Stripe customer
         <span class="tag optional">Client and Server</span>
@@ -3956,7 +3956,7 @@ app.post('/create-customer', async (req, res) =&gt; {
 
 <div class="expando" aria-expanded="true">
   <a id="collect-payment" href="fixed-price.html#collect-payment" class="expando-trigger">
-    <h2 class="expando-title" data-no-anchor data-custom-toc-title="Collect payment information">
+    <a id="4-collect-payment-information-client" name="//apple_ref/cpp/Section/4%20Collect%20payment%20information%20Client" class="dashAnchor"></a><h2 class="expando-title" data-no-anchor data-custom-toc-title="Collect payment information">
         <span class="expando-left-text">4</span>
       Collect payment information
         <span class="tag optional">Client</span>
@@ -4448,7 +4448,7 @@ If you build your payment form with multi-input card Elements, add a separate <c
 
 <div class="expando" aria-expanded="true">
   <a id="create-subscription" href="fixed-price.html#create-subscription" class="expando-trigger">
-    <h2 class="expando-title" data-no-anchor data-custom-toc-title="Save payment details and create the subscription">
+    <a id="5-save-payment-details-and-create-the-subscription-client-and-server" name="//apple_ref/cpp/Section/5%20Save%20payment%20details%20and%20create%20the%20subscription%20Client%20and%20Server" class="dashAnchor"></a><h2 class="expando-title" data-no-anchor data-custom-toc-title="Save payment details and create the subscription">
         <span class="expando-left-text">5</span>
       Save payment details and create the subscription
         <span class="tag optional">Client and Server</span>
@@ -4948,7 +4948,7 @@ app.post('/create-subscription', async (req, res) =&gt; {
 
 <div class="expando" aria-expanded="true">
   <a id="provision-access" href="fixed-price.html#provision-access" class="expando-trigger">
-    <h2 class="expando-title" data-no-anchor data-custom-toc-title="Provision access to your service">
+    <a id="6-provision-access-to-your-service-client-and-server" name="//apple_ref/cpp/Section/6%20Provision%20access%20to%20your%20service%20Client%20and%20Server" class="dashAnchor"></a><h2 class="expando-title" data-no-anchor data-custom-toc-title="Provision access to your service">
         <span class="expando-left-text">6</span>
       Provision access to your service
         <span class="tag optional">Client and Server</span>
@@ -4997,7 +4997,7 @@ script.js
 
 <div class="expando" aria-expanded="true">
   <a id="manage-payment-authentication" href="fixed-price.html#manage-payment-authentication" class="expando-trigger">
-    <h2 class="expando-title" data-no-anchor data-custom-toc-title="Manage payment authentication">
+    <a id="7-manage-payment-authentication-client-and-server" name="//apple_ref/cpp/Section/7%20Manage%20payment%20authentication%20Client%20and%20Server" class="dashAnchor"></a><h2 class="expando-title" data-no-anchor data-custom-toc-title="Manage payment authentication">
         <span class="expando-left-text">7</span>
       Manage payment authentication
         <span class="tag optional">Client and Server</span>
@@ -5109,7 +5109,7 @@ script.js
 
 <div class="expando" aria-expanded="true">
   <a id="manage-subscription-payment-failure" href="fixed-price.html#manage-subscription-payment-failure" class="expando-trigger">
-    <h2 class="expando-title" data-no-anchor data-custom-toc-title="Manage subscription payment failure">
+    <a id="8-manage-subscription-payment-failure-client-and-server" name="//apple_ref/cpp/Section/8%20Manage%20subscription%20payment%20failure%20Client%20and%20Server" class="dashAnchor"></a><h2 class="expando-title" data-no-anchor data-custom-toc-title="Manage subscription payment failure">
         <span class="expando-left-text">8</span>
       Manage subscription payment failure
         <span class="tag optional">Client and Server</span>
@@ -5491,7 +5491,7 @@ app.post('/retry-invoice', async (req, res) =&gt; {
 
 <div class="expando" aria-expanded="true">
   <a id="cancel-subscription" href="fixed-price.html#cancel-subscription" class="expando-trigger">
-    <h2 class="expando-title" data-no-anchor data-custom-toc-title="Cancel the subscription">
+    <a id="9-cancel-the-subscription-client-and-server" name="//apple_ref/cpp/Section/9%20Cancel%20the%20subscription%20Client%20and%20Server" class="dashAnchor"></a><h2 class="expando-title" data-no-anchor data-custom-toc-title="Cancel the subscription">
         <span class="expando-left-text">9</span>
       Cancel the subscription
         <span class="tag optional">Client and Server</span>
@@ -5708,7 +5708,7 @@ app.post('/cancel-subscription', async (req, res) =&gt; {
 
 <div class="expando" aria-expanded="true">
   <a id="test" href="fixed-price.html#test" class="expando-trigger">
-    <h2 class="expando-title" data-no-anchor data-custom-toc-title="Test your integration">
+    <a id="10-test-your-integration" name="//apple_ref/cpp/Section/10%20Test%20your%20integration" class="dashAnchor"></a><h2 class="expando-title" data-no-anchor data-custom-toc-title="Test your integration">
         <span class="expando-left-text">10</span>
       Test your integration
     </h2>
@@ -5757,7 +5757,7 @@ app.post('/cancel-subscription', async (req, res) =&gt; {
 
 <div class="expando" aria-expanded="true">
   <a id="webhooks" href="fixed-price.html#webhooks" class="expando-trigger">
-    <h2 class="expando-title" data-no-anchor data-custom-toc-title="Set up webhooks">
+    <a id="11-set-up-webhooks-server" name="//apple_ref/cpp/Section/11%20Set%20up%20webhooks%20Server" class="dashAnchor"></a><h2 class="expando-title" data-no-anchor data-custom-toc-title="Set up webhooks">
         <span class="expando-left-text">11</span>
       Set up webhooks
         <span class="tag optional">Server</span>
@@ -6226,7 +6226,7 @@ app.post(
 
 <div class="expando" aria-expanded="true">
   <a id="change-price" href="fixed-price.html#change-price" class="expando-trigger">
-    <h2 class="expando-title" data-no-anchor data-custom-toc-title="Let customers change their plans">
+    <a id="optional-let-customers-change-their-plans-client-and-server" name="//apple_ref/cpp/Section/Optional%20Let%20customers%20change%20their%20plans%20Client%20and%20Server" class="dashAnchor"></a><h2 class="expando-title" data-no-anchor data-custom-toc-title="Let customers change their plans">
         <span class="expando-left-text">Optional</span>
       Let customers change their plans
         <span class="tag optional">Client and Server</span>
@@ -6476,7 +6476,7 @@ app.post('/update-subscription', async (req, res) =&gt; {
 
 <div class="expando" aria-expanded="true">
   <a id="preview-invoice" href="fixed-price.html#preview-invoice" class="expando-trigger">
-    <h2 class="expando-title" data-no-anchor data-custom-toc-title="Preview a price change">
+    <a id="optional-preview-a-price-change-client-and-server" name="//apple_ref/cpp/Section/Optional%20Preview%20a%20price%20change%20Client%20and%20Server" class="dashAnchor"></a><h2 class="expando-title" data-no-anchor data-custom-toc-title="Preview a price change">
         <span class="expando-left-text">Optional</span>
       Preview a price change
         <span class="tag optional">Client and Server</span>
@@ -6769,7 +6769,7 @@ app.post('/retrieve-upcoming-invoice', async (req, res) =&gt; {
 
 <div class="expando" aria-expanded="true">
   <a id="display-payment-method" href="fixed-price.html#display-payment-method" class="expando-trigger">
-    <h2 class="expando-title" data-no-anchor data-custom-toc-title="Display the customer payment method">
+    <a id="optional-display-the-customer-payment-method-client-and-server" name="//apple_ref/cpp/Section/Optional%20Display%20the%20customer%20payment%20method%20Client%20and%20Server" class="dashAnchor"></a><h2 class="expando-title" data-no-anchor data-custom-toc-title="Display the customer payment method">
         <span class="expando-left-text">Optional</span>
       Display the customer payment method
         <span class="tag optional">Client and Server</span>
@@ -7060,7 +7060,7 @@ app.post('/retrieve-customer-payment-method', async (req, res) =&gt; {
 
 
             </article>
-            <div class="docs-aside">
+            <div class="docs-aside" style="display: none;">
               <div class="docs-toc empty">
                 <h4>On this page</h4>
                 <ul class="docs-toc-list">

@@ -180,7 +180,7 @@
   <body class="">
     
       <div id="docs">
-        <div id="sidebar">
+        <div id="sidebar" style="display: none;">
             
   <div class="logo">
     <a href="../recipes/switching-to-stripe.html" title="Stripe docs">
@@ -3008,7 +3008,7 @@
             <article id="content">
                 
   <header>
-  <h1>Setting merchant category codes</h1>
+  <a name="//apple_ref/cpp/Section/Top" class="dashAnchor"></a><h1>Setting merchant category codes</h1>
   <p>Learn about <a href="https://en.wikipedia.org/wiki/Merchant_category_code">merchant category codes</a> (MCCs) and how to set them for your connected accounts.</p>
 </header>
 
@@ -3019,7 +3019,7 @@
 </section>
 
 <section>
-  <h2 id="mcc-automatic">Setting MCCs automatically</h2>
+  <a id="setting-mccs-automatically" name="//apple_ref/cpp/Section/Setting%20MCCs%20automatically" class="dashAnchor"></a><h2 id="mcc-automatic">Setting MCCs automatically</h2>
 
   <p>Stripe automatically evaluates accounts to determine appropriate MCCs. This means you don&rsquo;t need to build and maintain any custom logic. Generally, the industry listed in the Stripe Dashboard for the connected account is used to determine the MCC. This value is set during the OAuth flows for <a href="standard-accounts.html#connect-users">Standard</a> and <a href="express-accounts.html#connect-users">Express</a> accounts, and <a href="setting-mcc.html#mcc-manual">manually</a> for Custom accounts. Express accounts can also set the MCC manually.</p>
 
@@ -3029,7 +3029,7 @@
 </section>
 
 <section>
-<h2 id="mcc-manual">Setting MCCs manually</h2>
+<a id="setting-mccs-manually" name="//apple_ref/cpp/Section/Setting%20MCCs%20manually" class="dashAnchor"></a><h2 id="mcc-manual">Setting MCCs manually</h2>
 
 <p>If you support Custom accounts, you can specify MCCs manually when you <a href="../api/accounts/create.html#create_account-business_profile-mcc">create accounts</a>. If your connected accounts share the same MCC, you don&rsquo;t need to add a new UI element to collect this information. You can just set the code using <code>business_profile[mcc]</code> when you create accounts. The examples below use the code for Computer Software Stores (<code>5734</code>), but you can see a <a href="setting-mcc.html#list">full list</a> in the next section.</p>
 <div class="tabs tabs-code animated" data-callback="codeTabsChanged">
@@ -3218,7 +3218,7 @@ service.Create(options);
 <p>Similar to an MCC that&rsquo;s set automatically, Stripe can override an MCC set manually if the connected account is flagged for review and we determine the MCC is inaccurate.</p></section>
 
 <section>
-<h2 id="list">Merchant category code list</h2>
+<a id="merchant-category-code-list" name="//apple_ref/cpp/Section/Merchant%20category%20code%20list" class="dashAnchor"></a><h2 id="list">Merchant category code list</h2>
 
 <p>Below is the list of supported MCCs you can use when creating Custom or Express accounts.</p>
 <table class="alternate">
@@ -4413,7 +4413,7 @@ service.Create(options);
 
 
             </article>
-            <div class="docs-aside">
+            <div class="docs-aside" style="display: none;">
               <div class="docs-toc empty">
                 <h4>On this page</h4>
                 <ul class="docs-toc-list">

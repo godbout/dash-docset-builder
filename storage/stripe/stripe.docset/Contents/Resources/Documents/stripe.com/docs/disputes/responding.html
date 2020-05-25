@@ -180,7 +180,7 @@
   <body class="">
     
       <div id="docs">
-        <div id="sidebar">
+        <div id="sidebar" style="display: none;">
             
   <div class="logo">
     <a href="../recipes/switching-to-stripe.html" title="Stripe docs">
@@ -3008,7 +3008,7 @@
             <article id="content">
                 
   <header>
-<h1 id="responding-to-disputes">Responding to disputes</h1>
+<a name="//apple_ref/cpp/Section/Top" class="dashAnchor"></a><h1 id="responding-to-disputes">Responding to disputes</h1>
 <p>Learn how to respond to disputes using best practices.</p>
 </header>
 
@@ -3019,7 +3019,7 @@
 </aside>
 
 <section>
-<h2 id="where-to-find-disputes">Where to find disputes</h2>
+<a id="where-to-find-disputes" name="//apple_ref/cpp/Section/Where%20to%20find%20disputes" class="dashAnchor"></a><h2 id="where-to-find-disputes">Where to find disputes</h2>
 
 <aside class="note">
   <h3>Testing disputes</h3>
@@ -3050,7 +3050,7 @@
 </aside></section>
 
 <section>
-<h2 id="responding-to-disputes-in-the-dashboard">Responding to disputes in the Dashboard</h2>
+<a id="responding-to-disputes-in-the-dashboard" name="//apple_ref/cpp/Section/Responding%20to%20disputes%20in%20the%20Dashboard" class="dashAnchor"></a><h2 id="responding-to-disputes-in-the-dashboard">Responding to disputes in the Dashboard</h2>
 <aside class="note">
   <h3>Refund disputed payments</h3>
   <p>You cannot refund a payment that has been formally disputed&mdash;the customer has already been refunded via the dispute process.</p>
@@ -3070,7 +3070,7 @@
 <p>Once you&rsquo;ve submitted a response, the dispute&rsquo;s status is changed to <code>under_review</code>. If a dispute is found in your favor, this changes to <code>won</code>. If the card issuer upholds the cardholder&rsquo;s dispute, the status changes to <code>lost</code>. Once a dispute is closed, we send you an email with information about the outcome and a <code>charge.dispute.closed</code> webhook event.</p></section>
 
 <section>
-<h2 id="submitting-evidence">Submitting evidence</h2>
+<a id="submitting-evidence" name="//apple_ref/cpp/Section/Submitting%20evidence" class="dashAnchor"></a><h2 id="submitting-evidence">Submitting evidence</h2>
 
 <p>The evidence you submit should be appropriate to the <a href="categories.html">reason</a> for the dispute. Web logs, email communications, shipment tracking numbers and delivery confirmation, proof of prior refunds or replacement shipments, etc., can all be helpful. For example, a response to a dispute with the reason &ldquo;product not received&rdquo; should have evidence that includes shipping information and any screenshots of package tracking. Stripe electronically submits this information to your cardholder&rsquo;s issuer and notifies you of any updates to the dispute.</p>
 
@@ -3090,7 +3090,7 @@
 <p>You can prepare a suitable response that has the most relevant evidence using the following best practices. These can help ensure you have the greatest possible chance of a dispute being found in your favor&mdash;and your funds returned.</p></section>
 
 <section>
-<h2 id="keep-your-evidence-relevant-and-to-the-point">Keep your evidence relevant and to the point</h2>
+<a id="keep-your-evidence-relevant-and-to-the-point" name="//apple_ref/cpp/Section/Keep%20your%20evidence%20relevant%20and%20to%20the%20point" class="dashAnchor"></a><h2 id="keep-your-evidence-relevant-and-to-the-point">Keep your evidence relevant and to the point</h2>
 
 <p>Card issuers review thousands of dispute responses every day. A long introduction about your product or company, complaint about the customer, or the unfairness of the dispute isn&rsquo;t going to make your responses more compelling. Instead, provide only the facts surrounding the original purchase, using a neutral and professional tone. For example:</p>
 
@@ -3105,11 +3105,11 @@
 <p>Your evidence should be factual, professional, and concise. While providing little evidence is a problem, overwhelming the card issuer with unnecessary information can have the same effect.</p></section>
 
 <section>
-<h2 id="provide-clear-and-accurate-evidence">Provide clear and accurate evidence</h2>
+<a id="provide-clear-and-accurate-evidence" name="//apple_ref/cpp/Section/Provide%20clear%20and%20accurate%20evidence" class="dashAnchor"></a><h2 id="provide-clear-and-accurate-evidence">Provide clear and accurate evidence</h2>
 <p>Card issuers do not follow any links provided in a response. Instead, you must include a clear screenshot of your terms or policies as they appear during checkout or on your site if they are an important part of your defense (e.g., a customer disputed a subscription but there is a minimum contract term that must be adhered to).</p></section>
 
 <section>
-<h2 id="include-proof-of-customer-authorization">Include proof of customer authorization</h2>
+<a id="include-proof-of-customer-authorization" name="//apple_ref/cpp/Section/Include%20proof%20of%20customer%20authorization" class="dashAnchor"></a><h2 id="include-proof-of-customer-authorization">Include proof of customer authorization</h2>
 <p>Fraudulent disputes account for over half of all disputes. Proving the legitimate cardholder was aware of and authorized the transaction being disputed is vitally important in such cases. Any data that shows proof of this is a standard part of a compelling response, such as:</p><ul class="checkmarks">
   <li>AVS (Address Verification System) matches</li>
   <li>CVC (Card Verification Code) confirmations</li>
@@ -3120,7 +3120,7 @@
 <p>Stripe always includes any AVS/CVC results as well as the purchase IP (if available from your Stripe integration), but if you have any other evidence of authorization be sure to include it.</p></section>
 
 <section>
-<h2 id="include-proof-of-service-or-delivery">Include proof of service or delivery</h2>
+<a id="include-proof-of-service-or-delivery" name="//apple_ref/cpp/Section/Include%20proof%20of%20service%20or%20delivery" class="dashAnchor"></a><h2 id="include-proof-of-service-or-delivery">Include proof of service or delivery</h2>
 <p>In addition to fraudulent disputes, claims from cardholders that products or services never arrived or happened, were defective or unsatisfactory, or not as described are also potential dispute <a href="categories.html">reasons</a>. Assuming that all is well on your side (the product was not faulty, was as described, was shipped and delivered prior to the dispute date) then you&rsquo;ll want to provide proof of service or delivery.</p>
 
 <p>For a merchandise purchase, provide proof of shipment and delivery that includes the full delivery address, not just the city and ZIP code. Choosing a carrier or delivery method that requires a signature on delivery provides the best defense against <a href="categories.html">product not received</a> or <a href="categories.html">fraudulent</a> disputes where you&rsquo;ve shipped to a <em>verified</em> billing address that has passed AVS and ZIP code verification.</p>
@@ -3130,11 +3130,11 @@
 <p>If your business provides digital goods, include evidence such as an IP address or system log proving the customer downloaded the content or used your software or service.</p></section>
 
 <section>
-<h2 id="include-a-copy-of-your-terms-of-service-and-refund-policy">Include a copy of your terms of service and refund policy</h2>
+<a id="include-a-copy-of-your-terms-of-service-and-refund-policy" name="//apple_ref/cpp/Section/Include%20a%20copy%20of%20your%20terms%20of%20service%20and%20refund%20policy" class="dashAnchor"></a><h2 id="include-a-copy-of-your-terms-of-service-and-refund-policy">Include a copy of your terms of service and refund policy</h2>
 <p>When it comes to disputes, fine print matters. Providing proof that your customer agreed to and understood your terms of service at checkout, or did not follow your policies when it comes to returns or refunds is critical. A clean screenshot of how your terms of service or other policies are presented during checkout is an important addition to your evidence&mdash;it is not enough to simply include a text copy of these.</p></section>
 
 <section>
-<h2 id="file-upload-recommendations">Formatting documents and images to upload</h2>
+<a id="formatting-documents-and-images-to-upload" name="//apple_ref/cpp/Section/Formatting%20documents%20and%20images%20to%20upload" class="dashAnchor"></a><h2 id="file-upload-recommendations">Formatting documents and images to upload</h2>
 
 <p>Dispute evidence is often transmitted through several legacy systems and most card issuers are still utilizing paper faxing. Before sending your response, ensure that any text or images are clear and large enough to show up clearly in a black and white fax transmission.</p>
 
@@ -3153,18 +3153,18 @@
 <p>Any illegible text or data that is submitted with a response will be considered incomplete by the card issuer and not reviewed.</p></section>
 
 <section>
-<h2 id="accepting-disputes">Accepting disputes</h2>
+<a id="accepting-disputes" name="//apple_ref/cpp/Section/Accepting%20disputes" class="dashAnchor"></a><h2 id="accepting-disputes">Accepting disputes</h2>
 <p>You can accept a dispute, effectively agreeing with the cardholder that the dispute was valid for the reason given. Accepting a dispute is not considered an admission of wrongdoing and is sometimes the most appropriate response. The customer has already received their refund via the dispute process&mdash;if you agree they should have been refunded, it&rsquo;s best to accept the dispute.
 You should always perform this action if you do not intend to respond and submit evidence. Although accepting disputes does not negatively affect your business any further, it should not be seen as an alternative to an effective refund or returns policy. Dispute activity is calculated based upon the disputes received, not won or lost, so dispute prevention is critical.</p></section>
 
 <section>
-<h2 id="misunderstandings">Misunderstandings</h2>
+<a id="misunderstandings" name="//apple_ref/cpp/Section/Misunderstandings" class="dashAnchor"></a><h2 id="misunderstandings">Misunderstandings</h2>
 <p>For disputes that are the result of a misunderstanding, your customer can tell their card issuer that they <a href="withdrawing.html">no longer dispute the transaction</a>. It&rsquo;s still important that you submit evidence to show that the payment was valid, however, and to ensure that the card issuer knows you are not accepting the dispute.</p>
 
 <p>In cases where you agree that the customer should keep the disputed funds, you should accept the dispute rather than ask the cardholder to withdraw the dispute for a regular refund. Remember, the card networks do not consider how many disputes you win or lose, only how many you receive.</p></section>
 
 <section>
-<h2 id="disputes-on-partially-refunded-payments">Disputes on partially refunded payments</h2>
+<a id="disputes-on-partially-refunded-payments" name="//apple_ref/cpp/Section/Disputes%20on%20partially%20refunded%20payments" class="dashAnchor"></a><h2 id="disputes-on-partially-refunded-payments">Disputes on partially refunded payments</h2>
 
 <p>While uncommon, a payment can be disputed for the full amount even if a partial refund has already been made (e.g., a refund of a smaller amount that has been agreed upon). We understand this can be frustrating as it leaves you responsible for the partial refund you&rsquo;ve already processed and the full amount disputed, though card issuers are very willing to rectify this situation.</p>
 
@@ -3173,7 +3173,7 @@ You should always perform this action if you do not intend to respond and submit
 <p>In most cases, the card issuer cancels the original dispute and then creates a separate one for the corrected amount. On Stripe, the existing dispute is used to track the overall outcome. If the dispute is fully resolved in your favor, the entire amount is returned to you. If it&rsquo;s not, only the partially refunded amount is returned. In this case, the dispute&rsquo;s <code>status</code> is set to <code>lost</code>, and in the Dashboard, the dispute is marked as &ldquo;partially won&rdquo;.</p></section>
 
 <section>
-  <h2>Next steps</h2>
+  <a id="next-steps" name="//apple_ref/cpp/Section/Next%20steps" class="dashAnchor"></a><h2>Next steps</h2>
   <p>
   Now that you know how to respond to disputes, you may want to learn more about the different reasons for disputes, or move on to related subjects:
   </p>
@@ -3222,7 +3222,7 @@ You should always perform this action if you do not intend to respond and submit
 
 
             </article>
-            <div class="docs-aside">
+            <div class="docs-aside" style="display: none;">
               <div class="docs-toc empty">
                 <h4>On this page</h4>
                 <ul class="docs-toc-list">

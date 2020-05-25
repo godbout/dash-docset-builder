@@ -180,7 +180,7 @@
   <body class="">
     
       <div id="docs">
-        <div id="sidebar">
+        <div id="sidebar" style="display: none;">
             
   <div class="logo">
     <a href="../recipes/switching-to-stripe.html" title="Stripe docs">
@@ -3008,7 +3008,7 @@
             <article id="content">
                 
   <header>
-  <h1>Scheduled queries</h1>
+  <a name="//apple_ref/cpp/Section/Top" class="dashAnchor"></a><h1>Scheduled queries</h1>
   <p>Learn how to schedule queries in Stripe Sigma that run on a recurring basis.</p>
 </header>
 
@@ -3017,7 +3017,7 @@
 <p>You can automate your Stripe Sigma queries by scheduling them to run on a daily, weekly, or monthly basis. Results for each scheduled query are sent via <a href="scheduled-queries.html#subscribers">email</a> to specified team members or as <a href="scheduled-queries.html#receiving-results-as-webhooks">webhook events</a>.</p></section>
 
 <section>
-<h2 id="scheduling-a-query">Scheduling a query</h2>
+<a id="scheduling-a-query" name="//apple_ref/cpp/Section/Scheduling%20a%20query" class="dashAnchor"></a><h2 id="scheduling-a-query">Scheduling a query</h2>
 
 <p>With a query loaded into the editor, click <strong>Schedule</strong>. We recommend you uniquely name all your scheduled queries to avoid confusion. If your query doesn&rsquo;t already have a name (or you wish to modify it), you can update it during the scheduling process.</p>
 
@@ -3062,7 +3062,7 @@
 <p>Based upon your chosen schedule, the timeline displays the date your query will next run, and the processing date of the data it will use (additional time is required to make your account data available to query).</p></section>
 
 <section>
-<h2 id="managing-scheduled-queries">Managing scheduled queries</h2>
+<a id="managing-scheduled-queries" name="//apple_ref/cpp/Section/Managing%20scheduled%20queries" class="dashAnchor"></a><h2 id="managing-scheduled-queries">Managing scheduled queries</h2>
 
 <p>Upcoming scheduled queries are displayed under <strong>Scheduled</strong> within the <strong>Queries</strong> tab. Schedules are grouped based on whether they were created by you or other members of your team.</p>
 
@@ -3070,7 +3070,7 @@
 
 <section>
 
-<h2 id="receiving-results-as-webhooks">Receiving results as webhooks</h2>
+<a id="receiving-results-as-webhooks" name="//apple_ref/cpp/Section/Receiving%20results%20as%20webhooks" class="dashAnchor"></a><h2 id="receiving-results-as-webhooks">Receiving results as webhooks</h2>
 
 <p>If you make use of <a href="../webhooks.html">webhooks</a>, you can receive notifications for scheduled queries as webhook events. Stripe sends the <code>sigma.scheduled_query_run.created</code> event each time a scheduled query is run.  See below for a sample event.</p>
 
@@ -3119,7 +3119,7 @@
 </section>
 
 <section>
-<h2 id="data-load-time">Referencing data freshness</h2>
+<a id="referencing-data-freshness" name="//apple_ref/cpp/Section/Referencing%20data%20freshness" class="dashAnchor"></a><h2 id="data-load-time">Referencing data freshness</h2>
 
 <p><a href="../sigma.html#data-availability">Additional time is required</a> for data to be made available to query. You can use data_load_time as a value in your queries that represents when data was most recently processed on your account. This is useful for dynamically setting a date range in your scheduled queries</p>
 
@@ -3198,7 +3198,7 @@ limit 10</code></div></pre>
 
 
             </article>
-            <div class="docs-aside">
+            <div class="docs-aside" style="display: none;">
               <div class="docs-toc empty">
                 <h4>On this page</h4>
                 <ul class="docs-toc-list">

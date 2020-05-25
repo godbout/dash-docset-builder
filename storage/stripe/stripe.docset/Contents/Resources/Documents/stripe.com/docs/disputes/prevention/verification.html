@@ -180,7 +180,7 @@
   <body class="">
     
       <div id="docs">
-        <div id="sidebar">
+        <div id="sidebar" style="display: none;">
             
   <div class="logo">
     <a href="../../recipes/switching-to-stripe.html" title="Stripe docs">
@@ -3008,7 +3008,7 @@
             <article id="content">
                 
   <header>
-  <h1>Verification checks</h1>
+  <a name="//apple_ref/cpp/Section/Top" class="dashAnchor"></a><h1>Verification checks</h1>
   <p>Learn how to make use of verification checks in order to protect against disputes and fraud.</p>
 </header>
 
@@ -3026,14 +3026,14 @@
 <p>If no information is collected, the card issuer cannot perform a verification check. It&rsquo;s strongly recommended to collect the CVC, ZIP code, and billing address for every payment. The results of verification checks help improve the detection of potentially fraudulent activity.</p></section>
 
 <section>
-<h2 id="cvc-check">Card verification code check (CVC)</h2>
+<a id="card-verification-code-check-cvc" name="//apple_ref/cpp/Section/Card%20verification%20code%20check%20%28CVC%29" class="dashAnchor"></a><h2 id="cvc-check">Card verification code check (CVC)</h2>
 
 <p>The CVC (also referred to as CVV) is the three- or four-digit number printed directly on the credit card, usually either on the signature strip or the front of the card. Radar includes a <a href="../../radar/rules.html#built-in-rules">built-in rule</a> to block any payments that fail the CVC verification check (note that this does not affect payments where the CVC check could not be performed). This can be enabled or disabled within the <a href="https://dashboard.stripe.com/test/radar/rules">Dashboard</a>.</p>
 
 <p>In general, only cardholders in physical possession of the card should have access to the CVC number. Businesses are not permitted to store the CVC number, so it&rsquo;s unlikely that a fraudster can obtain this information through a computer breach. However, CVC verification does not protect against physical theft of a card, or card information used on a compromised computer or website that isn&rsquo;t secure.</p></section>
 
 <section>
-<h2 id="avs-check">Address verification (AVS)</h2>
+<a id="address-verification-avs" name="//apple_ref/cpp/Section/Address%20verification%20%28AVS%29" class="dashAnchor"></a><h2 id="avs-check">Address verification (AVS)</h2>
 
 <p>AVS is comprised of two checks: one based on the ZIP code and another based on the billing street address. AVS checks determine whether these pieces of information match the billing address on file with the card issuer. Radar includes a <a href="../../radar/rules.html#built-in-rules">default rule</a> to block any payments that fail ZIP code verification, which can be enabled or disabled within the <a href="https://dashboard.stripe.com/test/radar/rules">Dashboard</a>.</p>
 
@@ -3041,7 +3041,7 @@
 
 <p>Support for both AVS checks varies by country and card issuer (e.g., certain countries do not use a postal code or some card issuers do not support street address verification). However, street address verification is commonly supported for cards issued in the United States, Canada, and the United Kingdom.</p></section>
 <section>
-<h2>Next steps</h2>
+<a id="next-steps" name="//apple_ref/cpp/Section/Next%20steps" class="dashAnchor"></a><h2>Next steps</h2>
   <p>
  Now that you have learned about how to make use of verification checks, you may want to learn about some of the best practices in preventiong fraud, or move on to related subjects:
   </p>
@@ -3089,7 +3089,7 @@
 
 
             </article>
-            <div class="docs-aside">
+            <div class="docs-aside" style="display: none;">
               <div class="docs-toc empty">
                 <h4>On this page</h4>
                 <ul class="docs-toc-list">

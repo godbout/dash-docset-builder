@@ -199,7 +199,7 @@
   <body class="">
     
       <div id="docs">
-        <div id="sidebar">
+        <div id="sidebar" style="display: none;">
             
   <div class="logo">
     <a href="../../../recipes/switching-to-stripe.html" title="Stripe docs">
@@ -3027,12 +3027,12 @@
             <article id="content">
                 
   <header>
-  <h1 id="charges-vs-payment-intents-apis">Charges vs. Payment Intents APIs</h1>
+  <a name="//apple_ref/cpp/Section/Top" class="dashAnchor"></a><h1 id="charges-vs-payment-intents-apis">Charges vs. Payment Intents APIs</h1>
 
   <p>Learn about the differences between Stripe&rsquo;s two core payment APIs and when to use them.</p>
 </header>
 
-<h2 id="understanding-the-stripe-payment-apis">Understanding the Stripe payment APIs</h2>
+<a id="understanding-the-stripe-payment-apis" name="//apple_ref/cpp/Section/Understanding%20the%20Stripe%20payment%20APIs" class="dashAnchor"></a><h2 id="understanding-the-stripe-payment-apis">Understanding the Stripe payment APIs</h2>
 
 <p>There are three ways to accept payments on Stripe today:</p>
 
@@ -3077,7 +3077,7 @@
   </tbody>
 </table>
 
-<h2 id="read">Migrating code that reads from charges</h2>
+<a id="migrating-code-that-reads-from-charges" name="//apple_ref/cpp/Section/Migrating%20code%20that%20reads%20from%20charges" class="dashAnchor"></a><h2 id="read">Migrating code that reads from charges</h2>
 
 <p>If you have an application with multiple payment flows and incrementally migrating each one from the Charges API to the <a href="../creating-payment-intents.html">Payment Intents API</a>, you should first update any code that reads from the <a href="../../../api/charges.html">Charge</a> object. To help with this, the charge object has two new properties, <a href="../../../api/charges/object.html#charge_object-payment_method_details">payment_method_details</a> and <a href="../../../api/charges/object.html#charge_object-billing_details">billing_details</a>, which provide a consistent interface for reading the details of the payment method used for the charge.</p>
 
@@ -3284,7 +3284,7 @@
 </div>
 
 <section>
-<h2 id="next-steps">Next steps</h2>
+<a id="next-steps" name="//apple_ref/cpp/Section/Next%20steps" class="dashAnchor"></a><h2 id="next-steps">Next steps</h2>
 
 <p>Now you have migrated code that reads from Charges, you can continue migrating your integration.</p>
 
@@ -3325,7 +3325,7 @@
 
 
             </article>
-            <div class="docs-aside">
+            <div class="docs-aside" style="display: none;">
               <div class="docs-toc empty">
                 <h4>On this page</h4>
                 <ul class="docs-toc-list">

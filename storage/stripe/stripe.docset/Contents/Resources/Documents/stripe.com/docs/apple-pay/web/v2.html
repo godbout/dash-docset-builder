@@ -180,7 +180,7 @@
   <body class="">
     
       <div id="docs">
-        <div id="sidebar">
+        <div id="sidebar" style="display: none;">
             
   <div class="logo">
     <a href="../../recipes/switching-to-stripe.html" title="Stripe docs">
@@ -3008,7 +3008,7 @@
             <article id="content">
                 
   <header>
-  <h1>Apple Pay on the Web with Stripe.js v2</h1>
+  <a name="//apple_ref/cpp/Section/Top" class="dashAnchor"></a><h1>Apple Pay on the Web with Stripe.js v2</h1>
   <p>
     This guide takes you through the process of getting set up with Apple Pay on the Web, all the way through making your first charge. Refer to our <a href="../../apple-pay.html">iOS app guide</a> for integrating Apple Pay into a native iOS app.</p>
 </header>
@@ -3075,7 +3075,7 @@
   <p>If you have Xcode 8 installed, you can also develop your site in Safari inside the iOS simulator.</p>
 </section>
 <section>
-  <h2 id="testmode">Step 1: Set up the Apple Pay Sandbox</h2>
+  <a id="step-1-set-up-the-apple-pay-sandbox" name="//apple_ref/cpp/Section/Step%201%3A%20Set%20up%20the%20Apple%20Pay%20Sandbox" class="dashAnchor"></a><h2 id="testmode">Step 1: Set up the Apple Pay Sandbox</h2>
   <p>
     To use Apple Pay while developing your site, you'll need to use the Apple Pay Sandbox. Getting it set up takes just a few minutes.
   </p>
@@ -3093,7 +3093,7 @@
 </section>
 
 <section>
-  <h2 id="adding-a-button">Step 2: Add an Apple Pay button to your site</h2>
+  <a id="step-2-add-an-apple-pay-button-to-your-site" name="//apple_ref/cpp/Section/Step%202%3A%20Add%20an%20Apple%20Pay%20button%20to%20your%20site" class="dashAnchor"></a><h2 id="adding-a-button">Step 2: Add an Apple Pay button to your site</h2>
 
   <aside class="important red"><p><strong>This method of using Stripe.js to collect Apple Pay has been deprecated</strong>. Use <a href="../../stripe-js/elements/payment-request-button.html">Stripe.js v3</a> instead.</p></aside>
 
@@ -3178,7 +3178,7 @@ Stripe.applePay.checkAvailability(function(available) {
 </section>
 
 <section>
-  <h2 id="beginning-a-session">Step 3: Start an Apple Pay Session</h2>
+  <a id="step-3-start-an-apple-pay-session" name="//apple_ref/cpp/Section/Step%203%3A%20Start%20an%20Apple%20Pay%20Session" class="dashAnchor"></a><h2 id="beginning-a-session">Step 3: Start an Apple Pay Session</h2>
   <p>
     Assuming Apple Pay is available, when the user taps this payment button, show the Apple Pay sheet. This must be done in response to a tap or click event, so we'll do this by adding an event listener to the button's <code>click</code> event.
   </p>
@@ -3278,7 +3278,7 @@ product.js
 </section>
 
 <section>
-  <h2 id="going-live">Step 4: Verify your domain to go live</h2>
+  <a id="step-4-verify-your-domain-to-go-live" name="//apple_ref/cpp/Section/Step%204%3A%20Verify%20your%20domain%20to%20go%20live" class="dashAnchor"></a><h2 id="going-live">Step 4: Verify your domain to go live</h2>
   <p>
     To use Apple Pay with your live API key, you need to register with Apple all of your web domains that will be showing an Apple Pay button. This includes both top-level domains (e.g., <strong>stripe.com</strong>) and subdomains (e.g., <strong>shop.stripe.com</strong>).
   </p><p>
@@ -3375,7 +3375,7 @@ var domain = service.Create(options);</code></div></pre>
 </section>
 
 <section>
-  <h2 id="connect">Set up Apple Pay with Stripe Connect (optional)</h2>
+  <a id="set-up-apple-pay-with-stripe-connect-optional" name="//apple_ref/cpp/Section/Set%20up%20Apple%20Pay%20with%20Stripe%20Connect%20%28optional%29" class="dashAnchor"></a><h2 id="connect">Set up Apple Pay with Stripe Connect (optional)</h2>
   <p>
     If you have a <a href="../../connect.html">Connect</a> application and would like to accept payments on behalf of your users via Apple Pay, make these two changes to your integration:
   </p>
@@ -3492,7 +3492,7 @@ var domain = service.Create(options, requestOptions);</code></div></pre>
 </section>
 
 <section>
-  <h2 id="next-steps">Next steps</h2>
+  <a id="next-steps" name="//apple_ref/cpp/Section/Next%20steps" class="dashAnchor"></a><h2 id="next-steps">Next steps</h2>
   <p>Once you've successfully made an Apple Pay charge on your website, you can optionally start collecting your users' billing/shipping address, offering them different shipping options, and more.</p>
 <ul class="next-steps">
     <li><a href="custom.html"><span>Customize your integration</span></a></li>
@@ -3534,7 +3534,7 @@ var domain = service.Create(options, requestOptions);</code></div></pre>
 
 
             </article>
-            <div class="docs-aside">
+            <div class="docs-aside" style="display: none;">
               <div class="docs-toc empty">
                 <h4>On this page</h4>
                 <ul class="docs-toc-list">

@@ -181,7 +181,7 @@
   <body class="">
     
       <div id="docs">
-        <div id="sidebar">
+        <div id="sidebar" style="display: none;">
             
   <div class="logo">
     <a href="../recipes/switching-to-stripe.html" title="Stripe docs">
@@ -3010,7 +3010,7 @@
                 
   
 <header>
-  <h1 id="card-payments-on-the-charges-api">Card payments on the Charges API</h1>
+  <a name="//apple_ref/cpp/Section/Top" class="dashAnchor"></a><h1 id="card-payments-on-the-charges-api">Card payments on the Charges API</h1>
 
   <p>Learn how to charge, save, and authenticate cards with Stripe&rsquo;s older APIs.</p>
 
@@ -3037,7 +3037,7 @@ similar to Charges? If you only accept U.S. and Canadian card payments, you can
 </section>
 
 <section>
-  <h2 id="migrating">Migrating</h2>
+  <a id="migrating" name="//apple_ref/cpp/Section/Migrating" class="dashAnchor"></a><h2 id="migrating">Migrating</h2>
 
   <p>The Charges API is limited. To get the latest Stripe features, <a href="payment-intents/migration.html">migrate to the Payment Intents API</a>.</p>
 
@@ -3083,7 +3083,7 @@ similar to Charges? If you only accept U.S. and Canadian card payments, you can
 
 <section>
 
-  <h2 id="using-the-charges-api">Using the Charges API</h2>
+  <a id="using-the-charges-api" name="//apple_ref/cpp/Section/Using%20the%20Charges%20API" class="dashAnchor"></a><h2 id="using-the-charges-api">Using the Charges API</h2>
 
   <p>Although unsupported, the Stripe Charges API isn&rsquo;t going away. Until you upgrade your integration, you can still use Charges to collect payments and more:</p>
 
@@ -3098,7 +3098,7 @@ similar to Charges? If you only accept U.S. and Canadian card payments, you can
 </section>
 
 <section>
-  <h2 id="refunds">Refunds</h2>
+  <a id="refunds" name="//apple_ref/cpp/Section/Refunds" class="dashAnchor"></a><h2 id="refunds">Refunds</h2>
 
   <p>To refund a payment via the API, create a <a href="../api/index.html#create_refund">Refund</a> and provide the ID of the charge to be refunded.</p>
 
@@ -3355,7 +3355,7 @@ var refund = service.Create(options);
 </section>
 
 <section>
-  <h2 id="apple-pay">Apple Pay</h2>
+  <a id="apple-pay" name="//apple_ref/cpp/Section/Apple%20Pay" class="dashAnchor"></a><h2 id="apple-pay">Apple Pay</h2>
 
   <p>When your customer approves the payment, your app receives a <a href="https://developer.apple.com/documentation/passkit/pkpayment" class="external" target="_blank">PKPayment</a> instance containing their encrypted card details by implementing the <a href="https://developer.apple.com/documentation/passkit/pkpaymentauthorizationviewcontrollerdelegate" class="external">PKPaymentAuthorizationViewControllerDelegate</a> methods.</p>
 
@@ -3460,7 +3460,7 @@ CheckoutViewController.m
 </section>
 
 <section>
-  <h2 id="dynamic-statement-descriptor">Dynamic statement descriptor</h2>
+  <a id="dynamic-statement-descriptor" name="//apple_ref/cpp/Section/Dynamic%20statement%20descriptor" class="dashAnchor"></a><h2 id="dynamic-statement-descriptor">Dynamic statement descriptor</h2>
 
   <p>By default, your Stripe account&rsquo;s <a href="../account.html#public-business-information">statement descriptor</a> appears on customer statements whenever you charge their card. Additionally, you can set the statement descriptor dynamically on every charge request with the <code>statement_descriptor</code> argument on the Charge object.</p>
 </section>
@@ -3667,7 +3667,7 @@ var charge = service.Create(options);
 <p>If you&rsquo;re not sure what the statement descriptors look like when they&rsquo;re combined, you can check them in the the <a href="https://dashboard.stripe.com/account">Stripe Dashboard</a>.</p>
 
 <section>
-<h2 id="storing-information-in-metadata">Storing information in metadata</h2>
+<a id="storing-information-in-metadata" name="//apple_ref/cpp/Section/Storing%20information%20in%20metadata" class="dashAnchor"></a><h2 id="storing-information-in-metadata">Storing information in metadata</h2>
 
 <aside class="note">
   <h3>Using Payment Intents</h3>
@@ -3877,7 +3877,7 @@ var charge = service.Create(options);
   <p>Do not store any sensitive information (personally identifiable information, card details, etc.) as metadata or in the charge&rsquo;s <code>description</code> parameter.</p>
 </aside>
 
-<h2 id="checkout">Collect card payments faster, with less code</h2>
+<a id="collect-card-payments-faster-with-less-code" name="//apple_ref/cpp/Section/Collect%20card%20payments%20faster%2C%20with%20less%20code" class="dashAnchor"></a><h2 id="checkout">Collect card payments faster, with less code</h2>
 
 <p>The easiest way to move to our Payment Intents API is to use <a href="../checkout.html">Checkout</a>, a Stripe-hosted payment page that adjusts to web and mobile browsers.</p></section>
 
@@ -3913,7 +3913,7 @@ var charge = service.Create(options);
 
 
             </article>
-            <div class="docs-aside">
+            <div class="docs-aside" style="display: none;">
               <div class="docs-toc empty">
                 <h4>On this page</h4>
                 <ul class="docs-toc-list">

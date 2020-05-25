@@ -191,7 +191,7 @@
   <body class="">
     
       <div id="docs">
-        <div id="sidebar">
+        <div id="sidebar" style="display: none;">
             
   <div class="logo">
     <a href="recipes/switching-to-stripe.html" title="Stripe docs">
@@ -3019,7 +3019,7 @@
             <article id="content">
                 
   <header>
-  <h1>Supported currencies</h1>
+  <a name="//apple_ref/cpp/Section/Top" class="dashAnchor"></a><h1>Supported currencies</h1>
   <p>See what currencies you can use for making charges and for paying out to your bank account.</p>
 </header>
 
@@ -3053,7 +3053,7 @@
 <p>If the charge currency differs from your settlement currency, Stripe <a href="currencies/conversions.html">converts the charge</a> to your settlement currency. Refer to our <a href="payouts.html#multiple-bank-accounts">payouts</a> documentation to learn about the different bank account currencies that we support.</p></section>
 
 <section>
-<h2 id="presentment-currencies">Supported presentment currencies</h2>
+<a id="supported-presentment-currencies" name="//apple_ref/cpp/Section/Supported%20presentment%20currencies" class="dashAnchor"></a><h2 id="presentment-currencies">Supported presentment currencies</h2>
 
 
 <div class="tabs tabs-regular  animated">
@@ -8893,7 +8893,7 @@
 </section>
 
 <section>
-<h2 id="zero-decimal">Zero-decimal currencies</h2>
+<a id="zero-decimal-currencies" name="//apple_ref/cpp/Section/Zero-decimal%20currencies" class="dashAnchor"></a><h2 id="zero-decimal">Zero-decimal currencies</h2>
 
 <p>All API requests expect amounts to be provided in a currency&rsquo;s smallest unit. For example, to charge 10 USD, provide an <code>amount</code> value of <strong>1000</strong> (i.e., 1000 cents).</p>
 
@@ -8906,7 +8906,7 @@
 <p>The Ugandan Shilling (UGX) was a decimal-based currency but is now effectively a zero-decimal currency. To maintain backwards compatibility, amounts must be passed in with two decimals (e.g., to charge 5 UGX, provide an <code>amount</code> value of <strong>500</strong>) and be evenly divisible by 100 (e.g., an <code>amount</code> value of <strong>499</strong> is not allowed).</p></section>
 
 <section>
-<h2 id="minimum-and-maximum-charge-amounts">Minimum and maximum charge amounts</h2>
+<a id="minimum-and-maximum-charge-amounts" name="//apple_ref/cpp/Section/Minimum%20and%20maximum%20charge%20amounts" class="dashAnchor"></a><h2 id="minimum-and-maximum-charge-amounts">Minimum and maximum charge amounts</h2>
 
 <p>As Stripe&rsquo;s processing fee combines a small fixed amount and a percentage, we enforce a minimum amount when creating a charge. This ensures you don&rsquo;t lose money on a charge. The minimum amount you can charge depends on which <a href="payouts.html#supported-accounts-and-settlement-currencies">bank account settlement currency</a> the payment would be paid out to.</p>  <table class="alternate">
   <thead>
@@ -8994,7 +8994,7 @@
 <p>The only limit to the maximum amount you can charge a customer is a technical one. The <code>amount</code> value supports up to eight digits (e.g., a value of <strong>99999999</strong> for a USD charge of $999,999.99).</p></section>
 
 <section>
-<h2>European credit cards</h2>
+<a id="european-credit-cards" name="//apple_ref/cpp/Section/European%20credit%20cards" class="dashAnchor"></a><h2>European credit cards</h2>
 
 <p>There are some factors, like pricing, in which credit cards from Europe are treated distinctly from credit cards from other regions. Stripe defines European cards as cards issued in the following countries:</p>
 
@@ -9185,7 +9185,7 @@
 
 
 <section>
-  <h2 id="next-steps">Next steps</h2>
+  <a id="next-steps" name="//apple_ref/cpp/Section/Next%20steps" class="dashAnchor"></a><h2 id="next-steps">Next steps</h2>
   <p>Now that you've learned more about currencies at Stripe, you may want to check out:</p>
 <ul class="next-steps">
     <li><a href="payments/payment-intents/creating-payment-intents.html"><span>Creating Payments</span></a></li>
@@ -9226,7 +9226,7 @@
 
 
             </article>
-            <div class="docs-aside">
+            <div class="docs-aside" style="display: none;">
               <div class="docs-toc empty">
                 <h4>On this page</h4>
                 <ul class="docs-toc-list">

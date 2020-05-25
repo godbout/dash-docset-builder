@@ -180,7 +180,7 @@
   <body class="">
     
       <div id="docs">
-        <div id="sidebar">
+        <div id="sidebar" style="display: none;">
             
   <div class="logo">
     <a href="../recipes/switching-to-stripe.html" title="Stripe docs">
@@ -3008,7 +3008,7 @@
             <article id="content">
                 
   <header>
-  <h1 id="cancel-subscriptions">Cancel subscriptions</h1>
+  <a name="//apple_ref/cpp/Section/Top" class="dashAnchor"></a><h1 id="cancel-subscriptions">Cancel subscriptions</h1>
 
   <p>Learn how to cancel existing subscriptions.</p>
 </header>
@@ -3031,7 +3031,7 @@
 </section>
 
 <section>
-  <h2 id="canceling">Canceling subscriptions</h2>
+  <a id="canceling-subscriptions" name="//apple_ref/cpp/Section/Canceling%20subscriptions" class="dashAnchor"></a><h2 id="canceling">Canceling subscriptions</h2>
 
   <p>Subscriptions can be canceled through the <a href="../api/index.html#cancel_subscription">API</a>:</p>
 
@@ -3272,7 +3272,7 @@ Subscription subscription = service.Update("sub_49ty4767H20z6a", options);
 </section>
 
 <section>
-  <h2 id="invoice-items-and-usage">Invoice items and usage</h2>
+  <a id="invoice-items-and-usage" name="//apple_ref/cpp/Section/Invoice%20items%20and%20usage" class="dashAnchor"></a><h2 id="invoice-items-and-usage">Invoice items and usage</h2>
 
   <p>When a subscription has pending <a href="invoices.html#adding-draft-invoice-items">invoice items</a> you&rsquo;ve created, the customer may potentially still be billed for those if the cancellation is set to include a final invoice or there is another subscription active on the customer. To avoid this, <a href="../api/index.html#delete_invoiceitem">manually delete</a> the invoice items.</p>
 
@@ -3286,7 +3286,7 @@ This effectively <a href="../billing/invoices/workflow.html#auto_advance">pauses
 </section>
 
 <section>
-  <h2 id="events">Cancellation events</h2>
+  <a id="cancellation-events" name="//apple_ref/cpp/Section/Cancellation%20events" class="dashAnchor"></a><h2 id="events">Cancellation events</h2>
 
   <p>Stripe sends a <code>customer.subscription.deleted</code> event when a customer&rsquo;s subscription is canceled immediately. If the <code>customer.subscription.deleted</code> event&rsquo;s <code>request</code> property is not <code>null</code>, that indicates the cancellation was made by your request (as opposed to automatically based upon your subscription settings).</p>
 
@@ -3294,7 +3294,7 @@ This effectively <a href="../billing/invoices/workflow.html#auto_advance">pauses
 </section>
 
 <section>
-  <h2 id="reactivating-canceled-subscriptions">Reactivating canceled subscriptions</h2>
+  <a id="reactivating-canceled-subscriptions" name="//apple_ref/cpp/Section/Reactivating%20canceled%20subscriptions" class="dashAnchor"></a><h2 id="reactivating-canceled-subscriptions">Reactivating canceled subscriptions</h2>
 
   <p>If a customer&rsquo;s subscription is canceled by updating <code>cancel_at_period_end</code> to <code>true</code>, and the subscription has not yet reached the end of the billing period, it can be reactivated. Subscriptions canceled immediately, however, cannot be reactivated. To reactivate the subscription, <a href="../api/index.html#update_subscription">update the subscription</a>, setting the value of <code>cancel_at_period_end</code> to <code>false</code>.</p>
 
@@ -3487,7 +3487,7 @@ subscription = service.Update("sub_49ty4767H20z6a", options);
 </section>
 
 <section>
-  <h2 id="next-steps">Next steps</h2>
+  <a id="next-steps" name="//apple_ref/cpp/Section/Next%20steps" class="dashAnchor"></a><h2 id="next-steps">Next steps</h2>
 
   <p>Congrats! You know more about canceling subscriptions. Some resources you might want to see next:</p>
 
@@ -3529,7 +3529,7 @@ subscription = service.Update("sub_49ty4767H20z6a", options);
 
 
             </article>
-            <div class="docs-aside">
+            <div class="docs-aside" style="display: none;">
               <div class="docs-toc empty">
                 <h4>On this page</h4>
                 <ul class="docs-toc-list">

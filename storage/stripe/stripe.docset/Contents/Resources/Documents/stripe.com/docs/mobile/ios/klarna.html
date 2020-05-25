@@ -180,7 +180,7 @@
   <body class="">
     
       <div id="docs">
-        <div id="sidebar">
+        <div id="sidebar" style="display: none;">
             
   <div class="logo">
     <a href="../../recipes/switching-to-stripe.html" title="Stripe docs">
@@ -3008,7 +3008,7 @@
             <article id="content">
                 
   <header>
-  <h1>Klarna payments on iOS <span class="tag beta">Public Beta</span></h1>
+  <a name="//apple_ref/cpp/Section/Top" class="dashAnchor"></a><h1>Klarna payments on iOS <span class="tag beta">Public Beta</span></h1>
   <p>Use Sources to accept payments using Klarna, a popular global payment method.</p>
 </header>
 
@@ -3075,11 +3075,11 @@
 </table></section>
 
 <section>
-<h2 id="prerequisite"><span class="step">Prerequisite:</span> Update Terms and Conditions</h2>
+<a id="prerequisite-update-terms-and-conditions" name="//apple_ref/cpp/Section/Prerequisite%3A%20Update%20Terms%20and%20Conditions" class="dashAnchor"></a><h2 id="prerequisite"><span class="step">Prerequisite:</span> Update Terms and Conditions</h2>
 <p>Prior to processing live transactions with Klarna, it&rsquo;s important that you update your Terms and Conditions and Privacy Policy, per <a href="https://developers.klarna.com/documentation/klarna-payments/legal-privacy/">Klarna&rsquo;s requirements</a>.</p></section>
 
 <section>
-<h2 id="create-source"><span class="step">Step 1:</span> Create an <code>STPSource</code> object</h2>
+<a id="step-1-create-an-stpsource-object" name="//apple_ref/cpp/Section/Step%201%3A%20Create%20an%20STPSource%20object" class="dashAnchor"></a><h2 id="create-source"><span class="step">Step 1:</span> Create an <code>STPSource</code> object</h2>
   <aside class="note">
     <p>This guide assumes you've already <a href="../../payments/accept-a-payment-charges.html#ios">installed and configured</a> the Stripe iOS SDK and are familiar with Sources.</p>
   </aside>
@@ -3715,7 +3715,7 @@ $source-&gt;save();
 </section>
 
 <section>
-  <h2 id="complete-redirect"><span class="step">Step 2:</span> Authorize the payment with Klarna</h2>
+  <a id="step-2-authorize-the-payment-with-klarna" name="//apple_ref/cpp/Section/Step%202%3A%20Authorize%20the%20payment%20with%20Klarna" class="dashAnchor"></a><h2 id="complete-redirect"><span class="step">Step 2:</span> Authorize the payment with Klarna</h2>
 <p>Klarna will return a redirect URL. You can use <code>STPRedirectContext</code> to handle the redirect flow.</p>
 <div class="tabs tabs-code animated" data-callback="codeTabsChanged">
 <nav class="nav-languages has-copy-btn">
@@ -3846,7 +3846,7 @@ $source-&gt;save();
 </section>
 
 <section>
-<h2 id="charge-request"><span class="step">Step 3:</span> Charge the source</h2>
+<a id="step-3-charge-the-source" name="//apple_ref/cpp/Section/Step%203%3A%20Charge%20the%20source" class="dashAnchor"></a><h2 id="charge-request"><span class="step">Step 3:</span> Charge the source</h2>
 
 <p>Once Klarna authorizes the payment, the source&rsquo;s <code>status</code> transitions to <code>chargeable</code> and it can be used to make a charge request.</p>
 
@@ -4023,7 +4023,7 @@ Charge charge = service.Create(options);
 </section>
 
 <section>
-<h2 id="charge-confirmation"><span class="step">Step 4:</span> Confirm that the charge has succeeded</h2>
+<a id="step-4-confirm-that-the-charge-has-succeeded" name="//apple_ref/cpp/Section/Step%204%3A%20Confirm%20that%20the%20charge%20has%20succeeded" class="dashAnchor"></a><h2 id="charge-confirmation"><span class="step">Step 4:</span> Confirm that the charge has succeeded</h2>
 
 <aside class="note">
   <h3>Klarna payment details</h3>
@@ -4086,7 +4086,7 @@ Charge charge = service.Create(options);
 <p>A source must be used within one hour of becoming <code>chargeable</code>. If unused after an hour, its status automatically transitions to <code>canceled</code> and your integration receives a <code>source.canceled</code> webhook event.</p></section>
 
 <section>
-<h2 id="testing-klarna-payments">Testing Klarna payments</h2>
+<a id="testing-klarna-payments" name="//apple_ref/cpp/Section/Testing%20Klarna%20payments" class="dashAnchor"></a><h2 id="testing-klarna-payments">Testing Klarna payments</h2>
 
 <p>Below is a set of test email addresses and test credit repayment options outlined by customer country. You can use these to test Klarna payments under various conditions while you develop your Klarna integration.</p>
 
@@ -4520,7 +4520,7 @@ Charge charge = service.Create(options);
 </section>
 
 <section>
-<h2>Related resources</h2>
+<a id="related-resources" name="//apple_ref/cpp/Section/Related%20resources" class="dashAnchor"></a><h2>Related resources</h2>
 <ul class="next-steps">
     <li><a href="../../sources/bitcoin.html"><span>Other supported payment methods</span></a></li>
     <li><a href="../../api/index.html#sources"><span>Sources API Reference</span></a></li>
@@ -4560,7 +4560,7 @@ Charge charge = service.Create(options);
 
 
             </article>
-            <div class="docs-aside">
+            <div class="docs-aside" style="display: none;">
               <div class="docs-toc empty">
                 <h4>On this page</h4>
                 <ul class="docs-toc-list">

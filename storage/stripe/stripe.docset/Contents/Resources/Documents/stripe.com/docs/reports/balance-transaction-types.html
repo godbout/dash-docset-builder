@@ -180,7 +180,7 @@
   <body class="">
     
       <div id="docs">
-        <div id="sidebar">
+        <div id="sidebar" style="display: none;">
             
   <div class="logo">
     <a href="../recipes/switching-to-stripe.html" title="Stripe docs">
@@ -3008,7 +3008,7 @@
             <article id="content">
                 
   <header>
-  <h1>Balance transaction types</h1>
+  <a name="//apple_ref/cpp/Section/Top" class="dashAnchor"></a><h1>Balance transaction types</h1>
   <p>Learn more about the different types of balance transactions that represent funds moving through your Stripe account.</p>
 </header>
 
@@ -3022,13 +3022,13 @@
 <p>If you are looking to classify transactions for accounting purposes, you might want to <a href="../reporting/reporting-categories.html">consider</a> <code>reporting_category</code> instead of the <code>type</code> field.</p></section>
 
 <section>
-  <h2 id="source">Balance transaction source</h2>
+  <a id="balance-transaction-source" name="//apple_ref/cpp/Section/Balance%20transaction%20source" class="dashAnchor"></a><h2 id="source">Balance transaction source</h2>
 
 <p>Balance transactions include a <a href="../api/index.html#balance_transaction_object-source">source</a> field which contains the ID of the related Stripe object.
 The <a href="../api/index.html">API</a> can be used to retrieve additional information about the payment activity that caused the Balance transaction to be created. Using <a href="../sigma/transactions.html">Sigma</a>, you can also join the <code>balance_transactions</code> table with other tables using the <code>source_id</code> column.</p></section>
 
 <section>
-  <h2 id="types">Balance transaction types</h2>
+  <a id="balance-transaction-types" name="//apple_ref/cpp/Section/Balance%20transaction%20types" class="dashAnchor"></a><h2 id="types">Balance transaction types</h2>
 
 <p>Balance transaction types can be grouped into different groups based on the underlying activity that generated the balance transactions.
 If you are not using the Connect or Issuing APIs, your balance transactions will be in the first two groups (&ldquo;related to charges and payments&rdquo; or &ldquo;related to Stripe balance changes&rdquo;).</p>
@@ -3358,7 +3358,7 @@ were represented as adjustments.</li>
 
 
             </article>
-            <div class="docs-aside">
+            <div class="docs-aside" style="display: none;">
               <div class="docs-toc empty">
                 <h4>On this page</h4>
                 <ul class="docs-toc-list">

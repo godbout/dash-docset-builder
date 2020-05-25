@@ -180,7 +180,7 @@
   <body class="">
     
       <div id="docs">
-        <div id="sidebar">
+        <div id="sidebar" style="display: none;">
             
   <div class="logo">
     <a href="../recipes/switching-to-stripe.html" title="Stripe docs">
@@ -3008,7 +3008,7 @@
             <article id="content">
                 
   <header>
-  <h1>Setting bank and debit card payouts</h1>
+  <a name="//apple_ref/cpp/Section/Top" class="dashAnchor"></a><h1>Setting bank and debit card payouts</h1>
     <p>Stripe allows platforms to specify payouts for its Express and Custom <a href="https://stripe.com/connect">Connect</a> accounts.</p>
 </header>
 
@@ -3037,7 +3037,7 @@
 <p>For Custom accounts, the platform can also set the destination <a href="payouts.html#bank-accounts">bank accounts and debit cards</a>. For Express accounts, the account holder handles that.</p></section>
 
 <section>
-  <h2 id="supported-settlement">Supported settlement currencies</h2>
+  <a id="supported-settlement-currencies" name="//apple_ref/cpp/Section/Supported%20settlement%20currencies" class="dashAnchor"></a><h2 id="supported-settlement">Supported settlement currencies</h2>
 
   <p>See what currencies you can settle in by selecting the applicable country. Supported <em>presentment</em> currencies can be found in our <a href="../currencies.html#presentment-currencies">currencies</a> documentation.</p>
 
@@ -4204,7 +4204,7 @@
 </section>
 
 <section>
-<h2 id="formats">Bank account formats by country</h2>
+<a id="bank-account-formats-by-country" name="//apple_ref/cpp/Section/Bank%20account%20formats%20by%20country" class="dashAnchor"></a><h2 id="formats">Bank account formats by country</h2>
 
 <p>When attaching bank accounts to Custom accounts, platforms need to provide an <code>account_number</code> and, in some countries, a <code>routing_number</code>. Every country has a slightly different format for these numbers, and entering them incorrectly causes subsequent payouts to fail.</p>
 
@@ -4832,7 +4832,7 @@
 
 
 <section>
-<h2 id="bank-accounts">Managing bank accounts and debit cards</h2>
+<a id="managing-bank-accounts-and-debit-cards" name="//apple_ref/cpp/Section/Managing%20bank%20accounts%20and%20debit%20cards" class="dashAnchor"></a><h2 id="bank-accounts">Managing bank accounts and debit cards</h2>
 
 <p>Express and Custom accounts have an <code>external_accounts</code> property: a list of all bank accounts and debit cards associated with the Stripe account. Any external account is a possible destination for funds.</p>
 
@@ -4884,7 +4884,7 @@
 </section>
 
 <section>
-<h2 id="multiple-accounts">Managing multiple bank and debit accounts</h2>
+<a id="managing-multiple-bank-and-debit-accounts" name="//apple_ref/cpp/Section/Managing%20multiple%20bank%20and%20debit%20accounts" class="dashAnchor"></a><h2 id="multiple-accounts">Managing multiple bank and debit accounts</h2>
 
 <p>By default, providing a new value for <code>external_accounts</code> while updating a Custom account <em>replaces</em> the existing account with the new one. To <em>add</em> additional bank accounts or debit cards to a connected account, use the <a href="../api/index.html#account_create_bank_account">Bank Account</a> and <a href="../api/index.html#account_create_card">Card</a> creation API endpoints.</p>
 <div class="tabs tabs-code animated" data-callback="codeTabsChanged" data-platform="server">
@@ -5012,7 +5012,7 @@ service.Create("{{CONNECTED_STRIPE_ACCOUNT_ID}}", options);
 <p>When working with <a href="currencies.html">multiple currencies</a>, Stripe automatically sends payouts to an associated bank account or debit card for its currency, thereby avoiding exchange fees. When there are multiple accounts available for a given currency, Stripe uses the one set as <code>default_for_currency</code>.</p></section>
 
 <section id="payout-information">
-<h2 id="payout-schedule">Payout schedule</h2>
+<a id="payout-schedule" name="//apple_ref/cpp/Section/Payout%20schedule" class="dashAnchor"></a><h2 id="payout-schedule">Payout schedule</h2>
 
 <p>When using automatic payouts, the <code>settings[payouts][schedule]</code> property on an account indicates how often the Stripe account&rsquo;s balance is automatically paid out:</p>
 <div class="code" data-language="json">
@@ -5041,7 +5041,7 @@ service.Create("{{CONNECTED_STRIPE_ACCOUNT_ID}}", options);
 </ul></section>
 
 <section>
-<h2 id="using-manual-payouts">Using manual payouts</h2>
+<a id="using-manual-payouts" name="//apple_ref/cpp/Section/Using%20manual%20payouts" class="dashAnchor"></a><h2 id="using-manual-payouts">Using manual payouts</h2>
 
 <p>If you set the value of <code>settings[payouts][schedule]</code> to <code>manual</code> using the <a href="../api/accounts/object.html#account_object-settings-payouts-schedule">Accounts API</a>, Stripe will hold funds in the account holder&rsquo;s balance until told to pay them out for up to 90 days. The exception to this limitation is the U.S., where funds can be held in their balance for up to two years. To trigger a payout of these funds, use the <a href="../api/payouts/create.html">Payouts API</a>.</p>
 
@@ -5329,7 +5329,7 @@ var payout = service.Create(options);
 
 
   <section>
-<h2 id="instant-payouts">Instant Payouts</h2>
+<a id="instant-payouts" name="//apple_ref/cpp/Section/Instant%20Payouts" class="dashAnchor"></a><h2 id="instant-payouts">Instant Payouts</h2>
 
 <p>With Instant Payouts, you can immediately send funds to a connected account&rsquo;s debit card. You can request Instant Payouts 24/7, including weekends and holidays, and funds typically appear in the associated bank account within 30 minutes.</p>
 
@@ -5652,7 +5652,7 @@ var payout = service.Create(options, requestOptions);
 </section>
 
 <section>
-  <h2>Further reading</h2>
+  <a id="further-reading" name="//apple_ref/cpp/Section/Further%20reading" class="dashAnchor"></a><h2>Further reading</h2>
   <p>Check out the rest of the guide for help with your integration.</p>
 <ul class="next-steps">
     <li><a href="custom-accounts.html"><span>Custom Accounts</span></a></li>
@@ -5695,7 +5695,7 @@ var payout = service.Create(options, requestOptions);
 
 
             </article>
-            <div class="docs-aside">
+            <div class="docs-aside" style="display: none;">
               <div class="docs-toc empty">
                 <h4>On this page</h4>
                 <ul class="docs-toc-list">

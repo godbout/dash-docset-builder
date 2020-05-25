@@ -180,7 +180,7 @@
   <body class="">
     
       <div id="docs">
-        <div id="sidebar">
+        <div id="sidebar" style="display: none;">
             
   <div class="logo">
     <a href="../../recipes/switching-to-stripe.html" title="Stripe docs">
@@ -3009,7 +3009,7 @@
                 
   <header>
 
-  <h1 id="migrating-to-tax-rates-and-tax-ids">Migrating to tax rates and tax IDs</h1>
+  <a name="//apple_ref/cpp/Section/Top" class="dashAnchor"></a><h1 id="migrating-to-tax-rates-and-tax-ids">Migrating to tax rates and tax IDs</h1>
 
   <p>Moving from <code>tax_percent</code> to Tax Rates, and <code>tax_info</code>, <code>tax_info_verification</code>, and <code>business_vat_id</code> to Customer Tax IDs.</p>
 
@@ -3046,7 +3046,7 @@
 
 <section>
 
-  <h2 id="tax-percent-changes">Moving from <code>tax_percent</code> to Tax Rate</h2>
+  <a id="moving-from-tax-percent-to-tax-rate" name="//apple_ref/cpp/Section/Moving%20from%20tax_percent%20to%20Tax%20Rate" class="dashAnchor"></a><h2 id="tax-percent-changes">Moving from <code>tax_percent</code> to Tax Rate</h2>
 
   <p>The new Tax Rate object allows you to better represent tax rates.
 This improves rendering on invoices and tax reporting.</p>
@@ -3076,7 +3076,7 @@ This will continue to work exactly as it had before.</p>
   <p>The new API is much more expressive.
 If you use multiple tax rates, inclusive tax rates, or set them at the item level, <code>tax_percent</code> will be rendered null.</p>
 
-  <h2 id="upgrade-path-pick-from-3-levels-of-implementation-effort">Upgrade path: Pick from 3 levels of implementation effort</h2>
+  <a id="upgrade-path-pick-from-3-levels-of-implementation-effort" name="//apple_ref/cpp/Section/Upgrade%20path%3A%20Pick%20from%203%20levels%20of%20implementation%20effort" class="dashAnchor"></a><h2 id="upgrade-path-pick-from-3-levels-of-implementation-effort">Upgrade path: Pick from 3 levels of implementation effort</h2>
 
   <p>For new invoices or subscriptions, we recommend performing the <a href="taxes.html#full">full</a> suite of updates if you can.
 This is a <em>very</em> small amount of work if you&rsquo;re currently using a handful of <code>tax_percent</code>s.</p>
@@ -3117,7 +3117,7 @@ Apply Tax Rates to <a href="../invoices/tax-rates.html">invoices</a> and <a href
 
 <section>
 
-  <h2 id="moving-from-taxinfo-to-customer-tax-ids">Moving from <code>tax_info</code> to Customer Tax IDs</h2>
+  <a id="moving-from-tax-info-to-customer-tax-ids" name="//apple_ref/cpp/Section/Moving%20from%20tax_info%20to%20Customer%20Tax%20IDs" class="dashAnchor"></a><h2 id="moving-from-taxinfo-to-customer-tax-ids">Moving from <code>tax_info</code> to Customer Tax IDs</h2>
 
   <p>The Customer&rsquo;s <code>tax_info</code>, <code>tax_info_verification</code>, and <code>business_vat_id</code> fields have been deprecated in favor of the new <a href="../../api/customers/object.html#customer_object-tax_ids">tax_ids</a> field, and will be removed in future versions.</p>
 
@@ -3168,7 +3168,7 @@ Apply Tax Rates to <a href="../invoices/tax-rates.html">invoices</a> and <a href
 
 
             </article>
-            <div class="docs-aside">
+            <div class="docs-aside" style="display: none;">
               <div class="docs-toc empty">
                 <h4>On this page</h4>
                 <ul class="docs-toc-list">

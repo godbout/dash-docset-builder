@@ -180,7 +180,7 @@
   <body class="">
     
       <div id="docs">
-        <div id="sidebar">
+        <div id="sidebar" style="display: none;">
             
   <div class="logo">
     <a href="../../recipes/switching-to-stripe.html" title="Stripe docs">
@@ -3008,12 +3008,12 @@
             <article id="content">
                 
   <header>
-  <h1 id="configuring-the-magento-modules">Configuring the Magento Modules</h1>
+  <a name="//apple_ref/cpp/Section/Top" class="dashAnchor"></a><h1 id="configuring-the-magento-modules">Configuring the Magento Modules</h1>
 
   <p>Learn how to configure the Stripe <a href="../magento.html">Magento modules</a> to choose payment methods for your Magento site and other options.</p>
 </header>
 <section>
-  <h2 id="find-the-module-configuration-options">Find the module configuration options</h2>
+  <a id="find-the-module-configuration-options" name="//apple_ref/cpp/Section/Find%20the%20module%20configuration%20options" class="dashAnchor"></a><h2 id="find-the-module-configuration-options">Find the module configuration options</h2>
 
   <p>Navigate to the configuration section for the Stripe module (<strong>Stores &gt; Configuration &gt; Sales &gt; Payment Methods</strong>):</p>
 
@@ -3023,7 +3023,7 @@
   </div>
 </section>
 <section>
-  <h2 id="api-keys">Configure API keys <span class="tag recommended">Required</span></h2>
+  <a id="configure-api-keys-required" name="//apple_ref/cpp/Section/Configure%20API%20keys%20Required" class="dashAnchor"></a><h2 id="api-keys">Configure API keys <span class="tag recommended">Required</span></h2>
 
   <ol>
     <li><strong>Mode:</strong> If you would like to test a payment, use <a href="../../keys.html#test-live-modes">test mode</a>. Change to live mode when you&rsquo;re ready to accept live transactions. You can learn more about <a href="../../testing.html">testing payments</a> on Stripe.</li>
@@ -3037,7 +3037,7 @@
 
 </section>
 <section>
-  <h2 id="webhooks">Configure webhooks <span class="tag recommended">Required</span></h2>
+  <a id="configure-webhooks-required" name="//apple_ref/cpp/Section/Configure%20webhooks%20Required" class="dashAnchor"></a><h2 id="webhooks">Configure webhooks <span class="tag recommended">Required</span></h2>
 
   <p>Entering and saving your API keys enables the webhooks configuration button. Webhook events notify you when something happens in your Stripe account. The module responds to these webhooks to create charges, invoice orders, setup subscription orders, or issue credit memos. Clicking this button automatically configures webhooks in your Stripe account.</p>
 
@@ -3049,7 +3049,7 @@
   <p>The <strong>webhooks signing secret</strong> is an optional key that you can use to <a href="../../webhooks/signatures.html">verify the origin</a> of webhooks sent to your website. Although the setting is optional, you should set it to ensure that the webhooks you receive are sent by Stripe, rather than a third party. You can retrieve the signing key from the specific webhook that you configured for your website. If you configure the same webhook endpoint for both live and test mode, the signing secret will be different for each mode.</p>
 </section>
 <section>
-  <h2 id="cards">Configure card payments <span class="tag recommended">Required</span></h2>
+  <a id="configure-card-payments-required" name="//apple_ref/cpp/Section/Configure%20card%20payments%20Required" class="dashAnchor"></a><h2 id="cards">Configure card payments <span class="tag recommended">Required</span></h2>
 
   <p>You can define how card payments are accepted with this module using several configuration options:</p>
 
@@ -3068,7 +3068,7 @@
   </ul>
 </section>
 <section>
-  <h2 id="configure-payment-request">Apple Pay, Google Pay, and Microsoft Pay support</h2>
+  <a id="apple-pay-google-pay-and-microsoft-pay-support" name="//apple_ref/cpp/Section/Apple%20Pay%2C%20Google%20Pay%2C%20and%20Microsoft%20Pay%20support" class="dashAnchor"></a><h2 id="configure-payment-request">Apple Pay, Google Pay, and Microsoft Pay support</h2>
 
   <aside class="important">
     <p>To add an Apple Pay button to the checkout page, ensure that you&rsquo;ve also <a href="configuration.html#cards">configured card payments</a> for the module.</p>
@@ -3119,7 +3119,7 @@
   </div>
 </section>
 <section>
-  <h2 id="payment-methods">Configure payment methods</h2>
+  <a id="configure-payment-methods" name="//apple_ref/cpp/Section/Configure%20payment%20methods" class="dashAnchor"></a><h2 id="payment-methods">Configure payment methods</h2>
 
   <p>You can enable support for payment methods like <a href="../../bancontact.html">Bancontact</a>, <a href="../../sources/eps.html">EPS</a>, <a href="../../sources/giropay.html">giropay</a>, <a href="../../sources/ideal.html">iDEAL</a>, <a href="../../sources/multibanco.html">Multibanco</a>, <a href="../../sources/p24.html">Przelewy24</a>, <a href="../../sources/alipay.html">Alipay</a>, <a href="../../sources/sepa-debit.html">SEPA Direct Debit</a>, <a href="../../sofort.html">SOFORT</a>, and <a href="../../sources/wechat-pay.html">WeChat Pay</a>.</p>
 
@@ -3135,7 +3135,7 @@
 </section>
 <section>
 
-  <h2 id="next-steps">Next steps</h2>
+  <a id="next-steps" name="//apple_ref/cpp/Section/Next%20steps" class="dashAnchor"></a><h2 id="next-steps">Next steps</h2>
 
   <p>Learn more about using the module:</p>
 
@@ -3177,7 +3177,7 @@
 
 
             </article>
-            <div class="docs-aside">
+            <div class="docs-aside" style="display: none;">
               <div class="docs-toc empty">
                 <h4>On this page</h4>
                 <ul class="docs-toc-list">

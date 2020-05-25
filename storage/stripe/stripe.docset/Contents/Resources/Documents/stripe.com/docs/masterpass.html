@@ -180,7 +180,7 @@
   <body class="">
     
       <div id="docs">
-        <div id="sidebar">
+        <div id="sidebar" style="display: none;">
             
   <div class="logo">
     <a href="recipes/switching-to-stripe.html" title="Stripe docs">
@@ -3009,7 +3009,7 @@
                 
   
 <header>
-<h1 id="masterpass-guide">Masterpass guide </h1>
+<a name="//apple_ref/cpp/Section/Top" class="dashAnchor"></a><h1 id="masterpass-guide">Masterpass guide </h1>
 
 <p>Accept payments via <a href="https://masterpass.com/en-us/">Masterpass</a> in your existing Stripe integration.</p>
 </header>
@@ -3023,7 +3023,7 @@
 </section>
 
 <section>
-<h2 id="integrating">Integrating the Masterpass button </h2>
+<a id="integrating-the-masterpass-button" name="//apple_ref/cpp/Section/Integrating%20the%20Masterpass%20button" class="dashAnchor"></a><h2 id="integrating">Integrating the Masterpass button </h2>
 
 <p>To get started, generate your Masterpass <strong>Checkout ID</strong> in the <a href="https://dashboard.stripe.com/account/payments/settings">Dashboard</a> and configure your sandbox and production callback URLs.</p>
 
@@ -3117,7 +3117,7 @@ button.addEventListener("click", ev =&gt;
 </section>
 
 <section>
-<h2 id="completing-the-payment">Completing the payment </h2>
+<a id="completing-the-payment" name="//apple_ref/cpp/Section/Completing%20the%20payment" class="dashAnchor"></a><h2 id="completing-the-payment">Completing the payment </h2>
 
 <p>When the user clicks the Masterpass button on your checkout page, it takes them to the Masterpass website where they can select an existing payment method from their account or input a new one. When the user completes the process, Masterpass redirects them to the callback URL that you configured when activating Masterpass, or the specified callback URL when invoking <code>masterpass.checkout</code> function. It appends an <code>oauth_verifier</code> URL query parameter that your application can use to complete the transaction.</p>
 
@@ -3148,7 +3148,7 @@ button.addEventListener("click", ev =&gt;
 </section>
 
 <section>
-<h2 id="testing-masterpass-title">Testing Masterpass </h2>
+<a id="testing-masterpass" name="//apple_ref/cpp/Section/Testing%20Masterpass" class="dashAnchor"></a><h2 id="testing-masterpass-title">Testing Masterpass </h2>
 
 <p>To test your Masterpass integration against Mastercard&rsquo;s sandbox, create a new Masterpass user account during the checkout process on your website. Configure the account to use one of the <a href="https://developer.mastercard.com/page/masterpass-sandbox-testing-guidelines#new-web-experience">test cards</a> from the Masterpass documentation. Complete the checkout process as normal, selecting the test card as your Masterpass payment method. If everything worked correctly, Masterpass will redirect you back to your application, which should create the charge as expected.</p>
 </section>
@@ -3185,7 +3185,7 @@ button.addEventListener("click", ev =&gt;
 
 
             </article>
-            <div class="docs-aside">
+            <div class="docs-aside" style="display: none;">
               <div class="docs-toc empty">
                 <h4>On this page</h4>
                 <ul class="docs-toc-list">

@@ -180,7 +180,7 @@
   <body class="">
     
       <div id="docs">
-        <div id="sidebar">
+        <div id="sidebar" style="display: none;">
             
   <div class="logo">
     <a href="../recipes/switching-to-stripe.html" title="Stripe docs">
@@ -3008,7 +3008,7 @@
             <article id="content">
                 
   <header>
-  <h1>Test a webhook endpoint</h1>
+  <a name="//apple_ref/cpp/Section/Top" class="dashAnchor"></a><h1>Test a webhook endpoint</h1>
   <p>Test that your webhook endpoint is working properly before taking it live.</p>
 </header>
 
@@ -3026,7 +3026,7 @@
 <p>The <a href="../stripe-cli.html">Stripe CLI</a> is the easiest and fastest method for testing your webhook endpoint. With the Stripe CLI you can begin listening for&ndash;and even triggering&ndash;events without any additional configuration. This helps you easily test a webhook integration without needing to deploy your application or figure out how to open up your local environment to the public internet in order for Stripe to communicate to it.</p></section>
 
 <section>
-<h2 id="install"><span class="step">Step 1:</span> Install the Stripe CLI</h2>
+<a id="step-1-install-the-stripe-cli" name="//apple_ref/cpp/Section/Step%201%3A%20Install%20the%20Stripe%20CLI" class="dashAnchor"></a><h2 id="install"><span class="step">Step 1:</span> Install the Stripe CLI</h2>
 <div class="tabs tabs-regular  animated">
     
       <nav class="nav-tabs">
@@ -3248,7 +3248,7 @@ Terminal
 </div></section>
 
 <section>
-<h2 id="link-account"><span class="step">Step 2:</span> Link your Stripe account</h2>
+<a id="step-2-link-your-stripe-account" name="//apple_ref/cpp/Section/Step%202%3A%20Link%20your%20Stripe%20account" class="dashAnchor"></a><h2 id="link-account"><span class="step">Step 2:</span> Link your Stripe account</h2>
 
 <p>After installing the Stripe CLI, pair it with your Stripe account by running <code>stripe login</code> in the terminal. You&rsquo;ll be prompted to log in to the Stripe Dashboard to grant the Stripe CLI access to your account.</p>
 
@@ -3274,7 +3274,7 @@ Press Enter to open up the browser (^C to quit)
 </section>
 
 <section>
-<h2 id="listen-for-events"><span class="step">Step 3:</span> Forward events to your server</h2>
+<a id="step-3-forward-events-to-your-server" name="//apple_ref/cpp/Section/Step%203%3A%20Forward%20events%20to%20your%20server" class="dashAnchor"></a><h2 id="listen-for-events"><span class="step">Step 3:</span> Forward events to your server</h2>
 <p>After linking your Stripe account, you can use the Stripe CLI to listen for events via <code>stripe listen</code>. But to test your endpoint, you&rsquo;ll want to forward received events to your server. Do so by adding the <code>--forward-to</code> flag when invoking <code>stripe listen</code>:</p>
 
 <div class="code" data-language="bash">
@@ -3298,7 +3298,7 @@ Ready! Your webhook signing secret is '{{WEBHOOK_SIGNING_SECRET}}' (^C to quit)
 </section>
 
 <section>
-<h2 id="forward-events"><span class="step">Step 4:</span> Trigger an event</h2>
+<a id="step-4-trigger-an-event" name="//apple_ref/cpp/Section/Step%204%3A%20Trigger%20an%20event" class="dashAnchor"></a><h2 id="forward-events"><span class="step">Step 4:</span> Trigger an event</h2>
 <p>The Stripe CLI has a <code>trigger</code> command that can create certain event types for you. In a new terminal, create a <code>payment_intent.created</code> event:</p>
 
 <div class="code" data-language="bash">
@@ -3339,7 +3339,7 @@ INFO Got response from local endpoint, status=200
 </div></section>
 
 <section>
-  <h2 id="dashboard">Testing from the Dashboard</h2>
+  <a id="testing-from-the-dashboard" name="//apple_ref/cpp/Section/Testing%20from%20the%20Dashboard" class="dashAnchor"></a><h2 id="dashboard">Testing from the Dashboard</h2>
 
 <p>To test your webhook endpoint using the Stripe Dashboard:</p>
 
@@ -3355,7 +3355,7 @@ INFO Got response from local endpoint, status=200
 </section>
 
 <section>
-  <h2 id="next_steps">Next steps</h2>
+  <a id="next-steps" name="//apple_ref/cpp/Section/Next%20steps" class="dashAnchor"></a><h2 id="next_steps">Next steps</h2>
 <ul class="next-steps">
     <li><a href="signatures.html"><span>Check the webhook signatures</span></a></li>
     <li><a href="best-practices.html"><span>Best practices for using webhooks</span></a></li>
@@ -3394,7 +3394,7 @@ INFO Got response from local endpoint, status=200
 
 
             </article>
-            <div class="docs-aside">
+            <div class="docs-aside" style="display: none;">
               <div class="docs-toc empty">
                 <h4>On this page</h4>
                 <ul class="docs-toc-list">

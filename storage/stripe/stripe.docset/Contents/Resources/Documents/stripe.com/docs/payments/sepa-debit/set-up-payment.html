@@ -180,7 +180,7 @@
   <body class="">
     
       <div id="docs">
-        <div id="sidebar">
+        <div id="sidebar" style="display: none;">
             
   <div class="logo">
     <a href="../../recipes/switching-to-stripe.html" title="Stripe docs">
@@ -3008,7 +3008,7 @@
             <article id="content">
                 
   <header>
-<h1>Save SEPA Direct Debit details for future payments</h1>
+<a name="//apple_ref/cpp/Section/Top" class="dashAnchor"></a><h1>Save SEPA Direct Debit details for future payments</h1>
 <p>Use the Setup Intents API to save payment method details for future SEPA Direct Debit payments.</p>
 </header>
 
@@ -3024,7 +3024,7 @@
 
 <div class="expando" aria-expanded="true">
   <a id="web-set-up-stripe" href="../sepa-debit-setup-intents.html#web-set-up-stripe" class="expando-trigger">
-    <h2 class="expando-title" data-no-anchor data-custom-toc-title="Set up Stripe">
+    <a id="1-set-up-stripe-server-side" name="//apple_ref/cpp/Section/1%20Set%20up%20Stripe%20Server-side" class="dashAnchor"></a><h2 class="expando-title" data-no-anchor data-custom-toc-title="Set up Stripe">
         <span class="expando-left-text">1</span>
       Set up Stripe
         <span class="tag optional">Server-side</span>
@@ -3271,7 +3271,7 @@ PM&gt; Install-Package Stripe.net</code></div></pre>
 
 <div class="expando" aria-expanded="true">
   <a id="web-create-a-customer" href="../sepa-debit-setup-intents.html#web-create-a-customer" class="expando-trigger">
-    <h2 class="expando-title" data-no-anchor data-custom-toc-title="Create or retrieve a Customer">
+    <a id="2-create-or-retrieve-a-customer-server-side" name="//apple_ref/cpp/Section/2%20Create%20or%20retrieve%20a%20Customer%20Server-side" class="dashAnchor"></a><h2 class="expando-title" data-no-anchor data-custom-toc-title="Create or retrieve a Customer">
         <span class="expando-left-text">2</span>
       Create or retrieve a Customer
         <span class="tag optional">Server-side</span>
@@ -3467,7 +3467,7 @@ var customer = service.Create(options);
 
 <div class="expando" aria-expanded="true">
   <a id="web-create-setup-intent" href="../sepa-debit-setup-intents.html#web-create-setup-intent" class="expando-trigger">
-    <h2 class="expando-title" data-no-anchor data-custom-toc-title="Create a SetupIntent">
+    <a id="3-create-a-setupintent-server-side" name="//apple_ref/cpp/Section/3%20Create%20a%20SetupIntent%20Server-side" class="dashAnchor"></a><h2 class="expando-title" data-no-anchor data-custom-toc-title="Create a SetupIntent">
         <span class="expando-left-text">3</span>
       Create a SetupIntent
         <span class="tag optional">Server-side</span>
@@ -3766,7 +3766,7 @@ namespace StripeExampleApi.Controllers
 
 <div class="expando" aria-expanded="true">
   <a id="web-collect-payment-method-details" href="../sepa-debit-setup-intents.html#web-collect-payment-method-details" class="expando-trigger">
-    <h2 class="expando-title" data-no-anchor data-custom-toc-title="Collect payment method details and mandate acknowledgment">
+    <a id="4-collect-payment-method-details-and-mandate-acknowledgment-client-side" name="//apple_ref/cpp/Section/4%20Collect%20payment%20method%20details%20and%20mandate%20acknowledgment%20Client-side" class="dashAnchor"></a><h2 class="expando-title" data-no-anchor data-custom-toc-title="Collect payment method details and mandate acknowledgment">
         <span class="expando-left-text">4</span>
       Collect payment method details and mandate acknowledgment
         <span class="tag optional">Client-side</span>
@@ -4297,7 +4297,7 @@ It&rsquo;s also possible to style various input states, for example when the Ele
 
 <div class="expando" aria-expanded="true">
   <a id="web-submit-payment-method" href="../sepa-debit-setup-intents.html#web-submit-payment-method" class="expando-trigger">
-    <h2 class="expando-title" data-no-anchor data-custom-toc-title="Submit the payment method details to Stripe">
+    <a id="5-submit-the-payment-method-details-to-stripe-client-side" name="//apple_ref/cpp/Section/5%20Submit%20the%20payment%20method%20details%20to%20Stripe%20Client-side" class="dashAnchor"></a><h2 class="expando-title" data-no-anchor data-custom-toc-title="Submit the payment method details to Stripe">
         <span class="expando-left-text">5</span>
       Submit the payment method details to Stripe
         <span class="tag optional">Client-side</span>
@@ -4560,7 +4560,7 @@ export default function InjectedPaymentSetupForm() {
 
 <div class="expando" aria-expanded="true">
   <a id="web-test-integration" href="../sepa-debit-setup-intents.html#web-test-integration" class="expando-trigger">
-    <h2 class="expando-title" data-no-anchor data-custom-toc-title="Test the integration">
+    <a id="6-test-the-integration" name="//apple_ref/cpp/Section/6%20Test%20the%20integration" class="dashAnchor"></a><h2 class="expando-title" data-no-anchor data-custom-toc-title="Test the integration">
         <span class="expando-left-text">6</span>
       Test the integration
     </h2>
@@ -4843,7 +4843,7 @@ export default function InjectedPaymentSetupForm() {
 
 <div class="expando" aria-expanded="true">
   <a id="web-validate-element" href="../sepa-debit-setup-intents.html#web-validate-element" class="expando-trigger">
-    <h2 class="expando-title" data-no-anchor data-custom-toc-title="Validate the IBAN Element">
+    <a id="optional-validate-the-iban-element" name="//apple_ref/cpp/Section/Optional%20Validate%20the%20IBAN%20Element" class="dashAnchor"></a><h2 class="expando-title" data-no-anchor data-custom-toc-title="Validate the IBAN Element">
         <span class="expando-left-text">Optional</span>
       Validate the IBAN Element
     </h2>
@@ -4918,7 +4918,7 @@ export default function InjectedPaymentSetupForm() {
   
   
 
-<h2 id="see-also">See also</h2>
+<a id="see-also" name="//apple_ref/cpp/Section/See%20also" class="dashAnchor"></a><h2 id="see-also">See also</h2>
 
 <p>Congrats, you are done with your integration! You can learn about accepting a SEPA Direct Debit payment and integrating with Connect.</p>
 
@@ -4958,7 +4958,7 @@ export default function InjectedPaymentSetupForm() {
 
 
             </article>
-            <div class="docs-aside">
+            <div class="docs-aside" style="display: none;">
               <div class="docs-toc empty">
                 <h4>On this page</h4>
                 <ul class="docs-toc-list">

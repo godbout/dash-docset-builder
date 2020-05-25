@@ -180,7 +180,7 @@
   <body class="">
     
       <div id="docs">
-        <div id="sidebar">
+        <div id="sidebar" style="display: none;">
             
   <div class="logo">
     <a href="../recipes/switching-to-stripe.html" title="Stripe docs">
@@ -3008,7 +3008,7 @@
             <article id="content">
                 
   <header>
-    <h1>Best practices for platforms with Express or Custom accounts</h1>
+    <a name="//apple_ref/cpp/Section/Top" class="dashAnchor"></a><h1>Best practices for platforms with Express or Custom accounts</h1>
   <p>Provide the smoothest experience for your Express or Custom <a href="https://stripe.com/connect">Connect</a> accounts by following these best practices when it comes to compliance, verification, and fraud prevention.</p>
 </header>
 
@@ -3027,7 +3027,7 @@ The content on this page applies only to Express and Custom accounts.
 </section>
 
 <section>
-<h2 id="steps-to-take-before-going-live">Steps to take before going live</h2>
+<a id="steps-to-take-before-going-live" name="//apple_ref/cpp/Section/Steps%20to%20take%20before%20going%20live" class="dashAnchor"></a><h2 id="steps-to-take-before-going-live">Steps to take before going live</h2>
 
 <p>Platforms with Express or Custom accounts are expected to take all of the following steps before going live and onboarding users. Meeting these requirements helps prevent losses and ensures that payouts to your users are not delayed.</p>
   <ul class="checkmarks">
@@ -3051,7 +3051,7 @@ The content on this page applies only to Express and Custom accounts.
 </section>
 
 <section>
-<h2 id="webhooks">Establish webhooks</h2>
+<a id="establish-webhooks" name="//apple_ref/cpp/Section/Establish%20webhooks" class="dashAnchor"></a><h2 id="webhooks">Establish webhooks</h2>
 
 <p>Sometimes we&rsquo;ll need more information about connected accounts. Should Stripe require something, we&rsquo;ll reach out to you via a <a href="webhooks.html">webhook</a> (<em>not via email</em>). It&rsquo;s vital that you establish a webhook endpoint that responds to our requests and other account activity. Failure to watch for, and promptly respond to, these notifications will lead to delays in money being transferred.</p>
 
@@ -3060,7 +3060,7 @@ The content on this page applies only to Express and Custom accounts.
 <p>When a connected account updates their account information (e.g., bank account), Stripe notifies you of this change through a webhook. Your platform must verify the updated account information.</p></section>
 
 <section>
-<h2 id="fraud">Prevent fraud</h2>
+<a id="prevent-fraud" name="//apple_ref/cpp/Section/Prevent%20fraud" class="dashAnchor"></a><h2 id="fraud">Prevent fraud</h2>
 
 <p>The platform is <a href="account-balances.html#accounting-for-negative-balances">ultimately responsible</a> for any losses incurred by Express and Custom accounts through its Connect application. Stripe helps by monitoring the accounts that you onboard, preemptively shutting down accounts that we believe are fraudulent, and contacting you should we notice anything suspicious.</p>
 
@@ -3081,7 +3081,7 @@ The content on this page applies only to Express and Custom accounts.
 <p>Additionally, you can use Stripe&rsquo;s <a href="../radar/risk-evaluation.html">built-in fraud tools</a> to identify and prevent fraud on individual charge attempts. You should also <a href="../disputes/prevention.html#avoiding-fraudulent-payments">familiarize yourself</a> with the most common fraud types.</p></section>
 
 <section>
-<h2 id="credit-risk">Managing credit risk</h2>
+<a id="managing-credit-risk" name="//apple_ref/cpp/Section/Managing%20credit%20risk" class="dashAnchor"></a><h2 id="credit-risk">Managing credit risk</h2>
 
 <p>Platforms are responsible for <a href="account-balances.html#accounting-for-negative-balances">losses incurred</a> by their Express and Custom accounts. While you can&rsquo;t prevent all chargebacks and losses, here are a few ways you can manage your exposure, protect your platform, and support your accounts.</p>
 
@@ -3120,7 +3120,7 @@ The content on this page applies only to Express and Custom accounts.
 </ul></section>
 
 <section>
-<h2 id="sanctions-concerns">Sanctions concerns</h2>
+<a id="sanctions-concerns" name="//apple_ref/cpp/Section/Sanctions%20concerns" class="dashAnchor"></a><h2 id="sanctions-concerns">Sanctions concerns</h2>
 
 <p>As a U.S. company, Stripe complies with all sanctions programs administered by the U.S. Office of Foreign Assets Control (OFAC), along with a number of other national and international sanctions regimes. This includes both prohibitions against interactions with certain individuals and entities as well as comprehensive bans on business dealings involving certain countries or regions that are targeted by sanctions regimes.</p>
 
@@ -3129,12 +3129,12 @@ The content on this page applies only to Express and Custom accounts.
 <p>Payouts from the connected account will remain paused until the review has been cleared. Disregarding or violating sanctions can lead to fines, regulatory action, and loss of licensing for both Stripe and our users.</p></section>
 
 <section>
-<h2 id="customize">Customize the onboarding flow and Dashboard (Express only)</h2>
+<a id="customize-the-onboarding-flow-and-dashboard-express-only" name="//apple_ref/cpp/Section/Customize%20the%20onboarding%20flow%20and%20Dashboard%20%28Express%20only%29" class="dashAnchor"></a><h2 id="customize">Customize the onboarding flow and Dashboard (Express only)</h2>
 
 <p>Express displays your icon and brand color throughout the onboarding process and on the Express Dashboard, so it&rsquo;s important to provide recognizable branding. Within the Express section of your <a href="https://dashboard.stripe.com/account/applications/settings">Connect settings</a> you can customize the logo, platform name, and color scheme your users see.</p></section>
 
 <section>
-<h2 id="flow">Position Express in your onboarding flow (Express only)</h2>
+<a id="position-express-in-your-onboarding-flow-express-only" name="//apple_ref/cpp/Section/Position%20Express%20in%20your%20onboarding%20flow%20%28Express%20only%29" class="dashAnchor"></a><h2 id="flow">Position Express in your onboarding flow (Express only)</h2>
 
 <p>To ensure the best possible conversion rate, position the Express onboarding process carefully within your application&rsquo;s flow. Users are more likely to complete the process and provide the necessary information when Express onboarding is positioned <em>after</em> your application&rsquo;s own initial sign-up and onboarding steps.</p>
 
@@ -3149,7 +3149,7 @@ The content on this page applies only to Express and Custom accounts.
 </blockquote></section>
 
 <section>
-<h2 id="support">Direct users to get support (Express only)</h2>
+<a id="direct-users-to-get-support-express-only" name="//apple_ref/cpp/Section/Direct%20users%20to%20get%20support%20%28Express%20only%29" class="dashAnchor"></a><h2 id="support">Direct users to get support (Express only)</h2>
 
 <p>As you control much of the payments experience, we recommend your Express users reach out to you first with any questions. However, they may have questions that only Stripe can answer. To provide the most efficient support possible, platforms should first work with the user and potentially refer them to Stripe for these subjects:</p>
 
@@ -3161,14 +3161,14 @@ The content on this page applies only to Express and Custom accounts.
 <p>We expect platforms can handle all other questions, but if one comes up you&rsquo;re unable to answer, reach out to us for help.</p></section>
 
 <section>
-<h2 id="tos">Agree to Stripe&rsquo;s Services Agreement (Custom only)</h2>
+<a id="agree-to-stripes-services-agreement-custom-only" name="//apple_ref/cpp/Section/Agree%20to%20Stripe%E2%80%99s%20Services%20Agreement%20%28Custom%20only%29" class="dashAnchor"></a><h2 id="tos">Agree to Stripe&rsquo;s Services Agreement (Custom only)</h2>
 
 <p>All Stripe accounts must accept Stripe&rsquo;s Services Agreement, and Custom accounts in particular must accept the <a href="https://stripe.com/connect-account/legal">Stripe Connected Account Agreement</a> (which includes the Stripe Services Agreement). Acceptance must occur before you begin processing payments on a connected user&rsquo;s behalf.</p>
 
 <p>We&rsquo;ve provided a recommend interface and sample text in multiple languages in our <a href="updating-accounts.html#tos-acceptance">Services Agreement Acceptance</a> documentation. There you&rsquo;ll also find the code you&rsquo;ll use to notify Stripe of a user&rsquo;s acceptance.</p></section>
 
 <section id="know-your-users-custom-only">
-<h2 id="know-your-users">Know your users (Custom only)</h2>
+<a id="know-your-users-custom-only" name="//apple_ref/cpp/Section/Know%20your%20users%20%28Custom%20only%29" class="dashAnchor"></a><h2 id="know-your-users">Know your users (Custom only)</h2>
 
 <p>As your users are also Stripe&rsquo;s users (albeit discreetly), you&rsquo;ll need to work with Stripe to meet all &ldquo;<a href="https://support.stripe.com/questions/know-your-customer">Know Your Customer</a>&rdquo; (KYC) obligations. We&rsquo;ve designed Connect to accept KYC information directly through the API. When the information provided is incomplete or incorrect, it may result in delayed payouts for your users, or financial losses of your own.</p>
 
@@ -3186,7 +3186,7 @@ The content on this page applies only to Express and Custom accounts.
 
 
 <section>
-  <h2>Further reading</h2>
+  <a id="further-reading" name="//apple_ref/cpp/Section/Further%20reading" class="dashAnchor"></a><h2>Further reading</h2>
   <p>Learn more about Connect:</p>
 <ul class="next-steps">
     <li><a href="express-accounts.html"><span>Express Accounts</span></a></li>
@@ -3229,7 +3229,7 @@ The content on this page applies only to Express and Custom accounts.
 
 
             </article>
-            <div class="docs-aside">
+            <div class="docs-aside" style="display: none;">
               <div class="docs-toc empty">
                 <h4>On this page</h4>
                 <ul class="docs-toc-list">

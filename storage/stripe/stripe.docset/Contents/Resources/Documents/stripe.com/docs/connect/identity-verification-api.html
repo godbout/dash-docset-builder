@@ -180,7 +180,7 @@
   <body class="">
     
       <div id="docs">
-        <div id="sidebar">
+        <div id="sidebar" style="display: none;">
             
   <div class="logo">
     <a href="../recipes/switching-to-stripe.html" title="Stripe docs">
@@ -3008,7 +3008,7 @@
             <article id="content">
                 
   <header>
-  <h1>Handling verification with the API </h1>
+  <a name="//apple_ref/cpp/Section/Top" class="dashAnchor"></a><h1>Handling verification with the API </h1>
   <p>Learn how <a href="https://stripe.com/connect">Connect</a> platforms with Custom accounts can use webhooks and the API to handle identity and business verification.</p>
 </header>
 
@@ -3032,7 +3032,7 @@ The content on this page applies only to Custom accounts.
 <p>You should also read the <a href="identity-verification.html">Identity Verification for Custom Accounts</a> guide to learn about the verification flow options, how the API fields translate to both companies and individuals, and how to localize information requests.</p></section>
 
 <section>
-<h2 id="verification-process">Verification process</h2>
+<a id="verification-process" name="//apple_ref/cpp/Section/Verification%20process" class="dashAnchor"></a><h2 id="verification-process">Verification process</h2>
 
 <p>Before charges and payouts can be enabled for a connected account, Stripe needs certain information that varies based on:</p>
 
@@ -3059,7 +3059,7 @@ The content on this page applies only to Custom accounts.
 </section>
 
 <section>
-<h2 id="determining-if-identity-or-business-verification-is-needed">Determining if identity or business verification is needed</h2>
+<a id="determining-if-identity-or-business-verification-is-needed" name="//apple_ref/cpp/Section/Determining%20if%20identity%20or%20business%20verification%20is%20needed" class="dashAnchor"></a><h2 id="determining-if-identity-or-business-verification-is-needed">Determining if identity or business verification is needed</h2>
 
 <p>When you receive an <code>account.updated</code> webhook notification or <a href="../api/index.html#retrieve_account">fetch an account</a> via the API, you receive an <a href="../api/index.html#account">Account</a> object. The <code>Account</code> object&rsquo;s <code>charges_enabled</code> and <code>payouts_enabled</code> indicate whether the account can create charges and accept payouts.</p>
 
@@ -3166,7 +3166,7 @@ The content on this page applies only to Custom accounts.
 </section>
 
 <section>
-<h2 id="validation-and-verification-errors">Validation and verification errors</h2>
+<a id="validation-and-verification-errors" name="//apple_ref/cpp/Section/Validation%20and%20verification%20errors" class="dashAnchor"></a><h2 id="validation-and-verification-errors">Validation and verification errors</h2>
 
 <p>The <a href="../api/index.html#account">Account</a> object includes an <a href="../api/accounts/object.html#account_object-requirements-errors">errors</a> array that explains why the validation or verification requirements haven&rsquo;t been met, which are needed to enable your account and capabilities. The <code>errors</code> array has the following attributes:</p>
 
@@ -3205,7 +3205,7 @@ The content on this page applies only to Custom accounts.
 </section>
 
 <section id="person-info">
-<h2 id="person-information">Person information</h2>
+<a id="person-information" name="//apple_ref/cpp/Section/Person%20information" class="dashAnchor"></a><h2 id="person-information">Person information</h2>
 
 <p>During the verification process, information about the persons associated with an account needs to be collected. If you onboard:</p>
 
@@ -3256,7 +3256,7 @@ The content on this page applies only to Custom accounts.
 </section>
 
 <section>
-<h2 id="acceptable-id-types">Acceptable ID types by country</h2>
+<a id="acceptable-id-types-by-country" name="//apple_ref/cpp/Section/Acceptable%20ID%20types%20by%20country" class="dashAnchor"></a><h2 id="acceptable-id-types">Acceptable ID types by country</h2>
 
 <p>Below is a listing of documents that Stripe can accept as proof of identity for each country where Stripe supports the creation of Connect accounts.</p>
 <p>Acceptable ID documents vary by country, however, <em>a passport scan is always acceptable and is preferred</em>. There are some forms of identification that require scans of both the front and back of the ID. For these, use the <code>document_back</code> parameter to provide the back of the document. Unless explicitly noted, only a scan of the front of the ID is required.</p>
@@ -3571,7 +3571,7 @@ The content on this page applies only to Custom accounts.
 </section>
 
 <section>
-<h2 id="handling-document-verification-problems">Handling document verification problems</h2>
+<a id="handling-document-verification-problems" name="//apple_ref/cpp/Section/Handling%20document%20verification%20problems" class="dashAnchor"></a><h2 id="handling-document-verification-problems">Handling document verification problems</h2>
 
 <p>Many complications with the verification process involve the uploaded document itself. To help you recognize and handle the most common problems, the table below lists the <code>details_codes</code> (on the <code>verification</code> subhash) and the likely resolutions for each error.</p>
 <p>Below is a list of errors related to document upload:</p>
@@ -3722,7 +3722,7 @@ The content on this page applies only to Custom accounts.
 </section>
 
 <section>
-<h2 id="handling-identity-verification">Handling identity verification</h2>
+<a id="handling-identity-verification" name="//apple_ref/cpp/Section/Handling%20identity%20verification" class="dashAnchor"></a><h2 id="handling-identity-verification">Handling identity verification</h2>
 
 <p>There are two ways to respond to an identity verification change. The first is to perform an <a href="updating-accounts.html">update account</a> call, correcting or adding information.</p>
 
@@ -4281,7 +4281,7 @@ var account = service.Update("{{CONNECTED_STRIPE_ACCOUNT_ID}}", options);
 <p>If the verification attempt fails, the status is <code>unverified</code> and the <code>details</code> field contains a message stating the cause. The message is safe to present to your user, such as &ldquo;The image supplied was not readable&rdquo;. In addition, the response contains a <code>details_code</code> value, such as <code>scan_not_readable</code>. Upon failure, <code>requirements[currently_due]</code> indicates that a new ID upload is required. If the deadline for verification is near, <code>requirements[current_deadline]</code> may also be populated with a date. Again, an <code>account.updated</code> webhook notification is sent as well.</p></section>
 
 <section>
-  <h2>Further reading</h2>
+  <a id="further-reading" name="//apple_ref/cpp/Section/Further%20reading" class="dashAnchor"></a><h2>Further reading</h2>
   <p>Now that you know how to perform identity verification through the API, you may want to read:</p>
 <ul class="next-steps">
     <li><a href="updating-accounts.html"><span>Updating Accounts</span></a></li>
@@ -4325,7 +4325,7 @@ var account = service.Update("{{CONNECTED_STRIPE_ACCOUNT_ID}}", options);
 
 
             </article>
-            <div class="docs-aside">
+            <div class="docs-aside" style="display: none;">
               <div class="docs-toc empty">
                 <h4>On this page</h4>
                 <ul class="docs-toc-list">

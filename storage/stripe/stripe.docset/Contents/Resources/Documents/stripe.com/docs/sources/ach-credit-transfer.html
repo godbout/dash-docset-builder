@@ -180,7 +180,7 @@
   <body class="">
     
       <div id="docs">
-        <div id="sidebar">
+        <div id="sidebar" style="display: none;">
             
   <div class="logo">
     <a href="../recipes/switching-to-stripe.html" title="Stripe docs">
@@ -3008,7 +3008,7 @@
             <article id="content">
                 
   <header>
-  <h1>ACH Credit Transfer payments with Sources <span class="tag beta">Public Beta</span></h1>
+  <a name="//apple_ref/cpp/Section/Top" class="dashAnchor"></a><h1>ACH Credit Transfer payments with Sources <span class="tag beta">Public Beta</span></h1>
   <p>Use Sources to accept ACH payments sent directly from your customers.</p>
 </header>
 
@@ -3024,7 +3024,7 @@
 <p>ACH Credit Transfers is a <a href="bitcoin.html#pull-or-push-of-funds">push</a>-based and <a href="bitcoin.html#single-use-or-reusable">reusable</a> method of payment. This means your customer must take action to send funds to you, which can take a few days to arrive. After the funds arrive, there is <a href="bitcoin.html#synchronous-or-asynchronous-confirmation">synchronous confirmation</a> of any charge request made.</p></section>
 
 <section>
-<h2 id="create-source"><span class="step">Step 1:</span> Create a Source object</h2>
+<a id="step-1-create-a-source-object" name="//apple_ref/cpp/Section/Step%201%3A%20Create%20a%20Source%20object" class="dashAnchor"></a><h2 id="create-source"><span class="step">Step 1:</span> Create a Source object</h2>
 
 <p>You can create a <code>Source</code> object server-side using the <a href="../api/index.html#create_source">Source creation endpoint</a>. Stripe returns a <code>Source</code> object containing the relevant details for the method of payment used. Information specific to ACH is provided within the <code>ach_credit_transfer</code> subhash.
 The following parameters should be passed to create a Source object:</p>
@@ -3218,7 +3218,7 @@ const source = await stripe.sources.create({
 </table></section>
 
 <section>
-<h2 id="customer-action"><span class="step">Step 2:</span> Have the customer push funds</h2>
+<a id="step-2-have-the-customer-push-funds" name="//apple_ref/cpp/Section/Step%202%3A%20Have%20the%20customer%20push%20funds" class="dashAnchor"></a><h2 id="customer-action"><span class="step">Step 2:</span> Have the customer push funds</h2>
 
 <p>When creating a source, its status is initially set to <code>pending</code> and can&rsquo;t be used yet to make a charge request. In addition, <code>receiver[amount_received]</code> is set to zero since no funds have yet been transferred. Your customer must transfer the amount you request so that the necessary funds are available.</p>
 
@@ -3234,7 +3234,7 @@ const source = await stripe.sources.create({
 <p>ACH Credit Transfer sources are reusable and can be used for recurring payments. The information provided to the customer can be reused whenever they need to send additional funds.</p></section>
 
 <section>
-<h2 id="charge-request"><span class="step">Step 3:</span> Charge the Source</h2>
+<a id="step-3-charge-the-source" name="//apple_ref/cpp/Section/Step%203%3A%20Charge%20the%20Source" class="dashAnchor"></a><h2 id="charge-request"><span class="step">Step 3:</span> Charge the Source</h2>
 
 <p>After the customer makes a transfer, <code>receiver[amount_received]</code> is updated to reflect the total amount of all received transfers, and the status of the source changes to <code>chargeable</code>. Your customer can transfer any amount across multiple transfers. Each transfer is represented by a <a href="ach-credit-transfer.html#source-transactions">source transaction</a>.</p>
 
@@ -3540,7 +3540,7 @@ Charge charge = service.Create(options);
 <p>when all the funds have been used, the two amounts are the same. When this occurs, the status of the source changes back to <code>pending</code>. If the customer makes any additional transfers, the source again changes to <code>chargeable</code>.</p></section>
 
 <section>
-<h2 id="charge-confirmation"><span class="step">Step 4:</span> Confirm that the charge has succeeded</h2>
+<a id="step-4-confirm-that-the-charge-has-succeeded" name="//apple_ref/cpp/Section/Step%204%3A%20Confirm%20that%20the%20charge%20has%20succeeded" class="dashAnchor"></a><h2 id="charge-confirmation"><span class="step">Step 4:</span> Confirm that the charge has succeeded</h2>
 
 <p>Because the customer has already pushed the funds at the time the Source becomes chargeable, unless there is an unexpected error, the <a href="../api/index.html#charge_object">Charge</a> immediately succeeds.</p>
 
@@ -3828,7 +3828,7 @@ sourceService.Update("src_18cPLvAHEMiOZZp1YBngt6En", options);
 <p>This example creates a <code>SourceTransaction</code> for the specified source, with the <code>amount</code> property set to <code>4242</code>.</p></section>
 
 <section>
-<h2 id="source-transactions">Source transactions</h2>
+<a id="source-transactions" name="//apple_ref/cpp/Section/Source%20transactions" class="dashAnchor"></a><h2 id="source-transactions">Source transactions</h2>
 <aside class="note">
   <h3>Libraries support</h3>
   <p>Support for retrieving source transactions in our <a href="../libraries.html">Client libraries</a> is forthcoming. In the meantime, you can make equivalent curl requests or extend our libraries yourself to add your own support.</p>
@@ -3986,7 +3986,7 @@ var transactions = service.List("src_18cPLvAHEMiOZZp1YBngt6En", options);
 </section>
 
 <section>
-<h2>Related resources</h2>
+<a id="related-resources" name="//apple_ref/cpp/Section/Related%20resources" class="dashAnchor"></a><h2>Related resources</h2>
 <ul class="next-steps">
     <li><a href="bitcoin.html"><span>Other supported payment methods</span></a></li>
     <li><a href="../api/index.html#sources"><span>Sources API Reference</span></a></li>
@@ -4026,7 +4026,7 @@ var transactions = service.List("src_18cPLvAHEMiOZZp1YBngt6En", options);
 
 
             </article>
-            <div class="docs-aside">
+            <div class="docs-aside" style="display: none;">
               <div class="docs-toc empty">
                 <h4>On this page</h4>
                 <ul class="docs-toc-list">

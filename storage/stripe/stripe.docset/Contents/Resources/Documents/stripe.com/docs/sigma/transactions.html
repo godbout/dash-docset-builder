@@ -180,7 +180,7 @@
   <body class="">
     
       <div id="docs">
-        <div id="sidebar">
+        <div id="sidebar" style="display: none;">
             
   <div class="logo">
     <a href="../recipes/switching-to-stripe.html" title="Stripe docs">
@@ -3008,7 +3008,7 @@
             <article id="content">
                 
   <header>
-  <h1>Querying transactions</h1>
+  <a name="//apple_ref/cpp/Section/Top" class="dashAnchor"></a><h1>Querying transactions</h1>
   <p>Use Stripe Sigma to create custom reports for charges, refunds, disputes, and more.</p>
 </header>
 
@@ -3165,7 +3165,7 @@ limit 5</code></div></pre>
 </section>
 
 <section>
-<h2 id="charges">Charges</h2>
+<a id="charges" name="//apple_ref/cpp/Section/Charges" class="dashAnchor"></a><h2 id="charges">Charges</h2>
 
 <p>The <code>charges</code> table contains data about <a href="../api/index.html#charge_object">Charge</a> objects. This table is best suited for queries that focus on charge-specific information rather than for accounting or reconciliatory purposes. It also supplements accounting reports with additional customer data. For example, The <a href="https://dashboard.stripe.com/queries/examples/Payment%20card%20mix">payment card mix</a> template query uses the <code>charges</code> table to report on the different types of cards your customers have used.</p>
 
@@ -3234,7 +3234,7 @@ limit 5</code></div></pre>
 </section>
 
 <section>
-<h2 id="customers">Customers</h2>
+<a id="customers" name="//apple_ref/cpp/Section/Customers" class="dashAnchor"></a><h2 id="customers">Customers</h2>
 
 <p>Data about <a href="../api/index.html#customers">Customer</a> objects is contained in the <code>customers</code> table (this is not part of the <strong>Payment Tables</strong> group). Use this table if you&rsquo;re creating charges using customers (e.g., with saved payment information). It&rsquo;s also useful if you&rsquo;re making use of <a href="billing.html">subscriptions</a>.</p>  <div class="image full">
     <a href="../../img/docs/sigma/customers.png" class="zoomable" data-width="1696" data-height="994"><img src="../../img/docs/sigma/customers.png" width="100%"></a>
@@ -3257,7 +3257,7 @@ limit 5</code></div></pre>
 </section>
 
 <section>
-<h2 id="refunds">Refunds</h2>
+<a id="refunds" name="//apple_ref/cpp/Section/Refunds" class="dashAnchor"></a><h2 id="refunds">Refunds</h2>
 
 <p>Charges and refunds are separate objects within the API. When a charge is refunded, a <a href="../api/index.html#refund_object">Refund</a> object is created. This data is available within the <code>refunds</code> table and provides in-depth information about refunds that have been performed. Similar to reporting on charges, a best practice is to start with information about balance transactions. If necessary, you can then gather additional details using the <code>refunds</code> table.</p>
 
@@ -3340,7 +3340,7 @@ limit 5
 </section>
 
 <section>
-<h2 id="disputes">Disputes</h2>
+<a id="disputes" name="//apple_ref/cpp/Section/Disputes" class="dashAnchor"></a><h2 id="disputes">Disputes</h2>
 
 <p>The <code>disputes</code> table contains data about all <a href="../disputes.html">disputes</a> on your account. Each row represents a <a href="../api/index.html#dispute_object">Dispute</a> object, created when a charge is disputed. Each dispute also includes any available data about any dispute evidence that may have been submitted.</p>  <div class="image full">
     <a href="../../img/docs/sigma/disputes.png" class="zoomable" data-width="1240" data-height="800"><img src="../../img/docs/sigma/disputes.png" width="100%"></a>
@@ -3417,7 +3417,7 @@ limit 5</code></div></pre>
 <p>Using Stripe Sigma to create reports about your disputes can help you identify fraudulent payments, which can be prevented using <a href="../radar.html">Stripe Radar</a>.</p></section>
 
 <section>
-<h2 id="transfers-and-payouts">Transfers and payouts</h2>
+<a id="transfers-and-payouts" name="//apple_ref/cpp/Section/Transfers%20and%20payouts" class="dashAnchor"></a><h2 id="transfers-and-payouts">Transfers and payouts</h2>
 
 <p>The <code>transfers</code> table contains data about <a href="../payouts.html">payouts</a> made from your Stripe balance to your bank account. You can use this table to reconcile each payout with the specific charges, refunds, and adjustments that it&rsquo;s made up of, as long as you&rsquo;re using <a href="../payouts.html">automatic payouts</a>.</p>
 
@@ -3536,7 +3536,7 @@ limit 5</code></div></pre>
 
 
             </article>
-            <div class="docs-aside">
+            <div class="docs-aside" style="display: none;">
               <div class="docs-toc empty">
                 <h4>On this page</h4>
                 <ul class="docs-toc-list">

@@ -180,7 +180,7 @@
   <body class="">
     
       <div id="docs">
-        <div id="sidebar">
+        <div id="sidebar" style="display: none;">
             
   <div class="logo">
     <a href="../../recipes/switching-to-stripe.html" title="Stripe docs">
@@ -3008,7 +3008,7 @@
             <article id="content">
                 
   <header>
-  <h1 id="pay-by-mailed-check-span-classtag-betabetaspan">Pay by mailed check <span class="tag beta">Beta</span></h1>
+  <a name="//apple_ref/cpp/Section/Top" class="dashAnchor"></a><h1 id="pay-by-mailed-check-span-classtag-betabetaspan">Pay by mailed check <span class="tag beta">Beta</span></h1>
 
   <p>Use Sources to accept check payments sent directly from your customers.</p>
 </header>
@@ -3034,7 +3034,7 @@ to send funds to you. The funds can take a few days to arrive, especially due to
 
 <section>
 
-  <h2 id="limitations-and-caveats">Limitations and caveats</h2>
+  <a id="limitations-and-caveats" name="//apple_ref/cpp/Section/Limitations%20and%20caveats" class="dashAnchor"></a><h2 id="limitations-and-caveats">Limitations and caveats</h2>
 
   <ul>
     <li>Checks can be used only by users based in the United States.</li>
@@ -3044,7 +3044,7 @@ to send funds to you. The funds can take a few days to arrive, especially due to
 </section>
 
 <section>
-  <h2 id="getting-started">Getting started</h2>
+  <a id="getting-started" name="//apple_ref/cpp/Section/Getting%20started" class="dashAnchor"></a><h2 id="getting-started">Getting started</h2>
   <aside class="important">
     <p>Please review <a href="https://stripe.com/pricing/local-payment-methods">the pricing page</a> to understand
   all fees associated with Checks.</p>
@@ -3087,7 +3087,7 @@ allow your customers to pay via check:</p>
 </section>
 
 <section>
-  <h2 id="reconciliation">Reconciliation</h2>
+  <a id="reconciliation" name="//apple_ref/cpp/Section/Reconciliation" class="dashAnchor"></a><h2 id="reconciliation">Reconciliation</h2>
 
   <p>Stripe will attempt to automatically reconcile every check to an invoice and pay the invoice. This <a href="reconciliation.html">same process</a>
 is used for ACH and wire transfers, however the source <code>type</code> will be <code>paper_check</code>.</p>
@@ -3097,7 +3097,7 @@ reconcile the check to an invoice on your <a href="https://dashboard.stripe.com/
 </section>
 
 <section>
-  <h2 id="settlement-and-returned-checks">Settlement and returned checks</h2>
+  <a id="settlement-and-returned-checks" name="//apple_ref/cpp/Section/Settlement%20and%20returned%20checks" class="dashAnchor"></a><h2 id="settlement-and-returned-checks">Settlement and returned checks</h2>
 
   <p>Deposited funds are held for three U.S. business days before being added to the customer&rsquo;s source and used to pay
 reconciled invoices. This hold is to mitigate risks associated with fraudulent checks. This hold also mitigates issues
@@ -3112,7 +3112,7 @@ deducted from the Source.</p>
 </section>
 
 <section>
-  <h2 id="overpayments-and-underpayments">Overpayments and underpayments</h2>
+  <a id="overpayments-and-underpayments" name="//apple_ref/cpp/Section/Overpayments%20and%20underpayments" class="dashAnchor"></a><h2 id="overpayments-and-underpayments">Overpayments and underpayments</h2>
 
   <p>An <em>overpayment</em> occurs when the amount received exceeds the amount due. In these cases, the invoices associated with
 the check payment will be paid, and the remaining funds will be held on a <a href="../../sources/bitcoin.html">source</a> of type
@@ -3129,7 +3129,7 @@ invoices, Stripe will attempt to pay the invoices&mdash;oldest first&mdash;until
 </section>
 
 <section>
-  <h2 id="refunding-payments">Refunding payments</h2>
+  <a id="refunding-payments" name="//apple_ref/cpp/Section/Refunding%20payments" class="dashAnchor"></a><h2 id="refunding-payments">Refunding payments</h2>
 
   <p>Check payments can be refunded through either the <a href="https://dashboard.stripe.com/test/payments">Dashboard</a>
 or the <a href="../../api/index.html#create_refund">API</a>. Check payments are refunded via ACH. Stripe will not issue a check as a refund.
@@ -3144,7 +3144,7 @@ to an account that has been frozen. Refunds that have been completed have the st
 </section>
 
 <section>
-  <h2 id="lockbox-address">Lockbox address</h2>
+  <a id="lockbox-address" name="//apple_ref/cpp/Section/Lockbox%20address" class="dashAnchor"></a><h2 id="lockbox-address">Lockbox address</h2>
   <aside class="important">
     <p>
     Always read the lockbox address from the Source. Lockbox assignments may change.
@@ -3250,7 +3250,7 @@ Source source = service.Get("src_19Q3AILlRB0eXbMt81RVDnM9");
 </section>
 
 <section>
-  <h2 id="webhooks">Webhooks</h2>
+  <a id="webhooks" name="//apple_ref/cpp/Section/Webhooks" class="dashAnchor"></a><h2 id="webhooks">Webhooks</h2>
 
   <p>Webhooks can be used to listen for certain Checks-related actions: deposit, settlement, and bounce/return. These events
 will only be sent if a check has been reconciled to an invoice. Stripe does not yet support sending events for
@@ -3337,7 +3337,7 @@ reconciliation failure.</p>
 </section>
 
 <section>
-  <h2 id="testing">Testing</h2>
+  <a id="testing" name="//apple_ref/cpp/Section/Testing" class="dashAnchor"></a><h2 id="testing">Testing</h2>
 
   <p>Stripe does not offer lockboxes for testing mailed checks. However, you can test successful deposits by generating
 source transactions on <strong>test mode</strong> sources. This example creates a <code>SourceTransaction</code> for the specified source,
@@ -3513,7 +3513,7 @@ sourceService.Update("src_18cPLvAHEMiOZZp1YBngt6En", options);
 
 
             </article>
-            <div class="docs-aside">
+            <div class="docs-aside" style="display: none;">
               <div class="docs-toc empty">
                 <h4>On this page</h4>
                 <ul class="docs-toc-list">

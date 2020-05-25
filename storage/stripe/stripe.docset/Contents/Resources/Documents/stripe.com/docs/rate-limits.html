@@ -180,7 +180,7 @@
   <body class="">
     
       <div id="docs">
-        <div id="sidebar">
+        <div id="sidebar" style="display: none;">
             
   <div class="logo">
     <a href="recipes/switching-to-stripe.html" title="Stripe docs">
@@ -3008,7 +3008,7 @@
             <article id="content">
                 
   <header>
-  <h1>Rate limits</h1>
+  <a name="//apple_ref/cpp/Section/Top" class="dashAnchor"></a><h1>Rate limits</h1>
   <p>Learn about API rate limits and how to work with them.</p>
 </header>
 
@@ -3030,7 +3030,7 @@
 
 <p>Treat these limits as maximums and don&rsquo;t generate unnecessary load. We may adjust limits to prevent abuse or enable well-behaved high-traffic applications. See <a href="rate-limits.html#handling-limiting-gracefully">Handling limiting gracefully</a> for advice on handling 429s. If you suddenly see a rising number of rate limited requests, please feel free to <a href="https://support.stripe.com/">reach out to support</a>.</p>
 <section>
-<h2 id="common-causes-and-mitigations">Common causes and mitigations</h2>
+<a id="common-causes-and-mitigations" name="//apple_ref/cpp/Section/Common%20causes%20and%20mitigations" class="dashAnchor"></a><h2 id="common-causes-and-mitigations">Common causes and mitigations</h2>
 <p>Rate limiting can occur under a variety of conditions, but it&rsquo;s most common in these scenarios:</p>
 
 <ul>
@@ -3041,14 +3041,14 @@
 </section>
 
 <section>
-<h2 id="handling-limiting-gracefully">Handling limiting gracefully</h2>
+<a id="handling-limiting-gracefully" name="//apple_ref/cpp/Section/Handling%20limiting%20gracefully" class="dashAnchor"></a><h2 id="handling-limiting-gracefully">Handling limiting gracefully</h2>
 <p>A basic technique for integrations to gracefully handle limiting is to watch for <code>429</code> status codes and build in a retry mechanism. The retry mechanism should follow an exponential backoff schedule to reduce request volume when necessary. We&rsquo;d also recommend building some randomness into the backoff schedule to avoid a <a href="https://en.wikipedia.org/wiki/Thundering_herd_problem">thundering herd effect</a>.</p>
 
 <p>Individual requests can only be optimized to a limited degree, so an even more sophisticated approach would be to control traffic to Stripe at a global level, and throttle it back if substantial rate limiting is detected. A common technique for controlling rate is to implement something like a <a href="https://en.wikipedia.org/wiki/Token_bucket">token bucket rate limiting algorithm</a> on the client-side. Ready-made and mature implementations for token bucket are available in almost any programming language.</p>
 </section>
 
 <section>
-<h2 id="object-lock-timeouts">Object lock timeouts</h2>
+<a id="object-lock-timeouts" name="//apple_ref/cpp/Section/Object%20lock%20timeouts" class="dashAnchor"></a><h2 id="object-lock-timeouts">Object lock timeouts</h2>
 <p>Integrations may encounter errors with HTTP status <code>429</code>, code <code>lock_timeout</code>, and this message:</p>
 
 <blockquote>
@@ -3127,7 +3127,7 @@ sc.Init("sk_test_...", &amp;stripe.Backends{
 </section>
 
 <section>
-<h2 id="load-testing">Load testing</h2>
+<a id="load-testing" name="//apple_ref/cpp/Section/Load%20testing" class="dashAnchor"></a><h2 id="load-testing">Load testing</h2>
 <p>It&rsquo;s common for users to prepare for a major sales event by load testing their systems, with the Stripe API running in test mode as part of it. We generally discourage this practice because API limits are lower in test mode, so the load test is likely to hit limits that it wouldn&rsquo;t hit in production. Test mode is also not a perfect stand-in for live API calls, and that can be subtly misleading. For example, creating a charge in live mode sends a request to a payment gateway while that request will be mocked in test mode, resulting in significantly different latency profiles.</p>
 
 <p>As an alternative, we recommend building integrations so that they have a configurable system for mocking out requests to Stripe API, which can be enabled for load tests. For realistic results, they should simulate latency by sleeping for a time that is determined by sampling the durations of real live mode Stripe API calls as seen from the perspective of the integration.</p>
@@ -3165,7 +3165,7 @@ sc.Init("sk_test_...", &amp;stripe.Backends{
 
 
             </section></article>
-            <div class="docs-aside">
+            <div class="docs-aside" style="display: none;">
               <div class="docs-toc empty">
                 <h4>On this page</h4>
                 <ul class="docs-toc-list">

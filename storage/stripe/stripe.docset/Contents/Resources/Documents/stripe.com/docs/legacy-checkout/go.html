@@ -182,7 +182,7 @@
   <body class="">
     
       <div id="docs">
-        <div id="sidebar">
+        <div id="sidebar" style="display: none;">
             
   <div class="logo">
     <a href="../recipes/switching-to-stripe.html" title="Stripe docs">
@@ -3010,7 +3010,7 @@
             <article id="content">
                 
   <header>
-  <h1>Using Checkout and Go (legacy)</h1>
+  <a name="//apple_ref/cpp/Section/Top" class="dashAnchor"></a><h1>Using Checkout and Go (legacy)</h1>
 
 <aside class="important red">
 <p><strong>This page is for the legacy version of Checkout</strong></p>
@@ -3037,7 +3037,7 @@ modal payments form using Elements on <a href="https://github.com/stripe-samples
 </ol></section>
 
 <section>
-  <h2 id="step-1-install-dependencies"><span class="step">Step 1:</span> Install and configure dependencies</h2>
+  <a id="step-1-install-and-configure-dependencies" name="//apple_ref/cpp/Section/Step%201%3A%20Install%20and%20configure%20dependencies" class="dashAnchor"></a><h2 id="step-1-install-dependencies"><span class="step">Step 1:</span> Install and configure dependencies</h2>
 
 <p>To follow along, you need a working Go environment. Create and enter a new directory, then make sure your package is using Go Modules:</p>
 <div class="code" data-language="bash">
@@ -3083,7 +3083,7 @@ func main() {
 <p>Assign the secret key to the <code>Key</code> property of the <code>stripe</code> package. Assign the publishable key to a new variable called <code>publishableKey</code> so that it can be used later.</p></section>
 
 <section>
-  <h2 id="step-2-create-the-view-template"><span class="step">Step 2:</span> Create the view template</h2>
+  <a id="step-2-create-the-view-template" name="//apple_ref/cpp/Section/Step%202%3A%20Create%20the%20view%20template" class="dashAnchor"></a><h2 id="step-2-create-the-view-template"><span class="step">Step 2:</span> Create the view template</h2>
 
 <p>This example uses Go&rsquo;s <code>html/template</code> package for server-side templating. Create a file named <strong>views/index.html</strong> for the index template:</p>
 <div class="code" data-language="html">
@@ -3120,7 +3120,7 @@ func main() {
 </section>
 
 <section>
-  <h2 id="step-3-create-routes"><span class="step">Step 2:</span> Create routes</h2>
+  <a id="step-2-create-routes" name="//apple_ref/cpp/Section/Step%202%3A%20Create%20routes" class="dashAnchor"></a><h2 id="step-3-create-routes"><span class="step">Step 2:</span> Create routes</h2>
 
 <p>The server exposes two routes:</p>
 
@@ -3182,7 +3182,7 @@ http.ListenAndServe(":4567", nil)</code></div></pre>
 
 
 <section>
-  <h2 id="step-4-run-the-application"><span class="step">Step 4:</span> Run the application</h2>
+  <a id="step-4-run-the-application" name="//apple_ref/cpp/Section/Step%204%3A%20Run%20the%20application" class="dashAnchor"></a><h2 id="step-4-run-the-application"><span class="step">Step 4:</span> Run the application</h2>
 
 <p>Run the application from the command line:</p>
 <div class="code" data-language="bash">
@@ -3236,7 +3236,7 @@ Terminal
 
 
             </article>
-            <div class="docs-aside">
+            <div class="docs-aside" style="display: none;">
               <div class="docs-toc empty">
                 <h4>On this page</h4>
                 <ul class="docs-toc-list">

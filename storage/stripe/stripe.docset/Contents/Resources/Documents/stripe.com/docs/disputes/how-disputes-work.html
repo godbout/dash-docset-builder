@@ -180,7 +180,7 @@
   <body class="">
     
       <div id="docs">
-        <div id="sidebar">
+        <div id="sidebar" style="display: none;">
             
   <div class="logo">
     <a href="../recipes/switching-to-stripe.html" title="Stripe docs">
@@ -3008,7 +3008,7 @@
             <article id="content">
                 
   <header>
-<h1 id="how-disputes-work">How disputes work</h1>
+<a name="//apple_ref/cpp/Section/Top" class="dashAnchor"></a><h1 id="how-disputes-work">How disputes work</h1>
 <p>Learn the terminology and lifecycle of disputes.</p>
 </header>
 
@@ -3026,7 +3026,7 @@
 <p>Stripe reviews the evidence and decides whether it meets the card brand&rsquo;s requirements to provide a potential remedy for the dispute. If it does not, the case is closed. If it presents a potential remedy, Stripe forwards evidence to the card issuer. The issuer reviews the evidence and makes a final decision, which we communicate to you through the Stripe Dashboard, webhooks, and API. As the card issuer has final say, Stripe&rsquo;s decision to forward the evidence does not, by itself, guarantee a resolution in your favor.</p></section>
 
 <section>
-<h2 id="inquiries-and-retrievals">Inquiries and retrievals</h2>
+<a id="inquiries-and-retrievals" name="//apple_ref/cpp/Section/Inquiries%20and%20retrievals" class="dashAnchor"></a><h2 id="inquiries-and-retrievals">Inquiries and retrievals</h2>
 
 <p>Some card issuers may begin to investigate a payment before creating a chargeback, and request further information about the charge. Most card networks call these &ldquo;retrievals&rdquo;, and American Express calls them &ldquo;inquiries&rdquo;.  These are common for American Express and Discover payments. Mastercard and Visa almost always create a chargeback immediately.</p>
 
@@ -3041,7 +3041,7 @@
 </aside></section>
 
 <section>
-<h2 id="chargebacks">Chargebacks</h2>
+<a id="chargebacks" name="//apple_ref/cpp/Section/Chargebacks" class="dashAnchor"></a><h2 id="chargebacks">Chargebacks</h2>
 
 <p>If the card issuer has chosen not to create an inquiry or retrieval, or is unsatisfied with the evidence, they create a chargeback. Unlike inquiries or retrievals, during a chargeback the issuer debits your account and holds the funds while the dispute is processed. Once the chargeback is created, you have a limited amount of time (usually 7&ndash;21 days) to respond with evidence. The time given varies depending on the card network.</p>
 
@@ -3050,7 +3050,7 @@
 <p>If you submit evidence, it is sent to the cardholder&rsquo;s bank, which also has a limited amount of time (usually 60&ndash;75 days) to respond, varying based on the card network. Stripe updates the dispute&rsquo;s status as soon as the bank&rsquo;s response is available, but that response is often not known until the deadline passes. The decision from the cardholder&rsquo;s bank is the final step in the dispute process.</p></section>
 
 <section>
-<h2 id="disputed-amount">Disputed amount</h2>
+<a id="disputed-amount" name="//apple_ref/cpp/Section/Disputed%20amount" class="dashAnchor"></a><h2 id="disputed-amount">Disputed amount</h2>
 <p>If the original payment was <a href="../currencies/conversions.html">converted</a> into your account&rsquo;s default currency (e.g., a USD payment converted into EUR and deposited into your account), the disputed amount is <a href="../currencies/conversions.html#conversions-on-disputes-and-refunds">converted back</a> to the payment&rsquo;s original currency (e.g., EUR is withdrawn from your account and converted back to USD).</p>
 
 <p>The amount of a dispute can sometimes exceed the original charge amount. In certain cases, this discrepancy is due to currency conversion. It can also occur when the card&rsquo;s issuer bundles multiple charges into a single chargeback. This bundling discrepancy is more common for regular, recurring charges, or multiple charges of small amounts&mdash;usually less than $50 USD.</p>
@@ -3089,7 +3089,7 @@
 
 
             </article>
-            <div class="docs-aside">
+            <div class="docs-aside" style="display: none;">
               <div class="docs-toc empty">
                 <h4>On this page</h4>
                 <ul class="docs-toc-list">

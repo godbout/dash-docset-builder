@@ -180,7 +180,7 @@
   <body class="">
     
       <div id="docs">
-        <div id="sidebar">
+        <div id="sidebar" style="display: none;">
             
   <div class="logo">
     <a href="../recipes/switching-to-stripe.html" title="Stripe docs">
@@ -3008,7 +3008,7 @@
             <article id="content">
                 
   <header>
-<h1>Sources and customers</h1>
+<a name="//apple_ref/cpp/Section/Top" class="dashAnchor"></a><h1>Sources and customers</h1>
 <p>Learn how to attach and manage sources with <a href="../api/index.html#customers">Customer</a> objects.</p>
 
 
@@ -3018,7 +3018,7 @@
 <p>A <a href="../api/index.html#sources">Source</a> object can be either <a href="bitcoin.html#single-use-or-reusable">single-use or reusable</a>, as indicated by its <code>usage</code> parameter. While sources can be charged directly, <em>reusable</em> sources should always be attached to a <a href="../api/index.html#customers">Customer</a> object for later reuse. Attaching reusable sources to <code>Customer</code> objects allows you to present your customers with a list of reusable payment methods that they have previously used with your app or website.</p></section>
 
 <section>
-<h2 id="reusable-sources">Reusable sources</h2>
+<a id="reusable-sources" name="//apple_ref/cpp/Section/Reusable%20sources" class="dashAnchor"></a><h2 id="reusable-sources">Reusable sources</h2>
 
 <p>Certain payment methods (e.g., <a href="sepa-debit.html">SEPA Direct Debit</a>) support reusable sources, so that you can create additional payments without your customer&rsquo;s needing to complete the payment process again. A source that can be reused has its <code>usage</code> parameter set to <code>reusable</code>.</p>
 
@@ -3524,7 +3524,7 @@ Charge charge = service.Create(options);
 <p>If you need to remove a source from a particular <code>Customer</code> object, you can <a href="../api/index.html#detach_source">detach the source</a>. Doing so changes the source&rsquo;s status to <code>consumed</code>, so it cannot be used once detached.</p></section>
 
 <section>
-<h2 id="single-use-sources">Single-use sources</h2>
+<a id="single-use-sources" name="//apple_ref/cpp/Section/Single-use%20sources" class="dashAnchor"></a><h2 id="single-use-sources">Single-use sources</h2>
 
 <p>Single-use sources must be created each time a customer makes a payment, and cannot be reused. For that reason, we do not recommend that you permanently attach them to customers.</p>
 
@@ -3671,7 +3671,7 @@ Charge charge = service.Create(options);
 <p>The resulting <code>Charge</code> object references both the <code>Customer</code> and <code>Source</code> objects, even if they are not directly related to one another.</p></section>
 
 <section>
-<h2>Related resources</h2>
+<a id="related-resources" name="//apple_ref/cpp/Section/Related%20resources" class="dashAnchor"></a><h2>Related resources</h2>
 <ul class="next-steps">
     <li><a href="bitcoin.html"><span>Supported Payment Methods</span></a></li>
     <li><a href="../api/index.html#sources"><span>Sources API Reference</span></a></li>
@@ -3712,7 +3712,7 @@ Charge charge = service.Create(options);
 
 
             </article>
-            <div class="docs-aside">
+            <div class="docs-aside" style="display: none;">
               <div class="docs-toc empty">
                 <h4>On this page</h4>
                 <ul class="docs-toc-list">

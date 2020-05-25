@@ -182,7 +182,7 @@
   <body class="">
     
       <div id="docs">
-        <div id="sidebar">
+        <div id="sidebar" style="display: none;">
             
   <div class="logo">
     <a href="../recipes/switching-to-stripe.html" title="Stripe docs">
@@ -3010,7 +3010,7 @@
             <article id="content">
                 
   <header>
-  <h1>Using Checkout and Rails (legacy)</h1>
+  <a name="//apple_ref/cpp/Section/Top" class="dashAnchor"></a><h1>Using Checkout and Rails (legacy)</h1>
 
 <aside class="important red">
 <p><strong>This page is for the legacy version of Checkout</strong></p>
@@ -3027,7 +3027,7 @@ modal payments form using Elements on <a href="https://github.com/stripe-samples
 </header>
 
 <section>
-<h2 id="getting-started">Getting started</h2>
+<a id="getting-started" name="//apple_ref/cpp/Section/Getting%20started" class="dashAnchor"></a><h2 id="getting-started">Getting started</h2>
 
 <p>The first step is adding the Stripe gem to your application&rsquo;s <strong>Gemfile</strong>:</p>
 <div class="code" data-language="ruby">
@@ -3095,7 +3095,7 @@ end</code></div></pre>
 <p>Some payment attempts fail for a variety of reasons, such as an invalid CVC, bad card number, or general decline. Any <code>Stripe::CardError</code> exception will be caught and stored in the <code>flash</code> hash.</p></section>
 
 <section>
-<h2 id="defining-the-route">Defining the route</h2>
+<a id="defining-the-route" name="//apple_ref/cpp/Section/Defining%20the%20route" class="dashAnchor"></a><h2 id="defining-the-route">Defining the route</h2>
 
 <p>So users can access the newly created controller, add a route to it in <strong>config/routes.rb</strong>:</p>
 <div class="code" data-language="ruby">
@@ -3105,7 +3105,7 @@ end</code></div></pre>
 </section>
 
 <section>
-<h2 id="configuring-the-application">Configuring the application</h2>
+<a id="configuring-the-application" name="//apple_ref/cpp/Section/Configuring%20the%20application" class="dashAnchor"></a><h2 id="configuring-the-application">Configuring the application</h2>
 
 <p>The application makes use of your publishable and secret API keys to interact with Stripe. An initializer is a good place to set these values, which will be provided when the application is started.</p>
 
@@ -3123,7 +3123,7 @@ Stripe.api_key = Rails.configuration.stripe[:secret_key]</code></div></pre>
 <p>These keys values are pulled out of environmental variables so as not to hardcode them. It&rsquo;s best practice not to write API keys into your code, where they could easily wind up in source control repositories and other non-private destinations.</p></section>
 
 <section>
-<h2 id="creating-the-views">Creating the views</h2>
+<a id="creating-the-views" name="//apple_ref/cpp/Section/Creating%20the%20views" class="dashAnchor"></a><h2 id="creating-the-views">Creating the views</h2>
 
 <p>The next step is to create the relevant views: for the credit card form and for the charge response. Create a <strong>charges.html.erb</strong> layout under <strong>app/views/layouts</strong>:</p>
 <div class="code" data-language="html">
@@ -3171,7 +3171,7 @@ Stripe.api_key = Rails.configuration.stripe[:secret_key]</code></div></pre>
 <p>And that&rsquo;s a wrap! A complete Stripe and Rails integration in a matter of minutes.</p></section>
 
 <section>
-<h2 id="testing-the-integration">Testing the integration</h2>
+<a id="testing-the-integration" name="//apple_ref/cpp/Section/Testing%20the%20integration" class="dashAnchor"></a><h2 id="testing-the-integration">Testing the integration</h2>
 
 <p>To test the integration, start the Rails server, making sure to set the environmental variables to your <a href="https://dashboard.stripe.com/account/apikeys">publishable and secret keys</a>. For now, use the test keys, rather than your live ones:</p>
 <div class="code" data-language="bash">
@@ -3195,7 +3195,7 @@ SECRET_KEY=sk_test_4eC39HqLyjWDarjtT1zdp7dc rails s</code></div></pre>
 <p>Now, navigate to <a href="http://localhost:3000/charges/new">http://localhost:3000/charges/new</a> to see the payment form ready to use. If you&rsquo;re using test API keys, you can try the process with some dummy data. Enter the special credit card number <strong>4242 4242 4242 4242</strong>, a three-digit CVC, and any expiry date in the future. Submitting the form should bring up the successful charge page, and you can see the charge in the <a href="https://dashboard.stripe.com/test/payments">Dashboard</a>.</p></section>
 
 <section>
-<h2 id="deploying-to-heroku">Deploying to Heroku</h2>
+<a id="deploying-to-heroku" name="//apple_ref/cpp/Section/Deploying%20to%20Heroku" class="dashAnchor"></a><h2 id="deploying-to-heroku">Deploying to Heroku</h2>
 
 <p>Now that you&rsquo;ve created a basic payment page, you can deploy it somewhere so people can use it! Heroku is an awesome way to do this, and integrates seamlessly with Rails and Rack. First, get a <a href="https://www.heroku.com/">Heroku</a> account, and install the <a href="https://toolbelt.heroku.com">Heroku Toolbelt</a>.</p>
 
@@ -3255,7 +3255,7 @@ heroku open</code></div></pre>
 
 
             </article>
-            <div class="docs-aside">
+            <div class="docs-aside" style="display: none;">
               <div class="docs-toc empty">
                 <h4>On this page</h4>
                 <ul class="docs-toc-list">

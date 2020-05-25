@@ -180,7 +180,7 @@
   <body class="">
     
       <div id="docs">
-        <div id="sidebar">
+        <div id="sidebar" style="display: none;">
             
   <div class="logo">
     <a href="recipes/switching-to-stripe.html" title="Stripe docs">
@@ -3008,7 +3008,7 @@
             <article id="content">
                 
   <header>
-  <h1>ACH Guide</h1>
+  <a name="//apple_ref/cpp/Section/Top" class="dashAnchor"></a><h1>ACH Guide</h1>
   <p>Stripe supports accepting ACH payments&mdash;direct from bank accounts&mdash;alongside credit cards. ACH is currently supported only for Stripe businesses based in the U.S. We'd love to <a href="mailto:ach@stripe.com">hear about</a> your use case, though!</p>
 </header>
 
@@ -3036,14 +3036,14 @@
 </ul></section>
 
 <section>
-<h2 id="verifying">Collecting and verifying bank accounts</h2>
+<a id="collecting-and-verifying-bank-accounts" name="//apple_ref/cpp/Section/Collecting%20and%20verifying%20bank%20accounts" class="dashAnchor"></a><h2 id="verifying">Collecting and verifying bank accounts</h2>
 
 <p>Before you can create an ACH charge, you must first collect and verify your customer&rsquo;s bank account and routing number. In order to properly identify the bank account, you also need to collect the name of the person or business who owns the account, and if the account is owned by an individual or a company. Stripe provides two methods for doing so: instant collection and verification using <a href="https://plaid.com/docs/stripe">Plaid</a> or collection via <a href="stripe-js.html">Stripe.js</a> with delayed-verification using microdeposits.  You may incur additional costs when using Plaid, depending on the size of your business. Take this into account when making your decision.</p>
 
 <p>As charging a bank account requires both verification of the account and customer authorization to use it, the best practice is to store the bank account on a <code>Customer</code> object in Stripe for easy reuse.</p></section>
 
 <section>
-  <h2 id="using-plaid">Using Plaid</h2>
+  <a id="using-plaid" name="//apple_ref/cpp/Section/Using%20Plaid" class="dashAnchor"></a><h2 id="using-plaid">Using Plaid</h2>
   <div class="plaid-logo">
     <a href="https://plaid.com/docs/stripe"><img src="../img/docs/apms/plaid.png"></a>
   </div>
@@ -3475,7 +3475,7 @@ stripeBankAccountToken := stripeTokenResp.StripeBankAccountToken
 </section>
 
 <section>
-<h2 id="manually-collecting-and-verifying-bank-accounts">Manually collecting and verifying bank accounts</h2>
+<a id="manually-collecting-and-verifying-bank-accounts" name="//apple_ref/cpp/Section/Manually%20collecting%20and%20verifying%20bank%20accounts" class="dashAnchor"></a><h2 id="manually-collecting-and-verifying-bank-accounts">Manually collecting and verifying bank accounts</h2>
 
 <p>Plaid supports instant verification for many of the most popular banks. However, if your customer&rsquo;s bank is not supported or you don&rsquo;t want to integrate with Plaid, collect and verify the customer&rsquo;s bank using Stripe alone.</p>
 
@@ -3766,7 +3766,7 @@ service.Verify(
 <p>When the bank account is verified, you can make charges against it.</p></section>
 
 <section>
-<h2 id="authorization">Payment authorization</h2>
+<a id="payment-authorization" name="//apple_ref/cpp/Section/Payment%20authorization" class="dashAnchor"></a><h2 id="authorization">Payment authorization</h2>
 
 <p>Before creating an ACH charge, get authorization from your customer to debit their account. Doing so ensures compliance with the ACH network and helps protect you from disputes,
 additional fees, and reversed payments.
@@ -3774,7 +3774,7 @@ See our <a href="https://support.stripe.com/questions/collect-ach-authorization-
 for more information on authorization requirements.</p></section>
 
 <section>
-<h2 id="creating-an-ach-charge">Creating an ACH charge</h2>
+<a id="creating-an-ach-charge" name="//apple_ref/cpp/Section/Creating%20an%20ACH%20charge" class="dashAnchor"></a><h2 id="creating-an-ach-charge">Creating an ACH charge</h2>
 
 <p>To create a charge on a verified bank account, use the stored <code>Customer</code> object the same way you would when using a card.</p>
 <div class="tabs tabs-code animated" data-callback="codeTabsChanged" data-platform="server">
@@ -3910,7 +3910,7 @@ var charge = service.Create(options);
 <p>If the customer has multiple stored sources (of any type), specify which bank account to use by passing its ID in as the <a href="api/index.html#create_charge-source">source</a> parameter.</p></section>
 
 <section>
-<h2 id="testing-ach">Testing ACH</h2> <p>You can mimic successful and failed ACH charges using the following bank routing and account numbers:</p>
+<a id="testing-ach" name="//apple_ref/cpp/Section/Testing%20ACH" class="dashAnchor"></a><h2 id="testing-ach">Testing ACH</h2> <p>You can mimic successful and failed ACH charges using the following bank routing and account numbers:</p>
 
 <ul>
   <li>Routing number: <code>110000000</code></li>
@@ -3935,7 +3935,7 @@ var charge = service.Create(options);
 </section>
 
 <section>
-<h2 id="ach-payments-workflow">ACH payments workflow</h2>
+<a id="ach-payments-workflow" name="//apple_ref/cpp/Section/ACH%20payments%20workflow" class="dashAnchor"></a><h2 id="ach-payments-workflow">ACH payments workflow</h2>
 
 <p>ACH payments take up to 5 business days to receive acknowledgment of their success or failure:</p>
 
@@ -3952,7 +3952,7 @@ var charge = service.Create(options);
 <p>Failures can happen for a number of reasons, such as insufficient funds, a bad account number, or the customer disabled debits from their bank account.</p></section>
 
 <section>
-<h2 id="ach-disputes">ACH disputes</h2>
+<a id="ach-disputes" name="//apple_ref/cpp/Section/ACH%20disputes" class="dashAnchor"></a><h2 id="ach-disputes">ACH disputes</h2>
 
 <p>Disputes on ACH payments are fundamentally different than those on credit card payments. If a customer&rsquo;s bank accepts the request to return the funds for a disputed charge, Stripe immediately removes the funds from your Stripe account. Unlike credit card disputes, you can&rsquo;t contest ACH reversals. You must contact your customer to resolve the situation. The ACH network allows 60 days for consumers to contest a debit. Business accounts only have 2 business days, but because there is no way to be sure if the account is a business or personal account, you should never rely on this as a way to reduce risk.</p>
 
@@ -3963,11 +3963,11 @@ var charge = service.Create(options);
 <p>When issuing a refund for an ACH payment, you must notify your customer immediately that you are issuing the refund and that it may take 2-5 business days for the funds to appear in their bank account.</p></section>
 
 <section>
-<h2 id="ach-refunds">ACH refunds</h2>
+<a id="ach-refunds" name="//apple_ref/cpp/Section/ACH%20refunds" class="dashAnchor"></a><h2 id="ach-refunds">ACH refunds</h2>
 <p>ACH charges can be refunded using the <a href="api/index.html#refunds">Refund endpoint</a>, but the timing and risks associated with ACH refunds are different from card refunds (refer to our <a href="https://support.stripe.com/questions/potential-for-double-crediting-with-ach-refunds-and-disputes">support guide</a>). If a refund for an ACH charge fails, you will receive a <code>charge.refund.updated</code> notification, which means that we haven&rsquo;t been able to process the refund. You must return the funds to your customer outside of Stripe. This is rare; normally occurring when an account is frozen between the original charge and the refund request.</p></section>
 
 <section>
-<h2 id="ach-specific-webhook-notifications">ACH-specific webhook notifications</h2>
+<a id="ach-specific-webhook-notifications" name="//apple_ref/cpp/Section/ACH-specific%20webhook%20notifications" class="dashAnchor"></a><h2 id="ach-specific-webhook-notifications">ACH-specific webhook notifications</h2>
 
 <p>When using ACH, you will receive many of the standard charge webhook notifications, with a couple of notable differences:</p>
 
@@ -3980,7 +3980,7 @@ var charge = service.Create(options);
 </ul></section>
 
 <section>
-<h2 id="connect">Connect support</h2>
+<a id="connect-support" name="//apple_ref/cpp/Section/Connect%20support" class="dashAnchor"></a><h2 id="connect">Connect support</h2>
 
 <p>With Connect, your platform can earn money while <a href="connect/charges.html">processing charges</a>. You can either:</p>
 
@@ -4150,7 +4150,7 @@ var charge = service.Create(options);
 </section>
 
 <section>
-  <h2>Services Agreement</h2>
+  <a id="services-agreement" name="//apple_ref/cpp/Section/Services%20Agreement" class="dashAnchor"></a><h2>Services Agreement</h2>
   <p>
     Use of the live mode API is subject to the Stripe <a href="https://stripe.com/legal">Services Agreement</a>. Let us know if you have any questions on that agreement.
   </p>
@@ -4189,7 +4189,7 @@ var charge = service.Create(options);
 
 
             </article>
-            <div class="docs-aside">
+            <div class="docs-aside" style="display: none;">
               <div class="docs-toc empty">
                 <h4>On this page</h4>
                 <ul class="docs-toc-list">

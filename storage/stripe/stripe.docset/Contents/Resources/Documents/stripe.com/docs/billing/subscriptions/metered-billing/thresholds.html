@@ -180,7 +180,7 @@
   <body class="">
     
       <div id="docs">
-        <div id="sidebar">
+        <div id="sidebar" style="display: none;">
             
   <div class="logo">
     <a href="../../../recipes/switching-to-stripe.html" title="Stripe docs">
@@ -3008,7 +3008,7 @@
             <article id="content">
                 
   <header>
-  <h1 id="billing-thresholds">Billing thresholds</h1>
+  <a name="//apple_ref/cpp/Section/Top" class="dashAnchor"></a><h1 id="billing-thresholds">Billing thresholds</h1>
 
   <p>Learn how to bill when usage meets certain thresholds.</p>
 </header>
@@ -3026,7 +3026,7 @@ or to limit the product(s) consumed, between invoices/charges.</p>
 </section>
 
 <section>
-  <h2 id="limitations">Limitations and caveats</h2>
+  <a id="limitations-and-caveats" name="//apple_ref/cpp/Section/Limitations%20and%20caveats" class="dashAnchor"></a><h2 id="limitations">Limitations and caveats</h2>
 
   <ul>
     <li>Thresholds do not apply to trialing subscriptions.</li>
@@ -3041,7 +3041,7 @@ or to limit the product(s) consumed, between invoices/charges.</p>
 </section>
 
 <section>
-  <h2 id="monetary-threshold">Adding a monetary threshold to a subscription</h2>
+  <a id="adding-a-monetary-threshold-to-a-subscription" name="//apple_ref/cpp/Section/Adding%20a%20monetary%20threshold%20to%20a%20subscription" class="dashAnchor"></a><h2 id="monetary-threshold">Adding a monetary threshold to a subscription</h2>
 
   <p>You commonly set an amount threshold&rsquo;s value to a multiple of the cost of one unit of the product being sold.
 Setting a lower amount threshold will cause your customers to receive an invoice for every unit of usage, which
@@ -3202,7 +3202,7 @@ var subscription = service.Update("sub_49ty4767H20z6a", options);
 </section>
 
 <section>
-  <h2 id="usage-threshold">Adding a usage threshold to a subscription item</h2>
+  <a id="adding-a-usage-threshold-to-a-subscription-item" name="//apple_ref/cpp/Section/Adding%20a%20usage%20threshold%20to%20a%20subscription%20item" class="dashAnchor"></a><h2 id="usage-threshold">Adding a usage threshold to a subscription item</h2>
 
   <p>As with monetary thresholds, usage thresholds should ideally be greater than one unit of usage, to avoid frequent
 invoicing. Stripe does not currently support setting usage thresholds via the Dashboard.</p>
@@ -3349,7 +3349,7 @@ var subscriptionItem = service.Update("si_CFhSgkWb0MyTWg", options);
 </section>
 
 <section>
-  <h2 id="bca">Billing cycle anchor</h2>
+  <a id="billing-cycle-anchor" name="//apple_ref/cpp/Section/Billing%20cycle%20anchor" class="dashAnchor"></a><h2 id="bca">Billing cycle anchor</h2>
 
   <p>When a customer&rsquo;s usage reaches a threshold, the subscription&rsquo;s <a href="../billing-cycle.html">billing cycle anchor</a> will (by default) not change. For example, if a threshold is
 reached in the middle of a month-long subscription, the subscription will reset at the end of the month like a
@@ -3502,7 +3502,7 @@ var subscription = service.Update("sub_49ty4767H20z6a", options);
 </section>
 
 <section>
-  <h2 id="tiered-pricing">Tiered pricing</h2>
+  <a id="tiered-pricing" name="//apple_ref/cpp/Section/Tiered%20pricing" class="dashAnchor"></a><h2 id="tiered-pricing">Tiered pricing</h2>
 
   <p>Tiers are maintained across threshold invoices. As with a subscription without thresholds, tiers will be reset
 only at the end of the billing period, or if the subscription has been configured to reset the billing cycle anchor when a
@@ -3679,7 +3679,7 @@ expect to see for the two invoices issued in the case where usage reaches 25,000
 
 
             </article>
-            <div class="docs-aside">
+            <div class="docs-aside" style="display: none;">
               <div class="docs-toc empty">
                 <h4>On this page</h4>
                 <ul class="docs-toc-list">

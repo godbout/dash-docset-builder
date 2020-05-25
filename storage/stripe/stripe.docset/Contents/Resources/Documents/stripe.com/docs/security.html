@@ -180,7 +180,7 @@
   <body class="">
     
       <div id="docs">
-        <div id="sidebar">
+        <div id="sidebar" style="display: none;">
             
   <div class="logo">
     <a href="recipes/switching-to-stripe.html" title="Stripe docs">
@@ -3008,7 +3008,7 @@
             <article id="content">
                 
   <header>
-  <h1>Integration security guide</h1>
+  <a name="//apple_ref/cpp/Section/Top" class="dashAnchor"></a><h1>Integration security guide</h1>
   <p>Ensure PCI compliance and secure communications between your customer and your server.</p>
 </header>
 
@@ -3029,7 +3029,7 @@
 </ul></section>
 
 <section id="pci-dss-guidelines">
-<h2 id="validating-pci-compliance">Validating your PCI compliance</h2>
+<a id="validating-your-pci-compliance" name="//apple_ref/cpp/Section/Validating%20your%20PCI%20compliance" class="dashAnchor"></a><h2 id="validating-pci-compliance">Validating your PCI compliance</h2>
 
 <p>All Stripe users must validate their PCI compliance annually. Most users can do this with a <a href="https://www.pcisecuritystandards.org/document_library?category=saqs#results">Self-Assessment Questionnaire</a> (SAQ) provided by the <a href="https://www.pcisecuritystandards.org/">PCI Security Standards Council</a>. The type of SAQ depends on how you integrated Stripe and which of the methods below you use to collect card data. Certain methods may require you to upload additional PCI documentation to us. If this is necessary, we&rsquo;ll notify you in the Dashboard. If you&rsquo;re using more than one of the methods below, there&rsquo;s no need to upload multiple SAQs. We can determine which SAQ covers all the ways you&rsquo;ve integrated with Stripe.</p>
 
@@ -3097,7 +3097,7 @@
 </section>
 
 <section>
-<h2 id="tls">Using TLS and HTTPS</h2>
+<a id="using-tls-and-https" name="//apple_ref/cpp/Section/Using%20TLS%20and%20HTTPS" class="dashAnchor"></a><h2 id="tls">Using TLS and HTTPS</h2>
 
 <p>TLS refers to the process of securely transmitting data between the client&mdash;the app or browser that your customer is using&mdash;and your server. This was originally performed using the <a href="https://en.wikipedia.org/wiki/Transport_Layer_Security#SSL_1.0.2C_2.0_and_3.0">SSL</a> (Secure Sockets Layer) protocol. However, this is outdated and no longer secure, and has been replaced by <a href="https://en.wikipedia.org/wiki/Transport_Layer_Security">TLS</a>. The term &ldquo;SSL&rdquo; continues to be used colloquially when referring to TLS and its function to protect transmitted data.</p>
 
@@ -3132,7 +3132,7 @@
 <p>As TLS is a complex suite of cryptographic tools, it&rsquo;s easy to miss a few details. We recommend using the <a href="https://www.ssllabs.com/ssltest/">SSL Server Test</a> by Qualys SSL Labs to make sure you have everything set up in a secure way.</p></section>
 
 <section>
-<h2 id="additional-security-considerations">Additional security considerations</h2>
+<a id="additional-security-considerations" name="//apple_ref/cpp/Section/Additional%20security%20considerations" class="dashAnchor"></a><h2 id="additional-security-considerations">Additional security considerations</h2>
 
 <p>It can be a security risk to include JavaScript from other sites as your security becomes dependent on theirs. If they&rsquo;re ever compromised, an attacker may be able to execute arbitrary code on your page. In practice, many sites make use of JavaScript for services like Google Analytics, even on secure pages. Nonetheless, it&rsquo;s something to be aware of, and ideally minimize.</p>
 
@@ -3179,7 +3179,7 @@
 </section>
 
 <section>
-  <h2>Further reading</h2>
+  <a id="further-reading" name="//apple_ref/cpp/Section/Further%20reading" class="dashAnchor"></a><h2>Further reading</h2>
   <p>
     Congrats! You can now accept card payments with Stripe. You may want to learn more about receiving funds from Stripe and managing your account, handling failed or disputed payments, or making use of recurring billing:
   </p>
@@ -3225,7 +3225,7 @@
 
 
             </article>
-            <div class="docs-aside">
+            <div class="docs-aside" style="display: none;">
               <div class="docs-toc empty">
                 <h4>On this page</h4>
                 <ul class="docs-toc-list">

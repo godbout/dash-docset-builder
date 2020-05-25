@@ -180,7 +180,7 @@
   <body class="">
     
       <div id="docs">
-        <div id="sidebar">
+        <div id="sidebar" style="display: none;">
             
   <div class="logo">
     <a href="../recipes/switching-to-stripe.html" title="Stripe docs">
@@ -3008,7 +3008,7 @@
             <article id="content">
                 
   <header>
-  <h1>Alipay payments with Sources</h1>
+  <a name="//apple_ref/cpp/Section/Top" class="dashAnchor"></a><h1>Alipay payments with Sources</h1>
   <p>Use Sources to accept payments using Alipay, the most popular payment method in China.</p>
 </header>
 
@@ -3023,7 +3023,7 @@
 <p>Alipay is a <a href="bitcoin.html#pull-or-push-of-funds">push</a>-based, <a href="bitcoin.html#single-use-or-reusable">single-use</a>  and <a href="bitcoin.html#synchronous-or-asynchronous-confirmation">synchronous</a> method of payment. This means that your customer takes action to authorize the push of funds through a <a href="bitcoin.html#flow-for-customer-action">redirect</a>. There is immediate confirmation about the success or failure of a payment.</p></section>
 
 <section>
-<h2 id="create-source"><span class="step">Step 1:</span> Create a Source object</h2>
+<a id="step-1-create-a-source-object" name="//apple_ref/cpp/Section/Step%201%3A%20Create%20a%20Source%20object" class="dashAnchor"></a><h2 id="create-source"><span class="step">Step 1:</span> Create a Source object</h2>
 
 <p>A <code>Source</code> object is either created client-side using <a href="../stripe-js.html">Stripe.js</a> or server-side using the <a href="../api/index.html#create_source">Source creation endpoint</a>, with the following parameters:</p>
 
@@ -3134,7 +3134,7 @@
 </table></section>
 
 <section>
-<h2 id="customer-action"><span class="step">Step 2:</span> Have the customer complete authorization</h2>
+<a id="step-2-have-the-customer-complete-authorization" name="//apple_ref/cpp/Section/Step%202%3A%20Have%20the%20customer%20complete%20authorization" class="dashAnchor"></a><h2 id="customer-action"><span class="step">Step 2:</span> Have the customer complete authorization</h2>
 
 <p>When creating a source, its status is initially set to <code>pending</code> and cannot yet be used to make a charge request. Your customer must authorize an Alipay payment to make the source chargeable. To allow your customer to authorize the payment, redirect them to the URL provided within the<code>redirect[url]</code> attribute of the <code>Source</code> object.</p>
 
@@ -3161,7 +3161,7 @@
 <p>When creating a <code>Source</code> object using your test API keys, you can follow the URL returned in the <code>redirect[url]</code> field. This leads to a Stripe page that displays information about the API request, and where you can either authorize or cancel the payment. Authorizing the payment redirects you to the URL specified in <code>redirect[return_url]</code>.</p></section>
 
 <section>
-  <h2 id="charge-request"><span class="step">Step 3:</span> Charge the Source</h2>
+  <a id="step-3-charge-the-source" name="//apple_ref/cpp/Section/Step%203%3A%20Charge%20the%20Source" class="dashAnchor"></a><h2 id="charge-request"><span class="step">Step 3:</span> Charge the Source</h2>
 
   <aside class="note">
   <h3>Using webhooks</h3>
@@ -3362,7 +3362,7 @@ statements whenever you create an Alipay payment.</p>
 </section>
 
 <section>
-<h2 id="charge-confirmation"><span class="step">Step 4:</span> Confirm that the charge has succeeded</h2>
+<a id="step-4-confirm-that-the-charge-has-succeeded" name="//apple_ref/cpp/Section/Step%204%3A%20Confirm%20that%20the%20charge%20has%20succeeded" class="dashAnchor"></a><h2 id="charge-confirmation"><span class="step">Step 4:</span> Confirm that the charge has succeeded</h2>
 
 <p>Since the customer has already authorized the payment as part of the redirect, unless there is an unexpected error, the <a href="../api/index.html#charge_object">Charge</a> will immediately succeed.</p>
 
@@ -3386,31 +3386,31 @@ statements whenever you create an Alipay payment.</p>
 <p>We recommend that you rely on the <code>charge.succeeded</code> webhook event to notify your customer that the payment process has been completed and their order is confirmed. Please refer to our <a href="best-practices.html">best practices</a> for more details on how to best integrate payment methods using webhooks.</p></section>
 
 <section>
-<h2 id="disputed-payments">Disputed payments</h2>
+<a id="disputed-payments" name="//apple_ref/cpp/Section/Disputed%20payments" class="dashAnchor"></a><h2 id="disputed-payments">Disputed payments</h2>
 
 <p>If a customer&rsquo;s Alipay account is used illicitly, Alipay and Stripe handle the issue internally. Alipay payments are disputed only if the customer has a complaint about the provided goods or service. Should a dispute occur, a <code>charge.dispute.created</code> webhook event is sent to your webhook endpoint, and Stripe deducts the amount of the dispute from your Stripe balance.</p></section>
 
 <section>
-<h2 id="refunds">Refunds</h2>
+<a id="refunds" name="//apple_ref/cpp/Section/Refunds" class="dashAnchor"></a><h2 id="refunds">Refunds</h2>
 
 <p>Payments made with Alipay can only be submitted for refund within 90 days from the date of the original charge. After 90 days, it is no longer possible to refund the charge.</p></section>
 
 
 
 <section>
-<h2 id="single-use-sources-expiration">Single-use Sources expiration</h2>
+<a id="single-use-sources-expiration" name="//apple_ref/cpp/Section/Single-use%20Sources%20expiration" class="dashAnchor"></a><h2 id="single-use-sources-expiration">Single-use Sources expiration</h2>
 
 <p>A single-use Alipay source must be charged within six hours of becoming <code>chargeable</code>, or before 23:45 China Standard Time (GMT+8) due to Chinese government restrictions around settlement. If it is not, its status is automatically transitioned to <code>canceled</code> and your integration receives a <code>source.canceled</code> webhook event. Once a chargeable source is canceled, the customer&rsquo;s authorized Alipay payment is refunded automatically&mdash;no money is moved into your account. For this reason, make sure the order is canceled on your end and the customer is notified when you receive the <code>source.canceled</code> event.</p>
 
 <p>Additionally, <code>pending</code> sources are canceled after one hour if they are not used to authorize a payment, ensuring that all sources eventually transition out of their <code>pending</code> state to the <code>canceled</code> state if they are not used.</p></section>
 
 <section>
-<h2 id="settlement-currencies">Settlement currencies</h2>
+<a id="settlement-currencies" name="//apple_ref/cpp/Section/Settlement%20currencies" class="dashAnchor"></a><h2 id="settlement-currencies">Settlement currencies</h2>
 
 <p>Alipay supports settlement in the default currency of your account. If you have a bank account in another currency and would like to create Alipay sources in that currency, please get in touch. Support for additional currencies is provided on a case-by-case basis.</p></section>
 
 <section>
-<h2>Related resources</h2>
+<a id="related-resources" name="//apple_ref/cpp/Section/Related%20resources" class="dashAnchor"></a><h2>Related resources</h2>
 <ul class="next-steps">
     <li><a href="bitcoin.html"><span>Other supported payment methods</span></a></li>
     <li><a href="../api/index.html#sources"><span>Sources API Reference</span></a></li>
@@ -3450,7 +3450,7 @@ statements whenever you create an Alipay payment.</p>
 
 
             </article>
-            <div class="docs-aside">
+            <div class="docs-aside" style="display: none;">
               <div class="docs-toc empty">
                 <h4>On this page</h4>
                 <ul class="docs-toc-list">

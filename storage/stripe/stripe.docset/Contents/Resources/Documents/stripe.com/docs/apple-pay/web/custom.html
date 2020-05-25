@@ -180,7 +180,7 @@
   <body class="">
     
       <div id="docs">
-        <div id="sidebar">
+        <div id="sidebar" style="display: none;">
             
   <div class="logo">
     <a href="../../recipes/switching-to-stripe.html" title="Stripe docs">
@@ -3008,7 +3008,7 @@
             <article id="content">
                 
   <header>
-  <h1>Customize your website's Apple Pay integration with Stripe.js v2</h1>
+  <a name="//apple_ref/cpp/Section/Top" class="dashAnchor"></a><h1>Customize your website's Apple Pay integration with Stripe.js v2</h1>
 
   <section>
     <aside class="important amber"><p>This reference covers the Apple Pay integration using Stripe.js v2, the previous version of our foundational JavaScript library. Our current version of <a href="../../stripe-js.html">Stripe.js</a> includes support for Apple Pay using <a href="../../stripe-js/elements/payment-request-button.html">Elements</a>, our prebuilt UI components. We recommend that users of Stripe.js v2 upgrade at their earliest convenience.</p></aside>
@@ -3031,7 +3031,7 @@
 </header>
 
 <section>
-  <h2 id="line-items">Specifying custom line items on the payment sheet</h2>
+  <a id="specifying-custom-line-items-on-the-payment-sheet" name="//apple_ref/cpp/Section/Specifying%20custom%20line%20items%20on%20the%20payment%20sheet" class="dashAnchor"></a><h2 id="line-items">Specifying custom line items on the payment sheet</h2>
   <p>
     The <code>Stripe.applePay.buildSession</code> function <a href="v2.html#beginning-a-session">introduced</a> in our getting started guide is really just a thin wrapper around Apple's <code>ApplePaySession</code> class. Specifically, it handles the <code>onvalidatemerchant</code> and <code>onpaymentauthorized</code> events for you. You can use the <a href="https://developer.apple.com/reference/applepayjs/paymentrequest">other available keys</a> in your <code>PaymentRequest</code>, and the <a href="https://developer.apple.com/reference/applepayjs/applepaysession#symbols">other available events</a> on the <code>ApplePaySession</code> to collect your users' shipping address and preferred shipping method, and to even offer them different shipping options and prices depending on their location.
   </p>
@@ -3099,7 +3099,7 @@ product.js
   </div>
 </section>
 <section>
-  <h2 id="billing-shipping">Collecting your user's billing and shipping address</h2>
+  <a id="collecting-your-users-billing-and-shipping-address" name="//apple_ref/cpp/Section/Collecting%20your%20user%27s%20billing%20and%20shipping%20address" class="dashAnchor"></a><h2 id="billing-shipping">Collecting your user's billing and shipping address</h2>
   <p>
     If you specify the <code>requiredBillingContactFields</code> property on your <code>PaymentRequest</code>, the user will be prompted to choose their billing address before payment. Their address fields will then be available on the <code>result.token</code> object in the success callback you pass to <code>buildSession</code>. Similarly, you can specify the <code>requiredShippingContactFields</code> property on your <code>PaymentRequest</code> and it'll be available as the <code>result.shippingContact</code> object in your success callback. The keys that will be present on the <code>shippingContact</code> can be found on <a href="https://developer.apple.com/reference/applepayjs/paymentcontact">Apple's Developer docs</a>.
   </p>
@@ -3144,7 +3144,7 @@ product.js
   </div>
 </section>
 <section>
-  <h2 id="shipping-methods">Offering different shipping methods to your user</h2>
+  <a id="offering-different-shipping-methods-to-your-user" name="//apple_ref/cpp/Section/Offering%20different%20shipping%20methods%20to%20your%20user" class="dashAnchor"></a><h2 id="shipping-methods">Offering different shipping methods to your user</h2>
   <p>
     You can also offer your user a variety of shipping methods to choose from by setting the <code>shippingMethods</code> property on your <code>PaymentRequest</code>. You can then change the <code>lineItems</code> property on your session when the user selects one of them. Depending on the type of service your site offers, you can also set the <code>shippingType</code> key on your <code>PaymentRequest</code> to one of <code>shipping</code>, <code>delivery</code>, <code>storePickup</code>, or <code>servicePickup</code> to have Apple Pay style the sheet more appropriately.
   </p>
@@ -3239,7 +3239,7 @@ product.js
 </section>
 
 <section>
-  <h2 id="more-resources">More Resources</h2>
+  <a id="more-resources" name="//apple_ref/cpp/Section/More%20Resources" class="dashAnchor"></a><h2 id="more-resources">More Resources</h2>
   <ul>
     <li><a href="../../stripe-js/v2.html#collecting-apple-pay-details">Stripe.js v2 - full Apple Pay reference</a></li>
     <li><a href="https://developer.apple.com/videos/play/wwdc2016/703/">Apple Pay on the Web WWDC Session</a> (<a href="http://asciiwwdc.com/2016/sessions/703">Transcript</a>)</li>
@@ -3279,7 +3279,7 @@ product.js
 
 
             </article>
-            <div class="docs-aside">
+            <div class="docs-aside" style="display: none;">
               <div class="docs-toc empty">
                 <h4>On this page</h4>
                 <ul class="docs-toc-list">

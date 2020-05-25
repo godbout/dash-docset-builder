@@ -182,7 +182,7 @@
   <body class="">
     
       <div id="docs">
-        <div id="sidebar">
+        <div id="sidebar" style="display: none;">
             
   <div class="logo">
     <a href="../recipes/switching-to-stripe.html" title="Stripe docs">
@@ -3010,7 +3010,7 @@
             <article id="content">
                 
   <header>
-  <h1>Using Checkout and Flask (legacy)</h1>
+  <a name="//apple_ref/cpp/Section/Top" class="dashAnchor"></a><h1>Using Checkout and Flask (legacy)</h1>
 
 <aside class="important red">
 <p><strong>This page is for the legacy version of Checkout</strong></p>
@@ -3111,7 +3111,7 @@ if __name__ == '__main__':
 <p>Finally, we&rsquo;re setting the <code>source</code> property to the <code>stripeToken</code> parameter. This is something that is automatically created for us by <a href="../legacy-checkout.html">Checkout</a>, which we&rsquo;re going to cover next.</p></section>
 
 <section>
-<h2 id="templates">Templates</h2>
+<a id="templates" name="//apple_ref/cpp/Section/Templates" class="dashAnchor"></a><h2 id="templates">Templates</h2>
 
 <p>First we&rsquo;re going to create our application&rsquo;s layout, which is going to wrap our views. This is going to live under <code>./templates/layout.html</code>.</p>
 <div class="code" data-language="html">
@@ -3172,7 +3172,7 @@ if __name__ == '__main__':
 <p>So that&rsquo;s it, complete Stripe and Flask integration in about 60 lines of Python and HTML!</p></section>
 
 <section>
-<h2 id="running">Running</h2>
+<a id="running" name="//apple_ref/cpp/Section/Running" class="dashAnchor"></a><h2 id="running">Running</h2>
 
 <p>Let&rsquo;s start the server, making sure to set the environmental variables we used earlier to Stripe&rsquo;s <a href="https://dashboard.stripe.com/account/apikeys">publishable and secret keys</a>. For now, let&rsquo;s use the test keys, rather than the live ones.</p>
 <div class="code" data-language="bash">
@@ -3224,7 +3224,7 @@ Terminal
 
 
             </article>
-            <div class="docs-aside">
+            <div class="docs-aside" style="display: none;">
               <div class="docs-toc empty">
                 <h4>On this page</h4>
                 <ul class="docs-toc-list">

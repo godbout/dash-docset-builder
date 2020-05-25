@@ -180,7 +180,7 @@
   <body class="">
     
       <div id="docs">
-        <div id="sidebar">
+        <div id="sidebar" style="display: none;">
             
   <div class="logo">
     <a href="../recipes/switching-to-stripe.html" title="Stripe docs">
@@ -3008,7 +3008,7 @@
             <article id="content">
                 
   <header>
-  <h1>Automated shipping calculations using EasyPost <span class="warning tag">Deprecated</span></h1>
+  <a name="//apple_ref/cpp/Section/Top" class="dashAnchor"></a><h1>Automated shipping calculations using EasyPost <span class="warning tag">Deprecated</span></h1>
   <p>Set up <a href="https://easypost.com">EasyPost</a> to add automatic shipping rate calculations to your Stripe orders.</p>
   
   <aside class="important red">
@@ -3029,14 +3029,14 @@
 <p>After doing so, you can learn how to automatically <a href="easypost.html#shipping-labels">generate shipping labels</a> for your Stripe orders.</p></section>
 
 <section>
-<h2 id="set-up">Step 1: Create your EasyPost account</h2>
+<a id="step-1-create-your-easypost-account" name="//apple_ref/cpp/Section/Step%201%3A%20Create%20your%20EasyPost%20account" class="dashAnchor"></a><h2 id="set-up">Step 1: Create your EasyPost account</h2>
 
 <p>If you don&rsquo;t already have an EasyPost account, create one by registering at the <a href="https://www.easypost.com/signup">EasyPost Sign-up Page</a>. After creating the account and verifying your email, you can log in to your account to retrieve your API keys. From the EasyPost dashboard click the <strong>API Keys</strong> link in the left sidebar to find your keys. You will need these to activate EasyPost in Stripe.</p>
 
 <p>By default, EasyPost will use USPS to calculate shipping rates. If you would like to use another carrier, you can configure additional options under <strong>Carrier Accounts</strong> in the EasyPost dashboard. Note that you will need to create an account with the carrier before you can set up the account in EasyPost. For example, you will need to set up a UPS account and store those credentials with EasyPost before you can get UPS estimates for the Orders API via EasyPost. For more information, please see the <a href="https://www.easypost.com/carriers">EasyPost carrier guides</a>.</p></section>
 
 <section>
-<h2 id="activate">Step 2: Activate EasyPost in Stripe</h2>
+<a id="step-2-activate-easypost-in-stripe" name="//apple_ref/cpp/Section/Step%202%3A%20Activate%20EasyPost%20in%20Stripe" class="dashAnchor"></a><h2 id="activate">Step 2: Activate EasyPost in Stripe</h2>
 
 <p>To activate EasyPost in your Stripe account:</p>
 
@@ -3054,7 +3054,7 @@
 <p>After completing these two steps, Stripe will automatically use your EasyPost credentials to calculate shipping costs for your Orders orders.</p></section>
 
 <section>
-<h2 id="shipping-labels">Shipping labels</h2>
+<a id="shipping-labels" name="//apple_ref/cpp/Section/Shipping%20labels" class="dashAnchor"></a><h2 id="shipping-labels">Shipping labels</h2>
 
 <p>In addition to calculating shipping rates, EasyPost supports purchasing and printing shipping labels for your orders. You can follow EasyPost&rsquo;s <a href="https://www.easypost.com/stripe-relay">integration guide</a> to learn how to automatically fulfill and purchase shipping labels for your Stripe orders.</p></section>
 
@@ -3090,7 +3090,7 @@
 
 
             </article>
-            <div class="docs-aside">
+            <div class="docs-aside" style="display: none;">
               <div class="docs-toc empty">
                 <h4>On this page</h4>
                 <ul class="docs-toc-list">

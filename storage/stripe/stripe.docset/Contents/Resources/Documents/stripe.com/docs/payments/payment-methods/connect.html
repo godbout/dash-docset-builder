@@ -181,7 +181,7 @@
   <body class="">
     
       <div id="docs">
-        <div id="sidebar">
+        <div id="sidebar" style="display: none;">
             
   <div class="logo">
     <a href="../../recipes/switching-to-stripe.html" title="Stripe docs">
@@ -3009,7 +3009,7 @@
             <article id="content">
                 
   <header>
-  <h1>Connect platforms using the Payment Methods API</h1>
+  <a name="//apple_ref/cpp/Section/Top" class="dashAnchor"></a><h1>Connect platforms using the Payment Methods API</h1>
   <p>Considerations for Stripe Connect platforms adding support for new payment methods using the <a href="../payment-methods.html">Payment Methods API</a>.</p>
 
 </header>
@@ -3018,7 +3018,7 @@
   <p><a href="../../connect.html">Stripe Connect</a> platform owners can make use of additional payment methods supported with the Payment Methods API. To learn more about creating payments for connected users, and which approach is best for you, refer to our Connect <a href="../../connect/charges.html">payments and fees documentation</a>.</p>
 </section>
 <section>
-<h2 id="creating-paymentmethods-directly-on-the-connected-account">Creating PaymentMethods directly on the connected account</h2>
+<a id="creating-paymentmethods-directly-on-the-connected-account" name="//apple_ref/cpp/Section/Creating%20PaymentMethods%20directly%20on%20the%20connected%20account" class="dashAnchor"></a><h2 id="creating-paymentmethods-directly-on-the-connected-account">Creating PaymentMethods directly on the connected account</h2>
 
 <p>If you opt for <a href="../../connect/direct-charges.html">direct charges</a>, you will need to make sure that the connected account is <a href="connect.html#onboarding">onboarded</a> on the payment method you intend to use. Direct charges require creating PaymentMethods on connected accounts. You can do so by passing <code>paymentMethod.stripeAccount</code> with a value of a connected account&rsquo;s ID when using Stripe.js.</p>
 
@@ -3231,7 +3231,7 @@ var paymentMethod = service.Create(options, requestOptions);
 
 <p>It is possible to clone PaymentMethods to connected accounts without previously attaching them to Customers. However, please note that the original PaymentMethod will be consumed, since PaymentMethods that are not attached to Customers can only be used once.</p></section>
 <section>
-<h2 id="onboarding">Onboarding of connected accounts</h2>
+<a id="onboarding-of-connected-accounts" name="//apple_ref/cpp/Section/Onboarding%20of%20connected%20accounts" class="dashAnchor"></a><h2 id="onboarding">Onboarding of connected accounts</h2>
 
 <p>We are currently working on enabling Connect platforms to activate payment methods for their users programmatically. If you are interested in this functionality, please <a href="https://support.stripe.com/email">get in touch</a>.</p>
 
@@ -3240,7 +3240,7 @@ var paymentMethod = service.Create(options, requestOptions);
 <p>Alternatively, you can rely on <a href="../../connect/destination-charges.html">destination charges</a> with the caveat that your platform will be the merchant of record on these payments, not the connected account. When your platform is the merchant of record, the platform&rsquo;s country and fee structure are used. Additionally, the platform&rsquo;s name will be displayed in the customer&rsquo;s bank statement.</p></section>
 
 <section>
-<h2>Related resources</h2>
+<a id="related-resources" name="//apple_ref/cpp/Section/Related%20resources" class="dashAnchor"></a><h2>Related resources</h2>
 <ul class="next-steps">
     <li><a href="../payment-methods.html"><span>Payment Methods API Overview</span></a></li>
 </ul>
@@ -3278,7 +3278,7 @@ var paymentMethod = service.Create(options, requestOptions);
 
 
             </article>
-            <div class="docs-aside">
+            <div class="docs-aside" style="display: none;">
               <div class="docs-toc empty">
                 <h4>On this page</h4>
                 <ul class="docs-toc-list">

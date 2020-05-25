@@ -182,7 +182,7 @@
   <body class="">
     
       <div id="docs">
-        <div id="sidebar">
+        <div id="sidebar" style="display: none;">
             
   <div class="logo">
     <a href="../recipes/switching-to-stripe.html" title="Stripe docs">
@@ -3010,12 +3010,12 @@
             <article id="content">
                 
   <header>
-  <h1 id="card-authentication-and-3d-secure">Card authentication and 3D Secure</h1>
+  <a name="//apple_ref/cpp/Section/Top" class="dashAnchor"></a><h1 id="card-authentication-and-3d-secure">Card authentication and 3D Secure</h1>
 
   <p>Learn about authentication to reduce fraud and meet regulatory requirements.</p>
 
   <section>
-    <h2 id="what-is-3d-secure">What is 3D Secure?</h2>
+    <a id="what-is-3d-secure" name="//apple_ref/cpp/Section/What%20is%203D%20Secure%3F" class="dashAnchor"></a><h2 id="what-is-3d-secure">What is 3D Secure?</h2>
 
     <p>For extra fraud protection, 3D Secure requires customers to complete an additional verification step with the card issuer when paying. Typically, you direct the customer to an authentication page on their bank&rsquo;s website, and they enter a password associated with the card or a code sent to their phone. This process is familiar to customers through the card networks&rsquo; brand names, such as Visa Secure and Mastercard Identity Check. <a href="https://www.youtube.com/watch?v=2kc-FjU2-mY" target="_blank">Watch our video</a> for an example of an authenticated checkout flow.</p>
 
@@ -3093,7 +3093,7 @@
   </section>
 
   <section>
-    <h2 id="disputed-payments">Disputed payments and liability shift</h2>
+    <a id="disputed-payments-and-liability-shift" name="//apple_ref/cpp/Section/Disputed%20payments%20and%20liability%20shift" class="dashAnchor"></a><h2 id="disputed-payments">Disputed payments and liability shift</h2>
 
     <p>Payments that have been successfully authenticated using 3D Secure are covered by a <em>liability shift</em>. Should a 3D Secure payment be <a href="../disputes.html">disputed</a> as fraudulent by the cardholder, the liability shifts from you to the card issuer. These types of disputes are handled internally, do not appear in the Dashboard, and do not result in funds being withdrawn from your Stripe account.</p>
 
@@ -3110,7 +3110,7 @@
     <p>It&rsquo;s important to note that responding to retrieval requests is important for any charge, but is <strong>vital</strong> when a 3D Secure-authenticated charge is involved. Although the cardholder&rsquo;s bank is not allowed to file an upfront financial chargeback for fraud, they are allowed to initiate a financial chargeback if the merchant does not respond to the retrieval request, known as a <em>no-reply chargeback</em>. To prevent no-reply chargebacks on 3D Secure charges, be sure to submit sufficient information about the charge. You should include information about what was ordered, how it was delivered and to whom it was delivered (whether merchandise or services, etc.).</p>
   </section>
 
-  <h2 id="controlling-when-to-present-the-3d-secure-flow">Controlling when to present the 3D Secure flow</h2>
+  <a id="controlling-when-to-present-the-3d-secure-flow" name="//apple_ref/cpp/Section/Controlling%20when%20to%20present%20the%203D%20Secure%20flow" class="dashAnchor"></a><h2 id="controlling-when-to-present-the-3d-secure-flow">Controlling when to present the 3D Secure flow</h2>
 
   <p>Stripe triggers 3D Secure automatically if required by a regulatory mandate such as <a href="../strong-customer-authentication.html">Strong Customer Authentication</a>. You can also <a href="3d-secure.html#three-ds-radar">use Radar rules</a> or the API to control when customers are prompted to complete 3D Secure authentication, making a determination for each user based on the desired parameters.</p>
 
@@ -3129,7 +3129,7 @@
 
 <section>
 
-  <h2 id="manual-three-ds">Manually request 3D Secure with the API</h2>
+  <a id="manually-request-3d-secure-with-the-api" name="//apple_ref/cpp/Section/Manually%20request%203D%20Secure%20with%20the%20API" class="dashAnchor"></a><h2 id="manual-three-ds">Manually request 3D Secure with the API</h2>
 
   <p>The default method to trigger 3D Secure is <a href="3d-secure.html#three-ds-radar">using Radar to dynamically request 3D Secure</a> based on risk level and other requirements. Triggering 3D Secure manually is for advanced users integrating Stripe with their own fraud engine.</p>
 
@@ -3154,7 +3154,7 @@ Secure is not available for the given card, the payment proceeds normally.</p>
 
 </section>
 
-<h2 id="when-to-use-3d-secure">Displaying the 3D Secure Flow</h2>
+<a id="displaying-the-3d-secure-flow" name="//apple_ref/cpp/Section/Displaying%20the%203D%20Secure%20Flow" class="dashAnchor"></a><h2 id="when-to-use-3d-secure">Displaying the 3D Secure Flow</h2>
 
 
 <div class="tabs tabs-regular  animated persists syncs" data-save-url="true" data-group="sync_tabs">
@@ -3655,7 +3655,7 @@ PaymentAuthConfig.init(
   </div>
 </div>
 
-<h2 id="three-ds-cards">Testing the 3D Secure flow</h2>
+<a id="testing-the-3d-secure-flow" name="//apple_ref/cpp/Section/Testing%20the%203D%20Secure%20flow" class="dashAnchor"></a><h2 id="three-ds-cards">Testing the 3D Secure flow</h2>
 
 <p>Use a Stripe test card with any CVC, postal code, and future expiration date to trigger 3DS authentication challenge flows while in testmode.</p>
 
@@ -3952,7 +3952,7 @@ PaymentAuthConfig.init(
 
 
             </article>
-            <div class="docs-aside">
+            <div class="docs-aside" style="display: none;">
               <div class="docs-toc empty">
                 <h4>On this page</h4>
                 <ul class="docs-toc-list">

@@ -180,7 +180,7 @@
   <body class="">
     
       <div id="docs">
-        <div id="sidebar">
+        <div id="sidebar" style="display: none;">
             
   <div class="logo">
     <a href="../recipes/switching-to-stripe.html" title="Stripe docs">
@@ -3008,13 +3008,13 @@
             <article id="content">
                 
   <header>
-  <h1 id="payment-methods-api">Payment Methods API</h1>
+  <a name="//apple_ref/cpp/Section/Top" class="dashAnchor"></a><h1 id="payment-methods-api">Payment Methods API</h1>
 
   <p>Learn more about the API that powers a range of global payment methods.</p>
 </header>
 
 <section>
-  <h2 id="overview">Overview</h2>
+  <a id="overview" name="//apple_ref/cpp/Section/Overview" class="dashAnchor"></a><h2 id="overview">Overview</h2>
   <p>The Payment Methods API allows you to accept a variety of payment methods through a single API. A <a href="../api/payment_methods/object.html">PaymentMethod</a> object contains the payment method details to create payments. With the Payment Methods API, you can combine a PaymentMethod:</p>
 
   <ul>
@@ -3022,7 +3022,7 @@
     <li>With a <a href="../api/setup_intents.html">SetupIntent</a> and a <a href="../api/customers.html">Customer</a> to save payment details for later</li>
   </ul>
 
-  <h2 id="supported-payment-methods">Supported payment methods</h2>
+  <a id="supported-payment-methods" name="//apple_ref/cpp/Section/Supported%20payment%20methods" class="dashAnchor"></a><h2 id="supported-payment-methods">Supported payment methods</h2>
 
   <p>To determine which payment methods to use for specific locales, see the <a href="https://stripe.com/payments/payment-methods-guide">guide to payment methods</a>, which includes available payment methods for different regions, a detailed description of each payment method&rsquo;s characteristics, and the <a href="https://stripe.com/payments/payment-methods-guide#payment-method-fact-sheets">geographic regions</a> where they are most relevant. You can enable any payment methods available to you in the <a href="https://dashboard.stripe.com">Dashboard</a>. Activation is generally instantaneous, and does not require additional contracts.</p>
 
@@ -3081,7 +3081,7 @@
 
   <p>We are continually adding support for more payment methods on the Payment Methods API. In the meantime, you can use other payment methods with the <a href="../sources/bitcoin.html#supported-payment-methods">Sources API</a>.</p>
 
-  <h2 id="customer-actions">Customer actions</h2>
+  <a id="customer-actions" name="//apple_ref/cpp/Section/Customer%20actions" class="dashAnchor"></a><h2 id="customer-actions">Customer actions</h2>
 
   <p>&#8203;&#8203;Some payment methods require your customer to take additional steps to complete the payment. The PaymentIntent object&rsquo;s <code>next_action</code> parameter specifies the type of customer action.</p>
 
@@ -3099,7 +3099,7 @@
     <p>For <strong>payment methods that require customer action</strong>, we recommend listening to <a href="payment-methods.html#webhooks">webhooks</a>, so that you can be notified whether a payment has succeeded or not.</p>
   </aside>
 
-  <h2 id="payment-notification">Immediate or delayed notification of payment success</h2>
+  <a id="immediate-or-delayed-notification-of-payment-success" name="//apple_ref/cpp/Section/Immediate%20or%20delayed%20notification%20of%20payment%20success" class="dashAnchor"></a><h2 id="payment-notification">Immediate or delayed notification of payment success</h2>
 
   <p>Some payment methods immediately return payment status when a transaction is attempted (e.g., card payments) but other methods have a delay, such as ACH debits. For those that immediately return payment status, the PaymentIntent status either changes to <code>succeeded</code> or <code>requires_payment_method</code>. A status of <code>succeeded</code> guarantees that you will receive the funds from your customers.</p>
 
@@ -3109,13 +3109,13 @@
     <p>&#8203;&#8203;For <strong>payment methods with delayed notification</strong>, we recommend listening to <a href="payment-methods.html#webhooks">webhooks</a>, so that you can be notified whether a payment has succeeded or not.</p>
   </aside>
 
-  <h2 id="usage">Single-use or reusable</h2>
+  <a id="single-use-or-reusable" name="//apple_ref/cpp/Section/Single-use%20or%20reusable" class="dashAnchor"></a><h2 id="usage">Single-use or reusable</h2>
 
   <p>You can reuse certain payment methods (e.g., cards or bank debits) for additional payments without authorizing and collecting payment details again. You can <a href="save-and-reuse.html#web-save-payment-method">attach</a> a reusable payment method to a Customer object to use it again in the future.</p>
 
   <p>Single-use payment methods (e.g., iDEAL) can&rsquo;t be attached to customers, because they are consumed after a payment attempt.</p>
 
-  <h2 id="webhooks">Use webhooks to track payment status</h2>
+  <a id="use-webhooks-to-track-payment-status" name="//apple_ref/cpp/Section/Use%20webhooks%20to%20track%20payment%20status" class="dashAnchor"></a><h2 id="webhooks">Use webhooks to track payment status</h2>
 
   <p>Use <a href="../webhooks.html">webhooks</a> for payment methods that either require customer action or when payment notification is delayed. Stripe sends the following events when the <code>PaymentIntent</code> status is updated:</p>
 
@@ -3154,7 +3154,7 @@
     <li>Use a partner application to handle common business events, like <a href="https://stripe.com/partners/apps-and-extensions?n=shipping">shipping</a> and <a href="https://stripe.com/partners/apps-and-extensions?n=inventory-management">inventory management</a>.</li>
   </ul>
 
-  <h2 id="payment-method-object">The PaymentMethod object</h2>
+  <a id="the-paymentmethod-object" name="//apple_ref/cpp/Section/The%20PaymentMethod%20object" class="dashAnchor"></a><h2 id="payment-method-object">The PaymentMethod object</h2>
 
   <p>A PaymentMethod contains reusable payment method details for creating payments (e.g., card expiration date or billing address), it does not include transaction-specific information (e.g., amount, currency). A PaymentMethod is attached to a PaymentIntent to represent the <a href="intents.html">states of a payment lifecycle</a>. Each PaymentMethod has a <a href="../api/payment_methods/object.html#payment_method_object-type">type</a> attribute (e.g., <code>"type": "sepa_debit"</code> ) and an additional hash whose name matches the type and contains information specific to the PaymentMethod type (e.g., <code>"sepa_debit":{}</code>). Example of a <code>sepa_debit</code> PaymentMethod object:</p>
 
@@ -3189,7 +3189,7 @@
 </section>
 
 <section>
-  <h2 id="see-also">See also</h2>
+  <a id="see-also" name="//apple_ref/cpp/Section/See%20also" class="dashAnchor"></a><h2 id="see-also">See also</h2>
   <ul class="next-steps">
     <li><a href="https://stripe.com/payments/payment-methods-guide"><span>Guide to Payment Methods</span></a></li>
     <li><a href="../api/payment_methods.html"><span>Payment Methods API Reference</span></a></li>
@@ -3227,7 +3227,7 @@
 
 
             </article>
-            <div class="docs-aside">
+            <div class="docs-aside" style="display: none;">
               <div class="docs-toc empty">
                 <h4>On this page</h4>
                 <ul class="docs-toc-list">

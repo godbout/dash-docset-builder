@@ -180,7 +180,7 @@
   <body class="">
     
       <div id="docs">
-        <div id="sidebar">
+        <div id="sidebar" style="display: none;">
             
   <div class="logo">
     <a href="../../recipes/switching-to-stripe.html" title="Stripe docs">
@@ -3008,7 +3008,7 @@
             <article id="content">
                 
   <header>
-  <h1>Connecting to a reader </h1>
+  <a name="//apple_ref/cpp/Section/Top" class="dashAnchor"></a><h1>Connecting to a reader </h1>
   <p>Learn what it means to connect your app to a reader.</p>
 </header>
 
@@ -3020,7 +3020,7 @@
 <p>The way you handle the connection workflow in your app is also important. Users of your point of sale (e.g., your onsite employees or connected accounts) must be able to connect to a reader from your app easily. For example, if you ship two readers directly to a store location, your app&rsquo;s UI should include options to discover readers nearby, select the one they want to use, and connect to it.</p></section>
 
 <section>
-<h2 id="how-connecting-works">How connecting works</h2>
+<a id="how-connecting-works" name="//apple_ref/cpp/Section/How%20connecting%20works" class="dashAnchor"></a><h2 id="how-connecting-works">How connecting works</h2>
 
 <p>Connecting your app to the reader takes two steps: discovery and connection.</p>
 
@@ -3039,7 +3039,7 @@
 
 <p>After receiving user input, your app calls the <code>connectReader</code> function with the selected reader. This establishes the reader-to-app communication necessary for taking in-person payments. If necessary, <code>connectReader</code> also fetches a connection token to connect to Stripe and enable payment collection.</p>
 
-<h2 id="automatic-reconnection">Automatic Reconnection</h2>
+<a id="automatic-reconnection" name="//apple_ref/cpp/Section/Automatic%20Reconnection" class="dashAnchor"></a><h2 id="automatic-reconnection">Automatic Reconnection</h2>
 
 <p>Stripe Terminal does not automatically reconnect to a reader when your application starts. Instead, you can build a reconnection flow by storing reader IDs and attempting to connect to a known reader on startup.</p>
 
@@ -3055,7 +3055,7 @@
 
 
 <section>
-  <h2 id="next-up">Connect your reader now</h2>
+  <a id="connect-your-reader-now" name="//apple_ref/cpp/Section/Connect%20your%20reader%20now" class="dashAnchor"></a><h2 id="next-up">Connect your reader now</h2>
   <p>
     See the guide for your reader type to get connected.
   </p>
@@ -3098,7 +3098,7 @@
 
 
             </article>
-            <div class="docs-aside">
+            <div class="docs-aside" style="display: none;">
               <div class="docs-toc empty">
                 <h4>On this page</h4>
                 <ul class="docs-toc-list">

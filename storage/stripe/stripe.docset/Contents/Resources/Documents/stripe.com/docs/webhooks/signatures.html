@@ -180,7 +180,7 @@
   <body class="">
     
       <div id="docs">
-        <div id="sidebar">
+        <div id="sidebar" style="display: none;">
             
   <div class="logo">
     <a href="../recipes/switching-to-stripe.html" title="Stripe docs">
@@ -3008,7 +3008,7 @@
             <article id="content">
                 
   <header>
-  <h1>Check the webhook signatures</h1>
+  <a name="//apple_ref/cpp/Section/Top" class="dashAnchor"></a><h1>Check the webhook signatures</h1>
   <p>Verify the events that Stripe sends to your webhook endpoints.</p>
 </header>
 
@@ -3020,7 +3020,7 @@
 <p>Stripe generates a unique secret key for each endpoint. If you use the same endpoint for both <a href="../keys.html#test-live-modes">test and live API keys</a>, note that the secret is different for each one. Additionally, if you use multiple endpoints, you must obtain a secret for each one you want to verify signatures on. After this setup, Stripe starts to sign each webhook it sends to the endpoint.</p></section>
 
 <section>
-<h2 id="verify-official-libraries">Verifying signatures using our official libraries</h2>
+<a id="verifying-signatures-using-our-official-libraries" name="//apple_ref/cpp/Section/Verifying%20signatures%20using%20our%20official%20libraries" class="dashAnchor"></a><h2 id="verify-official-libraries">Verifying signatures using our official libraries</h2>
 
 <p>Use one of our official libraries to verify signatures. You perform the verification by providing the event payload, the <code>Stripe-Signature</code> header, and the endpoint&rsquo;s secret. If verification fails, Stripe returns an error.</p>
 <div class="tabs tabs-code animated" data-callback="codeTabsChanged">
@@ -3452,7 +3452,7 @@ namespace workspace.Controllers
 <p>Stripe generates the timestamp and signature each time an event is sent to your endpoint. If Stripe retries an event (e.g., your endpoint previously replied with a non-<code>2xx</code> status code), then a new signature and timestamp is generated for the new delivery attempt.</p></section>
 
 <section>
-<h2 id="verify-manually">Verifying signatures manually</h2>
+<a id="verifying-signatures-manually" name="//apple_ref/cpp/Section/Verifying%20signatures%20manually" class="dashAnchor"></a><h2 id="verify-manually">Verifying signatures manually</h2>
 
 <p>The <code>Stripe-Signature</code> header included in each signed event contains a timestamp and one or more signatures. The timestamp is prefixed by <code>t=</code>, and each signature is prefixed by a <em>scheme</em>. Schemes start with <code>v</code>, followed by an integer. Currently, the only valid live signature scheme is <code>v1</code>. To aid with testing, Stripe sends an additional signature with a fake <code>v0</code> scheme, for test mode events.</p>
 <div class="code" data-language="html">
@@ -3503,7 +3503,7 @@ v0=6ffbb59b2300aae63f272406069a9788598b792a944a07aba816edb039989a39
 </section>
 
 <section>
-  <h2 id="next_steps">More information</h2>
+  <a id="more-information" name="//apple_ref/cpp/Section/More%20information" class="dashAnchor"></a><h2 id="next_steps">More information</h2>
 <ul class="next-steps">
     <li><a href="best-practices.html"><span>Best practices for using webhooks</span></a></li>
     <li><a href="go-live.html"><span>Take webhooks live</span></a></li>
@@ -3546,7 +3546,7 @@ v0=6ffbb59b2300aae63f272406069a9788598b792a944a07aba816edb039989a39
 
 
             </article>
-            <div class="docs-aside">
+            <div class="docs-aside" style="display: none;">
               <div class="docs-toc empty">
                 <h4>On this page</h4>
                 <ul class="docs-toc-list">
