@@ -121,24 +121,30 @@ class Stripe extends BaseDocset
     {
         $crawler = HtmlPageCrawler::create($html);
 
-        // $this->removeLeftSidebar($crawler);
-        // $this->removeRightSidebar($crawler);
+        $this->hideLeftSidebar($crawler);
+        $this->hideRightSidebar($crawler);
+        $this->updateContainerWidth($crawler);
         $this->removeHeader($crawler);
         $this->removeFooter($crawler);
         $this->removeUnwantedJavaScript($crawler);
-        // $this->insertDashTableOfContents($crawler);
+        $this->insertDashTableOfContents($crawler);
 
         return $crawler->saveHTML();
     }
 
-    protected function removeLeftSidebar(HtmlPageCrawler $crawler)
+    protected function hideLeftSidebar(HtmlPageCrawler $crawler)
     {
-        $crawler->filter('#sidebar')->remove();
+        $crawler->filter('#sidebar')->css('display', 'none');
     }
 
-    protected function removeRightSidebar(HtmlPageCrawler $crawler)
+    protected function hideRightSidebar(HtmlPageCrawler $crawler)
     {
-        $crawler->filter('.docs-aside')->remove();
+        $crawler->filter('.docs-aside')->css('display', 'none');
+    }
+
+    protected function updateContainerWidth(HtmlPageCrawler $crawler)
+    {
+        // $crawler->filter('#content')->css('min-width', 'auto !important');
     }
 
     protected function removeHeader(HtmlPageCrawler $crawler)
@@ -158,10 +164,10 @@ class Stripe extends BaseDocset
 
     protected function insertDashTableOfContents(HtmlPageCrawler $crawler)
     {
-        $crawler->filter('h1')
+        $crawler->filter('#content h1')
             ->before('<a name="//apple_ref/cpp/Section/Top" class="dashAnchor"></a>');
 
-        $crawler->filter('h2')->each(static function (HtmlPageCrawler $node) {
+        $crawler->filter('#content h2')->each(static function (HtmlPageCrawler $node) {
             $node->before(
                 '<a id="' . Str::slug($node->text()) . '" name="//apple_ref/cpp/Section/' . rawurlencode($node->text()) . '" class="dashAnchor"></a>'
             );
