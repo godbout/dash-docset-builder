@@ -103,7 +103,7 @@ abstract class BaseDocset implements Docset
         );
 
         return collect($files)->reject(static function ($file) {
-            return substr($file, -5) !== '.html';
+            return substr($file, -5) !== '.html' && substr($file, -4) !== '.htm';
         });
     }
 
