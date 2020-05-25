@@ -1,0 +1,23 @@
+{
+  "1893": {
+    "cards": {
+      "2600": {
+        "id": "card_2222222222",
+        "fingerprint": "x9yW1WE4nLvl6zjg",
+        "last4": "4242",
+        "exp_month": 1,
+        "exp_year": 2020,
+        "brand": "Visa"
+      },
+      "3520": {
+        "id": "card_3333333333",
+        "fingerprint": "nZnMWbJBurX3VHIN",
+        "last4": "0341",
+        "exp_month": 6,
+        "exp_year": 2021,
+        "brand": "Mastercard"
+      }
+    },
+    "id": "cus_abc123def456"
+  }
+}
