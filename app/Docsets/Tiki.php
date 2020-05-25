@@ -23,13 +23,44 @@ class Tiki extends BaseDocset
 
     public function grab(): bool
     {
+        $toIgnore = implode('|', [
+            '\?refresh',
+            '\?session_filters',
+            '\?sort_mode',
+            '/Plugins-',
+            'comzone=',
+            'fullscreen=',
+            'offset=',
+            'PDF\.js',
+            'Plugins\.html',
+            'structure=',
+            'tikiversion=',
+            'wp_files_sort_mode[0-9]=',
+        ]);
+
+        $toGet = implode('|', [
+            '\.css',
+            '\.gif',
+            '\.ico',
+            '\.jpg',
+            '\.js',
+            '\.png',
+            '\.svg',
+            '\.webmanifest',
+            '/LIST',
+            '/Module-',
+            '/Plugin',
+            'Tiki_org_family',
+        ]);
+
         system(
             "wget doc.tiki.org/All-the-Documentation \
                 --mirror \
                 -e robots=off \
                 --header 'Cookie: javascript_enabled_detect=true' \
-                --reject-regex='/Plugins-|Plugins\.html|fullscreen=|PDF\.js|tikiversion=|comzone=|structure=|wp_files_sort_mode[0-9]=|offset=|\?refresh|\?session_filters|\?sort_mode' \
-                --accept-regex='/Plugin|/LIST|Tiki_org_family|\.css|\.js|\.jpg|\.png|\.gif|\.svg|\.ico|\.webmanifest' \
+                --reject-regex='{$toIgnore}' \
+                --accept-regex='{$toGet}' \
+                --ignore-case \
                 --page-requisites \
                 --adjust-extension \
                 --convert-links \
@@ -48,7 +79,7 @@ class Tiki extends BaseDocset
 
         $entries = collect();
         $entries = $entries->merge($this->pluginEntries($crawler, $file));
-        // $entries = $entries->merge($this->sectionEntries($crawler, $file));
+        $entries = $entries->merge($this->moduleEntries($crawler, $file));
 
         return $entries;
     }
@@ -57,7 +88,7 @@ class Tiki extends BaseDocset
     {
         $entries = collect();
 
-        if (! in_array(basename($file), ['All-the-Documentation.html', 'site.webmanifest.html'])) {
+        if (preg_match('/Plugin/i', $file)) {
             $path = $crawler->filter('link[rel=canonical]')->attr('href');
 
             $crawler->filter('#top h1:first-of-type')->each(function (HtmlPageCrawler $node) use ($entries, $file, $path) {
@@ -72,19 +103,21 @@ class Tiki extends BaseDocset
         return $entries;
     }
 
-    protected function sectionEntries(HtmlPageCrawler $crawler, string $file)
+    protected function moduleEntries(HtmlPageCrawler $crawler, string $file)
     {
         $entries = collect();
 
-        $crawler->filter('h2')->each(function (HtmlPageCrawler $node) use ($entries, $file) {
-            if (! in_array(basename($file), ['All-the-Documentation.html', 'site.webmanifest.html'])) {
+        if (preg_match('/Module/i', $file)) {
+            $path = $crawler->filter('link[rel=canonical]')->attr('href');
+
+            $crawler->filter('#top h1:first-of-type')->each(function (HtmlPageCrawler $node) use ($entries, $file, $path) {
                 $entries->push([
-                    'name' => trim($node->text()),
-                    'type' => 'Section',
-                    'path' => Str::after($file . '#' . Str::slug($node->text()), $this->innerDirectory()),
-                ]);
-            }
-        });
+                        'name' => $node->text(),
+                        'type' => 'Module',
+                        'path' => Str::after($file . '#' . Str::slug($path), $this->innerDirectory()),
+                    ]);
+            });
+        }
 
         return $entries;
     }
