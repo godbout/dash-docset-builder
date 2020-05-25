@@ -41,7 +41,14 @@ public const ICON_16 = 'favicon-16x16.png';
 public const ICON_32 = 'favicon-32x32.png';
 // List of external domains where images or other files have to
 // be downloaded, if not from URL defined above
-public const EXTERNAL_DOMAINS = [];
+public const EXTERNAL_DOMAINS = [
+        'refactoring-ui.nyc3.cdn.digitaloceanspaces.com',
+        'jsdelivr.net',
+        'code.jquery.com',
+        'rsms.me',
+        'googleapis.com',
+        // 'images.unsplash.com'
+    ];
 ```
 
 >**Note**: the base directory is the directory where the doc is downloaded, and the whole site is flattened (no folder), so you can just define your INDEX and ICONS just by their names.
