@@ -123,7 +123,6 @@ class Stripe extends BaseDocset
 
         $this->hideLeftSidebar($crawler);
         $this->hideRightSidebar($crawler);
-        $this->updateContainerWidth($crawler);
         $this->removeHeader($crawler);
         $this->removeFooter($crawler);
         $this->removeUnwantedJavaScript($crawler);
@@ -140,11 +139,6 @@ class Stripe extends BaseDocset
     protected function hideRightSidebar(HtmlPageCrawler $crawler)
     {
         $crawler->filter('.docs-aside')->css('display', 'none');
-    }
-
-    protected function updateContainerWidth(HtmlPageCrawler $crawler)
-    {
-        // $crawler->filter('#content')->css('min-width', 'auto !important');
     }
 
     protected function removeHeader(HtmlPageCrawler $crawler)
