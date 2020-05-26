@@ -43,13 +43,11 @@ class StripeAPI extends BaseDocset
     {
         $entries = collect();
 
-        $crawler->filter('h1')->each(function (HtmlPageCrawler $node) use ($entries, $file) {
-            $entries->push([
-                'name' => trim($node->text()) . ' (' . basename($file) . ')',
-                'type' => 'Guide',
-                'path' => Str::after($file . '#' . Str::slug($node->text()), $this->innerDirectory()),
-            ]);
-        });
+        $entries->push([
+            'name' => basename($file),
+            'type' => 'Guide',
+            'path' => basename($file),
+        ]);
 
         return $entries;
     }
@@ -75,14 +73,8 @@ class StripeAPI extends BaseDocset
 
         $this->removeLeftSidebar($crawler);
         $this->removeHeader($crawler);
-        // $this->removeFooter($crawler);
-        // $this->updateTopPadding($crawler);
-        // $this->updateContainer($crawler);
-        // $this->updateTextSize($crawler);
-        // $this->updateH4Padding($crawler);
-        // $this->removeUnwantedCSS($crawler);
-        // $this->removeUnwantedJavaScript($crawler);
-        // $this->insertDashTableOfContents($crawler);
+        $this->removeUnwantedJavaScript($crawler);
+        $this->insertDashTableOfContents($crawler);
 
         return $crawler->saveHTML();
     }
@@ -97,73 +89,17 @@ class StripeAPI extends BaseDocset
         $crawler->filter('.TopNav.Box-root')->remove();
     }
 
-    protected function updateTopPadding(HtmlPageCrawler $crawler)
-    {
-        $crawler->filter('#vue-app > div > div > div')
-            ->removeClass('pt-4')
-            ->css('margin-top', '-1.5rem')
-        ;
-    }
-
-    protected function updateContainer(HtmlPageCrawler $crawler)
-    {
-        $crawler->filter('#vue-app > div')
-            ->removeClass('pt-16')
-            ->removeClass('md:pt-24')
-            ->removeClass('lg:pt-32')
-            ->removeClass('md:px-6')
-        ;
-
-        $crawler->filter('#vue-app > div > div')
-            ->removeClass('max-w-3xl')
-        ;
-
-        $crawler->filter('div.markdown')
-            ->removeClass('lg:max-w-md')
-            ->removeClass('xl:max-w-lg')
-            ->removeClass('md:mb-6')
-            ->removeClass('lg:mb-10')
-            ->removeClass('xl:px-10')
-            ->removeClass('sm:shadow')
-            ->removeClass('md:rounded-lg')
-        ;
-    }
-
-    protected function updateTextSize(HtmlPageCrawler $crawler)
-    {
-        $crawler->filter('h2')
-            ->addClass('text-3xl')
-        ;
-
-        $crawler->filter('h3')
-            ->css('font-size', '1.5rem')
-        ;
-    }
-
-    protected function updateH4Padding(HtmlPageCrawler $crawler)
-    {
-        $crawler->filter('h4')
-            ->css('margin-top', '2.5rem')
-        ;
-    }
-
-    protected function removeUnwantedCSS(HtmlPageCrawler $crawler)
-    {
-        $crawler->filter('link[href*="docsearch.min.css"]')->remove();
-    }
-
     protected function removeUnwantedJavaScript(HtmlPageCrawler $crawler)
     {
-        $crawler->filter('script[src*=docsearch]')->remove();
-        $crawler->filterXPath("//script[text()[contains(.,'docsearch')]]")->remove();
+        $crawler->filter('noscript')->remove();
+        $crawler->filter('script[src*=analytics]')->remove();
+        $crawler->filter('script[id*=analytics]')->remove();
+        $crawler->filterXPath("//script[text()[contains(.,'siteAnalyticsUtil')]]")->remove();
     }
 
     protected function insertDashTableOfContents(HtmlPageCrawler $crawler)
     {
-        $crawler->filter('h2')
-            ->before('<a name="//apple_ref/cpp/Section/Top" class="dashAnchor"></a>');
-
-        $crawler->filter('h3')->each(static function (HtmlPageCrawler $node) {
+        $crawler->filter('h1')->each(static function (HtmlPageCrawler $node) {
             $node->before(
                 '<a id="' . Str::slug($node->text()) . '" name="//apple_ref/cpp/Section/' . rawurlencode($node->text()) . '" class="dashAnchor"></a>'
             );
