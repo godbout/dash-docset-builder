@@ -98,12 +98,12 @@ class TailwindCSSTest extends TestCase
 
         $this->assertStringContainsString(
             $tailwindUIAlert,
-            Storage::get($this->docset->downloadedDirectory() . '/' . $this->docset->url() . '/components/buttons.html')
+            Storage::get($this->docset->downloadedDirectory() . '/' . $this->docset->url() . '/components/buttons/index.html')
         );
 
         $this->assertStringNotContainsString(
             $tailwindUIAlert,
-            Storage::get($this->docset->innerDirectory() . '/' . $this->docset->url() . '/components/buttons.html')
+            Storage::get($this->docset->innerDirectory() . '/' . $this->docset->url() . '/components/buttons/index.html')
         );
     }
 
