@@ -1,0 +1,897 @@
+<!DOCTYPE html>
+<html lang="en" class="bg-white antialiased">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <link rel="apple-touch-icon" sizes="180x180" href="../../apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="../../favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="../../favicon-16x16.png">
+  <link rel="manifest" href="../../manifest.json">
+  <link rel="mask-icon" href="../../safari-pinned-tab.svg" color="#00b4b6">
+  <title>Padding - Tailwind CSS</title>
+  <meta name="theme-color" content="#ffffff">
+  <meta name="twitter:card" content="summary">
+<meta name="twitter:site" content="@tailwindcss">
+<meta name="twitter:title" content="Padding - Tailwind CSS">
+<meta name="twitter:description" content="Utilities for controlling an element's padding.">
+<meta name="twitter:image" content="https://tailwindcss.com/img/tailwind-twitter-square.png">
+<meta name="twitter:creator" content="@tailwindcss">
+<meta property="og:url" content="https://tailwindcss.com/">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Padding - Tailwind CSS">
+<meta property="og:description" content="Utilities for controlling an element's padding.">
+<meta property="og:image" content="https://tailwindcss.com/img/twitter-large-card.png">
+  <link rel="stylesheet" href="../../../rsms.me/inter/inter.css">
+  <link rel="stylesheet" href="../../assets/build/css/main.css%3Fid=4a7cbbbeb4816c16d9a7.css">
+  
+  <script src="../../../cdn.jsdelivr.net/gh/alpinejs/alpine@v1.11.1/dist/alpine.js" defer></script>
+</head>
+<body data-sidebar-visible="true" class="text-gray-900 leading-normal pb-8">
+
+
+
+
+
+
+
+
+<div class="w-full mx-auto px-6">
+  <div class="lg:flex -mx-6">
+
+    
+    
+    
+
+    
+    <div id="content-wrapper" class="min-h-screen w-full">
+
+      
+      <div id="content">
+
+        
+        <div id="app" class="flex" v-cloak>
+
+          
+          <div class="w-full">
+            <div class="markdown mb-6 px-6 mx-auto">
+                              <a name="//apple_ref/cpp/Section/Top" class="dashAnchor"></a><h1 class="flex items-center">
+                  Padding
+                  <!-- <span class="ml-4 text-teal-600 font-semibold text-base">v1.3.0+</span> -->
+                                  </h1>
+              
+                              <div class="mt-0 mb-4 text-gray-600">
+                  Utilities for controlling an element's padding.
+                </div>
+                                        </div>
+            <div class="flex">
+              <div class="markdown px-6 w-full mx-auto">
+                <h2 style="visibility: hidden; font-size: 0; margin: 0;"><a id="class-reference" name="//apple_ref/cpp/Section/Class%20reference" class="dashAnchor"></a>Class reference</h2>
+<div class="mt-0 border-t border-b border-gray-300 overflow-hidden relative">
+  <div class="lg:max-h-sm overflow-y-auto scrollbar-w-2 scrollbar-track-gray-lighter scrollbar-thumb-rounded scrollbar-thumb-gray scrolling-touch">
+    <table class="w-full text-left table-collapse">
+      <thead>
+        <tr>
+          <th class="text-sm font-semibold text-gray-700 p-2 bg-gray-100">Class</th>
+          <th class="text-sm font-semibold text-gray-700 p-2 bg-gray-100">Properties</th>
+        </tr>
+      </thead>
+      <tbody class="align-baseline">
+                <tr>
+          <td class="p-2 border-t border-gray-300 font-mono text-xs text-purple-700 whitespace-no-wrap">.p-0</td>
+          <td class="p-2 border-t border-gray-300 font-mono text-xs text-blue-700 whitespace-pre">padding: 0;</td>
+        </tr>
+                <tr>
+          <td class="p-2 border-t border-gray-200 font-mono text-xs text-purple-700 whitespace-no-wrap">.p-1</td>
+          <td class="p-2 border-t border-gray-200 font-mono text-xs text-blue-700 whitespace-pre">padding: 0.25rem;</td>
+        </tr>
+                <tr>
+          <td class="p-2 border-t border-gray-200 font-mono text-xs text-purple-700 whitespace-no-wrap">.p-2</td>
+          <td class="p-2 border-t border-gray-200 font-mono text-xs text-blue-700 whitespace-pre">padding: 0.5rem;</td>
+        </tr>
+                <tr>
+          <td class="p-2 border-t border-gray-200 font-mono text-xs text-purple-700 whitespace-no-wrap">.p-3</td>
+          <td class="p-2 border-t border-gray-200 font-mono text-xs text-blue-700 whitespace-pre">padding: 0.75rem;</td>
+        </tr>
+                <tr>
+          <td class="p-2 border-t border-gray-200 font-mono text-xs text-purple-700 whitespace-no-wrap">.p-4</td>
+          <td class="p-2 border-t border-gray-200 font-mono text-xs text-blue-700 whitespace-pre">padding: 1rem;</td>
+        </tr>
+                <tr>
+          <td class="p-2 border-t border-gray-200 font-mono text-xs text-purple-700 whitespace-no-wrap">.p-5</td>
+          <td class="p-2 border-t border-gray-200 font-mono text-xs text-blue-700 whitespace-pre">padding: 1.25rem;</td>
+        </tr>
+                <tr>
+          <td class="p-2 border-t border-gray-200 font-mono text-xs text-purple-700 whitespace-no-wrap">.p-6</td>
+          <td class="p-2 border-t border-gray-200 font-mono text-xs text-blue-700 whitespace-pre">padding: 1.5rem;</td>
+        </tr>
+                <tr>
+          <td class="p-2 border-t border-gray-200 font-mono text-xs text-purple-700 whitespace-no-wrap">.p-8</td>
+          <td class="p-2 border-t border-gray-200 font-mono text-xs text-blue-700 whitespace-pre">padding: 2rem;</td>
+        </tr>
+                <tr>
+          <td class="p-2 border-t border-gray-200 font-mono text-xs text-purple-700 whitespace-no-wrap">.p-10</td>
+          <td class="p-2 border-t border-gray-200 font-mono text-xs text-blue-700 whitespace-pre">padding: 2.5rem;</td>
+        </tr>
+                <tr>
+          <td class="p-2 border-t border-gray-200 font-mono text-xs text-purple-700 whitespace-no-wrap">.p-12</td>
+          <td class="p-2 border-t border-gray-200 font-mono text-xs text-blue-700 whitespace-pre">padding: 3rem;</td>
+        </tr>
+                <tr>
+          <td class="p-2 border-t border-gray-200 font-mono text-xs text-purple-700 whitespace-no-wrap">.p-16</td>
+          <td class="p-2 border-t border-gray-200 font-mono text-xs text-blue-700 whitespace-pre">padding: 4rem;</td>
+        </tr>
+                <tr>
+          <td class="p-2 border-t border-gray-200 font-mono text-xs text-purple-700 whitespace-no-wrap">.p-20</td>
+          <td class="p-2 border-t border-gray-200 font-mono text-xs text-blue-700 whitespace-pre">padding: 5rem;</td>
+        </tr>
+                <tr>
+          <td class="p-2 border-t border-gray-200 font-mono text-xs text-purple-700 whitespace-no-wrap">.p-24</td>
+          <td class="p-2 border-t border-gray-200 font-mono text-xs text-blue-700 whitespace-pre">padding: 6rem;</td>
+        </tr>
+                <tr>
+          <td class="p-2 border-t border-gray-200 font-mono text-xs text-purple-700 whitespace-no-wrap">.p-32</td>
+          <td class="p-2 border-t border-gray-200 font-mono text-xs text-blue-700 whitespace-pre">padding: 8rem;</td>
+        </tr>
+                <tr>
+          <td class="p-2 border-t border-gray-200 font-mono text-xs text-purple-700 whitespace-no-wrap">.p-40</td>
+          <td class="p-2 border-t border-gray-200 font-mono text-xs text-blue-700 whitespace-pre">padding: 10rem;</td>
+        </tr>
+                <tr>
+          <td class="p-2 border-t border-gray-200 font-mono text-xs text-purple-700 whitespace-no-wrap">.p-48</td>
+          <td class="p-2 border-t border-gray-200 font-mono text-xs text-blue-700 whitespace-pre">padding: 12rem;</td>
+        </tr>
+                <tr>
+          <td class="p-2 border-t border-gray-200 font-mono text-xs text-purple-700 whitespace-no-wrap">.p-56</td>
+          <td class="p-2 border-t border-gray-200 font-mono text-xs text-blue-700 whitespace-pre">padding: 14rem;</td>
+        </tr>
+                <tr>
+          <td class="p-2 border-t border-gray-200 font-mono text-xs text-purple-700 whitespace-no-wrap">.p-64</td>
+          <td class="p-2 border-t border-gray-200 font-mono text-xs text-blue-700 whitespace-pre">padding: 16rem;</td>
+        </tr>
+                <tr>
+          <td class="p-2 border-t border-gray-200 font-mono text-xs text-purple-700 whitespace-no-wrap">.p-px</td>
+          <td class="p-2 border-t border-gray-200 font-mono text-xs text-blue-700 whitespace-pre">padding: 1px;</td>
+        </tr>
+                <tr>
+          <td class="p-2 border-t border-gray-200 font-mono text-xs text-purple-700 whitespace-no-wrap">.py-0</td>
+          <td class="p-2 border-t border-gray-200 font-mono text-xs text-blue-700 whitespace-pre">padding-top: 0;
+padding-bottom: 0;</td>
+        </tr>
+                <tr>
+          <td class="p-2 border-t border-gray-200 font-mono text-xs text-purple-700 whitespace-no-wrap">.py-1</td>
+          <td class="p-2 border-t border-gray-200 font-mono text-xs text-blue-700 whitespace-pre">padding-top: 0.25rem;
+padding-bottom: 0.25rem;</td>
+        </tr>
+                <tr>
+          <td class="p-2 border-t border-gray-200 font-mono text-xs text-purple-700 whitespace-no-wrap">.py-2</td>
+          <td class="p-2 border-t border-gray-200 font-mono text-xs text-blue-700 whitespace-pre">padding-top: 0.5rem;
+padding-bottom: 0.5rem;</td>
+        </tr>
+                <tr>
+          <td class="p-2 border-t border-gray-200 font-mono text-xs text-purple-700 whitespace-no-wrap">.py-3</td>
+          <td class="p-2 border-t border-gray-200 font-mono text-xs text-blue-700 whitespace-pre">padding-top: 0.75rem;
+padding-bottom: 0.75rem;</td>
+        </tr>
+                <tr>
+          <td class="p-2 border-t border-gray-200 font-mono text-xs text-purple-700 whitespace-no-wrap">.py-4</td>
+          <td class="p-2 border-t border-gray-200 font-mono text-xs text-blue-700 whitespace-pre">padding-top: 1rem;
+padding-bottom: 1rem;</td>
+        </tr>
+                <tr>
+          <td class="p-2 border-t border-gray-200 font-mono text-xs text-purple-700 whitespace-no-wrap">.py-5</td>
+          <td class="p-2 border-t border-gray-200 font-mono text-xs text-blue-700 whitespace-pre">padding-top: 1.25rem;
+padding-bottom: 1.25rem;</td>
+        </tr>
+                <tr>
+          <td class="p-2 border-t border-gray-200 font-mono text-xs text-purple-700 whitespace-no-wrap">.py-6</td>
+          <td class="p-2 border-t border-gray-200 font-mono text-xs text-blue-700 whitespace-pre">padding-top: 1.5rem;
+padding-bottom: 1.5rem;</td>
+        </tr>
+                <tr>
+          <td class="p-2 border-t border-gray-200 font-mono text-xs text-purple-700 whitespace-no-wrap">.py-8</td>
+          <td class="p-2 border-t border-gray-200 font-mono text-xs text-blue-700 whitespace-pre">padding-top: 2rem;
+padding-bottom: 2rem;</td>
+        </tr>
+                <tr>
+          <td class="p-2 border-t border-gray-200 font-mono text-xs text-purple-700 whitespace-no-wrap">.py-10</td>
+          <td class="p-2 border-t border-gray-200 font-mono text-xs text-blue-700 whitespace-pre">padding-top: 2.5rem;
+padding-bottom: 2.5rem;</td>
+        </tr>
+                <tr>
+          <td class="p-2 border-t border-gray-200 font-mono text-xs text-purple-700 whitespace-no-wrap">.py-12</td>
+          <td class="p-2 border-t border-gray-200 font-mono text-xs text-blue-700 whitespace-pre">padding-top: 3rem;
+padding-bottom: 3rem;</td>
+        </tr>
+                <tr>
+          <td class="p-2 border-t border-gray-200 font-mono text-xs text-purple-700 whitespace-no-wrap">.py-16</td>
+          <td class="p-2 border-t border-gray-200 font-mono text-xs text-blue-700 whitespace-pre">padding-top: 4rem;
+padding-bottom: 4rem;</td>
+        </tr>
+                <tr>
+          <td class="p-2 border-t border-gray-200 font-mono text-xs text-purple-700 whitespace-no-wrap">.py-20</td>
+          <td class="p-2 border-t border-gray-200 font-mono text-xs text-blue-700 whitespace-pre">padding-top: 5rem;
+padding-bottom: 5rem;</td>
+        </tr>
+                <tr>
+          <td class="p-2 border-t border-gray-200 font-mono text-xs text-purple-700 whitespace-no-wrap">.py-24</td>
+          <td class="p-2 border-t border-gray-200 font-mono text-xs text-blue-700 whitespace-pre">padding-top: 6rem;
+padding-bottom: 6rem;</td>
+        </tr>
+                <tr>
+          <td class="p-2 border-t border-gray-200 font-mono text-xs text-purple-700 whitespace-no-wrap">.py-32</td>
+          <td class="p-2 border-t border-gray-200 font-mono text-xs text-blue-700 whitespace-pre">padding-top: 8rem;
+padding-bottom: 8rem;</td>
+        </tr>
+                <tr>
+          <td class="p-2 border-t border-gray-200 font-mono text-xs text-purple-700 whitespace-no-wrap">.py-40</td>
+          <td class="p-2 border-t border-gray-200 font-mono text-xs text-blue-700 whitespace-pre">padding-top: 10rem;
+padding-bottom: 10rem;</td>
+        </tr>
+                <tr>
+          <td class="p-2 border-t border-gray-200 font-mono text-xs text-purple-700 whitespace-no-wrap">.py-48</td>
+          <td class="p-2 border-t border-gray-200 font-mono text-xs text-blue-700 whitespace-pre">padding-top: 12rem;
+padding-bottom: 12rem;</td>
+        </tr>
+                <tr>
+          <td class="p-2 border-t border-gray-200 font-mono text-xs text-purple-700 whitespace-no-wrap">.py-56</td>
+          <td class="p-2 border-t border-gray-200 font-mono text-xs text-blue-700 whitespace-pre">padding-top: 14rem;
+padding-bottom: 14rem;</td>
+        </tr>
+                <tr>
+          <td class="p-2 border-t border-gray-200 font-mono text-xs text-purple-700 whitespace-no-wrap">.py-64</td>
+          <td class="p-2 border-t border-gray-200 font-mono text-xs text-blue-700 whitespace-pre">padding-top: 16rem;
+padding-bottom: 16rem;</td>
+        </tr>
+                <tr>
+          <td class="p-2 border-t border-gray-200 font-mono text-xs text-purple-700 whitespace-no-wrap">.py-px</td>
+          <td class="p-2 border-t border-gray-200 font-mono text-xs text-blue-700 whitespace-pre">padding-top: 1px;
+padding-bottom: 1px;</td>
+        </tr>
+                <tr>
+          <td class="p-2 border-t border-gray-200 font-mono text-xs text-purple-700 whitespace-no-wrap">.px-0</td>
+          <td class="p-2 border-t border-gray-200 font-mono text-xs text-blue-700 whitespace-pre">padding-right: 0;
+padding-left: 0;</td>
+        </tr>
+                <tr>
+          <td class="p-2 border-t border-gray-200 font-mono text-xs text-purple-700 whitespace-no-wrap">.px-1</td>
+          <td class="p-2 border-t border-gray-200 font-mono text-xs text-blue-700 whitespace-pre">padding-right: 0.25rem;
+padding-left: 0.25rem;</td>
+        </tr>
+                <tr>
+          <td class="p-2 border-t border-gray-200 font-mono text-xs text-purple-700 whitespace-no-wrap">.px-2</td>
+          <td class="p-2 border-t border-gray-200 font-mono text-xs text-blue-700 whitespace-pre">padding-right: 0.5rem;
+padding-left: 0.5rem;</td>
+        </tr>
+                <tr>
+          <td class="p-2 border-t border-gray-200 font-mono text-xs text-purple-700 whitespace-no-wrap">.px-3</td>
+          <td class="p-2 border-t border-gray-200 font-mono text-xs text-blue-700 whitespace-pre">padding-right: 0.75rem;
+padding-left: 0.75rem;</td>
+        </tr>
+                <tr>
+          <td class="p-2 border-t border-gray-200 font-mono text-xs text-purple-700 whitespace-no-wrap">.px-4</td>
+          <td class="p-2 border-t border-gray-200 font-mono text-xs text-blue-700 whitespace-pre">padding-right: 1rem;
+padding-left: 1rem;</td>
+        </tr>
+                <tr>
+          <td class="p-2 border-t border-gray-200 font-mono text-xs text-purple-700 whitespace-no-wrap">.px-5</td>
+          <td class="p-2 border-t border-gray-200 font-mono text-xs text-blue-700 whitespace-pre">padding-right: 1.25rem;
+padding-left: 1.25rem;</td>
+        </tr>
+                <tr>
+          <td class="p-2 border-t border-gray-200 font-mono text-xs text-purple-700 whitespace-no-wrap">.px-6</td>
+          <td class="p-2 border-t border-gray-200 font-mono text-xs text-blue-700 whitespace-pre">padding-right: 1.5rem;
+padding-left: 1.5rem;</td>
+        </tr>
+                <tr>
+          <td class="p-2 border-t border-gray-200 font-mono text-xs text-purple-700 whitespace-no-wrap">.px-8</td>
+          <td class="p-2 border-t border-gray-200 font-mono text-xs text-blue-700 whitespace-pre">padding-right: 2rem;
+padding-left: 2rem;</td>
+        </tr>
+                <tr>
+          <td class="p-2 border-t border-gray-200 font-mono text-xs text-purple-700 whitespace-no-wrap">.px-10</td>
+          <td class="p-2 border-t border-gray-200 font-mono text-xs text-blue-700 whitespace-pre">padding-right: 2.5rem;
+padding-left: 2.5rem;</td>
+        </tr>
+                <tr>
+          <td class="p-2 border-t border-gray-200 font-mono text-xs text-purple-700 whitespace-no-wrap">.px-12</td>
+          <td class="p-2 border-t border-gray-200 font-mono text-xs text-blue-700 whitespace-pre">padding-right: 3rem;
+padding-left: 3rem;</td>
+        </tr>
+                <tr>
+          <td class="p-2 border-t border-gray-200 font-mono text-xs text-purple-700 whitespace-no-wrap">.px-16</td>
+          <td class="p-2 border-t border-gray-200 font-mono text-xs text-blue-700 whitespace-pre">padding-right: 4rem;
+padding-left: 4rem;</td>
+        </tr>
+                <tr>
+          <td class="p-2 border-t border-gray-200 font-mono text-xs text-purple-700 whitespace-no-wrap">.px-20</td>
+          <td class="p-2 border-t border-gray-200 font-mono text-xs text-blue-700 whitespace-pre">padding-right: 5rem;
+padding-left: 5rem;</td>
+        </tr>
+                <tr>
+          <td class="p-2 border-t border-gray-200 font-mono text-xs text-purple-700 whitespace-no-wrap">.px-24</td>
+          <td class="p-2 border-t border-gray-200 font-mono text-xs text-blue-700 whitespace-pre">padding-right: 6rem;
+padding-left: 6rem;</td>
+        </tr>
+                <tr>
+          <td class="p-2 border-t border-gray-200 font-mono text-xs text-purple-700 whitespace-no-wrap">.px-32</td>
+          <td class="p-2 border-t border-gray-200 font-mono text-xs text-blue-700 whitespace-pre">padding-right: 8rem;
+padding-left: 8rem;</td>
+        </tr>
+                <tr>
+          <td class="p-2 border-t border-gray-200 font-mono text-xs text-purple-700 whitespace-no-wrap">.px-40</td>
+          <td class="p-2 border-t border-gray-200 font-mono text-xs text-blue-700 whitespace-pre">padding-right: 10rem;
+padding-left: 10rem;</td>
+        </tr>
+                <tr>
+          <td class="p-2 border-t border-gray-200 font-mono text-xs text-purple-700 whitespace-no-wrap">.px-48</td>
+          <td class="p-2 border-t border-gray-200 font-mono text-xs text-blue-700 whitespace-pre">padding-right: 12rem;
+padding-left: 12rem;</td>
+        </tr>
+                <tr>
+          <td class="p-2 border-t border-gray-200 font-mono text-xs text-purple-700 whitespace-no-wrap">.px-56</td>
+          <td class="p-2 border-t border-gray-200 font-mono text-xs text-blue-700 whitespace-pre">padding-right: 14rem;
+padding-left: 14rem;</td>
+        </tr>
+                <tr>
+          <td class="p-2 border-t border-gray-200 font-mono text-xs text-purple-700 whitespace-no-wrap">.px-64</td>
+          <td class="p-2 border-t border-gray-200 font-mono text-xs text-blue-700 whitespace-pre">padding-right: 16rem;
+padding-left: 16rem;</td>
+        </tr>
+                <tr>
+          <td class="p-2 border-t border-gray-200 font-mono text-xs text-purple-700 whitespace-no-wrap">.px-px</td>
+          <td class="p-2 border-t border-gray-200 font-mono text-xs text-blue-700 whitespace-pre">padding-right: 1px;
+padding-left: 1px;</td>
+        </tr>
+                <tr>
+          <td class="p-2 border-t border-gray-200 font-mono text-xs text-purple-700 whitespace-no-wrap">.pt-0</td>
+          <td class="p-2 border-t border-gray-200 font-mono text-xs text-blue-700 whitespace-pre">padding-top: 0;</td>
+        </tr>
+                <tr>
+          <td class="p-2 border-t border-gray-200 font-mono text-xs text-purple-700 whitespace-no-wrap">.pt-1</td>
+          <td class="p-2 border-t border-gray-200 font-mono text-xs text-blue-700 whitespace-pre">padding-top: 0.25rem;</td>
+        </tr>
+                <tr>
+          <td class="p-2 border-t border-gray-200 font-mono text-xs text-purple-700 whitespace-no-wrap">.pt-2</td>
+          <td class="p-2 border-t border-gray-200 font-mono text-xs text-blue-700 whitespace-pre">padding-top: 0.5rem;</td>
+        </tr>
+                <tr>
+          <td class="p-2 border-t border-gray-200 font-mono text-xs text-purple-700 whitespace-no-wrap">.pt-3</td>
+          <td class="p-2 border-t border-gray-200 font-mono text-xs text-blue-700 whitespace-pre">padding-top: 0.75rem;</td>
+        </tr>
+                <tr>
+          <td class="p-2 border-t border-gray-200 font-mono text-xs text-purple-700 whitespace-no-wrap">.pt-4</td>
+          <td class="p-2 border-t border-gray-200 font-mono text-xs text-blue-700 whitespace-pre">padding-top: 1rem;</td>
+        </tr>
+                <tr>
+          <td class="p-2 border-t border-gray-200 font-mono text-xs text-purple-700 whitespace-no-wrap">.pt-5</td>
+          <td class="p-2 border-t border-gray-200 font-mono text-xs text-blue-700 whitespace-pre">padding-top: 1.25rem;</td>
+        </tr>
+                <tr>
+          <td class="p-2 border-t border-gray-200 font-mono text-xs text-purple-700 whitespace-no-wrap">.pt-6</td>
+          <td class="p-2 border-t border-gray-200 font-mono text-xs text-blue-700 whitespace-pre">padding-top: 1.5rem;</td>
+        </tr>
+                <tr>
+          <td class="p-2 border-t border-gray-200 font-mono text-xs text-purple-700 whitespace-no-wrap">.pt-8</td>
+          <td class="p-2 border-t border-gray-200 font-mono text-xs text-blue-700 whitespace-pre">padding-top: 2rem;</td>
+        </tr>
+                <tr>
+          <td class="p-2 border-t border-gray-200 font-mono text-xs text-purple-700 whitespace-no-wrap">.pt-10</td>
+          <td class="p-2 border-t border-gray-200 font-mono text-xs text-blue-700 whitespace-pre">padding-top: 2.5rem;</td>
+        </tr>
+                <tr>
+          <td class="p-2 border-t border-gray-200 font-mono text-xs text-purple-700 whitespace-no-wrap">.pt-12</td>
+          <td class="p-2 border-t border-gray-200 font-mono text-xs text-blue-700 whitespace-pre">padding-top: 3rem;</td>
+        </tr>
+                <tr>
+          <td class="p-2 border-t border-gray-200 font-mono text-xs text-purple-700 whitespace-no-wrap">.pt-16</td>
+          <td class="p-2 border-t border-gray-200 font-mono text-xs text-blue-700 whitespace-pre">padding-top: 4rem;</td>
+        </tr>
+                <tr>
+          <td class="p-2 border-t border-gray-200 font-mono text-xs text-purple-700 whitespace-no-wrap">.pt-20</td>
+          <td class="p-2 border-t border-gray-200 font-mono text-xs text-blue-700 whitespace-pre">padding-top: 5rem;</td>
+        </tr>
+                <tr>
+          <td class="p-2 border-t border-gray-200 font-mono text-xs text-purple-700 whitespace-no-wrap">.pt-24</td>
+          <td class="p-2 border-t border-gray-200 font-mono text-xs text-blue-700 whitespace-pre">padding-top: 6rem;</td>
+        </tr>
+                <tr>
+          <td class="p-2 border-t border-gray-200 font-mono text-xs text-purple-700 whitespace-no-wrap">.pt-32</td>
+          <td class="p-2 border-t border-gray-200 font-mono text-xs text-blue-700 whitespace-pre">padding-top: 8rem;</td>
+        </tr>
+                <tr>
+          <td class="p-2 border-t border-gray-200 font-mono text-xs text-purple-700 whitespace-no-wrap">.pt-40</td>
+          <td class="p-2 border-t border-gray-200 font-mono text-xs text-blue-700 whitespace-pre">padding-top: 10rem;</td>
+        </tr>
+                <tr>
+          <td class="p-2 border-t border-gray-200 font-mono text-xs text-purple-700 whitespace-no-wrap">.pt-48</td>
+          <td class="p-2 border-t border-gray-200 font-mono text-xs text-blue-700 whitespace-pre">padding-top: 12rem;</td>
+        </tr>
+                <tr>
+          <td class="p-2 border-t border-gray-200 font-mono text-xs text-purple-700 whitespace-no-wrap">.pt-56</td>
+          <td class="p-2 border-t border-gray-200 font-mono text-xs text-blue-700 whitespace-pre">padding-top: 14rem;</td>
+        </tr>
+                <tr>
+          <td class="p-2 border-t border-gray-200 font-mono text-xs text-purple-700 whitespace-no-wrap">.pt-64</td>
+          <td class="p-2 border-t border-gray-200 font-mono text-xs text-blue-700 whitespace-pre">padding-top: 16rem;</td>
+        </tr>
+                <tr>
+          <td class="p-2 border-t border-gray-200 font-mono text-xs text-purple-700 whitespace-no-wrap">.pt-px</td>
+          <td class="p-2 border-t border-gray-200 font-mono text-xs text-blue-700 whitespace-pre">padding-top: 1px;</td>
+        </tr>
+                <tr>
+          <td class="p-2 border-t border-gray-200 font-mono text-xs text-purple-700 whitespace-no-wrap">.pr-0</td>
+          <td class="p-2 border-t border-gray-200 font-mono text-xs text-blue-700 whitespace-pre">padding-right: 0;</td>
+        </tr>
+                <tr>
+          <td class="p-2 border-t border-gray-200 font-mono text-xs text-purple-700 whitespace-no-wrap">.pr-1</td>
+          <td class="p-2 border-t border-gray-200 font-mono text-xs text-blue-700 whitespace-pre">padding-right: 0.25rem;</td>
+        </tr>
+                <tr>
+          <td class="p-2 border-t border-gray-200 font-mono text-xs text-purple-700 whitespace-no-wrap">.pr-2</td>
+          <td class="p-2 border-t border-gray-200 font-mono text-xs text-blue-700 whitespace-pre">padding-right: 0.5rem;</td>
+        </tr>
+                <tr>
+          <td class="p-2 border-t border-gray-200 font-mono text-xs text-purple-700 whitespace-no-wrap">.pr-3</td>
+          <td class="p-2 border-t border-gray-200 font-mono text-xs text-blue-700 whitespace-pre">padding-right: 0.75rem;</td>
+        </tr>
+                <tr>
+          <td class="p-2 border-t border-gray-200 font-mono text-xs text-purple-700 whitespace-no-wrap">.pr-4</td>
+          <td class="p-2 border-t border-gray-200 font-mono text-xs text-blue-700 whitespace-pre">padding-right: 1rem;</td>
+        </tr>
+                <tr>
+          <td class="p-2 border-t border-gray-200 font-mono text-xs text-purple-700 whitespace-no-wrap">.pr-5</td>
+          <td class="p-2 border-t border-gray-200 font-mono text-xs text-blue-700 whitespace-pre">padding-right: 1.25rem;</td>
+        </tr>
+                <tr>
+          <td class="p-2 border-t border-gray-200 font-mono text-xs text-purple-700 whitespace-no-wrap">.pr-6</td>
+          <td class="p-2 border-t border-gray-200 font-mono text-xs text-blue-700 whitespace-pre">padding-right: 1.5rem;</td>
+        </tr>
+                <tr>
+          <td class="p-2 border-t border-gray-200 font-mono text-xs text-purple-700 whitespace-no-wrap">.pr-8</td>
+          <td class="p-2 border-t border-gray-200 font-mono text-xs text-blue-700 whitespace-pre">padding-right: 2rem;</td>
+        </tr>
+                <tr>
+          <td class="p-2 border-t border-gray-200 font-mono text-xs text-purple-700 whitespace-no-wrap">.pr-10</td>
+          <td class="p-2 border-t border-gray-200 font-mono text-xs text-blue-700 whitespace-pre">padding-right: 2.5rem;</td>
+        </tr>
+                <tr>
+          <td class="p-2 border-t border-gray-200 font-mono text-xs text-purple-700 whitespace-no-wrap">.pr-12</td>
+          <td class="p-2 border-t border-gray-200 font-mono text-xs text-blue-700 whitespace-pre">padding-right: 3rem;</td>
+        </tr>
+                <tr>
+          <td class="p-2 border-t border-gray-200 font-mono text-xs text-purple-700 whitespace-no-wrap">.pr-16</td>
+          <td class="p-2 border-t border-gray-200 font-mono text-xs text-blue-700 whitespace-pre">padding-right: 4rem;</td>
+        </tr>
+                <tr>
+          <td class="p-2 border-t border-gray-200 font-mono text-xs text-purple-700 whitespace-no-wrap">.pr-20</td>
+          <td class="p-2 border-t border-gray-200 font-mono text-xs text-blue-700 whitespace-pre">padding-right: 5rem;</td>
+        </tr>
+                <tr>
+          <td class="p-2 border-t border-gray-200 font-mono text-xs text-purple-700 whitespace-no-wrap">.pr-24</td>
+          <td class="p-2 border-t border-gray-200 font-mono text-xs text-blue-700 whitespace-pre">padding-right: 6rem;</td>
+        </tr>
+                <tr>
+          <td class="p-2 border-t border-gray-200 font-mono text-xs text-purple-700 whitespace-no-wrap">.pr-32</td>
+          <td class="p-2 border-t border-gray-200 font-mono text-xs text-blue-700 whitespace-pre">padding-right: 8rem;</td>
+        </tr>
+                <tr>
+          <td class="p-2 border-t border-gray-200 font-mono text-xs text-purple-700 whitespace-no-wrap">.pr-40</td>
+          <td class="p-2 border-t border-gray-200 font-mono text-xs text-blue-700 whitespace-pre">padding-right: 10rem;</td>
+        </tr>
+                <tr>
+          <td class="p-2 border-t border-gray-200 font-mono text-xs text-purple-700 whitespace-no-wrap">.pr-48</td>
+          <td class="p-2 border-t border-gray-200 font-mono text-xs text-blue-700 whitespace-pre">padding-right: 12rem;</td>
+        </tr>
+                <tr>
+          <td class="p-2 border-t border-gray-200 font-mono text-xs text-purple-700 whitespace-no-wrap">.pr-56</td>
+          <td class="p-2 border-t border-gray-200 font-mono text-xs text-blue-700 whitespace-pre">padding-right: 14rem;</td>
+        </tr>
+                <tr>
+          <td class="p-2 border-t border-gray-200 font-mono text-xs text-purple-700 whitespace-no-wrap">.pr-64</td>
+          <td class="p-2 border-t border-gray-200 font-mono text-xs text-blue-700 whitespace-pre">padding-right: 16rem;</td>
+        </tr>
+                <tr>
+          <td class="p-2 border-t border-gray-200 font-mono text-xs text-purple-700 whitespace-no-wrap">.pr-px</td>
+          <td class="p-2 border-t border-gray-200 font-mono text-xs text-blue-700 whitespace-pre">padding-right: 1px;</td>
+        </tr>
+                <tr>
+          <td class="p-2 border-t border-gray-200 font-mono text-xs text-purple-700 whitespace-no-wrap">.pb-0</td>
+          <td class="p-2 border-t border-gray-200 font-mono text-xs text-blue-700 whitespace-pre">padding-bottom: 0;</td>
+        </tr>
+                <tr>
+          <td class="p-2 border-t border-gray-200 font-mono text-xs text-purple-700 whitespace-no-wrap">.pb-1</td>
+          <td class="p-2 border-t border-gray-200 font-mono text-xs text-blue-700 whitespace-pre">padding-bottom: 0.25rem;</td>
+        </tr>
+                <tr>
+          <td class="p-2 border-t border-gray-200 font-mono text-xs text-purple-700 whitespace-no-wrap">.pb-2</td>
+          <td class="p-2 border-t border-gray-200 font-mono text-xs text-blue-700 whitespace-pre">padding-bottom: 0.5rem;</td>
+        </tr>
+                <tr>
+          <td class="p-2 border-t border-gray-200 font-mono text-xs text-purple-700 whitespace-no-wrap">.pb-3</td>
+          <td class="p-2 border-t border-gray-200 font-mono text-xs text-blue-700 whitespace-pre">padding-bottom: 0.75rem;</td>
+        </tr>
+                <tr>
+          <td class="p-2 border-t border-gray-200 font-mono text-xs text-purple-700 whitespace-no-wrap">.pb-4</td>
+          <td class="p-2 border-t border-gray-200 font-mono text-xs text-blue-700 whitespace-pre">padding-bottom: 1rem;</td>
+        </tr>
+                <tr>
+          <td class="p-2 border-t border-gray-200 font-mono text-xs text-purple-700 whitespace-no-wrap">.pb-5</td>
+          <td class="p-2 border-t border-gray-200 font-mono text-xs text-blue-700 whitespace-pre">padding-bottom: 1.25rem;</td>
+        </tr>
+                <tr>
+          <td class="p-2 border-t border-gray-200 font-mono text-xs text-purple-700 whitespace-no-wrap">.pb-6</td>
+          <td class="p-2 border-t border-gray-200 font-mono text-xs text-blue-700 whitespace-pre">padding-bottom: 1.5rem;</td>
+        </tr>
+                <tr>
+          <td class="p-2 border-t border-gray-200 font-mono text-xs text-purple-700 whitespace-no-wrap">.pb-8</td>
+          <td class="p-2 border-t border-gray-200 font-mono text-xs text-blue-700 whitespace-pre">padding-bottom: 2rem;</td>
+        </tr>
+                <tr>
+          <td class="p-2 border-t border-gray-200 font-mono text-xs text-purple-700 whitespace-no-wrap">.pb-10</td>
+          <td class="p-2 border-t border-gray-200 font-mono text-xs text-blue-700 whitespace-pre">padding-bottom: 2.5rem;</td>
+        </tr>
+                <tr>
+          <td class="p-2 border-t border-gray-200 font-mono text-xs text-purple-700 whitespace-no-wrap">.pb-12</td>
+          <td class="p-2 border-t border-gray-200 font-mono text-xs text-blue-700 whitespace-pre">padding-bottom: 3rem;</td>
+        </tr>
+                <tr>
+          <td class="p-2 border-t border-gray-200 font-mono text-xs text-purple-700 whitespace-no-wrap">.pb-16</td>
+          <td class="p-2 border-t border-gray-200 font-mono text-xs text-blue-700 whitespace-pre">padding-bottom: 4rem;</td>
+        </tr>
+                <tr>
+          <td class="p-2 border-t border-gray-200 font-mono text-xs text-purple-700 whitespace-no-wrap">.pb-20</td>
+          <td class="p-2 border-t border-gray-200 font-mono text-xs text-blue-700 whitespace-pre">padding-bottom: 5rem;</td>
+        </tr>
+                <tr>
+          <td class="p-2 border-t border-gray-200 font-mono text-xs text-purple-700 whitespace-no-wrap">.pb-24</td>
+          <td class="p-2 border-t border-gray-200 font-mono text-xs text-blue-700 whitespace-pre">padding-bottom: 6rem;</td>
+        </tr>
+                <tr>
+          <td class="p-2 border-t border-gray-200 font-mono text-xs text-purple-700 whitespace-no-wrap">.pb-32</td>
+          <td class="p-2 border-t border-gray-200 font-mono text-xs text-blue-700 whitespace-pre">padding-bottom: 8rem;</td>
+        </tr>
+                <tr>
+          <td class="p-2 border-t border-gray-200 font-mono text-xs text-purple-700 whitespace-no-wrap">.pb-40</td>
+          <td class="p-2 border-t border-gray-200 font-mono text-xs text-blue-700 whitespace-pre">padding-bottom: 10rem;</td>
+        </tr>
+                <tr>
+          <td class="p-2 border-t border-gray-200 font-mono text-xs text-purple-700 whitespace-no-wrap">.pb-48</td>
+          <td class="p-2 border-t border-gray-200 font-mono text-xs text-blue-700 whitespace-pre">padding-bottom: 12rem;</td>
+        </tr>
+                <tr>
+          <td class="p-2 border-t border-gray-200 font-mono text-xs text-purple-700 whitespace-no-wrap">.pb-56</td>
+          <td class="p-2 border-t border-gray-200 font-mono text-xs text-blue-700 whitespace-pre">padding-bottom: 14rem;</td>
+        </tr>
+                <tr>
+          <td class="p-2 border-t border-gray-200 font-mono text-xs text-purple-700 whitespace-no-wrap">.pb-64</td>
+          <td class="p-2 border-t border-gray-200 font-mono text-xs text-blue-700 whitespace-pre">padding-bottom: 16rem;</td>
+        </tr>
+                <tr>
+          <td class="p-2 border-t border-gray-200 font-mono text-xs text-purple-700 whitespace-no-wrap">.pb-px</td>
+          <td class="p-2 border-t border-gray-200 font-mono text-xs text-blue-700 whitespace-pre">padding-bottom: 1px;</td>
+        </tr>
+                <tr>
+          <td class="p-2 border-t border-gray-200 font-mono text-xs text-purple-700 whitespace-no-wrap">.pl-0</td>
+          <td class="p-2 border-t border-gray-200 font-mono text-xs text-blue-700 whitespace-pre">padding-left: 0;</td>
+        </tr>
+                <tr>
+          <td class="p-2 border-t border-gray-200 font-mono text-xs text-purple-700 whitespace-no-wrap">.pl-1</td>
+          <td class="p-2 border-t border-gray-200 font-mono text-xs text-blue-700 whitespace-pre">padding-left: 0.25rem;</td>
+        </tr>
+                <tr>
+          <td class="p-2 border-t border-gray-200 font-mono text-xs text-purple-700 whitespace-no-wrap">.pl-2</td>
+          <td class="p-2 border-t border-gray-200 font-mono text-xs text-blue-700 whitespace-pre">padding-left: 0.5rem;</td>
+        </tr>
+                <tr>
+          <td class="p-2 border-t border-gray-200 font-mono text-xs text-purple-700 whitespace-no-wrap">.pl-3</td>
+          <td class="p-2 border-t border-gray-200 font-mono text-xs text-blue-700 whitespace-pre">padding-left: 0.75rem;</td>
+        </tr>
+                <tr>
+          <td class="p-2 border-t border-gray-200 font-mono text-xs text-purple-700 whitespace-no-wrap">.pl-4</td>
+          <td class="p-2 border-t border-gray-200 font-mono text-xs text-blue-700 whitespace-pre">padding-left: 1rem;</td>
+        </tr>
+                <tr>
+          <td class="p-2 border-t border-gray-200 font-mono text-xs text-purple-700 whitespace-no-wrap">.pl-5</td>
+          <td class="p-2 border-t border-gray-200 font-mono text-xs text-blue-700 whitespace-pre">padding-left: 1.25rem;</td>
+        </tr>
+                <tr>
+          <td class="p-2 border-t border-gray-200 font-mono text-xs text-purple-700 whitespace-no-wrap">.pl-6</td>
+          <td class="p-2 border-t border-gray-200 font-mono text-xs text-blue-700 whitespace-pre">padding-left: 1.5rem;</td>
+        </tr>
+                <tr>
+          <td class="p-2 border-t border-gray-200 font-mono text-xs text-purple-700 whitespace-no-wrap">.pl-8</td>
+          <td class="p-2 border-t border-gray-200 font-mono text-xs text-blue-700 whitespace-pre">padding-left: 2rem;</td>
+        </tr>
+                <tr>
+          <td class="p-2 border-t border-gray-200 font-mono text-xs text-purple-700 whitespace-no-wrap">.pl-10</td>
+          <td class="p-2 border-t border-gray-200 font-mono text-xs text-blue-700 whitespace-pre">padding-left: 2.5rem;</td>
+        </tr>
+                <tr>
+          <td class="p-2 border-t border-gray-200 font-mono text-xs text-purple-700 whitespace-no-wrap">.pl-12</td>
+          <td class="p-2 border-t border-gray-200 font-mono text-xs text-blue-700 whitespace-pre">padding-left: 3rem;</td>
+        </tr>
+                <tr>
+          <td class="p-2 border-t border-gray-200 font-mono text-xs text-purple-700 whitespace-no-wrap">.pl-16</td>
+          <td class="p-2 border-t border-gray-200 font-mono text-xs text-blue-700 whitespace-pre">padding-left: 4rem;</td>
+        </tr>
+                <tr>
+          <td class="p-2 border-t border-gray-200 font-mono text-xs text-purple-700 whitespace-no-wrap">.pl-20</td>
+          <td class="p-2 border-t border-gray-200 font-mono text-xs text-blue-700 whitespace-pre">padding-left: 5rem;</td>
+        </tr>
+                <tr>
+          <td class="p-2 border-t border-gray-200 font-mono text-xs text-purple-700 whitespace-no-wrap">.pl-24</td>
+          <td class="p-2 border-t border-gray-200 font-mono text-xs text-blue-700 whitespace-pre">padding-left: 6rem;</td>
+        </tr>
+                <tr>
+          <td class="p-2 border-t border-gray-200 font-mono text-xs text-purple-700 whitespace-no-wrap">.pl-32</td>
+          <td class="p-2 border-t border-gray-200 font-mono text-xs text-blue-700 whitespace-pre">padding-left: 8rem;</td>
+        </tr>
+                <tr>
+          <td class="p-2 border-t border-gray-200 font-mono text-xs text-purple-700 whitespace-no-wrap">.pl-40</td>
+          <td class="p-2 border-t border-gray-200 font-mono text-xs text-blue-700 whitespace-pre">padding-left: 10rem;</td>
+        </tr>
+                <tr>
+          <td class="p-2 border-t border-gray-200 font-mono text-xs text-purple-700 whitespace-no-wrap">.pl-48</td>
+          <td class="p-2 border-t border-gray-200 font-mono text-xs text-blue-700 whitespace-pre">padding-left: 12rem;</td>
+        </tr>
+                <tr>
+          <td class="p-2 border-t border-gray-200 font-mono text-xs text-purple-700 whitespace-no-wrap">.pl-56</td>
+          <td class="p-2 border-t border-gray-200 font-mono text-xs text-blue-700 whitespace-pre">padding-left: 14rem;</td>
+        </tr>
+                <tr>
+          <td class="p-2 border-t border-gray-200 font-mono text-xs text-purple-700 whitespace-no-wrap">.pl-64</td>
+          <td class="p-2 border-t border-gray-200 font-mono text-xs text-blue-700 whitespace-pre">padding-left: 16rem;</td>
+        </tr>
+                <tr>
+          <td class="p-2 border-t border-gray-200 font-mono text-xs text-purple-700 whitespace-no-wrap">.pl-px</td>
+          <td class="p-2 border-t border-gray-200 font-mono text-xs text-blue-700 whitespace-pre">padding-left: 1px;</td>
+        </tr>
+              </tbody>
+    </table>
+  </div>
+</div>
+<h2><a id="add-padding-to-a-single-side" name="//apple_ref/cpp/Section/Add%20padding%20to%20a%20single%20side" class="dashAnchor"></a>Add padding to a single side</h2>
+<p>Control the padding on one side of an element using the <code>p{t|r|b|l}-{size}</code> utilities.</p>
+<p>For example, <code>pt-6</code> would add <code>1.5rem</code> of padding to the top of an element, <code>pr-4</code> would add <code>1rem</code> of padding to the right of an element, <code>pb-8</code> would add <code>2rem</code> of padding to the bottom of an element, and <code>pl-2</code> would add <code>0.5rem</code> of padding to the left of an element.</p>
+<div class="relative overflow-hidden mb-8">
+  <div v-pre class="bg-white rounded-t-lg overflow-hidden border-t border-l border-r border-gray-400 p-4 " style="">
+    <div class="flex justify-around items-start">
+  <div>
+    <p class="text-center text-sm text-gray-600 mb-1">pt-8</p>
+    <div class="flex pt-8 bg-gray-400">
+      <span class="bg-yellow-200">Target</span>
+    </div>
+  </div>
+  <div>
+    <p class="text-center text-sm text-gray-600 mb-1">pr-8</p>
+    <div class="flex pr-8 bg-gray-400">
+      <span class="bg-yellow-200">Target</span>
+    </div>
+  </div>
+  <div>
+    <p class="text-center text-sm text-gray-600 mb-1">pb-8</p>
+    <div class="flex pb-8 bg-gray-400">
+      <span class="bg-yellow-200">Target</span>
+    </div>
+  </div>
+  <div>
+    <p class="text-center text-sm text-gray-600 mb-1">pl-8</p>
+    <div class="flex pl-8 bg-gray-400">
+      <span class="bg-yellow-200">Target</span>
+    </div>
+  </div>
+</div>
+  </div>
+  <div v-pre class="rounded-b-lg bg-gray-800">
+    <pre class="scrollbar-none m-0 p-0 language-html"><code class="inline-block p-4 scrolling-touch">&lt;div class="pt-8"&gt;&lt;span class="bg-yellow-200"&gt;Target&lt;/span&gt;&lt;/div&gt;
+&lt;div class="pr-8"&gt;&lt;span class="bg-yellow-200"&gt;Target&lt;/span&gt;&lt;/div&gt;
+&lt;div class="pb-8"&gt;&lt;span class="bg-yellow-200"&gt;Target&lt;/span&gt;&lt;/div&gt;
+&lt;div class="pl-8"&gt;&lt;span class="bg-yellow-200"&gt;Target&lt;/span&gt;&lt;/div&gt;</code></pre>
+  </div>
+</div>
+<h2><a id="add-horizontal-padding" name="//apple_ref/cpp/Section/Add%20horizontal%20padding" class="dashAnchor"></a>Add horizontal padding</h2>
+<p>Control the horizontal padding of an element using the <code>px-{size}</code> utilities.</p>
+<div class="relative overflow-hidden mb-8">
+  <div v-pre class="bg-white rounded-t-lg overflow-hidden border-t border-l border-r border-gray-400 p-4 " style="">
+    <div class="flex justify-around items-center">
+  <div>
+    <p class="text-center text-sm text-gray-600 mb-1">px-8</p>
+    <div class="flex px-8 bg-gray-400">
+      <span class="bg-yellow-200">Target</span>
+    </div>
+  </div>
+</div>
+  </div>
+  <div v-pre class="rounded-b-lg bg-gray-800">
+    <pre class="scrollbar-none m-0 p-0 language-html"><code class="inline-block p-4 scrolling-touch">&lt;div class="px-8"&gt;&lt;span class="bg-yellow-200"&gt;Target&lt;/span&gt;&lt;/div&gt;</code></pre>
+  </div>
+</div>
+<h2><a id="add-vertical-padding" name="//apple_ref/cpp/Section/Add%20vertical%20padding" class="dashAnchor"></a>Add vertical padding</h2>
+<p>Control the vertical padding of an element using the <code>py-{size}</code> utilities.</p>
+<div class="relative overflow-hidden mb-8">
+  <div v-pre class="bg-white rounded-t-lg overflow-hidden border-t border-l border-r border-gray-400 p-4 " style="">
+    <div class="flex justify-around items-center">
+  <div>
+    <p class="text-center text-sm text-gray-600 mb-1">py-8</p>
+    <div class="flex py-8 bg-gray-400">
+      <span class="bg-yellow-200">Target</span>
+    </div>
+  </div>
+</div>
+  </div>
+  <div v-pre class="rounded-b-lg bg-gray-800">
+    <pre class="scrollbar-none m-0 p-0 language-html"><code class="inline-block p-4 scrolling-touch">&lt;div class="py-8"&gt;&lt;span class="bg-yellow-200"&gt;Target&lt;/span&gt;&lt;/div&gt;</code></pre>
+  </div>
+</div>
+<h2><a id="add-padding-to-all-sides" name="//apple_ref/cpp/Section/Add%20padding%20to%20all%20sides" class="dashAnchor"></a>Add padding to all sides</h2>
+<p>Control the padding on all sides of an element using the <code>p-{size}</code> utilities.</p>
+<div class="relative overflow-hidden mb-8">
+  <div v-pre class="bg-white rounded-t-lg overflow-hidden border-t border-l border-r border-gray-400 p-4 " style="">
+    <div class="flex justify-around items-center">
+  <div>
+    <p class="text-center text-sm text-gray-600 mb-1">p-8</p>
+    <div class="flex p-8 bg-gray-400">
+      <span class="bg-yellow-200">Target</span>
+    </div>
+  </div>
+</div>
+  </div>
+  <div v-pre class="rounded-b-lg bg-gray-800">
+    <pre class="scrollbar-none m-0 p-0 language-html"><code class="inline-block p-4 scrolling-touch">&lt;div class="p-8"&gt;&lt;span class="bg-yellow-200"&gt;Target&lt;/span&gt;&lt;/div&gt;</code></pre>
+  </div>
+</div>
+<hr>
+<h2><a id="responsive" name="//apple_ref/cpp/Section/Responsive" class="dashAnchor"></a>Responsive</h2>
+<p>To control the padding of an element at a specific breakpoint, add a <code>{screen}:</code> prefix to any existing padding utility. For example, adding the class <code>md:py-8</code> to an element would apply the <code>py-8</code> utility at medium screen sizes and above.</p>
+<p>For more information about Tailwind's responsive design features, check out the <a href="../responsive-design/index.html">Responsive Design</a> documentation.</p>
+<div class="mt-8 v-cloak-hidden">
+  <responsive-code-sample code='&lt;div class="none:pt-8 sm:pr-6 md:pb-4 lg:pl-2 xl:p-0 ..."&gt;
+  &lt;span class="bg-yellow-200"&gt;Target&lt;/span&gt;
+&lt;/div&gt;' slot-class="text-center">
+    <div slot="none"><div class="inline-block bg-gray-400 pt-8">
+  <div class="bg-yellow-200">Target</div>
+</div></div>
+    <div slot="sm"><div class="inline-block bg-gray-400 pt-8 pr-6">
+  <div class="bg-yellow-200">Target</div>
+</div></div>
+    <div slot="md"><div class="inline-block bg-gray-400 pt-8 pr-6 pb-4">
+  <div class="bg-yellow-200">Target</div>
+</div></div>
+    <div slot="lg"><div class="inline-block bg-gray-400 pt-8 pr-8 pb-4 pl-2">
+  <div class="bg-yellow-200">Target</div>
+</div></div>
+    <div slot="xl"><div class="inline-block bg-gray-400 p-0">
+  <div class="bg-yellow-200">Target</div>
+</div></div>
+  </responsive-code-sample>
+</div>
+<hr>
+<h2><a id="customizing" name="//apple_ref/cpp/Section/Customizing" class="dashAnchor"></a>Customizing</h2>
+<h3><a id="padding-scale" name="//apple_ref/cpp/Section/Padding%20scale" class="dashAnchor"></a>Padding scale</h3>
+<p>By default Tailwind provides 19 fixed padding utilities for each side and axis.</p>
+<p>If you'd like to customize these values for padding, margin, width, and height all at once, use the <code>theme.spacing</code> section of your <code>tailwind.config.js</code> file.</p>
+<div class="rounded-lg mb-8 overflow-hidden">
+  <div class="bg-gray-800 p-4 font-mono text-sm overflow-x-scroll whitespace-no-wrap">
+    <div class="whitespace-pre text-gray-400">// tailwind.config.js</div>
+    <div class="whitespace-pre text-code-white">module.exports = {</div>
+    <div class="whitespace-pre text-code-white">  theme: {</div>
+<div class="whitespace-pre text-code-white">
+<span class="text-code-yellow">    spacing</span>: {</div>
+    <div>
+<div class="text-code-green">
+<span>+</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;sm: '8px',</div>
+<div class="text-code-green">
+<span>+</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;md: '16px',</div>
+<div class="text-code-green">
+<span>+</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;lg: '24px',</div>
+<div class="text-code-green">
+<span>+</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;xl: '48px',</div>
+</div>
+    <div class="whitespace-pre text-code-white">    }</div>
+<div class="whitespace-pre text-code-white">  }</div>
+    <div class="whitespace-pre text-code-white">}</div>
+  </div>
+</div>
+<p>To customize only the padding values, use the <code>theme.padding</code> section of your <code>tailwind.config.js</code> file.</p>
+<div class="rounded-lg mb-8 overflow-hidden">
+  <div class="bg-gray-800 p-4 font-mono text-sm overflow-x-scroll whitespace-no-wrap">
+    <div class="whitespace-pre text-gray-400">// tailwind.config.js</div>
+    <div class="whitespace-pre text-code-white">module.exports = {</div>
+    <div class="whitespace-pre text-code-white">  theme: {</div>
+<div class="whitespace-pre text-code-white">
+<span class="text-code-yellow">    padding</span>: {</div>
+    <div>
+<div class="text-code-green">
+<span>+</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;sm: '8px',</div>
+<div class="text-code-green">
+<span>+</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;md: '16px',</div>
+<div class="text-code-green">
+<span>+</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;lg: '24px',</div>
+<div class="text-code-green">
+<span>+</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;xl: '48px',</div>
+</div>
+    <div class="whitespace-pre text-code-white">    }</div>
+<div class="whitespace-pre text-code-white">  }</div>
+    <div class="whitespace-pre text-code-white">}</div>
+  </div>
+</div>
+<p>Learn more about customizing the default theme in the <a href="../theme/index.html#customizing-the-default-theme">theme customization documentation</a>.</p>
+<h3><a id="responsive-and-pseudo-class-variants" name="//apple_ref/cpp/Section/Responsive%20and%20pseudo-class%20variants" class="dashAnchor"></a>Responsive and pseudo-class variants</h3>
+<p>By default, only responsive variants are generated for padding utilities.</p>
+<p>You can control which variants are generated for the padding utilities by modifying the <code>padding</code> property in the <code>variants</code> section of your <code>tailwind.config.js</code> file.</p>
+<p>For example, this config will also generate hover and focus variants:</p>
+<div class="rounded-lg mb-8 overflow-hidden">
+  <div class="bg-gray-800 p-4 font-mono text-sm overflow-x-scroll whitespace-no-wrap">
+    <div class="whitespace-pre text-gray-400">// tailwind.config.js</div>
+    <div class="whitespace-pre text-code-white">module.exports = {</div>
+    <div class="whitespace-pre text-code-white">
+<span class="text-code-yellow">  variants</span>: {</div>
+    <div>
+<div class="text-gray-400">&nbsp;&nbsp;&nbsp;&nbsp;// ...</div>
+<div class="text-gray-500">
+<span>-</span>&nbsp;&nbsp;&nbsp;padding: ['responsive'],</div>
+<div class="text-code-green">
+<span>+</span>&nbsp;&nbsp;&nbsp;padding: ['responsive', 'hover', 'focus'],</div>
+</div>
+    <div class="whitespace-pre text-code-white">  }</div>
+    <div class="whitespace-pre text-code-white">}</div>
+  </div>
+</div>
+<h3><a id="disabling" name="//apple_ref/cpp/Section/Disabling" class="dashAnchor"></a>Disabling</h3>
+<p>If you don't plan to use the padding utilities in your project, you can disable them entirely by setting the <code>padding</code> property to <code>false</code> in the <code>corePlugins</code> section of your config file:</p>
+<div class="rounded-lg mb-8 overflow-hidden">
+  <div class="bg-gray-800 p-4 font-mono text-sm overflow-x-scroll whitespace-no-wrap">
+    <div class="whitespace-pre text-gray-400">// tailwind.config.js</div>
+    <div class="whitespace-pre text-code-white">module.exports = {</div>
+    <div class="whitespace-pre text-code-white">
+<span class="text-code-yellow">  corePlugins</span>: {</div>
+    <div>
+<div class="text-gray-400">&nbsp;&nbsp;&nbsp;&nbsp;// ...</div>
+<div class="text-code-green">
+<span>+</span>&nbsp;&nbsp;&nbsp;padding: false,</div>
+</div>
+    <div class="whitespace-pre text-code-white">  }</div>
+    <div class="whitespace-pre text-code-white">}</div>
+  </div>
+</div>              </div>
+
+              
+              
+              
+
+            </div>
+          </div>
+          
+
+
+        </div>
+        
+
+        <script src="../../assets/build/js/app.js%3Fid=67e749265d091bed73b6"></script>
+
+        <!-- Algolia DocSearch  -->
+        
+        
+      </div>
+      
+
+
+    </div>
+    
+
+  </div>
+</div>
+
+
+
+
+  <!-- Google Analytics  -->
+  
+  
+
+<script src="../../../code.jquery.com/jquery-3.4.1.min.js"></script>
+<script src="../../assets/build/js/nav.js%3Fid=b3eb7d558e0420f9b29c" defer></script>
+
+</body>
+</html>

@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html lang="en" class="bg-white antialiased">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <link rel="apple-touch-icon" sizes="180x180" href="../../apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="../../favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="../../favicon-16x16.png">
+  <link rel="manifest" href="../../manifest.json">
+  <link rel="mask-icon" href="../../safari-pinned-tab.svg" color="#00b4b6">
+  <title>Installation - Tailwind CSS</title>
+  <meta name="theme-color" content="#ffffff">
+  <meta name="twitter:card" content="summary">
+<meta name="twitter:site" content="@tailwindcss">
+<meta name="twitter:title" content="Installation - Tailwind CSS">
+<meta name="twitter:description" content="Quick start guide for installing and configuring Tailwind CSS.">
+<meta name="twitter:image" content="https://tailwindcss.com/img/tailwind-twitter-square.png">
+<meta name="twitter:creator" content="@tailwindcss">
+<meta property="og:url" content="https://tailwindcss.com/">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Installation - Tailwind CSS">
+<meta property="og:description" content="Quick start guide for installing and configuring Tailwind CSS.">
+<meta property="og:image" content="https://tailwindcss.com/img/twitter-large-card.png">
+  <link rel="stylesheet" href="../../../rsms.me/inter/inter.css">
+  <link rel="stylesheet" href="../../assets/build/css/main.css%3Fid=4a7cbbbeb4816c16d9a7.css">
+  
+  <script src="../../../cdn.jsdelivr.net/gh/alpinejs/alpine@v1.11.1/dist/alpine.js" defer></script>
+</head>
+<body data-sidebar-visible="true" class="text-gray-900 leading-normal pb-8">
+
+
+
+
+
+
+
+
+<div class="w-full mx-auto px-6">
+  <div class="lg:flex -mx-6">
+
+    
+    
+    
+
+    
+    <div id="content-wrapper" class="min-h-screen w-full">
+
+      
+      <div id="content">
+
+        
+        <div id="app" class="flex" v-cloak>
+
+          
+          <div class="w-full">
+            <div class="markdown mb-6 px-6 mx-auto">
+                              <a name="//apple_ref/cpp/Section/Top" class="dashAnchor"></a><h1 class="flex items-center">
+                  Installation
+                  <!-- <span class="ml-4 text-teal-600 font-semibold text-base">v1.3.0+</span> -->
+                                  </h1>
+              
+                              <div class="mt-0 mb-4 text-gray-600">
+                  Quick start guide for installing and configuring Tailwind CSS.
+                </div>
+                                          <hr class="my-8 border-b-2 border-gray-200">
+                          </div>
+            <div class="flex">
+              <div class="markdown px-6 w-full mx-auto">
+                <div class="heading mt-0">
+  <h2 class="flex markdown mt-0"><a id="1-install-tailwind-via-npm" name="//apple_ref/cpp/Section/1%20Install%20Tailwind%20via%20npm" class="dashAnchor"></a>
+    <span class="text-lg bg-gray-200 text-gray-700 h-6 w-6 rounded-full inline-flex justify-center items-center mt-px mr-3">1</span>
+    Install Tailwind via npm
+  </h2>
+</div>
+<p>For most projects (and to take advantage of Tailwind's customization features), you'll want to install Tailwind via npm.</p>
+<pre><code class="language-bash"># Using npm
+npm install tailwindcss
+
+# Using Yarn
+yarn add tailwindcss</code></pre>
+<div class="heading mt-0">
+  <h2 class="flex markdown"><a id="2-add-tailwind-to-your-css" name="//apple_ref/cpp/Section/2%20Add%20Tailwind%20to%20your%20CSS" class="dashAnchor"></a>
+    <span class="text-lg bg-gray-200 text-gray-700 h-6 w-6 rounded-full inline-flex justify-center items-center mt-px mr-3">2</span>
+    Add Tailwind to your CSS
+  </h2>
+</div>
+<p>Use the <code>@tailwind</code> directive to inject Tailwind's <code>base</code>, <code>components</code>, and <code>utilities</code> styles into your CSS:</p>
+<pre><code class="language-css">@tailwind base;
+
+@tailwind components;
+
+@tailwind utilities;</code></pre>
+<p>Tailwind will swap these directives out at build time with all of its generated CSS.</p>
+<p>If you're using <code>postcss-import</code> (or a tool that uses it under the hood, such as <a href="https://github.com/rails/webpacker">Webpacker</a> for Rails), use our imports instead of the <code>@tailwind</code> directive to avoid issues when importing any of your own additional files:</p>
+<pre><code class="language-css">@import "tailwindcss/base";
+
+@import "tailwindcss/components";
+
+@import "tailwindcss/utilities";</code></pre>
+<div class="heading mt-0">
+  <h2 class="flex markdown"><a id="3-create-your-tailwind-config-file-optional" name="//apple_ref/cpp/Section/3%20Create%20your%20Tailwind%20config%20file%20%28optional%29" class="dashAnchor"></a>
+    <span class="text-lg bg-gray-200 text-gray-700 h-6 w-6 rounded-full inline-flex justify-center items-center mt-px mr-3">3</span>
+    <span data-heading-text class="mt-0">Create your Tailwind config file <span class="text-gray-600">(optional)</span></span>
+  </h2>
+</div>
+<p>If you'd like to customize your Tailwind installation, you can generate a config file for your project using the Tailwind CLI utility included when you install the <code>tailwindcss</code> npm package:</p>
+<pre><code class="language-bash">npx tailwindcss init</code></pre>
+<p>This will create a minimal <code>tailwind.config.js</code> file at the root of your project:</p>
+<pre><code class="language-js">// tailwind.config.js
+module.exports = {
+  theme: {},
+  variants: {},
+  plugins: [],
+}</code></pre>
+<p>Learn more about configuring Tailwind in the <a href="../configuration/index.html">configuration documentation</a>.</p>
+<div class="heading mt-0">
+  <h2 class="flex markdown"><a id="4-process-your-css-with-tailwind" name="//apple_ref/cpp/Section/4%20Process%20your%20CSS%20with%20Tailwind" class="dashAnchor"></a>
+    <span class="text-lg bg-gray-200 text-gray-700 h-6 w-6 rounded-full inline-flex justify-center items-center mt-px mr-3">4</span>
+    Process your CSS with Tailwind
+  </h2>
+</div>
+<h3><a id="using-tailwind-with-postcss" name="//apple_ref/cpp/Section/Using%20Tailwind%20with%20PostCSS" class="dashAnchor"></a>Using Tailwind with PostCSS</h3>
+<p>For most projects, you'll want to add Tailwind as a PostCSS plugin in your build chain.</p>
+<p>Generally this means adding Tailwind as a plugin in your <code>postcss.config.js</code> file:</p>
+<pre><code class="language-js">module.exports = {
+  plugins: [
+    // ...
+    require('tailwindcss'),
+    require('autoprefixer'),
+    // ...
+  ]
+}</code></pre>
+<p>We've included more specific instructions for a few popular tools below, but for instructions on getting started with PostCSS in general, see the <a href="https://github.com/postcss/postcss#usage">PostCSS documentation</a>.</p>
+<h3><a id="using-tailwind-cli" name="//apple_ref/cpp/Section/Using%20Tailwind%20CLI" class="dashAnchor"></a>Using Tailwind CLI</h3>
+<p>For simple projects or just giving Tailwind a spin, you can use the Tailwind CLI tool to process your CSS:</p>
+<pre><code class="language-bash">npx tailwindcss build styles.css -o output.css</code></pre>
+<p>Use the <code>npx tailwindcss help build</code> command to learn more about the various CLI options.</p>
+<h3><a id="build-tool-examples" name="//apple_ref/cpp/Section/Build%20Tool%20Examples" class="dashAnchor"></a>Build Tool Examples</h3>
+<p>We've included some basic examples of setting up Tailwind with common build tools below, but also look at our <a href="https://github.com/tailwindcss/setup-examples/">setup-examples</a> repository for even more examples that you can even clone and play with locally.</p>
+<h4>Webpack</h4>
+<p>Add <code>tailwindcss</code> as a plugin in your  <code>postcss.config.js</code> file:</p>
+<pre><code class="language-js">module.exports = {
+  plugins: [
+    // ...
+    require('tailwindcss'),
+    require('autoprefixer'),
+    // ...
+  ]
+}</code></pre>
+<p>...or include it directly in your <a href="https://github.com/postcss/postcss-loader">postcss-loader</a> configuration in your <code>webpack.config.js</code> file:</p>
+<pre><code class="language-js">// webpack.config.js
+module.exports = {
+  // ...
+  module: {
+    rules: [
+      {
+        // ...
+        use: [
+          // ...
+          {
+            loader: 'postcss-loader',
+            options: {
+              ident: 'postcss',
+              plugins: [
+                require('tailwindcss'),
+                require('autoprefixer'),
+              ],
+            },
+          },
+        ],
+      }
+    ],
+  }
+}</code></pre>
+<h4>Gulp</h4>
+<p>Add <code>tailwindcss</code> to the list of plugins you pass to <a href="https://github.com/postcss/gulp-postcss">gulp-postcss</a>:</p>
+<pre><code class="language-js">gulp.task('css', function () {
+  const postcss = require('gulp-postcss')
+
+  return gulp.src('src/styles.css')
+    // ...
+    .pipe(postcss([
+      // ...
+      require('tailwindcss'),
+      require('autoprefixer'),
+      // ...
+    ]))
+    // ...
+    .pipe(gulp.dest('build/'))
+})</code></pre>
+<h4>Laravel Mix</h4>
+<p>If you're writing your project in plain CSS, use Mix's <code>postCss</code> method to process your CSS and include <code>tailwindcss</code> as a plugin:</p>
+<pre><code class="language-js">mix.postCss('resources/css/main.css', 'public/css', [
+  require('tailwindcss'),
+])</code></pre>
+<p>If you're using a preprocessor, use the <code>options</code> method to add <code>tailwindcss</code> as a PostCSS plugin:</p>
+<pre><code class="language-js">const tailwindcss = require('tailwindcss')
+
+mix.less('resources/less/app.less', 'public/css')
+  .options({
+    postCss: [
+      tailwindcss('./path/to/your/tailwind.config.js'),
+    ]
+  })</code></pre>
+<p><strong>Note for Sass users:</strong> Due to <a href="https://github.com/bholloway/resolve-url-loader/issues/28">an unresolved issue</a> with one of Mix's dependencies, to use Sass with Tailwind you'll need to disable <code>processCssUrls</code>:</p>
+<pre><code class="language-js">const tailwindcss = require('tailwindcss')
+
+mix.sass('resources/sass/app.scss', 'public/css')
+  .options({
+    processCssUrls: false,
+    postCss: [ tailwindcss('./path/to/your/tailwind.config.js') ],
+  })</code></pre>
+<p>For more information on what this feature does and the implications of disabling it, <a href="https://laravel-mix.com/docs/5.0/css-preprocessors#css-url-rewriting">see the Laravel Mix documentation</a>.</p>
+<h4>Webpack Encore</h4>
+<p>Create a <code>postcss.config.js</code> file, add <code>tailwindcss</code> as a plugin and pass the path to your config file:</p>
+<pre><code class="language-js">module.exports = {
+  plugins: [
+    require('tailwindcss'),
+  ]
+}</code></pre>
+<p>Within <code>webpack.config.js</code>, create a style entry and enable the PostCSS loader.</p>
+<pre><code class="language-js">const Encore = require('@symfony/webpack-encore')
+
+Encore
+  .setOutputPath('public/build/')
+  .setPublicPath('/build')
+  .addStyleEntry('app', './css/app.css')
+  .enablePostCssLoader()
+
+module.exports = Encore.getWebpackConfig()</code></pre>
+<p>You can also pass options into the PostCSS loader by passing a callback, as per the <a href="https://symfony.com/doc/current/frontend/encore/postcss.html">Encore PostCSS docs</a>:</p>
+<pre><code class="language-js">Encore.enablePostCssLoader(function(options) {
+  options.config = {
+    path: 'config/postcss.config.js'
+  }
+})</code></pre>
+<p><strong>Note for Sass users:</strong> Due to <a href="https://github.com/bholloway/resolve-url-loader/issues/28">an unresolved issue</a> with one of Encore's dependencies, to use Sass with Tailwind you'll need to disable <code>resolveUrlLoader</code>:</p>
+<pre><code class="language-js">Encore.enableSassLoader(function (options) {}, {
+  resolveUrlLoader: false
+})</code></pre>
+<h4>Brunch</h4>
+<p>Add <code>tailwindcss</code> to the list of processors you pass to <a href="https://github.com/brunch/postcss-brunch">postcss-brunch</a>:</p>
+<pre><code class="language-js">exports.config = {
+  // ..
+  plugins: {
+    // ...
+    postcss: {
+      processors: [
+        require('tailwindcss'),
+      ]
+    }
+    // ...
+  }
+}</code></pre>
+<h4>Ember.js</h4>
+<p>Add <code>tailwindcss</code> to the list of plugins you pass to <a href="https://github.com/jeffjewiss/ember-cli-postcss">ember-cli-postcss</a>:</p>
+<pre><code class="language-js">// ember-cli-build.js
+'use strict';
+
+const EmberApp = require('ember-cli/lib/broccoli/ember-app');
+
+module.exports = function(defaults) {
+  let app = new EmberApp(defaults, {
+    postcssOptions: {
+      compile: {
+        plugins: [
+          require('tailwindcss')
+        ]
+      }
+    }
+  });
+  return app.toTree();
+};</code></pre>
+<hr class="my-16">
+<h2><a id="using-tailwind-via-cdn" name="//apple_ref/cpp/Section/Using%20Tailwind%20via%20CDN" class="dashAnchor"></a>Using Tailwind via CDN</h2>
+<p>Before using the CDN build, please note that many of the features that make Tailwind CSS great are not available without incorporating Tailwind into your build process.</p>
+<ul class="list-none pl-0">
+  <li class="flex items-center">
+    <svg class="h-6 w-6 mr-2 flex-shrink-0" xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24"><circle cx="12" cy="12" r="10" fill="#fed7d7"></circle><path fill="#f56565" d="M13.41 12l2.83 2.83a1 1 0 0 1-1.41 1.41L12 13.41l-2.83 2.83a1 1 0 1 1-1.41-1.41L10.59 12 7.76 9.17a1 1 0 0 1 1.41-1.41L12 10.59l2.83-2.83a1 1 0 0 1 1.41 1.41L13.41 12z"></path></svg>
+    <span>You can't customize Tailwind's default theme</span>
+  </li>
+  <li class="flex items-center">
+    <svg class="h-6 w-6 mr-2 flex-shrink-0" xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24"><circle cx="12" cy="12" r="10" fill="#fed7d7"></circle><path fill="#f56565" d="M13.41 12l2.83 2.83a1 1 0 0 1-1.41 1.41L12 13.41l-2.83 2.83a1 1 0 1 1-1.41-1.41L10.59 12 7.76 9.17a1 1 0 0 1 1.41-1.41L12 10.59l2.83-2.83a1 1 0 0 1 1.41 1.41L13.41 12z"></path></svg>
+    <span>You can't use any <a href="../functions-and-directives/index.html">directives</a> like <code>@apply</code>, <code>@variants</code>, etc.</span>
+  </li>
+  <li class="flex items-center">
+    <svg class="h-6 w-6 mr-2 flex-shrink-0" xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24"><circle cx="12" cy="12" r="10" fill="#fed7d7"></circle><path fill="#f56565" d="M13.41 12l2.83 2.83a1 1 0 0 1-1.41 1.41L12 13.41l-2.83 2.83a1 1 0 1 1-1.41-1.41L10.59 12 7.76 9.17a1 1 0 0 1 1.41-1.41L12 10.59l2.83-2.83a1 1 0 0 1 1.41 1.41L13.41 12z"></path></svg>
+    <span>You can't enable features like <a href="../pseudo-class-variants/index.html#group-hover"><code>group-hover</code></a></span>
+  </li>
+  <li class="flex items-center">
+    <svg class="h-6 w-6 mr-2 flex-shrink-0" xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24"><circle cx="12" cy="12" r="10" fill="#fed7d7"></circle><path fill="#f56565" d="M13.41 12l2.83 2.83a1 1 0 0 1-1.41 1.41L12 13.41l-2.83 2.83a1 1 0 1 1-1.41-1.41L10.59 12 7.76 9.17a1 1 0 0 1 1.41-1.41L12 10.59l2.83-2.83a1 1 0 0 1 1.41 1.41L13.41 12z"></path></svg>
+    <span>You can't install third-party plugins</span>
+  </li>
+</ul>
+<p>To get the most out of Tailwind, you really should <a href="index.html#1-install-tailwind-via-npm">install it via npm</a>.</p>
+<p>To pull in Tailwind for quick demos or just giving the framework a spin, grab the latest default configuration build via CDN:</p>
+<pre><code class="language-html">&lt;link href="https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css" rel="stylesheet"&gt;</code></pre>
+<p>Note that while the CDN build is large <em>(27kb compressed, 348kb raw)</em>, <strong>it's not representative of the sizes you see when including Tailwind as part of your build process</strong>.</p>
+<p>Sites that follow our <a href="../controlling-file-size/index.html">best practices</a> are almost always under 10kb compressed. For example, <a href="https://send.firefox.com/">Firefox Send</a> is built with Tailwind and their CSS is under 4kb compressed and minified.</p>              </div>
+
+              
+              
+              
+
+            </div>
+          </div>
+          
+
+
+        </div>
+        
+
+        <script src="../../assets/build/js/app.js%3Fid=67e749265d091bed73b6"></script>
+
+        <!-- Algolia DocSearch  -->
+        
+        
+      </div>
+      
+
+
+    </div>
+    
+
+  </div>
+</div>
+
+
+
+
+  <!-- Google Analytics  -->
+  
+  
+
+<script src="../../../code.jquery.com/jquery-3.4.1.min.js"></script>
+<script src="../../assets/build/js/nav.js%3Fid=b3eb7d558e0420f9b29c" defer></script>
+
+</body>
+</html>

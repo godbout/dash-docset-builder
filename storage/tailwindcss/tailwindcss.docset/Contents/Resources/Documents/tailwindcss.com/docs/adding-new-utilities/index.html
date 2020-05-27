@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="en" class="bg-white antialiased">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <link rel="apple-touch-icon" sizes="180x180" href="../../apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="../../favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="../../favicon-16x16.png">
+  <link rel="manifest" href="../../manifest.json">
+  <link rel="mask-icon" href="../../safari-pinned-tab.svg" color="#00b4b6">
+  <title>Adding New Utilities - Tailwind CSS</title>
+  <meta name="theme-color" content="#ffffff">
+  <meta name="twitter:card" content="summary">
+<meta name="twitter:site" content="@tailwindcss">
+<meta name="twitter:title" content="Adding New Utilities - Tailwind CSS">
+<meta name="twitter:description" content="Extending Tailwind with your own custom utility classes.">
+<meta name="twitter:image" content="https://tailwindcss.com/img/tailwind-twitter-square.png">
+<meta name="twitter:creator" content="@tailwindcss">
+<meta property="og:url" content="https://tailwindcss.com/">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Adding New Utilities - Tailwind CSS">
+<meta property="og:description" content="Extending Tailwind with your own custom utility classes.">
+<meta property="og:image" content="https://tailwindcss.com/img/twitter-large-card.png">
+  <link rel="stylesheet" href="../../../rsms.me/inter/inter.css">
+  <link rel="stylesheet" href="../../assets/build/css/main.css%3Fid=4a7cbbbeb4816c16d9a7.css">
+  
+  <script src="../../../cdn.jsdelivr.net/gh/alpinejs/alpine@v1.11.1/dist/alpine.js" defer></script>
+</head>
+<body data-sidebar-visible="true" class="text-gray-900 leading-normal pb-8">
+
+
+
+
+
+
+
+
+<div class="w-full mx-auto px-6">
+  <div class="lg:flex -mx-6">
+
+    
+    
+    
+
+    
+    <div id="content-wrapper" class="min-h-screen w-full">
+
+      
+      <div id="content">
+
+        
+        <div id="app" class="flex" v-cloak>
+
+          
+          <div class="w-full">
+            <div class="markdown mb-6 px-6 mx-auto">
+                              <a name="//apple_ref/cpp/Section/Top" class="dashAnchor"></a><h1 class="flex items-center">
+                  Adding New Utilities
+                  <!-- <span class="ml-4 text-teal-600 font-semibold text-base">v1.3.0+</span> -->
+                                  </h1>
+              
+                              <div class="mt-0 mb-4 text-gray-600">
+                  Extending Tailwind with your own custom utility classes.
+                </div>
+                                          <hr class="my-8 border-b-2 border-gray-200">
+                          </div>
+            <div class="flex">
+              <div class="markdown px-6 w-full mx-auto">
+                <p>Although Tailwind provides a pretty comprehensive set of utility classes out of the box, you may run into situations where you need to add a few of your own.</p>
+<p>Deciding on the best way to extend a framework can be paralyzing, so here are some best practices to help you add your own utilities in the most idiomatic way possible.</p>
+<hr>
+<h2><a id="using-css" name="//apple_ref/cpp/Section/Using%20CSS" class="dashAnchor"></a>Using CSS</h2>
+<p>The easiest way to add your own utilities to Tailwind is to simply add them to your CSS.</p>
+<p class="flex items-start mt-8 mb-0">
+  <svg class="h-6 w-6 mr-2 flex-shrink-0" xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24"><circle class="text-green-200 fill-current" cx="12" cy="12" r="10"></circle><path class="text-green-600 fill-current" d="M10 14.59l6.3-6.3a1 1 0 0 1 1.4 1.42l-7 7a1 1 0 0 1-1.4 0l-3-3a1 1 0 0 1 1.4-1.42l2.3 2.3z"></path></svg>
+  <strong class="text-base font-semibold text-gray-800">Add any custom utilities to the end of your CSS file</strong>
+</p>
+<pre><code class="language-css">@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.rotate-0 {
+  transform: rotate(0deg);
+}
+.rotate-90 {
+  transform: rotate(90deg);
+}
+.rotate-180 {
+  transform: rotate(180deg);
+}
+.rotate-270 {
+  transform: rotate(270deg);
+}</code></pre>
+<p>Since declaration order is important in CSS, always make sure you are adding new utilities to the <em>end</em> of your CSS file to avoid specificity issues.</p>
+<p class="flex items-start mt-8 mb-0">
+  <svg class="h-6 w-6 mr-2 flex-shrink-0" xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24"><circle cx="12" cy="12" r="10" fill="#fed7d7"></circle><path fill="#f56565" d="M13.41 12l2.83 2.83a1 1 0 0 1-1.41 1.41L12 13.41l-2.83 2.83a1 1 0 1 1-1.41-1.41L10.59 12 7.76 9.17a1 1 0 0 1 1.41-1.41L12 10.59l2.83-2.83a1 1 0 0 1 1.41 1.41L13.41 12z"></path></svg>
+  <strong class="text-base font-semibold text-gray-800">Don't add custom utilities to the beginning of your CSS file</strong>
+</p>
+<pre><code class="language-css">/* Adding utilities to the beginning of your CSS can cause specificity issues */
+.rotate-0 {
+  transform: rotate(0deg);
+}
+.rotate-90 {
+  transform: rotate(90deg);
+}
+.rotate-180 {
+  transform: rotate(180deg);
+}
+.rotate-270 {
+  transform: rotate(270deg);
+}
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;</code></pre>
+<p>If you're using <code>postcss-import</code> or a preprocessor like Less, Sass, or Stylus, consider keeping your utilities in a separate file and importing them:</p>
+<pre><code class="language-css">/* Using postcss-import */
+@import "tailwindcss/base";
+@import "tailwindcss/components";
+@import "tailwindcss/utilities";
+@import "./custom-utilities.css";
+
+/* Using Sass or Less */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@import "./custom-utilities";</code></pre>
+<h3><a id="generating-responsive-variants" name="//apple_ref/cpp/Section/Generating%20responsive%20variants" class="dashAnchor"></a>Generating responsive variants</h3>
+<p>If you'd like to create <a href="../responsive-design/index.html">responsive variants</a> of your own utilities based on the breakpoints defined in your <code>tailwind.config.js</code> file, wrap your utilities in the <code>@responsive</code> directive:</p>
+<pre><code class="language-css">@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@responsive {
+  .rotate-0 {
+    transform: rotate(0deg);
+  }
+  .rotate-90 {
+    transform: rotate(90deg);
+  }
+  .rotate-180 {
+    transform: rotate(180deg);
+  }
+  .rotate-270 {
+    transform: rotate(270deg);
+  }
+}</code></pre>
+<p>Tailwind will automatically generate prefixed versions of each custom utility that you can use to conditionally apply those styles at different breakpoints:</p>
+<pre><code class="language-html">&lt;!-- Rotate 180 degrees by default, but remove that rotation on medium screens and up --&gt;
+&lt;div class="rotate-180 md:rotate-0"&gt;&lt;/div&gt;</code></pre>
+<p>Learn more about responsive utilities in the <a href="../responsive-design/index.html">responsive design documentation</a>.</p>
+<h3><a id="generating-pseudo-class-variants" name="//apple_ref/cpp/Section/Generating%20pseudo-class%20variants" class="dashAnchor"></a>Generating pseudo-class variants</h3>
+<p>If you'd like to create <a href="../pseudo-class-variants/index.html">pseudo-class variants</a> of your own utilities, wrap your utilities in the <code>@variants</code> directive:</p>
+<pre><code class="language-css">@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@variants hover, focus {
+  .rotate-0 {
+    transform: rotate(0deg);
+  }
+  .rotate-90 {
+    transform: rotate(90deg);
+  }
+  .rotate-180 {
+    transform: rotate(180deg);
+  }
+  .rotate-270 {
+    transform: rotate(270deg);
+  }
+}</code></pre>
+<p>Tailwind will automatically generate prefixed versions of each custom utility that you can use to conditionally apply those styles at different states:</p>
+<pre><code class="language-html">&lt;div class="rotate-0 hover:rotate-90"&gt;&lt;/div&gt;</code></pre>
+<p>Pseudo-class variants are generated in the same order you list them in the <code>@variants</code> directive, so if you'd like one pseudo-class to take precedence over another, make sure you list that one last:</p>
+<pre><code class="language-css">/* Focus will take precedence over hover */
+@variants hover, focus {
+  .rotate-0 {
+    transform: rotate(0deg);
+  }
+  /* ... */
+}
+
+/* Hover will take precedence over focus */
+@variants focus, hover {
+  .rotate-0 {
+    transform: rotate(0deg);
+  }
+  /* ... */
+}</code></pre>
+<p>If you'd like to generate both responsive <em>and</em> pseudo-class variants of your custom utilities, wrap <code>@variants</code> with <code>@responsive</code>:</p>
+<pre><code class="language-css">@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@responsive {
+  @variants hover, focus {
+    .rotate-0 {
+      transform: rotate(0deg);
+    }
+    .rotate-90 {
+      transform: rotate(90deg);
+    }
+    .rotate-180 {
+      transform: rotate(180deg);
+    }
+    .rotate-270 {
+      transform: rotate(270deg);
+    }
+  }
+}</code></pre>
+<p>Learn more about pseudo-class variants utilities in the <a href="../pseudo-class-variants/index.html">pseudo-class variant documentation</a>.</p>
+<hr>
+<h2><a id="using-a-plugin" name="//apple_ref/cpp/Section/Using%20a%20plugin" class="dashAnchor"></a>Using a plugin</h2>
+<p>In addition to adding new utility classes directly in your CSS files, you can also add utilities to Tailwind by writing your own plugin:</p>
+<pre><code class="language-js">// tailwind.config.js
+const plugin = require('tailwindcss/plugin')
+
+module.exports = {
+  plugins: [
+    plugin(function({ addUtilities }) {
+      const newUtilities = {
+        '.rotate-0': {
+          transform: 'rotate(0deg)',
+        },
+        '.rotate-90': {
+          transform: 'rotate(90deg)',
+        },
+        '.rotate-180': {
+          transform: 'rotate(180deg)',
+        },
+        '.rotate-270': {
+          transform: 'rotate(270deg)',
+        },
+      }
+
+      addUtilities(newUtilities, ['responsive', 'hover'])
+    })
+  ]
+}
+</code></pre>
+<p>This can be a good choice if you want to publish your custom utilities as a library or make it easier to share them across multiple projects.</p>
+<p>Learn more in the <a href="../plugins/index.html#adding-utilities">utility plugin documentation</a>.</p>              </div>
+
+              
+              
+              
+
+            </div>
+          </div>
+          
+
+
+        </div>
+        
+
+        <script src="../../assets/build/js/app.js%3Fid=67e749265d091bed73b6"></script>
+
+        <!-- Algolia DocSearch  -->
+        
+        
+      </div>
+      
+
+
+    </div>
+    
+
+  </div>
+</div>
+
+
+
+
+  <!-- Google Analytics  -->
+  
+  
+
+<script src="../../../code.jquery.com/jquery-3.4.1.min.js"></script>
+<script src="../../assets/build/js/nav.js%3Fid=b3eb7d558e0420f9b29c" defer></script>
+
+</body>
+</html>

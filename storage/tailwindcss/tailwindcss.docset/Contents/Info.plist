@@ -9,9 +9,9 @@
     <key>DocSetPlatformFamily</key>
     <string>tailwindcss</string>
     <key>dashIndexFilePath</key>
-    <string>tailwindcss.com/docs/installation.html</string>
+    <string>tailwindcss.com/docs/installation/index.html</string>
     <key>DashDocSetFallbackURL</key>
-    <string>tailwindcss.com</string>
+    <string>https://</string>
     <key>DashDocSetPlayURL</key>
     <string>https://codesandbox.io/s/github/lbogdan/tailwindcss-playground</string>
     <key>isJavaScriptEnabled</key>
