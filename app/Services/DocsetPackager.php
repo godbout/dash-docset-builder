@@ -57,7 +57,7 @@ final class DocsetPackager
     <key>dashIndexFilePath</key>
     <string>{$this->docset->index()}</string>
     <key>DashDocSetFallbackURL</key>
-    <string>{$this->docset->url()}</string>
+    <string>https://</string>
     <key>DashDocSetPlayURL</key>
     <string>{$this->docset->playground()}</string>
     <key>isJavaScriptEnabled</key>
