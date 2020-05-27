@@ -7,10 +7,10 @@ build:
         override:
           - php-scrutinizer-run
     coverage:
+      dependencies:
+        before:
+          - sudo apt-get install -y wget
       tests:
-        dependencies:
-          before:
-            - sudo apt-get install -y wget
         override:
           - command: composer test -- --coverage-clover build/coverage.xml
             idle_timeout: 600
