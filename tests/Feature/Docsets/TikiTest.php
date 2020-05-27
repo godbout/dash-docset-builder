@@ -11,7 +11,7 @@ use Illuminate\Support\Facades\Config;
 use Illuminate\Support\Facades\Artisan;
 use Illuminate\Support\Facades\Storage;
 
-/** @group@ tiki */
+/** @group tiki */
 class TikiTest extends TestCase
 {
     public function setUp(): void
