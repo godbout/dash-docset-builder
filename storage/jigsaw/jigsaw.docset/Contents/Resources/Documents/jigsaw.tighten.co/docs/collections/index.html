@@ -6,16 +6,16 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <title>Jigsaw &ndash; Static Sites for Laravel Developers</title>
 
-        <link rel="icon" type="image/png" href="../../assets/img/jigsaw-logo.png">
+        <link rel="icon" type="image/png" href="/assets/img/jigsaw-logo.png">
 
         <meta name="msapplication-TileColor" content="#773580">
         <meta name="theme-color" content="#ffffff">
 
-        <link rel="stylesheet" href="../../../use.typekit.net/fac7rzg.css">
+        <link rel="stylesheet" href="https://use.typekit.net/fac7rzg.css">
 
-        <link rel="stylesheet" type="text/css" href="../../assets/build/css/main.css%3Fid=e363eb510547c81027c5.css">
+        <link rel="stylesheet" type="text/css" href="/assets/build/css/main.css?id=e363eb510547c81027c5">
 
-        <link href="../../../fonts.googleapis.com/css%3Ffamily=Lato:100,300,300italic,400,400italic,500,500italic,700,700italic.css" rel="stylesheet" type="text/css">
+        <link href="https://fonts.googleapis.com/css?family=Lato:100,300,300italic,400,400italic,500,500italic,700,700italic" rel="stylesheet" type="text/css">
 
         
     </head>
@@ -55,7 +55,7 @@ return [
         ],
     ],
 ];</code></pre>
-<p>Jigsaw will look for collection items in a directory with the same name as your collection, preceded by an underscore: in this example, <code>_people</code> and <code>_posts</code>. Collection items can be Markdown or Blade files, or even <a href="../content-other-file-types/index.html">Blade/Markdown hybrid</a> files.</p>
+<p>Jigsaw will look for collection items in a directory with the same name as your collection, preceded by an underscore: in this example, <code>_people</code> and <code>_posts</code>. Collection items can be Markdown or Blade files, or even <a href="/docs/content-other-file-types">Blade/Markdown hybrid</a> files.</p>
 <div class="files">
     <div class="folder folder--open">source
         <div class="folder">_assets</div>
@@ -87,7 +87,7 @@ return [
     <div class="file">package.json</div>
     <div class="file">webpack.mix.js</div>
 </div>
-<p>In <code>config.php</code>, the array where you define your collection can contain <a href="../collections-paths/index.html">path</a> and <a href="../collections-sorting/index.html">sort</a> settings for the collection, as well as <a href="../collections-variables-and-functions/index.html">variables and helper functions</a>. None of these elements are required, however; if omitted, default path and sort settings will be used. In fact, for the simplest configuration using default settings and no variables or functions, you can define a collection with simply its name:</p>
+<p>In <code>config.php</code>, the array where you define your collection can contain <a href="/docs/collections-paths">path</a> and <a href="/docs/collections-sorting">sort</a> settings for the collection, as well as <a href="/docs/collections-variables-and-functions/">variables and helper functions</a>. None of these elements are required, however; if omitted, default path and sort settings will be used. In fact, for the simplest configuration using default settings and no variables or functions, you can define a collection with simply its name:</p>
 <blockquote>
 <p><em>config.php</em></p>
 </blockquote>
@@ -97,7 +97,7 @@ return [
     'collections' =&gt; [ 'posts' ],
 ];</code></pre>
 <a id="generating-collection-pages" name="//apple_ref/cpp/Section/Generating%20Collection%20Pages" class="dashAnchor"></a><h3 style="font-size: 1.5rem;">Generating Collection Pages</h3>
-<p>If you'd like to generate an individual page for each of your collection items&mdash;for example, a page for each blog post&mdash;specify a <a href="../collections-extending-parent-templates/index.html">parent template</a> file in the <code>extends</code> key of the YAML front matter, or with the <code>@extends</code> directive in a Blade file, just as you would with a regular Jigsaw page. For example:</p>
+<p>If you'd like to generate an individual page for each of your collection items&mdash;for example, a page for each blog post&mdash;specify a <a href="/docs/collections-extending-parent-templates">parent template</a> file in the <code>extends</code> key of the YAML front matter, or with the <code>@extends</code> directive in a Blade file, just as you would with a regular Jigsaw page. For example:</p>
 <blockquote>
 <p><em>my-first-post.md</em></p>
 </blockquote>
@@ -151,11 +151,11 @@ $authorPosts = $posts-&gt;filter(function ($value, $key) use ($page) {
 &lt;/ul&gt;
 @endif</code></pre>
 <a id="collection-metadata" name="//apple_ref/cpp/Section/Collection%20Metadata" class="dashAnchor"></a><h3 style="font-size: 1.5rem;">Collection Metadata</h3>
-<p>In addition to the <a href="../page-metadata/index.html">metadata</a> available for every page, such as <code>getPath()</code>, <code>getUrl()</code>, and <code>getFilename()</code>, collection items have access to a few additional functions:</p>
+<p>In addition to the <a href="/docs/page-metadata/">metadata</a> available for every page, such as <code>getPath()</code>, <code>getUrl()</code>, and <code>getFilename()</code>, collection items have access to a few additional functions:</p>
 <ul>
 <li><code>getContent()</code> returns the main content of the collection item, i.e. the body of the Markdown file (currently, <code>getContent()</code> is available for Markdown files only)</li>
 <li><code>getCollection()</code> returns the name of the collection</li>
-<li><code>getPrevious()</code> and <code>getNext()</code> give you the adjacent items in the collection, based on the collection's default <a href="../collections-sorting/index.html">sort order</a></li>
+<li><code>getPrevious()</code> and <code>getNext()</code> give you the adjacent items in the collection, based on the collection's default <a href="/docs/collections-sorting">sort order</a></li>
 <li><code>getFirst()</code> returns the first item of a collection (as does the Laravel collection method <code>first()</code>)</li>
 <li><code>getLast()</code> returns the last item of a collection (as does the Laravel collection method <code>last()</code>)</li>
 </ul>
@@ -182,7 +182,7 @@ $authorPosts = $posts-&gt;filter(function ($value, $key) use ($page) {
     
 </div>
         </main>
-            <script src="../../assets/build/js/app.js%3Fid=9e8f196031e228434a73"></script>
+            <script src="/assets/build/js/app.js?id=9e8f196031e228434a73"></script>
     
     
     </body>
