@@ -12,7 +12,7 @@ class Jigsaw extends BaseDocset
     public const CODE = 'jigsaw';
     public const NAME = 'Jigsaw';
     public const URL = 'jigsaw.tighten.co';
-    public const INDEX = 'docs/installation.html';
+    public const INDEX = 'docs/installation/index.html';
     public const PLAYGROUND = '';
     public const ICON_16 = '../../icons/icon.png';
     public const ICON_32 = '../../icons/icon@2x.png';
@@ -37,15 +37,15 @@ class Jigsaw extends BaseDocset
     {
         $entries = collect();
 
-        $crawler->filter('h2')->each(function (HtmlPageCrawler $node) use ($entries, $file) {
-            if (basename($file) !== 'index.html') {
+        if (! Str::contains($file, "{$this->url()}/index.html")) {
+            $crawler->filter('h2')->each(function (HtmlPageCrawler $node) use ($entries, $file) {
                 $entries->push([
                     'name' => trim($node->text()),
                     'type' => 'Guide',
                     'path' => Str::after($file . '#' . Str::slug($node->text()), $this->innerDirectory()),
                 ]);
-            }
-        });
+            });
+        }
 
         return $entries;
     }
@@ -54,15 +54,15 @@ class Jigsaw extends BaseDocset
     {
         $entries = collect();
 
-        $crawler->filter('h3')->each(function (HtmlPageCrawler $node) use ($entries, $file) {
-            if (basename($file) !== 'index.html') {
+        if (! Str::contains($file, "{$this->url()}/index.html")) {
+            $crawler->filter('h3')->each(function (HtmlPageCrawler $node) use ($entries, $file) {
                 $entries->push([
                     'name' => trim($node->text()),
                     'type' => 'Section',
                     'path' => Str::after($file . '#' . Str::slug($node->text()), $this->innerDirectory()),
                 ]);
-            }
-        });
+            });
+        }
 
         return $entries;
     }

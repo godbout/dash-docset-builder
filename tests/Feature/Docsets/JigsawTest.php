@@ -141,7 +141,7 @@ class JigsawTest extends TestCase
     public function the_h4_padding_gets_updated_in_the_dash_docset_files()
     {
         $crawler = HtmlPageCrawler::create(
-            Storage::get($this->docset->downloadedDirectory() . '/' . $this->docset->url() . '/docs/collections-pagination.html')
+            Storage::get($this->docset->downloadedDirectory() . '/' . $this->docset->url() . '/docs/collections-pagination/index.html')
         );
 
         $this->assertFalse(
@@ -149,7 +149,7 @@ class JigsawTest extends TestCase
         );
 
         $crawler = HtmlPageCrawler::create(
-            Storage::get($this->docset->innerDirectory() . '/' . $this->docset->url() . '/docs/collections-pagination.html')
+            Storage::get($this->docset->innerDirectory() . '/' . $this->docset->url() . '/docs/collections-pagination/index.html')
         );
 
         $this->assertTrue(
