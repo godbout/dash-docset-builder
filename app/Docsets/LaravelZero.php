@@ -12,7 +12,7 @@ class LaravelZero extends BaseDocset
     public const CODE = 'laravel-zero';
     public const NAME = 'Laravel Zero';
     public const URL = 'laravel-zero.com';
-    public const INDEX = 'docs/introduction.html';
+    public const INDEX = 'docs/introduction/index.html';
     public const PLAYGROUND = '';
     public const ICON_16 = '../../icons/icon.png';
     public const ICON_32 = '../../icons/icon@2x.png';
@@ -41,7 +41,7 @@ class LaravelZero extends BaseDocset
                 $entries->push([
                     'name' => trim($node->text()),
                     'type' => 'Guide',
-                    'path' => $this->url() . '/docs/' . $node->attr('href')
+                    'path' => $this->url() . '/docs/whatever/' . $node->attr('href')
                 ]);
             }
         });
@@ -58,17 +58,23 @@ class LaravelZero extends BaseDocset
     {
         $entries = collect();
 
-        $crawler->filter('h2, h3, h4')->each(function (HtmlPageCrawler $node) use ($entries, $file) {
-            if (! in_array(basename($file), ['index.html', '404.html'])) {
+        if (! $this->is404OrIndex($file)) {
+            $crawler->filter('h2, h3, h4')->each(function (HtmlPageCrawler $node) use ($entries, $file) {
                 $entries->push([
                     'name' => trim($node->text()),
                     'type' => 'Section',
                     'path' => Str::after($file . '#' . Str::slug($node->text()), $this->innerDirectory()),
                 ]);
-            }
-        });
+            });
+        }
 
         return $entries;
+    }
+
+    protected function is404OrIndex($file)
+    {
+        return Str::contains($file, "{$this->url()}/index.html")
+            || Str::contains($file, "{$this->url()}/404/index.html");
     }
 
     public function format(string $html): string
