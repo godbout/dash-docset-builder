@@ -22,7 +22,7 @@ final class DocsetGrabber
     public function grabFromSitemap()
     {
         system(
-            "wget {$this->docset->url()}/sitemap.xml --quiet --output-document - | \
+            "echo; wget {$this->docset->url()}/sitemap.xml --quiet --output-document - | \
             egrep --only-matching '{$this->docset->url()}[^<]+' | \
             wget --input-file - {$this->wgetOptions()}",
             $result
@@ -34,7 +34,7 @@ final class DocsetGrabber
     public function grabFromIndex()
     {
         system(
-            "wget {$this->docset->url()} {$this->wgetOptions()}",
+            "echo; wget {$this->docset->url()} {$this->wgetOptions()}",
             $result
         );
 
@@ -49,6 +49,8 @@ final class DocsetGrabber
             --adjust-extension \
             --convert-links \
             --span-hosts \
+            --quiet \
+            --show-progress \
             --domains={$this->docset->externalDomains()} \
             --directory-prefix=storage/{$this->docset->downloadedDirectory()}";
     }
