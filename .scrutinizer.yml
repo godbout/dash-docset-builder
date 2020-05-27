@@ -1,6 +1,6 @@
 build:
   environment:
-    php: 7.3
+    php: 7.4
   nodes:
     analysis:
       tests:
@@ -8,6 +8,9 @@ build:
           - php-scrutinizer-run
     coverage:
       tests:
+        dependencies:
+          before:
+            - sudo apt-get install -y wget
         override:
           - command: composer test -- --coverage-clover build/coverage.xml
             idle_timeout: 600
