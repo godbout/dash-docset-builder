@@ -44,14 +44,15 @@ final class DocsetGrabber
     protected function wgetOptions()
     {
         return "--mirror \
-            -e robots=off \
+            --trust-server-names \
             --page-requisites \
             --adjust-extension \
             --convert-links \
             --span-hosts \
-            --quiet \
-            --show-progress \
             --domains={$this->docset->externalDomains()} \
-            --directory-prefix=storage/{$this->docset->downloadedDirectory()}";
+            --directory-prefix=storage/{$this->docset->downloadedDirectory()} \
+            -e robots=off \
+            --quiet \
+            --show-progress";
     }
 }
