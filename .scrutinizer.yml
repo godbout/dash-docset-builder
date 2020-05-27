@@ -9,7 +9,7 @@ build:
     coverage:
       dependencies:
         before:
-          - sudo apt-get update && apt-get upgrade wget
+          - sudo apt-get install -y wget
       tests:
         override:
           - command: composer test -- --coverage-clover build/coverage.xml
