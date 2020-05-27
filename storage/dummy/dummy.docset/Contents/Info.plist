@@ -11,7 +11,7 @@
     <key>dashIndexFilePath</key>
     <string>glmb.today/index.html</string>
     <key>DashDocSetFallbackURL</key>
-    <string>glmb.today</string>
+    <string>https://</string>
     <key>DashDocSetPlayURL</key>
     <string></string>
     <key>isJavaScriptEnabled</key>
