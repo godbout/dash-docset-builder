@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Jigsaw &ndash; Static Sites for Laravel Developers</title>
+
+        <link rel="icon" type="image/png" href="../../assets/img/jigsaw-logo.png">
+
+        <meta name="msapplication-TileColor" content="#773580">
+        <meta name="theme-color" content="#ffffff">
+
+        <link rel="stylesheet" href="../../../use.typekit.net/fac7rzg.css">
+
+        <link rel="stylesheet" type="text/css" href="../../assets/build/css/main.css%3Fid=e363eb510547c81027c5.css">
+
+        <link href="../../../fonts.googleapis.com/css%3Ffamily=Lato:100,300,300italic,400,400italic,500,500italic,700,700italic.css" rel="stylesheet" type="text/css">
+
+        
+    </head>
+
+    <body class="min-h-screen font-sans leading-tight">
+        <main id="vue-app">
+            
+
+            
+
+<div class="bg-brown-lightest min-h-screen px-0">
+    <div class="flex flex-col lg:flex-row justify-center mx-auto">
+        
+
+        <div class="markdown bg-white w-full px-6 pb-8 font-normal" v-pre style="margin-top: -1.5rem;">
+            <a name="//apple_ref/cpp/Section/Top" class="dashAnchor"></a><h2 class="text-3xl">Custom 404 Page</h2>
+<p>You can create a custom 404 error page to display when someone tries to access a page on your site that does not exist. How you do this depends on where your site is hosted.</p>
+<a id="using-github-pages-or-netlify" name="//apple_ref/cpp/Section/Using%20GitHub%20Pages%20or%20Netlify" class="dashAnchor"></a><h3 style="font-size: 1.5rem;">Using GitHub Pages or Netlify</h3>
+<p>Some hosts, like GitHub Pages and Netlify, are automatically configured to look for a file named <code>404.html</code> at the root level of your site. If your Jigsaw site is using <a href="../pretty-urls/index.html">pretty URLs</a>, you can specify a <code>permalink</code> in the file for your custom 404 page so that the <code>.html</code> extension is preserved:</p>
+<blockquote>
+<p><em>source/404.md</em></p>
+</blockquote>
+<pre><code>---
+extends: _layouts.master
+section: content
+permalink: 404.html
+---
+
+### Sorry, that page does not exist.</code></pre>
+<p>Note that YAML front matter can also be used in Blade files, so you can accomplish the same thing using a Blade file named <code>404.blade.php</code>.</p>
+<p>This will create a file named <code>404.html</code> in your site's <code>build</code> directory.</p>
+<a id="using-an-nginx-server" name="//apple_ref/cpp/Section/Using%20an%20Nginx%20Server" class="dashAnchor"></a><h3 style="font-size: 1.5rem;">Using an Nginx Server</h3>
+<p>You can create your custom 404 file as <code>404.md</code> or <code>404.blade.php</code> in your <code>source</code> directory, and if your Jigsaw site is using <a href="../pretty-urls/index.html">pretty URLs</a>, it will be output as <code>/404/index.html</code>:</p>
+<blockquote>
+<p><em>source/404.md</em></p>
+</blockquote>
+<pre><code>---
+extends: _layouts.master
+section: content
+---
+
+### Sorry, that page does not exist.</code></pre>
+<p>When hosting your site on an Nginx server, you will need to configure the <code>error_page</code> setting in your server's <code>nginx.conf</code> file, or in the specific configuration file that Nginx is using for your site. These configuration files are typically found in <code>/etc/nginx/</code>, though their location varies by server. If your site is managed using Laravel Forge, for example, the configuration file for your site will be located at <code>/etc/nginx/sites-enabled/{name-of-your-site}</code>; it can also be edited via Forge's "Edit Nginx Configuration" option in the "Files" menu.</p>
+<p>Once you've located your Nginx configuration file, add the following line to the <code>server</code> block:</p>
+<pre><code>error_page 404 /404;</code></pre>
+<p>After you restart your Nginx server, it will look for the error page <code>/404/index.html</code> in your <code>build</code> directory whenever someone navigates to a page that does not exist.</p>        </div>
+
+        
+    </div>
+
+    
+</div>
+        </main>
+            <script src="../../assets/build/js/app.js%3Fid=9e8f196031e228434a73"></script>
+    
+    
+    </body>
+</html>

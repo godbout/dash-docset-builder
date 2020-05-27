@@ -11,7 +11,7 @@
     <key>dashIndexFilePath</key>
     <string>jigsaw.tighten.co/docs/installation.html</string>
     <key>DashDocSetFallbackURL</key>
-    <string>jigsaw.tighten.co</string>
+    <string>https://</string>
     <key>DashDocSetPlayURL</key>
     <string></string>
     <key>isJavaScriptEnabled</key>

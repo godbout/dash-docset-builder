@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Jigsaw – Static Sites for Laravel Developers</title>
+
+        <link rel="icon" type="image/png" href="../../assets/img/jigsaw-logo.png">
+
+        <meta name="msapplication-TileColor" content="#773580">
+        <meta name="theme-color" content="#ffffff">
+
+        <link rel="stylesheet" href="../../../use.typekit.net/fac7rzg.css">
+
+        <link rel="stylesheet" type="text/css" href="../../assets/build/css/main.css%3Fid=e363eb510547c81027c5.css">
+
+        <link href='../../../fonts.googleapis.com/css%3Ffamily=Lato:100,300,300italic,400,400italic,500,500italic,700,700italic.css' rel='stylesheet' type='text/css'>
+
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.css" />
+    </head>
+
+    <body class="min-h-screen font-sans leading-tight">
+        <main id="vue-app">
+            <div class="w-full bg-brown-lightest border-t-5 border-purple"></div>
+
+            <header class="w-full bg-white absolute z-10 shadow-md px-4 md:px-6">
+    <nav class="flex items-center max-w-3xl mx-auto py-4" aria-role="navigation">
+        <a class="flex flex-shrink-0 lg:flex-1 items-center mr-1" href="../../index.html" title="Jigsaw by Tighten">
+            <img src="../../assets/img/jigsaw-logo.svg" alt="Jigsaw logo" class="w-10 lg:w-11 mr-3 shadow border-2 border-white rounded-lg" />
+
+            <h1 class="hidden mr-4 ml-4 uppercase tracking-wide text-blue-darker text-lg lg:text-2xl font-normal lg:ml-0 lg:inline-block">
+                Jigsaw
+            </h1>
+        </a>
+
+        <div class="w-full flex items-center lg:max-w-md xl:max-w-lg border-2 border-indigo-lighter rounded bg-grey">
+            <img src="../../assets/img/icon-search.svg" class="absolute z-10 h-4 ml-2">
+
+            <input id="docsearch" type="text" class="w-full pl-8 pr-2 py-2 bg-grey" placeholder='Search documentation (Press "/" to focus)' />
+        </div>
+
+        <div class="hidden lg:flex lg:flex-1 items-center">
+            <a href="https://github.com/tightenco/jigsaw" title="Contribute to Jigsaw on GitHub" class="flex mr-3 text-blue-darker pl-8">
+                <img src="../../assets/img/GitHub.svg" alt="GitHub alien logo">
+            </a>
+
+            <p class="text-sm text-blue-dark mb-0 leading-tight">
+                A project by
+                <a href="https://tighten.co" title="Tighten | Product Development for Web + Mobile"
+                    class="text-purple">Tighten</a>
+            </p>
+        </div>
+
+        <navigation-toggle></navigation-toggle>
+    </nav>
+</header>
+
+<div class="bg-brown-lightest min-h-screen pt-16 md:pt-24 lg:pt-32 px-0 md:px-6">
+    <div class="flex flex-col lg:flex-row justify-center max-w-3xl mx-auto">
+        <navigation :links='{"Installation":{"root":"\/docs\/installation","children":{"Using a Starter Template":{"root":"\/docs\/starter-templates"}}},"Building \u0026 Previewing":{"root":"\/docs\/building-and-previewing","children":{"Environments":{"root":"\/docs\/building-and-previewing-environments"}}},"Compiling Assets":{"root":"\/docs\/compiling-assets"},"Creating your Site\u0027s Content":{"root":"\/docs\/content","children":{"Blade Templates \u0026 Partials":{"root":"\/docs\/content-blade"},"Markdown":{"root":"\/docs\/content-markdown"},"Other File Types":{"root":"\/docs\/content-other-file-types"}}},"Site Variables":{"root":"\/docs\/site-variables"},"Helper Methods":{"root":"\/docs\/helper-methods"},"Page Metadata":{"root":"\/docs\/page-metadata"},"Collections":{"root":"\/docs\/collections","children":{"Extending Parent Templates":{"root":"\/docs\/collections-extending-parent-templates"},"Paths":{"root":"\/docs\/collections-paths"},"Sorting":{"root":"\/docs\/collections-sorting"},"Filtering":{"root":"\/docs\/collections-filtering"},"Mapping":{"root":"\/docs\/collections-mapping"},"Pagination":{"root":"\/docs\/collections-pagination"},"Variables and Functions":{"root":"\/docs\/collections-variables-and-functions"},"Remote Collections":{"root":"\/docs\/collections-remote-collections"}}},"Pretty Urls":{"root":"\/docs\/pretty-urls"},"Custom 404 Page":{"root":"\/docs\/custom-404-page"},"Event Listeners":{"root":"\/docs\/event-listeners"},"Deploying Your Site":{"root":"\/docs\/deploying-your-site"}}'></navigation>
+
+        <div class="markdown bg-white w-full lg:max-w-md xl:max-w-lg md:mb-6 lg:mb-10 px-6 xl:px-10 pt-4 pb-8 font-normal sm:shadow md:rounded-lg" v-pre>
+            <h2>Deploying Your Site</h2>
+<p>Since Jigsaw sites are just static HTML and Javascript, they are simple and cheap to deploy and host.</p>
+<h3>Using GitHub Pages</h3>
+<p><a href="https://pages.github.com/">GitHub Pages</a> is a free service for hosting static sites offered by GitHub. To get started, first read through <a href="https://help.github.com/categories/github-pages-basics/">the documentation</a> to get an understanding of how the service works.</p>
+<p>The approach we use at Tighten for deploying Jigsaw sites to GitHub pages looks like this:</p>
+<ol>
+<li>
+<p>Build your site for production</p>
+<pre><code>$ npm run production</code></pre>
+</li>
+<li>
+<p>Commit the <code>build_production</code> folder to your repository</p>
+<pre><code>$ git add build_production &amp;&amp; git commit -m "Build for deploy"</code></pre>
+</li>
+<li>
+<p>Use <code>git subtree push</code> to push <em>just</em> the <code>build_production</code> folder to your <code>gh-pages</code> branch</p>
+<pre><code>$ git subtree push --prefix build_production origin gh-pages</code></pre>
+</li>
+</ol>
+<h3>Using Netlify</h3>
+<p><a href="https://www.netlify.com/">Netlify</a> is a service that provides free static site hosting and continuous deployment that can be configured to play nice with any static site generator.</p>
+<p>To deploy a site to Netlify, first create a <code>netlify.toml</code> file with the following configuration:</p>
+<pre><code class="language-toml">[build]
+
+command = "npm run production"
+publish = "build_production"
+environment = { PHP_VERSION = "7.2" }</code></pre>
+<p>Push this file to your repository.</p>
+<p>Then <a href="https://app.netlify.com/start">connect your repository to the Netlify app</a> to setup continuous deployment.</p>
+<p>You can skip the build and deploy settings because Netlify will read the <code>netlify.toml</code> file we created earlier.</p>
+<h3>Using Amazon S3</h3>
+<p><a href="https://aws.amazon.com/s3/">Amazon S3</a> is a very affordable service for hosting static assets. You might have used it in the past for hosting things like images, user uploads, or PDFs in your web applications.</p>
+<p>What you might not have known is that Amazon S3 also has first class support for hosting static sites, like your Jigsaw projects.</p>
+<p>To deploy a site to S3, first build your site for production:</p>
+<pre><code>$ ./vendor/bin/jigsaw build production</code></pre>
+<p>Then simply follow the steps in <a href="http://docs.aws.amazon.com/gettingstarted/latest/swh/website-hosting-intro.html">Amazon's static site documentation</a> to deploy your <code>build_production</code> folder to your S3 bucket.</p>
+<h3>Manually</h3>
+<p>If you have an existing server that you'd like to use to host your Jigsaw site, all you need to do is get the contents <code>build_production</code> into a public folder that's pointed at by the URL you'd like to use.</p>
+<h3>Changing the Source and Destination Directories</h3>
+<p>Jigsaw will look for your source files in a <code>source</code> directory, and will output your files to a directory named <code>build_</code> followed by the environment you specified in the <code>build</code> command (<code>build_local</code> by default, or <code>build_staging</code>, <code>build_production</code>, etc.). You can, however, customize these locations by adding a <code>build</code> key to the array in <code>config.php</code>, and specifying your own source and/or destination paths.</p>
+<blockquote>
+<p><em>config.php</em></p>
+</blockquote>
+<pre><code>&lt;?php
+
+return [
+    'build' =&gt; [
+        'source' =&gt; 'src',
+        'destination' =&gt; 'my_desination',
+    ],
+    ...</code></pre>
+<p>Source and destination paths are relative to your project root, i.e where your config.php file is located.</p>
+<blockquote>
+<p><em>config.php</em></p>
+</blockquote>
+<pre><code>&lt;?php
+
+return [
+    'build' =&gt; [
+        'destination' =&gt; '../build-one-level-up',
+    ],
+    ...</code></pre>
+<p>To include the environment name in your destination path, use the <code>{env}</code> token in your path name. <code>{env}</code> will be replaced by the environment specified when running the <code>build</code> command, and defaults to <code>local</code>.</p>
+<blockquote>
+<p><em>config.php</em></p>
+</blockquote>
+<pre><code>&lt;?php
+
+return [
+    'build' =&gt; [
+        'destination' =&gt; '../../{env}/public',
+    ],
+    ...</code></pre>
+<p>In this example, running <code>./vendor/bin/jigsaw build staging</code> would output your built files to staging/public, two levels up from your project root. Jigsaw will create any directories that do not already exist.</p>
+<p>You can also assign different source and build paths for different environments by using multiple <a href="../environments/index.html">environment-specific <code>config.php</code> files</a>. Source and destination paths in <code>config.production.php</code>, for example, will get merged with any build paths that have been defined in <code>config.php</code> when running <code>./vendor/bin/jigsaw build production</code>.</p>        </div>
+
+        <navigation-on-page :headings="pageHeadings"></navigation-on-page>
+    </div>
+
+    <footer class="py-8 flex flex-col sm:flex-row justify-center items-center text-center">
+        <p class="text-grey-dark font-normal text-xs sm:text-sm my-1">Brought to you by the lovely humans at
+            <a href="https://tighten.co" class="text-purple hover:text-purple-darker font-normal no-underline sm:pr-4" title="Tighten | Product Development for Web + Mobile | Laravel + Vue.js">Tighten</a>
+        </p>
+
+        <a href="https://github.com/tightenco/jigsaw" class="sm:border-l border-purple-light sm:pl-4 text-purple text-xs sm:text-sm hover:text-purple-darker font-normal no-underline my-1"
+            title="Jigsaw on GitHub">Issues/Feature Requests</a>
+    </footer>
+</div>
+        </main>
+            <script src="../../assets/build/js/app.js%3Fid=9e8f196031e228434a73"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.js"></script>
+    <script type="text/javascript">
+        docsearch({
+            apiKey: '57a7f5b1e4e0a44c7e2f8e96abcbf674',
+            indexName: 'jigsaw',
+            inputSelector: '#docsearch'
+        });
+
+        document.addEventListener('keydown', (e) => {
+            if (e.keyCode == 191) {
+                document.getElementById('docsearch').focus();
+                e.preventDefault()
+            }
+            if (e.keyCode == 27) {
+                document.getElementById('docsearch').blur();
+                e.preventDefault()
+            }
+        });
+    </script>
+    </body>
+</html>

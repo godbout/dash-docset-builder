@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Jigsaw – Static Sites for Laravel Developers</title>
+
+        <link rel="icon" type="image/png" href="../../assets/img/jigsaw-logo.png">
+
+        <meta name="msapplication-TileColor" content="#773580">
+        <meta name="theme-color" content="#ffffff">
+
+        <link rel="stylesheet" href="../../../use.typekit.net/fac7rzg.css">
+
+        <link rel="stylesheet" type="text/css" href="../../assets/build/css/main.css%3Fid=e363eb510547c81027c5.css">
+
+        <link href='../../../fonts.googleapis.com/css%3Ffamily=Lato:100,300,300italic,400,400italic,500,500italic,700,700italic.css' rel='stylesheet' type='text/css'>
+
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.css" />
+    </head>
+
+    <body class="min-h-screen font-sans leading-tight">
+        <main id="vue-app">
+            <div class="w-full bg-brown-lightest border-t-5 border-purple"></div>
+
+            <header class="w-full bg-white absolute z-10 shadow-md px-4 md:px-6">
+    <nav class="flex items-center max-w-3xl mx-auto py-4" aria-role="navigation">
+        <a class="flex flex-shrink-0 lg:flex-1 items-center mr-1" href="../../index.html" title="Jigsaw by Tighten">
+            <img src="../../assets/img/jigsaw-logo.svg" alt="Jigsaw logo" class="w-10 lg:w-11 mr-3 shadow border-2 border-white rounded-lg" />
+
+            <h1 class="hidden mr-4 ml-4 uppercase tracking-wide text-blue-darker text-lg lg:text-2xl font-normal lg:ml-0 lg:inline-block">
+                Jigsaw
+            </h1>
+        </a>
+
+        <div class="w-full flex items-center lg:max-w-md xl:max-w-lg border-2 border-indigo-lighter rounded bg-grey">
+            <img src="../../assets/img/icon-search.svg" class="absolute z-10 h-4 ml-2">
+
+            <input id="docsearch" type="text" class="w-full pl-8 pr-2 py-2 bg-grey" placeholder='Search documentation (Press "/" to focus)' />
+        </div>
+
+        <div class="hidden lg:flex lg:flex-1 items-center">
+            <a href="https://github.com/tightenco/jigsaw" title="Contribute to Jigsaw on GitHub" class="flex mr-3 text-blue-darker pl-8">
+                <img src="../../assets/img/GitHub.svg" alt="GitHub alien logo">
+            </a>
+
+            <p class="text-sm text-blue-dark mb-0 leading-tight">
+                A project by
+                <a href="https://tighten.co" title="Tighten | Product Development for Web + Mobile"
+                    class="text-purple">Tighten</a>
+            </p>
+        </div>
+
+        <navigation-toggle></navigation-toggle>
+    </nav>
+</header>
+
+<div class="bg-brown-lightest min-h-screen pt-16 md:pt-24 lg:pt-32 px-0 md:px-6">
+    <div class="flex flex-col lg:flex-row justify-center max-w-3xl mx-auto">
+        <navigation :links='{"Installation":{"root":"\/docs\/installation","children":{"Using a Starter Template":{"root":"\/docs\/starter-templates"}}},"Building \u0026 Previewing":{"root":"\/docs\/building-and-previewing","children":{"Environments":{"root":"\/docs\/building-and-previewing-environments"}}},"Compiling Assets":{"root":"\/docs\/compiling-assets"},"Creating your Site\u0027s Content":{"root":"\/docs\/content","children":{"Blade Templates \u0026 Partials":{"root":"\/docs\/content-blade"},"Markdown":{"root":"\/docs\/content-markdown"},"Other File Types":{"root":"\/docs\/content-other-file-types"}}},"Site Variables":{"root":"\/docs\/site-variables"},"Helper Methods":{"root":"\/docs\/helper-methods"},"Page Metadata":{"root":"\/docs\/page-metadata"},"Collections":{"root":"\/docs\/collections","children":{"Extending Parent Templates":{"root":"\/docs\/collections-extending-parent-templates"},"Paths":{"root":"\/docs\/collections-paths"},"Sorting":{"root":"\/docs\/collections-sorting"},"Filtering":{"root":"\/docs\/collections-filtering"},"Mapping":{"root":"\/docs\/collections-mapping"},"Pagination":{"root":"\/docs\/collections-pagination"},"Variables and Functions":{"root":"\/docs\/collections-variables-and-functions"},"Remote Collections":{"root":"\/docs\/collections-remote-collections"}}},"Pretty Urls":{"root":"\/docs\/pretty-urls"},"Custom 404 Page":{"root":"\/docs\/custom-404-page"},"Event Listeners":{"root":"\/docs\/event-listeners"},"Deploying Your Site":{"root":"\/docs\/deploying-your-site"}}'></navigation>
+
+        <div class="markdown bg-white w-full lg:max-w-md xl:max-w-lg md:mb-6 lg:mb-10 px-6 xl:px-10 pt-4 pb-8 font-normal sm:shadow md:rounded-lg" v-pre>
+            <h4><a href="../content/index.html">Creating Your Site's Content</a></h4>
+<h2>Blade Templates &amp; Partials</h2>
+<p>One of the biggest benefits of a templating language is the ability to create reusable layouts and partials. Jigsaw gives you access to all the templating features and control structures of Blade that are available in Laravel (learn more about Blade layouts in the <a href="https://laravel.com/docs/7.x/blade">official Blade documentation</a>).</p>
+<h3>Defining a Layout</h3>
+<p>Layouts themselves are just basic Blade templates that have one or more <code>@yield</code> calls where child templates can render their contents.</p>
+<p>A basic master layout could look like this:</p>
+<pre><code>&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+    &lt;head&gt;
+        &lt;title&gt;The Amazing Web&lt;/title&gt;
+    &lt;/head&gt;
+    &lt;body&gt;
+        &lt;header&gt;
+            My Amazing Site
+        &lt;/header&gt;
+
+        @yield('content')
+
+        &lt;footer&gt;
+            &lt;p&gt;©2016 Awesome Co&lt;/p&gt;
+        &lt;/footer&gt;
+    &lt;/body&gt;
+&lt;/html&gt;</code></pre>
+<p>Jigsaw provides a <code>/source/_layouts</code> directory out of the box with a basic master layout.</p>
+<h3>Extending a Layout</h3>
+<p>To extend a layout, create a template that specifies which layout to extend in an <code>@extends</code> directive, and which section(s) to populate using the <code>@section</code> directive:</p>
+<pre><code>@extends('_layouts.master')
+
+@section('content')
+    &lt;div&gt;
+        &lt;p&gt;The contents of my amazing homepage.&lt;/p&gt;
+    &lt;/div&gt;
+@endsection</code></pre>
+<p>Layouts and partials are referenced relative to the <code>source</code> directory using <em>dot notation</em>, where each dot represents a directory separator in the file name and the <code>.blade.php</code> extension omitted.</p>
+<h3>Partials</h3>
+<p>To include a template inside of another template, use the <code>@include</code> directive:</p>
+<pre><code>&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+    &lt;head&gt;
+        &lt;title&gt;The Amazing Web&lt;/title&gt;
+    &lt;/head&gt;
+    &lt;body&gt;
+        @include('_partials.header')
+
+        @yield('content')
+
+        @include('_partials.footer')
+    &lt;/body&gt;
+&lt;/html&gt;</code></pre>
+<p>You can pass data to a partial by passing an associative array as a second parameter:</p>
+<pre><code>&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+    &lt;head&gt;
+        &lt;title&gt;The Amazing Web&lt;/title&gt;
+    &lt;/head&gt;
+    &lt;body&gt;
+        @include('_partials.header', ['page_title' =&gt; 'My Amazing Site'])
+
+        @yield('content')
+
+        @include('_partials.footer')
+    &lt;/body&gt;
+&lt;/html&gt;</code></pre>
+<p>That data is then available in your partial as a normal variable:</p>
+<pre><code>&lt;!-- _partials/header.blade.php --&gt;
+&lt;header&gt;
+    {{ $page_title }}
+&lt;/header&gt;</code></pre>
+<h3>Preventing layouts &amp; partials from rendering</h3>
+<p>Since it's important that layouts and partials are never rendered on their own, you need to be able to tell Jigsaw when a file shouldn't be rendered.</p>
+<p>To prevent a file or folder from being rendered, simply prefix it with an underscore:</p>
+<div class="files">
+    <div class="folder folder--open">source
+        <div class="folder">_assets</div>
+        <div class="folder folder--open focus">_layouts
+            <div class="file">master.blade.php</div>
+        </div>
+        <div class="folder">assets</div>
+        <div class="file">index.blade.php</div>
+    </div>
+    <div class="ellipsis">...</div>
+</div>
+<p>Jigsaw gives you a <code>/_layouts</code> directory by default, but you can create any files or directories you need; anything prefixed with an underscore will not be rendered directly to <code>/build_local</code>.</p>
+<p>For example, if you wanted a place to store all of your partials, you could create a directory called <code>_partials</code>:</p>
+<div class="files">
+    <div class="folder folder--open">source
+        <div class="folder">_assets</div>
+        <div class="folder">_layouts</div>
+        <div class="folder folder--open focus">_partials
+            <div class="file">footer.blade.php</div>
+            <div class="file">header.blade.php</div>
+        </div>
+        <div class="folder">assets</div>
+        <div class="file">index.blade.php</div>
+    </div>
+    <div class="ellipsis">...</div>
+</div>
+<p>Since the <code>_partials</code> directory starts with an underscore, those files won't be rendered when you generate your site, but will still be available to <code>@include</code> in your other templates.</p>
+<hr />
+<h3>Extending Blade with custom directives</h3>
+<p>Jigsaw gives you the ability to extend Blade with <a href="https://laravel.com/docs/7.x/blade#extending-blade">custom directives</a>, just as you can with Laravel. To do this, create a <code>blade.php</code> file at the root level of your Jigsaw project (at the same level as <code>config.php</code>), and return an array of directives keyed by the directive name, each returning a closure.</p>
+<p>For example, you can create a custom <code>@datetime($timestamp)</code> directive to format a given integer timestamp as a date in your Blade templates:</p>
+<blockquote>
+<p><em>blade.php</em></p>
+</blockquote>
+<pre><code>return [
+    'datetime' =&gt; function ($timestamp) {
+        return '&lt;?php echo date("l, F j, Y", ' . $timestamp . '); ?&gt;';
+    }
+];</code></pre>
+<p>Alternatively, the <code>blade.php</code> file receives a variable named <code>$bladeCompiler</code>, which exposes an instance of <code>\Illuminate\View\Compilers\BladeCompiler</code>. With this, you can create custom Blade directives, <a href="https://laravel.com/docs/7.x/blade#extending-blade">aliased components</a>, named <code>@include</code> statements, or other extended Blade control structures:</p>
+<blockquote>
+<p><em>blade.php</em></p>
+</blockquote>
+<pre><code class="language-php">&lt;?php
+
+/** @var \Illuminate\View\Compilers\BladeCompiler $bladeCompiler */
+
+$bladeCompiler-&gt;directive('datetime', function ($timestamp) {
+    return '&lt;?php echo date("l, F j, Y", ' . $timestamp . '); ?&gt;';
+});
+
+$bladeCompiler-&gt;component('_components.alert');
+
+$bladeCompiler-&gt;include('includes.copyright');</code></pre>
+<blockquote>
+<p><em>page.blade.php</em></p>
+</blockquote>
+<pre><code class="language-php">/** before */
+
+@component('_components.alert')
+    Pay attention to this!
+@endcomponent
+
+@include('_partials.meta.copyright', ['year' =&gt; '2018'])
+
+/** after */
+
+@alert
+    Pay attention to this!
+@endalert
+
+@copyright(['year' =&gt; '2018'])</code></pre>
+<hr />
+<h3>Specifying Blade hint paths</h3>
+<p>To use Blade hint paths/namespaces in your markup (for example, <code>email:components::section</code>), specify the path to the directory using the <code>viewHintPaths</code> key in <code>config.php</code>:</p>
+<blockquote>
+<p><em>config.php</em></p>
+</blockquote>
+<pre><code class="language-php">&lt;?php
+
+return [
+    'viewHintPaths' =&gt; [
+        'email:templates' =&gt; __DIR__.'/source/_layouts',
+        'email:components' =&gt; __DIR__.'/source/_components',
+        'email:partials' =&gt; __DIR__.'/source/_partials'
+    ]
+];</code></pre>        </div>
+
+        <navigation-on-page :headings="pageHeadings"></navigation-on-page>
+    </div>
+
+    <footer class="py-8 flex flex-col sm:flex-row justify-center items-center text-center">
+        <p class="text-grey-dark font-normal text-xs sm:text-sm my-1">Brought to you by the lovely humans at
+            <a href="https://tighten.co" class="text-purple hover:text-purple-darker font-normal no-underline sm:pr-4" title="Tighten | Product Development for Web + Mobile | Laravel + Vue.js">Tighten</a>
+        </p>
+
+        <a href="https://github.com/tightenco/jigsaw" class="sm:border-l border-purple-light sm:pl-4 text-purple text-xs sm:text-sm hover:text-purple-darker font-normal no-underline my-1"
+            title="Jigsaw on GitHub">Issues/Feature Requests</a>
+    </footer>
+</div>
+        </main>
+            <script src="../../assets/build/js/app.js%3Fid=9e8f196031e228434a73"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.js"></script>
+    <script type="text/javascript">
+        docsearch({
+            apiKey: '57a7f5b1e4e0a44c7e2f8e96abcbf674',
+            indexName: 'jigsaw',
+            inputSelector: '#docsearch'
+        });
+
+        document.addEventListener('keydown', (e) => {
+            if (e.keyCode == 191) {
+                document.getElementById('docsearch').focus();
+                e.preventDefault()
+            }
+            if (e.keyCode == 27) {
+                document.getElementById('docsearch').blur();
+                e.preventDefault()
+            }
+        });
+    </script>
+    </body>
+</html>

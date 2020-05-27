@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Jigsaw – Static Sites for Laravel Developers</title>
+
+        <link rel="icon" type="image/png" href="../../assets/img/jigsaw-logo.png">
+
+        <meta name="msapplication-TileColor" content="#773580">
+        <meta name="theme-color" content="#ffffff">
+
+        <link rel="stylesheet" href="../../../use.typekit.net/fac7rzg.css">
+
+        <link rel="stylesheet" type="text/css" href="../../assets/build/css/main.css%3Fid=e363eb510547c81027c5.css">
+
+        <link href='../../../fonts.googleapis.com/css%3Ffamily=Lato:100,300,300italic,400,400italic,500,500italic,700,700italic.css' rel='stylesheet' type='text/css'>
+
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.css" />
+    </head>
+
+    <body class="min-h-screen font-sans leading-tight">
+        <main id="vue-app">
+            <div class="w-full bg-brown-lightest border-t-5 border-purple"></div>
+
+            <header class="w-full bg-white absolute z-10 shadow-md px-4 md:px-6">
+    <nav class="flex items-center max-w-3xl mx-auto py-4" aria-role="navigation">
+        <a class="flex flex-shrink-0 lg:flex-1 items-center mr-1" href="../../index.html" title="Jigsaw by Tighten">
+            <img src="../../assets/img/jigsaw-logo.svg" alt="Jigsaw logo" class="w-10 lg:w-11 mr-3 shadow border-2 border-white rounded-lg" />
+
+            <h1 class="hidden mr-4 ml-4 uppercase tracking-wide text-blue-darker text-lg lg:text-2xl font-normal lg:ml-0 lg:inline-block">
+                Jigsaw
+            </h1>
+        </a>
+
+        <div class="w-full flex items-center lg:max-w-md xl:max-w-lg border-2 border-indigo-lighter rounded bg-grey">
+            <img src="../../assets/img/icon-search.svg" class="absolute z-10 h-4 ml-2">
+
+            <input id="docsearch" type="text" class="w-full pl-8 pr-2 py-2 bg-grey" placeholder='Search documentation (Press "/" to focus)' />
+        </div>
+
+        <div class="hidden lg:flex lg:flex-1 items-center">
+            <a href="https://github.com/tightenco/jigsaw" title="Contribute to Jigsaw on GitHub" class="flex mr-3 text-blue-darker pl-8">
+                <img src="../../assets/img/GitHub.svg" alt="GitHub alien logo">
+            </a>
+
+            <p class="text-sm text-blue-dark mb-0 leading-tight">
+                A project by
+                <a href="https://tighten.co" title="Tighten | Product Development for Web + Mobile"
+                    class="text-purple">Tighten</a>
+            </p>
+        </div>
+
+        <navigation-toggle></navigation-toggle>
+    </nav>
+</header>
+
+<div class="bg-brown-lightest min-h-screen pt-16 md:pt-24 lg:pt-32 px-0 md:px-6">
+    <div class="flex flex-col lg:flex-row justify-center max-w-3xl mx-auto">
+        <navigation :links='{"Installation":{"root":"\/docs\/installation","children":{"Using a Starter Template":{"root":"\/docs\/starter-templates"}}},"Building \u0026 Previewing":{"root":"\/docs\/building-and-previewing","children":{"Environments":{"root":"\/docs\/building-and-previewing-environments"}}},"Compiling Assets":{"root":"\/docs\/compiling-assets"},"Creating your Site\u0027s Content":{"root":"\/docs\/content","children":{"Blade Templates \u0026 Partials":{"root":"\/docs\/content-blade"},"Markdown":{"root":"\/docs\/content-markdown"},"Other File Types":{"root":"\/docs\/content-other-file-types"}}},"Site Variables":{"root":"\/docs\/site-variables"},"Helper Methods":{"root":"\/docs\/helper-methods"},"Page Metadata":{"root":"\/docs\/page-metadata"},"Collections":{"root":"\/docs\/collections","children":{"Extending Parent Templates":{"root":"\/docs\/collections-extending-parent-templates"},"Paths":{"root":"\/docs\/collections-paths"},"Sorting":{"root":"\/docs\/collections-sorting"},"Filtering":{"root":"\/docs\/collections-filtering"},"Mapping":{"root":"\/docs\/collections-mapping"},"Pagination":{"root":"\/docs\/collections-pagination"},"Variables and Functions":{"root":"\/docs\/collections-variables-and-functions"},"Remote Collections":{"root":"\/docs\/collections-remote-collections"}}},"Pretty Urls":{"root":"\/docs\/pretty-urls"},"Custom 404 Page":{"root":"\/docs\/custom-404-page"},"Event Listeners":{"root":"\/docs\/event-listeners"},"Deploying Your Site":{"root":"\/docs\/deploying-your-site"}}'></navigation>
+
+        <div class="markdown bg-white w-full lg:max-w-md xl:max-w-lg md:mb-6 lg:mb-10 px-6 xl:px-10 pt-4 pb-8 font-normal sm:shadow md:rounded-lg" v-pre>
+            <h2>Event Listeners</h2>
+<p>Jigsaw provides three events that you can hook into, in order to run custom code before and after your build is processed.</p>
+<ul>
+<li>
+<p><strong>A <code>beforeBuild</code> event is fired before any <code>source</code> files have been processed</strong>. This gives you an opportunity to programmatically modify <code>config.php</code> variables, fetch data from external sources, or modify files in the <code>source</code> folder.</p>
+</li>
+<li>
+<p><strong>An <code>afterCollections</code> event is fired after any collections have been processed, but before any output files are built.</strong> This gives you access to the parsed contents of collection items.</p>
+</li>
+<li>
+<p><strong>An <code>afterBuild</code> event is fired after the build is complete, and all output files have been written to the <code>build</code> directory.</strong> This allows you to obtain a list of the output file paths (to use, for example, when creating a <code>sitemap.xml</code> file), programmatically create output files, or take care of any other post-processing tasks.</p>
+</li>
+</ul>
+<hr />
+<h3>Registering event listeners as closures</h3>
+<p>To add an event listener, head over to <code>bootstrap.php</code>. There, you can access the event bus with the <code>$events</code> variable, adding listeners by calling the name of the event:</p>
+<blockquote>
+<p><em>bootstrap.php</em></p>
+</blockquote>
+<pre><code class="language-php">$events-&gt;beforeBuild(function ($jigsaw) {
+   // your code here
+});
+
+$events-&gt;afterCollections(function ($jigsaw) {
+   // your code here
+});
+
+$events-&gt;afterBuild(function ($jigsaw) {
+   // your code here
+});</code></pre>
+<p>At its simplest, you can define your event listeners as closures that accept an instance of <code>Jigsaw</code>. The <code>Jigsaw</code> instance contains a number of <a href="index.html#helperMethods">helper methods</a> to allow you to access information about the site and interact with files and config settings.</p>
+<p>For example, the following listener will fetch the current weather from an external API, and add it as a variable to <code>config.php</code>, where it can be referenced in your templates:</p>
+<blockquote>
+<p><em>bootstrap.php</em></p>
+</blockquote>
+<pre><code class="language-php">$events-&gt;beforeBuild(function ($jigsaw) {
+    $url = "http://api.openweathermap.org/data/2.5/weather?" . http_build_query([
+        'q' =&gt; $jigsaw-&gt;getConfig('city'),
+        'appid' =&gt; $jigsaw-&gt;getConfig('openweathermap_api_key'),
+        'units' =&gt; 'imperial',
+    ]);
+
+    $jigsaw-&gt;setConfig('current_weather', json_decode(file_get_contents($url))-&gt;main);
+});</code></pre>
+<hr />
+<h3>Registering event listeners as classes</h3>
+<p>For more complex event listeners, you can specify the name of a class, or an array of class names, instead of a closure. These classes can either live directly in <code>bootstrap.php</code> or in a separate directory. Listener classes should countain a <code>handle()</code> method with accepts an instance of <code>Jigsaw</code>:</p>
+<blockquote>
+<p><em>bootstrap.php</em></p>
+</blockquote>
+<pre><code class="language-php">$events-&gt;afterBuild(GenerateSitemap::class);
+
+// or
+
+$events-&gt;afterBuild([GenerateSitemap::class, SendNotification::class]);</code></pre>
+<blockquote>
+<p><em>listeners/GenerateSitemap.php</em></p>
+</blockquote>
+<pre><code class="language-php">&lt;?php namespace App\Listeners;
+
+use TightenCo\Jigsaw\Jigsaw;
+use samdark\sitemap\Sitemap;
+
+class GenerateSitemap
+{
+    public function handle(Jigsaw $jigsaw)
+    {
+        $baseUrl = $jigsaw-&gt;getConfig('baseUrl');
+        $sitemap = new Sitemap($jigsaw-&gt;getDestinationPath() . '/sitemap.xml');
+
+        collect($jigsaw-&gt;getOutputPaths())-&gt;each(function ($path) use ($baseUrl, $sitemap) {
+            if (! $this-&gt;isAsset($path)) {
+                $sitemap-&gt;addItem($baseUrl . $path, time(), Sitemap::DAILY);
+            }
+        });
+
+        $sitemap-&gt;write();
+    }
+
+    public function isAsset($path)
+    {
+        return starts_with($path, '/assets');
+    }
+}</code></pre>
+<p>If there are multiple listeners defined for a single event, they will be fired in the order in which they were defined.</p>
+<p>To call a listener class that lives in a separate directory, the class namespace should be added to a <code>composer.json</code> file:</p>
+<blockquote>
+<p><em>composer.json</em></p>
+</blockquote>
+<pre><code class="language-json">{
+    "autoload": {
+        "psr-4": {
+            "App\\Listeners\\": "listeners"
+        }
+    }
+}</code></pre>
+<hr />
+<p><a name="helperMethods"></a></p>
+<h3>Helper methods in $jigsaw</h3>
+<p>The instance of <code>Jigsaw</code> available to each event listener includes the following helper methods:</p>
+<hr />
+<p><code>getEnvironment()</code></p>
+<p>Returns the current environment, e.g. <code>local</code> or <code>production</code></p>
+<hr />
+<p><code>getCollections()</code></p>
+<p>In <code>beforeBuild</code>, returns an array of collection names; in <strong>afterCollections</strong> and <strong>afterBuild</strong>, returns a collection of collection items, keyed by collection name.</p>
+<hr />
+<p><code>getCollection($collection)</code> <em>(<strong>afterCollections</strong> and <strong>afterBuild</strong> only)</em></p>
+<p>Returns the items in a particular collection, keyed by their <code>source</code> filenames. Each item contains the variables defined for the collection item, as well as access to all collection item methods like <code>getContent()</code>.</p>
+<hr />
+<p><code>getConfig()</code></p>
+<p>Returns the settings array from <code>config.php</code></p>
+<hr />
+<p><code>getConfig($key)</code></p>
+<p>Returns a specific setting from <code>config.php</code>. <br>Dot notation (e.g. <code>getConfig('collections.posts.items')</code> can be used to get nested items.</p>
+<hr />
+<p><code>setConfig($key, $value)</code></p>
+<p>Adds or modifies a setting in <code>config.php</code>. <br>Dot notation can be used to set nested items.</p>
+<hr />
+<p><code>getSourcePath()</code></p>
+<p>Returns the absolute path to the <code>source</code> directory</p>
+<hr />
+<p><code>setSourcePath($path)</code></p>
+<p>Sets the path to the <code>source</code> directory</p>
+<hr />
+<p><code>getDestinationPath()</code></p>
+<p>Returns the absolute path to the <code>build</code> directory</p>
+<hr />
+<p><code>setDestinationPath($path)</code></p>
+<p>Sets the path to the <code>build</code> directory</p>
+<hr />
+<p><code>getPages()</code> <em>(<strong>afterBuild</strong> only)</em></p>
+<p>Returns a collection of all output files that were generated. For each item, the key contains the path of the output file relative to the <code>build</code> directory (e.g. <code>/posts/my-first-post</code>), while the value contains the contents of the <code>$page</code> variable for the source file. This exposes the <a href="../page-metadata/index.html">page metadata</a> functions such as <code>getPath()</code> and <code>getModifiedTime()</code> for each page, as well as any variables defined in the page's YAML header.</p>
+<hr />
+<p><code>getOutputPaths()</code> <em>(<strong>afterBuild</strong> only)</em></p>
+<p>Returns a collection of paths to the output files that were generated, relative to the <code>build</code> directory</p>
+<hr />
+<p><code>readSourceFile($fileName)</code></p>
+<p>Returns the contents of a file in the <code>source</code> directory</p>
+<hr />
+<p><code>writeSourceFile($fileName, $contents)</code></p>
+<p>Allows you to write a file to the <code>source</code> directory</p>
+<hr />
+<p><code>readOutputFile($fileName)</code></p>
+<p>Returns the contents of a file in the <code>build</code> directory</p>
+<hr />
+<p><code>writeOutputFile($fileName, $contents)</code></p>
+<p>Allows you to write a file to the <code>build</code> directory</p>
+<hr />        </div>
+
+        <navigation-on-page :headings="pageHeadings"></navigation-on-page>
+    </div>
+
+    <footer class="py-8 flex flex-col sm:flex-row justify-center items-center text-center">
+        <p class="text-grey-dark font-normal text-xs sm:text-sm my-1">Brought to you by the lovely humans at
+            <a href="https://tighten.co" class="text-purple hover:text-purple-darker font-normal no-underline sm:pr-4" title="Tighten | Product Development for Web + Mobile | Laravel + Vue.js">Tighten</a>
+        </p>
+
+        <a href="https://github.com/tightenco/jigsaw" class="sm:border-l border-purple-light sm:pl-4 text-purple text-xs sm:text-sm hover:text-purple-darker font-normal no-underline my-1"
+            title="Jigsaw on GitHub">Issues/Feature Requests</a>
+    </footer>
+</div>
+        </main>
+            <script src="../../assets/build/js/app.js%3Fid=9e8f196031e228434a73"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.js"></script>
+    <script type="text/javascript">
+        docsearch({
+            apiKey: '57a7f5b1e4e0a44c7e2f8e96abcbf674',
+            indexName: 'jigsaw',
+            inputSelector: '#docsearch'
+        });
+
+        document.addEventListener('keydown', (e) => {
+            if (e.keyCode == 191) {
+                document.getElementById('docsearch').focus();
+                e.preventDefault()
+            }
+            if (e.keyCode == 27) {
+                document.getElementById('docsearch').blur();
+                e.preventDefault()
+            }
+        });
+    </script>
+    </body>
+</html>

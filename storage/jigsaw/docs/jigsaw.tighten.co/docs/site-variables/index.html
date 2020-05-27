@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Jigsaw – Static Sites for Laravel Developers</title>
+
+        <link rel="icon" type="image/png" href="../../assets/img/jigsaw-logo.png">
+
+        <meta name="msapplication-TileColor" content="#773580">
+        <meta name="theme-color" content="#ffffff">
+
+        <link rel="stylesheet" href="../../../use.typekit.net/fac7rzg.css">
+
+        <link rel="stylesheet" type="text/css" href="../../assets/build/css/main.css%3Fid=e363eb510547c81027c5.css">
+
+        <link href='../../../fonts.googleapis.com/css%3Ffamily=Lato:100,300,300italic,400,400italic,500,500italic,700,700italic.css' rel='stylesheet' type='text/css'>
+
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.css" />
+    </head>
+
+    <body class="min-h-screen font-sans leading-tight">
+        <main id="vue-app">
+            <div class="w-full bg-brown-lightest border-t-5 border-purple"></div>
+
+            <header class="w-full bg-white absolute z-10 shadow-md px-4 md:px-6">
+    <nav class="flex items-center max-w-3xl mx-auto py-4" aria-role="navigation">
+        <a class="flex flex-shrink-0 lg:flex-1 items-center mr-1" href="../../index.html" title="Jigsaw by Tighten">
+            <img src="../../assets/img/jigsaw-logo.svg" alt="Jigsaw logo" class="w-10 lg:w-11 mr-3 shadow border-2 border-white rounded-lg" />
+
+            <h1 class="hidden mr-4 ml-4 uppercase tracking-wide text-blue-darker text-lg lg:text-2xl font-normal lg:ml-0 lg:inline-block">
+                Jigsaw
+            </h1>
+        </a>
+
+        <div class="w-full flex items-center lg:max-w-md xl:max-w-lg border-2 border-indigo-lighter rounded bg-grey">
+            <img src="../../assets/img/icon-search.svg" class="absolute z-10 h-4 ml-2">
+
+            <input id="docsearch" type="text" class="w-full pl-8 pr-2 py-2 bg-grey" placeholder='Search documentation (Press "/" to focus)' />
+        </div>
+
+        <div class="hidden lg:flex lg:flex-1 items-center">
+            <a href="https://github.com/tightenco/jigsaw" title="Contribute to Jigsaw on GitHub" class="flex mr-3 text-blue-darker pl-8">
+                <img src="../../assets/img/GitHub.svg" alt="GitHub alien logo">
+            </a>
+
+            <p class="text-sm text-blue-dark mb-0 leading-tight">
+                A project by
+                <a href="https://tighten.co" title="Tighten | Product Development for Web + Mobile"
+                    class="text-purple">Tighten</a>
+            </p>
+        </div>
+
+        <navigation-toggle></navigation-toggle>
+    </nav>
+</header>
+
+<div class="bg-brown-lightest min-h-screen pt-16 md:pt-24 lg:pt-32 px-0 md:px-6">
+    <div class="flex flex-col lg:flex-row justify-center max-w-3xl mx-auto">
+        <navigation :links='{"Installation":{"root":"\/docs\/installation","children":{"Using a Starter Template":{"root":"\/docs\/starter-templates"}}},"Building \u0026 Previewing":{"root":"\/docs\/building-and-previewing","children":{"Environments":{"root":"\/docs\/building-and-previewing-environments"}}},"Compiling Assets":{"root":"\/docs\/compiling-assets"},"Creating your Site\u0027s Content":{"root":"\/docs\/content","children":{"Blade Templates \u0026 Partials":{"root":"\/docs\/content-blade"},"Markdown":{"root":"\/docs\/content-markdown"},"Other File Types":{"root":"\/docs\/content-other-file-types"}}},"Site Variables":{"root":"\/docs\/site-variables"},"Helper Methods":{"root":"\/docs\/helper-methods"},"Page Metadata":{"root":"\/docs\/page-metadata"},"Collections":{"root":"\/docs\/collections","children":{"Extending Parent Templates":{"root":"\/docs\/collections-extending-parent-templates"},"Paths":{"root":"\/docs\/collections-paths"},"Sorting":{"root":"\/docs\/collections-sorting"},"Filtering":{"root":"\/docs\/collections-filtering"},"Mapping":{"root":"\/docs\/collections-mapping"},"Pagination":{"root":"\/docs\/collections-pagination"},"Variables and Functions":{"root":"\/docs\/collections-variables-and-functions"},"Remote Collections":{"root":"\/docs\/collections-remote-collections"}}},"Pretty Urls":{"root":"\/docs\/pretty-urls"},"Custom 404 Page":{"root":"\/docs\/custom-404-page"},"Event Listeners":{"root":"\/docs\/event-listeners"},"Deploying Your Site":{"root":"\/docs\/deploying-your-site"}}'></navigation>
+
+        <div class="markdown bg-white w-full lg:max-w-md xl:max-w-lg md:mb-6 lg:mb-10 px-6 xl:px-10 pt-4 pb-8 font-normal sm:shadow md:rounded-lg" v-pre>
+            <h2>Site Variables</h2>
+<p>Anything you add to the array in <code>config.php</code> will be made available in all of your templates, as a property of the <code>$page</code> object.</p>
+<p>For example, if your <code>config.php</code> looks like this:</p>
+<pre><code class="language-php">&lt;?php
+
+return [
+    'contact_email' =&gt; 'support@example.com',
+];</code></pre>
+<p>...you can use that variable in any of your templates like so:</p>
+<pre><code>@extends('_layouts.master')
+
+@section('content')
+    &lt;p&gt;Contact us at {{ $page-&gt;contact_email }}&lt;/p&gt;
+@stop</code></pre>
+<p>If you prefer, site variables can also be accessed as arrays:</p>
+<pre><code>&lt;p&gt;Contact us at {{ $page['contact_email'] }}&lt;/p&gt;</code></pre>
+<p>Jigsaw also supports environment-specific site variables, which you can learn more about <a href="../environments/index.html">here</a>.</p>        </div>
+
+        <navigation-on-page :headings="pageHeadings"></navigation-on-page>
+    </div>
+
+    <footer class="py-8 flex flex-col sm:flex-row justify-center items-center text-center">
+        <p class="text-grey-dark font-normal text-xs sm:text-sm my-1">Brought to you by the lovely humans at
+            <a href="https://tighten.co" class="text-purple hover:text-purple-darker font-normal no-underline sm:pr-4" title="Tighten | Product Development for Web + Mobile | Laravel + Vue.js">Tighten</a>
+        </p>
+
+        <a href="https://github.com/tightenco/jigsaw" class="sm:border-l border-purple-light sm:pl-4 text-purple text-xs sm:text-sm hover:text-purple-darker font-normal no-underline my-1"
+            title="Jigsaw on GitHub">Issues/Feature Requests</a>
+    </footer>
+</div>
+        </main>
+            <script src="../../assets/build/js/app.js%3Fid=9e8f196031e228434a73"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.js"></script>
+    <script type="text/javascript">
+        docsearch({
+            apiKey: '57a7f5b1e4e0a44c7e2f8e96abcbf674',
+            indexName: 'jigsaw',
+            inputSelector: '#docsearch'
+        });
+
+        document.addEventListener('keydown', (e) => {
+            if (e.keyCode == 191) {
+                document.getElementById('docsearch').focus();
+                e.preventDefault()
+            }
+            if (e.keyCode == 27) {
+                document.getElementById('docsearch').blur();
+                e.preventDefault()
+            }
+        });
+    </script>
+    </body>
+</html>

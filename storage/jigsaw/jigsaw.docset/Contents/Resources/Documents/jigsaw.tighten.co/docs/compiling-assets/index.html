@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Jigsaw &ndash; Static Sites for Laravel Developers</title>
+
+        <link rel="icon" type="image/png" href="../../assets/img/jigsaw-logo.png">
+
+        <meta name="msapplication-TileColor" content="#773580">
+        <meta name="theme-color" content="#ffffff">
+
+        <link rel="stylesheet" href="../../../use.typekit.net/fac7rzg.css">
+
+        <link rel="stylesheet" type="text/css" href="../../assets/build/css/main.css%3Fid=e363eb510547c81027c5.css">
+
+        <link href="../../../fonts.googleapis.com/css%3Ffamily=Lato:100,300,300italic,400,400italic,500,500italic,700,700italic.css" rel="stylesheet" type="text/css">
+
+        
+    </head>
+
+    <body class="min-h-screen font-sans leading-tight">
+        <main id="vue-app">
+            
+
+            
+
+<div class="bg-brown-lightest min-h-screen px-0">
+    <div class="flex flex-col lg:flex-row justify-center mx-auto">
+        
+
+        <div class="markdown bg-white w-full px-6 pb-8 font-normal" v-pre style="margin-top: -1.5rem;">
+            <a name="//apple_ref/cpp/Section/Top" class="dashAnchor"></a><h2 class="text-3xl">Compiling Assets with Laravel Mix</h2>
+<p>Jigsaw sites are configured with support for <a href="https://laravel.com/docs/7.x/mix">Laravel Mix</a> out of the box. If you've ever used Mix in a Laravel project, you already know how to use Mix with Jigsaw.</p>
+<hr>
+<a id="setup" name="//apple_ref/cpp/Section/Setup" class="dashAnchor"></a><h3 style="font-size: 1.5rem;">Setup</h3>
+<p>To get started, first make sure you have Node.js and NPM installed in your environment.</p>
+<p>Once you have Node.js and NPM installed, pull in the dependencies needed to compile your assets:</p>
+<pre><code>$ npm install</code></pre>
+<p>For more detailed installation instructions, check out the <a href="https://laravel.com/docs/7.x/mix">full Laravel Mix documentation</a>.</p>
+<a id="organizing-your-assets" name="//apple_ref/cpp/Section/Organizing%20your%20assets" class="dashAnchor"></a><h3 style="font-size: 1.5rem;">Organizing your assets</h3>
+<p>By default, any assets you want to process with Mix should live in <code>/source/_assets</code>:</p>
+<div class="files">
+    <div class="folder folder--open">source
+        <div class="folder folder--open focus">_assets
+            <div class="folder folder--open">js
+                <div class="file">app.js</div>
+            </div>
+            <div class="folder folder--open">sass
+                <div class="file">main.scss</div>
+            </div>
+        </div>
+        <div class="folder folder--open">_layouts
+            <div class="file">master.blade.php</div>
+        </div>
+        <div class="folder folder--open">assets
+            <div class="folder">build</div>
+            <div class="folder folder--open">images
+                <div class="file">jigsaw.png</div>
+            </div>
+        </div>
+        <div class="file">index.blade.php</div>
+    </div>
+    <div class="folder">tasks</div>
+    <div class="folder">vendor</div>
+    <div class="ellipsis">...</div>
+</div>
+<p>Mix looks for each asset type <em>(like Sass, Less, or Coffeescript)</em> in a subdirectory named after that asset type. We recommend following this convention to avoid additional configuration.</p>
+<p>By default, once Webpack compiles your assets, they will be placed in their corresponding subdirectories in <code>/source/assets/build</code>:</p>
+<div class="files">
+    <div class="folder folder--open">source
+        <div class="folder folder--open">_assets
+            <div class="folder folder--open">js
+                <div class="file">app.js</div>
+            </div>
+            <div class="folder folder--open">sass
+                <div class="file">main.scss</div>
+            </div>
+        </div>
+        <div class="folder folder--open">_layouts
+            <div class="file">master.blade.php</div>
+        </div>
+        <div class="folder folder--open focus">assets
+            <div class="folder folder--open">build
+                <div class="folder folder--open">css
+                    <div class="file">main.css</div>
+                </div>
+                <div class="folder folder--open">js
+                    <div class="file">main.js</div>
+                </div>
+                <div class="file">mix-manifest.json</div>
+            </div>
+            <div class="folder folder--open">images
+                <div class="file">jigsaw.png</div>
+            </div>
+        </div>
+        <div class="file">index.blade.php</div>
+    </div>
+    <div class="folder">tasks</div>
+    <div class="folder">vendor</div>
+    <div class="ellipsis">...</div>
+</div>
+<p>Then, when Jigsaw builds your site, the entire <code>/source/assets</code> directory containing your <code>build</code> files (and any other directories containing static assets, such as <code>images</code> or <code>fonts</code>, that you choose to store there) will be copied to <code>/build_local</code> or <code>/build_production</code>.</p>
+<p>In your templates, you can reference these assets using the <code>mix</code> Blade directive. If you are using the default setup, your compiled assets will be copied to your site's <code>/assets/build</code> directory, which should be specified as the 2nd parameter of the <code>mix</code> directive:</p>
+<pre><code class="language-php">&lt;link rel="stylesheet" href="{{ mix('css/main.css', 'assets/build') }}"&gt;</code></pre>
+<a id="compiling-your-assets" name="//apple_ref/cpp/Section/Compiling%20your%20assets" class="dashAnchor"></a><h3 style="font-size: 1.5rem;">Compiling your assets</h3>
+<p>To compile your assets, run:</p>
+<pre><code>$ npm run dev</code></pre>
+<p>First, Webpack will compile your assets and store them in the <code>/source/assets/build</code> directory. Then, Jigsaw's <code>build</code> command will be run automatically to build your site (including your compiled assets) to <code>/build_local</code>. You can then preview your changes in the browser.</p>
+<a id="watching-for-changes" name="//apple_ref/cpp/Section/Watching%20for%20changes" class="dashAnchor"></a><h3 style="font-size: 1.5rem;">Watching for changes</h3>
+<p>Manually running <code>npm run dev</code> every time you make a change gets old pretty fast.</p>
+<p>Instead, you can run the following command to watch your project for changes:</p>
+<pre><code>$ npm run watch</code></pre>
+<p>Any time any file changes in your project, Webpack will recompile your assets, and Jigsaw will regenerate your static HTML pages to <code>/build_local</code>.</p>
+<p>Using <code>npm run watch</code> also enables <a href="https://www.browsersync.io/">Browsersync</a>, so your browser will automatically reload any time you make a change. It also manages serving your site locally for you, so you don't need to start your own local PHP server.</p>
+<p>You can also watch a specific environment by running <code>npm run local</code>, <code>npm run staging</code>, or <code>npm run production</code>.</p>
+<hr>
+<a id="changing-asset-locations" name="//apple_ref/cpp/Section/Changing%20asset%20locations" class="dashAnchor"></a><h3 style="font-size: 1.5rem;">Changing asset locations</h3>
+<p>If you'd like to change the source and destination directories for your assets, edit the following lines in <code>webpack.mix.js</code>:</p>
+<pre><code class="language-js">mix.setPublicPath('source/assets/build');
+
+mix.js('source/_assets/js/main.js', 'js/')
+    .sass('source/_assets/sass/main.scss', 'css')
+    .options({
+        processCssUrls: false,
+    }).version();</code></pre>
+<hr>
+<a id="enabling-different-preprocessors" name="//apple_ref/cpp/Section/Enabling%20different%20preprocessors" class="dashAnchor"></a><h3 style="font-size: 1.5rem;">Enabling different preprocessors</h3>
+<p>Jigsaw ships with the following <code>webpack.mix.js</code> and is configured to use Sass out of the box:</p>
+<pre><code class="language-js">let mix = require('laravel-mix');
+let build = require('./tasks/build.js');
+
+mix.disableSuccessNotifications();
+mix.setPublicPath('source/assets/build');
+mix.webpackConfig({
+    plugins: [
+        build.jigsaw,
+        build.browserSync(),
+        build.watch(['source/**/*.md', 'source/**/*.php', 'source/**/*.scss', '!source/**/_tmp/*']),
+    ]
+});
+
+mix.js('source/_assets/js/main.js', 'js')
+    .sass('source/_assets/sass/main.scss', 'css')
+    .options({
+        processCssUrls: false,
+    }).version();</code></pre>
+<p>If you'd like to switch to Less, use Coffeescript, or take advantage of any other Mix features, feel free to edit this file to your heart's content. Here's an example of what it might look like to use Less and React:</p>
+<pre><code class="language-js">mix.react('source/_assets/js/main.js', 'js')
+    .less('source/_assets/sass/main.less', 'css')
+    .version();</code></pre>
+<hr>
+<a id="inlining-your-assets" name="//apple_ref/cpp/Section/Inlining%20your%20assets" class="dashAnchor"></a><h3 style="font-size: 1.5rem;">Inlining your assets</h3>
+<p>You may choose to inline your CSS or JavaScript assets into the <code>&lt;style&gt;</code> or <code>&lt;script&gt;</code> tags in your page <code>&lt;head&gt;</code>, to save a network request and to avoid blocking the rest of the page from loading. The <code>inline</code> helper function will accomplish this:</p>
+<pre><code>{{ inline(mix('css/main.css', 'assets/build')) }}</code></pre>
+<hr>
+<a id="note-for-sass-users" name="//apple_ref/cpp/Section/Note%20for%20Sass%20users" class="dashAnchor"></a><h3 style="font-size: 1.5rem;">Note for Sass users</h3>
+<p>To prevent URLs in your <code>.scss</code> files&mdash;such as background images and fonts&mdash;from being processed and modified by Mix, set the <code>processCssUrls</code> option to <code>false</code> in your <code>webpack.mix.js</code> file.</p>        </div>
+
+        
+    </div>
+
+    
+</div>
+        </main>
+            <script src="../../assets/build/js/app.js%3Fid=9e8f196031e228434a73"></script>
+    
+    
+    </body>
+</html>

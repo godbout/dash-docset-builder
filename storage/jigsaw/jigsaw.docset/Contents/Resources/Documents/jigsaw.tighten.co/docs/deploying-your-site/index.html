@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Jigsaw &ndash; Static Sites for Laravel Developers</title>
+
+        <link rel="icon" type="image/png" href="../../assets/img/jigsaw-logo.png">
+
+        <meta name="msapplication-TileColor" content="#773580">
+        <meta name="theme-color" content="#ffffff">
+
+        <link rel="stylesheet" href="../../../use.typekit.net/fac7rzg.css">
+
+        <link rel="stylesheet" type="text/css" href="../../assets/build/css/main.css%3Fid=e363eb510547c81027c5.css">
+
+        <link href="../../../fonts.googleapis.com/css%3Ffamily=Lato:100,300,300italic,400,400italic,500,500italic,700,700italic.css" rel="stylesheet" type="text/css">
+
+        
+    </head>
+
+    <body class="min-h-screen font-sans leading-tight">
+        <main id="vue-app">
+            
+
+            
+
+<div class="bg-brown-lightest min-h-screen px-0">
+    <div class="flex flex-col lg:flex-row justify-center mx-auto">
+        
+
+        <div class="markdown bg-white w-full px-6 pb-8 font-normal" v-pre style="margin-top: -1.5rem;">
+            <a name="//apple_ref/cpp/Section/Top" class="dashAnchor"></a><h2 class="text-3xl">Deploying Your Site</h2>
+<p>Since Jigsaw sites are just static HTML and Javascript, they are simple and cheap to deploy and host.</p>
+<a id="using-github-pages" name="//apple_ref/cpp/Section/Using%20GitHub%20Pages" class="dashAnchor"></a><h3 style="font-size: 1.5rem;">Using GitHub Pages</h3>
+<p><a href="https://pages.github.com/">GitHub Pages</a> is a free service for hosting static sites offered by GitHub. To get started, first read through <a href="https://help.github.com/categories/github-pages-basics/">the documentation</a> to get an understanding of how the service works.</p>
+<p>The approach we use at Tighten for deploying Jigsaw sites to GitHub pages looks like this:</p>
+<ol>
+<li>
+<p>Build your site for production</p>
+<pre><code>$ npm run production</code></pre>
+</li>
+<li>
+<p>Commit the <code>build_production</code> folder to your repository</p>
+<pre><code>$ git add build_production &amp;&amp; git commit -m "Build for deploy"</code></pre>
+</li>
+<li>
+<p>Use <code>git subtree push</code> to push <em>just</em> the <code>build_production</code> folder to your <code>gh-pages</code> branch</p>
+<pre><code>$ git subtree push --prefix build_production origin gh-pages</code></pre>
+</li>
+</ol>
+<a id="using-netlify" name="//apple_ref/cpp/Section/Using%20Netlify" class="dashAnchor"></a><h3 style="font-size: 1.5rem;">Using Netlify</h3>
+<p><a href="https://www.netlify.com/">Netlify</a> is a service that provides free static site hosting and continuous deployment that can be configured to play nice with any static site generator.</p>
+<p>To deploy a site to Netlify, first create a <code>netlify.toml</code> file with the following configuration:</p>
+<pre><code class="language-toml">[build]
+
+command = "npm run production"
+publish = "build_production"
+environment = { PHP_VERSION = "7.2" }</code></pre>
+<p>Push this file to your repository.</p>
+<p>Then <a href="https://app.netlify.com/start">connect your repository to the Netlify app</a> to setup continuous deployment.</p>
+<p>You can skip the build and deploy settings because Netlify will read the <code>netlify.toml</code> file we created earlier.</p>
+<a id="using-amazon-s3" name="//apple_ref/cpp/Section/Using%20Amazon%20S3" class="dashAnchor"></a><h3 style="font-size: 1.5rem;">Using Amazon S3</h3>
+<p><a href="https://aws.amazon.com/s3/">Amazon S3</a> is a very affordable service for hosting static assets. You might have used it in the past for hosting things like images, user uploads, or PDFs in your web applications.</p>
+<p>What you might not have known is that Amazon S3 also has first class support for hosting static sites, like your Jigsaw projects.</p>
+<p>To deploy a site to S3, first build your site for production:</p>
+<pre><code>$ ./vendor/bin/jigsaw build production</code></pre>
+<p>Then simply follow the steps in <a href="http://docs.aws.amazon.com/gettingstarted/latest/swh/website-hosting-intro.html">Amazon's static site documentation</a> to deploy your <code>build_production</code> folder to your S3 bucket.</p>
+<a id="manually" name="//apple_ref/cpp/Section/Manually" class="dashAnchor"></a><h3 style="font-size: 1.5rem;">Manually</h3>
+<p>If you have an existing server that you'd like to use to host your Jigsaw site, all you need to do is get the contents <code>build_production</code> into a public folder that's pointed at by the URL you'd like to use.</p>
+<a id="changing-the-source-and-destination-directories" name="//apple_ref/cpp/Section/Changing%20the%20Source%20and%20Destination%20Directories" class="dashAnchor"></a><h3 style="font-size: 1.5rem;">Changing the Source and Destination Directories</h3>
+<p>Jigsaw will look for your source files in a <code>source</code> directory, and will output your files to a directory named <code>build_</code> followed by the environment you specified in the <code>build</code> command (<code>build_local</code> by default, or <code>build_staging</code>, <code>build_production</code>, etc.). You can, however, customize these locations by adding a <code>build</code> key to the array in <code>config.php</code>, and specifying your own source and/or destination paths.</p>
+<blockquote>
+<p><em>config.php</em></p>
+</blockquote>
+<pre><code>&lt;?php
+
+return [
+    'build' =&gt; [
+        'source' =&gt; 'src',
+        'destination' =&gt; 'my_desination',
+    ],
+    ...</code></pre>
+<p>Source and destination paths are relative to your project root, i.e where your config.php file is located.</p>
+<blockquote>
+<p><em>config.php</em></p>
+</blockquote>
+<pre><code>&lt;?php
+
+return [
+    'build' =&gt; [
+        'destination' =&gt; '../build-one-level-up',
+    ],
+    ...</code></pre>
+<p>To include the environment name in your destination path, use the <code>{env}</code> token in your path name. <code>{env}</code> will be replaced by the environment specified when running the <code>build</code> command, and defaults to <code>local</code>.</p>
+<blockquote>
+<p><em>config.php</em></p>
+</blockquote>
+<pre><code>&lt;?php
+
+return [
+    'build' =&gt; [
+        'destination' =&gt; '../../{env}/public',
+    ],
+    ...</code></pre>
+<p>In this example, running <code>./vendor/bin/jigsaw build staging</code> would output your built files to staging/public, two levels up from your project root. Jigsaw will create any directories that do not already exist.</p>
+<p>You can also assign different source and build paths for different environments by using multiple <a href="../environments/index.html">environment-specific <code>config.php</code> files</a>. Source and destination paths in <code>config.production.php</code>, for example, will get merged with any build paths that have been defined in <code>config.php</code> when running <code>./vendor/bin/jigsaw build production</code>.</p>        </div>
+
+        
+    </div>
+
+    
+</div>
+        </main>
+            <script src="../../assets/build/js/app.js%3Fid=9e8f196031e228434a73"></script>
+    
+    
+    </body>
+</html>

@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Jigsaw – Static Sites for Laravel Developers</title>
+
+        <link rel="icon" type="image/png" href="../../assets/img/jigsaw-logo.png">
+
+        <meta name="msapplication-TileColor" content="#773580">
+        <meta name="theme-color" content="#ffffff">
+
+        <link rel="stylesheet" href="../../../use.typekit.net/fac7rzg.css">
+
+        <link rel="stylesheet" type="text/css" href="../../assets/build/css/main.css%3Fid=e363eb510547c81027c5.css">
+
+        <link href='../../../fonts.googleapis.com/css%3Ffamily=Lato:100,300,300italic,400,400italic,500,500italic,700,700italic.css' rel='stylesheet' type='text/css'>
+
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.css" />
+    </head>
+
+    <body class="min-h-screen font-sans leading-tight">
+        <main id="vue-app">
+            <div class="w-full bg-brown-lightest border-t-5 border-purple"></div>
+
+            <header class="w-full bg-white absolute z-10 shadow-md px-4 md:px-6">
+    <nav class="flex items-center max-w-3xl mx-auto py-4" aria-role="navigation">
+        <a class="flex flex-shrink-0 lg:flex-1 items-center mr-1" href="../../index.html" title="Jigsaw by Tighten">
+            <img src="../../assets/img/jigsaw-logo.svg" alt="Jigsaw logo" class="w-10 lg:w-11 mr-3 shadow border-2 border-white rounded-lg" />
+
+            <h1 class="hidden mr-4 ml-4 uppercase tracking-wide text-blue-darker text-lg lg:text-2xl font-normal lg:ml-0 lg:inline-block">
+                Jigsaw
+            </h1>
+        </a>
+
+        <div class="w-full flex items-center lg:max-w-md xl:max-w-lg border-2 border-indigo-lighter rounded bg-grey">
+            <img src="../../assets/img/icon-search.svg" class="absolute z-10 h-4 ml-2">
+
+            <input id="docsearch" type="text" class="w-full pl-8 pr-2 py-2 bg-grey" placeholder='Search documentation (Press "/" to focus)' />
+        </div>
+
+        <div class="hidden lg:flex lg:flex-1 items-center">
+            <a href="https://github.com/tightenco/jigsaw" title="Contribute to Jigsaw on GitHub" class="flex mr-3 text-blue-darker pl-8">
+                <img src="../../assets/img/GitHub.svg" alt="GitHub alien logo">
+            </a>
+
+            <p class="text-sm text-blue-dark mb-0 leading-tight">
+                A project by
+                <a href="https://tighten.co" title="Tighten | Product Development for Web + Mobile"
+                    class="text-purple">Tighten</a>
+            </p>
+        </div>
+
+        <navigation-toggle></navigation-toggle>
+    </nav>
+</header>
+
+<div class="bg-brown-lightest min-h-screen pt-16 md:pt-24 lg:pt-32 px-0 md:px-6">
+    <div class="flex flex-col lg:flex-row justify-center max-w-3xl mx-auto">
+        <navigation :links='{"Installation":{"root":"\/docs\/installation","children":{"Using a Starter Template":{"root":"\/docs\/starter-templates"}}},"Building \u0026 Previewing":{"root":"\/docs\/building-and-previewing","children":{"Environments":{"root":"\/docs\/building-and-previewing-environments"}}},"Compiling Assets":{"root":"\/docs\/compiling-assets"},"Creating your Site\u0027s Content":{"root":"\/docs\/content","children":{"Blade Templates \u0026 Partials":{"root":"\/docs\/content-blade"},"Markdown":{"root":"\/docs\/content-markdown"},"Other File Types":{"root":"\/docs\/content-other-file-types"}}},"Site Variables":{"root":"\/docs\/site-variables"},"Helper Methods":{"root":"\/docs\/helper-methods"},"Page Metadata":{"root":"\/docs\/page-metadata"},"Collections":{"root":"\/docs\/collections","children":{"Extending Parent Templates":{"root":"\/docs\/collections-extending-parent-templates"},"Paths":{"root":"\/docs\/collections-paths"},"Sorting":{"root":"\/docs\/collections-sorting"},"Filtering":{"root":"\/docs\/collections-filtering"},"Mapping":{"root":"\/docs\/collections-mapping"},"Pagination":{"root":"\/docs\/collections-pagination"},"Variables and Functions":{"root":"\/docs\/collections-variables-and-functions"},"Remote Collections":{"root":"\/docs\/collections-remote-collections"}}},"Pretty Urls":{"root":"\/docs\/pretty-urls"},"Custom 404 Page":{"root":"\/docs\/custom-404-page"},"Event Listeners":{"root":"\/docs\/event-listeners"},"Deploying Your Site":{"root":"\/docs\/deploying-your-site"}}'></navigation>
+
+        <div class="markdown bg-white w-full lg:max-w-md xl:max-w-lg md:mb-6 lg:mb-10 px-6 xl:px-10 pt-4 pb-8 font-normal sm:shadow md:rounded-lg" v-pre>
+            <h4><a href="../collections/index.html">Collections</a></h4>
+<h2>Remote Collections</h2>
+<p>In addition to using Markdown or Blade files for your collection items, you can return collection items directly from the <code>collections</code> array in <code>config.php</code>. This allows you to generate items programmatically—for example, you can <a href="index.html#remoteItems">fetch items from a remote source</a> such as an external API or API-based content management systems like Contentful, GraphCMS, or DatoCMS.</p>
+<hr />
+<h3>Building collection items in config.php</h3>
+<p>For any collection, items can be built by returning an array or collection of <code>items</code> from the collection's configuration array in <code>config.php</code>. Each item should be an array; the keys of the item will be converted to page variables (such as those that would typically appear in the YAML header of a Markdown file), while the value of the <code>content</code> key will serve as the content of the collection item. This content will be parsed as Markdown, and thus can contain either Markdown or HTML content; it will be available within your Blade templates with <code>@yield('content')</code> or by echoing <code>{!! $page-&gt;getContent() !!}</code>:</p>
+<blockquote>
+<p><em>config.php</em></p>
+</blockquote>
+<pre><code class="language-php">return [
+    'collections' =&gt; [
+        'posts' =&gt; [
+            'extends' =&gt; '_layouts.post',
+            'items' =&gt; [
+                [
+                    'title' =&gt; 'Title of my first post',
+                    'content' =&gt; '## The first post content',
+                ],
+                [
+                    'title' =&gt; 'Title of my second post',
+                    'content' =&gt; '## The second post content',
+                ],
+            ],
+        ],
+    ],
+];</code></pre>
+<blockquote>
+<p>_<em>layouts/post.blade.php</em></p>
+</blockquote>
+<pre><code class="language-php">@extends('_layouts.master')
+
+@section('body')
+    &lt;h1&gt;{{ $page-&gt;title }}&lt;/h1&gt;
+
+    @yield('content')
+@endsection</code></pre>
+<p>Under the hood, Jigsaw will:</p>
+<ol>
+<li>Create a <code>_tmp</code> directory in the collection's directory (e.g. <code>source/_posts/_tmp</code>) to store temporary Markdown files for each remote collection item</li>
+<li>Process the temporary files as though they were <code>*.blade.md</code> files</li>
+<li>Remove the temporary files when <code>jigsaw build</code> is complete</li>
+</ol>
+<p>In addition to <code>content</code>, each item can specify a <code>filename</code> key, which will be used as the name of the temporary Markdown file. If omitted, the filename will default to the name of the collection followed by an index, so <code>post_1.blade.md</code>, <code>post_2.blade.md</code>, etc. The resulting <code>path</code> of the output file will be processed according to the normal rules for collections.</p>
+<p>Alternatively, the <code>items</code> array can contain simple string values, which will be treated as the item's Markdown content, with no page variables:</p>
+<blockquote>
+<p><em>config.php</em></p>
+</blockquote>
+<pre><code class="language-php">return [
+    'collections' =&gt; [
+        'posts' =&gt; [
+            'extends' =&gt; '_layouts.post',
+            'items' =&gt; [
+                '## The content for post 1',
+                '## The content for post 2',
+                '## The content for post 3',
+            ],
+        ],
+    ],
+];</code></pre>
+<hr />
+<p><a name="remoteItems"></a></p>
+<h3>Fetching collection items from a remote API</h3>
+<p>The <code>items</code> key in <code>config.php</code> can also reference a closure that returns an array or collection of items. By using a closure, collection items can be fetched from anywhere—from a remote API, from other places on the filesystem, or built up programmatically. The resulting data can then be transformed before collection items are built. For example:</p>
+<blockquote>
+<p><em>config.php</em></p>
+</blockquote>
+<pre><code class="language-php">return [
+    'collections' =&gt; [
+        'posts' =&gt; [
+            'extends' =&gt; '_layouts.post',
+            'items' =&gt; function ($config) {
+                $posts = json_decode(file_get_contents('https://jsonplaceholder.typicode.com/posts'));
+
+                return collect($posts)-&gt;map(function ($post) {
+                    return [
+                        'title' =&gt; $post-&gt;title,
+                        'content' =&gt; $post-&gt;body,
+                    ];
+                });
+            },
+        ],
+    ],
+];</code></pre>
+<p>If you want the remote API to only be called when building for particular environments, you can place the <code>items</code> closure in the appropriate <code>config.{environment}.php</code> file. For example, to only access your remote API when running <code>build production</code>, create a <code>config.production.php</code> file and include your <code>items</code> closure there. This will prevent potentially long build times while running <code>build local</code> in development.</p>
+<p>The <code>items</code> closure receives the <code>config</code> array as a parameter, so you may also reference other config values (for example, an API URL) inside the closure.</p>        </div>
+
+        <navigation-on-page :headings="pageHeadings"></navigation-on-page>
+    </div>
+
+    <footer class="py-8 flex flex-col sm:flex-row justify-center items-center text-center">
+        <p class="text-grey-dark font-normal text-xs sm:text-sm my-1">Brought to you by the lovely humans at
+            <a href="https://tighten.co" class="text-purple hover:text-purple-darker font-normal no-underline sm:pr-4" title="Tighten | Product Development for Web + Mobile | Laravel + Vue.js">Tighten</a>
+        </p>
+
+        <a href="https://github.com/tightenco/jigsaw" class="sm:border-l border-purple-light sm:pl-4 text-purple text-xs sm:text-sm hover:text-purple-darker font-normal no-underline my-1"
+            title="Jigsaw on GitHub">Issues/Feature Requests</a>
+    </footer>
+</div>
+        </main>
+            <script src="../../assets/build/js/app.js%3Fid=9e8f196031e228434a73"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.js"></script>
+    <script type="text/javascript">
+        docsearch({
+            apiKey: '57a7f5b1e4e0a44c7e2f8e96abcbf674',
+            indexName: 'jigsaw',
+            inputSelector: '#docsearch'
+        });
+
+        document.addEventListener('keydown', (e) => {
+            if (e.keyCode == 191) {
+                document.getElementById('docsearch').focus();
+                e.preventDefault()
+            }
+            if (e.keyCode == 27) {
+                document.getElementById('docsearch').blur();
+                e.preventDefault()
+            }
+        });
+    </script>
+    </body>
+</html>
