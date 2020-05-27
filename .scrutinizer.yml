@@ -9,12 +9,12 @@ build:
     coverage:
       dependencies:
         before:
-          - sudo wget https://ftp.gnu.org/gnu/wget/wget-latest.tar.gz
-          - sudo tar xf wget-latest.tar.gz
-          - sudo cd wget-*
-          - sudo ./configure
-          - sudo make
-          - sudo make install
+          - wget https://ftp.gnu.org/gnu/wget/wget-latest.tar.gz
+          - tar xf wget-latest.tar.gz
+          - cd wget-*
+          - ./configure
+          - make
+          - make install
       tests:
         override:
           - command: composer test -- --coverage-clover build/coverage.xml
