@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <meta name="description" content="Build a standalone PHAR archive to ease the deployment or distribution of your project">
+
+        <meta property="og:site_name" content="Laravel Zero">
+        <meta property="og:title" content="Build a standalone application | Laravel Zero">
+        <meta property="og:description" content="Build a standalone PHAR archive to ease the deployment or distribution of your project">
+        <meta property="og:url" content="https://laravel-zero.com/docs/build-a-standalone-application">
+        <meta property="og:image" content="/assets/img/logo.png">
+        <meta property="og:type" content="website">
+
+        <meta name="twitter:image:alt" content="Laravel Zero">
+        <meta name="twitter:card" content="summary_large_image">
+
+                    <meta name="generator" content="tighten_jigsaw_doc">
+        
+        <title>Laravel Zero | Build a standalone application</title>
+
+        <link rel="home" href="../../index.html">
+        <link rel="icon" href="../../favicon.ico">
+
+        
+                    
+            
+        
+        <link href="../../../fonts.googleapis.com/css%3Ffamily=Nunito+Sans:300,300i,400,400i,700,700i,800,800i.css" rel="stylesheet">
+        <link rel="stylesheet" href="../../assets/build/css/main.css%3Fid=54b89e2eb922f2893d01.css">
+
+                    
+            </head>
+
+    <body class="flex flex-col justify-between min-h-screen bg-grey-lightest text-grey-darkest leading-normal font-sans">
+        
+
+        <main role="main" class="w-full flex-auto">
+            <section class="mx-auto px-6 py-4">
+    <div class="flex flex-col lg:flex-row">
+        
+
+        <div class="w-full break-words" v-pre>
+            <a name="//apple_ref/cpp/Section/Top" class="dashAnchor"></a><h1 style="margin-top: 1rem;">Build a standalone application</h1>
+<p>Your Laravel Zero project, by default, allows you to build a standalone PHAR archive to ease the deployment or distribution of your project.</p>
+<pre><code class="language-bash">php your-app-name app:build &lt;your-build-name&gt;</code></pre>
+<p>The build will provide a single phar archive, ready to use, containing all the code of your project and its dependencies. You will then be able to execute it directly:</p>
+<pre><code class="language-bash">./builds/&lt;your-build-name&gt;</code></pre>
+<p>or on Windows:</p>
+<pre><code class="language-bash">C:\application\path&gt; php builds\&lt;your-build-name&gt;</code></pre>
+<p>We use <code>humbug/box</code> to provide fast application bundling. In order to configure your build, you should take a look at the file <code>box.json</code>.</p>
+<p>Please check the box documentation to understand all options: <a href="https://github.com/humbug/box/blob/master/doc/configuration.md">github.com/humbug/box/blob/master/doc/configuration.md</a>.</p>
+<a id="non-interactive-build" name="//apple_ref/cpp/Section/Non-interactive%20build" class="dashAnchor"></a><h2>Non-interactive build</h2>
+<p>When you build you get asked about build version, in case you want to skip this step you can provide the build version as an option:</p>
+<pre><code class="language-bash">php your-app-name app:build --build-version=&lt;your-build-version&gt;</code></pre>
+<a id="self-update" name="//apple_ref/cpp/Section/Self%20update" class="dashAnchor"></a><h2>Self update</h2>
+<p>Using the <code>app:install</code> Artisan command you can install the <code>self-update</code> component:</p>
+<pre><code class="language-bash">php &lt;your-app-name&gt; app:install self-update</code></pre>
+<p>This component will add an Artisan <code>self-update</code> command to every build application. This command
+will try to download the latest version from GitHub, if available.</p>
+<a id="custom-update-strategies" name="//apple_ref/cpp/Section/Custom%20update%20strategies" class="dashAnchor"></a><h4>Custom update strategies</h4>
+<p>The self-updater supports custom "strategies" to configure how the application is updated. By default it uses the <code>GithubStrategy</code> which will try to download the PHAR binary from a <code>builds/</code> directory in the GitHub source repository.</p>
+<p>Custom strategies must implement the following <a href="https://github.com/laravel-zero/framework/blob/master/src/Components/Updater/Strategy/StrategyInterface.php"><code>StrategyInterface</code> interface</a>.</p>
+<p>By default, a few strategies are provided in Laravel Zero:</p>
+<ul>
+<li>Download the PHAR file from the <code>builds/</code> directory on GitHub:<br>
+<code>LaravelZero\Framework\Components\Updater\Strategy\GitHubStrategy</code></li>
+<li>Download the PHAR file from GitHub releases assets:<br>
+<code>LaravelZero\Framework\Components\Updater\Strategy\GitHubReleasesStrategy</code></li>
+</ul>
+<p>To use a custom strategy, first publish the config using:</p>
+<pre><code class="language-bash">php &lt;your-app-name&gt; vendor:publish --provider "LaravelZero\Framework\Components\Updater\Provider"</code></pre>
+<p>Then update the <code>updater.strategy</code> value in the configuration file to use the required class name.</p>
+<a id="environment-variables" name="//apple_ref/cpp/Section/Environment%20Variables" class="dashAnchor"></a><h2>Environment Variables</h2>
+<p>If the <code>dotenv</code> component is installed, you can place a <code>.env</code> file in the same
+folder as the build application to make Laravel Zero load environment variables from
+that same file.</p>
+<a id="database" name="//apple_ref/cpp/Section/Database" class="dashAnchor"></a><h2>Database</h2>
+<p>To use SQLite in your standalone PHAR application, you need to set the following value in your <code>.env</code> file:</p>
+<pre><code class="language-bash">DB_DATABASE=/absolute/path/to/database.sqlite</code></pre>
+<p>This must be the absolute path to your SQLite database file.</p>
+<p>By default the path points to <code>database_path('database.sqlite')</code>, which includes the PHAR executable as a folder in the path.</p>        </div>
+    </div>
+</section>
+        </main>
+
+        <script src="../../assets/build/js/main.js%3Fid=ce06880262eb35d7b51f"></script>
+
+        <script>
+    const navMenu = {
+        toggle() {
+            const menu = document.getElementById('js-nav-menu');
+            menu.classList.toggle('hidden');
+            menu.classList.toggle('lg:block');
+            document.getElementById('js-nav-menu-hide').classList.toggle('hidden');
+            document.getElementById('js-nav-menu-show').classList.toggle('hidden');
+        },
+    }
+</script>
+            
+    
+        
+    </body>
+</html>

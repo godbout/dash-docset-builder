@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <meta name="description" content="Managing which exceptions to report">
+
+        <meta property="og:site_name" content="Laravel Zero">
+        <meta property="og:title" content="Exception Handler | Laravel Zero">
+        <meta property="og:description" content="Managing which exceptions to report">
+        <meta property="og:url" content="https://laravel-zero.com/docs/exception-handler">
+        <meta property="og:image" content="/assets/img/logo.png">
+        <meta property="og:type" content="website">
+
+        <meta name="twitter:image:alt" content="Laravel Zero">
+        <meta name="twitter:card" content="summary_large_image">
+
+                    <meta name="generator" content="tighten_jigsaw_doc">
+        
+        <title>Laravel Zero | Exception Handler</title>
+
+        <link rel="home" href="../../index.html">
+        <link rel="icon" href="../../favicon.ico">
+
+        
+                    
+            
+        
+        <link href="../../../fonts.googleapis.com/css%3Ffamily=Nunito+Sans:300,300i,400,400i,700,700i,800,800i.css" rel="stylesheet">
+        <link rel="stylesheet" href="../../assets/build/css/main.css%3Fid=54b89e2eb922f2893d01.css">
+
+                    
+            </head>
+
+    <body class="flex flex-col justify-between min-h-screen bg-grey-lightest text-grey-darkest leading-normal font-sans">
+        
+
+        <main role="main" class="w-full flex-auto">
+            <section class="mx-auto px-6 py-4">
+    <div class="flex flex-col lg:flex-row">
+        
+
+        <div class="w-full break-words" v-pre>
+            <a name="//apple_ref/cpp/Section/Top" class="dashAnchor"></a><h1 style="margin-top: 1rem;">Introduction</h1>
+<p>When you start a new Laravel Zero project, error and exception handling is part of the core. </p>
+<p>The <code>Illuminate\Foundation\Exceptions\Handler</code> class is where all exceptions triggered by your application are logged and rendered back to the user. </p>
+<blockquote>
+<p>If you would like to view the internals, this class is part of the <a href="https://github.com/laravel-zero/foundation"><code>laravel-zero/foundation</code></a> package.</p>
+</blockquote>
+<a name="//apple_ref/cpp/Section/Top" class="dashAnchor"></a><h1 style="margin-top: 1rem;">Custom Exception Handler</h1>
+<p>When working with Laravel Zero you might want to prevent some exceptions to be reported to the end user.  </p>
+<p>As <code>Illuminate\Foundation\Exceptions\Handler</code> is part of the core you can't just modify it to fit your needs. Your modifications would be overwritten with every update of Laravel Zero.</p>
+<p>Below we'll describe how you can create your own handler so you can add your custom logic.</p>
+<a id="creating-the-handler-class" name="//apple_ref/cpp/Section/Creating%20The%20Handler%20Class" class="dashAnchor"></a><h4>Creating The Handler Class</h4>
+<p>Inside your <code>app</code> folder, create a new folder <code>Exceptions</code>. Inside that folder, create a file called <code>Handler.php</code>. This will be our new Handler in the next few minutes. </p>
+<p>Copy the content below and paste it in your newly created file. </p>
+<pre><code class="language-php ">&lt;?php
+
+namespace App\Exceptions;
+
+use Illuminate\Foundation\Exceptions\Handler as ExceptionHandler;
+use Throwable;
+
+class Handler extends ExceptionHandler
+{
+    /**
+     * A list of the exception types that are not reported.
+     *
+     * @var array
+     */
+    protected $dontReport = [
+        // \Illuminate\Database\Eloquent\ModelNotFoundException::class,
+    ];
+
+    /**
+     * Report or log an exception.
+     *
+     * @param  \Throwable  $exception
+     * @return void
+     *
+     * @throws \Exception
+     */
+    public function report(Throwable $exception)
+    {
+        parent::report($exception);
+    }
+}</code></pre>
+<p>As you can see we are just extending the default handler here.</p>
+<blockquote>
+<p>The above content might feel familiar to those using Laravel.<br>
+It's a trimmed down version of the <a href="https://github.com/laravel/laravel/blob/master/app/Exceptions/Handler.php"><code>App\Exceptions\Handler</code></a> of Laravel.</p>
+</blockquote>
+<a id="replacing-the-default-handler" name="//apple_ref/cpp/Section/Replacing%20The%20Default%20Handler" class="dashAnchor"></a><h4>Replacing The Default Handler</h4>
+<p>In the file <code>bootstrap/app.php</code> look for the following code.</p>
+<pre><code class="language-php ">$app-&gt;singleton(
+    Illuminate\Contracts\Debug\ExceptionHandler::class,
+    Illuminate\Foundation\Exceptions\Handler::class
+);</code></pre>
+<p>Replace the <code>Illuminate\Foundation\Exceptions\Handlers::class</code> with your newly created <code>App\Exceptions\Handler:class</code>.</p>
+<pre><code class="language-php">$app-&gt;singleton(
+    Illuminate\Contracts\Debug\ExceptionHandler::class,
+    App\Exceptions\Handler::class
+);</code></pre>
+<blockquote>
+<p><strong>Congratulations!</strong><br>
+You can now start handling exceptions in your new <code>Handler.php</code> file.</p>
+</blockquote>
+<a id="ignoring-exceptions" name="//apple_ref/cpp/Section/Ignoring%20Exceptions" class="dashAnchor"></a><h4>Ignoring Exceptions</h4>
+<p>The <code>$dontReport</code> property of the exception handler contains an array of exception types that will not be logged. For example, if you would not like to report the <code>RuntimeException</code>, you would add it to the <code>dontReport</code> array.</p>
+<pre><code class="language-php">    protected $dontReport = [
+        \Symfony\Component\Console\Exception\RuntimeException::class,
+    ];</code></pre>
+<p>This however results in <code>RuntimeException</code> not being reported at all. More fine grained control can be achieved by updating the <code>report</code> function.</p>
+<p>The following would prevent the <em>Not enough arguments</em> exception to be reported, but any other <code>RuntimeException</code> would still be reported.</p>
+<pre><code class="language-php">public function report(Throwable $exception)
+{
+    if ($exception instanceof RuntimeException) {
+        if (Str::contains($exception-&gt;getMessage(), ['Not enough arguments'])) {
+            return;
+        }
+    }
+
+    parent::report($exception);
+}</code></pre>
+<p>If you would like to disable the reporting only when running from the built phar file you could use the <a href="http://php.net/manual/en/phar.running.php"><code>\Phar::running()</code></a> function.</p>
+<pre><code class="language-php">if (\Phar::running()) {
+    if ($exception instanceof RuntimeException) {
+        if (Str::contains($exception-&gt;getMessage(), ['Not enough arguments'])) {
+            return;
+        }
+    }
+}</code></pre>        </div>
+    </div>
+</section>
+        </main>
+
+        <script src="../../assets/build/js/main.js%3Fid=ce06880262eb35d7b51f"></script>
+
+        <script>
+    const navMenu = {
+        toggle() {
+            const menu = document.getElementById('js-nav-menu');
+            menu.classList.toggle('hidden');
+            menu.classList.toggle('lg:block');
+            document.getElementById('js-nav-menu-hide').classList.toggle('hidden');
+            document.getElementById('js-nav-menu-show').classList.toggle('hidden');
+        },
+    }
+</script>
+            
+    
+        
+    </body>
+</html>
