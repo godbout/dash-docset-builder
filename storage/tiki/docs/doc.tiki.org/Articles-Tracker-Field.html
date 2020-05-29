@@ -268,20 +268,6 @@ textarea, .CodeMirror {
 
 @media (min-width: 1200px) { .container { width:1240px; max-width:1240px;} }
 .affix {top:44px;}
-
-			.lozadFade {
-				animation-name: lozadFade;
-				animation-duration: 1s;
-			}
-			@keyframes lozadFade {
-				from {
-					opacity: 0;
-				}
-				to {
-					opacity: 1;
-				}
-			}
-		
 -->
 </style>
 	<style type="text/css">#sitelogo img {margin-top: 0; position: relative; top: -12px;}</style>
@@ -426,7 +412,7 @@ textarea, .CodeMirror {
 				
 				
 
-											</div>
+				<span class="cachedStatus">(Cached)</span>							</div>
 		 
 					<div class="wikiinfo float-left" id="pdfinfo" style="display:none">
 				<div class="alert alert-info" style="width:500px"><h4><span class="icon icon-information fas fa-info-circle fa-fw "></span>&nbsp;<span class="rboxtitle">Please wait</span></h4><div class="rboxcontent" style="display: inline"><span class="fas fa-circle-notch fa-spin" style="font-size:24px"></span> The PDF is being prepared, please wait...</div></div>
@@ -435,7 +421,7 @@ textarea, .CodeMirror {
 </div> 
 
 	<div class="wikiactions_wrapper clearfix">
-	<div class="wikiactions float-sm-right mb-2"><div class="btn-group ml-2"><div class="btn-group structures"><a href="Articles-Tracker-Field.html#" class="btn btn-info btn-sm dropdown-toggle" data-toggle="dropdown" data-hover="dropdown" title="Structures"><span class="icon icon-structure fas fa-sitemap "   ></span></a><div class="dropdown-menu dropdown-menu-right" role="menu"><h6 class="dropdown-header">Structures</h6><div class="dropdown-divider"></div><a href="http://doc.tiki.org/tiki-index.php?page=Articles%20Tracker%20Field&amp;structure=HomePage%20Tracker"  title="Current structure: HomePage Tracker" class="dropdown-item selected tips" >Home</a></div></div><div class="btn-group page_actions" role="group"><a class="btn btn-info btn-sm dropdown-toggle" data-toggle="dropdown" data-hover="dropdown" href="Articles-Tracker-Field.html#" title="Page actions"><span class="icon icon-menu-extra fas fa-chevron-down "   ></span></a><div class="dropdown-menu dropdown-menu-right"><h6 class="dropdown-header">Page actions</h6><div class="dropdown-divider"></div><a class="dropdown-item" href="http://doc.tiki.org/tiki-print.php?page=Articles+Tracker+Field&amp;display=pdf"><span class="icon icon-pdf far fa-file-pdf "   ></span>  PDF</a><a class="dropdown-item" href="http://doc.tiki.org/tiki-print.php?page=Articles+Tracker+Field"><span class="icon icon-print fas fa-print "   ></span> Print</a><a class="dropdown-item" href="javascript:open_webdav('http://doc.tiki.org/tiki-webdav.php/Wiki Pages/Articles Tracker Field')" class="icon"><span class="icon icon-file-archive-open fas fa-folder-open "   ></span> Open in WebDAV</a></div></div></div></div>
+	<div class="wikiactions float-sm-right mb-2"><div class="btn-group ml-2"><div class="btn-group structures"><a href="Articles-Tracker-Field.html#" class="btn btn-info btn-sm dropdown-toggle" data-toggle="dropdown" data-hover="dropdown" title="Structures"><span class="icon icon-structure fas fa-sitemap "   ></span></a><div class="dropdown-menu dropdown-menu-right" role="menu"><h6 class="dropdown-header">Structures</h6><div class="dropdown-divider"></div><a href="http://doc.tiki.org/tiki-index.php?page=Articles%20Tracker%20Field&amp;structure=HomePage%20Tracker"  title="Current structure: HomePage Tracker" class="dropdown-item selected tips" >Home</a></div></div><div class="btn-group page_actions" role="group"><a class="btn btn-info btn-sm dropdown-toggle" data-toggle="dropdown" data-hover="dropdown" href="Articles-Tracker-Field.html#" title="Page actions"><span class="icon icon-menu-extra fas fa-chevron-down "   ></span></a><div class="dropdown-menu dropdown-menu-right"><h6 class="dropdown-header">Page actions</h6><div class="dropdown-divider"></div><a class="dropdown-item" href="http://doc.tiki.org/tiki-print.php?page=Articles+Tracker+Field&amp;display=pdf"><span class="icon icon-pdf far fa-file-pdf "   ></span>  PDF</a><a class="dropdown-item" href="http://doc.tiki.org/Articles-Tracker-Field?refresh=1"><span class="icon icon-refresh fas fa-sync "   ></span> Refresh</a><a class="dropdown-item" href="http://doc.tiki.org/tiki-print.php?page=Articles+Tracker+Field"><span class="icon icon-print fas fa-print "   ></span> Print</a><a class="dropdown-item" href="javascript:open_webdav('http://doc.tiki.org/tiki-webdav.php/Wiki Pages/Articles Tracker Field')" class="icon"><span class="icon icon-file-archive-open fas fa-folder-open "   ></span> Open in WebDAV</a></div></div></div></div>
 	</div>
 	
 						
@@ -502,7 +488,7 @@ textarea, .CodeMirror {
 <p>Then, you must make sure you have enabled the field type: In the System menu, click on <strong>Settings</strong> <strong>&gt;</strong> <strong>Controls Panels</strong> <strong>&gt;</strong> <strong>Trackers</strong>, on this page go to the tab <strong>Field Types</strong> as here <strong>tiki-admin.php?page=trackers#content_admin1-3</strong>. To see the Articles field, set the preference filter option to <strong>Advanced</strong>, then check the <strong>Articles</strong> field and validate by clicking on the button <strong>Apply</strong>
 </p>
 
-<div style="display: inline-block; display:block; margin-left:auto; margin-right:auto; max-width: 100%; width:402px;">	<a href="http://doc.tiki.org/display1571" class="internal"  data-box="box[g]" target='_blank'  title="Click to expand">		<img width="400" style="display:block; margin-left:auto; margin-right:auto;border:1px solid darkgray;" alt="Click to expand" class="regImage pluginImg img-fluid lozad" data-src="display1571" title="Click to expand" />	</a>	<div class="mini" style="max-width: 100%; width:400px;">		<div class="thumbcaption">Click to expand		</div>	</div></div>
+<div style="display: inline-block; display:block; margin-left:auto; margin-right:auto; max-width: 100%; width:402px;">	<a href="display1571" class="internal"  data-box="box[g]" target='_blank'  title="Click to expand">		<img width="400" style="display:block; margin-left:auto; margin-right:auto;border:1px solid darkgray;" alt="Click to expand" class="regImage pluginImg img-fluid lozad" data-src="display1571" title="Click to expand" />	</a>	<div class="mini" style="max-width: 100%; width:400px;">		<div class="thumbcaption">Click to expand		</div>	</div></div>
 <p>
 <br /><strong>Topic</strong> this option is the topic added to the articles
 <br /><strong>Article Type</strong> to choose the type of article that can be chosen when creating an item.
@@ -515,11 +501,12 @@ textarea, .CodeMirror {
 
 <p>After clicking on <strong>Add Field</strong>, when the window appears: add the name of the field and take <strong>Articles</strong> as the Field Type; when you click on <strong>Add Field & Edit Advanced Options</strong>, at the level of <strong>Options for Articles</strong> modify the field <strong>Topic</strong> and <strong>Artilce Type</strong> and at the end click on the button <strong>Save</strong>.
 </p>
-<div style="display: inline-block; display:block; margin-left:auto; margin-right:auto; max-width: 100%; width:402px;">	<a href="http://doc.tiki.org/display1573" class="internal"  data-box="box[g]" target='_blank'  title="Click to expand">		<img width="400" style="display:block; margin-left:auto; margin-right:auto;border:1px solid darkgray;" alt="Click to expand" class="regImage pluginImg img-fluid lozad" data-src="display1573" title="Click to expand" />	</a>	<div class="mini" style="max-width: 100%; width:400px;">		<div class="thumbcaption">Click to expand		</div>	</div></div>
+<div style="display: inline-block; display:block; margin-left:auto; margin-right:auto; max-width: 100%; width:402px;">	<a href="display1573" class="internal"  data-box="box[g]" target='_blank'  title="Click to expand">		<img width="400" style="display:block; margin-left:auto; margin-right:auto;border:1px solid darkgray;" alt="Click to expand" class="regImage pluginImg img-fluid lozad" data-src="display1573" title="Click to expand" />	</a>	<div class="mini" style="max-width: 100%; width:400px;">		<div class="thumbcaption">Click to expand		</div>	</div></div>
 <p>
 <br />After adding the field <strong>Articles</strong>, you can create an item related to the articles like this:
 </p>
-<div style="display: inline-block; display:block; margin-left:auto; margin-right:auto; max-width: 100%; width:402px;">	<a href="http://doc.tiki.org/display1572" class="internal"  data-box="box[g]" target='_blank'  title="Click to expand">		<img width="400" style="display:block; margin-left:auto; margin-right:auto;border:1px solid darkgray;" alt="Click to expand" class="regImage pluginImg img-fluid lozad" data-src="display1572" title="Click to expand" />	</a>	<div class="mini" style="max-width: 100%; width:400px;">		<div class="thumbcaption">Click to expand		</div>	</div></div>
+<div style="display: inline-block; display:block; margin-left:auto; margin-right:auto; max-width: 100%; width:402px;">	<a href="display1572" class="internal"  data-box="box[g]" target='_blank'  title="Click to expand">		<img width="400" style="display:block; margin-left:auto; margin-right:auto;border:1px solid darkgray;" alt="Click to expand" class="regImage pluginImg img-fluid lozad" data-src="display1572" title="Click to expand" />	</a>	<div class="mini" style="max-width: 100%; width:400px;">		<div class="thumbcaption">Click to expand		</div>	</div></div>
+
 					</div>
 
 		
@@ -1897,8 +1884,7 @@ textarea, .CodeMirror {
 <br /><a href="http://doc.tiki.org/XMLRPC" title="XMLRPC" class="wiki wiki_page">XMLRPC</a>
 </p>
 
-<p></p>
-
+<ul><li><a class="wiki"  href="http://doc.tiki.org/tiki-editpage.php?page=Keywords" rel="">edit Keywords</a></li></ul>
 
 		
 														</div>
@@ -2087,7 +2073,7 @@ textarea, .CodeMirror {
 			 class="clearfix card-body">
 								
 <div id="Newsletter_subscribe" style="display:block;">
-<div style="font-weight:bold; font-style:italic; text-align:center; width:auto;">Delivered fresh to your email inbox!<br /><a href="https://tiki.org/Newsletters"><img src="https://themes.tiki.org/display113" alt="Newsletter subscribe icon" title="Subscribe!" /></a><br />Don't miss major announcements and other news!</div>
+<div style="font-weight:bold; font-style:italic; text-align:center; width:auto;">Delivered fresh to your email inbox!<br /><a href="https://tiki.org/Newsletters"><img src="../themes.tiki.org/display113" alt="Newsletter subscribe icon" title="Subscribe!" /></a><br />Don't miss major announcements and other news!</div>
 
 <div style="text-align:center;margin:2em 0">
 <a href="https://tiki.org/Donation"><img src="https://tiki.org/display264" width="170" alt="Contribute to Tiki" border="0" /></a>
@@ -2287,7 +2273,7 @@ Tiki® and TikiWiki® are registered trademarks of the <a class="wiki external" 
 			<div id="module_60" style=""
 				 class="module box-loadstats">
 				<div id="mod-loadstatsbottom5">
-										<small>[ Execution time: 0.10 secs ] &nbsp; [ Memory usage: 5.59MB ] &nbsp; [ Queries: 181 in 0.04 secs ]</small>
+										<small>[ Execution time: 0.17 secs ] &nbsp; [ Memory usage: 5.51MB ] &nbsp; [ Queries: 180 in 0.08 secs ]</small>
 													
 					</div>
 </div>
@@ -2366,7 +2352,7 @@ Tiki® and TikiWiki® are registered trademarks of the <a class="wiki external" 
 		<form name="loginbox" class="form" id="loginbox-1" action="https://doc.tiki.org/tiki-login.php"
 				method="post" 
 						>
-		<input type="hidden" class="ticket" name="ticket" value="A0LPkl68BZGQWCVraFRlFcZ3TU8_CgMZyjNCslroAQI" />
+		<input type="hidden" class="ticket" name="ticket" value="fjpDEikwckb-kGW6GsS1_8zlzXU3lQ2n4cVDu55NI28" />
 		
 
 								<div class="user form-group row mx-0 clearfix">
@@ -2526,7 +2512,7 @@ Tiki® and TikiWiki® are registered trademarks of the <a class="wiki external" 
 <!--//--><![CDATA[//><!--
 // js 0 
 tiki_cookie_jar=new Object();
-setCookieBrowser('javascript_enabled', '1622299819000', '', new Date(1622299819000));
+setCookieBrowser('javascript_enabled', '1622307052000', '', new Date(1622307052000));
 $.lang = 'en';
 
 // JS Object to hold prefs for jq
@@ -2573,6 +2559,26 @@ if (getCookie('postitnote') != 'hidden') {
         }
     }
 }
+$(document).ready(function(){
+// jq_onready 0 
+$("article").fitVids();
+$("time.timeago").timeago(); jQuery.timeago.settings.allowFuture = true;
+$(".table-responsive").doubleScroll({resetOnWindowResize: true});
+
+			lozad('.lozad', {
+				load: function(el) {
+					el.src = el.dataset.src;
+					el.onload = function() {
+						el.classList.add('lozadFade');
+					}
+				}
+			}).observe();
+		
+$(".convert-mailto").removeClass("convert-mailto").each(function () {
+				var address = $(this).data("encode-name") + "@" + $(this).data("encode-domain");
+				$(this).attr("href", "mailto:" + address).text(address);
+			});
+}) /* end on ready */;
 					function submitSearch1() {
 						var $f = $('#search-module-form1');
 						if ($f.attr('action') !== "tiki-editpage.php" && $f.data('page_selected') === $("#search_mod_input_1").val()) {
@@ -2660,20 +2666,6 @@ $(document).ready(function(){
 $("article").fitVids();
 $("time.timeago").timeago(); jQuery.timeago.settings.allowFuture = true;
 $(".table-responsive").doubleScroll({resetOnWindowResize: true});
-
-			lozad('.lozad', {
-				load: function(el) {
-					el.src = el.dataset.src;
-					el.onload = function() {
-						el.classList.add('lozadFade');
-					}
-				}
-			}).observe();
-		
-$(".convert-mailto").removeClass("convert-mailto").each(function () {
-				var address = $(this).data("encode-name") + "@" + $(this).data("encode-domain");
-				$(this).attr("href", "mailto:" + address).text(address);
-			});
 $(".search_mod_magnifier").mouseover( function () {
 	$(".search_mod_buttons", $(this).parents(".module"))
 		.show('fast')
@@ -2695,6 +2687,10 @@ $("#search_mod_input_1").tiki("autocomplete", "pagename",{select: function(event
 						}, close: function(event, item) {
 						$(".search_mod_buttons", "#search-module-form1").show();
 						}});
+$(".convert-mailto").removeClass("convert-mailto").each(function () {
+				var address = $(this).data("encode-name") + "@" + $(this).data("encode-domain");
+				$(this).attr("href", "mailto:" + address).text(address);
+			});
 							$('#comment-toggle').comment_toggle();
 						
 $(document).ready(function () {

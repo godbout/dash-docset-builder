@@ -412,7 +412,7 @@ textarea, .CodeMirror {
 				
 				
 
-											</div>
+				<span class="cachedStatus">(Cached)</span>							</div>
 		 
 					<div class="wikiinfo float-left" id="pdfinfo" style="display:none">
 				<div class="alert alert-info" style="width:500px"><h4><span class="icon icon-information fas fa-info-circle fa-fw "></span>&nbsp;<span class="rboxtitle">Please wait</span></h4><div class="rboxcontent" style="display: inline"><span class="fas fa-circle-notch fa-spin" style="font-size:24px"></span> The PDF is being prepared, please wait...</div></div>
@@ -421,7 +421,7 @@ textarea, .CodeMirror {
 </div> 
 
 	<div class="wikiactions_wrapper clearfix">
-	<div class="wikiactions float-sm-right mb-2"><div class="btn-group ml-2"><div class="btn-group backlinks"><a href="PluginTrackerList-To-PluginList-Converter.html#" role="button" data-toggle="dropdown" data-hover="dropdown" class="btn btn-info btn-sm dropdown-toggle" title="Backlinks"><span class="icon icon-backlink fas fa-reply "   ></span></a><div class="dropdown-menu dropdown-menu-right" role="menu"><h6 class="dropdown-header">Backlinks</h6><div class="dropdown-divider"></div><a class="dropdown-item" role="menuitem" tabindex="-1" href="PluginList.html" title="PluginList">PluginList</a><a class="dropdown-item" role="menuitem" tabindex="-1" href="PluginList-with-editable-filters.html" title="PluginList with editable filters">PluginList with editable filters</a><a class="dropdown-item" role="menuitem" tabindex="-1" href="PluginTrackerList.html" title="PluginTrackerList">PluginTrackerList</a><a class="dropdown-item" role="menuitem" tabindex="-1" href="http://doc.tiki.org/Tiki19" title="Tiki19">Tiki19</a><a class="dropdown-item" role="menuitem" tabindex="-1" href="http://doc.tiki.org/Tiki21from18" title="Tiki21from18">Tiki21from18</a></div></div><div class="btn-group page_actions" role="group"><a class="btn btn-info btn-sm dropdown-toggle" data-toggle="dropdown" data-hover="dropdown" href="PluginTrackerList-To-PluginList-Converter.html#" title="Page actions"><span class="icon icon-menu-extra fas fa-chevron-down "   ></span></a><div class="dropdown-menu dropdown-menu-right"><h6 class="dropdown-header">Page actions</h6><div class="dropdown-divider"></div><a class="dropdown-item" href="http://doc.tiki.org/tiki-print.php?page=PluginTrackerList+To+PluginList+Converter&amp;display=pdf"><span class="icon icon-pdf far fa-file-pdf "   ></span>  PDF</a><a class="dropdown-item" href="http://doc.tiki.org/tiki-print.php?page=PluginTrackerList+To+PluginList+Converter"><span class="icon icon-print fas fa-print "   ></span> Print</a><a class="dropdown-item" href="javascript:open_webdav('http://doc.tiki.org/tiki-webdav.php/Wiki Pages/PluginTrackerList To PluginList Converter')" class="icon"><span class="icon icon-file-archive-open fas fa-folder-open "   ></span> Open in WebDAV</a></div></div></div></div>
+	<div class="wikiactions float-sm-right mb-2"><div class="btn-group ml-2"><div class="btn-group backlinks"><a href="PluginTrackerList-To-PluginList-Converter.html#" role="button" data-toggle="dropdown" data-hover="dropdown" class="btn btn-info btn-sm dropdown-toggle" title="Backlinks"><span class="icon icon-backlink fas fa-reply "   ></span></a><div class="dropdown-menu dropdown-menu-right" role="menu"><h6 class="dropdown-header">Backlinks</h6><div class="dropdown-divider"></div><a class="dropdown-item" role="menuitem" tabindex="-1" href="PluginList.html" title="PluginList">PluginList</a><a class="dropdown-item" role="menuitem" tabindex="-1" href="PluginList-with-editable-filters.html" title="PluginList with editable filters">PluginList with editable filters</a><a class="dropdown-item" role="menuitem" tabindex="-1" href="PluginTrackerList.html" title="PluginTrackerList">PluginTrackerList</a><a class="dropdown-item" role="menuitem" tabindex="-1" href="http://doc.tiki.org/Tiki19" title="Tiki19">Tiki19</a><a class="dropdown-item" role="menuitem" tabindex="-1" href="http://doc.tiki.org/Tiki21from18" title="Tiki21from18">Tiki21from18</a></div></div><div class="btn-group page_actions" role="group"><a class="btn btn-info btn-sm dropdown-toggle" data-toggle="dropdown" data-hover="dropdown" href="PluginTrackerList-To-PluginList-Converter.html#" title="Page actions"><span class="icon icon-menu-extra fas fa-chevron-down "   ></span></a><div class="dropdown-menu dropdown-menu-right"><h6 class="dropdown-header">Page actions</h6><div class="dropdown-divider"></div><a class="dropdown-item" href="http://doc.tiki.org/tiki-print.php?page=PluginTrackerList+To+PluginList+Converter&amp;display=pdf"><span class="icon icon-pdf far fa-file-pdf "   ></span>  PDF</a><a class="dropdown-item" href="http://doc.tiki.org/PluginTrackerList-To-PluginList-Converter?refresh=1"><span class="icon icon-refresh fas fa-sync "   ></span> Refresh</a><a class="dropdown-item" href="http://doc.tiki.org/tiki-print.php?page=PluginTrackerList+To+PluginList+Converter"><span class="icon icon-print fas fa-print "   ></span> Print</a><a class="dropdown-item" href="javascript:open_webdav('http://doc.tiki.org/tiki-webdav.php/Wiki Pages/PluginTrackerList To PluginList Converter')" class="icon"><span class="icon icon-file-archive-open fas fa-folder-open "   ></span> Open in WebDAV</a></div></div></div></div>
 	</div>
 	
 						
@@ -454,6 +454,7 @@ textarea, .CodeMirror {
 </li></ol><p>
 <br />That's it!!!
 </p>
+
 
 					</div>
 
@@ -1828,8 +1829,7 @@ textarea, .CodeMirror {
 <br /><a href="http://doc.tiki.org/XMLRPC" title="XMLRPC" class="wiki wiki_page">XMLRPC</a>
 </p>
 
-<p></p>
-
+<ul><li><a class="wiki"  href="http://doc.tiki.org/tiki-editpage.php?page=Keywords" rel="">edit Keywords</a></li></ul>
 
 		
 														</div>
@@ -2018,7 +2018,7 @@ textarea, .CodeMirror {
 			 class="clearfix card-body">
 								
 <div id="Newsletter_subscribe" style="display:block;">
-<div style="font-weight:bold; font-style:italic; text-align:center; width:auto;">Delivered fresh to your email inbox!<br /><a href="https://tiki.org/Newsletters"><img src="https://themes.tiki.org/display113" alt="Newsletter subscribe icon" title="Subscribe!" /></a><br />Don't miss major announcements and other news!</div>
+<div style="font-weight:bold; font-style:italic; text-align:center; width:auto;">Delivered fresh to your email inbox!<br /><a href="https://tiki.org/Newsletters"><img src="../themes.tiki.org/display113" alt="Newsletter subscribe icon" title="Subscribe!" /></a><br />Don't miss major announcements and other news!</div>
 
 <div style="text-align:center;margin:2em 0">
 <a href="https://tiki.org/Donation"><img src="https://tiki.org/display264" width="170" alt="Contribute to Tiki" border="0" /></a>
@@ -2218,7 +2218,7 @@ Tiki® and TikiWiki® are registered trademarks of the <a class="wiki external" 
 			<div id="module_60" style=""
 				 class="module box-loadstats">
 				<div id="mod-loadstatsbottom5">
-										<small>[ Execution time: 0.08 secs ] &nbsp; [ Memory usage: 5.38MB ] &nbsp; [ Queries: 134 in 0.03 secs ]</small>
+										<small>[ Execution time: 0.08 secs ] &nbsp; [ Memory usage: 5.46MB ] &nbsp; [ Queries: 127 in 0.03 secs ]</small>
 													
 					</div>
 </div>
@@ -2297,7 +2297,7 @@ Tiki® and TikiWiki® are registered trademarks of the <a class="wiki external" 
 		<form name="loginbox" class="form" id="loginbox-1" action="https://doc.tiki.org/tiki-login.php"
 				method="post" 
 						>
-		<input type="hidden" class="ticket" name="ticket" value="On-tvc8D9_MNLRDqImbcC-hV_b9f8jmUuJCCOghpSUw" />
+		<input type="hidden" class="ticket" name="ticket" value="6oTP6wwh-z9vu1Oda8dcm6ADvhVZWfM2cN4exzZ2oGg" />
 		
 
 								<div class="user form-group row mx-0 clearfix">
@@ -2456,7 +2456,7 @@ Tiki® and TikiWiki® are registered trademarks of the <a class="wiki external" 
 <!--//--><![CDATA[//><!--
 // js 0 
 tiki_cookie_jar=new Object();
-setCookieBrowser('javascript_enabled', '1622299902000', '', new Date(1622299902000));
+setCookieBrowser('javascript_enabled', '1622307140000', '', new Date(1622307140000));
 $.lang = 'en';
 
 // JS Object to hold prefs for jq
@@ -2503,6 +2503,16 @@ if (getCookie('postitnote') != 'hidden') {
         }
     }
 }
+$(document).ready(function(){
+// jq_onready 0 
+$("article").fitVids();
+$("time.timeago").timeago(); jQuery.timeago.settings.allowFuture = true;
+$(".table-responsive").doubleScroll({resetOnWindowResize: true});
+$(".convert-mailto").removeClass("convert-mailto").each(function () {
+				var address = $(this).data("encode-name") + "@" + $(this).data("encode-domain");
+				$(this).attr("href", "mailto:" + address).text(address);
+			});
+}) /* end on ready */;
 					function submitSearch1() {
 						var $f = $('#search-module-form1');
 						if ($f.attr('action') !== "tiki-editpage.php" && $f.data('page_selected') === $("#search_mod_input_1").val()) {
@@ -2590,10 +2600,6 @@ $(document).ready(function(){
 $("article").fitVids();
 $("time.timeago").timeago(); jQuery.timeago.settings.allowFuture = true;
 $(".table-responsive").doubleScroll({resetOnWindowResize: true});
-$(".convert-mailto").removeClass("convert-mailto").each(function () {
-				var address = $(this).data("encode-name") + "@" + $(this).data("encode-domain");
-				$(this).attr("href", "mailto:" + address).text(address);
-			});
 $(".search_mod_magnifier").mouseover( function () {
 	$(".search_mod_buttons", $(this).parents(".module"))
 		.show('fast')
@@ -2615,6 +2621,10 @@ $("#search_mod_input_1").tiki("autocomplete", "pagename",{select: function(event
 						}, close: function(event, item) {
 						$(".search_mod_buttons", "#search-module-form1").show();
 						}});
+$(".convert-mailto").removeClass("convert-mailto").each(function () {
+				var address = $(this).data("encode-name") + "@" + $(this).data("encode-domain");
+				$(this).attr("href", "mailto:" + address).text(address);
+			});
 $(document).ready(function () {
   var resetCSS = {
     transition: 'all .5s ease 0s',

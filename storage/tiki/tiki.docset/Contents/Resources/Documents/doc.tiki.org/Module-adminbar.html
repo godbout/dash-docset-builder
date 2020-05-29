@@ -268,20 +268,6 @@ textarea, .CodeMirror {
 
 @media (min-width: 1200px) { .container { width:1240px; max-width:1240px;} }
 .affix {top:44px;}
-
-			.lozadFade {
-				animation-name: lozadFade;
-				animation-duration: 1s;
-			}
-			@keyframes lozadFade {
-				from {
-					opacity: 0;
-				}
-				to {
-					opacity: 1;
-				}
-			}
-		
 -->
 </style>
 	<style type="text/css">#sitelogo img {margin-top: 0; position: relative; top: -12px;}</style>
@@ -345,7 +331,7 @@ textarea, .CodeMirror {
 				
 				
 
-											</div>
+				<span class="cachedStatus">(Cached)</span>							</div>
 		 
 					<div class="wikiinfo float-left" id="pdfinfo" style="display:none">
 				<div class="alert alert-info" style="width:500px"><h4><span class="icon icon-information fas fa-info-circle fa-fw "></span> <span class="rboxtitle">Please wait</span></h4><div class="rboxcontent" style="display: inline"><span class="fas fa-circle-notch fa-spin" style="font-size:24px"></span> The PDF is being prepared, please wait...</div></div>
@@ -411,7 +397,7 @@ textarea, .CodeMirror {
 <p>Adding this module to the zop zone with mode=header and nobox: y would produce something like:
 </p>
 
-<div style="display: inline-block; display:block; margin-left:auto; margin-right:auto; max-width: 100%; width:402px;">	<a href="http://doc.tiki.org/display1575" class="internal" data-box="box[g]" target="_blank" title="Click to expand">		<img width="400" style="display:block; margin-left:auto; margin-right:auto;border:1px solid darkgray;" alt="Click to expand" class="regImage pluginImg img-fluid lozad" data-src="display1575" title="Click to expand">	</a>	<div class="mini" style="max-width: 100%; width:400px;">		<div class="thumbcaption">Click to expand		</div>	</div></div>
+<div style="display: inline-block; display:block; margin-left:auto; margin-right:auto; max-width: 100%; width:402px;">	<a href="display1575" class="internal" data-box="box[g]" target="_blank" title="Click to expand">		<img width="400" style="display:block; margin-left:auto; margin-right:auto;border:1px solid darkgray;" alt="Click to expand" class="regImage pluginImg img-fluid lozad" data-src="display1575" title="Click to expand">	</a>	<div class="mini" style="max-width: 100%; width:400px;">		<div class="thumbcaption">Click to expand		</div>	</div></div>
 <p>
 <br>When you click on the icon, a new admin bar is shown at the top, as demostrated in the image above, with links to history of actions performed as admin, quick links to usual tasks, and buttons to the main control panels with controls to display more buttons to the sides of that bar if requested with the side arrows.
 </p>
@@ -430,6 +416,7 @@ textarea, .CodeMirror {
 </li><li> <a href="http://doc.tiki.org/Mods-Type-Modules" title="Mods Type Modules" class="wiki wiki_page">Mods Type Modules</a>--links to modules that are installed as components
 </li></ul><p>
 <br></p>
+
 
 					</div>
 
@@ -606,13 +593,12 @@ textarea, .CodeMirror {
 <script type="text/javascript" src="lang/en/language.js"></script>
 <script type="text/javascript" src="lib/captcha/captchalib.js"></script>
 
-<script type="text/javascript" src="vendor/npm-asset/lozad/dist/lozad.js"></script>
 	
 <script type="text/javascript">
 <!--//--><![CDATA[//><!--
 // js 0 
 tiki_cookie_jar=new Object();
-setCookieBrowser('javascript_enabled', '1622299802000', '', new Date(1622299802000));
+setCookieBrowser('javascript_enabled', '1622307034000', '', new Date(1622307034000));
 $.lang = 'en';
 
 // JS Object to hold prefs for jq
@@ -659,6 +645,26 @@ if (getCookie('postitnote') != 'hidden') {
         }
     }
 }
+$(document).ready(function(){
+// jq_onready 0 
+$("article").fitVids();
+$("time.timeago").timeago(); jQuery.timeago.settings.allowFuture = true;
+$(".table-responsive").doubleScroll({resetOnWindowResize: true});
+
+			lozad('.lozad', {
+				load: function(el) {
+					el.src = el.dataset.src;
+					el.onload = function() {
+						el.classList.add('lozadFade');
+					}
+				}
+			}).observe();
+		
+$(".convert-mailto").removeClass("convert-mailto").each(function () {
+				var address = $(this).data("encode-name") + "@" + $(this).data("encode-domain");
+				$(this).attr("href", "mailto:" + address).text(address);
+			});
+}) /* end on ready */;
 					function submitSearch1() {
 						var $f = $('#search-module-form1');
 						if ($f.attr('action') !== "tiki-editpage.php" && $f.data('page_selected') === $("#search_mod_input_1").val()) {
@@ -746,20 +752,6 @@ $(document).ready(function(){
 $("article").fitVids();
 $("time.timeago").timeago(); jQuery.timeago.settings.allowFuture = true;
 $(".table-responsive").doubleScroll({resetOnWindowResize: true});
-
-			lozad('.lozad', {
-				load: function(el) {
-					el.src = el.dataset.src;
-					el.onload = function() {
-						el.classList.add('lozadFade');
-					}
-				}
-			}).observe();
-		
-$(".convert-mailto").removeClass("convert-mailto").each(function () {
-				var address = $(this).data("encode-name") + "@" + $(this).data("encode-domain");
-				$(this).attr("href", "mailto:" + address).text(address);
-			});
 $(".search_mod_magnifier").mouseover( function () {
 	$(".search_mod_buttons", $(this).parents(".module"))
 		.show('fast')
@@ -781,6 +773,10 @@ $("#search_mod_input_1").tiki("autocomplete", "pagename",{select: function(event
 						}, close: function(event, item) {
 						$(".search_mod_buttons", "#search-module-form1").show();
 						}});
+$(".convert-mailto").removeClass("convert-mailto").each(function () {
+				var address = $(this).data("encode-name") + "@" + $(this).data("encode-domain");
+				$(this).attr("href", "mailto:" + address).text(address);
+			});
 							$('#comment-toggle').comment_toggle();
 						
 $(document).ready(function () {

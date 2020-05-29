@@ -331,7 +331,7 @@ textarea, .CodeMirror {
 				
 				Create a form in a wiki page to populate a tracker
 
-				<span class="cachedStatus">(Cached)</span>							</div>
+											</div>
 		 
 					<div class="wikiinfo float-left" id="pdfinfo" style="display:none">
 				<div class="alert alert-info" style="width:500px"><h4><span class="icon icon-information fas fa-info-circle fa-fw "></span> <span class="rboxtitle">Please wait</span></h4><div class="rboxcontent" style="display: inline"><span class="fas fa-circle-notch fa-spin" style="font-size:24px"></span> The PDF is being prepared, please wait...</div></div>
@@ -1116,7 +1116,6 @@ What you want to do now: ((Issue Tracker|submit another issue)) or ((HomePage|br
 </li><li> <a href="PluginTracker-Advanced.html" title="More information on using PluginTracker" class="wiki wiki_page">PluginTracker Advanced</a>
 </li><li> <a href="http://doc.tiki.org/Pretty-Tracker" title="Pretty Tracker" class="wiki wiki_page">Pretty Tracker</a>
 </li><li> <a href="PluginList.html" title="Search for, list, and filter all types of items and display custom formatted results" class="wiki wiki_page">PluginList</a></li></ul>
-
 					</div>
 
 		
@@ -1299,7 +1298,7 @@ What you want to do now: ((Issue Tracker|submit another issue)) or ((HomePage|br
 <!--//--><![CDATA[//><!--
 // js 0 
 tiki_cookie_jar=new Object();
-setCookieBrowser('javascript_enabled', '1622299760000', '', new Date(1622299760000));
+setCookieBrowser('javascript_enabled', '1622306967000', '', new Date(1622306967000));
 $.lang = 'en';
 
 // JS Object to hold prefs for jq
@@ -1346,16 +1345,6 @@ if (getCookie('postitnote') != 'hidden') {
         }
     }
 }
-$(document).ready(function(){
-// jq_onready 0 
-$("article").fitVids();
-$("time.timeago").timeago(); jQuery.timeago.settings.allowFuture = true;
-$(".table-responsive").doubleScroll({resetOnWindowResize: true});
-$(".convert-mailto").removeClass("convert-mailto").each(function () {
-				var address = $(this).data("encode-name") + "@" + $(this).data("encode-domain");
-				$(this).attr("href", "mailto:" + address).text(address);
-			});
-}) /* end on ready */;
 					function submitSearch1() {
 						var $f = $('#search-module-form1');
 						if ($f.attr('action') !== "tiki-editpage.php" && $f.data('page_selected') === $("#search_mod_input_1").val()) {
@@ -1433,6 +1422,10 @@ $(document).ready(function(){
 $("article").fitVids();
 $("time.timeago").timeago(); jQuery.timeago.settings.allowFuture = true;
 $(".table-responsive").doubleScroll({resetOnWindowResize: true});
+$(".convert-mailto").removeClass("convert-mailto").each(function () {
+				var address = $(this).data("encode-name") + "@" + $(this).data("encode-domain");
+				$(this).attr("href", "mailto:" + address).text(address);
+			});
 $(".search_mod_magnifier").mouseover( function () {
 	$(".search_mod_buttons", $(this).parents(".module"))
 		.show('fast')
@@ -1454,10 +1447,6 @@ $("#search_mod_input_1").tiki("autocomplete", "pagename",{select: function(event
 						}, close: function(event, item) {
 						$(".search_mod_buttons", "#search-module-form1").show();
 						}});
-$(".convert-mailto").removeClass("convert-mailto").each(function () {
-				var address = $(this).data("encode-name") + "@" + $(this).data("encode-domain");
-				$(this).attr("href", "mailto:" + address).text(address);
-			});
 $(document).ready(function () {
   var resetCSS = {
     transition: 'all .5s ease 0s',

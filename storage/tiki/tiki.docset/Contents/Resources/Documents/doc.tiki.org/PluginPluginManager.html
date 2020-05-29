@@ -331,7 +331,7 @@ textarea, .CodeMirror {
 				
 				List wiki plugin or module information for the site
 
-				<span class="cachedStatus">(Cached)</span>							</div>
+											</div>
 		 
 					<div class="wikiinfo float-left" id="pdfinfo" style="display:none">
 				<div class="alert alert-info" style="width:500px"><h4><span class="icon icon-information fas fa-info-circle fa-fw "></span> <span class="rboxtitle">Please wait</span></h4><div class="rboxcontent" style="display: inline"><span class="fas fa-circle-notch fa-spin" style="font-size:24px"></span> The PDF is being prepared, please wait...</div></div>
@@ -558,7 +558,6 @@ textarea, .CodeMirror {
 <a id="aliases" name="//apple_ref/cpp/Section/Aliases" class="dashAnchor"></a><h2 class="showhide_heading" id="Aliases">Aliases<a href="PluginPluginManager.html#Aliases" class="heading-link"><span class="icon icon-link fas fa-link "></span></a></h2>
 <p><a href="http://doc.tiki.org/Plugin-Manager" class="wiki wiki_page alias">Plugin Manager</a></p>
 
-
 					</div>
 
 		
@@ -741,7 +740,7 @@ textarea, .CodeMirror {
 <!--//--><![CDATA[//><!--
 // js 0 
 tiki_cookie_jar=new Object();
-setCookieBrowser('javascript_enabled', '1622299709000', '', new Date(1622299709000));
+setCookieBrowser('javascript_enabled', '1622306912000', '', new Date(1622306912000));
 $.lang = 'en';
 
 // JS Object to hold prefs for jq
@@ -788,16 +787,6 @@ if (getCookie('postitnote') != 'hidden') {
         }
     }
 }
-$(document).ready(function(){
-// jq_onready 0 
-$("article").fitVids();
-$("time.timeago").timeago(); jQuery.timeago.settings.allowFuture = true;
-$(".table-responsive").doubleScroll({resetOnWindowResize: true});
-$(".convert-mailto").removeClass("convert-mailto").each(function () {
-				var address = $(this).data("encode-name") + "@" + $(this).data("encode-domain");
-				$(this).attr("href", "mailto:" + address).text(address);
-			});
-}) /* end on ready */;
 					function submitSearch1() {
 						var $f = $('#search-module-form1');
 						if ($f.attr('action') !== "tiki-editpage.php" && $f.data('page_selected') === $("#search_mod_input_1").val()) {
@@ -885,6 +874,10 @@ $(document).ready(function(){
 $("article").fitVids();
 $("time.timeago").timeago(); jQuery.timeago.settings.allowFuture = true;
 $(".table-responsive").doubleScroll({resetOnWindowResize: true});
+$(".convert-mailto").removeClass("convert-mailto").each(function () {
+				var address = $(this).data("encode-name") + "@" + $(this).data("encode-domain");
+				$(this).attr("href", "mailto:" + address).text(address);
+			});
 $(".search_mod_magnifier").mouseover( function () {
 	$(".search_mod_buttons", $(this).parents(".module"))
 		.show('fast')
@@ -906,10 +899,6 @@ $("#search_mod_input_1").tiki("autocomplete", "pagename",{select: function(event
 						}, close: function(event, item) {
 						$(".search_mod_buttons", "#search-module-form1").show();
 						}});
-$(".convert-mailto").removeClass("convert-mailto").each(function () {
-				var address = $(this).data("encode-name") + "@" + $(this).data("encode-domain");
-				$(this).attr("href", "mailto:" + address).text(address);
-			});
 							$('#comment-toggle').comment_toggle();
 						
 $(document).ready(function () {

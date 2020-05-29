@@ -267,6 +267,7 @@ textarea, .CodeMirror {
 }
 
 @media (min-width: 1200px) { .container { width:1240px; max-width:1240px;} }
+.plugin-mouseover-anchor:not([href]) { border-bottom: 1px dotted; color: inherit; cursor: help; text-decoration: none; }
 -->
 </style>
 	<style type="text/css">#sitelogo img {margin-top: 0; position: relative; top: -12px;}</style>
@@ -330,7 +331,7 @@ textarea, .CodeMirror {
 				
 				Display hidden content by mousing over text
 
-				<span class="cachedStatus">(Cached)</span>							</div>
+											</div>
 		 
 					<div class="wikiinfo float-left" id="pdfinfo" style="display:none">
 				<div class="alert alert-info" style="width:500px"><h4><span class="icon icon-information fas fa-info-circle fa-fw "></span> <span class="rboxtitle">Please wait</span></h4><div class="rboxcontent" style="display: inline"><span class="fas fa-circle-notch fa-spin" style="font-size:24px"></span> The PDF is being prepared, please wait...</div></div>
@@ -536,7 +537,6 @@ textarea, .CodeMirror {
 <p>
 <br></p>
 
-
 					</div>
 
 		
@@ -718,7 +718,7 @@ textarea, .CodeMirror {
 <!--//--><![CDATA[//><!--
 // js 0 
 tiki_cookie_jar=new Object();
-setCookieBrowser('javascript_enabled', '1622299702000', '', new Date(1622299702000));
+setCookieBrowser('javascript_enabled', '1622306905000', '', new Date(1622306905000));
 $.lang = 'en';
 
 // JS Object to hold prefs for jq
@@ -765,29 +765,6 @@ if (getCookie('postitnote') != 'hidden') {
         }
     }
 }
-$(document).ready(function(){
-// jq_onready 0 
-$("article").fitVids();
-$("time.timeago").timeago(); jQuery.timeago.settings.allowFuture = true;
-$(".table-responsive").doubleScroll({resetOnWindowResize: true});
-$(".convert-mailto").removeClass("convert-mailto").each(function () {
-				var address = $(this).data("encode-name") + "@" + $(this).data("encode-domain");
-				$(this).attr("href", "mailto:" + address).text(address);
-			});
-$('#mo1-link').mouseover(function(event) {
-	var pos  = $(this).position();
-	$(this).closest('td').css('position', 'relative');
-	$('#mo1').css('position', 'absolute').css('left', pos.left + 4 + 'px').css('top', pos.top + 15 + 'px');
-	showJQ('#mo1', '', 'normal');  });
-$('#mo1-link').mouseout(function(event) { setTimeout(function() {hideJQ('#mo1', '', 'normal')}, 0); });
-$('#mo2-link').mouseover(function(event) {
-	var pos  = $(this).position();
-	$(this).closest('td').css('position', 'relative');
-	$('#mo2').css('position', 'absolute').css('left', pos.left + 4 + 'px').css('top', pos.top + 15 + 'px');
-	showJQ('#mo2', '', 'normal');  });
-$('#mo2').click(function(event) { hideJQ('#mo2', '', 'normal'); }).css('cursor','pointer');
-
-}) /* end on ready */;
 					function submitSearch1() {
 						var $f = $('#search-module-form1');
 						if ($f.attr('action') !== "tiki-editpage.php" && $f.data('page_selected') === $("#search_mod_input_1").val()) {
@@ -875,6 +852,23 @@ $(document).ready(function(){
 $("article").fitVids();
 $("time.timeago").timeago(); jQuery.timeago.settings.allowFuture = true;
 $(".table-responsive").doubleScroll({resetOnWindowResize: true});
+$(".convert-mailto").removeClass("convert-mailto").each(function () {
+				var address = $(this).data("encode-name") + "@" + $(this).data("encode-domain");
+				$(this).attr("href", "mailto:" + address).text(address);
+			});
+$('#mo1-link').mouseover(function(event) {
+	var pos  = $(this).position();
+	$(this).closest('td').css('position', 'relative');
+	$('#mo1').css('position', 'absolute').css('left', pos.left + 4 + 'px').css('top', pos.top + 15 + 'px');
+	showJQ('#mo1', '', 'normal');  });
+$('#mo1-link').mouseout(function(event) { setTimeout(function() {hideJQ('#mo1', '', 'normal')}, 0); });
+$('#mo2-link').mouseover(function(event) {
+	var pos  = $(this).position();
+	$(this).closest('td').css('position', 'relative');
+	$('#mo2').css('position', 'absolute').css('left', pos.left + 4 + 'px').css('top', pos.top + 15 + 'px');
+	showJQ('#mo2', '', 'normal');  });
+$('#mo2').click(function(event) { hideJQ('#mo2', '', 'normal'); }).css('cursor','pointer');
+
 $(".search_mod_magnifier").mouseover( function () {
 	$(".search_mod_buttons", $(this).parents(".module"))
 		.show('fast')
@@ -896,10 +890,6 @@ $("#search_mod_input_1").tiki("autocomplete", "pagename",{select: function(event
 						}, close: function(event, item) {
 						$(".search_mod_buttons", "#search-module-form1").show();
 						}});
-$(".convert-mailto").removeClass("convert-mailto").each(function () {
-				var address = $(this).data("encode-name") + "@" + $(this).data("encode-domain");
-				$(this).attr("href", "mailto:" + address).text(address);
-			});
 $(document).ready(function () {
   var resetCSS = {
     transition: 'all .5s ease 0s',
