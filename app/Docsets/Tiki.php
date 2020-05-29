@@ -34,7 +34,7 @@ class Tiki extends BaseDocset
             'todate=',
             'viewmode=',
             'PDF\.js',
-            'Plugins\.html',
+            'Plugins$',
             'structure=',
             'tikiversion=',
             'wp_files_sort_mode[0-9]=',
@@ -52,7 +52,7 @@ class Tiki extends BaseDocset
             '/LIST',
             '/Module-',
             '/Plugin[^-]',
-            '-Tracker-Field',
+            '-Field$',
             'Tiki_org_family',
         ]);
 

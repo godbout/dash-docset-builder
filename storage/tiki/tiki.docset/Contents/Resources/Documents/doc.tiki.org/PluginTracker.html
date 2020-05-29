@@ -866,7 +866,7 @@ Use this <a href="http://doc.tiki.org/wiki%20plugin" title="" class="wiki wiki_p
 
 <p>You could also use the url parameter "<strong>prefills</strong>" with the corresponding "<strong>values</strong>". See more information here:
 </p>
-<ul><li> <a href="http://doc.tiki.org/Plugin-Tracker-Advanced" title="More information on using PluginTracker" class="wiki wiki_page">Plugin Tracker Advanced</a>
+<ul><li> <a href="PluginTracker-Advanced.html" title="More information on using PluginTracker" class="wiki wiki_page">PluginTracker Advanced</a>
 </li><li> <a href="PluginTrackerPrefill.html" title="Create a button to prefill tacker fields" class="wiki wiki_page">PluginTrackerPrefill</a>
 </li></ul><p>
 <br>See also <a href="PluginTrackerList.html" title="List, filter and sort the items in a tracker" class="wiki wiki_page">PluginTrackerList</a> to see how to use the parameter url to transfer an itemId to an URL or <a href="PluginJq.html" title="Add JQuery Javascript code" class="wiki wiki_page">PluginJQ</a> if you want to use jQuery.
@@ -914,7 +914,7 @@ Use this <a href="http://doc.tiki.org/wiki%20plugin" title="" class="wiki wiki_p
 <br>It is also <u>recommended</u> to use a specific custom prefix for all fields of a tracker (one prefix per tracker) to allow to reuse and to provide existing trackers easily with a profile. Syntax:  <code>{$f_<strong>_prefix_permanentname</strong>}</code>. The prefix can be set in the tracker preference settings.
 </p>
 
-<p>It is also possible to insert the <em>ItemId</em> itself, which is useful to create new wiki pages with tracker plugins inside. To do this you'll have to add an <a href="http://doc.tiki.org/Auto-Increment-Field" title="Auto-Increment Field" class="wiki wiki_page">Auto-Increment Field</a> to your tracker, with the appropriate options to auto-fill it with the <em>itemId</em>. This new field content (<em>itemId</em> value) can then be inserted in the template with the syntax seen above.
+<p>It is also possible to insert the <em>ItemId</em> itself, which is useful to create new wiki pages with tracker plugins inside. To do this you'll have to add an <a href="Auto-Increment-Field.html" title="Auto-Increment Field" class="wiki wiki_page">Auto-Increment Field</a> to your tracker, with the appropriate options to auto-fill it with the <em>itemId</em>. This new field content (<em>itemId</em> value) can then be inserted in the template with the syntax seen above.
 </p>
 
 <p>Since <a href="http://doc.tiki.org/Tiki15" title="Tiki15" class="wiki wiki_page">Tiki 15.1</a>, wiki page templates can be (optionally) used for email notifications using the "<strong>wiki:page name tpl</strong>" format instead of template_name.tpl files in the templates/mail dir. Tiki will use a page "page name subject tpl" if found.
@@ -957,7 +957,7 @@ Use this <a href="http://doc.tiki.org/wiki%20plugin" title="" class="wiki wiki_p
 <br> createdBy was added in ((Tiki 17|Tiki 17 (trunk) )) and <u>might</u> be backported to 16.
 <br> username sends to the email of the registered user account and createdBy sends to the email of the curently logged in creator of the item.
 </li></ul><p>
-<br>Since <a href="http://doc.tiki.org/Tiki15" title="Tiki15" class="wiki wiki_page">Tiki 15 .1</a>, tracker plugin allow <a href="Items-List-and-Item-Link-Tracker-Fields.html" title="Items List and Item Link Tracker Fields" class="wiki wiki_page">Items List fields</a> to be used as the <strong>to</strong> or <strong>from</strong> fields in the email parameter. They wil be shown in the form as read only labels. This might be useful in cases such as:
+<br>Since <a href="http://doc.tiki.org/Tiki15" title="Tiki15" class="wiki wiki_page">Tiki 15 .1</a>, tracker plugin allow <a href="http://doc.tiki.org/Items-List-and-Item-Link-Tracker-Fields" title="Items List and Item Link Tracker Fields" class="wiki wiki_page">Items List fields</a> to be used as the <strong>to</strong> or <strong>from</strong> fields in the email parameter. They wil be shown in the form as read only labels. This might be useful in cases such as:
 </p>
 <ul><li> One tracker defines business shops, with its members to be notified of changes related to that shop. And...
 </li><li> A second tracker handles data of products from shops, and they have:
@@ -1113,7 +1113,7 @@ What you want to do now: ((Issue Tracker|submit another issue)) or ((HomePage|br
 <p>See also:
 </p>
 <ul><li> <a href="PluginTrackerList.html" title="List, filter and sort the items in a tracker" class="wiki wiki_page">PluginTrackerlist</a> - which displays a given tracker items.
-</li><li> <a href="http://doc.tiki.org/Plugin-Tracker-Advanced" title="More information on using PluginTracker" class="wiki wiki_page">Plugin Tracker Advanced</a>
+</li><li> <a href="PluginTracker-Advanced.html" title="More information on using PluginTracker" class="wiki wiki_page">PluginTracker Advanced</a>
 </li><li> <a href="http://doc.tiki.org/Pretty-Tracker" title="Pretty Tracker" class="wiki wiki_page">Pretty Tracker</a>
 </li><li> <a href="PluginList.html" title="Search for, list, and filter all types of items and display custom formatted results" class="wiki wiki_page">PluginList</a></li></ul>
 
@@ -1299,7 +1299,7 @@ What you want to do now: ((Issue Tracker|submit another issue)) or ((HomePage|br
 <!--//--><![CDATA[//><!--
 // js 0 
 tiki_cookie_jar=new Object();
-setCookieBrowser('javascript_enabled', '1622293995000', '', new Date(1622293995000));
+setCookieBrowser('javascript_enabled', '1622299760000', '', new Date(1622299760000));
 $.lang = 'en';
 
 // JS Object to hold prefs for jq
