@@ -13,7 +13,7 @@ class Tiki extends BaseDocset
     public const NAME = 'Tiki';
     public const URL = 'doc.tiki.org';
     public const INDEX = 'All-the-Documentation.html';
-    public const PLAYGROUND = '';
+    public const PLAYGROUND = 'https://demo.tiki.org/';
     public const ICON_16 = '../../icons/icon.png';
     public const ICON_32 = '../../icons/icon@2x.png';
     public const EXTERNAL_DOMAINS = [
