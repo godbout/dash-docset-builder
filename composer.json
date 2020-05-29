@@ -18,7 +18,7 @@
     "require": {
         "php": "^7.2",
         "illuminate/database": "^7.0",
-        "laravel-zero/framework": "^7.0",
+        "laravel-zero/framework": "^7.1",
         "symfony/css-selector": "^5.0",
         "symfony/dom-crawler": "^5.0",
         "wa72/htmlpagedom": "^2",
