@@ -330,7 +330,7 @@ textarea, .CodeMirror {
 				
 				Create a tracker for voting
 
-											</div>
+				<span class="cachedStatus">(Cached)</span>							</div>
 		 
 					<div class="wikiinfo float-left" id="pdfinfo" style="display:none">
 				<div class="alert alert-info" style="width:500px"><h4><span class="icon icon-information fas fa-info-circle fa-fw "></span> <span class="rboxtitle">Please wait</span></h4><div class="rboxcontent" style="display: inline"><span class="fas fa-circle-notch fa-spin" style="font-size:24px"></span> The PDF is being prepared, please wait...</div></div>
@@ -494,6 +494,7 @@ textarea, .CodeMirror {
 <a id="related-pages" name="//apple_ref/cpp/Section/Related%20pages" class="dashAnchor"></a><h2 class="showhide_heading" id="Related_pages">Related pages<a href="PluginVote.html#Related_pages" class="heading-link"><span class="icon icon-link fas fa-link "></span></a></h2>
 <ul><li> <a href="PluginConvene.html" title="Agree a date from a list of alternatives" class="wiki wiki_page">PluginConvene</a>
 </li><li> <a href="PluginProposal.html" title="Allow users to vote on a proposal and see the results" class="wiki wiki_page">PluginProposal</a></li></ul>
+
 					</div>
 
 		
@@ -541,22 +542,6 @@ textarea, .CodeMirror {
 				<div id="mod-related_videopagebottom1">
 										
 <div id="related_video" style="display:block;">
-<h4 class="showhide_heading" id="Related_Video_"> Related Video "Features and Options in Tiki"<a href="PluginVote.html#Related_Video_" class="heading-link"><span class="icon icon-link fas fa-link "></span></a></h4>
-<p><span class="videoLevel-Beginner">Beginner</span> <span class="videoRole">| Administrator</span>
-<a class="wiki external" target="_blank" href="https://tiki.org/Bsfez" rel="external">Bernard Sfez / Tiki Specialist</a> - Tue 11 Dec, 2018<br>
-<a class="btn btn-link create_item_button" target="" data-role="button" data-inline="true" title="Other videos" href="http://doc.tiki.org/Video-Tutorials"><span class="icon icon-film fas fa-film "></span> Other videos</a><br>
-<iframe src="http://www.youtube-nocookie.com/embed/M4BnpIR04QM?" frameborder="0" width="560" height="315" allowfullscreen=""></iframe>
-</p>
-<hr>
-<p>On this #tikiexpresstutorial, using #tiki19 I’ll show you:
-<br>How to enable a feature from the Control Panels
-<br>How to enable a Global Feature from the features panel
-<br>How to enable an Interface feature
-<br>A quick overview of the Programmer features
-<br>And where to look for feature options
-</p>
-
-<p>Visit my <a class="wiki external" target="_blank" href="https://bsfez.com" rel="external">website</a> or <a class="wiki external" target="_blank" href="https://www.youtube.com/channel/UCgM1YJeUCaszrTsuZub0Qpg" rel="external"> my youtube channel</a> to see more Tiki express tutorial and <a class="wiki external" target="_blank" href="https://www.youtube.com/channel/UCgM1YJeUCaszrTsuZub0Qpg?sub_confirmation=1" rel="external">Subscribe to my youtube channel</a>.</p>
 </div>
 
 													
@@ -691,7 +676,7 @@ textarea, .CodeMirror {
 <!--//--><![CDATA[//><!--
 // js 0 
 tiki_cookie_jar=new Object();
-setCookieBrowser('javascript_enabled', '1622280782000', '', new Date(1622280782000));
+setCookieBrowser('javascript_enabled', '1622294005000', '', new Date(1622294005000));
 $.lang = 'en';
 
 // JS Object to hold prefs for jq
@@ -738,6 +723,16 @@ if (getCookie('postitnote') != 'hidden') {
         }
     }
 }
+$(document).ready(function(){
+// jq_onready 0 
+$("article").fitVids();
+$("time.timeago").timeago(); jQuery.timeago.settings.allowFuture = true;
+$(".table-responsive").doubleScroll({resetOnWindowResize: true});
+$(".convert-mailto").removeClass("convert-mailto").each(function () {
+				var address = $(this).data("encode-name") + "@" + $(this).data("encode-domain");
+				$(this).attr("href", "mailto:" + address).text(address);
+			});
+}) /* end on ready */;
 					function submitSearch1() {
 						var $f = $('#search-module-form1');
 						if ($f.attr('action') !== "tiki-editpage.php" && $f.data('page_selected') === $("#search_mod_input_1").val()) {
@@ -825,10 +820,6 @@ $(document).ready(function(){
 $("article").fitVids();
 $("time.timeago").timeago(); jQuery.timeago.settings.allowFuture = true;
 $(".table-responsive").doubleScroll({resetOnWindowResize: true});
-$(".convert-mailto").removeClass("convert-mailto").each(function () {
-				var address = $(this).data("encode-name") + "@" + $(this).data("encode-domain");
-				$(this).attr("href", "mailto:" + address).text(address);
-			});
 $(".search_mod_magnifier").mouseover( function () {
 	$(".search_mod_buttons", $(this).parents(".module"))
 		.show('fast')
@@ -850,6 +841,10 @@ $("#search_mod_input_1").tiki("autocomplete", "pagename",{select: function(event
 						}, close: function(event, item) {
 						$(".search_mod_buttons", "#search-module-form1").show();
 						}});
+$(".convert-mailto").removeClass("convert-mailto").each(function () {
+				var address = $(this).data("encode-name") + "@" + $(this).data("encode-domain");
+				$(this).attr("href", "mailto:" + address).text(address);
+			});
 							$('#comment-toggle').comment_toggle();
 						
 $(document).ready(function () {

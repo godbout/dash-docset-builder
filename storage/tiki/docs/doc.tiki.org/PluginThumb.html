@@ -268,20 +268,6 @@ textarea, .CodeMirror {
 
 @media (min-width: 1200px) { .container { width:1240px; max-width:1240px;} }
 .affix {top:44px;}
-
-			.lozadFade {
-				animation-name: lozadFade;
-				animation-duration: 1s;
-			}
-			@keyframes lozadFade {
-				from {
-					opacity: 0;
-				}
-				to {
-					opacity: 1;
-				}
-			}
-		
 -->
 </style>
 	<style type="text/css">#sitelogo img {margin-top: 0; position: relative; top: -12px;}</style>
@@ -426,7 +412,7 @@ textarea, .CodeMirror {
 				
 				(deprecated with 5.0) Display a thumbnail
 
-											</div>
+				<span class="cachedStatus">(Cached)</span>							</div>
 		 
 					<div class="wikiinfo float-left" id="pdfinfo" style="display:none">
 				<div class="alert alert-info" style="width:500px"><h4><span class="icon icon-information fas fa-info-circle fa-fw "></span>&nbsp;<span class="rboxtitle">Please wait</span></h4><div class="rboxcontent" style="display: inline"><span class="fas fa-circle-notch fa-spin" style="font-size:24px"></span> The PDF is being prepared, please wait...</div></div>
@@ -435,7 +421,7 @@ textarea, .CodeMirror {
 </div> 
 
 	<div class="wikiactions_wrapper clearfix">
-	<div class="wikiactions float-sm-right mb-2"><div class="btn-group ml-2"><div class="btn-group backlinks"><a href="PluginThumb.html#" role="button" data-toggle="dropdown" data-hover="dropdown" class="btn btn-info btn-sm dropdown-toggle" title="Backlinks"><span class="icon icon-backlink fas fa-reply "   ></span></a><div class="dropdown-menu dropdown-menu-right" role="menu"><h6 class="dropdown-header">Backlinks</h6><div class="dropdown-divider"></div><a class="dropdown-item" role="menuitem" tabindex="-1" href="http://doc.tiki.org/Ins%C3%A9rer-des-images" title="Insérer des images">Insérer des images</a><a class="dropdown-item" role="menuitem" tabindex="-1" href="http://doc.tiki.org/Wiki-Syntax-Images" title="Wiki-Syntax Images">Wiki-Syntax Images</a><a class="dropdown-item" role="menuitem" tabindex="-1" href="http://doc.tiki.org/%EA%B7%B8%EB%A6%BC-%EC%9C%84%ED%82%A4-%EB%AC%B8%EB%B2%95" title="그림 위키 문법">그림 위키 문법</a></div></div><div class="btn-group structures"><a href="PluginThumb.html#" class="btn btn-info btn-sm dropdown-toggle" data-toggle="dropdown" data-hover="dropdown" title="Structures"><span class="icon icon-structure fas fa-sitemap "   ></span></a><div class="dropdown-menu dropdown-menu-right" role="menu"><h6 class="dropdown-header">Structures</h6><div class="dropdown-divider"></div><a href="http://doc.tiki.org/tiki-index.php?page=PluginThumb&amp;structure=HomePage%20Plugins"  title="Current structure: HomePage Plugins" class="dropdown-item selected tips" >Home</a></div></div><div class="btn-group page_actions" role="group"><a class="btn btn-info btn-sm dropdown-toggle" data-toggle="dropdown" data-hover="dropdown" href="PluginThumb.html#" title="Page actions"><span class="icon icon-menu-extra fas fa-chevron-down "   ></span></a><div class="dropdown-menu dropdown-menu-right"><h6 class="dropdown-header">Page actions</h6><div class="dropdown-divider"></div><a class="dropdown-item" href="http://doc.tiki.org/tiki-print.php?page=PluginThumb&amp;display=pdf"><span class="icon icon-pdf far fa-file-pdf "   ></span>  PDF</a><a class="dropdown-item" href="http://doc.tiki.org/tiki-print.php?page=PluginThumb"><span class="icon icon-print fas fa-print "   ></span> Print</a><a class="dropdown-item" href="javascript:open_webdav('http://doc.tiki.org/tiki-webdav.php/Wiki Pages/PluginThumb')" class="icon"><span class="icon icon-file-archive-open fas fa-folder-open "   ></span> Open in WebDAV</a></div></div></div></div>
+	<div class="wikiactions float-sm-right mb-2"><div class="btn-group ml-2"><div class="btn-group backlinks"><a href="PluginThumb.html#" role="button" data-toggle="dropdown" data-hover="dropdown" class="btn btn-info btn-sm dropdown-toggle" title="Backlinks"><span class="icon icon-backlink fas fa-reply "   ></span></a><div class="dropdown-menu dropdown-menu-right" role="menu"><h6 class="dropdown-header">Backlinks</h6><div class="dropdown-divider"></div><a class="dropdown-item" role="menuitem" tabindex="-1" href="http://doc.tiki.org/Ins%C3%A9rer-des-images" title="Insérer des images">Insérer des images</a><a class="dropdown-item" role="menuitem" tabindex="-1" href="http://doc.tiki.org/Wiki-Syntax-Images" title="Wiki-Syntax Images">Wiki-Syntax Images</a><a class="dropdown-item" role="menuitem" tabindex="-1" href="http://doc.tiki.org/%EA%B7%B8%EB%A6%BC-%EC%9C%84%ED%82%A4-%EB%AC%B8%EB%B2%95" title="그림 위키 문법">그림 위키 문법</a></div></div><div class="btn-group structures"><a href="PluginThumb.html#" class="btn btn-info btn-sm dropdown-toggle" data-toggle="dropdown" data-hover="dropdown" title="Structures"><span class="icon icon-structure fas fa-sitemap "   ></span></a><div class="dropdown-menu dropdown-menu-right" role="menu"><h6 class="dropdown-header">Structures</h6><div class="dropdown-divider"></div><a href="http://doc.tiki.org/tiki-index.php?page=PluginThumb&amp;structure=HomePage%20Plugins"  title="Current structure: HomePage Plugins" class="dropdown-item selected tips" >Home</a></div></div><div class="btn-group page_actions" role="group"><a class="btn btn-info btn-sm dropdown-toggle" data-toggle="dropdown" data-hover="dropdown" href="PluginThumb.html#" title="Page actions"><span class="icon icon-menu-extra fas fa-chevron-down "   ></span></a><div class="dropdown-menu dropdown-menu-right"><h6 class="dropdown-header">Page actions</h6><div class="dropdown-divider"></div><a class="dropdown-item" href="http://doc.tiki.org/tiki-print.php?page=PluginThumb&amp;display=pdf"><span class="icon icon-pdf far fa-file-pdf "   ></span>  PDF</a><a class="dropdown-item" href="http://doc.tiki.org/PluginThumb?refresh=1"><span class="icon icon-refresh fas fa-sync "   ></span> Refresh</a><a class="dropdown-item" href="http://doc.tiki.org/tiki-print.php?page=PluginThumb"><span class="icon icon-print fas fa-print "   ></span> Print</a><a class="dropdown-item" href="javascript:open_webdav('http://doc.tiki.org/tiki-webdav.php/Wiki Pages/PluginThumb')" class="icon"><span class="icon icon-file-archive-open fas fa-folder-open "   ></span> Open in WebDAV</a></div></div></div></div>
 	</div>
 	
 						
@@ -551,6 +537,7 @@ textarea, .CodeMirror {
 <ul><li> for tw &lt;1.9.8, you must specify url
 </li></ul><p></p>
 
+
 					</div>
 
 		
@@ -630,22 +617,6 @@ textarea, .CodeMirror {
 				<div id="mod-related_videopagebottom1">
 										
 <div id="related_video" style="display:block;">
-<h4 class="showhide_heading" id="Related_Video_"> Related Video&nbsp;"Features and Options in Tiki"<a href="PluginThumb.html#Related_Video_" class="heading-link"><span class="icon icon-link fas fa-link "   ></span></a></h4>
-<p><span class='videoLevel-Beginner'>Beginner</span> <span class='videoRole'>| Administrator</span>
-<a class="wiki external" target="_blank" href="https://tiki.org/Bsfez" rel="external">Bernard Sfez / Tiki Specialist</a> - Tue 11 Dec, 2018<br />
-<a class="btn btn-link create_item_button" target="" data-role="button" data-inline="true"  title="Other videos" href="http://doc.tiki.org/Video-Tutorials"><span class="icon icon-film fas fa-film "   ></span> Other videos</a><br />
-<iframe src="http://www.youtube-nocookie.com/embed/M4BnpIR04QM?" frameborder="0" width="560" height="315" allowfullscreen=""></iframe>
-</p>
-<hr />
-<p>On this #tikiexpresstutorial, using #tiki19 I’ll show you:
-<br />How to enable a feature from the Control Panels
-<br />How to enable a Global Feature from the features panel
-<br />How to enable an Interface feature
-<br />A quick overview of the Programmer features
-<br />And where to look for feature options
-</p>
-
-<p>Visit my <a class="wiki external" target="_blank" href="https://bsfez.com" rel="external">website</a> or <a class="wiki external" target="_blank" href="https://www.youtube.com/channel/UCgM1YJeUCaszrTsuZub0Qpg" rel="external"> my youtube channel</a> to see more Tiki express tutorial and <a class="wiki external" target="_blank" href="https://www.youtube.com/channel/UCgM1YJeUCaszrTsuZub0Qpg?sub_confirmation=1" rel="external">Subscribe to my youtube channel</a>.</p>
 </div>
 
 													
@@ -1362,13 +1333,13 @@ textarea, .CodeMirror {
 				<a class="nav-link" href="http://doc.tiki.org/Plugins?structure=HomePage+AdminGuide">Plugins</a>
 			</li>
 								<li class="nav-item ">
-				<a class="nav-link" href="Plugin-Alias.html">Plugin Alias</a>
+				<a class="nav-link" href="http://doc.tiki.org/Plugin-Alias">Plugin Alias</a>
 			</li>
 								<li class="nav-item ">
-				<a class="nav-link" href="Plugin-Security.html">Plugin Security</a>
+				<a class="nav-link" href="http://doc.tiki.org/Plugin-Security">Plugin Security</a>
 			</li>
 								<li class="nav-item ">
-				<a class="nav-link" href="Plugin-Approval.html">Plugin Approval</a>
+				<a class="nav-link" href="http://doc.tiki.org/Plugin-Approval">Plugin Approval</a>
 			</li>
 								<li class="nav-item ">
 				<a class="nav-link" href="http://doc.tiki.org/i18n-Admin">i18n Admin</a>
@@ -1940,7 +1911,6 @@ textarea, .CodeMirror {
 
 <p></p>
 
-
 		
 														</div>
 				
@@ -2328,7 +2298,7 @@ Tiki® and TikiWiki® are registered trademarks of the <a class="wiki external" 
 			<div id="module_60" style=""
 				 class="module box-loadstats">
 				<div id="mod-loadstatsbottom5">
-										<small>[ Execution time: 0.14 secs ] &nbsp; [ Memory usage: 5.98MB ] &nbsp; [ Queries: 210 in 0.07 secs ]</small>
+										<small>[ Execution time: 0.10 secs ] &nbsp; [ Memory usage: 5.50MB ] &nbsp; [ Queries: 192 in 0.05 secs ]</small>
 													
 					</div>
 </div>
@@ -2407,7 +2377,7 @@ Tiki® and TikiWiki® are registered trademarks of the <a class="wiki external" 
 		<form name="loginbox" class="form" id="loginbox-1" action="https://doc.tiki.org/tiki-login.php"
 				method="post" 
 						>
-		<input type="hidden" class="ticket" name="ticket" value="xcX0pnx7xOcM6QQIlM-EQn7dHiJ-w1OmX5uc3Cx5rk4" />
+		<input type="hidden" class="ticket" name="ticket" value="pUXtYTwmj7fKXt7pP_daxjEG3GVTORwoUN5JYwEn2wQ" />
 		
 
 								<div class="user form-group row mx-0 clearfix">
@@ -2567,7 +2537,7 @@ Tiki® and TikiWiki® are registered trademarks of the <a class="wiki external" 
 <!--//--><![CDATA[//><!--
 // js 0 
 tiki_cookie_jar=new Object();
-setCookieBrowser('javascript_enabled', '1622280766000', '', new Date(1622280766000));
+setCookieBrowser('javascript_enabled', '1622293990000', '', new Date(1622293990000));
 $.lang = 'en';
 
 // JS Object to hold prefs for jq
@@ -2614,6 +2584,26 @@ if (getCookie('postitnote') != 'hidden') {
         }
     }
 }
+$(document).ready(function(){
+// jq_onready 0 
+$("article").fitVids();
+$("time.timeago").timeago(); jQuery.timeago.settings.allowFuture = true;
+$(".table-responsive").doubleScroll({resetOnWindowResize: true});
+
+			lozad('.lozad', {
+				load: function(el) {
+					el.src = el.dataset.src;
+					el.onload = function() {
+						el.classList.add('lozadFade');
+					}
+				}
+			}).observe();
+		
+$(".convert-mailto").removeClass("convert-mailto").each(function () {
+				var address = $(this).data("encode-name") + "@" + $(this).data("encode-domain");
+				$(this).attr("href", "mailto:" + address).text(address);
+			});
+}) /* end on ready */;
 					function submitSearch1() {
 						var $f = $('#search-module-form1');
 						if ($f.attr('action') !== "tiki-editpage.php" && $f.data('page_selected') === $("#search_mod_input_1").val()) {
@@ -2701,20 +2691,6 @@ $(document).ready(function(){
 $("article").fitVids();
 $("time.timeago").timeago(); jQuery.timeago.settings.allowFuture = true;
 $(".table-responsive").doubleScroll({resetOnWindowResize: true});
-
-			lozad('.lozad', {
-				load: function(el) {
-					el.src = el.dataset.src;
-					el.onload = function() {
-						el.classList.add('lozadFade');
-					}
-				}
-			}).observe();
-		
-$(".convert-mailto").removeClass("convert-mailto").each(function () {
-				var address = $(this).data("encode-name") + "@" + $(this).data("encode-domain");
-				$(this).attr("href", "mailto:" + address).text(address);
-			});
 $(".search_mod_magnifier").mouseover( function () {
 	$(".search_mod_buttons", $(this).parents(".module"))
 		.show('fast')
@@ -2736,6 +2712,10 @@ $("#search_mod_input_1").tiki("autocomplete", "pagename",{select: function(event
 						}, close: function(event, item) {
 						$(".search_mod_buttons", "#search-module-form1").show();
 						}});
+$(".convert-mailto").removeClass("convert-mailto").each(function () {
+				var address = $(this).data("encode-name") + "@" + $(this).data("encode-domain");
+				$(this).attr("href", "mailto:" + address).text(address);
+			});
 $(document).ready(function () {
   var resetCSS = {
     transition: 'all .5s ease 0s',

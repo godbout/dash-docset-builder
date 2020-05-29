@@ -267,20 +267,6 @@ textarea, .CodeMirror {
 }
 
 @media (min-width: 1200px) { .container { width:1240px; max-width:1240px;} }
-
-			.lozadFade {
-				animation-name: lozadFade;
-				animation-duration: 1s;
-			}
-			@keyframes lozadFade {
-				from {
-					opacity: 0;
-				}
-				to {
-					opacity: 1;
-				}
-			}
-		
 -->
 </style>
 	<style type="text/css">#sitelogo img {margin-top: 0; position: relative; top: -12px;}</style>
@@ -425,7 +411,7 @@ textarea, .CodeMirror {
 				
 				Create a quiz using a tracker
 
-											</div>
+				<span class="cachedStatus">(Cached)</span>							</div>
 		 
 					<div class="wikiinfo float-left" id="pdfinfo" style="display:none">
 				<div class="alert alert-info" style="width:500px"><h4><span class="icon icon-information fas fa-info-circle fa-fw "></span>&nbsp;<span class="rboxtitle">Please wait</span></h4><div class="rboxcontent" style="display: inline"><span class="fas fa-circle-notch fa-spin" style="font-size:24px"></span> The PDF is being prepared, please wait...</div></div>
@@ -436,7 +422,7 @@ textarea, .CodeMirror {
 	<div class="wikiactions_wrapper clearfix">
 	<div class="wikiactions float-sm-right mb-2"><div class="btn-group ml-2"><!--span class="btn-i18n" -->
 
-<div class="btn-group"><a href="PluginMiniQuiz.html#" class="btn btn-info btn-sm dropdown-toggle" data-toggle="dropdown" data-hover="dropdown" title="Translations"><span class="icon icon-translate fas fa-language "   ></span></a><div class="dropdown-menu dropdown-menu-right" role="menu"><h6 class="dropdown-header">Translations</h6><div role="separator" class="dropdown-divider"></div><a href="http://doc.tiki.org/tiki-index.php?page=PluginMiniQuiz&amp;no_bl=y" class="dropdown-item tips selected" title="Current language: PluginMiniQuiz"><em>English (en)</em></a><a href="http://doc.tiki.org/tiki-index.php?page=MiniQuiz%20%ED%94%8C%EB%9F%AC%EA%B7%B8%EC%9D%B8&amp;no_bl=y" title="View: MiniQuiz 플러그인" class="dropdown-item tips ">한국어 (ko)</a></div></div><!--/span --><div class="btn-group backlinks"><a href="PluginMiniQuiz.html#" role="button" data-toggle="dropdown" data-hover="dropdown" class="btn btn-info btn-sm dropdown-toggle" title="Backlinks"><span class="icon icon-backlink fas fa-reply "   ></span></a><div class="dropdown-menu dropdown-menu-right" role="menu"><h6 class="dropdown-header">Backlinks</h6><div class="dropdown-divider"></div><a class="dropdown-item" role="menuitem" tabindex="-1" href="http://doc.tiki.org/All-Plugins" title="All Plugins">All Plugins</a></div></div><div class="btn-group structures"><a href="PluginMiniQuiz.html#" class="btn btn-info btn-sm dropdown-toggle" data-toggle="dropdown" data-hover="dropdown" title="Structures"><span class="icon icon-structure fas fa-sitemap "   ></span></a><div class="dropdown-menu dropdown-menu-right" role="menu"><h6 class="dropdown-header">Structures</h6><div class="dropdown-divider"></div><a href="http://doc.tiki.org/tiki-index.php?page=PluginMiniQuiz&amp;structure=HomePage%20Plugins"  title="Current structure: HomePage Plugins" class="dropdown-item selected tips" >Home</a></div></div><div class="btn-group page_actions" role="group"><a class="btn btn-info btn-sm dropdown-toggle" data-toggle="dropdown" data-hover="dropdown" href="PluginMiniQuiz.html#" title="Page actions"><span class="icon icon-menu-extra fas fa-chevron-down "   ></span></a><div class="dropdown-menu dropdown-menu-right"><h6 class="dropdown-header">Page actions</h6><div class="dropdown-divider"></div><a class="dropdown-item" href="http://doc.tiki.org/tiki-print.php?page=PluginMiniQuiz&amp;display=pdf"><span class="icon icon-pdf far fa-file-pdf "   ></span>  PDF</a><a class="dropdown-item" href="http://doc.tiki.org/tiki-print.php?page=PluginMiniQuiz"><span class="icon icon-print fas fa-print "   ></span> Print</a><a class="dropdown-item" href="javascript:open_webdav('http://doc.tiki.org/tiki-webdav.php/Wiki Pages/PluginMiniQuiz')" class="icon"><span class="icon icon-file-archive-open fas fa-folder-open "   ></span> Open in WebDAV</a></div></div></div></div>
+<div class="btn-group"><a href="PluginMiniQuiz.html#" class="btn btn-info btn-sm dropdown-toggle" data-toggle="dropdown" data-hover="dropdown" title="Translations"><span class="icon icon-translate fas fa-language "   ></span></a><div class="dropdown-menu dropdown-menu-right" role="menu"><h6 class="dropdown-header">Translations</h6><div role="separator" class="dropdown-divider"></div><a href="http://doc.tiki.org/tiki-index.php?page=PluginMiniQuiz&amp;no_bl=y" class="dropdown-item tips selected" title="Current language: PluginMiniQuiz"><em>English (en)</em></a><a href="http://doc.tiki.org/tiki-index.php?page=MiniQuiz%20%ED%94%8C%EB%9F%AC%EA%B7%B8%EC%9D%B8&amp;no_bl=y" title="View: MiniQuiz 플러그인" class="dropdown-item tips ">한국어 (ko)</a></div></div><!--/span --><div class="btn-group backlinks"><a href="PluginMiniQuiz.html#" role="button" data-toggle="dropdown" data-hover="dropdown" class="btn btn-info btn-sm dropdown-toggle" title="Backlinks"><span class="icon icon-backlink fas fa-reply "   ></span></a><div class="dropdown-menu dropdown-menu-right" role="menu"><h6 class="dropdown-header">Backlinks</h6><div class="dropdown-divider"></div><a class="dropdown-item" role="menuitem" tabindex="-1" href="http://doc.tiki.org/All-Plugins" title="All Plugins">All Plugins</a></div></div><div class="btn-group structures"><a href="PluginMiniQuiz.html#" class="btn btn-info btn-sm dropdown-toggle" data-toggle="dropdown" data-hover="dropdown" title="Structures"><span class="icon icon-structure fas fa-sitemap "   ></span></a><div class="dropdown-menu dropdown-menu-right" role="menu"><h6 class="dropdown-header">Structures</h6><div class="dropdown-divider"></div><a href="http://doc.tiki.org/tiki-index.php?page=PluginMiniQuiz&amp;structure=HomePage%20Plugins"  title="Current structure: HomePage Plugins" class="dropdown-item selected tips" >Home</a></div></div><div class="btn-group page_actions" role="group"><a class="btn btn-info btn-sm dropdown-toggle" data-toggle="dropdown" data-hover="dropdown" href="PluginMiniQuiz.html#" title="Page actions"><span class="icon icon-menu-extra fas fa-chevron-down "   ></span></a><div class="dropdown-menu dropdown-menu-right"><h6 class="dropdown-header">Page actions</h6><div class="dropdown-divider"></div><a class="dropdown-item" href="http://doc.tiki.org/tiki-print.php?page=PluginMiniQuiz&amp;display=pdf"><span class="icon icon-pdf far fa-file-pdf "   ></span>  PDF</a><a class="dropdown-item" href="http://doc.tiki.org/PluginMiniQuiz?refresh=1"><span class="icon icon-refresh fas fa-sync "   ></span> Refresh</a><a class="dropdown-item" href="http://doc.tiki.org/tiki-print.php?page=PluginMiniQuiz"><span class="icon icon-print fas fa-print "   ></span> Print</a><a class="dropdown-item" href="javascript:open_webdav('http://doc.tiki.org/tiki-webdav.php/Wiki Pages/PluginMiniQuiz')" class="icon"><span class="icon icon-file-archive-open fas fa-folder-open "   ></span> Open in WebDAV</a></div></div></div></div>
 	</div>
 	
 						
@@ -540,6 +526,7 @@ textarea, .CodeMirror {
 
 <p><img alt="Image" class="regImage pluginImg img-fluid lozad" data-src="img/wiki_up/miniquiz3.gif" /></p>
 
+
 					</div>
 
 		
@@ -627,22 +614,6 @@ textarea, .CodeMirror {
 				<div id="mod-related_videopagebottom1">
 										
 <div id="related_video" style="display:block;">
-<h4 class="showhide_heading" id="Related_Video_"> Related Video&nbsp;"Features and Options in Tiki"<a href="PluginMiniQuiz.html#Related_Video_" class="heading-link"><span class="icon icon-link fas fa-link "   ></span></a></h4>
-<p><span class='videoLevel-Beginner'>Beginner</span> <span class='videoRole'>| Administrator</span>
-<a class="wiki external" target="_blank" href="https://tiki.org/Bsfez" rel="external">Bernard Sfez / Tiki Specialist</a> - Tue 11 Dec, 2018<br />
-<a class="btn btn-link create_item_button" target="" data-role="button" data-inline="true"  title="Other videos" href="http://doc.tiki.org/Video-Tutorials"><span class="icon icon-film fas fa-film "   ></span> Other videos</a><br />
-<iframe src="http://www.youtube-nocookie.com/embed/M4BnpIR04QM?" frameborder="0" width="560" height="315" allowfullscreen=""></iframe>
-</p>
-<hr />
-<p>On this #tikiexpresstutorial, using #tiki19 I’ll show you:
-<br />How to enable a feature from the Control Panels
-<br />How to enable a Global Feature from the features panel
-<br />How to enable an Interface feature
-<br />A quick overview of the Programmer features
-<br />And where to look for feature options
-</p>
-
-<p>Visit my <a class="wiki external" target="_blank" href="https://bsfez.com" rel="external">website</a> or <a class="wiki external" target="_blank" href="https://www.youtube.com/channel/UCgM1YJeUCaszrTsuZub0Qpg" rel="external"> my youtube channel</a> to see more Tiki express tutorial and <a class="wiki external" target="_blank" href="https://www.youtube.com/channel/UCgM1YJeUCaszrTsuZub0Qpg?sub_confirmation=1" rel="external">Subscribe to my youtube channel</a>.</p>
 </div>
 
 													
@@ -1359,13 +1330,13 @@ textarea, .CodeMirror {
 				<a class="nav-link" href="http://doc.tiki.org/Plugins?structure=HomePage+AdminGuide">Plugins</a>
 			</li>
 								<li class="nav-item ">
-				<a class="nav-link" href="Plugin-Alias.html">Plugin Alias</a>
+				<a class="nav-link" href="http://doc.tiki.org/Plugin-Alias">Plugin Alias</a>
 			</li>
 								<li class="nav-item ">
-				<a class="nav-link" href="Plugin-Security.html">Plugin Security</a>
+				<a class="nav-link" href="http://doc.tiki.org/Plugin-Security">Plugin Security</a>
 			</li>
 								<li class="nav-item ">
-				<a class="nav-link" href="Plugin-Approval.html">Plugin Approval</a>
+				<a class="nav-link" href="http://doc.tiki.org/Plugin-Approval">Plugin Approval</a>
 			</li>
 								<li class="nav-item ">
 				<a class="nav-link" href="http://doc.tiki.org/i18n-Admin">i18n Admin</a>
@@ -1937,7 +1908,6 @@ textarea, .CodeMirror {
 
 <p></p>
 
-
 		
 														</div>
 				
@@ -2325,7 +2295,7 @@ Tiki® and TikiWiki® are registered trademarks of the <a class="wiki external" 
 			<div id="module_60" style=""
 				 class="module box-loadstats">
 				<div id="mod-loadstatsbottom5">
-										<small>[ Execution time: 0.12 secs ] &nbsp; [ Memory usage: 5.88MB ] &nbsp; [ Queries: 202 in 0.05 secs ]</small>
+										<small>[ Execution time: 0.09 secs ] &nbsp; [ Memory usage: 5.53MB ] &nbsp; [ Queries: 193 in 0.04 secs ]</small>
 													
 					</div>
 </div>
@@ -2404,7 +2374,7 @@ Tiki® and TikiWiki® are registered trademarks of the <a class="wiki external" 
 		<form name="loginbox" class="form" id="loginbox-1" action="https://doc.tiki.org/tiki-login.php"
 				method="post" 
 						>
-		<input type="hidden" class="ticket" name="ticket" value="pNz-_J4V944ED9T2JrMdpqqauZLmn-NUz2CunUhtbn4" />
+		<input type="hidden" class="ticket" name="ticket" value="Dyt_kWfO5aJPyOsfhMINM40rLq_RoqCaE9vAIIPj6Jk" />
 		
 
 								<div class="user form-group row mx-0 clearfix">
@@ -2563,7 +2533,7 @@ Tiki® and TikiWiki® are registered trademarks of the <a class="wiki external" 
 <!--//--><![CDATA[//><!--
 // js 0 
 tiki_cookie_jar=new Object();
-setCookieBrowser('javascript_enabled', '1622280709000', '', new Date(1622280709000));
+setCookieBrowser('javascript_enabled', '1622293936000', '', new Date(1622293936000));
 $.lang = 'en';
 
 // JS Object to hold prefs for jq
@@ -2610,6 +2580,26 @@ if (getCookie('postitnote') != 'hidden') {
         }
     }
 }
+$(document).ready(function(){
+// jq_onready 0 
+$("article").fitVids();
+$("time.timeago").timeago(); jQuery.timeago.settings.allowFuture = true;
+$(".table-responsive").doubleScroll({resetOnWindowResize: true});
+
+			lozad('.lozad', {
+				load: function(el) {
+					el.src = el.dataset.src;
+					el.onload = function() {
+						el.classList.add('lozadFade');
+					}
+				}
+			}).observe();
+		
+$(".convert-mailto").removeClass("convert-mailto").each(function () {
+				var address = $(this).data("encode-name") + "@" + $(this).data("encode-domain");
+				$(this).attr("href", "mailto:" + address).text(address);
+			});
+}) /* end on ready */;
 					function submitSearch1() {
 						var $f = $('#search-module-form1');
 						if ($f.attr('action') !== "tiki-editpage.php" && $f.data('page_selected') === $("#search_mod_input_1").val()) {
@@ -2697,20 +2687,6 @@ $(document).ready(function(){
 $("article").fitVids();
 $("time.timeago").timeago(); jQuery.timeago.settings.allowFuture = true;
 $(".table-responsive").doubleScroll({resetOnWindowResize: true});
-
-			lozad('.lozad', {
-				load: function(el) {
-					el.src = el.dataset.src;
-					el.onload = function() {
-						el.classList.add('lozadFade');
-					}
-				}
-			}).observe();
-		
-$(".convert-mailto").removeClass("convert-mailto").each(function () {
-				var address = $(this).data("encode-name") + "@" + $(this).data("encode-domain");
-				$(this).attr("href", "mailto:" + address).text(address);
-			});
 $(".search_mod_magnifier").mouseover( function () {
 	$(".search_mod_buttons", $(this).parents(".module"))
 		.show('fast')
@@ -2732,6 +2708,10 @@ $("#search_mod_input_1").tiki("autocomplete", "pagename",{select: function(event
 						}, close: function(event, item) {
 						$(".search_mod_buttons", "#search-module-form1").show();
 						}});
+$(".convert-mailto").removeClass("convert-mailto").each(function () {
+				var address = $(this).data("encode-name") + "@" + $(this).data("encode-domain");
+				$(this).attr("href", "mailto:" + address).text(address);
+			});
 							$('#comment-toggle').comment_toggle();
 						
 $(document).ready(function () {

@@ -268,20 +268,6 @@ textarea, .CodeMirror {
 
 @media (min-width: 1200px) { .container { width:1240px; max-width:1240px;} }
 .affix {top:44px;}
-
-			.lozadFade {
-				animation-name: lozadFade;
-				animation-duration: 1s;
-			}
-			@keyframes lozadFade {
-				from {
-					opacity: 0;
-				}
-				to {
-					opacity: 1;
-				}
-			}
-		
 -->
 </style>
 	<style type="text/css">#sitelogo img {margin-top: 0; position: relative; top: -12px;}</style>
@@ -426,7 +412,7 @@ textarea, .CodeMirror {
 				
 				
 
-											</div>
+				<span class="cachedStatus">(Cached)</span>							</div>
 		 
 					<div class="wikiinfo float-left" id="pdfinfo" style="display:none">
 				<div class="alert alert-info" style="width:500px"><h4><span class="icon icon-information fas fa-info-circle fa-fw "></span>&nbsp;<span class="rboxtitle">Please wait</span></h4><div class="rboxcontent" style="display: inline"><span class="fas fa-circle-notch fa-spin" style="font-size:24px"></span> The PDF is being prepared, please wait...</div></div>
@@ -435,7 +421,7 @@ textarea, .CodeMirror {
 </div> 
 
 	<div class="wikiactions_wrapper clearfix">
-	<div class="wikiactions float-sm-right mb-2"><div class="btn-group ml-2"><div class="btn-group backlinks"><a href="Items-List-and-Item-Link-Tracker-Fields.html#" role="button" data-toggle="dropdown" data-hover="dropdown" class="btn btn-info btn-sm dropdown-toggle" title="Backlinks"><span class="icon icon-backlink fas fa-reply "   ></span></a><div class="dropdown-menu dropdown-menu-right" role="menu"><h6 class="dropdown-header">Backlinks</h6><div class="dropdown-divider"></div><a class="dropdown-item" role="menuitem" tabindex="-1" href="http://doc.tiki.org/Adding-fields-to-a-tracker" title="Adding fields to a tracker">Adding fields to a tracker</a><a class="dropdown-item" role="menuitem" tabindex="-1" href="Drop-Down---Radio-Tracker-Field.html" title="Drop Down - Radio Tracker Field">Drop Down - Radio Tracker Field</a><a class="dropdown-item" role="menuitem" tabindex="-1" href="PluginTracker.html" title="PluginTracker">PluginTracker</a><a class="dropdown-item" role="menuitem" tabindex="-1" href="http://doc.tiki.org/Tiki16" title="Tiki16">Tiki16</a><a class="dropdown-item" role="menuitem" tabindex="-1" href="http://doc.tiki.org/Tiki18from15" title="Tiki18from15">Tiki18from15</a></div></div><div class="btn-group structures"><a href="Items-List-and-Item-Link-Tracker-Fields.html#" class="btn btn-info btn-sm dropdown-toggle" data-toggle="dropdown" data-hover="dropdown" title="Structures"><span class="icon icon-structure fas fa-sitemap "   ></span></a><div class="dropdown-menu dropdown-menu-right" role="menu"><h6 class="dropdown-header">Structures</h6><div class="dropdown-divider"></div><a href="http://doc.tiki.org/tiki-index.php?page=Items%20List%20and%20Item%20Link%20Tracker%20Fields&amp;structure=HomePage%20Tracker"  title="Current structure: HomePage Tracker" class="dropdown-item selected tips" >Home</a></div></div><div class="btn-group page_actions" role="group"><a class="btn btn-info btn-sm dropdown-toggle" data-toggle="dropdown" data-hover="dropdown" href="Items-List-and-Item-Link-Tracker-Fields.html#" title="Page actions"><span class="icon icon-menu-extra fas fa-chevron-down "   ></span></a><div class="dropdown-menu dropdown-menu-right"><h6 class="dropdown-header">Page actions</h6><div class="dropdown-divider"></div><a class="dropdown-item" href="http://doc.tiki.org/tiki-print.php?page=Items+List+and+Item+Link+Tracker+Fields&amp;display=pdf"><span class="icon icon-pdf far fa-file-pdf "   ></span>  PDF</a><a class="dropdown-item" href="http://doc.tiki.org/tiki-print.php?page=Items+List+and+Item+Link+Tracker+Fields"><span class="icon icon-print fas fa-print "   ></span> Print</a><a class="dropdown-item" href="javascript:open_webdav('http://doc.tiki.org/tiki-webdav.php/Wiki Pages/Items List and Item Link Tracker Fields')" class="icon"><span class="icon icon-file-archive-open fas fa-folder-open "   ></span> Open in WebDAV</a></div></div></div></div>
+	<div class="wikiactions float-sm-right mb-2"><div class="btn-group ml-2"><div class="btn-group backlinks"><a href="Items-List-and-Item-Link-Tracker-Fields.html#" role="button" data-toggle="dropdown" data-hover="dropdown" class="btn btn-info btn-sm dropdown-toggle" title="Backlinks"><span class="icon icon-backlink fas fa-reply "   ></span></a><div class="dropdown-menu dropdown-menu-right" role="menu"><h6 class="dropdown-header">Backlinks</h6><div class="dropdown-divider"></div><a class="dropdown-item" role="menuitem" tabindex="-1" href="http://doc.tiki.org/Adding-fields-to-a-tracker" title="Adding fields to a tracker">Adding fields to a tracker</a><a class="dropdown-item" role="menuitem" tabindex="-1" href="Drop-Down---Radio-Tracker-Field.html" title="Drop Down - Radio Tracker Field">Drop Down - Radio Tracker Field</a><a class="dropdown-item" role="menuitem" tabindex="-1" href="PluginTracker.html" title="PluginTracker">PluginTracker</a><a class="dropdown-item" role="menuitem" tabindex="-1" href="http://doc.tiki.org/Tiki16" title="Tiki16">Tiki16</a><a class="dropdown-item" role="menuitem" tabindex="-1" href="http://doc.tiki.org/Tiki18from15" title="Tiki18from15">Tiki18from15</a></div></div><div class="btn-group structures"><a href="Items-List-and-Item-Link-Tracker-Fields.html#" class="btn btn-info btn-sm dropdown-toggle" data-toggle="dropdown" data-hover="dropdown" title="Structures"><span class="icon icon-structure fas fa-sitemap "   ></span></a><div class="dropdown-menu dropdown-menu-right" role="menu"><h6 class="dropdown-header">Structures</h6><div class="dropdown-divider"></div><a href="http://doc.tiki.org/tiki-index.php?page=Items%20List%20and%20Item%20Link%20Tracker%20Fields&amp;structure=HomePage%20Tracker"  title="Current structure: HomePage Tracker" class="dropdown-item selected tips" >Home</a></div></div><div class="btn-group page_actions" role="group"><a class="btn btn-info btn-sm dropdown-toggle" data-toggle="dropdown" data-hover="dropdown" href="Items-List-and-Item-Link-Tracker-Fields.html#" title="Page actions"><span class="icon icon-menu-extra fas fa-chevron-down "   ></span></a><div class="dropdown-menu dropdown-menu-right"><h6 class="dropdown-header">Page actions</h6><div class="dropdown-divider"></div><a class="dropdown-item" href="http://doc.tiki.org/tiki-print.php?page=Items+List+and+Item+Link+Tracker+Fields&amp;display=pdf"><span class="icon icon-pdf far fa-file-pdf "   ></span>  PDF</a><a class="dropdown-item" href="http://doc.tiki.org/Items-List-and-Item-Link-Tracker-Fields?refresh=1"><span class="icon icon-refresh fas fa-sync "   ></span> Refresh</a><a class="dropdown-item" href="http://doc.tiki.org/tiki-print.php?page=Items+List+and+Item+Link+Tracker+Fields"><span class="icon icon-print fas fa-print "   ></span> Print</a><a class="dropdown-item" href="javascript:open_webdav('http://doc.tiki.org/tiki-webdav.php/Wiki Pages/Items List and Item Link Tracker Fields')" class="icon"><span class="icon icon-file-archive-open fas fa-folder-open "   ></span> Open in WebDAV</a></div></div></div></div>
 	</div>
 	
 						
@@ -657,6 +643,7 @@ isMandatory = n</div></div>
 
 <p><a href="http://doc.tiki.org/Items-list" class="wiki wiki_page alias">Items list</a> | <a href="http://doc.tiki.org/item-link" class="wiki wiki_page alias">item link</a> | <a href="http://doc.tiki.org/item-list" class="wiki wiki_page alias">item list</a> | <a href="http://doc.tiki.org/items-link" class="wiki wiki_page alias">items link</a> | <a href="http://doc.tiki.org/tracker-field-items-list" class="wiki wiki_page alias">tracker field items list</a> | <a href="http://doc.tiki.org/tracker-field-item-link" class="wiki wiki_page alias">tracker field item link</a> | <a href="http://doc.tiki.org/tracker-field-item-list" class="wiki wiki_page alias">tracker field item list</a> | <a href="http://doc.tiki.org/tracker-field-items-link" class="wiki wiki_page alias">tracker field items link</a> | <a href="http://doc.tiki.org/itemslist" class="wiki wiki_page alias">itemslist</a> | <a href="http://doc.tiki.org/itemlink" class="wiki wiki_page alias">itemlink</a> | <a href="http://doc.tiki.org/itemlist" class="wiki wiki_page alias">itemlist</a> | <a href="http://doc.tiki.org/itemslink" class="wiki wiki_page alias">itemslink</a> | <a href="http://doc.tiki.org/foreign-key" class="wiki wiki_page alias">foreign key</a> | <a href="http://doc.tiki.org/Wildcard-items" class="wiki wiki_page alias">Wildcard items</a>  | <a href="http://doc.tiki.org/Wildcard" class="wiki wiki_page alias">Wildcard</a>  | <a href="http://doc.tiki.org/Wildcard_items" class="wiki wiki_page alias">Wildcard_items</a>  | <a href="http://doc.tiki.org/WildcardItems" class="wiki wiki_page alias">WildcardItems</a></p>
 
+
 					</div>
 
 		
@@ -738,22 +725,6 @@ isMandatory = n</div></div>
 				<div id="mod-related_videopagebottom1">
 										
 <div id="related_video" style="display:block;">
-<h4 class="showhide_heading" id="Related_Video_"> Related Video&nbsp;"Features and Options in Tiki"<a href="Items-List-and-Item-Link-Tracker-Fields.html#Related_Video_" class="heading-link"><span class="icon icon-link fas fa-link "   ></span></a></h4>
-<p><span class='videoLevel-Beginner'>Beginner</span> <span class='videoRole'>| Administrator</span>
-<a class="wiki external" target="_blank" href="https://tiki.org/Bsfez" rel="external">Bernard Sfez / Tiki Specialist</a> - Tue 11 Dec, 2018<br />
-<a class="btn btn-link create_item_button" target="" data-role="button" data-inline="true"  title="Other videos" href="http://doc.tiki.org/Video-Tutorials"><span class="icon icon-film fas fa-film "   ></span> Other videos</a><br />
-<iframe src="http://www.youtube-nocookie.com/embed/M4BnpIR04QM?" frameborder="0" width="560" height="315" allowfullscreen=""></iframe>
-</p>
-<hr />
-<p>On this #tikiexpresstutorial, using #tiki19 I’ll show you:
-<br />How to enable a feature from the Control Panels
-<br />How to enable a Global Feature from the features panel
-<br />How to enable an Interface feature
-<br />A quick overview of the Programmer features
-<br />And where to look for feature options
-</p>
-
-<p>Visit my <a class="wiki external" target="_blank" href="https://bsfez.com" rel="external">website</a> or <a class="wiki external" target="_blank" href="https://www.youtube.com/channel/UCgM1YJeUCaszrTsuZub0Qpg" rel="external"> my youtube channel</a> to see more Tiki express tutorial and <a class="wiki external" target="_blank" href="https://www.youtube.com/channel/UCgM1YJeUCaszrTsuZub0Qpg?sub_confirmation=1" rel="external">Subscribe to my youtube channel</a>.</p>
 </div>
 
 													
@@ -1470,13 +1441,13 @@ isMandatory = n</div></div>
 				<a class="nav-link" href="http://doc.tiki.org/Plugins?structure=HomePage+AdminGuide">Plugins</a>
 			</li>
 								<li class="nav-item ">
-				<a class="nav-link" href="Plugin-Alias.html">Plugin Alias</a>
+				<a class="nav-link" href="http://doc.tiki.org/Plugin-Alias">Plugin Alias</a>
 			</li>
 								<li class="nav-item ">
-				<a class="nav-link" href="Plugin-Security.html">Plugin Security</a>
+				<a class="nav-link" href="http://doc.tiki.org/Plugin-Security">Plugin Security</a>
 			</li>
 								<li class="nav-item ">
-				<a class="nav-link" href="Plugin-Approval.html">Plugin Approval</a>
+				<a class="nav-link" href="http://doc.tiki.org/Plugin-Approval">Plugin Approval</a>
 			</li>
 								<li class="nav-item ">
 				<a class="nav-link" href="http://doc.tiki.org/i18n-Admin">i18n Admin</a>
@@ -2048,7 +2019,6 @@ isMandatory = n</div></div>
 
 <p></p>
 
-
 		
 														</div>
 				
@@ -2436,7 +2406,7 @@ Tiki® and TikiWiki® are registered trademarks of the <a class="wiki external" 
 			<div id="module_60" style=""
 				 class="module box-loadstats">
 				<div id="mod-loadstatsbottom5">
-										<small>[ Execution time: 0.16 secs ] &nbsp; [ Memory usage: 5.78MB ] &nbsp; [ Queries: 264 in 0.06 secs ]</small>
+										<small>[ Execution time: 0.12 secs ] &nbsp; [ Memory usage: 5.61MB ] &nbsp; [ Queries: 208 in 0.05 secs ]</small>
 													
 					</div>
 </div>
@@ -2515,7 +2485,7 @@ Tiki® and TikiWiki® are registered trademarks of the <a class="wiki external" 
 		<form name="loginbox" class="form" id="loginbox-1" action="https://doc.tiki.org/tiki-login.php"
 				method="post" 
 						>
-		<input type="hidden" class="ticket" name="ticket" value="hHv3eEuOYjzqluh-g_sEmGhfg4EzaFlaZMPTLkVn2ok" />
+		<input type="hidden" class="ticket" name="ticket" value="RNwOHbEEO8A5-caK8hloS-QNKV3T6H70lpPdHTNvaM4" />
 		
 
 								<div class="user form-group row mx-0 clearfix">
@@ -2675,7 +2645,7 @@ Tiki® and TikiWiki® are registered trademarks of the <a class="wiki external" 
 <!--//--><![CDATA[//><!--
 // js 0 
 tiki_cookie_jar=new Object();
-setCookieBrowser('javascript_enabled', '1622280829000', '', new Date(1622280829000));
+setCookieBrowser('javascript_enabled', '1622294055000', '', new Date(1622294055000));
 $.lang = 'en';
 
 // JS Object to hold prefs for jq
@@ -2722,6 +2692,26 @@ if (getCookie('postitnote') != 'hidden') {
         }
     }
 }
+$(document).ready(function(){
+// jq_onready 0 
+$("article").fitVids();
+$("time.timeago").timeago(); jQuery.timeago.settings.allowFuture = true;
+$(".table-responsive").doubleScroll({resetOnWindowResize: true});
+
+			lozad('.lozad', {
+				load: function(el) {
+					el.src = el.dataset.src;
+					el.onload = function() {
+						el.classList.add('lozadFade');
+					}
+				}
+			}).observe();
+		
+$(".convert-mailto").removeClass("convert-mailto").each(function () {
+				var address = $(this).data("encode-name") + "@" + $(this).data("encode-domain");
+				$(this).attr("href", "mailto:" + address).text(address);
+			});
+}) /* end on ready */;
 					function submitSearch1() {
 						var $f = $('#search-module-form1');
 						if ($f.attr('action') !== "tiki-editpage.php" && $f.data('page_selected') === $("#search_mod_input_1").val()) {
@@ -2809,20 +2799,6 @@ $(document).ready(function(){
 $("article").fitVids();
 $("time.timeago").timeago(); jQuery.timeago.settings.allowFuture = true;
 $(".table-responsive").doubleScroll({resetOnWindowResize: true});
-
-			lozad('.lozad', {
-				load: function(el) {
-					el.src = el.dataset.src;
-					el.onload = function() {
-						el.classList.add('lozadFade');
-					}
-				}
-			}).observe();
-		
-$(".convert-mailto").removeClass("convert-mailto").each(function () {
-				var address = $(this).data("encode-name") + "@" + $(this).data("encode-domain");
-				$(this).attr("href", "mailto:" + address).text(address);
-			});
 $(".search_mod_magnifier").mouseover( function () {
 	$(".search_mod_buttons", $(this).parents(".module"))
 		.show('fast')
@@ -2844,6 +2820,10 @@ $("#search_mod_input_1").tiki("autocomplete", "pagename",{select: function(event
 						}, close: function(event, item) {
 						$(".search_mod_buttons", "#search-module-form1").show();
 						}});
+$(".convert-mailto").removeClass("convert-mailto").each(function () {
+				var address = $(this).data("encode-name") + "@" + $(this).data("encode-domain");
+				$(this).attr("href", "mailto:" + address).text(address);
+			});
 $(document).ready(function () {
   var resetCSS = {
     transition: 'all .5s ease 0s',

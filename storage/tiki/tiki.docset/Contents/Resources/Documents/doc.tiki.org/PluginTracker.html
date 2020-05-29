@@ -331,7 +331,7 @@ textarea, .CodeMirror {
 				
 				Create a form in a wiki page to populate a tracker
 
-											</div>
+				<span class="cachedStatus">(Cached)</span>							</div>
 		 
 					<div class="wikiinfo float-left" id="pdfinfo" style="display:none">
 				<div class="alert alert-info" style="width:500px"><h4><span class="icon icon-information fas fa-info-circle fa-fw "></span> <span class="rboxtitle">Please wait</span></h4><div class="rboxcontent" style="display: inline"><span class="fas fa-circle-notch fa-spin" style="font-size:24px"></span> The PDF is being prepared, please wait...</div></div>
@@ -866,7 +866,7 @@ Use this <a href="http://doc.tiki.org/wiki%20plugin" title="" class="wiki wiki_p
 
 <p>You could also use the url parameter "<strong>prefills</strong>" with the corresponding "<strong>values</strong>". See more information here:
 </p>
-<ul><li> <a href="Plugin-Tracker-Advanced.html" title="More information on using PluginTracker" class="wiki wiki_page">Plugin Tracker Advanced</a>
+<ul><li> <a href="http://doc.tiki.org/Plugin-Tracker-Advanced" title="More information on using PluginTracker" class="wiki wiki_page">Plugin Tracker Advanced</a>
 </li><li> <a href="PluginTrackerPrefill.html" title="Create a button to prefill tacker fields" class="wiki wiki_page">PluginTrackerPrefill</a>
 </li></ul><p>
 <br>See also <a href="PluginTrackerList.html" title="List, filter and sort the items in a tracker" class="wiki wiki_page">PluginTrackerList</a> to see how to use the parameter url to transfer an itemId to an URL or <a href="PluginJq.html" title="Add JQuery Javascript code" class="wiki wiki_page">PluginJQ</a> if you want to use jQuery.
@@ -1113,9 +1113,10 @@ What you want to do now: ((Issue Tracker|submit another issue)) or ((HomePage|br
 <p>See also:
 </p>
 <ul><li> <a href="PluginTrackerList.html" title="List, filter and sort the items in a tracker" class="wiki wiki_page">PluginTrackerlist</a> - which displays a given tracker items.
-</li><li> <a href="Plugin-Tracker-Advanced.html" title="More information on using PluginTracker" class="wiki wiki_page">Plugin Tracker Advanced</a>
+</li><li> <a href="http://doc.tiki.org/Plugin-Tracker-Advanced" title="More information on using PluginTracker" class="wiki wiki_page">Plugin Tracker Advanced</a>
 </li><li> <a href="http://doc.tiki.org/Pretty-Tracker" title="Pretty Tracker" class="wiki wiki_page">Pretty Tracker</a>
 </li><li> <a href="PluginList.html" title="Search for, list, and filter all types of items and display custom formatted results" class="wiki wiki_page">PluginList</a></li></ul>
+
 					</div>
 
 		
@@ -1163,22 +1164,6 @@ What you want to do now: ((Issue Tracker|submit another issue)) or ((HomePage|br
 				<div id="mod-related_videopagebottom1">
 										
 <div id="related_video" style="display:block;">
-<h4 class="showhide_heading" id="Related_Video_"> Related Video "Features and Options in Tiki"<a href="PluginTracker.html#Related_Video_" class="heading-link"><span class="icon icon-link fas fa-link "></span></a></h4>
-<p><span class="videoLevel-Beginner">Beginner</span> <span class="videoRole">| Administrator</span>
-<a class="wiki external" target="_blank" href="https://tiki.org/Bsfez" rel="external">Bernard Sfez / Tiki Specialist</a> - Tue 11 Dec, 2018<br>
-<a class="btn btn-link create_item_button" target="" data-role="button" data-inline="true" title="Other videos" href="http://doc.tiki.org/Video-Tutorials"><span class="icon icon-film fas fa-film "></span> Other videos</a><br>
-<iframe src="http://www.youtube-nocookie.com/embed/M4BnpIR04QM?" frameborder="0" width="560" height="315" allowfullscreen=""></iframe>
-</p>
-<hr>
-<p>On this #tikiexpresstutorial, using #tiki19 I’ll show you:
-<br>How to enable a feature from the Control Panels
-<br>How to enable a Global Feature from the features panel
-<br>How to enable an Interface feature
-<br>A quick overview of the Programmer features
-<br>And where to look for feature options
-</p>
-
-<p>Visit my <a class="wiki external" target="_blank" href="https://bsfez.com" rel="external">website</a> or <a class="wiki external" target="_blank" href="https://www.youtube.com/channel/UCgM1YJeUCaszrTsuZub0Qpg" rel="external"> my youtube channel</a> to see more Tiki express tutorial and <a class="wiki external" target="_blank" href="https://www.youtube.com/channel/UCgM1YJeUCaszrTsuZub0Qpg?sub_confirmation=1" rel="external">Subscribe to my youtube channel</a>.</p>
 </div>
 
 													
@@ -1314,7 +1299,7 @@ What you want to do now: ((Issue Tracker|submit another issue)) or ((HomePage|br
 <!--//--><![CDATA[//><!--
 // js 0 
 tiki_cookie_jar=new Object();
-setCookieBrowser('javascript_enabled', '1622280771000', '', new Date(1622280771000));
+setCookieBrowser('javascript_enabled', '1622293995000', '', new Date(1622293995000));
 $.lang = 'en';
 
 // JS Object to hold prefs for jq
@@ -1361,6 +1346,16 @@ if (getCookie('postitnote') != 'hidden') {
         }
     }
 }
+$(document).ready(function(){
+// jq_onready 0 
+$("article").fitVids();
+$("time.timeago").timeago(); jQuery.timeago.settings.allowFuture = true;
+$(".table-responsive").doubleScroll({resetOnWindowResize: true});
+$(".convert-mailto").removeClass("convert-mailto").each(function () {
+				var address = $(this).data("encode-name") + "@" + $(this).data("encode-domain");
+				$(this).attr("href", "mailto:" + address).text(address);
+			});
+}) /* end on ready */;
 					function submitSearch1() {
 						var $f = $('#search-module-form1');
 						if ($f.attr('action') !== "tiki-editpage.php" && $f.data('page_selected') === $("#search_mod_input_1").val()) {
@@ -1438,10 +1433,6 @@ $(document).ready(function(){
 $("article").fitVids();
 $("time.timeago").timeago(); jQuery.timeago.settings.allowFuture = true;
 $(".table-responsive").doubleScroll({resetOnWindowResize: true});
-$(".convert-mailto").removeClass("convert-mailto").each(function () {
-				var address = $(this).data("encode-name") + "@" + $(this).data("encode-domain");
-				$(this).attr("href", "mailto:" + address).text(address);
-			});
 $(".search_mod_magnifier").mouseover( function () {
 	$(".search_mod_buttons", $(this).parents(".module"))
 		.show('fast')
@@ -1463,6 +1454,10 @@ $("#search_mod_input_1").tiki("autocomplete", "pagename",{select: function(event
 						}, close: function(event, item) {
 						$(".search_mod_buttons", "#search-module-form1").show();
 						}});
+$(".convert-mailto").removeClass("convert-mailto").each(function () {
+				var address = $(this).data("encode-name") + "@" + $(this).data("encode-domain");
+				$(this).attr("href", "mailto:" + address).text(address);
+			});
 $(document).ready(function () {
   var resetCSS = {
     transition: 'all .5s ease 0s',

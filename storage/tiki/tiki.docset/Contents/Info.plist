@@ -13,7 +13,7 @@
     <key>DashDocSetFallbackURL</key>
     <string>https://</string>
     <key>DashDocSetPlayURL</key>
-    <string>https://demo.tiki.org/</string>
+    <string>https://tiki.org/Demo</string>
     <key>isJavaScriptEnabled</key>
     <true/>
     <key>isDashDocset</key>
