@@ -54,9 +54,9 @@ class Tiki extends BaseDocset
         ]);
 
         system(
-            "wget doc.tiki.org/All-the-Documentation \
+            "echo; wget doc.tiki.org/All-the-Documentation \
                 --mirror \
-                -e robots=off \
+                --trust-server-names \
                 --header 'Cookie: javascript_enabled_detect=true' \
                 --reject-regex='{$toIgnore}' \
                 --accept-regex='{$toGet}' \
@@ -66,7 +66,10 @@ class Tiki extends BaseDocset
                 --convert-links \
                 --span-hosts \
                 --domains={$this->externalDomains()} \
-                --directory-prefix=storage/{$this->downloadedDirectory()}",
+                --directory-prefix=storage/{$this->downloadedDirectory()} \
+                -e robots=off \
+                --quiet \
+                --show-progress",
             $result
         );
 
