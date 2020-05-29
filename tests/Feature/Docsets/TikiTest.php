@@ -2,14 +2,15 @@
 
 namespace Tests\Feature\Docsets;
 
-use Tests\TestCase;
 use App\Docsets\Tiki;
 use App\Services\DocsetBuilder;
-use Illuminate\Support\Facades\DB;
-use Wa72\HtmlPageDom\HtmlPageCrawler;
-use Illuminate\Support\Facades\Config;
 use Illuminate\Support\Facades\Artisan;
+use Illuminate\Support\Facades\Config;
+use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Storage;
+use Illuminate\Support\Str;
+use Tests\TestCase;
+use Wa72\HtmlPageDom\HtmlPageCrawler;
 
 /** @group tiki */
 class TikiTest extends TestCase
@@ -283,6 +284,26 @@ class TikiTest extends TestCase
         $this->assertEquals(
             '44px',
             $crawler->filter('article#top')->getStyle('padding-top')
+        );
+    }
+
+    /** @test */
+    public function the_online_redirection_html_comment_exists_in_the_docset_files()
+    {
+        $crawler = HtmlPageCrawler::create(
+            Storage::get($this->docset->downloadedDirectory() . '/' . $this->docset->url() . '/PluginList-output-control-block.html')
+        );
+
+        $this->assertFalse(
+            Str::contains($crawler->getInnerHtml(), 'Online page')
+        );
+
+        $crawler = HtmlPageCrawler::create(
+            Storage::get($this->docset->innerDirectory() . '/' . $this->docset->url() . '/PluginList-output-control-block.html')
+        );
+
+        $this->assertTrue(
+            Str::contains($crawler->getInnerHtml(), 'Online page')
         );
     }
 }
