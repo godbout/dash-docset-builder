@@ -27,6 +27,8 @@ class Tiki extends BaseDocset
             '\?refresh',
             '\?session_filters',
             '\?sort_mode',
+            '\?todate',
+            '\?viewmode',
             '/Plugins-',
             'comzone=',
             'fullscreen=',
@@ -50,6 +52,7 @@ class Tiki extends BaseDocset
             '/LIST',
             '/Module-',
             '/Plugin',
+            '-Tracker-Field',
             'Tiki_org_family',
         ]);
 
@@ -83,6 +86,7 @@ class Tiki extends BaseDocset
         $entries = collect();
         $entries = $entries->merge($this->pluginEntries($crawler, $file));
         $entries = $entries->merge($this->moduleEntries($crawler, $file));
+        $entries = $entries->merge($this->fieldEntries($crawler, $file));
 
         return $entries;
     }
@@ -117,6 +121,25 @@ class Tiki extends BaseDocset
                 $entries->push([
                         'name' => $node->text(),
                         'type' => 'Module',
+                        'path' => Str::after($file . '#' . Str::slug($path), $this->innerDirectory()),
+                    ]);
+            });
+        }
+
+        return $entries;
+    }
+
+    protected function fieldEntries(HtmlPageCrawler $crawler, string $file)
+    {
+        $entries = collect();
+
+        if (preg_match('/Tracker-Field/i', $file)) {
+            $path = $crawler->filter('link[rel=canonical]')->attr('href');
+
+            $crawler->filter('#top h1:first-of-type')->each(function (HtmlPageCrawler $node) use ($entries, $file, $path) {
+                $entries->push([
+                        'name' => $node->text(),
+                        'type' => 'Field',
                         'path' => Str::after($file . '#' . Str::slug($path), $this->innerDirectory()),
                     ]);
             });
