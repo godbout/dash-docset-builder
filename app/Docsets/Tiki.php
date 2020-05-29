@@ -167,6 +167,7 @@ class Tiki extends BaseDocset
 
         $this->updateCss($crawler);
 
+        $this->insertOnlineRedirection($crawler);
         $this->insertDashTableOfContents($crawler);
 
         return $crawler->saveHTML();
@@ -258,9 +259,21 @@ class Tiki extends BaseDocset
         ;
     }
 
+    protected function insertOnlineRedirection(HtmlPageCrawler $crawler)
+    {
+        $onlineUrl = '';
+        $meta = $crawler->filter('meta[property="og:url"]');
+
+        if ($meta->getDOMDocument()) {
+            $onlineUrl = $meta->attr('content');
+        }
+
+        $crawler->filter('html')->prepend("<!-- Online page at $onlineUrl -->");
+    }
+
     protected function insertDashTableOfContents(HtmlPageCrawler $crawler)
     {
-        $crawler->filter('h1')
+        $crawler->filter('#top h1:first-of-type')
             ->before('<a name="//apple_ref/cpp/Section/Top" class="dashAnchor"></a>');
 
         $crawler->filter('h2')->each(static function (HtmlPageCrawler $node) {
