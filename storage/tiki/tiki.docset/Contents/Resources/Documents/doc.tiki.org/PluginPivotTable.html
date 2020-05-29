@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" id="page_4927">
+<html lang="en" id="page_4927"><!-- Online page at http://doc.tiki.org/PluginPivotTable -->
 <head>
 	
 <!--Latest IE Compatibility-->
@@ -11,7 +11,7 @@
 <meta content="http://doc.tiki.org/" name="twitter:domain"> 
 
 
-			<link rel="canonical" href="PluginData-Pilot.html">
+			<link rel="canonical" href="PluginPivotTable.html">
 		<meta content="http://doc.tiki.org/PluginPivotTable" property="og:url">
 	
 	<meta name="keywords" content="documentation, tiki, tikiwiki, document, help, install, wiki syntax  ">
@@ -376,7 +376,7 @@ textarea, .CodeMirror {
 
 		
 		<div id="page-data" class="clearfix">
-										<a name="//apple_ref/cpp/Section/Top" class="dashAnchor"></a><h1 class="showhide_heading" id="Plugin_PivotTable"> Plugin PivotTable<a href="PluginData-Pilot.html#Plugin_PivotTable" class="heading-link"><span class="icon icon-link fas fa-link "></span></a></h1>
+										<a name="//apple_ref/cpp/Section/Top" class="dashAnchor"></a><h1 class="showhide_heading" id="Plugin_PivotTable"> Plugin PivotTable<a href="PluginPivotTable.html#Plugin_PivotTable" class="heading-link"><span class="icon icon-link fas fa-link "></span></a></h1>
 <p><em>Introduced in <a href="http://doc.tiki.org/Tiki16" title="Tiki16" class="wiki wiki_page">Tiki 16.2</a></em>
 </p>
 
@@ -386,7 +386,7 @@ textarea, .CodeMirror {
 It produces the <a class="wiki external" target="_blank" href="http://nicolas.kruchten.com/pivottable" rel="external">JavaScript Pivot Table (aka Pivot Grid, Pivot Chart, Cross-Tab) implementation from Nicolas Kruchten</a> with drag'n'drop  (see <a class="wiki external" target="_blank" href="https://github.com/nicolaskruchten/pivottable/releases" rel="external">the list of changes in each version</a>).</div>
 <p>
 </p>
-<a id="parameters" name="//apple_ref/cpp/Section/Parameters" class="dashAnchor"></a><h2 class="showhide_heading" id="Parameters"> Parameters<a href="PluginData-Pilot.html#Parameters" class="heading-link"><span class="icon icon-link fas fa-link "></span></a></h2>
+<a id="parameters" name="//apple_ref/cpp/Section/Parameters" class="dashAnchor"></a><h2 class="showhide_heading" id="Parameters"> Parameters<a href="PluginPivotTable.html#Parameters" class="heading-link"><span class="icon icon-link fas fa-link "></span></a></h2>
 <em>Introduced in Tiki 16.1.</em><em> Required parameters are in</em> <strong><code>bold</code></strong>.<br><em>Preferences required:</em> wikiplugin_pivottable<br><div class="table-responsive"><table class="table table-striped table-hover">
 	<tr class="heading">
 		<th class="heading">Parameters
@@ -567,14 +567,14 @@ It produces the <a class="wiki external" target="_blank" href="http://nicolas.kr
 </li><li> It is only activated if aggregateDetails is not disabled. Therefore, there is a workaround to disable this feature for large sets of data (e.g. containing several or hundreds of thousands of items).
 </li></ul></li></ul><p>
 </p>
-<a id="basic-usage" name="//apple_ref/cpp/Section/Basic%20Usage" class="dashAnchor"></a><h2 class="showhide_heading" id="Basic_Usage"> Basic Usage<a href="PluginData-Pilot.html#Basic_Usage" class="heading-link"><span class="icon icon-link fas fa-link "></span></a></h2>
+<a id="basic-usage" name="//apple_ref/cpp/Section/Basic%20Usage" class="dashAnchor"></a><h2 class="showhide_heading" id="Basic_Usage"> Basic Usage<a href="PluginPivotTable.html#Basic_Usage" class="heading-link"><span class="icon icon-link fas fa-link "></span></a></h2>
 <p>Basic usage requires just to provide the data source (e.g. a tracker with id 1: "<strong>tracker:1</strong>" since <a href="http://doc.tiki.org/Tiki16" title="Tiki16" class="wiki wiki_page">Tiki16</a>, or <strong>activitystream</strong> also since <a href="http://doc.tiki.org/Tiki19" title="Tiki19" class="wiki wiki_page">Tiki19</a> ), and the rest will be taken as default values by the pivot table plugin, and you will be able to edit it through the PivotTable UI itself. That will allow you to display all field names of the tracker, and will let you drag and drop them in rows or columns of the pivot table editor.
 </p>
 
-<p>That will cover most use cases. However, if your dataset is huge, or the tracker has many fields, and some of them carrying heavy data (long text fields, or big files/images attached to the tracker items in files tracker fields), you can use an advanced syntax to filter the number of items or reduce the amount of tracker fields exposed to the pivot table to work with, so that performance of the pivot table plugin is fast again. See below for "<a class="wiki" href="PluginData-Pilot.html#Advanced_Usage" rel="">Advanced Usage</a>"
+<p>That will cover most use cases. However, if your dataset is huge, or the tracker has many fields, and some of them carrying heavy data (long text fields, or big files/images attached to the tracker items in files tracker fields), you can use an advanced syntax to filter the number of items or reduce the amount of tracker fields exposed to the pivot table to work with, so that performance of the pivot table plugin is fast again. See below for "<a class="wiki" href="PluginPivotTable.html#Advanced_Usage" rel="">Advanced Usage</a>"
 </p>
 
-<h3 class="showhide_heading" id="Example_1"> Example 1<a href="PluginData-Pilot.html#Example_1" class="heading-link"><span class="icon icon-link fas fa-link "></span></a></h3>
+<h3 class="showhide_heading" id="Example_1"> Example 1<a href="PluginPivotTable.html#Example_1" class="heading-link"><span class="icon icon-link fas fa-link "></span></a></h3>
 <p>After installing the <a href="http://doc.tiki.org/Profiles-Wizard" title="Profiles Wizard" class="wiki wiki_page">Bug_Tracker_16 profile</a> on a brand new Tiki 16, you will get a new tracker with id 1 to hold the data of the bug reports/issue tickets. When you add a few dozen items, you can use some syntax like the one indicated below to produce some demo pivot tables table with default values as a starting point, to let you start reviewing the data as wiki-wiki (quick) as possible.
 </p>
 
@@ -600,7 +600,7 @@ It produces the <a class="wiki external" target="_blank" href="http://nicolas.kr
 <div style="display: inline-block; display:block; margin-left:auto; margin-right:auto; max-width: 100%; width:402px;">	<a href="http://doc.tiki.org/display1311" class="internal" data-box="box[g]" target="_blank" title="Click to expand">		<img width="400" style="display:block; margin-left:auto; margin-right:auto;border:1px solid darkgray;" alt="Click to expand" class="regImage pluginImg img-fluid lozad" data-src="display1311" title="Click to expand">	</a>	<div class="mini" style="max-width: 100%; width:400px;">		<div class="thumbcaption">Click to expand		</div>	</div></div>
 <p>
 </p>
-<h3 class="showhide_heading" id="Example_2">Example 2<a href="PluginData-Pilot.html#Example_2" class="heading-link"><span class="icon icon-link fas fa-link "></span></a></h3>
+<h3 class="showhide_heading" id="Example_2">Example 2<a href="PluginPivotTable.html#Example_2" class="heading-link"><span class="icon icon-link fas fa-link "></span></a></h3>
 <p>A default configuration for each parameter of the plugin can also be specified. For instance, the values considered in both dimensions can be specified, using the <em>rows</em> and <em>cols</em> parameters, as in the following example (which considers 2 values on the horizontal axis, as in the previous screenshot).
 </p>
 
@@ -614,7 +614,7 @@ It produces the <a class="wiki external" target="_blank" href="http://nicolas.kr
 <div style="display: inline-block; display:block; margin-left:auto; margin-right:auto; max-width: 100%; width:402px;">	<a href="http://doc.tiki.org/display1312" class="internal" data-box="box[g]" target="_blank" title="Click to expand">		<img width="400" style="display:block; margin-left:auto; margin-right:auto;border:1px solid darkgray;" alt="Click to expand" class="regImage pluginImg img-fluid lozad" data-src="display1312" title="Click to expand">	</a>	<div class="mini" style="max-width: 100%; width:400px;">		<div class="thumbcaption">Click to expand		</div>	</div></div>
 <p>
 </p>
-<h3 class="showhide_heading" id="Example_3">Example 3<a href="PluginData-Pilot.html#Example_3" class="heading-link"><span class="icon icon-link fas fa-link "></span></a></h3>
+<h3 class="showhide_heading" id="Example_3">Example 3<a href="PluginPivotTable.html#Example_3" class="heading-link"><span class="icon icon-link fas fa-link "></span></a></h3>
 <p>You can also make some charts:
 </p>
 <ul><li> Line Chart
@@ -637,7 +637,7 @@ It produces the <a class="wiki external" target="_blank" href="http://nicolas.kr
 <div style="display: inline-block; display:block; margin-left:auto; margin-right:auto; max-width: 100%; width:402px;">	<a href="http://doc.tiki.org/display1337" class="internal" data-box="box[g]" target="_blank" title="Click to expand">		<img width="400" style="display:block; margin-left:auto; margin-right:auto;border:1px solid darkgray;" alt="Click to expand" class="regImage pluginImg img-fluid lozad" data-src="display1337" title="Click to expand">	</a>	<div class="mini" style="max-width: 100%; width:400px;">		<div class="thumbcaption">Click to expand		</div>	</div></div>
 <p>
 </p>
-<h3 class="showhide_heading" id="Example_4_subtotals_since_Tiki_18_"> Example 4 (subtotals since Tiki 18)<a href="PluginData-Pilot.html#Example_4_subtotals_since_Tiki_18_" class="heading-link"><span class="icon icon-link fas fa-link "></span></a></h3>
+<h3 class="showhide_heading" id="Example_4_subtotals_since_Tiki_18_"> Example 4 (subtotals since Tiki 18)<a href="PluginPivotTable.html#Example_4_subtotals_since_Tiki_18_" class="heading-link"><span class="icon icon-link fas fa-link "></span></a></h3>
 <p>Since <a href="http://doc.tiki.org/Tiki18" title="Tiki18" class="wiki wiki_page">Tiki18</a> new renderers were added to allow displaying subtotal sums for rows in the table, through the  <a class="wiki external" target="_blank" href="https://sourceforge.net/p/tikiwiki/code/63010" rel="external">addition</a> of <a class="wiki external" target="_blank" href="http://nagarajanchinnasamy.com/subtotal/" rel="external">subtotal.js</a> to the plugin:
 </p>
 <ul><li> Table With Subtotal
@@ -655,8 +655,8 @@ It produces the <a class="wiki external" target="_blank" href="http://nicolas.kr
 <div style="display: inline-block; display:block; margin-left:auto; margin-right:auto; max-width: 100%; width:402px;">	<a href="http://doc.tiki.org/display1384" class="internal" data-box="box[g]" target="_blank" title="Click to expand">		<img width="400" style="display:block; margin-left:auto; margin-right:auto;border:1px solid darkgray;" alt="Click to expand" class="regImage pluginImg img-fluid lozad" data-src="display1384" title="Click to expand">	</a>	<div class="mini" style="max-width: 100%; width:400px;">		<div class="thumbcaption">Click to expand		</div>	</div></div>
 <p>
 </p>
-<h3 class="showhide_heading" id="Example_5_activity_stream_since_Tiki19_"> Example 5 (activity stream since Tiki19)<a href="PluginData-Pilot.html#Example_5_activity_stream_since_Tiki19_" class="heading-link"><span class="icon icon-link fas fa-link "></span></a></h3>
-<p>Since <a href="http://doc.tiki.org/Tiki19" title="Tiki19" class="wiki wiki_page">Tiki19</a>, you can display data from the <a href="PluginActivityStream.html" title="Create a social network activity stream" class="wiki wiki_page">Activity Stream</a> into the Plugin PivotTable.
+<h3 class="showhide_heading" id="Example_5_activity_stream_since_Tiki19_"> Example 5 (activity stream since Tiki19)<a href="PluginPivotTable.html#Example_5_activity_stream_since_Tiki19_" class="heading-link"><span class="icon icon-link fas fa-link "></span></a></h3>
+<p>Since <a href="http://doc.tiki.org/Tiki19" title="Tiki19" class="wiki wiki_page">Tiki19</a>, you can display data from the <a href="Activity-Stream.html" title="Create a social network activity stream" class="wiki wiki_page">Activity Stream</a> into the Plugin PivotTable.
 </p>
 
 <p>Minimum syntax to let the user choose options throught the PivotTable UI:
@@ -668,11 +668,11 @@ It produces the <a class="wiki external" target="_blank" href="http://nicolas.kr
 <pre class="codelisting" data-theme="off" data-wrap="1" dir="ltr" style="white-space:pre-wrap; overflow-wrap: break-word; word-wrap: break-word;" id="codebox5">{pivottable data="activitystream" rows="object:type" cols="modification_date" width="100%" height="1000px" rendererName="Bar Chart" aggregatorName="Count" inclusions="{}" menuLimit="500" aggregateDetails="object_type"}</pre>
 <p>
 </p>
-<a id="advanced-usage" name="//apple_ref/cpp/Section/Advanced%20Usage" class="dashAnchor"></a><h2 class="showhide_heading" id="Advanced_Usage"> Advanced Usage<a href="PluginData-Pilot.html#Advanced_Usage" class="heading-link"><span class="icon icon-link fas fa-link "></span></a></h2>
+<a id="advanced-usage" name="//apple_ref/cpp/Section/Advanced%20Usage" class="dashAnchor"></a><h2 class="showhide_heading" id="Advanced_Usage"> Advanced Usage<a href="PluginPivotTable.html#Advanced_Usage" class="heading-link"><span class="icon icon-link fas fa-link "></span></a></h2>
 <p>If your dataset is huge (many thousands), or the tracker has many fields (many hundreds), and some of them carrying heavy data (long text fields, or big files/images attached to the tracker items in files tracker fields), you can use an advanced syntax to filter the number of items or reduce the amount of tracker fields exposed to the pivot table to work with, so that the good performance of the pivot table plugin is preserved.
 </p>
 
-<p>You can use the <strong>filter</strong> or <strong>display</strong> commands (both  from <a href="Plugin-List.html" title="Search for, list, and filter all types of items and display custom formatted results" class="wiki wiki_page">PluginList</a> ) to indicate which items (filter) or tracker fields (display) you want to use, respectively, in the pivot table plugin.
+<p>You can use the <strong>filter</strong> or <strong>display</strong> commands (both  from <a href="PluginList.html" title="Search for, list, and filter all types of items and display custom formatted results" class="wiki wiki_page">PluginList</a> ) to indicate which items (filter) or tracker fields (display) you want to use, respectively, in the pivot table plugin.
 </p>
 
 <p>See:
@@ -681,7 +681,7 @@ It produces the <a class="wiki external" target="_blank" href="http://nicolas.kr
 </li><li> <a href="PluginList-display-control-block.html" title="PluginList display control block" class="wiki wiki_page">PluginList display control block</a>
 </li></ul><p>
 </p>
-<h3 class="showhide_heading" id="Add_creation_date_modification_date_and_status"> Add creation_date, modification_date and status<a href="PluginData-Pilot.html#Add_creation_date_modification_date_and_status" class="heading-link"><span class="icon icon-link fas fa-link "></span></a></h3>
+<h3 class="showhide_heading" id="Add_creation_date_modification_date_and_status"> Add creation_date, modification_date and status<a href="PluginPivotTable.html#Add_creation_date_modification_date_and_status" class="heading-link"><span class="icon icon-link fas fa-link "></span></a></h3>
 <p>You can also indicate if you want the creation_date, modification_date and status if the tracker items to be displayed as optional variables to be used in the report.
 </p>
 
@@ -690,13 +690,13 @@ It produces the <a class="wiki external" target="_blank" href="http://nicolas.kr
 {display name="tracker_status"}</pre>
 <p>
 </p>
-<h3 class="showhide_heading" id="Customize_aggregation_date_values"> Customize aggregation date values<a href="PluginData-Pilot.html#Customize_aggregation_date_values" class="heading-link"><span class="icon icon-link fas fa-link "></span></a></h3>
+<h3 class="showhide_heading" id="Customize_aggregation_date_values"> Customize aggregation date values<a href="PluginPivotTable.html#Customize_aggregation_date_values" class="heading-link"><span class="icon icon-link fas fa-link "></span></a></h3>
 <p>See <a href="http://doc.tiki.org/Derived-Attribute-of-a-date" title="Derived Attribute of a date" class="wiki wiki_page">Derived Attribute of a date</a>
 </p>
 
 <p>
 </p>
-<h3 class="showhide_heading" id="Advanced_Example_1"> Advanced Example 1<a href="PluginData-Pilot.html#Advanced_Example_1" class="heading-link"><span class="icon icon-link fas fa-link "></span></a></h3>
+<h3 class="showhide_heading" id="Advanced_Example_1"> Advanced Example 1<a href="PluginPivotTable.html#Advanced_Example_1" class="heading-link"><span class="icon icon-link fas fa-link "></span></a></h3>
 <p>
 <br><em>This code:</em>
 </p>
@@ -719,7 +719,7 @@ It produces the <a class="wiki external" target="_blank" href="http://nicolas.kr
 <div style="display: inline-block; display:block; margin-left:auto; margin-right:auto; max-width: 100%; width:402px;">	<a href="http://doc.tiki.org/display1319" class="internal" data-box="box[g]" target="_blank" title="Click to expand">		<img width="400" style="display:block; margin-left:auto; margin-right:auto;border:1px solid darkgray;" alt="Click to expand" class="regImage pluginImg img-fluid lozad" data-src="display1319" title="Click to expand">	</a>	<div class="mini" style="max-width: 100%; width:400px;">		<div class="thumbcaption">Click to expand		</div>	</div></div>
 <p>
 </p>
-<h3 class="showhide_heading" id="Advanced_example_2"> Advanced example 2<a href="PluginData-Pilot.html#Advanced_example_2" class="heading-link"><span class="icon icon-link fas fa-link "></span></a></h3>
+<h3 class="showhide_heading" id="Advanced_example_2"> Advanced example 2<a href="PluginPivotTable.html#Advanced_example_2" class="heading-link"><span class="icon icon-link fas fa-link "></span></a></h3>
 <p><em>This code:</em>
 </p>
 <pre class="codelisting" data-theme="off" data-syntax="tiki" data-wrap="1" dir="ltr" style="white-space:pre-wrap; overflow-wrap: break-word; word-wrap: break-word;" id="codebox8">{PIVOTTABLE(data="tracker:4" rows="bug_tracker_submitted_by:bug_tracker_severity:" cols="bug_tracker_bug_status:bug_tracker_priority:" rendererName="Heatmap" aggregatorName="Count as Fraction of Total")}
@@ -745,8 +745,8 @@ It produces the <a class="wiki external" target="_blank" href="http://nicolas.kr
 <p>
 <br>
 </p>
-<h3 class="showhide_heading" id="Advanced_example_3"> Advanced example 3<a href="PluginData-Pilot.html#Advanced_example_3" class="heading-link"><span class="icon icon-link fas fa-link "></span></a></h3>
-<p>Since Tiki 16.2, any plugin using unified index search formatter and wikibuilder (aka filter, output, display, format, etc. wiki syntax, such as <a href="PluginData-Pilot.html" title="PluginPivotTable" class="wiki wiki_page">PluginPivottable</a> ) now accepts <code>{filter field=... editable=...}</code> syntax to allow user enter a search value instead of hard-coding it. This means a trackerfilter-like functionality for unified index-based plugins.
+<h3 class="showhide_heading" id="Advanced_example_3"> Advanced example 3<a href="PluginPivotTable.html#Advanced_example_3" class="heading-link"><span class="icon icon-link fas fa-link "></span></a></h3>
+<p>Since Tiki 16.2, any plugin using unified index search formatter and wikibuilder (aka filter, output, display, format, etc. wiki syntax, such as <a href="PluginPivotTable.html" title="PluginPivotTable" class="wiki wiki_page">PluginPivottable</a> ) now accepts <code>{filter field=... editable=...}</code> syntax to allow user enter a search value instead of hard-coding it. This means a trackerfilter-like functionality for unified index-based plugins.
 </p>
 
 <p>You can see this feature in action if you apply profile <a href="http://profiles.tiki.org/Bug_Tracker_16" class="wiki ext_page pr">Bug_Tracker_16</a>
@@ -766,7 +766,7 @@ It produces the <a class="wiki external" target="_blank" href="http://nicolas.kr
 <div style="display: inline-block; display:block; margin-left:auto; margin-right:auto; max-width: 100%; width:402px;">	<a href="http://doc.tiki.org/display1338" class="internal" data-box="box[g]" target="_blank" title="Click to expand">		<img width="400" style="display:block; margin-left:auto; margin-right:auto;border:1px solid darkgray;" alt="Click to expand" class="regImage pluginImg img-fluid lozad" data-src="display1338" title="Click to expand">	</a>	<div class="mini" style="max-width: 100%; width:400px;">		<div class="thumbcaption">Click to expand		</div>	</div></div>
 <p>
 </p>
-<a id="related-pages" name="//apple_ref/cpp/Section/Related%20pages" class="dashAnchor"></a><h2 class="showhide_heading" id="Related_pages"> Related pages<a href="PluginData-Pilot.html#Related_pages" class="heading-link"><span class="icon icon-link fas fa-link "></span></a></h2>
+<a id="related-pages" name="//apple_ref/cpp/Section/Related%20pages" class="dashAnchor"></a><h2 class="showhide_heading" id="Related_pages"> Related pages<a href="PluginPivotTable.html#Related_pages" class="heading-link"><span class="icon icon-link fas fa-link "></span></a></h2>
 <ul><li> <a href="http://doc.tiki.org/Grouped-Data" title="Grouped Data" class="wiki wiki_page">Grouped Data</a>
 </li><li> <a href="http://doc.tiki.org/Derived-Attribute-of-a-date" title="Derived Attribute of a date" class="wiki wiki_page">Derived Attribute of a date</a>
 </li><li> <a href="http://doc.tiki.org/Profiles-Wizard" title="Profiles Wizard" class="wiki wiki_page">Profiles Wizard</a>
@@ -774,8 +774,8 @@ It produces the <a class="wiki external" target="_blank" href="http://nicolas.kr
 </li><li> <a class="wiki external" target="_blank" href="http://nicolas.kruchten.com/pivottable/" rel="external">http://nicolas.kruchten.com/pivottable/</a>
 </li></ul><p>
 </p>
-<a id="aliases" name="//apple_ref/cpp/Section/Aliases" class="dashAnchor"></a><h2 class="showhide_heading" id="Aliases"> Aliases<a href="PluginData-Pilot.html#Aliases" class="heading-link"><span class="icon icon-link fas fa-link "></span></a></h2>
-<p><a href="Plugin-Pivot-Table.html" class="wiki wiki_page alias">Plugin Pivot Table</a> | <a href="Plugin-PivotTable.html" class="wiki wiki_page alias">Plugin PivotTable</a> | <a href="PluginPivot-Table.html" class="wiki wiki_page alias">PluginPivot Table</a> | <a href="http://doc.tiki.org/Pivot-Table" class="wiki wiki_page alias">Pivot Table</a> | <a href="http://doc.tiki.org/PivotTable" class="wiki wiki_page alias">PivotTable</a> | <a href="Plugin-Pivot-Tables.html" class="wiki wiki_page alias">Plugin Pivot Tables</a> | <a href="Plugin-PivotTables.html" class="wiki wiki_page alias">Plugin PivotTables</a> | <a href="PluginPivot-Tables.html" class="wiki wiki_page alias">PluginPivot Tables</a> | <a href="http://doc.tiki.org/Pivot-Tables" class="wiki wiki_page alias">Pivot Tables</a> | <a href="http://doc.tiki.org/PivotTables" class="wiki wiki_page alias">PivotTables</a> |  <a href="Plugin-Data-Pilot.html" class="wiki wiki_page alias">Plugin Data Pilot</a> | <a href="Plugin-DataPilot.html" class="wiki wiki_page alias">Plugin DataPilot</a> | <a href="PluginData-Pilot.html" class="wiki wiki_page alias">PluginData Pilot</a> | <a href="http://doc.tiki.org/Data-Pilot" class="wiki wiki_page alias">Data Pilot</a> | <a href="http://doc.tiki.org/Data-Pilot" class="wiki wiki_page alias">Data Pilot</a> |</p>
+<a id="aliases" name="//apple_ref/cpp/Section/Aliases" class="dashAnchor"></a><h2 class="showhide_heading" id="Aliases"> Aliases<a href="PluginPivotTable.html#Aliases" class="heading-link"><span class="icon icon-link fas fa-link "></span></a></h2>
+<p><a href="PluginPivotTable.html" class="wiki wiki_page alias">Plugin Pivot Table</a> | <a href="PluginPivotTable.html" class="wiki wiki_page alias">Plugin PivotTable</a> | <a href="PluginPivotTable.html" class="wiki wiki_page alias">PluginPivot Table</a> | <a href="http://doc.tiki.org/Pivot-Table" class="wiki wiki_page alias">Pivot Table</a> | <a href="http://doc.tiki.org/PivotTable" class="wiki wiki_page alias">PivotTable</a> | <a href="PluginPivotTable.html" class="wiki wiki_page alias">Plugin Pivot Tables</a> | <a href="PluginPivotTable.html" class="wiki wiki_page alias">Plugin PivotTables</a> | <a href="PluginPivotTable.html" class="wiki wiki_page alias">PluginPivot Tables</a> | <a href="http://doc.tiki.org/Pivot-Tables" class="wiki wiki_page alias">Pivot Tables</a> | <a href="http://doc.tiki.org/PivotTables" class="wiki wiki_page alias">PivotTables</a> |  <a href="PluginPivotTable.html" class="wiki wiki_page alias">Plugin Data Pilot</a> | <a href="PluginPivotTable.html" class="wiki wiki_page alias">Plugin DataPilot</a> | <a href="PluginPivotTable.html" class="wiki wiki_page alias">PluginData Pilot</a> | <a href="http://doc.tiki.org/Data-Pilot" class="wiki wiki_page alias">Data Pilot</a> | <a href="http://doc.tiki.org/Data-Pilot" class="wiki wiki_page alias">Data Pilot</a> |</p>
 
 					</div>
 
@@ -824,6 +824,22 @@ It produces the <a class="wiki external" target="_blank" href="http://nicolas.kr
 				<div id="mod-related_videopagebottom1">
 										
 <div id="related_video" style="display:block;">
+<h4 class="showhide_heading" id="Related_Video_"> Related Video "Features and Options in Tiki"<a href="PluginPivotTable.html#Related_Video_" class="heading-link"><span class="icon icon-link fas fa-link "></span></a></h4>
+<p><span class="videoLevel-Beginner">Beginner</span> <span class="videoRole">| Administrator</span>
+<a class="wiki external" target="_blank" href="https://tiki.org/Bsfez" rel="external">Bernard Sfez / Tiki Specialist</a> - Tue 11 Dec, 2018<br>
+<a class="btn btn-link create_item_button" target="" data-role="button" data-inline="true" title="Other videos" href="http://doc.tiki.org/Video-Tutorials"><span class="icon icon-film fas fa-film "></span> Other videos</a><br>
+<iframe src="http://www.youtube-nocookie.com/embed/M4BnpIR04QM?" frameborder="0" width="560" height="315" allowfullscreen=""></iframe>
+</p>
+<hr>
+<p>On this #tikiexpresstutorial, using #tiki19 I’ll show you:
+<br>How to enable a feature from the Control Panels
+<br>How to enable a Global Feature from the features panel
+<br>How to enable an Interface feature
+<br>A quick overview of the Programmer features
+<br>And where to look for feature options
+</p>
+
+<p>Visit my <a class="wiki external" target="_blank" href="https://bsfez.com" rel="external">website</a> or <a class="wiki external" target="_blank" href="https://www.youtube.com/channel/UCgM1YJeUCaszrTsuZub0Qpg" rel="external"> my youtube channel</a> to see more Tiki express tutorial and <a class="wiki external" target="_blank" href="https://www.youtube.com/channel/UCgM1YJeUCaszrTsuZub0Qpg?sub_confirmation=1" rel="external">Subscribe to my youtube channel</a>.</p>
 </div>
 
 													
@@ -960,7 +976,7 @@ It produces the <a class="wiki external" target="_blank" href="http://nicolas.kr
 <!--//--><![CDATA[//><!--
 // js 0 
 tiki_cookie_jar=new Object();
-setCookieBrowser('javascript_enabled', '1621938906000', '', new Date(1621938906000));
+setCookieBrowser('javascript_enabled', '1622281019000', '', new Date(1622281019000));
 $.lang = 'en';
 
 // JS Object to hold prefs for jq

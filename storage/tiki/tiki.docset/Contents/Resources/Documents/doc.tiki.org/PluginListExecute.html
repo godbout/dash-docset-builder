@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" id="page_4545">
+<html lang="en" id="page_4545"><!-- Online page at http://doc.tiki.org/PluginListExecute -->
 <head>
 	
 <!--Latest IE Compatibility-->
@@ -366,7 +366,7 @@ textarea, .CodeMirror {
 <p>Introduced in <a href="http://doc.tiki.org/Tiki11" title="Tiki11" class="wiki wiki_page">Tiki11</a>, the LISTEXECUTE plugin is an extensible plugin allowing administrators to set-up listings and custom actions that can be executed on objects, allowing to support complex workflows and perform some level of automation.
 </p>
 
-<p>The LISTEXECUTE plugin uses the <a href="http://doc.tiki.org/Unified-Index" title="Unified Index" class="wiki wiki_page">Unified Index</a> to extract lists of objects. All filters available in <a href="Plugin-List.html" title="Search for, list, and filter all types of items and display custom formatted results" class="wiki wiki_page">PluginList</a> can also be used with LISTEXECUTE. Results are presented as a list with checkboxes for each row. Actions can be performed on selected objects.
+<p>The LISTEXECUTE plugin uses the <a href="http://doc.tiki.org/Unified-Index" title="Unified Index" class="wiki wiki_page">Unified Index</a> to extract lists of objects. All filters available in <a href="PluginList.html" title="Search for, list, and filter all types of items and display custom formatted results" class="wiki wiki_page">PluginList</a> can also be used with LISTEXECUTE. Results are presented as a list with checkboxes for each row. Actions can be performed on selected objects.
 </p>
 
 <div class="codecaption">Sample usage</div><pre class="codelisting" data-theme="off" data-syntax="tiki" data-wrap="1" dir="ltr" style="white-space:pre-wrap; overflow-wrap: break-word; word-wrap: break-word;" id="codebox1">{LISTEXECUTE()}
@@ -433,7 +433,7 @@ Acme Software Team
 </li></ul><p>
 <br>Supported object types:
 </p>
-<table class="wikitable table table-striped table-hover"><tr><td class="wikicell"><strong>Type</strong></td><td class="wikicell"><strong>Version</strong></td></tr><tr><td class="wikicell">file</td><td class="wikicell"><a href="http://doc.tiki.org/Tiki12" title="Tiki12" class="wiki wiki_page">Tiki12</a></td></tr><tr><td class="wikicell">trackeritem</td><td class="wikicell"><a href="http://doc.tiki.org/Tiki18" title="Tiki18" class="wiki wiki_page">Tiki18</a></td></tr><tr><td class="wikicell">aggregate</td><td class="wikicell"><a href="http://doc.tiki.org/Tiki18" title="Tiki18" class="wiki wiki_page">Tiki18</a> - see <a href="Plugin-List.html" title="Search for, list, and filter all types of items and display custom formatted results" class="wiki wiki_page">PluginList</a> for more info on aggregating results</td></tr></table>
+<table class="wikitable table table-striped table-hover"><tr><td class="wikicell"><strong>Type</strong></td><td class="wikicell"><strong>Version</strong></td></tr><tr><td class="wikicell">file</td><td class="wikicell"><a href="http://doc.tiki.org/Tiki12" title="Tiki12" class="wiki wiki_page">Tiki12</a></td></tr><tr><td class="wikicell">trackeritem</td><td class="wikicell"><a href="http://doc.tiki.org/Tiki18" title="Tiki18" class="wiki wiki_page">Tiki18</a></td></tr><tr><td class="wikicell">aggregate</td><td class="wikicell"><a href="http://doc.tiki.org/Tiki18" title="Tiki18" class="wiki wiki_page">Tiki18</a> - see <a href="PluginList.html" title="Search for, list, and filter all types of items and display custom formatted results" class="wiki wiki_page">PluginList</a> for more info on aggregating results</td></tr></table>
 <p>
 <br>
 </p>
@@ -563,7 +563,7 @@ service httpd restart</pre>
 	&lt;time datetime="2016-07-16T00:36:39+00:00"&gt;&lt;time class="timeago" datetime="2016-07-16T00:36:39+00:00"&gt;Sat 16 Jul, 2016 00:36 GMT-0000&lt;/time&gt;&lt;/time&gt;
 '><span class="icon icon-pencil fas fa-pencil-alt sign-icon"></span></span>.
 </li></ul></li><li> <code>value</code> : Optional (but either value or calc must be set, see below). target value, as hardcoded string.
-</li><li> <code>calc</code> :Optional (but either value or calc must be set, see above). target value, as a result of a mathematical calculation (based on the <a href="http://doc.tiki.org/Calculations" title="Calculations" class="wiki wiki_page">Calculations</a> syntax, used also in the <a href="http://doc.tiki.org/Mathematical-Calculation-Tracker-Field" title="Mathematical Calculation Tracker Field" class="wiki wiki_page">Mathematical Calculation Tracker Field</a>. check there the list of available functions and logic operators, etc).
+</li><li> <code>calc</code> :Optional (but either value or calc must be set, see above). target value, as a result of a mathematical calculation (based on the <a href="http://doc.tiki.org/Calculations" title="Calculations" class="wiki wiki_page">Calculations</a> syntax, used also in the <a href="Mathematical-Calculation-Tracker-Field.html" title="Mathematical Calculation Tracker Field" class="wiki wiki_page">Mathematical Calculation Tracker Field</a>. check there the list of available functions and logic operators, etc).
 </li><li> <code>ignore_errors</code> (New in <a href="http://doc.tiki.org/Tiki21" title="Tiki21" class="wiki wiki_page">Tiki21</a> and backported to 20.3 and 18.6) allows modifications of items ignoring mandatory and other validation failures.
 <ul><li> <pre class="codelisting" data-theme="off" data-wrap="1" dir="ltr" style="white-space:pre-wrap; overflow-wrap: break-word; word-wrap: break-word;" id="codebox10">{step action="tracker_item_modify" field="OwnerUser" ignore_errors="y"}</pre>
 </li></ul></li><li> New in <a href="http://doc.tiki.org/Tiki20" title="Tiki20" class="wiki wiki_page">Tiki20</a> (and later backported to 19.2): <code>add</code>/-+remove+- items This is useful for multivalue fields like User Selector, Category, Relation, Freetags, etc.
@@ -638,14 +638,14 @@ Command not available at this stage. Complete required installation steps.
 <p>
 </p>
 <a id="output" name="//apple_ref/cpp/Section/Output" class="dashAnchor"></a><h2 class="showhide_heading" id="Output"> Output<a href="PluginListExecute.html#Output" class="heading-link"><span class="icon icon-link fas fa-link "></span></a></h2>
-<p>Since <a href="http://doc.tiki.org/Tiki16" title="Tiki16" class="wiki wiki_page">Tiki16</a> (backported to <a href="http://doc.tiki.org/Tiki15" title="Tiki15" class="wiki wiki_page">Tiki 15.3</a> ) you can use the same syntax to define columns, output, alternative results, etc, as it's possible with <a href="Plugin-List.html" title="Search for, list, and filter all types of items and display custom formatted results" class="wiki wiki_page">PluginList</a> to customize the columns you want to display for each record shown.
+<p>Since <a href="http://doc.tiki.org/Tiki16" title="Tiki16" class="wiki wiki_page">Tiki16</a> (backported to <a href="http://doc.tiki.org/Tiki15" title="Tiki15" class="wiki wiki_page">Tiki 15.3</a> ) you can use the same syntax to define columns, output, alternative results, etc, as it's possible with <a href="PluginList.html" title="Search for, list, and filter all types of items and display custom formatted results" class="wiki wiki_page">PluginList</a> to customize the columns you want to display for each record shown.
 </p>
 
 <p>You can see and play with a working example by means of <a href="http://doc.tiki.org/Profiles" title="Profiles" class="wiki wiki_page">applying the profile</a> <a href="http://profiles.tiki.org/Execute%20on%20List" class="wiki ext_page pr">Execute on List</a>.
 </p>
 
 <a id="see-also" name="//apple_ref/cpp/Section/See%20also" class="dashAnchor"></a><h2 class="showhide_heading" id="See_also"> See also<a href="PluginListExecute.html#See_also" class="heading-link"><span class="icon icon-link fas fa-link "></span></a></h2>
-<ul><li> This plugin can also be used in <a href="http://doc.tiki.org/Flagged-Revisions" title="Flagged Revisions" class="wiki wiki_page">Flagged Revisions</a> or <a href="http://doc.tiki.org/Files-Tracker-Field" title="Files Tracker Field" class="wiki wiki_page">Files Tracker Field</a>
+<ul><li> This plugin can also be used in <a href="http://doc.tiki.org/Flagged-Revisions" title="Flagged Revisions" class="wiki wiki_page">Flagged Revisions</a> or <a href="Files-Tracker-Field.html" title="Files Tracker Field" class="wiki wiki_page">Files Tracker Field</a>
 </li></ul><p>
 </p>
 <a id="some-examples" name="//apple_ref/cpp/Section/Some%20examples" class="dashAnchor"></a><h2 class="showhide_heading" id="Some_examples"> Some examples<a href="PluginListExecute.html#Some_examples" class="heading-link"><span class="icon icon-link fas fa-link "></span></a></h2>
@@ -894,6 +894,22 @@ http://example.com
 				<div id="mod-related_videopagebottom1">
 										
 <div id="related_video" style="display:block;">
+<h4 class="showhide_heading" id="Related_Video_"> Related Video "Features and Options in Tiki"<a href="PluginListExecute.html#Related_Video_" class="heading-link"><span class="icon icon-link fas fa-link "></span></a></h4>
+<p><span class="videoLevel-Beginner">Beginner</span> <span class="videoRole">| Administrator</span>
+<a class="wiki external" target="_blank" href="https://tiki.org/Bsfez" rel="external">Bernard Sfez / Tiki Specialist</a> - Tue 11 Dec, 2018<br>
+<a class="btn btn-link create_item_button" target="" data-role="button" data-inline="true" title="Other videos" href="http://doc.tiki.org/Video-Tutorials"><span class="icon icon-film fas fa-film "></span> Other videos</a><br>
+<iframe src="http://www.youtube-nocookie.com/embed/M4BnpIR04QM?" frameborder="0" width="560" height="315" allowfullscreen=""></iframe>
+</p>
+<hr>
+<p>On this #tikiexpresstutorial, using #tiki19 I’ll show you:
+<br>How to enable a feature from the Control Panels
+<br>How to enable a Global Feature from the features panel
+<br>How to enable an Interface feature
+<br>A quick overview of the Programmer features
+<br>And where to look for feature options
+</p>
+
+<p>Visit my <a class="wiki external" target="_blank" href="https://bsfez.com" rel="external">website</a> or <a class="wiki external" target="_blank" href="https://www.youtube.com/channel/UCgM1YJeUCaszrTsuZub0Qpg" rel="external"> my youtube channel</a> to see more Tiki express tutorial and <a class="wiki external" target="_blank" href="https://www.youtube.com/channel/UCgM1YJeUCaszrTsuZub0Qpg?sub_confirmation=1" rel="external">Subscribe to my youtube channel</a>.</p>
 </div>
 
 													
@@ -1029,7 +1045,7 @@ http://example.com
 <!--//--><![CDATA[//><!--
 // js 0 
 tiki_cookie_jar=new Object();
-setCookieBrowser('javascript_enabled', '1621938894000', '', new Date(1621938894000));
+setCookieBrowser('javascript_enabled', '1622280704000', '', new Date(1622280704000));
 $.lang = 'en';
 
 // JS Object to hold prefs for jq

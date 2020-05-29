@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" id="page_2960">
+<html lang="en" id="page_2960"><!-- Online page at http://doc.tiki.org/PluginTrackerStat -->
 <head>
 	
 <!--Latest IE Compatibility-->
@@ -268,6 +268,20 @@ textarea, .CodeMirror {
 
 @media (min-width: 1200px) { .container { width:1240px; max-width:1240px;} }
 .affix {top:44px;}
+
+			.lozadFade {
+				animation-name: lozadFade;
+				animation-duration: 1s;
+			}
+			@keyframes lozadFade {
+				from {
+					opacity: 0;
+				}
+				to {
+					opacity: 1;
+				}
+			}
+		
 -->
 </style>
 	<style type="text/css">#sitelogo img {margin-top: 0; position: relative; top: -12px;}</style>
@@ -331,7 +345,7 @@ textarea, .CodeMirror {
 				
 				Display statistics about a tracker
 
-				<span class="cachedStatus">(Cached)</span>							</div>
+											</div>
 		 
 					<div class="wikiinfo float-left" id="pdfinfo" style="display:none">
 				<div class="alert alert-info" style="width:500px"><h4><span class="icon icon-information fas fa-info-circle fa-fw "></span> <span class="rboxtitle">Please wait</span></h4><div class="rboxcontent" style="display: inline"><span class="fas fa-circle-notch fa-spin" style="font-size:24px"></span> The PDF is being prepared, please wait...</div></div>
@@ -369,7 +383,7 @@ textarea, .CodeMirror {
 <p>Use this <a href="http://doc.tiki.org/wiki%20plugin" title="" class="wiki wiki_page">wiki plugin</a> to display some simple statistics about a tracker. You can specify which fields can be displayed. The plugin can be used several times on a same page with different trackers.
 </p>
 
-<p>For a more advanced way to create a chart, please see: <a href="PluginData-Pilot.html" title="PluginPivotTable" class="wiki wiki_page">PluginPivotTable</a>
+<p>For a more advanced way to create a chart, please see: <a href="PluginPivotTable.html" title="PluginPivotTable" class="wiki wiki_page">PluginPivotTable</a>
 </p>
 
 <a id="parameters" name="//apple_ref/cpp/Section/Parameters" class="dashAnchor"></a><h2 class="showhide_heading" id="Parameters"> Parameters<a href="PluginTrackerStat.html#Parameters" class="heading-link"><span class="icon icon-link fas fa-link "></span></a></h2>
@@ -467,8 +481,8 @@ textarea, .CodeMirror {
 </p>
 
 <a id="limitations" name="//apple_ref/cpp/Section/Limitations" class="dashAnchor"></a><h2 class="showhide_heading" id="Limitations"> Limitations<a href="PluginTrackerStat.html#Limitations" class="heading-link"><span class="icon icon-link fas fa-link "></span></a></h2>
-<ul><li> It doesn't deal with some of the more advanced permissions of trackers. Use <a href="PluginData-Pilot.html" title="PluginPivotTable" class="wiki wiki_page">PluginPivotTable</a> instead.
-</li><li> Can't pre-filter data. Use <a href="PluginData-Pilot.html" title="PluginPivotTable" class="wiki wiki_page">PluginPivotTable</a> instead.
+<ul><li> It doesn't deal with some of the more advanced permissions of trackers. Use <a href="PluginPivotTable.html" title="PluginPivotTable" class="wiki wiki_page">PluginPivotTable</a> instead.
+</li><li> Can't pre-filter data. Use <a href="PluginPivotTable.html" title="PluginPivotTable" class="wiki wiki_page">PluginPivotTable</a> instead.
 </li></ul><p>
 </p>
 <a id="related-pages" name="//apple_ref/cpp/Section/Related%20pages" class="dashAnchor"></a><h2 class="showhide_heading" id="Related_pages"> Related pages<a href="PluginTrackerStat.html#Related_pages" class="heading-link"><span class="icon icon-link fas fa-link "></span></a></h2>
@@ -477,7 +491,6 @@ textarea, .CodeMirror {
 
 <p>
 <br></p>
-
 
 					</div>
 
@@ -526,6 +539,22 @@ textarea, .CodeMirror {
 				<div id="mod-related_videopagebottom1">
 										
 <div id="related_video" style="display:block;">
+<h4 class="showhide_heading" id="Related_Video_"> Related Video "Features and Options in Tiki"<a href="PluginTrackerStat.html#Related_Video_" class="heading-link"><span class="icon icon-link fas fa-link "></span></a></h4>
+<p><span class="videoLevel-Beginner">Beginner</span> <span class="videoRole">| Administrator</span>
+<a class="wiki external" target="_blank" href="https://tiki.org/Bsfez" rel="external">Bernard Sfez / Tiki Specialist</a> - Tue 11 Dec, 2018<br>
+<a class="btn btn-link create_item_button" target="" data-role="button" data-inline="true" title="Other videos" href="http://doc.tiki.org/Video-Tutorials"><span class="icon icon-film fas fa-film "></span> Other videos</a><br>
+<iframe src="http://www.youtube-nocookie.com/embed/M4BnpIR04QM?" frameborder="0" width="560" height="315" allowfullscreen=""></iframe>
+</p>
+<hr>
+<p>On this #tikiexpresstutorial, using #tiki19 I’ll show you:
+<br>How to enable a feature from the Control Panels
+<br>How to enable a Global Feature from the features panel
+<br>How to enable an Interface feature
+<br>A quick overview of the Programmer features
+<br>And where to look for feature options
+</p>
+
+<p>Visit my <a class="wiki external" target="_blank" href="https://bsfez.com" rel="external">website</a> or <a class="wiki external" target="_blank" href="https://www.youtube.com/channel/UCgM1YJeUCaszrTsuZub0Qpg" rel="external"> my youtube channel</a> to see more Tiki express tutorial and <a class="wiki external" target="_blank" href="https://www.youtube.com/channel/UCgM1YJeUCaszrTsuZub0Qpg?sub_confirmation=1" rel="external">Subscribe to my youtube channel</a>.</p>
 </div>
 
 													
@@ -662,7 +691,7 @@ textarea, .CodeMirror {
 <!--//--><![CDATA[//><!--
 // js 0 
 tiki_cookie_jar=new Object();
-setCookieBrowser('javascript_enabled', '1621938961000', '', new Date(1621938961000));
+setCookieBrowser('javascript_enabled', '1622280776000', '', new Date(1622280776000));
 $.lang = 'en';
 
 // JS Object to hold prefs for jq
@@ -709,26 +738,6 @@ if (getCookie('postitnote') != 'hidden') {
         }
     }
 }
-$(document).ready(function(){
-// jq_onready 0 
-$("article").fitVids();
-$("time.timeago").timeago(); jQuery.timeago.settings.allowFuture = true;
-$(".table-responsive").doubleScroll({resetOnWindowResize: true});
-
-			lozad('.lozad', {
-				load: function(el) {
-					el.src = el.dataset.src;
-					el.onload = function() {
-						el.classList.add('lozadFade');
-					}
-				}
-			}).observe();
-		
-$(".convert-mailto").removeClass("convert-mailto").each(function () {
-				var address = $(this).data("encode-name") + "@" + $(this).data("encode-domain");
-				$(this).attr("href", "mailto:" + address).text(address);
-			});
-}) /* end on ready */;
 					function submitSearch1() {
 						var $f = $('#search-module-form1');
 						if ($f.attr('action') !== "tiki-editpage.php" && $f.data('page_selected') === $("#search_mod_input_1").val()) {
@@ -816,6 +825,20 @@ $(document).ready(function(){
 $("article").fitVids();
 $("time.timeago").timeago(); jQuery.timeago.settings.allowFuture = true;
 $(".table-responsive").doubleScroll({resetOnWindowResize: true});
+
+			lozad('.lozad', {
+				load: function(el) {
+					el.src = el.dataset.src;
+					el.onload = function() {
+						el.classList.add('lozadFade');
+					}
+				}
+			}).observe();
+		
+$(".convert-mailto").removeClass("convert-mailto").each(function () {
+				var address = $(this).data("encode-name") + "@" + $(this).data("encode-domain");
+				$(this).attr("href", "mailto:" + address).text(address);
+			});
 $(".search_mod_magnifier").mouseover( function () {
 	$(".search_mod_buttons", $(this).parents(".module"))
 		.show('fast')
@@ -837,10 +860,6 @@ $("#search_mod_input_1").tiki("autocomplete", "pagename",{select: function(event
 						}, close: function(event, item) {
 						$(".search_mod_buttons", "#search-module-form1").show();
 						}});
-$(".convert-mailto").removeClass("convert-mailto").each(function () {
-				var address = $(this).data("encode-name") + "@" + $(this).data("encode-domain");
-				$(this).attr("href", "mailto:" + address).text(address);
-			});
 							$('#comment-toggle').comment_toggle();
 						
 $(document).ready(function () {

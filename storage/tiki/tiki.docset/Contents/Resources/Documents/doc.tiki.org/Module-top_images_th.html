@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" id="page_3222">
+<html lang="en" id="page_3222"><!-- Online page at http://doc.tiki.org/Module-top_images_th -->
 <head>
 	
 <!--Latest IE Compatibility-->
@@ -331,7 +331,7 @@ textarea, .CodeMirror {
 				
 				
 
-				<span class="cachedStatus">(Cached)</span>							</div>
+											</div>
 		 
 					<div class="wikiinfo float-left" id="pdfinfo" style="display:none">
 				<div class="alert alert-info" style="width:500px"><h4><span class="icon icon-information fas fa-info-circle fa-fw "></span> <span class="rboxtitle">Please wait</span></h4><div class="rboxcontent" style="display: inline"><span class="fas fa-circle-notch fa-spin" style="font-size:24px"></span> The PDF is being prepared, please wait...</div></div>
@@ -366,7 +366,6 @@ textarea, .CodeMirror {
 <p>
 </p>
 <div class="card bg-light"><div class="card-body">This is a <a href="http://doc.tiki.org/stub" title="A documentation Status Tag" class="wiki wiki_page">stub</a>. Some <a href="http://doc.tiki.org/screenshot" title="A documentation Status Tag" class="wiki wiki_page">screenshot</a> is needed</div></div>
-
 					</div>
 
 		
@@ -412,6 +411,22 @@ textarea, .CodeMirror {
 				<div id="mod-related_videopagebottom1">
 										
 <div id="related_video" style="display:block;">
+<h4 class="showhide_heading" id="Related_Video_"> Related Video "Features and Options in Tiki"<a href="Module-top_images_th.html#Related_Video_" class="heading-link"><span class="icon icon-link fas fa-link "></span></a></h4>
+<p><span class="videoLevel-Beginner">Beginner</span> <span class="videoRole">| Administrator</span>
+<a class="wiki external" target="_blank" href="https://tiki.org/Bsfez" rel="external">Bernard Sfez / Tiki Specialist</a> - Tue 11 Dec, 2018<br>
+<a class="btn btn-link create_item_button" target="" data-role="button" data-inline="true" title="Other videos" href="http://doc.tiki.org/Video-Tutorials"><span class="icon icon-film fas fa-film "></span> Other videos</a><br>
+<iframe src="http://www.youtube-nocookie.com/embed/M4BnpIR04QM?" frameborder="0" width="560" height="315" allowfullscreen=""></iframe>
+</p>
+<hr>
+<p>On this #tikiexpresstutorial, using #tiki19 I’ll show you:
+<br>How to enable a feature from the Control Panels
+<br>How to enable a Global Feature from the features panel
+<br>How to enable an Interface feature
+<br>A quick overview of the Programmer features
+<br>And where to look for feature options
+</p>
+
+<p>Visit my <a class="wiki external" target="_blank" href="https://bsfez.com" rel="external">website</a> or <a class="wiki external" target="_blank" href="https://www.youtube.com/channel/UCgM1YJeUCaszrTsuZub0Qpg" rel="external"> my youtube channel</a> to see more Tiki express tutorial and <a class="wiki external" target="_blank" href="https://www.youtube.com/channel/UCgM1YJeUCaszrTsuZub0Qpg?sub_confirmation=1" rel="external">Subscribe to my youtube channel</a>.</p>
 </div>
 
 													
@@ -547,7 +562,7 @@ textarea, .CodeMirror {
 <!--//--><![CDATA[//><!--
 // js 0 
 tiki_cookie_jar=new Object();
-setCookieBrowser('javascript_enabled', '1621939006000', '', new Date(1621939006000));
+setCookieBrowser('javascript_enabled', '1622280819000', '', new Date(1622280819000));
 $.lang = 'en';
 
 // JS Object to hold prefs for jq
@@ -594,16 +609,6 @@ if (getCookie('postitnote') != 'hidden') {
         }
     }
 }
-$(document).ready(function(){
-// jq_onready 0 
-$("article").fitVids();
-$("time.timeago").timeago(); jQuery.timeago.settings.allowFuture = true;
-$(".table-responsive").doubleScroll({resetOnWindowResize: true});
-$(".convert-mailto").removeClass("convert-mailto").each(function () {
-				var address = $(this).data("encode-name") + "@" + $(this).data("encode-domain");
-				$(this).attr("href", "mailto:" + address).text(address);
-			});
-}) /* end on ready */;
 					function submitSearch1() {
 						var $f = $('#search-module-form1');
 						if ($f.attr('action') !== "tiki-editpage.php" && $f.data('page_selected') === $("#search_mod_input_1").val()) {
@@ -691,6 +696,10 @@ $(document).ready(function(){
 $("article").fitVids();
 $("time.timeago").timeago(); jQuery.timeago.settings.allowFuture = true;
 $(".table-responsive").doubleScroll({resetOnWindowResize: true});
+$(".convert-mailto").removeClass("convert-mailto").each(function () {
+				var address = $(this).data("encode-name") + "@" + $(this).data("encode-domain");
+				$(this).attr("href", "mailto:" + address).text(address);
+			});
 $(".search_mod_magnifier").mouseover( function () {
 	$(".search_mod_buttons", $(this).parents(".module"))
 		.show('fast')
@@ -712,10 +721,6 @@ $("#search_mod_input_1").tiki("autocomplete", "pagename",{select: function(event
 						}, close: function(event, item) {
 						$(".search_mod_buttons", "#search-module-form1").show();
 						}});
-$(".convert-mailto").removeClass("convert-mailto").each(function () {
-				var address = $(this).data("encode-name") + "@" + $(this).data("encode-domain");
-				$(this).attr("href", "mailto:" + address).text(address);
-			});
 $(document).ready(function () {
   var resetCSS = {
     transition: 'all .5s ease 0s',

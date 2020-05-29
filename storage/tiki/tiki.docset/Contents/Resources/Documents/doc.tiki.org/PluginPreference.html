@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" id="page_5202">
+<html lang="en" id="page_5202"><!-- Online page at http://doc.tiki.org/PluginPreference -->
 <head>
 	
 <!--Latest IE Compatibility-->
@@ -11,7 +11,7 @@
 <meta content="http://doc.tiki.org/" name="twitter:domain"> 
 
 
-			<link rel="canonical" href="Plugin-Preference.html">
+			<link rel="canonical" href="PluginPreference.html">
 		<meta content="http://doc.tiki.org/PluginPreference" property="og:url">
 	
 	<meta name="keywords" content="documentation, tiki, tikiwiki, document, help, install, wiki syntax  ">
@@ -361,14 +361,14 @@ textarea, .CodeMirror {
 		
 		<div id="page-data" class="clearfix">
 										<div class="card bg-light"><div class="card-body"> Not to be confused with <a href="PluginPref.html" title="Display content based on global preference settings" class="wiki wiki_page">PluginPref</a> </div></div>
-<a name="//apple_ref/cpp/Section/Top" class="dashAnchor"></a><h1 class="showhide_heading" id="Plugin_Preference"> Plugin Preference<a href="Plugin-Preference.html#Plugin_Preference" class="heading-link"><span class="icon icon-link fas fa-link "></span></a></h1>
+<a name="//apple_ref/cpp/Section/Top" class="dashAnchor"></a><h1 class="showhide_heading" id="Plugin_Preference"> Plugin Preference<a href="PluginPreference.html#Plugin_Preference" class="heading-link"><span class="icon icon-link fas fa-link "></span></a></h1>
 <p>
 <br>Using this wiki plugin, introduced in <a href="http://doc.tiki.org/Tiki21" title="Tiki21" class="wiki wiki_page">Tiki21</a>, allows you to build your own administration panels.
 <br>It is a way to delegate permission to set only certain preferences to non-administrators.
 <br>So we could create limited admin panels with just what people need, without giving <code>tiki_p_admin</code> permission by only specifying which <a class="wiki" href="http://doc.tiki.org/All-Preferences" rel="">preferences</a> will be included in the wiki page.
 </p>
 
-<a id="parameters" name="//apple_ref/cpp/Section/Parameters" class="dashAnchor"></a><h2 class="showhide_heading" id="Parameters"> Parameters<a href="Plugin-Preference.html#Parameters" class="heading-link"><span class="icon icon-link fas fa-link "></span></a></h2>
+<a id="parameters" name="//apple_ref/cpp/Section/Parameters" class="dashAnchor"></a><h2 class="showhide_heading" id="Parameters"> Parameters<a href="PluginPreference.html#Parameters" class="heading-link"><span class="icon icon-link fas fa-link "></span></a></h2>
 <em> Required parameters are in</em> <strong><code>bold</code></strong>.<br><em>Preferences required:</em> wikiplugin_preference<br><div class="table-responsive"><table class="table table-striped table-hover">
 	<tr class="heading">
 		<th class="heading">Parameters
@@ -394,15 +394,15 @@ textarea, .CodeMirror {
 <p>
 <br>
 </p>
-<a id="examples" name="//apple_ref/cpp/Section/Examples" class="dashAnchor"></a><h2 class="showhide_heading" id="Examples"> Examples<a href="Plugin-Preference.html#Examples" class="heading-link"><span class="icon icon-link fas fa-link "></span></a></h2>
-<h3 class="showhide_heading" id="Basic_syntax"> Basic syntax<a href="Plugin-Preference.html#Basic_syntax" class="heading-link"><span class="icon icon-link fas fa-link "></span></a></h3>
+<a id="examples" name="//apple_ref/cpp/Section/Examples" class="dashAnchor"></a><h2 class="showhide_heading" id="Examples"> Examples<a href="PluginPreference.html#Examples" class="heading-link"><span class="icon icon-link fas fa-link "></span></a></h2>
+<h3 class="showhide_heading" id="Basic_syntax"> Basic syntax<a href="PluginPreference.html#Basic_syntax" class="heading-link"><span class="icon icon-link fas fa-link "></span></a></h3>
 <pre class="codelisting" data-theme="off" data-syntax="tiki" data-wrap="1" dir="ltr" style="white-space:pre-wrap; overflow-wrap: break-word; word-wrap: break-word;" id="codebox1">{preference name="feature_webdav" currentpage="My-Wiki-Page"}</pre>
 <p>Once the page is saved, the preference appears there as it would appear in the control panel, so it can be modified.
 </p>
 <div style="display: inline-block; display:block; margin-left:auto; margin-right:auto; max-width: 100%; width:402px;">	<a href="http://doc.tiki.org/display1675" class="internal" data-box="box[g]" target="_blank" title="Click to expand">		<img width="400" style="float:left;border:1px solid darkgray;" alt="Plugin Preference basic syntax" class="regImage pluginImg img-fluid lozad" data-src="display1675" title="Click to expand">	</a>	<div class="mini" style="max-width: 100%; width:400px;">		<div class="thumbcaption">Click to expand		</div>	</div></div>
 <p>
 </p>
-<h3 class="showhide_heading" id="Some_preferences"> Some preferences<a href="Plugin-Preference.html#Some_preferences" class="heading-link"><span class="icon icon-link fas fa-link "></span></a></h3>
+<h3 class="showhide_heading" id="Some_preferences"> Some preferences<a href="PluginPreference.html#Some_preferences" class="heading-link"><span class="icon icon-link fas fa-link "></span></a></h3>
 <p>Similarly for a single preference, you can add several preferences, this time separated by commas, as shown in the settings table.
 </p>
 <pre class="codelisting" data-theme="off" data-syntax="tiki" data-wrap="1" dir="ltr" style="white-space:pre-wrap; overflow-wrap: break-word; word-wrap: break-word;" id="codebox2">{preference name="feature_webdav,fgal_elfinder_feature,feature_docs,fgal_pdfjs_feature,h5p_save_content_frequency" currentpage="My-Wiki-Page"}</pre>
@@ -411,19 +411,19 @@ textarea, .CodeMirror {
 <div style="display: inline-block; display:block; margin-left:auto; margin-right:auto; max-width: 100%; width:402px;">	<a href="http://doc.tiki.org/display1674" class="internal" data-box="box[g]" target="_blank" title="Click to expand">		<img width="400" style="float:left;border:1px solid darkgray;" alt="Plugin Preference some preferences" class="regImage pluginImg img-fluid lozad" data-src="display1674" title="Click to expand">	</a>	<div class="mini" style="max-width: 100%; width:400px;">		<div class="thumbcaption">Click to expand		</div>	</div></div>
 <p>
 </p>
-<a id="security" name="//apple_ref/cpp/Section/Security" class="dashAnchor"></a><h2 class="showhide_heading" id="Security"> Security<a href="Plugin-Preference.html#Security" class="heading-link"><span class="icon icon-link fas fa-link "></span></a></h2>
-<h3 class="showhide_heading" id="Users"> Users<a href="Plugin-Preference.html#Users" class="heading-link"><span class="icon icon-link fas fa-link "></span></a></h3>
+<a id="security" name="//apple_ref/cpp/Section/Security" class="dashAnchor"></a><h2 class="showhide_heading" id="Security"> Security<a href="PluginPreference.html#Security" class="heading-link"><span class="icon icon-link fas fa-link "></span></a></h2>
+<h3 class="showhide_heading" id="Users"> Users<a href="PluginPreference.html#Users" class="heading-link"><span class="icon icon-link fas fa-link "></span></a></h3>
 <p>This plugin is not displayed to anonymous users. For other users, those in the <strong>Registered</strong> group for example, if they have permission to edit the wiki page on which the plugin is embedded, they can change the plugin's parameter values and must wait for admin approval.
 <br>After changing the values of the <code>name</code> parameter and registering the wiki page (here named <em>My admin panel</em>) by a non-administrator, he will see this:
 </p>
 <div style="display: inline-block; display:block; margin-left:auto; margin-right:auto; max-width: 100%; width:402px;">	<a href="http://doc.tiki.org/display1676" class="internal" data-box="box[g]" target="_blank" title="Click to expand">		<img width="400" style="float:left;border:1px solid darkgray;" alt="Plugin Preference validation" class="regImage pluginImg img-fluid lozad" data-src="display1676" title="Click to expand">	</a>	<div class="mini" style="max-width: 100%; width:400px;">		<div class="thumbcaption">Click to expand		</div>	</div></div>
 <p>
 </p>
-<h3 class="showhide_heading" id="Wiki_page"> Wiki page<a href="Plugin-Preference.html#Wiki_page" class="heading-link"><span class="icon icon-link fas fa-link "></span></a></h3>
+<h3 class="showhide_heading" id="Wiki_page"> Wiki page<a href="PluginPreference.html#Wiki_page" class="heading-link"><span class="icon icon-link fas fa-link "></span></a></h3>
 <p>When the plugin loads, it makes sure that the current page matches the current wiki page's parameter value, which prevents someone from using an approved plugin on another page with different permissions.
 </p>
-<a id="aliases" name="//apple_ref/cpp/Section/Aliases" class="dashAnchor"></a><h2 class="showhide_heading" id="Aliases"> Aliases<a href="Plugin-Preference.html#Aliases" class="heading-link"><span class="icon icon-link fas fa-link "></span></a></h2>
-<ul><li> <a href="Plugin-Preference.html" class="wiki wiki_page alias">Plugin Preference</a></li></ul>
+<a id="aliases" name="//apple_ref/cpp/Section/Aliases" class="dashAnchor"></a><h2 class="showhide_heading" id="Aliases"> Aliases<a href="PluginPreference.html#Aliases" class="heading-link"><span class="icon icon-link fas fa-link "></span></a></h2>
+<ul><li> <a href="PluginPreference.html" class="wiki wiki_page alias">Plugin Preference</a></li></ul>
 
 					</div>
 
@@ -472,6 +472,22 @@ textarea, .CodeMirror {
 				<div id="mod-related_videopagebottom1">
 										
 <div id="related_video" style="display:block;">
+<h4 class="showhide_heading" id="Related_Video_"> Related Video "Features and Options in Tiki"<a href="PluginPreference.html#Related_Video_" class="heading-link"><span class="icon icon-link fas fa-link "></span></a></h4>
+<p><span class="videoLevel-Beginner">Beginner</span> <span class="videoRole">| Administrator</span>
+<a class="wiki external" target="_blank" href="https://tiki.org/Bsfez" rel="external">Bernard Sfez / Tiki Specialist</a> - Tue 11 Dec, 2018<br>
+<a class="btn btn-link create_item_button" target="" data-role="button" data-inline="true" title="Other videos" href="http://doc.tiki.org/Video-Tutorials"><span class="icon icon-film fas fa-film "></span> Other videos</a><br>
+<iframe src="http://www.youtube-nocookie.com/embed/M4BnpIR04QM?" frameborder="0" width="560" height="315" allowfullscreen=""></iframe>
+</p>
+<hr>
+<p>On this #tikiexpresstutorial, using #tiki19 I’ll show you:
+<br>How to enable a feature from the Control Panels
+<br>How to enable a Global Feature from the features panel
+<br>How to enable an Interface feature
+<br>A quick overview of the Programmer features
+<br>And where to look for feature options
+</p>
+
+<p>Visit my <a class="wiki external" target="_blank" href="https://bsfez.com" rel="external">website</a> or <a class="wiki external" target="_blank" href="https://www.youtube.com/channel/UCgM1YJeUCaszrTsuZub0Qpg" rel="external"> my youtube channel</a> to see more Tiki express tutorial and <a class="wiki external" target="_blank" href="https://www.youtube.com/channel/UCgM1YJeUCaszrTsuZub0Qpg?sub_confirmation=1" rel="external">Subscribe to my youtube channel</a>.</p>
 </div>
 
 													
@@ -608,7 +624,7 @@ textarea, .CodeMirror {
 <!--//--><![CDATA[//><!--
 // js 0 
 tiki_cookie_jar=new Object();
-setCookieBrowser('javascript_enabled', '1621939217000', '', new Date(1621939217000));
+setCookieBrowser('javascript_enabled', '1622281104000', '', new Date(1622281104000));
 $.lang = 'en';
 
 // JS Object to hold prefs for jq

@@ -11,9 +11,9 @@
     <key>dashIndexFilePath</key>
     <string>doc.tiki.org/All-the-Documentation.html</string>
     <key>DashDocSetFallbackURL</key>
-    <string>doc.tiki.org</string>
+    <string>https://</string>
     <key>DashDocSetPlayURL</key>
-    <string></string>
+    <string>https://demo.tiki.org/</string>
     <key>isJavaScriptEnabled</key>
     <true/>
     <key>isDashDocset</key>

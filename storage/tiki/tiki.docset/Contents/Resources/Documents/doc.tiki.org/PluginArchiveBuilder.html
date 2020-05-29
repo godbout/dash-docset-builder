@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" id="page_3888">
+<html lang="en" id="page_3888"><!-- Online page at http://doc.tiki.org/PluginArchiveBuilder -->
 <head>
 	
 <!--Latest IE Compatibility-->
@@ -11,7 +11,7 @@
 <meta content="http://doc.tiki.org/" name="twitter:domain"> 
 
 
-			<link rel="canonical" href="Plugin-ArchiveBuilder.html">
+			<link rel="canonical" href="PluginArchiveBuilder.html">
 		<meta content="http://doc.tiki.org/PluginArchiveBuilder" property="og:url">
 	
 	<meta name="keywords" content="documentation, tiki, tikiwiki, document, help, install, wiki syntax trackers plugin pdf archive zip webkit  ">
@@ -369,7 +369,7 @@ textarea, .CodeMirror {
 
 		
 		<div id="page-data" class="clearfix">
-										<a name="//apple_ref/cpp/Section/Top" class="dashAnchor"></a><h1 class="showhide_heading" id="Plugin_Archive_Builder"> Plugin Archive Builder<a href="Plugin-ArchiveBuilder.html#Plugin_Archive_Builder" class="heading-link"><span class="icon icon-link fas fa-link "></span></a></h1>
+										<a name="//apple_ref/cpp/Section/Top" class="dashAnchor"></a><h1 class="showhide_heading" id="Plugin_Archive_Builder"> Plugin Archive Builder<a href="PluginArchiveBuilder.html#Plugin_Archive_Builder" class="heading-link"><span class="icon icon-link fas fa-link "></span></a></h1>
 <p>
 <br>Wikis are a great central repository for everyone to access the information. However, when used within the boundaries of an organization, it may be hard to provide only a portion of the information to an external group of people. Although it may be possible through assigning permissions, it still requires to grant them access to the wiki, provide them with accounts and walk them through the process of finding what they need. Just sending them a zip with the information they need might just be easier. This <a href="http://doc.tiki.org/wiki%20plugin" title="" class="wiki wiki_page">wiki plugin</a>, introduced in <a href="http://doc.tiki.org/Tiki5" title="Tiki5" class="wiki wiki_page">Tiki5</a>, does just that. Through arguments, it allows to define the content of an archive. Once rendered, it displays a <strong>Download archive</strong> button to generate the archive on the fly.
 </p>
@@ -383,7 +383,7 @@ textarea, .CodeMirror {
 
 <p>
 </p>
-<a id="requirements" name="//apple_ref/cpp/Section/Requirements" class="dashAnchor"></a><h2 class="showhide_heading" id="Requirements"> Requirements<a href="Plugin-ArchiveBuilder.html#Requirements" class="heading-link"><span class="icon icon-link fas fa-link "></span></a></h2>
+<a id="requirements" name="//apple_ref/cpp/Section/Requirements" class="dashAnchor"></a><h2 class="showhide_heading" id="Requirements"> Requirements<a href="PluginArchiveBuilder.html#Requirements" class="heading-link"><span class="icon icon-link fas fa-link "></span></a></h2>
 <p>The print as PDF mechanism uses the standard wiki print feature. However, the PDF generation is done through external HTML to PDF tools. These must be enabled and configured. Here are the alternatives. Chose one:
 </p>
 <ol><li> <a href="http://doc.tiki.org/wkhtmltopdf" title="wkhtmltopdf" class="wiki wiki_page">Webkit wkhtmltopdf</a>
@@ -408,13 +408,13 @@ textarea, .CodeMirror {
 </p>
 
 Moreover, some servers may not allow shell execution, which is required. This can be worked around by installing it on a different server and accessing it remotely.</div></div>
-<a id="access-rights" name="//apple_ref/cpp/Section/Access%20rights" class="dashAnchor"></a><h2 class="showhide_heading" id="Access_rights">Access rights<a href="Plugin-ArchiveBuilder.html#Access_rights" class="heading-link"><span class="icon icon-link fas fa-link "></span></a></h2>
+<a id="access-rights" name="//apple_ref/cpp/Section/Access%20rights" class="dashAnchor"></a><h2 class="showhide_heading" id="Access_rights">Access rights<a href="PluginArchiveBuilder.html#Access_rights" class="heading-link"><span class="icon icon-link fas fa-link "></span></a></h2>
 <p>Because the content of the page is accessed through a URL, access rights must be managed correctly. If permissions protect the page from being visible to anonymous or plugins render it differently for them, an additional feature must be enabled.
 </p>
 
 <p>The <a href="http://doc.tiki.org/Token-Access" title="Token Access" class="wiki wiki_page">Token Access</a> feature allows the archive builder to generate tokens bound to a specific URL. The PDF generator will then include the token as part of the URL. Doing so will grant the same groups to the PDF generator as the groups used by the archive requester. By default, the token will be available for 30 seconds.
 </p>
-<a id="parameters" name="//apple_ref/cpp/Section/Parameters" class="dashAnchor"></a><h2 class="showhide_heading" id="Parameters"> Parameters<a href="Plugin-ArchiveBuilder.html#Parameters" class="heading-link"><span class="icon icon-link fas fa-link "></span></a></h2>
+<a id="parameters" name="//apple_ref/cpp/Section/Parameters" class="dashAnchor"></a><h2 class="showhide_heading" id="Parameters"> Parameters<a href="PluginArchiveBuilder.html#Parameters" class="heading-link"><span class="icon icon-link fas fa-link "></span></a></h2>
 <em>Introduced in Tiki 5.</em><em> Required parameters are in</em> <strong><code>bold</code></strong>.<br><em>Preferences required:</em> wikiplugin_archivebuilder<br><div class="table-responsive"><table class="table table-striped table-hover">
 	<tr class="heading">
 		<th class="heading">Parameters
@@ -439,7 +439,7 @@ Moreover, some servers may not allow shell execution, which is required. This ca
 	</tr></table></div>
 <p>
 </p>
-<a id="body" name="//apple_ref/cpp/Section/Body" class="dashAnchor"></a><h2 class="showhide_heading" id="Body"> Body<a href="Plugin-ArchiveBuilder.html#Body" class="heading-link"><span class="icon icon-link fas fa-link "></span></a></h2>
+<a id="body" name="//apple_ref/cpp/Section/Body" class="dashAnchor"></a><h2 class="showhide_heading" id="Body"> Body<a href="PluginArchiveBuilder.html#Body" class="heading-link"><span class="icon icon-link fas fa-link "></span></a></h2>
 <p>The body of the plugin simply contains a list of rules to determine which file to create and where to take the content from. Each line is independent. Arguments are separated by colons. The first argument indicates how to treat the rest of the line. The following tokens may be used:
 </p>
 <ul><li> <strong>page-as-pdf</strong> to take render the content of a page as a pdf.
@@ -451,7 +451,7 @@ Moreover, some servers may not allow shell execution, which is required. This ca
 </li></ul></li><li> <strong>tracker-files</strong> to collect all files, from the file gallery, on a tracker item and store them in folders.
 <ul><li> First argument is the name of the base folder in which files will be added, groupped in directories with the name of the field
 </li><li> Second argument is the ID of the tracker item.
-</li></ul></li></ul><a id="example" name="//apple_ref/cpp/Section/Example" class="dashAnchor"></a><h2 class="showhide_heading" id="Example">Example<a href="Plugin-ArchiveBuilder.html#Example" class="heading-link"><span class="icon icon-link fas fa-link "></span></a></h2>
+</li></ul></li></ul><a id="example" name="//apple_ref/cpp/Section/Example" class="dashAnchor"></a><h2 class="showhide_heading" id="Example">Example<a href="PluginArchiveBuilder.html#Example" class="heading-link"><span class="icon icon-link fas fa-link "></span></a></h2>
 <div class="codecaption">Sample usage</div><pre class="codelisting" data-theme="off" data-syntax="tiki" data-wrap="1" dir="ltr" style="white-space:pre-wrap; overflow-wrap: break-word; word-wrap: break-word;" id="codebox1">{ARCHIVEBUILDER(name=DF120-Summary.zip)}
 page-as-pdf:DF120/Vision.pdf:VisionDF120
 page-as-pdf:DF120/Team.pdf:TeamDF120
@@ -468,7 +468,7 @@ tracker-attachments:DF120/Requirements/:2232
 </li></ul></li><li> Vision.pdf
 </li><li> Team.pdf
 </li></ul></li><li> manifest.txt <em>(automatically generated, containing the list of files)</em>
-</li></ul></li></ul><h3 class="showhide_heading" id="Sample_webservice"> Sample webservice<a href="Plugin-ArchiveBuilder.html#Sample_webservice" class="heading-link"><span class="icon icon-link fas fa-link "></span></a></h3>
+</li></ul></li></ul><h3 class="showhide_heading" id="Sample_webservice"> Sample webservice<a href="PluginArchiveBuilder.html#Sample_webservice" class="heading-link"><span class="icon icon-link fas fa-link "></span></a></h3>
 <div class="codecaption">generate_pdf.php</div><pre class="codelisting" data-theme="off" data-syntax="php" data-wrap="1" dir="ltr" style="white-space:pre-wrap; overflow-wrap: break-word; word-wrap: break-word;" id="codebox2">&lt;?php
 
 $query = $_SERVER['QUERY_STRING'];
@@ -488,10 +488,10 @@ if( ! empty( $query ) ) {
 </li><li> <a href="http://doc.tiki.org/mPDF" title="mPDF" class="wiki wiki_page">mPDF</a> create PDFs from Tiki content (advanced library that works even on shared hosting). Recommended for Tiki18+
 </li><li> <a href="PluginPDF.html" title="PluginPDF" class="wiki wiki_page">PluginPDF</a> alter default settings of mPDF per wiki page
 </li><li> <a href="PluginPDFPageBreak.html" title="PluginPDFPageBreak" class="wiki wiki_page">PluginPDFPageBreak</a> add a page break for PDFs created with mPDF
-</li><li> <a href="PluginMedia.html" title="Add a media player to a page" class="wiki wiki_page">PluginMediaPlayer</a> display PDF file from file gallery
+</li><li> <a href="PluginMediaPlayer.html" title="Add a media player to a page" class="wiki wiki_page">PluginMediaPlayer</a> display PDF file from file gallery
 </li><li> <a href="http://doc.tiki.org/PDF.js-viewer" title="PDF.js viewer" class="wiki wiki_page">PDF.js viewer</a> PDF.js from Mozilla
 </li><li> <a href="http://doc.tiki.org/ViewerJS" title="ViewerJS" class="wiki wiki_page">ViewerJS</a>: a script to view PDFs and ODFs, which bundles WebODF
-</li><li> <a href="Plugin-ArchiveBuilder.html" title="Define an archive that can be downloaded" class="wiki wiki_page">PluginArchiveBuilder</a> Generate a zip file, including PDFs from wiki pages
+</li><li> <a href="PluginArchiveBuilder.html" title="Define an archive that can be downloaded" class="wiki wiki_page">PluginArchiveBuilder</a> Generate a zip file, including PDFs from wiki pages
 </li><li> <a href="http://doc.tiki.org/WeasyPrint" title="WeasyPrint" class="wiki wiki_page">WeasyPrint</a> A PDF generation option in Python
 </li><li> <a href="http://doc.tiki.org/wkhtmltopdf" title="wkhtmltopdf" class="wiki wiki_page">wkhtmltopdf</a> create PDFs from Tiki content (needs root installation)
 </li><li> <a href="http://doc.tiki.org/dompdf" title="dompdf" class="wiki wiki_page">dompdf</a> once used for PDF print of slideshows
@@ -499,7 +499,7 @@ if( ! empty( $query ) ) {
 </p>
 <div class="titlebar">Aliases</div>
 
-<p><a href="http://doc.tiki.org/ArchiveBuilder" class="wiki wiki_page alias">ArchiveBuilder</a> | <a href="http://doc.tiki.org/Archive-Builder" class="wiki wiki_page alias">Archive Builder</a> | <a href="Plugin-Archive-Builder.html" class="wiki wiki_page alias">Plugin Archive Builder</a> | <a href="Plugin-ArchiveBuilder.html" class="wiki wiki_page alias">Plugin ArchiveBuilder</a>
+<p><a href="http://doc.tiki.org/ArchiveBuilder" class="wiki wiki_page alias">ArchiveBuilder</a> | <a href="http://doc.tiki.org/Archive-Builder" class="wiki wiki_page alias">Archive Builder</a> | <a href="PluginArchiveBuilder.html" class="wiki wiki_page alias">Plugin Archive Builder</a> | <a href="PluginArchiveBuilder.html" class="wiki wiki_page alias">Plugin ArchiveBuilder</a>
 </p>
 
 					</div>
@@ -549,6 +549,22 @@ if( ! empty( $query ) ) {
 				<div id="mod-related_videopagebottom1">
 										
 <div id="related_video" style="display:block;">
+<h4 class="showhide_heading" id="Related_Video_"> Related Video "Features and Options in Tiki"<a href="PluginArchiveBuilder.html#Related_Video_" class="heading-link"><span class="icon icon-link fas fa-link "></span></a></h4>
+<p><span class="videoLevel-Beginner">Beginner</span> <span class="videoRole">| Administrator</span>
+<a class="wiki external" target="_blank" href="https://tiki.org/Bsfez" rel="external">Bernard Sfez / Tiki Specialist</a> - Tue 11 Dec, 2018<br>
+<a class="btn btn-link create_item_button" target="" data-role="button" data-inline="true" title="Other videos" href="http://doc.tiki.org/Video-Tutorials"><span class="icon icon-film fas fa-film "></span> Other videos</a><br>
+<iframe src="http://www.youtube-nocookie.com/embed/M4BnpIR04QM?" frameborder="0" width="560" height="315" allowfullscreen=""></iframe>
+</p>
+<hr>
+<p>On this #tikiexpresstutorial, using #tiki19 I’ll show you:
+<br>How to enable a feature from the Control Panels
+<br>How to enable a Global Feature from the features panel
+<br>How to enable an Interface feature
+<br>A quick overview of the Programmer features
+<br>And where to look for feature options
+</p>
+
+<p>Visit my <a class="wiki external" target="_blank" href="https://bsfez.com" rel="external">website</a> or <a class="wiki external" target="_blank" href="https://www.youtube.com/channel/UCgM1YJeUCaszrTsuZub0Qpg" rel="external"> my youtube channel</a> to see more Tiki express tutorial and <a class="wiki external" target="_blank" href="https://www.youtube.com/channel/UCgM1YJeUCaszrTsuZub0Qpg?sub_confirmation=1" rel="external">Subscribe to my youtube channel</a>.</p>
 </div>
 
 													
@@ -683,7 +699,7 @@ if( ! empty( $query ) ) {
 <!--//--><![CDATA[//><!--
 // js 0 
 tiki_cookie_jar=new Object();
-setCookieBrowser('javascript_enabled', '1621938827000', '', new Date(1621938827000));
+setCookieBrowser('javascript_enabled', '1622280872000', '', new Date(1622280872000));
 $.lang = 'en';
 
 // JS Object to hold prefs for jq

@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" id="page_4866">
+<html lang="en" id="page_4866"><!-- Online page at http://doc.tiki.org/PluginList-pagination-or-list-control-block -->
 <head>
 	
 <!--Latest IE Compatibility-->
@@ -268,6 +268,20 @@ textarea, .CodeMirror {
 
 @media (min-width: 1200px) { .container { width:1240px; max-width:1240px;} }
 .affix {top:44px;}
+
+			.lozadFade {
+				animation-name: lozadFade;
+				animation-duration: 1s;
+			}
+			@keyframes lozadFade {
+				from {
+					opacity: 0;
+				}
+				to {
+					opacity: 1;
+				}
+			}
+		
 -->
 </style>
 	<style type="text/css">#sitelogo img {margin-top: 0; position: relative; top: -12px;}</style>
@@ -366,7 +380,7 @@ textarea, .CodeMirror {
 <p>The LIST plugin will display 50 results by default. Depending on the output configuration, this may take some time to render, so you might want to decrease the visible amount of results to improve performance by using this plugin-like control block in the LIST body content.
 </p>
 
-<a name="//apple_ref/cpp/Section/Top" class="dashAnchor"></a><h1 class="showhide_heading" id="Control_the_maximum_number_of_items"> Control the maximum number of items<a href="PluginList-pagination-or-list-control-block.html#Control_the_maximum_number_of_items" class="heading-link"><span class="icon icon-link fas fa-link "></span></a></h1>
+<h1 class="showhide_heading" id="Control_the_maximum_number_of_items"> Control the maximum number of items<a href="PluginList-pagination-or-list-control-block.html#Control_the_maximum_number_of_items" class="heading-link"><span class="icon icon-link fas fa-link "></span></a></h1>
 <p>
 </p>
 <div class="codecaption">Up to Tiki 10 (also still works in Tiki 11.0 SVN, as of 31 May 2013) and in Tiki12.3 as of 28 Dec 2014</div><pre class="codelisting" data-theme="off" data-syntax="tiki" data-wrap="1" dir="ltr" style="white-space:pre-wrap; overflow-wrap: break-word; word-wrap: break-word;" id="codebox1">{list max="10"}</pre>
@@ -375,7 +389,7 @@ textarea, .CodeMirror {
 <div class="codecaption">Tiki 11 and above</div><pre class="codelisting" data-theme="off" data-syntax="tiki" data-wrap="1" dir="ltr" style="white-space:pre-wrap; overflow-wrap: break-word; word-wrap: break-word;" id="codebox2">{pagination max="10"}</pre>
 <p>
 </p>
-<a name="//apple_ref/cpp/Section/Top" class="dashAnchor"></a><h1 class="showhide_heading" id="Pagination_with_inbuilt_templates"> Pagination with inbuilt templates<a href="PluginList-pagination-or-list-control-block.html#Pagination_with_inbuilt_templates" class="heading-link"><span class="icon icon-link fas fa-link "></span></a></h1>
+<h1 class="showhide_heading" id="Pagination_with_inbuilt_templates"> Pagination with inbuilt templates<a href="PluginList-pagination-or-list-control-block.html#Pagination_with_inbuilt_templates" class="heading-link"><span class="icon icon-link fas fa-link "></span></a></h1>
 <p>
 </p>
 In order to actually see pagination (and not just a limit on the number of displayed items), you can use the parameter pagination="y" like so: <pre class="codelisting" data-theme="off" data-syntax="tiki" data-wrap="1" dir="ltr" style="white-space:pre-wrap; overflow-wrap: break-word; word-wrap: break-word;" id="codebox3">{output template="table" pagination="y"}</pre>
@@ -391,25 +405,32 @@ In order to actually see pagination (and not just a limit on the number of displ
 <br>Note that this setting will take precedence over any maxRecords setting which is set in the query string, and that maxRecords in the query string will only apply if offset is set anyway, while the above setting will work always.
 </p>
 
+<a id="issues-with-list-plugins-in-module" name="//apple_ref/cpp/Section/Issues%20with%20list%20plugins%20in%C2%A0module" class="dashAnchor"></a><h2 class="showhide_heading" id="Issues_with_list_plugins_in_module"> Issues with list plugins in module<a href="PluginList-pagination-or-list-control-block.html#Issues_with_list_plugins_in_module" class="heading-link"><span class="icon icon-link fas fa-link "></span></a></h2>
+<p>Sometimes a list module in a custom module will trigger errors like this:
+<br><img width="1764" height="266" alt="Screenshot 2020 05 26 At 17.07.05" class="regImage pluginImg1692 img-fluid lozad" data-src="dl1692?display">
+<br>This is due to the default sort order for the list plugin conflicting with a sort order on other lists (like trackers for instance).
+<br>To fix it add something like this:
+</p>
+<pre class="codelisting" data-theme="off" data-syntax="tiki" data-wrap="1" dir="ltr" style="white-space:pre-wrap; overflow-wrap: break-word; word-wrap: break-word;" id="codebox4">{pagination max="100" offset_arg="offset_banner" sort_arg="sort_banner"}</pre>
 <p>
 </p>
-<a name="//apple_ref/cpp/Section/Top" class="dashAnchor"></a><h1 class="showhide_heading" id="Pagination_in_smarty_templates"> Pagination in smarty templates<a href="PluginList-pagination-or-list-control-block.html#Pagination_in_smarty_templates" class="heading-link"><span class="icon icon-link fas fa-link "></span></a></h1>
+<h1 class="showhide_heading" id="Pagination_in_smarty_templates"> Pagination in smarty templates<a href="PluginList-pagination-or-list-control-block.html#Pagination_in_smarty_templates" class="heading-link"><span class="icon icon-link fas fa-link "></span></a></h1>
 <p>
 <br>You can use advanced pagination not using pagination="y" but instead directly creating the pagination within an output Smarty template which contains the following
 </p>
-<pre class="codelisting" data-theme="off" data-syntax="tiki" data-wrap="1" dir="ltr" style="white-space:pre-wrap; overflow-wrap: break-word; word-wrap: break-word;" id="codebox4">{pagination_links resultset=$results}{/pagination_links}</pre>
+<pre class="codelisting" data-theme="off" data-syntax="tiki" data-wrap="1" dir="ltr" style="white-space:pre-wrap; overflow-wrap: break-word; word-wrap: break-word;" id="codebox5">{pagination_links resultset=$results}{/pagination_links}</pre>
 <p>in the template.
 </p>
 
 <p>Note that you need to combine {pagination} block in the LIST plugin and {pagination_links} in the smarty template with matching parameters.
 </p>
-<div class="codecaption">LIST plugin</div><pre class="codelisting" data-theme="off" data-wrap="1" dir="ltr" style="white-space:pre-wrap; overflow-wrap: break-word; word-wrap: break-word;" id="codebox5">{LIST()}
+<div class="codecaption">LIST plugin</div><pre class="codelisting" data-theme="off" data-wrap="1" dir="ltr" style="white-space:pre-wrap; overflow-wrap: break-word; word-wrap: break-word;" id="codebox6">{LIST()}
 {filter type="trackeritem"}
 {filter field="tracker_id" content="42" }
 {pagination max="4" offset_arg="liste1"}
 {output  template="list-of-meetings.tpl"}
 {LIST}</pre>
-<div class="codecaption">smarty template list-of-meetings.tpl</div><pre class="codelisting" data-theme="off" data-wrap="1" dir="ltr" style="white-space:pre-wrap; overflow-wrap: break-word; word-wrap: break-word;" id="codebox6">{foreach from=$results item=result}
+<div class="codecaption">smarty template list-of-meetings.tpl</div><pre class="codelisting" data-theme="off" data-wrap="1" dir="ltr" style="white-space:pre-wrap; overflow-wrap: break-word; word-wrap: break-word;" id="codebox7">{foreach from=$results item=result}
 &lt;h2&gt; &lt;a href="{$result.url}" &gt;{$result.tracker_field_meetingTitle}&lt;/a&gt;&lt;/h2&gt;
 &lt;div class="author_info"&gt;&lt;em&gt;{$result.date} - {$result.tracker_field_meetingAuthor_text}&lt;/em&gt;&lt;/div&gt;
 &lt;div class="well"&gt;
@@ -431,9 +452,9 @@ In order to actually see pagination (and not just a limit on the number of displ
 <li class="toclevel"><div><a href="PluginList-advanced-output-control-block.html" class="link" title="">PluginList advanced output control block</a></div>	</li>
 <li class="toclevel"><div><a href="PluginList-aggregate-control-block.html" class="link" title="">PluginList aggregate control block</a></div>	</li>
 <li class="toclevel"><div><a href="PluginList-overview-about-control-blocks-parameters-and-values.html" class="link" title="">PluginList overview about control blocks parameters and values</a></div>	</li>
-<li class="toclevel"><div><a href="LIST---Troubleshooting-The-List-Plugin.html" class="link" title="">LIST - Troubleshooting The List Plugin</a></div>	</li>
-<li class="toclevel"><div><a href="PluginListGUI.html" class="link" title="">LIST - Graphical User Interface</a></div>	</li>
-<li class="toclevel"><div><a href="LIST---Hacks-and-Fun.html" class="link" title="">LIST - Hacks and Fun</a></div>	</li>
+<li class="toclevel"><div><a href="PluginList---Troubleshooting-The-List-Plugin.html" class="link" title="">PluginList - Troubleshooting The List Plugin</a></div>	</li>
+<li class="toclevel"><div><a href="PluginList---Graphical-User-Interface.html" class="link" title="">PluginList - Graphical User Interface</a></div>	</li>
+<li class="toclevel"><div><a href="PluginList---Hacks-and-Fun.html" class="link" title="">PluginList - Hacks and Fun</a></div>	</li>
 </ul>
 
 
@@ -449,7 +470,7 @@ In order to actually see pagination (and not just a limit on the number of displ
 					<div class="wiki-authors">
 <hr>
 	Created by <a title="User Information" href="http://doc.tiki.org/user10155" class="userlink ajaxtips" data-ajaxtips="tiki-user-info?username=eromneg">Geoff Brickell</a>.
-	Last Modification: Monday 03 February, 2020 18:43:25 GMT-0000 by <a title="User Information" href="http://doc.tiki.org/user10241" class="userlink ajaxtips" data-ajaxtips="tiki-user-info?username=Jyhem">Jean-Marc Libs</a>.
+	Last Modification: Tuesday 26 May, 2020 16:22:26 GMT-0000 by <a title="User Information" href="http://doc.tiki.org/user8515" class="userlink ajaxtips geolocated" data-ajaxtips="tiki-user-info?username=jonnybradley" data-geo-lat="51.409913972115" data-geo-lon="-0.2288244020979" data-geo-zoom="7">Jonny Bradley</a>.
 	
 	</div>		
 		
@@ -485,6 +506,22 @@ In order to actually see pagination (and not just a limit on the number of displ
 				<div id="mod-related_videopagebottom1">
 										
 <div id="related_video" style="display:block;">
+<h4 class="showhide_heading" id="Related_Video_"> Related Video "Features and Options in Tiki"<a href="PluginList-pagination-or-list-control-block.html#Related_Video_" class="heading-link"><span class="icon icon-link fas fa-link "></span></a></h4>
+<p><span class="videoLevel-Beginner">Beginner</span> <span class="videoRole">| Administrator</span>
+<a class="wiki external" target="_blank" href="https://tiki.org/Bsfez" rel="external">Bernard Sfez / Tiki Specialist</a> - Tue 11 Dec, 2018<br>
+<a class="btn btn-link create_item_button" target="" data-role="button" data-inline="true" title="Other videos" href="http://doc.tiki.org/Video-Tutorials"><span class="icon icon-film fas fa-film "></span> Other videos</a><br>
+<iframe src="http://www.youtube-nocookie.com/embed/M4BnpIR04QM?" frameborder="0" width="560" height="315" allowfullscreen=""></iframe>
+</p>
+<hr>
+<p>On this #tikiexpresstutorial, using #tiki19 I’ll show you:
+<br>How to enable a feature from the Control Panels
+<br>How to enable a Global Feature from the features panel
+<br>How to enable an Interface feature
+<br>A quick overview of the Programmer features
+<br>And where to look for feature options
+</p>
+
+<p>Visit my <a class="wiki external" target="_blank" href="https://bsfez.com" rel="external">website</a> or <a class="wiki external" target="_blank" href="https://www.youtube.com/channel/UCgM1YJeUCaszrTsuZub0Qpg" rel="external"> my youtube channel</a> to see more Tiki express tutorial and <a class="wiki external" target="_blank" href="https://www.youtube.com/channel/UCgM1YJeUCaszrTsuZub0Qpg?sub_confirmation=1" rel="external">Subscribe to my youtube channel</a>.</p>
 </div>
 
 													
@@ -615,12 +652,13 @@ In order to actually see pagination (and not just a limit on the number of displ
 <script type="text/javascript" src="lang/en/language.js"></script>
 <script type="text/javascript" src="lib/captcha/captchalib.js"></script>
 
+<script type="text/javascript" src="vendor/npm-asset/lozad/dist/lozad.js"></script>
 	
 <script type="text/javascript">
 <!--//--><![CDATA[//><!--
 // js 0 
 tiki_cookie_jar=new Object();
-setCookieBrowser('javascript_enabled', '1621938886000', '', new Date(1621938886000));
+setCookieBrowser('javascript_enabled', '1622280697000', '', new Date(1622280697000));
 $.lang = 'en';
 
 // JS Object to hold prefs for jq
@@ -754,6 +792,16 @@ $(document).ready(function(){
 $("article").fitVids();
 $("time.timeago").timeago(); jQuery.timeago.settings.allowFuture = true;
 $(".table-responsive").doubleScroll({resetOnWindowResize: true});
+
+			lozad('.lozad', {
+				load: function(el) {
+					el.src = el.dataset.src;
+					el.onload = function() {
+						el.classList.add('lozadFade');
+					}
+				}
+			}).observe();
+		
 $(".convert-mailto").removeClass("convert-mailto").each(function () {
 				var address = $(this).data("encode-name") + "@" + $(this).data("encode-domain");
 				$(this).attr("href", "mailto:" + address).text(address);
