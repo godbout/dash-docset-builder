@@ -49,6 +49,7 @@ class Tiki extends BaseDocset
             '\.png',
             '\.svg',
             '\.webmanifest',
+            '/display',
             '/LIST',
             '/Module-',
             '/Plugin[^-]',
