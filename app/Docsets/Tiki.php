@@ -29,6 +29,7 @@ class Tiki extends BaseDocset
             '\?sort_mode',
             '/Plugins-',
             'comzone=',
+            'cookietab=',
             'fullscreen=',
             'offset=',
             'todate=',
@@ -55,6 +56,7 @@ class Tiki extends BaseDocset
             '/Plugin[^-]',
             '-Field$',
             'Tiki_org_family',
+            '[^:=]Wiki-Syntax'
         ]);
 
         system(
@@ -88,6 +90,7 @@ class Tiki extends BaseDocset
         $entries = $entries->merge($this->pluginEntries($crawler, $file));
         $entries = $entries->merge($this->moduleEntries($crawler, $file));
         $entries = $entries->merge($this->fieldEntries($crawler, $file));
+        $entries = $entries->merge($this->styleEntries($crawler, $file));
 
         return $entries;
     }
@@ -99,7 +102,7 @@ class Tiki extends BaseDocset
         if (preg_match('/Plugin/i', $file)) {
             $path = $crawler->filter('link[rel=canonical]')->attr('href');
 
-            $crawler->filter('#top h1:first-of-type')->each(function (HtmlPageCrawler $node) use ($entries, $file, $path) {
+            $crawler->filter('#page-data > h1:first-of-type')->each(function (HtmlPageCrawler $node) use ($entries, $file, $path) {
                 $entries->push([
                         'name' => $node->text(),
                         'type' => 'Plugin',
@@ -118,7 +121,7 @@ class Tiki extends BaseDocset
         if (preg_match('/Module/i', $file)) {
             $path = $crawler->filter('link[rel=canonical]')->attr('href');
 
-            $crawler->filter('#top h1:first-of-type')->each(function (HtmlPageCrawler $node) use ($entries, $file, $path) {
+            $crawler->filter('#page-data > h1:first-of-type')->each(function (HtmlPageCrawler $node) use ($entries, $file, $path) {
                 $entries->push([
                         'name' => $node->text(),
                         'type' => 'Module',
@@ -137,10 +140,29 @@ class Tiki extends BaseDocset
         if (preg_match('/Tracker-Field/i', $file)) {
             $path = $crawler->filter('link[rel=canonical]')->attr('href');
 
-            $crawler->filter('#top h1:first-of-type')->each(function (HtmlPageCrawler $node) use ($entries, $file, $path) {
+            $crawler->filter('#page-data > h1:first-of-type')->each(function (HtmlPageCrawler $node) use ($entries, $file, $path) {
                 $entries->push([
                         'name' => $node->text(),
                         'type' => 'Field',
+                        'path' => Str::after($file . '#' . Str::slug($path), $this->innerDirectory()),
+                    ]);
+            });
+        }
+
+        return $entries;
+    }
+
+    protected function styleEntries(HtmlPageCrawler $crawler, string $file)
+    {
+        $entries = collect();
+
+        if (preg_match('/Wiki-Syntax/i', $file)) {
+            $path = $crawler->filter('link[rel=canonical]')->attr('href');
+
+            $crawler->filter('#page-data > h1:first-of-type')->each(function (HtmlPageCrawler $node) use ($entries, $file, $path) {
+                $entries->push([
+                        'name' => $node->text(),
+                        'type' => 'Style',
                         'path' => Str::after($file . '#' . Str::slug($path), $this->innerDirectory()),
                     ]);
             });
@@ -274,7 +296,7 @@ class Tiki extends BaseDocset
 
     protected function insertDashTableOfContents(HtmlPageCrawler $crawler)
     {
-        $crawler->filter('#top h1:first-of-type')
+        $crawler->filter('#page-data > h1:first-of-type')
             ->before('<a name="//apple_ref/cpp/Section/Top" class="dashAnchor"></a>');
 
         $crawler->filter('h2')->each(static function (HtmlPageCrawler $node) {
