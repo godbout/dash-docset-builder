@@ -45,10 +45,8 @@ class LaravelZero extends BaseDocset
                     $entries->push([
                         'name' => trim($node->text()),
                         'type' => 'Guide',
-                        'path' => $this->url() . '/docs/whatever/' . $node->attr('href')
+                        'path' => $this->url() . '/docs/introduction/' . $node->attr('href')
                     ]);
-
-                    var_dump($this->url() . '/docs/whatever/' . $node->attr('href'));
                 }
             });
         }
