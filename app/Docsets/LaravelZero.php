@@ -2,10 +2,11 @@
 
 namespace App\Docsets;
 
-use Illuminate\Support\Str;
 use Illuminate\Support\Collection;
-use Wa72\HtmlPageDom\HtmlPageCrawler;
 use Illuminate\Support\Facades\Storage;
+use Illuminate\Support\Str;
+use Wa72\HtmlPageDom\HtmlPage;
+use Wa72\HtmlPageDom\HtmlPageCrawler;
 
 class LaravelZero extends BaseDocset
 {
@@ -26,25 +27,31 @@ class LaravelZero extends BaseDocset
         $crawler = HtmlPageCrawler::create(Storage::get($file));
 
         $entries = collect();
-        $entries = $entries->merge($this->guideEntries($crawler));
+        $entries = $entries->merge($this->guideEntries($crawler, $file));
         $entries = $entries->merge($this->sectionEntries($crawler, $file));
 
         return $entries;
     }
 
-    protected function guideEntries(HtmlPageCrawler $crawler)
+    protected function guideEntries(HtmlPageCrawler $crawler, string $file)
     {
+        $pageTitle = (new HtmlPage(Storage::get($file)))->getTitle();
+
         $entries = collect();
 
-        $crawler->filter('.lvl0, .lvl1')->each(function (HtmlPageCrawler $node) use ($entries) {
-            if ($this->isRealPage(trim($node->text()))) {
-                $entries->push([
-                    'name' => trim($node->text()),
-                    'type' => 'Guide',
-                    'path' => $this->url() . '/docs/whatever/' . $node->attr('href')
-                ]);
-            }
-        });
+        if ($pageTitle === 'Laravel Zero | Introduction') {
+            $crawler->filter('.lvl0, .lvl1')->each(function (HtmlPageCrawler $node) use ($entries) {
+                if ($this->isRealPage(trim($node->text()))) {
+                    $entries->push([
+                        'name' => trim($node->text()),
+                        'type' => 'Guide',
+                        'path' => $this->url() . '/docs/whatever/' . $node->attr('href')
+                    ]);
+
+                    var_dump($this->url() . '/docs/whatever/' . $node->attr('href'));
+                }
+            });
+        }
 
         return $entries;
     }
