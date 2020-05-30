@@ -66,6 +66,8 @@ final class DocsetPackager
     <true/>
     <key>DashDocSetFamily</key>
     <string>dashtoc</string>
+    <key>DashDocSetDeclaredInStyle</key>
+    <string>originalName</string>
 </dict>
 </plist>
 EOT;
