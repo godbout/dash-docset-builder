@@ -1,0 +1,970 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<link rel="dns-prefetch" href="https://documentator.s3.eu-west-3.amazonaws.com/">
+<link rel="dns-prefetch" href="https://www.googletagmanager.com/">
+<link rel="dns-prefetch" href="../index.html">
+<link rel="dns-prefetch" href="https://documentator.io/">
+<link rel="dns-prefetch" href="https://www.w3.org/">
+<link rel="dns-prefetch" href="https://ploi.io/">
+    <title>Uninstall Nextcloud - Ploi API</title>
+
+    <meta charset=utf-8>
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name=viewport content="width=device-width, initial-scale=1">
+<meta name=csrf-token content="Tbk1RvJcp3GdmS5wGB0uaix9irsJTfp9FGRnRz9r">
+
+<meta itemprop="name" content="Uninstall Nextcloud - Ploi API">
+<meta property="og:title" content="Uninstall Nextcloud - Ploi API">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Uninstall Nextcloud - Ploi API">
+
+    <meta name=description
+          content="Ploi API - Made by developers, for developers.">
+
+    <meta itemprop="description"
+          content="Ploi API - Made by developers, for developers.">
+
+    <meta property="og:description"
+          content="Ploi API - Made by developers, for developers.">
+
+
+    <link rel="apple-touch-icon" href="https://documentator.s3.eu-west-3.amazonaws.com/11/conversions/favicon-favicon-64.png">
+    <link rel="icon" type=image/png href="https://documentator.s3.eu-west-3.amazonaws.com/11/conversions/favicon-favicon-16.png" sizes="16x16">
+    <link rel="icon" type=image/png href="https://documentator.s3.eu-west-3.amazonaws.com/11/conversions/favicon-favicon-32.png" sizes="32x32">
+
+    <meta itemprop="image" content="https://documentator.s3.eu-west-3.amazonaws.com/10/conversions/DiscordDefault-thumb.png">
+
+    <meta property="og:image" content="https://documentator.s3.eu-west-3.amazonaws.com/10/conversions/DiscordDefault-thumb.png">
+    <meta property="og:image:secure_url" content="https://documentator.s3.eu-west-3.amazonaws.com/10/conversions/DiscordDefault-thumb.png">
+    <meta property="og:image:width" content="256">
+    <meta property="og:image:height" content="256">
+
+    
+    <script async src=https://www.googletagmanager.com/gtag/js?id=UA-97546077-12></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+
+        function gtag() {
+            dataLayer.push(arguments);
+        }
+
+        gtag('js', new Date());
+        gtag('config', 'UA-97546077-12');
+    </script>
+
+
+    <link href="../css/templates/default.css%3Fid=a3bd38f2138b64491331.css" rel="stylesheet">
+
+<style></style>
+</head>
+<body class="bg-gray-100 tracking-normal flex flex-col min-h-screen">
+<div class="min-h-screen w-full flex flex-row">
+    <aside data-menu
+       class="z-50 hidden flex-col overflow-y-auto flex-shrink-0 fixed inset-y-0 left-0 w-full h-screen bg-gray-200 border-r p-4 lg:sticky lg:flex lg:px-8 lg:max-w-sm">
+    <header class="my-4">
+        <div class="truncate">
+                            <img src=https://documentator.s3.eu-west-3.amazonaws.com/10/conversions/DiscordDefault-thumb.png alt="Ploi API"
+                     class="w-16 h-16 rounded mr-2 my-auto hidden lg:inline">
+            
+            <a href="../index.html" title="Ploi API"
+               class="text-xl align-middle leading-tight font-medium">
+                Ploi API
+            </a>
+        </div>
+
+    </header>
+    <div class="mb-10">
+                    <ul class="my-8 grid gap-2">
+                <li>
+                    <div class="text-gray-600 text-sm uppercase leading-tight tracking-wide font-medium truncate">
+                        General
+                    </div>
+                </li>
+                                    <ul class="mt-2 ml-2">
+                        <li>
+                            <button                                     data-toggle="collapse"
+                                    data-target=".collapse.group-2-category-27"
+                                                                        type=button
+                                    class="w-full text-left  text-gray-600   font-medium py-1  hover:text-primary-500  leading-tight tracking-wide truncate">
+                                Getting Started
+
+                                                                                                            <i class="fas fa-caret-right float-right"></i>
+                                                                                                </button>
+                            <ul class="mt-2 text-sm  collapse group-2-category-27  hidden  ">
+                                                                    <li class="pl-4 py-1 border-l-2 ">
+                                                                                    <a title="Authorization"
+                                               class="ml-2 hover:text-primary-600 "
+                                               href="../getting-started/authorization.html">Authorization</a>
+                                                                            </li>
+                                                                    <li class="pl-4 py-1 border-l-2 ">
+                                                                                    <a title="Headers"
+                                               class="ml-2 hover:text-primary-600 "
+                                               href="../getting-started/headers.html">Headers</a>
+                                                                            </li>
+                                                                    <li class="pl-4 py-1 border-l-2 ">
+                                                                                    <a title="URL"
+                                               class="ml-2 hover:text-primary-600 "
+                                               href="../getting-started/url.html">URL</a>
+                                                                            </li>
+                                                                    <li class="pl-4 py-1 border-l-2 ">
+                                                                                    <a title="Pagination"
+                                               class="ml-2 hover:text-primary-600 "
+                                               href="../getting-started/pagination.html">Pagination</a>
+                                                                            </li>
+                                                                    <li class="pl-4 py-1 border-l-2 ">
+                                                                                    <a title="Query parameters"
+                                               class="ml-2 hover:text-primary-600 "
+                                               href="../getting-started/query-parameters.html">Query parameters</a>
+                                                                            </li>
+                                                                    <li class="pl-4 py-1 border-l-2 ">
+                                                                                    <a title="Errors"
+                                               class="ml-2 hover:text-primary-600 "
+                                               href="../getting-started/errors.html">Errors</a>
+                                                                            </li>
+                                                                    <li class="pl-4 py-1 border-l-2 ">
+                                                                                    <a title="Rate limiting"
+                                               class="ml-2 hover:text-primary-600 "
+                                               href="../getting-started/rate-limiting.html">Rate limiting</a>
+                                                                            </li>
+                                                            </ul>
+                        </li>
+                    </ul>
+
+                                    <ul class="mt-2 ml-2">
+                        <li>
+                            <button                                     data-toggle="collapse"
+                                    data-target=".collapse.group-2-category-28"
+                                                                        type=button
+                                    class="w-full text-left  text-gray-600   font-medium py-1  hover:text-primary-500  leading-tight tracking-wide truncate">
+                                User
+
+                                                                                                            <i class="fas fa-caret-right float-right"></i>
+                                                                                                </button>
+                            <ul class="mt-2 text-sm  collapse group-2-category-28  hidden  ">
+                                                                    <li class="pl-4 py-1 border-l-2 ">
+                                                                                    <a title="Information"
+                                               class="ml-2 hover:text-primary-600 "
+                                               href="../user/information.html">Information</a>
+                                                                            </li>
+                                                                    <li class="pl-4 py-1 border-l-2 ">
+                                                                                    <a title="List server providers"
+                                               class="ml-2 hover:text-primary-600 "
+                                               href="../user/list-server-providers.html">List server providers</a>
+                                                                            </li>
+                                                                    <li class="pl-4 py-1 border-l-2 ">
+                                                                                    <a title="Get server provider"
+                                               class="ml-2 hover:text-primary-600 "
+                                               href="../user/get-server-provider.html">Get server provider</a>
+                                                                            </li>
+                                                            </ul>
+                        </li>
+                    </ul>
+
+                                    <ul class="mt-2 ml-2">
+                        <li>
+                            <button                                     data-toggle="collapse"
+                                    data-target=".collapse.group-2-category-49"
+                                                                        type=button
+                                    class="w-full text-left  text-gray-600   font-medium py-1  hover:text-primary-500  leading-tight tracking-wide truncate">
+                                Scripts
+
+                                                                                                            <i class="fas fa-caret-right float-right"></i>
+                                                                                                </button>
+                            <ul class="mt-2 text-sm  collapse group-2-category-49  hidden  ">
+                                                                    <li class="pl-4 py-1 border-l-2 ">
+                                                                                    <a title="List scripts"
+                                               class="ml-2 hover:text-primary-600 "
+                                               href="../scripts/list-scripts.html">List scripts</a>
+                                                                            </li>
+                                                                    <li class="pl-4 py-1 border-l-2 ">
+                                                                                    <a title="Create script"
+                                               class="ml-2 hover:text-primary-600 "
+                                               href="../scripts/create-script.html">Create script</a>
+                                                                            </li>
+                                                                    <li class="pl-4 py-1 border-l-2 ">
+                                                                                    <a title="Get script"
+                                               class="ml-2 hover:text-primary-600 "
+                                               href="../scripts/get-script.html">Get script</a>
+                                                                            </li>
+                                                                    <li class="pl-4 py-1 border-l-2 ">
+                                                                                    <a title="Delete script"
+                                               class="ml-2 hover:text-primary-600 "
+                                               href="../scripts/delete-script.html">Delete script</a>
+                                                                            </li>
+                                                                    <li class="pl-4 py-1 border-l-2 ">
+                                                                                    <a title="Run script"
+                                               class="ml-2 hover:text-primary-600 "
+                                               href="../scripts/run-script.html">Run script</a>
+                                                                            </li>
+                                                            </ul>
+                        </li>
+                    </ul>
+
+                                    <ul class="mt-2 ml-2">
+                        <li>
+                            <button                                     data-toggle="collapse"
+                                    data-target=".collapse.group-2-category-70"
+                                                                        type=button
+                                    class="w-full text-left  text-gray-600   font-medium py-1  hover:text-primary-500  leading-tight tracking-wide truncate">
+                                Status pages
+
+                                                                                                            <i class="fas fa-caret-right float-right"></i>
+                                                                                                </button>
+                            <ul class="mt-2 text-sm  collapse group-2-category-70  hidden  ">
+                                                                    <li class="pl-4 py-1 border-l-2 ">
+                                                                                    <a title="List status pages"
+                                               class="ml-2 hover:text-primary-600 "
+                                               href="../status-pages/list-status-pages.html">List status pages</a>
+                                                                            </li>
+                                                                    <li class="pl-4 py-1 border-l-2 ">
+                                                                                    <a title="Get status page"
+                                               class="ml-2 hover:text-primary-600 "
+                                               href="../status-pages/get-status-page.html">Get status page</a>
+                                                                            </li>
+                                                                    <li class="pl-4 py-1 border-l-2 ">
+                                                                                    <a title="Get status page incidents"
+                                               class="ml-2 hover:text-primary-600 "
+                                               href="../status-pages/get-status-page-incidents.html">Get status page incidents</a>
+                                                                            </li>
+                                                                    <li class="pl-4 py-1 border-l-2 ">
+                                                                                    <a title="Create status page incident"
+                                               class="ml-2 hover:text-primary-600 "
+                                               href="../status-pages/create-status-page-incident.html">Create status page incident</a>
+                                                                            </li>
+                                                                    <li class="pl-4 py-1 border-l-2 ">
+                                                                                    <a title="Delete status page incident"
+                                               class="ml-2 hover:text-primary-600 "
+                                               href="../status-pages/delete-status-page-incident.html">Delete status page incident</a>
+                                                                            </li>
+                                                            </ul>
+                        </li>
+                    </ul>
+
+                            </ul>
+                    <ul class="my-8 grid gap-2">
+                <li>
+                    <div class="text-gray-600 text-sm uppercase leading-tight tracking-wide font-medium truncate">
+                        Servers
+                    </div>
+                </li>
+                                    <ul class="mt-2 ml-2">
+                        <li>
+                            <button                                     data-toggle="collapse"
+                                    data-target=".collapse.group-3-category-31"
+                                                                        type=button
+                                    class="w-full text-left  text-gray-600   font-medium py-1  hover:text-primary-500  leading-tight tracking-wide truncate">
+                                Servers
+
+                                                                                                            <i class="fas fa-caret-right float-right"></i>
+                                                                                                </button>
+                            <ul class="mt-2 text-sm  collapse group-3-category-31  hidden  ">
+                                                                    <li class="pl-4 py-1 border-l-2 ">
+                                                                                    <a title="List servers"
+                                               class="ml-2 hover:text-primary-600 "
+                                               href="../servers/list-servers.html">List servers</a>
+                                                                            </li>
+                                                                    <li class="pl-4 py-1 border-l-2 ">
+                                                                                    <a title="Get server"
+                                               class="ml-2 hover:text-primary-600 "
+                                               href="../servers/get-server.html">Get server</a>
+                                                                            </li>
+                                                                    <li class="pl-4 py-1 border-l-2 ">
+                                                                                    <a title="Create server"
+                                               class="ml-2 hover:text-primary-600 "
+                                               href="../servers/create-server.html">Create server</a>
+                                                                            </li>
+                                                                    <li class="pl-4 py-1 border-l-2 ">
+                                                                                    <a title="Create custom server"
+                                               class="ml-2 hover:text-primary-600 "
+                                               href="../servers/create-custom-server.html">Create custom server</a>
+                                                                            </li>
+                                                                    <li class="pl-4 py-1 border-l-2 ">
+                                                                                    <a title="Delete server"
+                                               class="ml-2 hover:text-primary-600 "
+                                               href="../servers/delete-server.html">Delete server</a>
+                                                                            </li>
+                                                                    <li class="pl-4 py-1 border-l-2 ">
+                                                                                    <a title="Logs server"
+                                               class="ml-2 hover:text-primary-600 "
+                                               href="../servers/logs-server.html">Logs server</a>
+                                                                            </li>
+                                                                    <li class="pl-4 py-1 border-l-2 ">
+                                                                                    <a title="Monitoring"
+                                               class="ml-2 hover:text-primary-600 "
+                                               href="../servers/monitoring.html">Monitoring</a>
+                                                                            </li>
+                                                            </ul>
+                        </li>
+                    </ul>
+
+                                    <ul class="mt-2 ml-2">
+                        <li>
+                            <button                                     data-toggle="collapse"
+                                    data-target=".collapse.group-3-category-33"
+                                                                        type=button
+                                    class="w-full text-left  text-gray-600   font-medium py-1  hover:text-primary-500  leading-tight tracking-wide truncate">
+                                Databases
+
+                                                                                                            <i class="fas fa-caret-right float-right"></i>
+                                                                                                </button>
+                            <ul class="mt-2 text-sm  collapse group-3-category-33  hidden  ">
+                                                                    <li class="pl-4 py-1 border-l-2 ">
+                                                                                    <a title="List databases"
+                                               class="ml-2 hover:text-primary-600 "
+                                               href="../databases/list-databases.html">List databases</a>
+                                                                            </li>
+                                                                    <li class="pl-4 py-1 border-l-2 ">
+                                                                                    <a title="Create database"
+                                               class="ml-2 hover:text-primary-600 "
+                                               href="../databases/create-database.html">Create database</a>
+                                                                            </li>
+                                                                    <li class="pl-4 py-1 border-l-2 ">
+                                                                                    <a title="Get database"
+                                               class="ml-2 hover:text-primary-600 "
+                                               href="../databases/get-database.html">Get database</a>
+                                                                            </li>
+                                                                    <li class="pl-4 py-1 border-l-2 ">
+                                                                                    <a title="Delete database"
+                                               class="ml-2 hover:text-primary-600 "
+                                               href="../databases/delete-database.html">Delete database</a>
+                                                                            </li>
+                                                            </ul>
+                        </li>
+                    </ul>
+
+                                    <ul class="mt-2 ml-2">
+                        <li>
+                            <button                                     data-toggle="collapse"
+                                    data-target=".collapse.group-3-category-34"
+                                                                        type=button
+                                    class="w-full text-left  text-gray-600   font-medium py-1  hover:text-primary-500  leading-tight tracking-wide truncate">
+                                Database backups
+
+                                                                                                            <i class="fas fa-caret-right float-right"></i>
+                                                                                                </button>
+                            <ul class="mt-2 text-sm  collapse group-3-category-34  hidden  ">
+                                                                    <li class="pl-4 py-1 border-l-2 ">
+                                                                                    <a title="List backups"
+                                               class="ml-2 hover:text-primary-600 "
+                                               href="../database-backups/list-backups.html">List backups</a>
+                                                                            </li>
+                                                                    <li class="pl-4 py-1 border-l-2 ">
+                                                                                    <a title="Create backup"
+                                               class="ml-2 hover:text-primary-600 "
+                                               href="../database-backups/create-backup.html">Create backup</a>
+                                                                            </li>
+                                                                    <li class="pl-4 py-1 border-l-2 ">
+                                                                                    <a title="Get backup"
+                                               class="ml-2 hover:text-primary-600 "
+                                               href="../database-backups/get-backup.html">Get backup</a>
+                                                                            </li>
+                                                                    <li class="pl-4 py-1 border-l-2 ">
+                                                                                    <a title="Delete backup"
+                                               class="ml-2 hover:text-primary-600 "
+                                               href="../database-backups/delete-backup.html">Delete backup</a>
+                                                                            </li>
+                                                                    <li class="pl-4 py-1 border-l-2 ">
+                                                                                    <a title="Toggle backup"
+                                               class="ml-2 hover:text-primary-600 "
+                                               href="../database-backups/toggle-backup.html">Toggle backup</a>
+                                                                            </li>
+                                                            </ul>
+                        </li>
+                    </ul>
+
+                                    <ul class="mt-2 ml-2">
+                        <li>
+                            <button                                     data-toggle="collapse"
+                                    data-target=".collapse.group-3-category-35"
+                                                                        type=button
+                                    class="w-full text-left  text-gray-600   font-medium py-1  hover:text-primary-500  leading-tight tracking-wide truncate">
+                                Crontabs
+
+                                                                                                            <i class="fas fa-caret-right float-right"></i>
+                                                                                                </button>
+                            <ul class="mt-2 text-sm  collapse group-3-category-35  hidden  ">
+                                                                    <li class="pl-4 py-1 border-l-2 ">
+                                                                                    <a title="List crontabs"
+                                               class="ml-2 hover:text-primary-600 "
+                                               href="../crontabs/list-crontabs.html">List crontabs</a>
+                                                                            </li>
+                                                                    <li class="pl-4 py-1 border-l-2 ">
+                                                                                    <a title="Create crontab"
+                                               class="ml-2 hover:text-primary-600 "
+                                               href="../crontabs/create-crontab.html">Create crontab</a>
+                                                                            </li>
+                                                                    <li class="pl-4 py-1 border-l-2 ">
+                                                                                    <a title="Get crontab"
+                                               class="ml-2 hover:text-primary-600 "
+                                               href="../crontabs/get-crontab.html">Get crontab</a>
+                                                                            </li>
+                                                                    <li class="pl-4 py-1 border-l-2 ">
+                                                                                    <a title="Delete crontab"
+                                               class="ml-2 hover:text-primary-600 "
+                                               href="../crontabs/delete-crontab.html">Delete crontab</a>
+                                                                            </li>
+                                                            </ul>
+                        </li>
+                    </ul>
+
+                                    <ul class="mt-2 ml-2">
+                        <li>
+                            <button                                     data-toggle="collapse"
+                                    data-target=".collapse.group-3-category-36"
+                                                                        type=button
+                                    class="w-full text-left  text-gray-600   font-medium py-1  hover:text-primary-500  leading-tight tracking-wide truncate">
+                                Network rules
+
+                                                                                                            <i class="fas fa-caret-right float-right"></i>
+                                                                                                </button>
+                            <ul class="mt-2 text-sm  collapse group-3-category-36  hidden  ">
+                                                                    <li class="pl-4 py-1 border-l-2 ">
+                                                                                    <a title="List network rules"
+                                               class="ml-2 hover:text-primary-600 "
+                                               href="../network-rules/list-network-rules.html">List network rules</a>
+                                                                            </li>
+                                                                    <li class="pl-4 py-1 border-l-2 ">
+                                                                                    <a title="Create network rule"
+                                               class="ml-2 hover:text-primary-600 "
+                                               href="../network-rules/create-network-rule.html">Create network rule</a>
+                                                                            </li>
+                                                                    <li class="pl-4 py-1 border-l-2 ">
+                                                                                    <a title="Get network rule"
+                                               class="ml-2 hover:text-primary-600 "
+                                               href="../network-rules/get-network-rule.html">Get network rule</a>
+                                                                            </li>
+                                                                    <li class="pl-4 py-1 border-l-2 ">
+                                                                                    <a title="Delete network rule"
+                                               class="ml-2 hover:text-primary-600 "
+                                               href="../network-rules/delete-network-rule.html">Delete network rule</a>
+                                                                            </li>
+                                                            </ul>
+                        </li>
+                    </ul>
+
+                                    <ul class="mt-2 ml-2">
+                        <li>
+                            <button                                     data-toggle="collapse"
+                                    data-target=".collapse.group-3-category-37"
+                                                                        type=button
+                                    class="w-full text-left  text-gray-600   font-medium py-1  hover:text-primary-500  leading-tight tracking-wide truncate">
+                                Daemons
+
+                                                                                                            <i class="fas fa-caret-right float-right"></i>
+                                                                                                </button>
+                            <ul class="mt-2 text-sm  collapse group-3-category-37  hidden  ">
+                                                                    <li class="pl-4 py-1 border-l-2 ">
+                                                                                    <a title="List daemons"
+                                               class="ml-2 hover:text-primary-600 "
+                                               href="../daemons/list-daemons.html">List daemons</a>
+                                                                            </li>
+                                                                    <li class="pl-4 py-1 border-l-2 ">
+                                                                                    <a title="Create daemon"
+                                               class="ml-2 hover:text-primary-600 "
+                                               href="../daemons/create-daemon.html">Create daemon</a>
+                                                                            </li>
+                                                                    <li class="pl-4 py-1 border-l-2 ">
+                                                                                    <a title="Get daemon"
+                                               class="ml-2 hover:text-primary-600 "
+                                               href="../daemons/get-daemon.html">Get daemon</a>
+                                                                            </li>
+                                                                    <li class="pl-4 py-1 border-l-2 ">
+                                                                                    <a title="Restart daemon"
+                                               class="ml-2 hover:text-primary-600 "
+                                               href="../daemons/restart-daemon.html">Restart daemon</a>
+                                                                            </li>
+                                                                    <li class="pl-4 py-1 border-l-2 ">
+                                                                                    <a title="Pause daemon"
+                                               class="ml-2 hover:text-primary-600 "
+                                               href="../daemons/pause-daemon.html">Pause daemon</a>
+                                                                            </li>
+                                                                    <li class="pl-4 py-1 border-l-2 ">
+                                                                                    <a title="Delete daemon"
+                                               class="ml-2 hover:text-primary-600 "
+                                               href="../daemons/delete-daemon.html">Delete daemon</a>
+                                                                            </li>
+                                                            </ul>
+                        </li>
+                    </ul>
+
+                                    <ul class="mt-2 ml-2">
+                        <li>
+                            <button                                     data-toggle="collapse"
+                                    data-target=".collapse.group-3-category-38"
+                                                                        type=button
+                                    class="w-full text-left  text-gray-600   font-medium py-1  hover:text-primary-500  leading-tight tracking-wide truncate">
+                                System users
+
+                                                                                                            <i class="fas fa-caret-right float-right"></i>
+                                                                                                </button>
+                            <ul class="mt-2 text-sm  collapse group-3-category-38  hidden  ">
+                                                                    <li class="pl-4 py-1 border-l-2 ">
+                                                                                    <a title="List system users"
+                                               class="ml-2 hover:text-primary-600 "
+                                               href="../system-users/list-system-users.html">List system users</a>
+                                                                            </li>
+                                                                    <li class="pl-4 py-1 border-l-2 ">
+                                                                                    <a title="Create system user"
+                                               class="ml-2 hover:text-primary-600 "
+                                               href="../system-users/create-system-user.html">Create system user</a>
+                                                                            </li>
+                                                                    <li class="pl-4 py-1 border-l-2 ">
+                                                                                    <a title="Get system user"
+                                               class="ml-2 hover:text-primary-600 "
+                                               href="../system-users/get-system-user.html">Get system user</a>
+                                                                            </li>
+                                                                    <li class="pl-4 py-1 border-l-2 ">
+                                                                                    <a title="Delete system user"
+                                               class="ml-2 hover:text-primary-600 "
+                                               href="../system-users/delete-system-user.html">Delete system user</a>
+                                                                            </li>
+                                                            </ul>
+                        </li>
+                    </ul>
+
+                                    <ul class="mt-2 ml-2">
+                        <li>
+                            <button                                     data-toggle="collapse"
+                                    data-target=".collapse.group-3-category-46"
+                                                                        type=button
+                                    class="w-full text-left  text-gray-600   font-medium py-1  hover:text-primary-500  leading-tight tracking-wide truncate">
+                                Services
+
+                                                                                                            <i class="fas fa-caret-right float-right"></i>
+                                                                                                </button>
+                            <ul class="mt-2 text-sm  collapse group-3-category-46  hidden  ">
+                                                                    <li class="pl-4 py-1 border-l-2 ">
+                                                                                    <a title="Restart service"
+                                               class="ml-2 hover:text-primary-600 "
+                                               href="../services/restart-service.html">Restart service</a>
+                                                                            </li>
+                                                                    <li class="pl-4 py-1 border-l-2 ">
+                                                                                    <a title="Refresh OPCache"
+                                               class="ml-2 hover:text-primary-600 "
+                                               href="../services/refresh-opcache.html">Refresh OPCache</a>
+                                                                            </li>
+                                                            </ul>
+                        </li>
+                    </ul>
+
+                            </ul>
+                    <ul class="my-8 grid gap-2">
+                <li>
+                    <div class="text-gray-600 text-sm uppercase leading-tight tracking-wide font-medium truncate">
+                        Sites
+                    </div>
+                </li>
+                                    <ul class="mt-2 ml-2">
+                        <li>
+                            <button                                     data-toggle="collapse"
+                                    data-target=".collapse.group-4-category-32"
+                                                                        type=button
+                                    class="w-full text-left  text-gray-600   font-medium py-1  hover:text-primary-500  leading-tight tracking-wide truncate">
+                                Sites
+
+                                                                                                            <i class="fas fa-caret-right float-right"></i>
+                                                                                                </button>
+                            <ul class="mt-2 text-sm  collapse group-4-category-32  hidden  ">
+                                                                    <li class="pl-4 py-1 border-l-2 ">
+                                                                                    <a title="List sites"
+                                               class="ml-2 hover:text-primary-600 "
+                                               href="../sites/list-sites.html">List sites</a>
+                                                                            </li>
+                                                                    <li class="pl-4 py-1 border-l-2 ">
+                                                                                    <a title="Create site"
+                                               class="ml-2 hover:text-primary-600 "
+                                               href="../sites/create-site.html">Create site</a>
+                                                                            </li>
+                                                                    <li class="pl-4 py-1 border-l-2 ">
+                                                                                    <a title="Get site"
+                                               class="ml-2 hover:text-primary-600 "
+                                               href="../sites/get-site.html">Get site</a>
+                                                                            </li>
+                                                                    <li class="pl-4 py-1 border-l-2 ">
+                                                                                    <a title="Delete site"
+                                               class="ml-2 hover:text-primary-600 "
+                                               href="../sites/delete-site.html">Delete site</a>
+                                                                            </li>
+                                                                    <li class="pl-4 py-1 border-l-2 ">
+                                                                                    <a title="Log site"
+                                               class="ml-2 hover:text-primary-600 "
+                                               href="../sites/log-site.html">Log site</a>
+                                                                            </li>
+                                                            </ul>
+                        </li>
+                    </ul>
+
+                                    <ul class="mt-2 ml-2">
+                        <li>
+                            <button                                     data-toggle="collapse"
+                                    data-target=".collapse.group-4-category-39"
+                                                                        type=button
+                                    class="w-full text-left  text-gray-600   font-medium py-1  hover:text-primary-500  leading-tight tracking-wide truncate">
+                                Deployments
+
+                                                                                                            <i class="fas fa-caret-right float-right"></i>
+                                                                                                </button>
+                            <ul class="mt-2 text-sm  collapse group-4-category-39  hidden  ">
+                                                                    <li class="pl-4 py-1 border-l-2 ">
+                                                                                    <a title="Get deploy script"
+                                               class="ml-2 hover:text-primary-600 "
+                                               href="../deployments/get-deploy-script.html">Get deploy script</a>
+                                                                            </li>
+                                                                    <li class="pl-4 py-1 border-l-2 ">
+                                                                                    <a title="Update deploy script"
+                                               class="ml-2 hover:text-primary-600 "
+                                               href="../deployments/update-deploy-script.html">Update deploy script</a>
+                                                                            </li>
+                                                                    <li class="pl-4 py-1 border-l-2 ">
+                                                                                    <a title="Deploy site"
+                                               class="ml-2 hover:text-primary-600 "
+                                               href="../deployments/deploy-site.html">Deploy site</a>
+                                                                            </li>
+                                                            </ul>
+                        </li>
+                    </ul>
+
+                                    <ul class="mt-2 ml-2">
+                        <li>
+                            <button                                     data-toggle="collapse"
+                                    data-target=".collapse.group-4-category-40"
+                                                                        type=button
+                                    class="w-full text-left  text-gray-600   font-medium py-1  hover:text-primary-500  leading-tight tracking-wide truncate">
+                                Repositories
+
+                                                                                                            <i class="fas fa-caret-right float-right"></i>
+                                                                                                </button>
+                            <ul class="mt-2 text-sm  collapse group-4-category-40  hidden  ">
+                                                                    <li class="pl-4 py-1 border-l-2 ">
+                                                                                    <a title="Install repository"
+                                               class="ml-2 hover:text-primary-600 "
+                                               href="../repositories/install-repository.html">Install repository</a>
+                                                                            </li>
+                                                                    <li class="pl-4 py-1 border-l-2 ">
+                                                                                    <a title="Delete repository"
+                                               class="ml-2 hover:text-primary-600 "
+                                               href="../repositories/delete-repository.html">Delete repository</a>
+                                                                            </li>
+                                                            </ul>
+                        </li>
+                    </ul>
+
+                                    <ul class="mt-2 ml-2">
+                        <li>
+                            <button                                     data-toggle="collapse"
+                                    data-target=".collapse.group-4-category-41"
+                                                                        type=button
+                                    class="w-full text-left  text-gray-600   font-medium py-1  hover:text-primary-500  leading-tight tracking-wide truncate">
+                                Environment
+
+                                                                                                            <i class="fas fa-caret-right float-right"></i>
+                                                                                                </button>
+                            <ul class="mt-2 text-sm  collapse group-4-category-41  hidden  ">
+                                                                    <li class="pl-4 py-1 border-l-2 ">
+                                                                                    <a title="Get .env from site"
+                                               class="ml-2 hover:text-primary-600 "
+                                               href="../environment/get-env-from-site.html">Get .env from site</a>
+                                                                            </li>
+                                                                    <li class="pl-4 py-1 border-l-2 ">
+                                                                                    <a title="Update .env from site"
+                                               class="ml-2 hover:text-primary-600 "
+                                               href="../environment/update-env-from-site.html">Update .env from site</a>
+                                                                            </li>
+                                                            </ul>
+                        </li>
+                    </ul>
+
+                                    <ul class="mt-2 ml-2">
+                        <li>
+                            <button                                     data-toggle="collapse"
+                                    data-target=".collapse.group-4-category-42"
+                                                                        type=button
+                                    class="w-full text-left  text-gray-600   font-medium py-1  hover:text-primary-500  leading-tight tracking-wide truncate">
+                                Queue workers
+
+                                                                                                            <i class="fas fa-caret-right float-right"></i>
+                                                                                                </button>
+                            <ul class="mt-2 text-sm  collapse group-4-category-42  hidden  ">
+                                                                    <li class="pl-4 py-1 border-l-2 ">
+                                                                                    <a title="List queue workers"
+                                               class="ml-2 hover:text-primary-600 "
+                                               href="../queue-workers/list-queue-workers.html">List queue workers</a>
+                                                                            </li>
+                                                                    <li class="pl-4 py-1 border-l-2 ">
+                                                                                    <a title="Create queue worker"
+                                               class="ml-2 hover:text-primary-600 "
+                                               href="../queue-workers/create-queue-worker.html">Create queue worker</a>
+                                                                            </li>
+                                                                    <li class="pl-4 py-1 border-l-2 ">
+                                                                                    <a title="Get queue worker"
+                                               class="ml-2 hover:text-primary-600 "
+                                               href="../queue-workers/get-queue-worker.html">Get queue worker</a>
+                                                                            </li>
+                                                                    <li class="pl-4 py-1 border-l-2 ">
+                                                                                    <a title="Restart queue worker"
+                                               class="ml-2 hover:text-primary-600 "
+                                               href="../queue-workers/restart-queue-worker.html">Restart queue worker</a>
+                                                                            </li>
+                                                                    <li class="pl-4 py-1 border-l-2 ">
+                                                                                    <a title="Pause queue worker"
+                                               class="ml-2 hover:text-primary-600 "
+                                               href="../queue-workers/pause-queue-worker.html">Pause queue worker</a>
+                                                                            </li>
+                                                                    <li class="pl-4 py-1 border-l-2 ">
+                                                                                    <a title="Delete queue worker"
+                                               class="ml-2 hover:text-primary-600 "
+                                               href="../queue-workers/delete-queue-worker.html">Delete queue worker</a>
+                                                                            </li>
+                                                            </ul>
+                        </li>
+                    </ul>
+
+                                    <ul class="mt-2 ml-2">
+                        <li>
+                            <button                                     data-toggle="collapse"
+                                    data-target=".collapse.group-4-category-165"
+                                                                        type=button
+                                    class="w-full text-left  text-gray-600   font-medium py-1  hover:text-primary-500  leading-tight tracking-wide truncate">
+                                Redirects
+
+                                                                                                            <i class="fas fa-caret-right float-right"></i>
+                                                                                                </button>
+                            <ul class="mt-2 text-sm  collapse group-4-category-165  hidden  ">
+                                                                    <li class="pl-4 py-1 border-l-2 ">
+                                                                                    <a title="List redirects"
+                                               class="ml-2 hover:text-primary-600 "
+                                               href="../redirects/list-redirects.html">List redirects</a>
+                                                                            </li>
+                                                                    <li class="pl-4 py-1 border-l-2 ">
+                                                                                    <a title="Create redirect"
+                                               class="ml-2 hover:text-primary-600 "
+                                               href="../redirects/create-redirect.html">Create redirect</a>
+                                                                            </li>
+                                                                    <li class="pl-4 py-1 border-l-2 ">
+                                                                                    <a title="Get redirect"
+                                               class="ml-2 hover:text-primary-600 "
+                                               href="../redirects/get-redirect.html">Get redirect</a>
+                                                                            </li>
+                                                                    <li class="pl-4 py-1 border-l-2 ">
+                                                                                    <a title="Delete redirect"
+                                               class="ml-2 hover:text-primary-600 "
+                                               href="../redirects/delete-redirect.html">Delete redirect</a>
+                                                                            </li>
+                                                            </ul>
+                        </li>
+                    </ul>
+
+                                    <ul class="mt-2 ml-2">
+                        <li>
+                            <button                                     data-toggle="collapse"
+                                    data-target=".collapse.group-4-category-43"
+                                                                        type=button
+                                    class="w-full text-left  text-gray-600   font-medium py-1  hover:text-primary-500  leading-tight tracking-wide truncate">
+                                Certificates
+
+                                                                                                            <i class="fas fa-caret-right float-right"></i>
+                                                                                                </button>
+                            <ul class="mt-2 text-sm  collapse group-4-category-43  hidden  ">
+                                                                    <li class="pl-4 py-1 border-l-2 ">
+                                                                                    <a title="List certificates"
+                                               class="ml-2 hover:text-primary-600 "
+                                               href="../certificates/list-certificates.html">List certificates</a>
+                                                                            </li>
+                                                                    <li class="pl-4 py-1 border-l-2 ">
+                                                                                    <a title="Create certificate"
+                                               class="ml-2 hover:text-primary-600 "
+                                               href="../certificates/create-certificate.html">Create certificate</a>
+                                                                            </li>
+                                                                    <li class="pl-4 py-1 border-l-2 ">
+                                                                                    <a title="Get certificate"
+                                               class="ml-2 hover:text-primary-600 "
+                                               href="../certificates/get-certificate.html">Get certificate</a>
+                                                                            </li>
+                                                                    <li class="pl-4 py-1 border-l-2 ">
+                                                                                    <a title="Delete certificate"
+                                               class="ml-2 hover:text-primary-600 "
+                                               href="../certificates/delete-certificate.html">Delete certificate</a>
+                                                                            </li>
+                                                            </ul>
+                        </li>
+                    </ul>
+
+                                    <ul class="mt-2 ml-2">
+                        <li>
+                            <button                                     data-toggle="collapse"
+                                    data-target=".collapse.group-4-category-44"
+                                                                        type=button
+                                    class="w-full text-left  text-gray-600   font-medium py-1  hover:text-primary-500  leading-tight tracking-wide truncate">
+                                Auth users
+
+                                                                                                            <i class="fas fa-caret-right float-right"></i>
+                                                                                                </button>
+                            <ul class="mt-2 text-sm  collapse group-4-category-44  hidden  ">
+                                                                    <li class="pl-4 py-1 border-l-2 ">
+                                                                                    <a title="List auth users"
+                                               class="ml-2 hover:text-primary-600 "
+                                               href="../auth-users/list-auth-users.html">List auth users</a>
+                                                                            </li>
+                                                                    <li class="pl-4 py-1 border-l-2 ">
+                                                                                    <a title="Create auth user"
+                                               class="ml-2 hover:text-primary-600 "
+                                               href="../auth-users/create-auth-user.html">Create auth user</a>
+                                                                            </li>
+                                                                    <li class="pl-4 py-1 border-l-2 ">
+                                                                                    <a title="Get auth user"
+                                               class="ml-2 hover:text-primary-600 "
+                                               href="../auth-users/get-auth-user.html">Get auth user</a>
+                                                                            </li>
+                                                                    <li class="pl-4 py-1 border-l-2 ">
+                                                                                    <a title="Delete auth user"
+                                               class="ml-2 hover:text-primary-600 "
+                                               href="../auth-users/delete-auth-user.html">Delete auth user</a>
+                                                                            </li>
+                                                            </ul>
+                        </li>
+                    </ul>
+
+                                    <ul class="mt-2 ml-2">
+                        <li>
+                            <button                                     data-toggle="collapse"
+                                    data-target=".collapse.group-4-category-45"
+                                                                        type=button
+                                    class="w-full text-left  text-gray-600   font-medium py-1  hover:text-primary-500  leading-tight tracking-wide truncate">
+                                Monitoring
+
+                                                                                                            <i class="fas fa-caret-right float-right"></i>
+                                                                                                </button>
+                            <ul class="mt-2 text-sm  collapse group-4-category-45  hidden  ">
+                                                                    <li class="pl-4 py-1 border-l-2 ">
+                                                                                    <a title="List monitors"
+                                               class="ml-2 hover:text-primary-600 "
+                                               href="../monitoring/list-monitors.html">List monitors</a>
+                                                                            </li>
+                                                                    <li class="pl-4 py-1 border-l-2 ">
+                                                                                    <a title="Get monitor"
+                                               class="ml-2 hover:text-primary-600 "
+                                               href="../monitoring/get-monitor.html">Get monitor</a>
+                                                                            </li>
+                                                                    <li class="pl-4 py-1 border-l-2 ">
+                                                                                    <a title="Get uptime responses"
+                                               class="ml-2 hover:text-primary-600 "
+                                               href="../monitoring/get-uptime-responses.html">Get uptime responses</a>
+                                                                            </li>
+                                                            </ul>
+                        </li>
+                    </ul>
+
+                                    <ul class="mt-2 ml-2">
+                        <li>
+                            <button                                     data-toggle="collapse"
+                                    data-target=".collapse.group-4-category-47"
+                                                                        type=button
+                                    class="w-full text-left  text-primary-500   font-medium py-1  hover:text-primary-500  leading-tight tracking-wide truncate">
+                                Apps
+
+                                                                                                            <i class="fas fa-caret-down float-right"></i>
+                                                                                                </button>
+                            <ul class="mt-2 text-sm  collapse group-4-category-47  ">
+                                                                    <li class="pl-4 py-1 border-l-2 ">
+                                                                                    <a title="Install WordPress"
+                                               class="ml-2 hover:text-primary-600 "
+                                               href="install-wordpress.html">Install WordPress</a>
+                                                                            </li>
+                                                                    <li class="pl-4 py-1 border-l-2 ">
+                                                                                    <a title="Uninstall WordPress"
+                                               class="ml-2 hover:text-primary-600 "
+                                               href="uninstall-wordpress.html">Uninstall WordPress</a>
+                                                                            </li>
+                                                                    <li class="pl-4 py-1 border-l-2 ">
+                                                                                    <a title="Install Nextcloud"
+                                               class="ml-2 hover:text-primary-600 "
+                                               href="install-nextcloud.html">Install Nextcloud</a>
+                                                                            </li>
+                                                                    <li class="pl-4 py-1 border-l-2  border-primary-500 text-primary-500 ">
+                                                                                    <a title="Uninstall Nextcloud"
+                                               class="ml-2 hover:text-primary-600  text-primary-500 "
+                                               href="uninstall-nextcloud.html">Uninstall Nextcloud</a>
+                                                                            </li>
+                                                            </ul>
+                        </li>
+                    </ul>
+
+                            </ul>
+                    </div>
+
+    <footer class="my-4 mt-auto">
+        <p class="text-gray-600 text-sm">
+            &copy; 2020 <a href="https://documentator.io"
+                                      title="Documentator - Make documentation easy again" target="_blank">documentator.io</a>
+        </p>
+    </footer>
+</aside>
+
+    <div class="w-full">
+        <header class="z-50 sticky top-0 bg-white h-16 flex justify-start items-center shadow-sm" id="app">
+    <div class="flex items-center lg:hidden">
+        <button data-menu-toggle class="h-16 w-16 inline-flex justify-center items-center">
+            <svg class="fill-current text-gray-600" width=24 height=24 viewBox="0 0 24 24" fill="none"
+                 xmlns="http://www.w3.org/2000/svg">
+                <path fill-rule="evenodd" clip-rule="evenodd" d="M22 7V5H2V7H22ZM22 11V13H2V11H22ZM22 17V19H2V17H22Z">
+            </svg>
+        </button>
+                    <img src=https://documentator.s3.eu-west-3.amazonaws.com/10/conversions/DiscordDefault-thumb.png class="inline w-8 h-8 rounded mr-2 my-auto">
+                <div class="ml-2 leading-tight font-medium truncate">Ploi API</div>
+    </div>
+
+            <search placeholder="Search documentation..." searching="Searching..."
+                search-url="/search"></search>
+    
+    <div class="ml-auto px-4 hidden lg:block">
+                    <a href="https://ploi.io" target="_blank"
+               class="px-4 font-medium text-primary-600">🌍 Website</a>
+            </div>
+</header>
+
+        <main class="px-4 py-8 w-full max-w-5xl md:p-16" id="content" v-pre>
+                <h1>Uninstall Nextcloud</h1>
+
+    <p>Uninstall NextCloud system on this domain</p>
+<p><code>DELETE api/servers/{server}/sites/{id}/nextcloud</code></p>
+<p>Example request:</p>
+<pre><code class="language-bash">curl -X DELETE "https://ploi.io/api/servers/{server}/sites/{id}/nextcloud" \
+-H "Authorization: Bearer {token}" \
+-H "Content-Type: application/json" \
+-H "Accept: application/json"</code></pre>
+<p>Example response:</p>
+<pre><code class="language-json">HTTP/1.1 200 OK
+Content-Type: application/json
+
+{
+    "data": {
+        "id": 90,
+        "domain": "domain.com",
+        "web_directory": "/public",
+        "wordpress": false,
+        "laravel": false,
+        "project_root": "/",
+        "last_deploy_at": "2018-09-14 20:43:11",
+        "created_at": "2018-09-14 11:40:01"
+    }
+}</code></pre>
+
+    <footer class="mt-8 pt-4 border-t">
+        <div id="previous-and-next" class="mb-4 grid md:grid-cols-2 gap-4 flex-col-reverse flex">
+                                                <a class="block p-4 rounded-lg border shadow-sm" href="install-nextcloud.html">
+                        <div class="text-sm text-gray-600">Previous</div>
+                        <div class="truncate">Install Nextcloud</div>
+                    </a>
+                                                </div>
+
+        <p class="text-sm text-gray-600 mb-1">21 seconds estimated read time</p>
+        <p class="text-sm text-gray-600">Last updated 1 month ago</p>
+    </footer>
+        </main>
+    </div>
+</div>
+
+<script src="../js/templates/default.js%3Fid=8bc6899664739efa0962" defer></script>
+</body>
+</html>
