@@ -57,7 +57,7 @@ class Ploi extends BaseDocset
         $entries = collect();
 
         if (Str::contains($file, "{$this->url()}/index.html")) {
-            $crawler->filter('aside a.ml-2')->each(function (HtmlPageCrawler $node) use ($entries, $file) {
+            $crawler->filter('aside a.ml-2')->each(function (HtmlPageCrawler $node) use ($entries) {
                 $entries->push([
                     'name' => trim($node->text()),
                     'type' => 'Guide',
