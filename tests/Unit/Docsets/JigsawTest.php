@@ -22,7 +22,7 @@ class JigsawTest extends TestCase
     public function it_generates_a_table_of_contents()
     {
         $toc = $this->docset->entries(
-            $this->docset->innerIndex()
+            $this->docset->DownloadedIndex()
         );
 
         $this->assertNotEmpty($toc);

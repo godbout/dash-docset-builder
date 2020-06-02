@@ -92,7 +92,7 @@ class JigsawTest extends TestCase
         );
 
         $this->assertFalse(
-            $crawler->filter('#vue-app > div > div > div')->hasClass('pb-16')
+            $crawler->filter('#vue-app > div > div > div')->hasClass('pt-4')
         );
     }
 
