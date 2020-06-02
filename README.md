@@ -128,4 +128,5 @@ Currently the following docsets are included with the Builder:
 * [Jigsaw by Tighten](https://jigsaw.tighten.co)
 * [Tailwind CSS](https://tailwindcss.com)
 * [Tiki](https://tiki.org/)
+* [Ploi](https://ploi.io)
 
