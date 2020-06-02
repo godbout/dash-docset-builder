@@ -73,6 +73,59 @@ class Ploi extends BaseDocset
     {
         $crawler = HtmlPageCrawler::create($html);
 
+        $this->removeHeader($crawler);
+        $this->removeSidebar($crawler);
+        $this->removePreviousAndNextNavigation($crawler);
+        $this->updateTopPadding($crawler);
+        $this->removeUnwantedJavaScript($crawler);
+        $this->insertDashTableOfContents($crawler);
+
         return $crawler->saveHTML();
+    }
+
+    protected function removeHeader(HtmlPageCrawler $crawler)
+    {
+        $crawler->filter('header')->remove();
+    }
+
+    protected function removeSidebar(HtmlPageCrawler $crawler)
+    {
+        $crawler->filter('aside')->remove();
+    }
+
+    protected function removePreviousAndNextNavigation(HtmlPageCrawler $crawler)
+    {
+        $crawler->filter('#previous-and-next')->remove();
+    }
+
+    protected function updateTopPadding(HtmlPageCrawler $crawler)
+    {
+        $crawler->filter('main')
+            ->addClass('md:pt-12')
+        ;
+    }
+
+    protected function removeUnwantedJavaScript(HtmlPageCrawler $crawler)
+    {
+        $crawler->filter('script[src*=gtag]')->remove();
+        $crawler->filterXPath("//script[text()[contains(.,'gtag')]]")->remove();
+    }
+
+    protected function insertDashTableOfContents(HtmlPageCrawler $crawler)
+    {
+        $crawler->filter('h1')
+            ->before('<a name="//apple_ref/cpp/Section/Top" class="dashAnchor"></a>');
+
+        $crawler->filter('h2, h3, h4')->each(static function (HtmlPageCrawler $node) {
+            $node->before(
+                '<a id="' . Str::slug($node->text()) . '" name="//apple_ref/cpp/Section/' . rawurlencode($node->text()) . '" class="dashAnchor"></a>'
+            );
+        });
+
+        $crawler->filterXPath('//p[not(descendant::code)]')->each(static function (HtmlPageCrawler $node) {
+            $node->before(
+                '<a id="' . Str::slug($node->text()) . '" name="//apple_ref/cpp/Section/' . rawurlencode($node->text()) . '" class="dashAnchor"></a>'
+            );
+        });
     }
 }
