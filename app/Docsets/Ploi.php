@@ -14,9 +14,10 @@ class Ploi extends BaseDocset
     public const URL = 'developers.ploi.io';
     public const INDEX = 'index.html';
     public const PLAYGROUND = '';
-    public const ICON_16 = '../../icons/icon.png';
-    public const ICON_32 = '../../icons/icon@2x.png';
+    public const ICON_16 = '../documentator.s3.eu-west-3.amazonaws.com/11/conversions/favicon-favicon-16.png';
+    public const ICON_32 = '../documentator.s3.eu-west-3.amazonaws.com/11/conversions/favicon-favicon-32.png';
     public const EXTERNAL_DOMAINS = [
+        'documentator.s3.eu-west-3.amazonaws.com'
     ];
 
 
@@ -46,6 +47,24 @@ class Ploi extends BaseDocset
         $crawler = HtmlPageCrawler::create(Storage::get($file));
 
         $entries = collect();
+        $entries = $entries->merge($this->guideEntries($crawler, $file));
+
+        return $entries;
+    }
+
+    protected function guideEntries(HtmlPageCrawler $crawler, string $file)
+    {
+        $entries = collect();
+
+        if (Str::contains($file, "{$this->url()}/index.html")) {
+            $crawler->filter('aside a.ml-2')->each(function (HtmlPageCrawler $node) use ($entries, $file) {
+                $entries->push([
+                    'name' => trim($node->text()),
+                    'type' => 'Guide',
+                    'path' => $this->url() . '/' . $node->attr('href'),
+                ]);
+            });
+        }
 
         return $entries;
     }
