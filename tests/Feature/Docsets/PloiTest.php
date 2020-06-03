@@ -80,15 +80,15 @@ class PloiTest extends TestCase
     {
         $previousAndNextNavigation = 'id="previous-and-next"';
 
-                $this->assertStringContainsString(
-                    $previousAndNextNavigation,
-                    Storage::get($this->docset->downloadedDirectory() . '/' . $this->docset->url() . '/apps/install-wordpress.html')
-                );
+        $this->assertStringContainsString(
+            $previousAndNextNavigation,
+            Storage::get($this->docset->downloadedDirectory() . '/' . $this->docset->url() . '/apps/install-wordpress.html')
+        );
 
-                $this->assertStringNotContainsString(
-                    $previousAndNextNavigation,
-                    Storage::get($this->docset->innerIndex())
-                );
+        $this->assertStringNotContainsString(
+            $previousAndNextNavigation,
+            Storage::get($this->docset->innerIndex())
+        );
     }
 
     /** @test */
