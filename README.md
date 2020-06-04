@@ -1,7 +1,7 @@
 <h1 align="center">DASH DOCSET BUILDER</h1>
 
 <p align="center">
-    <a href="https://travis-ci.org/godbout/dash-docset-builder"><img src="https://img.shields.io/travis/godbout/dash-docset-builder/master.svg?style=flat-square" alt="Build Status"></a>
+    <a href="https://travis-ci.com/godbout/dash-docset-builder"><img src="https://img.shields.io/travis/com/godbout/dash-docset-builder/master.svg?style=flat-square" alt="Build Status"></a>
     <a href="https://scrutinizer-ci.com/g/godbout/dash-docset-builder"><img src="https://img.shields.io/scrutinizer/g/godbout/dash-docset-builder.svg?style=flat-square" alt="Quality Score"></a>
     <a href="https://scrutinizer-ci.com/g/godbout/dash-docset-builder"><img src="https://scrutinizer-ci.com/g/godbout/dash-docset-builder/badges/coverage.png?b=master" alt="Code Coverage"></a>
 </p>
