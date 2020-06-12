@@ -68,7 +68,7 @@ class TailwindCSS extends BaseDocset
                 $entries->push([
                     'name' => $this->cleanAnchorText($node->text()),
                     'type' => 'Instruction',
-                    'path' => $this->url() . '/whatever/' . $node->parents()->first()->attr('href'),
+                    'path' => $this->url() . '/docs/' . $node->parents()->first()->attr('href'),
                 ]);
             });
 
@@ -125,7 +125,7 @@ class TailwindCSS extends BaseDocset
         $entries = collect();
 
         if ($pageTitle === 'Tailwind CSS - A Utility-First CSS Framework for Rapidly Building Custom Designs') {
-            $crawler->filter('#navWrapper li a')->each(function (HtmlPageCrawler $node) use ($entries, $file) {
+            $crawler->filter('#navWrapper li a')->each(function (HtmlPageCrawler $node) use ($entries) {
                 $entries->push([
                     'name' => trim($node->text()),
                     'type' => 'Guide',
