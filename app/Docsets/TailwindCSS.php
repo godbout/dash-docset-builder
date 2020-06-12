@@ -124,12 +124,12 @@ class TailwindCSS extends BaseDocset
 
         $entries = collect();
 
-        if ($pageTitle === 'Installation - Tailwind CSS') {
-            $crawler->filter('#navWrapper li a')->each(function (HtmlPageCrawler $node) use ($entries) {
+        if ($pageTitle === 'Tailwind CSS - A Utility-First CSS Framework for Rapidly Building Custom Designs') {
+            $crawler->filter('#navWrapper li a')->each(function (HtmlPageCrawler $node) use ($entries, $file) {
                 $entries->push([
                     'name' => trim($node->text()),
                     'type' => 'Guide',
-                    'path' => $this->url() . '/docs/whatever/' . $node->attr('href'),
+                    'path' => $this->url() . '/' . $node->attr('href'),
                 ]);
             });
         }
