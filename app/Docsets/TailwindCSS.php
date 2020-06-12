@@ -162,6 +162,7 @@ class TailwindCSS extends BaseDocset
         $this->removeTailwindUIAlert($crawler);
         $this->removeUnwantedCSS($crawler);
         $this->removeUnwantedJavaScript($crawler);
+        $this->ignoreDarkModeForSomeColors($crawler);
         $this->updateCSS($crawler);
         $this->insertDashTableOfContents($crawler);
 
@@ -203,6 +204,40 @@ class TailwindCSS extends BaseDocset
         $crawler->filter('script[src*=jquery]')
             ->removeAttribute('integrity')
             ->removeAttribute('crossorigin');
+    }
+
+    protected function ignoreDarkModeForSomeColors(HtmlPageCrawler $crawler)
+    {
+        $this->ignoreDarkModeForDefaultColorPaletteSection($crawler);
+        $this->ignoreDarkModeForBackgroundColorTable($crawler);
+        $this->ignoreDarkModeForTextColorAndPlaceholderColorTables($crawler);
+        $this->ignoreDarkModeForBorderColorTable($crawler);
+        $this->ignoreDarkModeForDivideColorTable($crawler);
+    }
+
+    protected function ignoreDarkModeForDefaultColorPaletteSection(HtmlPageCrawler $crawler)
+    {
+        $crawler->filter('h2 ~ div div.w-12')->addClass('dash-ignore-dark-mode');
+    }
+
+    protected function ignoreDarkModeForBackgroundColorTable(HtmlPageCrawler $crawler)
+    {
+        $crawler->filter('h2 + div td.w-24.p-2.font-mono.text-xs')->addClass('dash-ignore-dark-mode');
+    }
+
+    protected function ignoreDarkModeForTextColorAndPlaceholderColorTables(HtmlPageCrawler $crawler)
+    {
+        $crawler->filter('h2 + div td.relative.w-16.font-medium.border-t.text-base')->addClass('dash-ignore-dark-mode');
+    }
+
+    protected function ignoreDarkModeForBorderColorTable(HtmlPageCrawler $crawler)
+    {
+        $crawler->filter('h2 + div td > div.absolute.m-2.border')->addClass('dash-ignore-dark-mode');
+    }
+
+    protected function ignoreDarkModeForDivideColorTable(HtmlPageCrawler $crawler)
+    {
+        $crawler->filter('h2 + div td > div.absolute.m-2.divide-y')->addClass('dash-ignore-dark-mode');
     }
 
     protected function updateCSS(HtmlPageCrawler $crawler)

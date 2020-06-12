@@ -108,6 +108,22 @@ class TailwindCSSTest extends TestCase
     }
 
     /** @test */
+    public function some_colors_will_not_be_affected_by_Dash_dark_mode()
+    {
+        $ignoreDarkMode = 'dash-ignore-dark-mode';
+
+        $this->assertStringNotContainsString(
+            $ignoreDarkMode,
+            Storage::get($this->docset->downloadedDirectory() . '/' . $this->docset->url() . '/docs/background-color/index.html')
+        );
+
+        $this->assertStringContainsString(
+            $ignoreDarkMode,
+            Storage::get($this->docset->innerDirectory() . '/' . $this->docset->url() . '/docs/background-color/index.html')
+        );
+    }
+
+    /** @test */
     public function the_CSS_gets_updated_in_the_dash_docset_files()
     {
         $crawler = HtmlPageCrawler::create(
