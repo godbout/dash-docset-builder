@@ -19,7 +19,7 @@ class TikiTest extends TestCase
     {
         parent::setUp();
 
-        $this->docset = new Tiki;
+        $this->docset = new Tiki();
         $this->builder = new DocsetBuilder($this->docset);
 
         if (! Storage::exists($this->docset->downloadedDirectory())) {

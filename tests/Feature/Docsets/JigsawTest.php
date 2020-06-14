@@ -18,7 +18,7 @@ class JigsawTest extends TestCase
     {
         parent::setUp();
 
-        $this->docset = new Jigsaw;
+        $this->docset = new Jigsaw();
         $this->builder = new DocsetBuilder($this->docset);
 
         if (! Storage::exists($this->docset->downloadedDirectory())) {
