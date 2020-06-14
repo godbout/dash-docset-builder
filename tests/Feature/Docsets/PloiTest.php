@@ -18,7 +18,7 @@ class PloiTest extends TestCase
     {
         parent::setUp();
 
-        $this->docset = new Ploi;
+        $this->docset = new Ploi();
         $this->builder = new DocsetBuilder($this->docset);
 
         if (! Storage::exists($this->docset->downloadedDirectory())) {

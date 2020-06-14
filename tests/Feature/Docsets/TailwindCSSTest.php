@@ -18,7 +18,7 @@ class TailwindCSSTest extends TestCase
     {
         parent::setUp();
 
-        $this->docset = new TailwindCSS;
+        $this->docset = new TailwindCSS();
         $this->builder = new DocsetBuilder($this->docset);
 
         if (! Storage::exists($this->docset->downloadedDirectory())) {

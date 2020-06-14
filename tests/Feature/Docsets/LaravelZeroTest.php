@@ -18,7 +18,7 @@ class LaravelZeroTest extends TestCase
     {
         parent::setUp();
 
-        $this->docset = new LaravelZero;
+        $this->docset = new LaravelZero();
         $this->builder = new DocsetBuilder($this->docset);
 
         if (! Storage::exists($this->docset->downloadedDirectory())) {
