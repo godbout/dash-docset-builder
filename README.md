@@ -1,13 +1,15 @@
 <h1 align="center">DASH DOCSET BUILDER</h1>
 
 <p align="center">
+    <a href="https://packagist.org/packages/godbout/dash-docset-builder"><img src="https://poser.pugx.org/godbout/dash-docset-builder/v/stable" alt="Latest Stable Version"></a>
     <a href="https://travis-ci.com/godbout/dash-docset-builder"><img src="https://img.shields.io/travis/com/godbout/dash-docset-builder/master.svg?style=flat-square" alt="Build Status"></a>
     <a href="https://scrutinizer-ci.com/g/godbout/dash-docset-builder"><img src="https://img.shields.io/scrutinizer/g/godbout/dash-docset-builder.svg?style=flat-square" alt="Quality Score"></a>
     <a href="https://scrutinizer-ci.com/g/godbout/dash-docset-builder"><img src="https://scrutinizer-ci.com/g/godbout/dash-docset-builder/badges/coverage.png?b=master" alt="Code Coverage"></a>
+    <a href="https://packagist.org/packages/godbout/dash-docset-builder"><img src="https://poser.pugx.org/godbout/dash-docset-builder/downloads" alt="Total Downloads"></a>
 </p>
 
 <p align="center">
-    Made that Builder for myself and was not planning to release it but if you want to create a docset without bothering and you play with PHP, you might find it useful.
+    That shit creates Dash Docsets for you. Of course you still need to declare some stuff in your own class. That shit doesn't read minds yet. Read more below.
 </p>
 
 ___
@@ -120,13 +122,15 @@ This will download the doc, package it into a .docset file, and create an archiv
 
 You can then add your docset into Dash for personal use, or [contribute it](https://github.com/Kapeli/Dash-User-Contributions).
 
-# DOCSETS INCLUDED
+# DOCSETS GENERATED WITH THIS BUILDER
 
-Currently the following docsets are included with the Builder:
+Currently:
 
-* [Laravel-Zero](https://laravel-zero.com)
-* [Jigsaw by Tighten](https://jigsaw.tighten.co)
-* [Tailwind CSS](https://tailwindcss.com)
-* [Tiki](https://tiki.org/)
-* [Ploi](https://ploi.io)
+* [Jigsaw by Tighten](https://jigsaw.tighten.co/docs/installation/)
+* [Laravel-Zero](https://laravel-zero.com/docs/introduction/)
+* [Ploi API](https://developers.ploi.io/)
+* ~~[Stripe](https://stripe.com/docs)~~ — [DECEASED](https://github.com/godbout/dash-docset-builder/tree/stripe/storage/stripe)
+* ~~[Stripe API](https://stripe.com/docs/api)~~ — [DECEASED](https://github.com/godbout/dash-docset-builder/tree/stripe-api/storage/stripe-api)
+* [Tailwind CSS](https://tailwindcss.com/docs/installation/)
+* [Tiki](https://doc.tiki.org/All-the-Documentation)
 
