@@ -56,7 +56,7 @@
         "optimize-autoloader": true
     },
     "scripts": {
-        "test": "phpunit --group=default,download,tailwindcss,laravel-zero,jigsaw,tiki,ploi --color=always",
+        "test": "phpunit --group=default,download --color=always",
         "format": "php-cs-fixer fix -vvv --config=.php_cs.dist --ansi"
     },
     "minimum-stability": "dev",
