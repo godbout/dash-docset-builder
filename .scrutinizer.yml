@@ -3,6 +3,14 @@ build:
     php: 7.4
   nodes:
     analysis:
+      dependencies:
+        before:
+          - wget https://ftp.gnu.org/gnu/wget/wget-latest.tar.gz
+          - tar xf wget-latest.tar.gz
+          - cd wget-*
+          - ./configure
+          - sudo make
+          - sudo make install
       tests:
         override:
           - php-scrutinizer-run
