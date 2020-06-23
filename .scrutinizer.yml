@@ -19,3 +19,4 @@ filter:
 tools:
   external_code_coverage:
     runs: 6
+    timeout: 600
