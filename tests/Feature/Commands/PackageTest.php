@@ -3,7 +3,7 @@
 namespace Tests\Feature\Commands;
 
 use Tests\TestCase;
-use App\Docsets\Dummy;
+use App\Docsets\RickAstley;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Config;
 use Illuminate\Support\Facades\Storage;
@@ -15,7 +15,7 @@ class PackageTest extends TestCase
     {
         parent::setUp();
 
-        $this->docset = new Dummy();
+        $this->docset = new RickAstley();
     }
 
     /** @test */
@@ -30,7 +30,7 @@ class PackageTest extends TestCase
     /** @test */
     public function the_command_returns_an_info_message_if_the_docset_is_not_supported()
     {
-        $this->artisan('package dummy')
+        $this->artisan('package rick-astley')
             ->assertExitCode(0);
 
         $this->artisan('package unsupported')
@@ -78,15 +78,15 @@ class PackageTest extends TestCase
     /** @test */
     public function it_formats_the_doc_especially_for_dash()
     {
-        $navbar = 'class="nav-item';
+        $header = 'id = "header';
 
         $this->assertStringContainsString(
-            $navbar,
+            $header,
             Storage::get($this->docset->downloadedIndex())
         );
 
         $this->assertStringNotContainsString(
-            $navbar,
+            $header,
             Storage::get($this->docset->innerIndex())
         );
     }

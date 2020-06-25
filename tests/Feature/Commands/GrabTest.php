@@ -28,6 +28,6 @@ class GrabTest extends TestCase
     /** @test */
     public function the_command_downloads_the_docs_in_storage()
     {
-        $this->assertTrue(Storage::exists('dummy'));
+        $this->assertTrue(Storage::exists('rick-astley'));
     }
 }

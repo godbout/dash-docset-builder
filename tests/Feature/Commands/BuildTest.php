@@ -31,12 +31,12 @@ class BuildTest extends TestCase
      */
     public function the_command_can_be_run_and_create_a_bunch_of_shit_that_is_a_pain_to_test()
     {
-        Storage::deleteDirectory('dummy');
+        Storage::deleteDirectory('rick-astley');
 
-        $this->artisan('build dummy')
+        $this->artisan('build rick-astley')
             ->assertExitCode(0);
 
-        $this->assertTrue(Storage::exists('dummy/dummy.docset'));
-        $this->assertTrue(Storage::exists('dummy/dummy.tgz'));
+        $this->assertTrue(Storage::exists('rick-astley/rick-astley.docset'));
+        $this->assertTrue(Storage::exists('rick-astley/rick-astley.tgz'));
     }
 }

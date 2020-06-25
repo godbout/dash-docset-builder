@@ -28,8 +28,8 @@ class ArchiveTest extends TestCase
     /** @test */
     public function the_command_generates_an_archive_file()
     {
-        $this->artisan('archive dummy');
+        $this->artisan('archive rick-astley');
 
-        $this->assertTrue(Storage::exists('dummy/dummy.tgz'));
+        $this->assertTrue(Storage::exists('rick-astley/rick-astley.tgz'));
     }
 }
