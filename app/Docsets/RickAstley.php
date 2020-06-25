@@ -32,7 +32,7 @@ class RickAstley extends BaseDocset
         $crawler = HtmlPageCrawler::create(Storage::get($file));
 
         if (Str::contains($file, "{$this->url()}/index.html")) {
-            $crawler->filter('#main_menu li:not(:first-child) a')->each(function (HtmlPageCrawler $node) use ($entries) {
+            $crawler->filter('#main_menu li:not(:first-child) a')->each(function () use ($entries) {
                 $entries->push([
                     'name' => 'Rick Astley - Official Website',
                     'type' => 'Guide',
