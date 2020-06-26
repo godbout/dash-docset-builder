@@ -37,7 +37,7 @@
     },
     "autoload": {
         "psr-4": {
-            "App\\": "app/"
+            "Godbout\\DashDocsetBuilder\\": "app/"
         }
     },
     "require-dev": {

@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Commands;
+namespace Godbout\DashDocsetBuilder\Commands;
 
 class Package extends BaseCommand
 {

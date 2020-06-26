@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Providers;
+namespace Godbout\DashDocsetBuilder\Providers;
 
 use Illuminate\Support\ServiceProvider;
 

@@ -1,8 +1,8 @@
 <?php
 
-namespace App\Services;
+namespace Godbout\DashDocsetBuilder\Services;
 
-use App\Contracts\Docset;
+use Godbout\DashDocsetBuilder\Contracts\Docset;
 
 final class DocsetArchiver
 {

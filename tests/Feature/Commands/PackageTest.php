@@ -3,10 +3,10 @@
 namespace Tests\Feature\Commands;
 
 use Tests\TestCase;
-use App\Docsets\RickAstley;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Config;
 use Illuminate\Support\Facades\Storage;
+use Godbout\DashDocsetBuilder\Docsets\RickAstley;
 use Symfony\Component\Console\Exception\RuntimeException;
 
 class PackageTest extends TestCase

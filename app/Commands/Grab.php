@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Commands;
+namespace Godbout\DashDocsetBuilder\Commands;
 
 class Grab extends BaseCommand
 {

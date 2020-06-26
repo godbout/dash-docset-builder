@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Contracts;
+namespace Godbout\DashDocsetBuilder\Contracts;
 
 use Illuminate\Support\Collection;
 

@@ -1,10 +1,10 @@
 <?php
 
-namespace App\Commands;
+namespace Godbout\DashDocsetBuilder\Commands;
 
 use Illuminate\Support\Str;
-use App\Services\DocsetBuilder;
 use LaravelZero\Framework\Commands\Command;
+use Godbout\DashDocsetBuilder\Services\DocsetBuilder;
 
 abstract class BaseCommand extends Command
 {
@@ -30,7 +30,7 @@ abstract class BaseCommand extends Command
     {
         $classBasename = Str::studly($this->argument('doc'));
 
-        return "App\\Docsets\\$classBasename";
+        return "Godbout\\DashDocsetBuilder\\Docsets\\$classBasename";
     }
 
     protected function requestedAction()
@@ -40,6 +40,6 @@ abstract class BaseCommand extends Command
 
     protected function isSupported()
     {
-        return class_exists($this->requestedDocset());
+        dd( class_exists($this->requestedDocset()) );
     }
 }

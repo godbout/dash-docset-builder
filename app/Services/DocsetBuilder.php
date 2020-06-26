@@ -1,9 +1,9 @@
 <?php
 
-namespace App\Services;
+namespace Godbout\DashDocsetBuilder\Services;
 
-use App\Contracts\Docset;
 use LaravelZero\Framework\Commands\Command;
+use Godbout\DashDocsetBuilder\Contracts\Docset;
 use Illuminate\Console\Command as LaravelCommand;
 
 class DocsetBuilder
