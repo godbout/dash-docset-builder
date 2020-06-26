@@ -30,7 +30,9 @@ abstract class BaseCommand extends Command
     {
         $classBasename = Str::studly($this->argument('doc'));
 
-        return "Godbout\\DashDocsetBuilder\\Docsets\\$classBasename";
+        return class_exists("App\\Docsets\\$classBasename")
+            ? "App\\Docsets\\$classBasename"
+            : "Godbout\\DashDocsetBuilder\\Docsets\\$classBasename";
     }
 
     protected function requestedAction()
@@ -40,6 +42,6 @@ abstract class BaseCommand extends Command
 
     protected function isSupported()
     {
-        dd( class_exists($this->requestedDocset()) );
+        return class_exists($this->requestedDocset());
     }
 }
