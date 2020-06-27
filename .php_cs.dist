@@ -1,8 +1,8 @@
 <?php
 
 $finder = PhpCsFixer\Finder::create()
-    ->in(['/Users/guill/Development/dash-docset-builder/app', '/Users/guill/Development/dash-docset-builder/tests'])
-    ->notPath('/Users/guill/Development/dash-docset-builder/CreatesApplication.php')
+    ->in(['./app', './tests'])
+    ->notPath('./CreatesApplication.php')
 ;
 
 return PhpCsFixer\Config::create()
