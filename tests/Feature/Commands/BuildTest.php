@@ -2,9 +2,9 @@
 
 namespace Tests\Feature\Commands;
 
-use Tests\TestCase;
 use Illuminate\Support\Facades\Storage;
 use Symfony\Component\Console\Exception\RuntimeException;
+use Tests\TestCase;
 
 class BuildTest extends TestCase
 {

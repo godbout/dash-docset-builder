@@ -2,9 +2,9 @@
 
 namespace Godbout\DashDocsetBuilder\Commands;
 
+use Godbout\DashDocsetBuilder\Services\DocsetBuilder;
 use Illuminate\Support\Str;
 use LaravelZero\Framework\Commands\Command;
-use Godbout\DashDocsetBuilder\Services\DocsetBuilder;
 
 abstract class BaseCommand extends Command
 {

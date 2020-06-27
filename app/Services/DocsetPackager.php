@@ -2,12 +2,12 @@
 
 namespace Godbout\DashDocsetBuilder\Services;
 
+use Godbout\DashDocsetBuilder\Contracts\Docset;
+use Illuminate\Support\Facades\Artisan;
+use Illuminate\Support\Facades\Config;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\File;
-use Illuminate\Support\Facades\Config;
-use Illuminate\Support\Facades\Artisan;
 use Illuminate\Support\Facades\Storage;
-use Godbout\DashDocsetBuilder\Contracts\Docset;
 
 final class DocsetPackager
 {

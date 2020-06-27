@@ -2,10 +2,10 @@
 
 namespace Godbout\DashDocsetBuilder\Docsets;
 
-use Illuminate\Support\Str;
 use Illuminate\Support\Collection;
-use Wa72\HtmlPageDom\HtmlPageCrawler;
 use Illuminate\Support\Facades\Storage;
+use Illuminate\Support\Str;
+use Wa72\HtmlPageDom\HtmlPageCrawler;
 
 class RickAstley extends BaseDocset
 {

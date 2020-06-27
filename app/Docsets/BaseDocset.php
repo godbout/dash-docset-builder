@@ -2,9 +2,9 @@
 
 namespace Godbout\DashDocsetBuilder\Docsets;
 
+use Godbout\DashDocsetBuilder\Contracts\Docset;
 use Illuminate\Support\Collection;
 use Illuminate\Support\Facades\Storage;
-use Godbout\DashDocsetBuilder\Contracts\Docset;
 
 abstract class BaseDocset implements Docset
 {
