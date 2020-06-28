@@ -60,7 +60,9 @@ Then there are two mandatory methods to define:
  *
  * For each HTML file of your downloaded doc, this method will be called.
  * You have to parse the file (how you want) and return a collection of
- * entries. See Docsets included as examples.
+ * entries. See Docsets in
+ * https://github.com/godbout/dash-docsets/tree/master/app/Docsets
+ * for examples.
  */
 public function entries(string $file): Collection
 {
@@ -75,12 +77,20 @@ public function entries(string $file): Collection
  * This method is responsible for formatting the doc for Dash
  *
  * For each HTML file of your downloaded doc, this method will be called.
- * You receive in argument the HTML of those files (not the files themselves!),
- * you just have to modify and return it. See Docsets included as examples.
+ * You have to update the content of the file and return that content.
+ * The file is passed as argument rather than its content because sometimes
+ * the file name is the only way you have to generate the Dash Online Redirection.
+ * See Docsets in 
+ * https://github.com/godbout/dash-docsets/tree/master/app/Docsets
+ * for examples.
  */
-public function format(string $html): string
+public function format(string $file): string
 {
-    return $this->modifyHtml($html);
+    $crawler = HtmlPageCrawler::create(Storage::get($file));
+
+    $this->modifyHtml($crawler);
+
+    return $crawler->saveHTML();
 }
 ```
 

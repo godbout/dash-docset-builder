@@ -135,7 +135,7 @@ EOT;
         $files = $this->docset->htmlFiles();
 
         $files->each(function ($file) {
-            $formattedContent = $this->docset->format(Storage::get($file));
+            $formattedContent = $this->docset->format($file);
             Storage::put($file, $formattedContent);
         });
     }

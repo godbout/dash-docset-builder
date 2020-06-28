@@ -38,7 +38,7 @@ interface Docset
 
     public function htmlFiles(): Collection;
 
-    public function entries(string $html): Collection;
+    public function entries(string $file): Collection;
 
-    public function format(string $html): string;
+    public function format(string $file): string;
 }

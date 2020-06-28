@@ -107,7 +107,7 @@ abstract class BaseDocset implements Docset
         });
     }
 
-    abstract public function entries(string $html): Collection;
+    abstract public function entries(string $file): Collection;
 
-    abstract public function format(string $html): string;
+    abstract public function format(string $file): string;
 }
