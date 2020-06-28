@@ -66,9 +66,10 @@ Then there are two mandatory methods to define:
  */
 public function entries(string $file): Collection
 {
-    $entries = collect();
+    $crawler = HtmlPageCrawler::create(Storage::get($file));
 
-    // Parse the file and build your entries...
+    $entries = collect();
+    $entries = $this->generateEntries($crawler, $file);
         
     return $entries;
 }
@@ -88,7 +89,7 @@ public function format(string $file): string
 {
     $crawler = HtmlPageCrawler::create(Storage::get($file));
 
-    $this->modifyHtml($crawler);
+    $this->modifyHtml($crawler, $file);
 
     return $crawler->saveHTML();
 }
