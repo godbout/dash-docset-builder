@@ -2,12 +2,7 @@
 
 namespace Godbout\DashDocsetBuilder\Services;
 
-use Godbout\DashDocsetBuilder\Contracts\Docset;
-use Illuminate\Support\Facades\Artisan;
-use Illuminate\Support\Facades\Config;
-use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\File;
-use Illuminate\Support\Facades\Storage;
 use Illuminate\Support\Str;
 
 final class DocsetNewer
@@ -23,6 +18,13 @@ final class DocsetNewer
     {
         $userDocsetsDirectory = app_path() . '/../../../../app/Docsets';
 
+        /**
+         * Dirty shit to be able to run tests on this repo
+         */
+        if (! Str::contains($userDocsetsDirectory, '/vendor/godbout/dash-docset-builder/')) {
+            $userDocsetsDirectory = Str::replaceFirst('/../../../../app', '', $userDocsetsDirectory);
+        }
+
         File::makeDirectory($userDocsetsDirectory, 0755, true, true);
 
         if (! $this->docsetName) {
@@ -36,7 +38,7 @@ final class DocsetNewer
 
         File::put(
             $userDocsetsDirectory . '/' . Str::studly($this->docsetName) . '.php',
-            '<?php blah blah blah'
+            '<?php'
         );
 
         return true;

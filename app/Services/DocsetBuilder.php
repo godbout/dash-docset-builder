@@ -11,6 +11,7 @@ class DocsetBuilder
 {
     protected $docset;
 
+    protected $newer;
     protected $grabber;
     protected $packager;
     protected $archiver;
@@ -37,12 +38,12 @@ class DocsetBuilder
         $class = Str::studly($this->command->argument('doc'));
 
         if (! $class) {
-            return $this->command->task('  - Never gonna give you up. Generating the Rick Astley Docset class for you', function () {
+            return $this->command->task('  - Never gonna give you up. Generating app/Docsets/RickAstley.php', function () {
                 $this->newer->new();
             });
         }
 
-        return $this->command->task("  - Generating $class.php", function () {
+        return $this->command->task("  - Generating app/Docsets/$class.php", function () {
             $this->newer->new();
         });
     }

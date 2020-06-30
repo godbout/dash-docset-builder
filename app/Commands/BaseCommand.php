@@ -3,7 +3,6 @@
 namespace Godbout\DashDocsetBuilder\Commands;
 
 use Godbout\DashDocsetBuilder\Services\DocsetBuilder;
-use Godbout\DashDocsetBuilder\Services\DocsetNewer;
 use Illuminate\Support\Str;
 use LaravelZero\Framework\Commands\Command;
 
