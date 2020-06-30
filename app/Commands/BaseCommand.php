@@ -3,6 +3,7 @@
 namespace Godbout\DashDocsetBuilder\Commands;
 
 use Godbout\DashDocsetBuilder\Services\DocsetBuilder;
+use Godbout\DashDocsetBuilder\Services\DocsetNewer;
 use Illuminate\Support\Str;
 use LaravelZero\Framework\Commands\Command;
 
@@ -12,6 +13,14 @@ abstract class BaseCommand extends Command
     {
         $docset = $this->requestedDocset();
         $action = $this->requestedAction();
+
+        if ($action === 'new') {
+            $this->info('New Docset started');
+            (new DocsetBuilder(null, $this))->new();
+            $this->info('New Docset finished');
+
+            return;
+        }
 
         if ($this->isSupported()) {
             $this->info(Str::ucfirst("$action started"));

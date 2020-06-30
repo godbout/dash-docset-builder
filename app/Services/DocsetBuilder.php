@@ -4,6 +4,7 @@ namespace Godbout\DashDocsetBuilder\Services;
 
 use Godbout\DashDocsetBuilder\Contracts\Docset;
 use Illuminate\Console\Command as LaravelCommand;
+use Illuminate\Support\Str;
 use LaravelZero\Framework\Commands\Command;
 
 class DocsetBuilder
@@ -17,15 +18,33 @@ class DocsetBuilder
     protected $command;
 
 
-    public function __construct(Docset $docset, ?Command $command = null)
+    public function __construct(?Docset $docset = null, ?Command $command = null)
     {
         $this->docset = $docset;
-
-        $this->grabber = new DocsetGrabber($this->docset);
-        $this->packager = new DocsetPackager($this->docset);
-        $this->archiver = new DocsetArchiver($this->docset);
-
         $this->command = $command ?? new LaravelCommand();
+
+        $this->newer = new DocsetNewer($this->command->argument('doc'));
+
+        if ($this->docset) {
+            $this->grabber = new DocsetGrabber($this->docset);
+            $this->packager = new DocsetPackager($this->docset);
+            $this->archiver = new DocsetArchiver($this->docset);
+        }
+    }
+
+    public function new()
+    {
+        $class = Str::studly($this->command->argument('doc'));
+
+        if (! $class) {
+            return $this->command->task('  - Never gonna give you up. Generating the Rick Astley Docset class for you', function () {
+                $this->newer->new();
+            });
+        }
+
+        return $this->command->task("  - Generating $class.php", function () {
+            $this->newer->new();
+        });
     }
 
     public function build()
