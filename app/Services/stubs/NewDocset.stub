@@ -1,0 +1,49 @@
+<?php
+
+namespace App\Docsets;
+
+use Godbout\DashDocsetBuilder\Docsets\BaseDocset;
+use Illuminate\Support\Collection;
+use Illuminate\Support\Facades\Storage;
+use Wa72\HtmlPageDom\HtmlPageCrawler;
+
+class {{ class }} extends BaseDocset
+{
+    public const CODE = '{{ code }}';
+    public const NAME = '{{ name }}';
+    public const URL = '{{ url }}';
+    public const INDEX = 'index.html';
+    public const PLAYGROUND = '';
+    public const ICON_16 = 'favicon-16x16.png';
+    public const ICON_32 = 'favicon-32x32.png';
+    public const EXTERNAL_DOMAINS = [
+        '',
+    ];
+
+    public function entries(string $file): Collection
+    {
+        $crawler = HtmlPageCrawler::create(Storage::get($file));
+
+        $crawler->filter('h1')->each(function (HtmlPageCrawler $node) use ($entries) {
+            $entries->push([
+                'name' => 'What Shows up in Dash',
+                'type' => 'One of the Million of Dash Entry Type',
+                'path' => 'The Path to the File',
+            ]);
+        });
+
+        return $entries;
+    }
+
+    public function format(string $file): string
+    {
+        $crawler = HtmlPageCrawler::create(Storage::get($file));
+
+        /**
+         * This is equivalent to murder
+         */
+        $crawler->filter('body')->remove();
+
+        return $crawler->saveHTML();
+    }
+}

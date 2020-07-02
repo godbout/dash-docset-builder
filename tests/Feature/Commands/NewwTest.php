@@ -58,4 +58,22 @@ class NewwTest extends TestCase
 
         $this->assertTrue(File::exists($helloWorldClassFile));
     }
+
+    /** @test */
+    public function the_docset_class_file_created_while_passing_an_argument_gets_its_placeholders_replaced_by_the_argument()
+    {
+        $className = 'Alfred4';
+        $codeName = 'alfred-4';
+        $docsetName = 'Alfred 4';
+        $url = 'alfred-4.com';
+
+        $this->artisan('new alfred-4');
+
+        $alfred4FileContent = File::get(app_path() . '/Docsets/Alfred4.php');
+
+        $this->assertStringContainsString('class Alfred4', $alfred4FileContent);
+        $this->assertStringContainsString("CODE = 'alfred-4'", $alfred4FileContent);
+        $this->assertStringContainsString("NAME = 'Alfred 4'", $alfred4FileContent);
+        $this->assertStringContainsString("URL = 'alfred-4.com'", $alfred4FileContent);
+    }
 }

@@ -7,14 +7,18 @@ use Illuminate\Support\Str;
 
 final class DocsetNewer
 {
-    protected $docsetName;
-
-    public function __construct(?string $docsetName)
+    public function new(string $newDocset = null)
     {
-        $this->docsetName = $docsetName;
+        $userDocsetsDirectory = $this->makeUserDocsetsDirectoryIfNeeded();
+
+        if (! $newDocset) {
+            return $this->generateRickAstleyDocsetClass($userDocsetsDirectory);
+        }
+
+        return $this->generateUserArgumentDocsetClass($userDocsetsDirectory, $newDocset);
     }
 
-    public function new()
+    protected function makeUserDocsetsDirectoryIfNeeded()
     {
         $userDocsetsDirectory = app_path() . '/../../../../app/Docsets';
 
@@ -27,20 +31,31 @@ final class DocsetNewer
 
         File::makeDirectory($userDocsetsDirectory, 0755, true, true);
 
-        if (! $this->docsetName) {
-            File::copy(
-                app_path() . '/Services/stubs/RickAstley.stub',
-                $userDocsetsDirectory . '/RickAstley.php'
-            );
+        return $userDocsetsDirectory;
+    }
 
-            return true;
-        }
-
-        File::put(
-            $userDocsetsDirectory . '/' . Str::studly($this->docsetName) . '.php',
-            '<?php'
+    protected function generateRickAstleyDocsetClass(string $userDocsetsDirectory)
+    {
+        return File::copy(
+            app_path() . '/Services/stubs/RickAstley.stub',
+            $userDocsetsDirectory . '/RickAstley.php'
         );
+    }
 
-        return true;
+    protected function generateUserArgumentDocsetClass(string $userDocsetsDirectory, string $argument)
+    {
+        $docsetStubContent = File::get(app_path() . '/Services/stubs/NewDocset.stub');
+
+        $docsetStubContent = strtr($docsetStubContent, [
+            '{{ class }}' => Str::studly($argument),
+            '{{ code }}' => Str::kebab($argument),
+            '{{ name }}' => str_replace('-', ' ', Str::title($argument)),
+            '{{ url }}' => Str::lower($argument) . '.com',
+        ]);
+
+        return File::put(
+            $userDocsetsDirectory . '/' . Str::studly($argument) . '.php',
+            $docsetStubContent
+        );
     }
 }

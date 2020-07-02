@@ -3,6 +3,8 @@
 /.vscode
 /.vagrant
 
+app/Docsets/Alfred4.php
+
 .DS_Store
 /database/database.sqlite
 

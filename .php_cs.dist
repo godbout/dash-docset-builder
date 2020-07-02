@@ -1,7 +1,10 @@
 <?php
 
 $finder = PhpCsFixer\Finder::create()
-    ->in(['./app', './tests'])
+    ->in([
+        __DIR__ . '/app',
+        __DIR__ . '/tests'
+    ])
     ->notPath('./CreatesApplication.php')
 ;
 

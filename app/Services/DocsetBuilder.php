@@ -24,7 +24,7 @@ class DocsetBuilder
         $this->docset = $docset;
         $this->command = $command ?? new LaravelCommand();
 
-        $this->newer = new DocsetNewer($this->command->argument('doc'));
+        $this->newer = new DocsetNewer();
 
         if ($this->docset) {
             $this->grabber = new DocsetGrabber($this->docset);
@@ -35,16 +35,16 @@ class DocsetBuilder
 
     public function new()
     {
-        $class = Str::studly($this->command->argument('doc'));
+        $newDocset = $this->command->argument('doc');
 
-        if (! $class) {
+        if (! $newDocset) {
             return $this->command->task('  - Never gonna give you up. Generating app/Docsets/RickAstley.php', function () {
                 $this->newer->new();
             });
         }
 
-        return $this->command->task("  - Generating app/Docsets/$class.php", function () {
-            $this->newer->new();
+        return $this->command->task('  - Generating app/Docsets/' . Str::studly($newDocset) . '.php', function () use ($newDocset) {
+            $this->newer->new($newDocset);
         });
     }
 
