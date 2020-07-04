@@ -14,9 +14,9 @@ abstract class BaseCommand extends Command
         $action = $this->requestedAction();
 
         if ($action === 'new') {
-            $this->info('New Docset started');
+            $this->info('New docset class started');
             (new DocsetBuilder(null, $this))->new();
-            $this->info('New Docset finished');
+            $this->info('New docset class finished');
 
             return;
         }
