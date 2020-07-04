@@ -2,6 +2,7 @@
 
 namespace App\Docsets;
 
+use Godbout\DashDocsetBuilder\Docsets\BaseDocset;
 use Illuminate\Support\Collection;
 use Illuminate\Support\Facades\Storage;
 use Illuminate\Support\Str;
