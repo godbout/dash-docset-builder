@@ -23,13 +23,9 @@ class {{ class }} extends BaseDocset
     {
         $crawler = HtmlPageCrawler::create(Storage::get($file));
 
-        $crawler->filter('h1')->each(function (HtmlPageCrawler $node) use ($entries) {
-            $entries->push([
-                'name' => 'What Shows up in Dash',
-                'type' => 'One of the Million of Dash Entry Type',
-                'path' => 'The Path to the File',
-            ]);
-        });
+        $entries = collect();
+
+        //
 
         return $entries;
     }
@@ -38,10 +34,7 @@ class {{ class }} extends BaseDocset
     {
         $crawler = HtmlPageCrawler::create(Storage::get($file));
 
-        /**
-         * This is equivalent to murder
-         */
-        $crawler->filter('body')->remove();
+        //
 
         return $crawler->saveHTML();
     }
