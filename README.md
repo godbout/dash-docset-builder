@@ -9,7 +9,7 @@
 </p>
 
 <p align="center">
-    That shit creates Dash Docsets for you. Of course you still need to declare some stuff in your own class. That shit doesn't read minds yet. Read more below.
+    That shit creates Dash Docsets for you. Of course you still need to declare some stuff in your own class. That shit doesn't read minds yet. See more below.
 </p>
 
 ___
@@ -57,12 +57,12 @@ public const ICON_32 = 'favicon-32x32.png';
 // List of external domains where images or other files have to
 // be downloaded, if not from URL defined above
 public const EXTERNAL_DOMAINS = [
-        'refactoring-ui.nyc3.cdn.digitaloceanspaces.com',
-        'jsdelivr.net',
-        'code.jquery.com',
-        'rsms.me',
-        'googleapis.com',
-    ];
+    'refactoring-ui.nyc3.cdn.digitaloceanspaces.com',
+    'jsdelivr.net',
+    'code.jquery.com',
+    'rsms.me',
+    'googleapis.com',
+];
 ```
 
 Then there are two mandatory methods to define:
@@ -108,7 +108,7 @@ public function format(string $file): string
 }
 ```
 
-The Builder provides a generic way to download your Docset docs. It'll use a sitemap.xml if found, else it'll go through your Docset index. If you need to provide your own way of downloading your docs, you can define a `grab()` method in your Docset. The Builder will catch it and use your custom method instead.
+The Builder provides a generic way to download your Docset docs. It'll use a `sitemap.xml` if found, else it'll go through your Docset index. If you need to provide your own way of downloading your docs, you can define a `grab()` method in your Docset. The Builder will catch it and use your custom method instead.
 
 ```php
 public function grab(): bool
