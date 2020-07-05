@@ -14,13 +14,26 @@
 
 ___
 
-# DASH IS LOVE
+## DASH IS LOVE
 
 When coding with Sublime + Chrome in Split View, [Dash](http://kapeli.com/) is the savior ❤️
 
-# CREATE YOUR OWN DOCSET
+## HOW TO USE (ALSO KNOWN AS USAGE)
 
-## Your Docset Class
+### Install the awesome tool (ambiguous meaning)
+
+```bash
+composer require godbout/dash-docset-builder ^1.0
+```
+
+### Generate your pretty Docset class
+```bash
+dash-docset new my-pretty-docset
+```
+
+You now have a beautiful `MyPrettyDocset` class that you're gonna have to edit. See below.
+
+### Edit your pretty Docset class
 
 Your Docset Class has to extend the [BaseDocset class](https://github.com/godbout/dash-docset-builder/blob/master/app/Docsets/BaseDocset.php) that implements the [Docset interface](https://github.com/godbout/dash-docset-builder/blob/master/app/Contracts/Docset.php). That allows the Builder to make your Docset with just a little configuration.
 
@@ -120,19 +133,19 @@ public function grab(): bool
     }
 ```
 
-## Build your Docset
+### Build your Docset
 
 Once your class is set up, run:
 ```bash
-php dash-docset build your_docset_class
+dash-docset build my-pretty-docset
 ```
 
 This will download the doc, package it into a .docset file, and create an archive—useful if you want to contribute it to Dash—in the storage folder.
 
 ## ENJOY
 
-You can then add your docset into Dash for personal use, or [contribute it](https://github.com/Kapeli/Dash-User-Contributions).
+Enjoy your new fresh Docset and maybe also share it with the community that would be nice kiss kiss: https://github.com/Kapeli/Dash-User-Contributions.
 
-# DOCSETS GENERATED WITH THIS BUILDER
+## DOCSETS GENERATED WITH THIS BUILDER
 
 See the [Dash Docsets](https://github.com/godbout/dash-docsets) repo.
