@@ -23,7 +23,7 @@ When coding with Sublime + Chrome in Split View, [Dash](http://kapeli.com/) is t
 ### Install the awesome tool (ambiguous meaning)
 
 ```bash
-composer require godbout/dash-docset-builder ^1.0
+composer require godbout/dash-docset-builder
 ```
 
 ### Generate your pretty Docset class
