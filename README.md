@@ -148,4 +148,14 @@ Enjoy your new fresh Docset and maybe also share it with the community that woul
 
 ## DOCSETS GENERATED WITH THIS BUILDER
 
-See the [Dash Docsets](https://github.com/godbout/dash-docsets) repo.
+Elderly first:
+* [Laravel-Zero](https://github.com/godbout/laravel-zero-dash-docset/blob/media/laravel-zero-dash-docset.gif)
+* [Jigsaw by Tighten](https://github.com/godbout/jigsaw-dash-docset/blob/media/jigsaw-dash-docset.gif)
+* [Tailwind CSS](https://github.com/godbout/tailwindcss-dash-docset/blob/media/tailwindcss-dash-docset.gif)
+* [Tiki](https://github.com/godbout/tiki-dash-docset/blob/media/tiki-dash-docset.gif)
+* ~~[Stripe](https://github.com/godbout/dash-docset-builder/tree/stripe/storage/stripe)~~ — **DECEASED**
+* ~~[Stripe API](https://github.com/godbout/dash-docset-builder/tree/stripe-api/storage/stripe-api)~~ — **DECEASED**
+* [Ploi API](https://github.com/godbout/ploi-api-dash-docset/blob/media/ploi-api-dash-docset.gif)
+* [Bulma](https://github.com/godbout/bulma-dash-docset/blob/media/bulma-dash-docset.gif)
+* [Alfred 4](https://github.com/godbout/alfred-dash-docset/blob/media/alfred-dash-docset.gif) 
+* [Chart.js](https://github.com/godbout/chartjs-dash-docset/blob/media/chartjs-dash-docset.gif)
