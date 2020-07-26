@@ -149,13 +149,13 @@ Enjoy your new fresh Docset and maybe also share it with the community that woul
 ## DOCSETS GENERATED WITH THIS BUILDER
 
 Elderlies go first:
-* [Laravel-Zero](https://github.com/godbout/laravel-zero-dash-docset/blob/media/laravel-zero-dash-docset)
-* [Jigsaw by Tighten](https://github.com/godbout/jigsaw-dash-docset/blob/media/jigsaw-dash-docset)
-* [Tailwind CSS](https://github.com/godbout/tailwindcss-dash-docset/blob/media/tailwindcss-dash-docset)
-* [Tiki](https://github.com/godbout/tiki-dash-docset/blob/media/tiki-dash-docset)
+* [Laravel-Zero](https://github.com/godbout/laravel-zero-dash-docset)
+* [Jigsaw by Tighten](https://github.com/godbout/jigsaw-dash-docset)
+* [Tailwind CSS](https://github.com/godbout/tailwindcss-dash-docset)
+* [Tiki](https://github.com/godbout/tiki-dash-docset)
 * ~~[Stripe](https://github.com/godbout/dash-docset-builder/tree/stripe/storage/stripe)~~ — **DECEASED**
 * ~~[Stripe API](https://github.com/godbout/dash-docset-builder/tree/stripe-api/storage/stripe-api)~~ — **DECEASED**
-* [Ploi API](https://github.com/godbout/ploi-api-dash-docset/blob/media/ploi-api-dash-docset)
-* [Bulma](https://github.com/godbout/bulma-dash-docset/blob/media/bulma-dash-docset)
-* [Alfred 4](https://github.com/godbout/alfred-dash-docset/blob/media/alfred-dash-docset) 
-* [Chart.js](https://github.com/godbout/chartjs-dash-docset/blob/media/chartjs-dash-docset)
+* [Ploi API](https://github.com/godbout/ploi-api-dash-docset)
+* [Bulma](https://github.com/godbout/bulma-dash-docset)
+* [Alfred 4](https://github.com/godbout/alfred-dash-docset)
+* [Chart.js](https://github.com/godbout/chartjs-dash-docset)
