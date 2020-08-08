@@ -159,3 +159,4 @@ Elderlies go first:
 * [Bulma](https://github.com/godbout/bulma-dash-docset)
 * [Alfred 4](https://github.com/godbout/alfred-dash-docset)
 * [Chart.js](https://github.com/godbout/chartjs-dash-docset)
+* [Alpine.js](https://github.com/godbout/alpinejs-dash-docset)
