@@ -160,3 +160,4 @@ Elderlies go first:
 * [Alfred 4](https://github.com/godbout/alfred-dash-docset)
 * [Chart.js](https://github.com/godbout/chartjs-dash-docset)
 * [Alpine.js](https://github.com/godbout/alpinejs-dash-docset)
+* [chartjs-plugin-datalabels](https://github.com/godbout/chartjs-plugin-datalabels-dash-docset)
