@@ -26,6 +26,8 @@ jobs:
         uses: shivammathur/setup-php@v2
         with:
           php-version: ${{ matrix.php }}
+          tools: pecl
+          extensions: ext-fileinfo
           coverage: xdebug
 
       - name: do some magic Composer cache
