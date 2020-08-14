@@ -27,7 +27,7 @@ jobs:
         with:
           php-version: ${{ matrix.php }}
           tools: pecl
-          extensions: fileinfo, sqlite
+          extensions: fileinfo, sqlite, pdo_sqlite
           coverage: xdebug
 
       - name: do some magic Composer cache
