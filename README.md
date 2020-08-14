@@ -1,11 +1,11 @@
 <h1 align="center">DASH DOCSET BUILDER</h1>
 
 <p align="center">
-    <a href="https://packagist.org/packages/godbout/dash-docset-builder"><img src="https://poser.pugx.org/godbout/dash-docset-builder/v/stable" alt="Latest Stable Version"></a>
-    <a href="https://travis-ci.com/godbout/dash-docset-builder"><img src="https://img.shields.io/travis/com/godbout/dash-docset-builder/master.svg?style=flat-square" alt="Build Status"></a>
-    <a href="https://scrutinizer-ci.com/g/godbout/dash-docset-builder"><img src="https://img.shields.io/scrutinizer/g/godbout/dash-docset-builder.svg?style=flat-square" alt="Quality Score"></a>
-    <a href="https://scrutinizer-ci.com/g/godbout/dash-docset-builder"><img src="https://scrutinizer-ci.com/g/godbout/dash-docset-builder/badges/coverage.png?b=master" alt="Code Coverage"></a>
-    <a href="https://packagist.org/packages/godbout/dash-docset-builder"><img src="https://poser.pugx.org/godbout/dash-docset-builder/downloads" alt="Total Downloads"></a>
+    <a href="https://packagist.org/packages/godbout/dash-docset-builder"><img src="https://img.shields.io/packagist/v/godbout/dash-docset-builder" alt="latest stable version"></a>
+    <a href="https://github.com/godbout/dash-docset-builder/actions"><img src="https://img.shields.io/github/workflow/status/godbout/dash-docset-builder/tests" alt="build status"></a>
+    <a href="https://scrutinizer-ci.com/g/godbout/dash-docset-builder"><img src="https://img.shields.io/scrutinizer/quality/g/godbout/dash-docset-builder" alt="quality score"></a>
+    <a href="https://scrutinizer-ci.com/g/godbout/dash-docset-builder"><img src="https://img.shields.io/scrutinizer/coverage/g/godbout/dash-docset-builder" alt="code coverage"></a>
+    <a href="https://packagist.org/packages/godbout/dash-docset-builder"><img src="https://img.shields.io/packagist/dt/godbout/dash-docset-builder" alt="total downloads"></a>
 </p>
 
 <p align="center">
