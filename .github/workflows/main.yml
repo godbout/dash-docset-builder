@@ -46,6 +46,4 @@ jobs:
         run: composer test -- --coverage-clover=coverage.clover
 
       - name: upload code coverage
-        run: |
-          wget https://scrutinizer-ci.com/ocular.phar
-          php ocular.phar code-coverage:upload --format=php-clover coverage.clover
+        run: php vendor/bin/ocular code-coverage:upload --format=php-clover coverage.clover
