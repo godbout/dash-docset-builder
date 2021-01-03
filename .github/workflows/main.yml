@@ -15,7 +15,7 @@ jobs:
     strategy:
       matrix:
         os: [macos-latest, ubuntu-latest]
-        php: [7.4, 7.3]
+        php: [8.0, 7.4]
         dependency-version: [prefer-lowest, prefer-stable]
 
     steps:
@@ -29,6 +29,8 @@ jobs:
           tools: pecl
           extensions: fileinfo, sqlite, pdo_sqlite
           coverage: xdebug
+        env:
+          COMPOSER_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
       - name: do some magic Composer cache
         id: composer-cache
@@ -46,6 +48,4 @@ jobs:
         run: composer test -- --coverage-clover=coverage.clover
 
       - name: upload code coverage
-        run: |
-          wget https://scrutinizer-ci.com/ocular.phar
-          php ocular.phar code-coverage:upload --format=php-clover coverage.clover
+        run: php vendor/bin/ocular code-coverage:upload --format=php-clover coverage.clover

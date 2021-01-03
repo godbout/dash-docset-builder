@@ -24,14 +24,20 @@
             "email": "guill@sleeplessmind.com.mo"
         }
     ],
+    "repositories": [
+        {
+            "type": "vcs",
+            "url": "https://github.com/godbout/htmlpagedom"
+        }
+    ],
     "require": {
-        "php": "^7.3",
+        "php": "^7.4 || ^8.0",
         "league/flysystem": "^1.0.69",
         "illuminate/database": "^8.0",
         "laravel-zero/framework": "^8.0",
         "symfony/css-selector": "^5.0",
         "symfony/dom-crawler": "^5.0",
-        "wa72/htmlpagedom": "^2",
+        "wa72/htmlpagedom": "dev-master",
         "vlucas/phpdotenv": "^5.0",
         "nunomaduro/collision": "^5.0"
     },
@@ -42,9 +48,10 @@
         }
     },
     "require-dev": {
-        "codedungeon/phpunit-result-printer": "^0.28",
-        "mockery/mockery": "^1.3",
-        "phpunit/phpunit": "^9.3"
+        "codedungeon/phpunit-result-printer": "^0.30",
+        "mockery/mockery": "^1.4",
+        "phpunit/phpunit": "^9.3",
+        "scrutinizer/ocular": "^1.8"
     },
     "autoload-dev": {
         "psr-4": {
