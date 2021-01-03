@@ -29,6 +29,8 @@ jobs:
           tools: pecl
           extensions: fileinfo, sqlite, pdo_sqlite
           coverage: xdebug
+        env:
+          COMPOSER_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
       - name: do some magic Composer cache
         id: composer-cache
