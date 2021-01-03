@@ -24,6 +24,12 @@
             "email": "guill@sleeplessmind.com.mo"
         }
     ],
+    "repositories": [
+        {
+            "type": "vcs",
+            "url": "https://github.com/godbout/htmlpagedom"
+        }
+    ],
     "require": {
         "php": "^7.4 || ^8.0",
         "league/flysystem": "^1.0.69",
@@ -31,7 +37,7 @@
         "laravel-zero/framework": "^8.0",
         "symfony/css-selector": "^5.0",
         "symfony/dom-crawler": "^5.0",
-        "wa72/htmlpagedom": "^2",
+        "wa72/htmlpagedom": "dev-master",
         "vlucas/phpdotenv": "^5.0",
         "nunomaduro/collision": "^5.0"
     },
