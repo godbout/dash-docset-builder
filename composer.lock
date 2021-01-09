@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "97b93e08a52b0c648ed25ab168729643",
+    "content-hash": "3d096e27791b61fa3b0794ed8a68b5e1",
     "packages": [
         {
             "name": "brick/math",
@@ -335,6 +335,68 @@
                 "source": "https://github.com/filp/whoops/tree/2.9.1"
             },
             "time": "2020-11-01T12:00:00+00:00"
+        },
+        {
+            "name": "godbout/htmlpagedom",
+            "version": "3.0.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/godbout/htmlpagedom.git",
+                "reference": "b2525c1c3f1e1ebe0692bdc7aa3355f5a532196f"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/godbout/htmlpagedom/zipball/b2525c1c3f1e1ebe0692bdc7aa3355f5a532196f",
+                "reference": "b2525c1c3f1e1ebe0692bdc7aa3355f5a532196f",
+                "shasum": ""
+            },
+            "require": {
+                "php": "^7.4 || ^8.0",
+                "symfony/css-selector": "^5.2",
+                "symfony/dom-crawler": "^5.2"
+            },
+            "require-dev": {
+                "mikey179/vfsstream": "dev-master",
+                "phpunit/phpunit": "^9.5",
+                "scrutinizer/ocular": "^1.8",
+                "wa72/html-pretty-min": "~0.1"
+            },
+            "suggest": {
+                "wa72/html-pretty-min": "Minify or indent HTML documents"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "2.0-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Wa72\\HtmlPageDom\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Guillaume Leclerc",
+                    "email": "guill@sleeplessmind.com.mo",
+                    "homepage": "https://sleeplessmind.com.mo"
+                }
+            ],
+            "description": "jQuery-inspired DOM manipulation extension for Symfony's Crawler",
+            "homepage": "http://github.com/godbout/htmlpagedom",
+            "keywords": [
+                "crawler",
+                "dom",
+                "html"
+            ],
+            "support": {
+                "source": "https://github.com/godbout/htmlpagedom/tree/3.0.0"
+            },
+            "time": "2021-01-09T15:26:57+00:00"
         },
         {
             "name": "graham-campbell/result-type",
@@ -3779,79 +3841,6 @@
             "time": "2020-11-12T00:07:28+00:00"
         },
         {
-            "name": "wa72/htmlpagedom",
-            "version": "dev-master",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/godbout/htmlpagedom.git",
-                "reference": "5ab54cb2d9020cd8a075a4f528ea0dbe2be3f595"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/godbout/htmlpagedom/zipball/5ab54cb2d9020cd8a075a4f528ea0dbe2be3f595",
-                "reference": "5ab54cb2d9020cd8a075a4f528ea0dbe2be3f595",
-                "shasum": ""
-            },
-            "require": {
-                "php": "^7.4 || ^8.0",
-                "symfony/css-selector": "^5.2",
-                "symfony/dom-crawler": "^5.2"
-            },
-            "require-dev": {
-                "mikey179/vfsstream": "dev-master",
-                "phpunit/phpunit": "^9.5",
-                "scrutinizer/ocular": "^1.8",
-                "wa72/html-pretty-min": "~0.1"
-            },
-            "suggest": {
-                "wa72/html-pretty-min": "Minify or indent HTML documents"
-            },
-            "default-branch": true,
-            "type": "library",
-            "extra": {
-                "branch-alias": {
-                    "dev-master": "2.0-dev"
-                }
-            },
-            "autoload": {
-                "psr-4": {
-                    "Wa72\\HtmlPageDom\\": "src/"
-                }
-            },
-            "scripts": {
-                "format": [
-                    "php-cs-fixer fix -vvv --config=.php_cs.dist --ansi"
-                ],
-                "test": [
-                    "vendor/bin/phpunit --colors=always"
-                ],
-                "test-coverage": [
-                    "vendor/bin/phpunit --coverage-html coverage"
-                ]
-            },
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Christoph Singer",
-                    "email": "singer@webagentur72.de",
-                    "homepage": "http://www.webagentur72.de"
-                }
-            ],
-            "description": "jQuery-inspired DOM manipulation extension for Symfony's Crawler",
-            "homepage": "http://github.com/wasinger/htmlpagedom",
-            "keywords": [
-                "Crawler",
-                "DOM",
-                "HTML"
-            ],
-            "support": {
-                "source": "https://github.com/godbout/htmlpagedom/tree/master"
-            },
-            "time": "2021-01-03T13:55:15+00:00"
-        },
-        {
             "name": "webmozart/assert",
             "version": "1.9.1",
             "source": {
@@ -7162,9 +7151,7 @@
     ],
     "aliases": [],
     "minimum-stability": "dev",
-    "stability-flags": {
-        "wa72/htmlpagedom": 20
-    },
+    "stability-flags": [],
     "prefer-stable": true,
     "prefer-lowest": false,
     "platform": {
