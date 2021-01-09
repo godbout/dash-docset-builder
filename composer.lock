@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "97b93e08a52b0c648ed25ab168729643",
+    "content-hash": "b3bc0078f7ed9ccd0dd6089e31a9efed",
     "packages": [
         {
             "name": "brick/math",
@@ -3780,7 +3780,7 @@
         },
         {
             "name": "wa72/htmlpagedom",
-            "version": "dev-master",
+            "version": "dev-php8",
             "source": {
                 "type": "git",
                 "url": "https://github.com/godbout/htmlpagedom.git",
@@ -3806,7 +3806,6 @@
             "suggest": {
                 "wa72/html-pretty-min": "Minify or indent HTML documents"
             },
-            "default-branch": true,
             "type": "library",
             "extra": {
                 "branch-alias": {

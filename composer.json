@@ -37,7 +37,7 @@
         "laravel-zero/framework": "^8.0",
         "symfony/css-selector": "^5.0",
         "symfony/dom-crawler": "^5.0",
-        "wa72/htmlpagedom": "dev-master",
+        "wa72/htmlpagedom": "dev-php8",
         "vlucas/phpdotenv": "^5.0",
         "nunomaduro/collision": "^5.0"
     },
