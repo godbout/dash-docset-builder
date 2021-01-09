@@ -1,4 +1,6 @@
 build:
+  environment:
+    php: 7.4
   nodes:
     analysis:
       dependencies:
@@ -19,4 +21,3 @@ filter:
 tools:
   external_code_coverage:
     runs: 8
-    timeout: 1000
