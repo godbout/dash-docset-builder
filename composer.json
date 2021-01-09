@@ -24,25 +24,6 @@
             "email": "guill@sleeplessmind.com.mo"
         }
     ],
-    "repositories": [
-        {
-            "type": "package",
-            "package": {
-                "name": "wa72/htmlpagedom",
-                "version": "dev-master",
-                "source": {
-                    "url": "https://github.com/godbout/htmlpagedom",
-                    "type": "git",
-                    "reference": "master"
-                },
-                "autoload": {
-                    "psr-4": {
-                        "Wa72\\HtmlPageDom\\": "src/"
-                    }
-                }
-            }
-        }
-    ],
     "require": {
         "php": "^7.4 || ^8.0",
         "league/flysystem": "^1.0.69",
@@ -50,7 +31,7 @@
         "laravel-zero/framework": "^8.0",
         "symfony/css-selector": "^5.0",
         "symfony/dom-crawler": "^5.0",
-        "wa72/htmlpagedom": "dev-master",
+        "godbout/htmlpagedom": "^3.0",
         "vlucas/phpdotenv": "^5.0",
         "nunomaduro/collision": "^5.0"
     },
