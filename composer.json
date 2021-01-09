@@ -26,8 +26,21 @@
     ],
     "repositories": [
         {
-            "type": "vcs",
-            "url": "https://github.com/godbout/htmlpagedom"
+            "type": "package",
+            "package": {
+                "name": "wa72/htmlpagedom",
+                "version": "dev-master",
+                "source": {
+                    "url": "https://github.com/godbout/htmlpagedom",
+                    "type": "git",
+                    "reference": "master"
+                },
+                "autoload": {
+                    "psr-4": {
+                        "Wa72\\HtmlPageDom\\": "src/"
+                    }
+                }
+            }
         }
     ],
     "require": {
@@ -37,7 +50,7 @@
         "laravel-zero/framework": "^8.0",
         "symfony/css-selector": "^5.0",
         "symfony/dom-crawler": "^5.0",
-        "wa72/htmlpagedom": "dev-php8",
+        "wa72/htmlpagedom": "dev-master",
         "vlucas/phpdotenv": "^5.0",
         "nunomaduro/collision": "^5.0"
     },
