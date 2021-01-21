@@ -112,25 +112,25 @@ The Builder provides a generic way to download your Docset docs. It'll use a `si
 
 ```php
 public function grab(): bool
-    {
-        system(
-            "wget doc.tiki.org/All-the-Documentation \
-                --mirror \
-                -e robots=off \
-                --header 'Cookie: javascript_enabled_detect=true' \
-                --reject-regex='/Plugins-|Plugins\.html|fullscreen=|PDF\.js|tikiversion=|comzone=|structure=|wp_files_sort_mode[0-9]=|offset=|\?refresh|\?session_filters|\?sort_mode' \
-                --accept-regex='/Plugin|/LIST|Tiki_org_family|\.css|\.js|\.jpg|\.png|\.gif|\.svg|\.ico|\.webmanifest' \
-                --page-requisites \
-                --adjust-extension \
-                --convert-links \
-                --span-hosts \
-                --domains={$this->externalDomains()} \
-                --directory-prefix=storage/{$this->downloadedDirectory()}",
-            $result
-        );
+{
+    system(
+        "wget doc.tiki.org/All-the-Documentation \
+            --mirror \
+            -e robots=off \
+            --header 'Cookie: javascript_enabled_detect=true' \
+            --reject-regex='/Plugins-|Plugins\.html|fullscreen=|PDF\.js|tikiversion=|comzone=|structure=|wp_files_sort_mode[0-9]=|offset=|\?refresh|\?session_filters|\?sort_mode' \
+            --accept-regex='/Plugin|/LIST|Tiki_org_family|\.css|\.js|\.jpg|\.png|\.gif|\.svg|\.ico|\.webmanifest' \
+            --page-requisites \
+            --adjust-extension \
+            --convert-links \
+            --span-hosts \
+            --domains={$this->externalDomains()} \
+            --directory-prefix=storage/{$this->downloadedDirectory()}",
+        $result
+    );
 
-        return $result === 0;
-    }
+    return $result === 0;
+}
 ```
 
 ### Build your Docset
