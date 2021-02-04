@@ -162,3 +162,4 @@ Elderlies go first:
 * [Alpine.js](https://github.com/godbout/alpinejs-dash-docset)
 * [chartjs-plugin-datalabels](https://github.com/godbout/chartjs-plugin-datalabels-dash-docset)
 * [webpack](https://github.com/godbout/webpack-dash-docset)
+* [Laravel Mix](https://github.com/godbout/laravel-mix-dash-docset)
