@@ -94,7 +94,7 @@ EOT;
     {
         Storage::put(
             $this->docset->databaseFile(),
-            null
+            ""
         );
 
         Artisan::call('migrate');
