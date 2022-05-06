@@ -42,9 +42,10 @@
         }
     },
     "require-dev": {
+        "hassankhan/config": "^3.0",
         "codedungeon/phpunit-result-printer": "^0.32",
-        "mockery/mockery": "^1.4",
-        "phpunit/phpunit": "^9.5",
+        "mockery/mockery": "^1.5",
+        "phpunit/phpunit": "^9.5.20",
         "scrutinizer/ocular": "^1.9"
     },
     "autoload-dev": {
