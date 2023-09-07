@@ -2,7 +2,7 @@
 
 <p align="center">
     <a href="https://packagist.org/packages/godbout/dash-docset-builder"><img src="https://img.shields.io/packagist/v/godbout/dash-docset-builder" alt="latest stable version"></a>
-    <a href="https://github.com/godbout/dash-docset-builder/actions"><img src="https://img.shields.io/github/workflow/status/godbout/dash-docset-builder/tests" alt="build status"></a>
+    <a href="https://github.com/godbout/dash-docset-builder/actions"><img src="https://img.shields.io/github/actions/workflow/status/godbout/dash-docset-builder/main.yml?branch=master" alt="build status"></a>
     <a href="https://scrutinizer-ci.com/g/godbout/dash-docset-builder"><img src="https://img.shields.io/scrutinizer/quality/g/godbout/dash-docset-builder" alt="quality score"></a>
     <a href="https://scrutinizer-ci.com/g/godbout/dash-docset-builder"><img src="https://img.shields.io/scrutinizer/coverage/g/godbout/dash-docset-builder" alt="code coverage"></a>
     <a href="https://packagist.org/packages/godbout/dash-docset-builder"><img src="https://img.shields.io/packagist/dt/godbout/dash-docset-builder" alt="total downloads"></a>
